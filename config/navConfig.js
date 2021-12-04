@@ -1,6 +1,7 @@
 module.exports = [
       {
             "text": "主页",
+            "icon": "home",
             "link": "/"
       },
       // {
@@ -20,12 +21,20 @@ module.exports = [
 
       {
             "text": "二分查找",
-            "icon:": "info",
+            "icon": "chaxun",
             "link": "/binary-search/"
       },
 
-      { "text": "滑动窗口", "link": '/sliding-window/'},
-      { "text": "双指针", "link": '/two-pointers/'},
+      { 
+            "text": "滑动窗口", 
+            "icon": "yemiantuiguang",
+            "link": '/sliding-window/'
+      },
+      { 
+            "text": "双指针", 
+            "icon": "xuanzezhizhen",
+            "link": '/two-pointers/'
+      },
 
 
       // {
@@ -65,6 +74,7 @@ module.exports = [
       // { "text": "贪心算法", "link": '/greedy/'},
       {
             "text": "给本站留言",
+            "icon": "liuyanban-05",
             "link": "/suanfa8/bulletin-board.md"
             // 
       }

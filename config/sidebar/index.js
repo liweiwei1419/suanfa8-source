@@ -1,7 +1,7 @@
 module.exports = [
 {
 	"title":"参考资料",
-	"sidebarDepth": 0,
+	"icon":"ziliaoku",
 	"children":[
 		"/weixin/reference.md",
 		"/weixin/introduction-to-algorithms.md"
@@ -9,17 +9,17 @@ module.exports = [
 },
 {
 	"title": "递归",
-	"sidebarDepth": 0,
+	"icon":"diguifuwuqi",
 	"children": ["/recursion/at-least-you-need-to-know.md"]
 }, 
 {
 	"title": "时间复杂度",
-	"sidebarDepth": 0,
+	"icon":"shijian",
 	"children": ["/time-complexity/at-least-you-need-to-know.md"]
 },
 {
 	"title":"循环不变量",
-	"sidebarDepth": 0,
+	"icon": "process",
 	"children":[
 		"/loop-invariant/detail.md",
 		"/loop-invariant/0026-remove-duplicates-from-sorted-array.md",
@@ -30,7 +30,7 @@ module.exports = [
 }, 
 {
 	"title": "基础排序算法",
-	"sidebarDepth": 0,
+	"icon": "paixu",
 	"children": [
 		"/sort/basic/selection.md",
 		"/sort/basic/bubble.md",
@@ -44,7 +44,7 @@ module.exports = [
 {
 
 	 "title": "归并排序",
-	 "sidebarDepth": 0,
+	 "icon": "huiguijueceshu",
 	 "children": [
 	 	"/merge-sort/merge-sort.md",
 	 	"/merge-sort/merge-sort-optimize.md",
@@ -55,7 +55,7 @@ module.exports = [
 	},
 	{
 	 "title": "快速排序",
-	 "sidebarDepth": 0,
+	 "icon": "fenleijueceshu",
 	 "children": [
 	 	"/quick-sort/quick-sort-basic.md",
 	 	"/quick-sort/quick-sort-optimize.md",
@@ -70,7 +70,7 @@ module.exports = [
 {
 
 		 "title": "非比较排序算法",
-		 "sidebarDepth": 0,
+		 "icon": "fl-tong",
 		 "children": [
 		 	"/sort/non-comparison/count-sort.md",
 		 	"/sort/non-comparison/radix-sort.md",
