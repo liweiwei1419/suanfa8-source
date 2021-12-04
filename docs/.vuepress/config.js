@@ -3,6 +3,7 @@ const { config } = require("vuepress-theme-hope");
 module.exports = config({
   title: "算法吧",
   description: "A demo for vuepress-theme-hope",
+  base: "/suanfa666/",
 
   // dest: "./dist",
 
@@ -162,7 +163,7 @@ module.exports = config({
 
       // 其他的 Vssue 配置
       owner: "suanfa8",
-      repo: "suanfa8.github.io",
+      repo: "suanfa666",
       clientId: "781767f080152279e543",
       clientSecret: "5511f69d1a7e89d925b3fb4887b6f2db7fdf3856",
     },
