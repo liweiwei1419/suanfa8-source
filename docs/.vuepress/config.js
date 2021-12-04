@@ -156,7 +156,7 @@ module.exports = config({
 
       // 其他的 Vssue 配置
       owner: "suanfa8",
-      repo: "suanfa666",
+      repo: "suanfa8.github.io",
       clientId: "781767f080152279e543",
       clientSecret: "5511f69d1a7e89d925b3fb4887b6f2db7fdf3856",
     },
