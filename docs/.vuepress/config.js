@@ -1,10 +1,11 @@
+const navConfig = require('../../config/navConfig.js');
+const sidebarConfig = require('../../config/sidebarConfig.js');
+
 const { config } = require("vuepress-theme-hope");
 
 module.exports = config({
   title: "算法吧",
-  description: "A demo for vuepress-theme-hope",
-  base: "/suanfa666/",
-
+  description: "欢迎来到算法吧",
   // dest: "./dist",
 
   head: [
@@ -23,46 +24,35 @@ module.exports = config({
       "script",
       { src: "https://cdn.jsdelivr.net/npm/@babel/standalone/babel.min.js" },
     ],
+    ['link', { rel: 'icon', href: '/suanfa8.png' }]
   ],
 
   themeConfig: {
-    logo: "/logo.svg",
-    hostname: "https://vuepress-theme-hope-demo.mrhope.site",
+    logo: '/suanfa8.png',
+    hostname: "http://suanfa8.com/",
 
     author: "liweiwei1419",
     repo: "https://github.com/vuepress-theme-hope/vuepress-theme-hope",
 
-    nav: [
-    ],
+    nav: navConfig,
+    sidebar: sidebarConfig,
+    
 
-    sidebar: {
-      "/": [
-        "",
-        "home",
-        "slides",
-        "layout",
-        {
-          title: "Guide",
-          icon: "creative",
-          prefix: "guide/",
-          children: ["", "page", "markdown", "disable", "encrypt"],
-        },
-      ],
-    },
+    // blog: {
+    //   intro: "/intro/",
+    //   sidebarDisplay: "mobile",
+    //   links: {
+    //     Zhihu: "https://zhihu.com",
+    //     Baidu: "https://baidu.com",
+    //     Github: "https://github.com",
+    //   },
+    // },
 
-    blog: {
-      intro: "/intro/",
-      sidebarDisplay: "mobile",
-      links: {
-        Zhihu: "https://zhihu.com",
-        Baidu: "https://baidu.com",
-        Github: "https://github.com",
-      },
-    },
+    themeColor: false,
 
     footer: {
       display: true,
-      content: "默认页脚",
+      content: "欢迎来到算法吧",
     },
 
     comment: {
@@ -77,6 +67,9 @@ module.exports = config({
     git: {
       timezone: "Asia/Shanghai",
     },
+
+    search: true,
+    searchMaxSuggestions: 10,
 
     mdEnhance: {
       enableAll: true,
