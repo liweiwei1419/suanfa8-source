@@ -1,5 +1,9 @@
 ---
-title: 希尔排序 📺 
+title: 第 7 节 希尔排序
+icon: shipin
+category: 排序算法
+tags:
+  - 减治思想
 ---
 
 # 希尔排序

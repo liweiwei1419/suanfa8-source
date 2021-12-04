@@ -1,5 +1,9 @@
 ---
-title: 冒泡排序的优化
+title: 第 3 节 冒泡排序的优化
+icon: shipin
+category: 排序算法
+tags:
+  - 减治思想
 ---
 
 # 冒泡排序的优化

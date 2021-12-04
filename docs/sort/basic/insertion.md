@@ -1,5 +1,9 @@
 ---
-title: 插入排序 📺 
+title: 第 4 节 插入排序
+icon: shipin
+category: 排序算法
+tags:
+  - 减治思想
 ---
 
 # 插入排序及其重要意义 <Badge text="视频" type="warning"/>

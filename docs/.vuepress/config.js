@@ -32,11 +32,11 @@ module.exports = config({
     hostname: "http://suanfa8.com/",
 
     author: "liweiwei1419",
-    repo: "https://github.com/vuepress-theme-hope/vuepress-theme-hope",
+    repo: "suanfa8/suanfa8.github.io",
 
     nav: navConfig,
     sidebar: sidebarConfig,
-    
+    // sidebarDepth: 0,
 
     // blog: {
     //   intro: "/intro/",

@@ -1,5 +1,9 @@
 ---
-title: 冒泡排序 📺 
+title: 第 2 节 冒泡排序
+icon: shipin
+category: 排序算法
+tags:
+  - 减治思想
 ---
 
 # 冒泡排序
@@ -67,5 +71,3 @@ public class Solution {
 
 - 时间复杂度：$O(N^2)$，这里 $N$ 是输入数组的长度；
 - 空间复杂度：$O(1)$。
-
-<Utterances />

@@ -1,5 +1,9 @@
 ---
-title: 🔴 插入排序的意义 📺 
+title: 第 5 节 插入排序的意义
+icon: shipin
+category: 排序算法
+tags:
+  - 减治思想
 ---
 
 # 插入排序的意义 <Badge text="视频" type="warning"/> <Badge text="重要" type=""/>

@@ -1,5 +1,9 @@
 ---
-title: 插入排序的优化 📺 
+title: 第 6 节 插入排序的优化
+icon: shipin
+category: 排序算法
+tags:
+  - 减治思想
 ---
 
 # 插入排序的优化 <Badge text="视频" type="warning"/>
