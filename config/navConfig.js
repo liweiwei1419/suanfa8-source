@@ -94,7 +94,7 @@ module.exports = [{
       {
             "text": "回溯算法",
             "icon": "huisuzonglan",
-            "link": "/binary-search/"
+            "link": "/backtracking/"
       },
       {
             "text": "广度优先遍历",
@@ -108,6 +108,7 @@ module.exports = [{
       },
       {
             "text": "贪心算法",
+            "icon": "zu11",
             "link": "/greedy/"
       },
 
