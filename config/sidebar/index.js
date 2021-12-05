@@ -4,7 +4,9 @@ module.exports = [
 	"icon":"ziliaoku",
 	"children":[
 		"/weixin/reference.md",
-		"/weixin/introduction-to-algorithms.md"
+		"/weixin/introduction-to-algorithms.md",
+		"/weixin/download.md",
+		"/weixin/how-to-ask-questions.md"
 	]
 },
 {

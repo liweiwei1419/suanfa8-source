@@ -1,5 +1,9 @@
 ---
 title: 例 2 ：计算右侧小于当前元素的个数
+icon: shipin
+category: 归并排序
+tags:
+  - 分而治之
 ---
 
 # 「力扣」第 315 题：计算右侧小于当前元素的个数
@@ -31,8 +35,8 @@ title: 例 2 ：计算右侧小于当前元素的个数
 
 **参考代码**：
 
-<code-group>
-<code-block title="Java">
+<CodeGroup>
+<CodeGroupItem title="Java">
 
 ```java
 import java.util.ArrayList;
@@ -133,9 +137,9 @@ public class Solution {
 }
 ```
 
-</code-block>
+</CodeGroupItem>
 
-<code-block title="Python">
+<CodeGroupItem title="Python">
 
 ```python
 from typing import List
@@ -203,8 +207,8 @@ if __name__ == '__main__':
     print(result)
 ```
 
-</code-block>
-</code-group>
+</CodeGroupItem>
+</CodeGroup>
 
 
 

@@ -1,3 +1,12 @@
+---
+title: 归并排序的优化
+icon: shipin
+category: 排序算法
+tags:
+  - 分而治之
+---
+
+
 # 归并排序的优化
 
 ## :tv: **视频教程**
@@ -27,7 +36,7 @@
 
 「归并排序」也有「原地归并排序」和「不使用递归」的归并排序，但是我个人觉得不常用，编码、调试都有一定难度。
 
-::: tip 注意
+::: danger 注意
 
 递归、分治处理问题的思想在基础算法领域是非常常见的，建议多练习编写「归并排序」学习递归思想，了解递归的细节，熟悉分治的思想。
 
@@ -38,8 +47,8 @@
 
 **参考代码**：
 
-<code-group>
-<code-block title="Java">
+<CodeGroup>
+<CodeGroupItem title="Java">
 
 ```java
 public class Solution {
@@ -139,9 +148,9 @@ public class Solution {
 }
 ```
 
-</code-block>
+</CodeGroupItem>
 
-<code-block title="Python">
+<CodeGroupItem title="Python">
 
 ```python
 
@@ -204,8 +213,8 @@ class MergeSortOptimizer:
         self.__merge_sort(arr, 0, size - 1)
 ```
 
-</code-block>
-</code-group>
+</CodeGroupItem>
+</CodeGroup>
 
 **复杂度分析**：
 

@@ -1,3 +1,12 @@
+---
+title: 有序数组的平方
+icon: yongyan
+category: 双指针
+tags:
+  - 双指针
+---
+
+
 # 「力扣」第 977 题：有序数组的平方（简单）
 
 + [题目链接](https://leetcode-cn.com/problems/squares-of-a-sorted-array/)

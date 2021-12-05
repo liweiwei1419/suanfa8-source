@@ -1,3 +1,11 @@
+---
+title: 归并排序的基本实现
+icon: shipin
+category: 排序算法
+tags:
+  - 分而治之
+---
+
 # 归并排序的基本实现
 
 ## :tv: **视频教程**
@@ -11,7 +19,7 @@
 + [4-5 归并排序的代码演示与复杂度分析（06:35）](https://www.bilibili.com/video/BV1D64y1B76c?p=5)
 
 
-::: tip 提示
+::: danger 提示
 
 「归并排序」和「快速排序」是理解「递归」思想的非常好的学习材料。在学习的过程中，可以重点理解：递归完成以后，合并两个有序数组的这一步骤，想清楚程序的执行流程。即：递归函数执行完成以后，我们还可以做点事情。因此，「归并排序」和「快速排序」非常重要，一定要掌握。
 
@@ -122,8 +130,8 @@ mergeTwoSortedArray(arr, left, mid - 1, right);
 
 我们要维护归并排序的定义，注意边界值。
 
-<code-group>
-<code-block title="Java">
+<CodeGroup>
+<CodeGroupItem title="Java">
 
 ```java {39}
 /**
@@ -175,9 +183,9 @@ private void mergeTwoSortedArray(int[] arr, int left, int mid, int right) {
 }
 ```
 
-</code-block>
+</CodeGroupItem>
 
-<code-block title="Python">
+<CodeGroupItem title="Python">
 
 ```python {29}
 from sorting.examples import GenerateRandomArrayStrategy
@@ -255,8 +263,8 @@ if __name__ == '__main__':
                                            MergeSortBU())
 ```
 
-</code-block>
-</code-group>
+</CodeGroupItem>
+</CodeGroup>
 
 
 ::: danger 注意

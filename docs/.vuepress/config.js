@@ -36,7 +36,7 @@ module.exports = config({
 
     nav: navConfig,
     sidebar: sidebarConfig,
-    // sidebarDepth: 0,
+    sidebarDepth: 2,
 
     // blog: {
     //   intro: "/intro/",

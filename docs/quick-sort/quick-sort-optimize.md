@@ -37,8 +37,8 @@ int v = arr[left];
 + `le` 是 `less than or equal` 的缩写，表示小于等于（本代码没有用到）；
 + `ge` 是 `greater than or equal` 的缩写，表示大于等于（本代码没有用到）。
 
-<code-group>
-<code-block title="Java">
+<CodeGroup>
+<CodeGroupItem title="Java">
 
 ```java
 import java.util.Random;
@@ -120,9 +120,9 @@ public class Solution {
 }
 ```
 
-</code-block>
+</CodeGroupItem>
 
-<code-block title="Python">
+<CodeGroupItem title="Python">
 
 ```python
 from sorting.sorting_util import SortingUtil
@@ -162,8 +162,8 @@ class QuickSort:
         self.__quick_sort(arr, 0, size - 1)
 ```
 
-</code-block>
-</code-group>
+</CodeGroupItem>
+</CodeGroup>
 
 下面我们测试一下刚刚写好的快速排序的代码。测试要点：
 

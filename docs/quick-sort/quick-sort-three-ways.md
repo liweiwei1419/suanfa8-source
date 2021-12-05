@@ -3,7 +3,7 @@ title: 三路快排
 ---
 
 
-::: tip 使用三路快排是为了避免下面这种情况：
+::: danger 使用三路快排是为了避免下面这种情况：
 
 「切分」的时候有大量元素的值与 `pivot` 的值相同。
 
@@ -19,8 +19,8 @@ title: 三路快排
 
 **参考代码**：
 
-<code-group>
-<code-block title="Java">
+<CodeGroup>
+<CodeGroupItem title="Java">
 
 ```java
 import java.util.Random;
@@ -106,9 +106,9 @@ public class Solution {
 }
 ```
 
-</code-block>
+</CodeGroupItem>
 
-<code-block title="Python">
+<CodeGroupItem title="Python">
 
 ```python
 # 快速排序
@@ -160,8 +160,8 @@ class QuickSortThreeWays:
         self.__quick_sort(arr, 0, size - 1)
 ```
 
-</code-block>
-</code-group>
+</CodeGroupItem>
+</CodeGroup>
 
 **复杂度分析**：
 

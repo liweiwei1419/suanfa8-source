@@ -1,7 +1,7 @@
 module.exports = [
 	{
-		"title": "逐渐缩小搜索区间",
-		"sidebarDepth": 0,
+		"title": "第 1 章 逐渐缩小搜索区间",
+		"icon":"shu",
 		"children": [
 			"/binary-search/1/decrease-and-conquer.md",
 			"/binary-search/1/0704-binary-search.md",
@@ -11,7 +11,7 @@ module.exports = [
 	},
 	{
 		"title": "两边夹解决问题",
-		"sidebarDepth": 0,
+		"icon":"shu",
 		"children": [
 			"/binary-search/2/describe.md",
 			"/binary-search/2/exclude.md",
@@ -25,14 +25,14 @@ module.exports = [
 	},
 	{
 		"title": "各种二分查找模板比较",
-		"sidebarDepth": 0,
+		"icon":"shu",
 		"children": [
 			"/binary-search/3/template-compare.md"
 		]
 	},
 	{
 		"title": "二分查找练习：基础必做问题",
-		"sidebarDepth": 0,
+		"icon":"shu",
 		"children": [
 			'/binary-search/4/1/0033-search-in-rotated-sorted-array.md',
 			'/binary-search/4/1/0081-search-in-rotated-sorted-array-ii.md',
@@ -42,7 +42,7 @@ module.exports = [
 	},
 	{
 		"title": "二分查找练习：旋转有序数组（4 题）",
-		"sidebarDepth": 0,
+		"icon":"shu",
 		"children": [
 			'/binary-search/4/1/0033-search-in-rotated-sorted-array.md',
 			'/binary-search/4/1/0081-search-in-rotated-sorted-array-ii.md',
@@ -52,7 +52,7 @@ module.exports = [
 	},
 	{
 		"title": "二分查找练习：最小值极大化问题",
-		"sidebarDepth": 0,
+		"icon":"shu",
 		"children": [
 			'/binary-search/4/2/0004-median-of-two-sorted-arrays.md',
 			'/binary-search/4/2/0287-find-the-duplicate-number.md',
@@ -64,7 +64,7 @@ module.exports = [
 	},
 	{
 		"title": "二分查找练习：其他问题",
-		"sidebarDepth": 0,
+		"icon":"shu",
 		"children": [
 			'/binary-search/4/2/0004-median-of-two-sorted-arrays.md',
 			'/binary-search/4/2/0287-find-the-duplicate-number.md',

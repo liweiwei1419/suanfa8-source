@@ -1,8 +1,12 @@
 ---
-ID: 633
-TITLE: 平方数之和
-TAG: 双指针, 二分查找, 数学
+title: 平方数之和
+icon: yongyan
+category: 双指针
+tags:
+  - 双指针
+  - 二分查找
 ---
+
 
 **前言**
 

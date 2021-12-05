@@ -1,3 +1,11 @@
+---
+title: 1.4 总结
+icon: yongyan
+category: 二分查找
+tags:
+  - 减治思想
+---
+
 # 总结
 
 [[TOC]]
@@ -26,7 +34,7 @@
 
 在循环结束以后判断目标元素是否存在。
 
-::: tip 提示
+::: danger 提示
 
 下面这种把区间分成两个部分的写法，在以后做题的时候会经常用到。
 
@@ -37,8 +45,8 @@
 
 **「力扣」第 704 题参考代码**：
 
-<code-group>
-<code-block title="Java">
+<CodeGroup>
+<CodeGroupItem title="Java">
 
 ```java
 public class Solution {
@@ -67,9 +75,9 @@ public class Solution {
 }
 ```
 
-</code-block>
+</CodeGroupItem>
 
-<code-block title="Java">
+<CodeGroupItem title="Java">
 
 ```java
 public class Solution {
@@ -100,8 +108,8 @@ public class Solution {
 }
 ```
 
-</code-block>
-</code-group>
+</CodeGroupItem>
+</CodeGroup>
 
 **注意**：看到 `left = mid;` ，一定要记得将取中间数的行为上取整，即 `int mid = (left + right + 1) / 2;`，原因我们以后再说。
 

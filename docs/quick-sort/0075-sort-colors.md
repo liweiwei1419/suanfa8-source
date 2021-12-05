@@ -1,7 +1,7 @@
 ---
 title: 例 1：颜色分类
+icon: shipin
 ---
-
 
 # 「力扣」第 75 题：颜色分类
 
@@ -57,7 +57,10 @@ title: 例 1：颜色分类
 
 **参考代码 1**：
 
-```Java []
+
+<CodeGroup>
+<CodeGroupItem title="Java">
+```java
 import java.util.Arrays;
 
 
@@ -105,7 +108,10 @@ public class Solution {
     }
 }
 ```
-```Python []
+</CodeGroupItem>
+
+<CodeGroupItem title="Python">
+```python
 from typing import List
 
 
@@ -142,42 +148,11 @@ class Solution:
                 two -= 1
                 swap(nums, i, two)
 ```
-```C++ []
-#include <iostream>
-#include <vector>
+</CodeGroupItem>
+</CodeGroup>
 
-using namespace std;
 
-class Solution {
-public:
-    void sortColors(vector<int> &nums) {
-        int size = nums.size();
-        if (size < 2) {
-            return;
-        }
 
-        // all in [0..zero) = 0
-        // all in [zero..i) = 1
-        // all in [two..len - 1] = 2
-
-        int zero = 0;
-        int two = size;
-        int i = 0;
-        while (i < two) {
-            if (nums[i] == 0) {
-                swap(nums[zero], nums[i]);
-                zero++;
-                i++;
-            } else if (nums[i] == 1) {
-                i++;
-            } else {
-                two--;
-                swap(nums[i], nums[two]);
-            }
-        }
-    }
-};
-```
 
 **复杂度分析**：
 
@@ -187,7 +162,10 @@ public:
 
 **参考代码 2**：
 
-```Java []
+
+<CodeGroup>
+<CodeGroupItem title="Java">
+```java
 public class Solution {
 
     public void sortColors(int[] nums) {
@@ -230,7 +208,10 @@ public class Solution {
     }
 }
 ```
-```Python []
+</CodeGroupItem>
+
+<CodeGroupItem title="Python">
+```python
 from typing import List
 
 
@@ -267,47 +248,14 @@ class Solution:
                 swap(nums, i, two)
                 two -= 1
 ```
-```C++ []
-#include <iostream>
-#include <vector>
+</CodeGroupItem>
+</CodeGroup>
 
-using namespace std;
 
-class Solution {
-public:
-    void sortColors(vector<int> &nums) {
-        int size = nums.size();
-        if (size < 2) {
-            return;
-        }
-
-        // all in [0..zero] = 0
-        // all in (zero..i) = 1
-        // all in (two..len - 1] = 2
-
-        int zero = -1;
-        int two = size - 1;
-        int i = 0;
-
-        while (i <= two) {
-            if (nums[i] == 0) {
-                zero++;
-                swap(nums[zero], nums[i]);
-                i++;
-            } else if (nums[i] == 1) {
-                i++;
-            } else {
-                swap(nums[i], nums[two]);
-                two--;
-            }
-        }
-    }
-};
-```
 
 **复杂度分析**：（同参考代码 1）
 
----
+
 
 ### 总结
 

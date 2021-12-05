@@ -25,7 +25,7 @@
 ![image.png](https://tva1.sinaimg.cn/large/008i3skNgy1gwzjvj8lvdj30zt0u0dig.jpg)
 
 
-::: tip 说明
+::: danger 说明
 本节无代码，参考代码会放在「快速排序」的优化一节中。
 :::
 

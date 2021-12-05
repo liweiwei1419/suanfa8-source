@@ -1,3 +1,11 @@
+---
+title: 两数之和 II
+icon: yongyan
+category: 双指针
+tags:
+  - 双指针
+---
+
 # 「力扣」第 167 题：两数之和 II - 输入有序数组（简单）
 
 + 题目地址：[167. 两数之和 II - 输入有序数组](https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/)；

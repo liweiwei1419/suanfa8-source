@@ -1,3 +1,12 @@
+---
+title: 盛最多水的容器
+icon: yongyan
+category: 双指针
+tags:
+  - 双指针
+---
+
+
 # 「力扣」第 11 题：盛最多水的容器（中等）
 
 + 中文网址：[11. 盛最多水的容器](https://leetcode-cn.com/problems/container-with-most-water/description/) ；
@@ -29,8 +38,8 @@
 
 参考代码：
 
-<code-group>
-<code-block title="Java">
+<CodeGroup>
+<CodeGroupItem title="Java">
 
 ```java
 public class Solution {
@@ -58,9 +67,9 @@ public class Solution {
 }
 ```
 
-</code-block>
+</CodeGroupItem>
 
-<code-block title="Python">
+<CodeGroupItem title="Python">
 
 ```python
 from typing import List
@@ -89,8 +98,8 @@ if __name__ == '__main__':
     print(result)
 ```
 
-</code-block>
-</code-group>
+</CodeGroupItem>
+</CodeGroup>
 
 
 
@@ -112,8 +121,8 @@ Python 代码：
 
 参考代码：
 
-<code-group>
-<code-block title="Java">
+<CodeGroup>
+<CodeGroupItem title="Java">
 
 ```java
 public class Solution {
@@ -146,9 +155,9 @@ public class Solution {
 }
 ```
 
-</code-block>
+</CodeGroupItem>
 
-<code-block title="Python">
+<CodeGroupItem title="Python">
 
 ```python
 from typing import List
@@ -180,8 +189,8 @@ if __name__ == '__main__':
     print(result)
 ```
 
-</code-block>
-</code-group>
+</CodeGroupItem>
+</CodeGroup>
 
 **复杂度分析**：
 

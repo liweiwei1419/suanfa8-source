@@ -37,8 +37,8 @@
 
 **参考代码**：
 
-<code-group>
-<code-block title="Java">
+<CodeGroup>
+<CodeGroupItem title="Java">
 
 ```java
 import java.util.Random;
@@ -132,9 +132,9 @@ public class Solution {
 }
 ```
 
-</code-block>
+</CodeGroupItem>
 
-<code-block title="Python">
+<CodeGroupItem title="Python">
 
 ```python
 # 快速排序
@@ -180,8 +180,8 @@ class QuickSortTwoWays:
         self.__quick_sort(arr, 0, size - 1)
 ```
 
-</code-block>
-</code-group>
+</CodeGroupItem>
+</CodeGroup>
 
 
 

@@ -5,7 +5,9 @@ icon: weixin
 
 # 我如何看待《算法导论》和《算法》
 
-> 说明：本文来自我于 2021 年 8 月 2 日 发送的公众号文章 [我如何看待《算法导论》和《算法》](https://mp.weixin.qq.com/s/eNB_qcOWMcSJdNY8LMB4ZQ)。
+::: danger 说明
+本文来自我于 2021 年 8 月 2 日 发送的公众号文章 [我如何看待《算法导论》和《算法》](https://mp.weixin.qq.com/s/eNB_qcOWMcSJdNY8LMB4ZQ)。
+::: 
 
 今天要和大家分享的话题是如何看《算法（第 4 版）》和《算法导论（第 3 版）》。
 

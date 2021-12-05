@@ -2,7 +2,7 @@ module.exports = [
 
 	{
 		"title": "基础问题",
-		"sidebarDepth": 0,
+		"icon": "jichu",
 		"children": [
 			"/two-pointers/basic/intro.md",
 			"/two-pointers/basic/0088-merge-sorted-array.md",
@@ -14,7 +14,7 @@ module.exports = [
 	},
 	{
 		"title": "经典问题",
-		"sidebarDepth": 0,
+		"icon": "zhongyaotishi",
 		"children": [
 			"/two-pointers/importance/0011-container-with-most-water.md",
 			"/two-pointers/importance/0015-3sum.md",
@@ -25,7 +25,7 @@ module.exports = [
 	},
 	{
 		"title": "进阶问题",
-		"sidebarDepth": 0,
+		"icon": "lujing",
 		"children": [
 			"/two-pointers/advance/0633-sum-of-square-numbers.md",
 			"/two-pointers/advance/0881-boats-to-save-people.md",

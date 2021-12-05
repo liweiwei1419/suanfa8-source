@@ -1,88 +1,130 @@
-module.exports = [
-      {
+module.exports = [{
             "text": "主页",
             "icon": "home",
             "link": "/"
       },
-      // {
-      //       "text": "基础排序",
-      //       "link": "/sort/"
-      // },
-
-      // {
-      //       "text": "归并排序",
-      //       "link": "/merge-sort/"
-      // },
-
-      // {
-      //       "text": "快速排序",
-      //       "link": "/quick-sort/"
-      // },
 
       {
-            "text": "二分查找",
-            "icon": "chaxun",
+            "text": "算法",
+            "icon": "suanfaku",
+            "items": [{
+                        "text": "二分查找",
+                        "icon": "chaxun",
+                        "link": "/binary-search/"
+                  },
+
+                  {
+                        "text": "滑动窗口",
+                        "icon": "yemiantuiguang",
+                        "link": "/sliding-window/"
+                  },
+                  {
+                        "text": "双指针",
+                        "icon": "xuanzezhizhen",
+                        "link": "/two-pointers/"
+                  }
+
+            ]
+      },
+
+      {
+            "text": "数据结构",
+            "icon": "relation-analysis-full",
+            "items": [{
+                        "text": "链表",
+                        "icon": "lianjie",
+                        "items": [{
+                              "text": "链表",
+                              "icon": "lianjie",
+                              "link": "/binary-search/"
+                        }]
+                  },
+
+                  {
+                        "text": "栈与队列",
+                        "icon": "line-stackduizhan",
+                        "items": [{
+                                    "text": "普通栈",
+                                    "icon": "line-stackduizhan",
+                                    "link": "/stack/"
+                              },
+                              {
+                                    "text": "单调栈",
+                                    "icon": "line-stackduizhan",
+                                    "link": "/monotonous-stack/"
+                              },
+                              {
+                                    "text": "普通队列",
+                                    "icon": "mqxiaoxiduilieMQ",
+                                    "link": "/queue/"
+                              },
+                              {
+                                    "text": "单调队列",
+                                    "icon": "mqxiaoxiduilieMQ",
+                                    "link": "/queue/"
+                              }
+                        ]
+                  },
+                  {
+                        "text": "其它数据结构",
+                        "items": [{
+                                    "text": "优先队列",
+                                    "icon": "mqxiaoxiduilieMQ",
+                                    "link": "/heap/"
+                              },
+                              {
+                                    "text": "并查集",
+                                    "icon": "merge",
+                                    "link": "/binary-search/"
+                              },
+                              {
+                                    "text": "二叉树",
+                                    "icon": "shuzhuangtu",
+                                    "link": "/binary-search/"
+                              },
+                              {
+                                    "text": "哈希表",
+                                    "icon": "haxi",
+                                    "link": "/hash-table/"
+                              }
+                        ]
+                  }
+            ]
+      },
+      {
+            "text": "回溯算法",
+            "icon": "huisuzonglan",
             "link": "/binary-search/"
       },
-
-      { 
-            "text": "滑动窗口", 
-            "icon": "yemiantuiguang",
-            "link": '/sliding-window/'
+      {
+            "text": "广度优先遍历",
+            "icon": "shenduheguangdu",
+            "link": "/breadth-first-search/"
       },
-      { 
-            "text": "双指针", 
-            "icon": "xuanzezhizhen",
-            "link": '/two-pointers/'
+      {
+            "text": "动态规划",
+            "icon": "biaoge",
+            "link": "/binary-search/"
+      },
+      {
+            "text": "贪心算法",
+            "link": "/greedy/"
       },
 
-
-      // {
-      //       "text":"数组",
-      //       "items":[
-      //             { "text": "滑动窗口", "link": '/sliding-window/'},
-      //             { "text": "双指针", "link": '/two-pointers/'},
-      //       ]
-      // },
-
-      // { "text": "栈与队列", items: [
-      //     { text: '栈', items: [
-      //             { "text": "普通栈", "link": '/binary-search/'},
-      //             { "text": "单调栈", "link": '/binary-search/'},
-      //     ] },
-      //     { text: '队列', items: [
-      //             { "text": "普通队列", "link": '/binary-search/'},
-      //             { "text": "单调队列", "link": '/binary-search/'},
-      //     ] }
-      //   ]
-      // },
-
-
-      // { "text": "广度优先遍历", "link": '/breadth-first-search/'},
-      // { "text": "哈希表", "link": '/hash-table/'},
-
-
-      // // { "text": "链表", "link": '/binary-search/'},
-
-      // { "text": "优先队列", "link": '/heap/'},
-
-      // // { "text": "二叉树", "link": '/binary-search/'},
-      // // { "text": "并查集", "link": '/binary-search/'},
-
-      // // { "text": "回溯算法", "link": '/binary-search/'},
-      // // { "text": "动态规划", "link": '/binary-search/'},
-      // { "text": "贪心算法", "link": '/greedy/'},
       {
             "text": "给本站留言",
             "icon": "liuyanban-05",
             "link": "/suanfa8/bulletin-board.md"
-            // 
+      },
+      {
+            "text": "更新日志",
+            "icon": "rizhi",
+            "link": "/suanfa8/changelog.md"
       }
-
-
 ]
 
-// 「力扣」单调栈题单：https://leetcode-cn.com/tag/monotonic-stack/problemset/
+
+
 // 「力扣」滑动窗口题单：https://leetcode-cn.com/tag/sliding-window/
 
 
@@ -98,7 +140,6 @@ module.exports = [
 // 二叉树：https://leetcode-cn.com/tag/binary-tree/problemset/
 // 贪心算法：https://leetcode-cn.com/tag/greedy/problemset/
 // 拓扑排序：https://leetcode-cn.com/tag/topological-sort/problemset/
-// 并查集：https://leetcode-cn.com/tag/union-find/problemset/
 
 // 
       // { text: '双指针', link: '/binary-search/'},

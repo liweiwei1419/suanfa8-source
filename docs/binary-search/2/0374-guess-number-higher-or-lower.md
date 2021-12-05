@@ -63,8 +63,8 @@ title: 中间数的取法
 
 
 
-<code-group>
-<code-block title="Java">
+<CodeGroup>
+<CodeGroupItem title="Java">
 
 ```java
 class GuessGame {
@@ -111,9 +111,9 @@ public class Solution extends GuessGame {
 }
 ```
 
-</code-block>
+</CodeGroupItem>
 
-<code-block title="Python">
+<CodeGroupItem title="Python">
 
 ```python
 def guess(num):
@@ -135,8 +135,8 @@ class Solution(object):
         return left
 ```
 
-</code-block>
-</code-group>
+</CodeGroupItem>
+</CodeGroup>
 
 
 以上是本题题解，以下才是本文真正想说的，你应该已经注意到了，上面的示例代码中，`mid = left + (right - left) // 2` 和 `int mid = left + (right - left + 1) / 2;` 都被我注释掉了，不是因为它们不正确，而是因为它们不够好，下面就来具体说说。
@@ -144,45 +144,45 @@ class Solution(object):
 1、最早学习二分法的时候，写中间数的下标是这样的：
 
 
-<code-group>
-<code-block title="Java">
+<CodeGroup>
+<CodeGroupItem title="Java">
 
 ```java
 int mid = (left + right) / 2;
 ```
 
-</code-block>
+</CodeGroupItem>
 
-<code-block title="Python">
+<CodeGroupItem title="Python">
 
 ```python
 mid = (left + right) // 2
 ```
 
-</code-block>
-</code-group>
+</CodeGroupItem>
+</CodeGroup>
 
 2、后来被告知在 `left` 和  `right` 很大的时候，`left + right` 会发生整型溢出，变成负数，这是一个 bug 得改！
 
 于是我们写成：
 
-<code-group>
-<code-block title="Java">
+<CodeGroup>
+<CodeGroupItem title="Java">
 
 ```java
 int mid = left + (right - left) / 2;
 ```
 
-</code-block>
+</CodeGroupItem>
 
-<code-block title="Python">
+<CodeGroupItem title="Python">
 
 ```python
 mid = left + (right - left) // 2
 ```
 
-</code-block>
-</code-group>
+</CodeGroupItem>
+</CodeGroup>
 
 然后又被告知 `mid = left + (right - left) // 2` 在 `right` 很大、 `left` 是负数且很小的时候， `right - left` 也有可能超过 int 类型能表示的最大值，只不过一般情况下 `left` 和 `right` 表示的是数组索引值，`left` 是非负数，因此 `right - left` 溢出的可能性很小。
 

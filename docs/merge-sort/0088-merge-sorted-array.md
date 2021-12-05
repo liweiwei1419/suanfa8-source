@@ -1,5 +1,11 @@
+---
+title: 例：合并两个有序数组
+category: 归并排序
+tags:
+  - 数组
+---
 
-# 「力扣」第 88 题：合并两个有序数组（简答）
+# 「力扣」第 88 题：合并两个有序数组（简单）
 
 题解地址：[归并排序子步骤（Java）](https://leetcode-cn.com/problems/merge-sorted-array/solution/si-xiang-mei-you-chuang-xin-de-di-fang-zhu-yao-ti-/)。
 

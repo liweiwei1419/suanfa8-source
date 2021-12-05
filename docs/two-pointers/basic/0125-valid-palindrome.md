@@ -1,3 +1,11 @@
+---
+title: 验证回文串
+icon: yongyan
+category: 双指针
+tags:
+  - 双指针
+---
+
 # 「力扣」第 125 题：验证回文串（简单）
 
 + 中文网址：[125. 验证回文串](https://leetcode-cn.com/problems/valid-palindrome/description/) ；

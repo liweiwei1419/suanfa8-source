@@ -1,6 +1,11 @@
 ---
 title: 例 1：逆序对
+icon: shipin
+category: 排序算法
+tags:
+  - 分而治之
 ---
+
 
 # 《剑指 Offer》（第 2 版）第 51 题：计算数组的逆序对
 
@@ -26,8 +31,8 @@ title: 例 1：逆序对
 
 **参考代码 1**：
 
-<code-group>
-<code-block title="Java">
+<CodeGroup>
+<CodeGroupItem title="Java">
 
 ```java
 public class Solution {
@@ -47,9 +52,9 @@ public class Solution {
 }
 ```
 
-</code-block>
+</CodeGroupItem>
 
-<code-block title="Python">
+<CodeGroupItem title="Python">
 
 ```python
 from typing import List
@@ -69,8 +74,8 @@ class Solution:
         return res
 ```
 
-</code-block>
-</code-group>
+</CodeGroupItem>
+</CodeGroup>
 
 **复杂度分析**：
 
@@ -118,8 +123,8 @@ class Solution:
 即在 `j` 指向的元素赋值回去的时候，给计数器加上 `mid - i + 1`。
 
 
-<code-group>
-<code-block title="Java">
+<CodeGroup>
+<CodeGroupItem title="Java">
 
 ```java
 public class Solution {
@@ -211,9 +216,9 @@ public class Solution {
 }
 ```
 
-</code-block>
+</CodeGroupItem>
 
-<code-block title="Python">
+<CodeGroupItem title="Python">
 
 ```python
 # 后有序数组中元素出列的时候，计算逆序个数
@@ -287,8 +292,8 @@ class Solution:
         return res
 ```
 
-</code-block>
-</code-group>
+</CodeGroupItem>
+</CodeGroup>
 
 
 
@@ -297,8 +302,8 @@ class Solution:
 
 即在 `i` 指向的元素赋值回去的时候，给计数器加上 `j - mid - 1`。
 
-<code-group>
-<code-block title="Java">
+<CodeGroup>
+<CodeGroupItem title="Java">
 
 ```java
 public class Solution {
@@ -389,9 +394,9 @@ public class Solution {
 }
 ```
 
-</code-block>
+</CodeGroupItem>
 
-<code-block title="Python">
+<CodeGroupItem title="Python">
 
 ```python
 # 前有序数组中元素出列的时候，计算逆序个数
@@ -469,8 +474,8 @@ class Solution:
         return res
 ```
 
-</code-block>
-</code-group>
+</CodeGroupItem>
+</CodeGroup>
 
 
 类似问题：[315. 计算右侧小于当前元素的个数](https://leetcode-cn.com/problems/count-of-smaller-numbers-after-self/)。
@@ -505,8 +510,8 @@ $$
 
 **参考代码 4**：
 
-<code-group>
-<code-block title="Java">
+<CodeGroup>
+<CodeGroupItem title="Java">
 
 ```java
 import java.util.HashMap;
@@ -594,9 +599,9 @@ public class Solution {
 }
 ```
 
-</code-block>
+</CodeGroupItem>
 
-<code-block title="Python">
+<CodeGroupItem title="Python">
 
 ```python
 from typing import List
@@ -662,8 +667,8 @@ class Solution:
         return res
 ```
 
-</code-block>
-</code-group>
+</CodeGroupItem>
+</CodeGroup>
 
 
 

@@ -23,7 +23,7 @@ tags:
 
 ![bubble-sort](https://tva1.sinaimg.cn/large/008i3skNgy1gwza47cpyyg30u00gw7o8.gif)
 
-::: tip 重点概括
+::: danger 重点概括
 冒泡排序：每一轮将一个「未排定部分」最大的元素「冒泡」到「未排定部分」的末尾，直至整个数组有序。
 ::: 
 

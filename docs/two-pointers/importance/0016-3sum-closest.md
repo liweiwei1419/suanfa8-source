@@ -1,3 +1,11 @@
+---
+title: 最接近的三数之和
+icon: yongyan
+category: 双指针
+tags:
+  - 双指针
+---
+
 # 「力扣」第 16 题：最接近的三数之和（中等）
 
 + 题目地址：[16. 最接近的三数之和](https://leetcode-cn.com/problems/3sum-closest/)；
@@ -18,8 +26,8 @@
 **参考代码**：
 
 
-<code-group>
-<code-block title="Java">
+<CodeGroup>
+<CodeGroupItem title="Java">
 
 ```java
 import java.util.Arrays;
@@ -85,9 +93,9 @@ public class Solution {
 }
 ```
 
-</code-block>
+</CodeGroupItem>
 
-<code-block title="Python">
+<CodeGroupItem title="Python">
 
 ```python
 from typing import List
@@ -141,9 +149,9 @@ if __name__ == '__main__':
     print(result)
 ```
 
-</code-block>
+</CodeGroupItem>
 
-<code-block title="Python">
+<CodeGroupItem title="Python">
 
 ```python
 class Solution(object):
@@ -173,8 +181,8 @@ class Solution(object):
         return res
 ```
 
-</code-block>
-</code-group>
+</CodeGroupItem>
+</CodeGroup>
 
 
 
