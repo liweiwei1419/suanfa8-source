@@ -1,5 +1,5 @@
 ---
-title: 第 1 节 回溯算法简介
+title: 第 1 节 简介
 icon: yongyan
 author: liweiwei1419
 categories: 回溯算法
@@ -10,70 +10,104 @@ tags:
   - 深度优先遍历
 ---
 
-# 第 1 节 回溯算法简介
+本节是对「回溯算法」内容的高度概括，理解这部分内容需要大家完成相关的练习。
 
-「回溯算法」其实就是对题目中所隐含的「树形结构」执行一次 **深度优先遍历**。做这一类问题，在草稿纸上画出树形结构图很重要。
+![image-20211205212430505](https://tva1.sinaimg.cn/large/008i3skNgy1gx39y88xh8j31gs0oi43s.jpg)
 
-| 题目链接                                                     | 力扣                                                         | B 站                                                         |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [46. 全排列（中等）](https://leetcode-cn.com/problems/permutations/) | [力扣](https://leetcode-cn.com/problems/permutations/solution/quan-pai-lie-by-leetcode-solution-2/) | [B 站](https://www.bilibili.com/video/BV1oa4y1v7Kz?from=search&seid=14615048896751357901) |
-| [47. 全排列 II（中等）](https://leetcode-cn.com/problems/permutations-ii/) | [力扣]()                                                     | [B 站](https://www.bilibili.com/video/BV147411A7Yq?p=1)      |
-| [78. 子集（中等）](https://leetcode-cn.com/problems/subsets/) | [力扣](https://leetcode-cn.com/problems/subsets/solution/hui-su-python-dai-ma-by-liweiwei1419/) | [B 站](https://www.bilibili.com/video/BV147411A7Yq?p=2)      |
-| [90. 子集 II（中等）](https://leetcode-cn.com/problems/subsets-ii/) | （空缺）                                                     | [B 站](https://www.bilibili.com/video/BV147411A7Yq?p=3)      |
 
-#### 题型一：基本回溯问题
+# 回溯算法简介
 
-通过这些问题理解回溯算法的思想，回溯算法的知识点讲解在「力扣」第 46 题的视频题解和文字题解。
 
-回溯就是用深度优先遍历的方式去搜索 树（图）的所有解。深度优先遍历有很明显的递归结构。
+「回溯算法」是解决很多算法问题的常见思想，它也是传统的人工智能的方法，其本质是 **在树形问题中寻找解** 。 
 
-做对下面这些问题的技巧：① **画图、画图、画图**；② 理解深度优先遍历与递归；③ 多调试、多调试。
+## 回溯算法是在树形问题上执行一次深度优先遍历
 
-| 题号 | 题目序号                                                     | 题解                                                         |
-| ---- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 46   | [全排列](https://leetcode-cn.com/problems/permutations/)（中等） | [视频题解](https://leetcode-cn.com/problems/permutations/solution/quan-pai-lie-by-leetcode-solution-2/)、[文字题解](https://leetcode-cn.com/problems/permutations/solution/hui-su-suan-fa-python-dai-ma-java-dai-ma-by-liweiw/) |
-| 47   | [全排列 II](https://leetcode-cn.com/problems/permutations-ii/)（中等） | [视频题解](https://www.bilibili.com/video/BV147411A7Yq?p=1)、[文字题解](https://leetcode-cn.com/problems/permutations-ii/solution/hui-su-suan-fa-python-dai-ma-java-dai-ma-by-liwe-2/) |
-| 78   | [子集](https://leetcode-cn.com/problems/subsets/)（中等）    | [视频题解](https://www.bilibili.com/video/BV147411A7Yq?p=2)、[文字题解](https://leetcode-cn.com/problems/subsets/solution/hui-su-python-dai-ma-by-liweiwei1419/) |
-| 90   | [子集 II](https://leetcode-cn.com/problems/subsets-ii/)（中等） | [视频题解](https://www.bilibili.com/video/BV147411A7Yq?p=3)  |
-| 77   | [组合](https://leetcode-cn.com/problems/combinations/)（中等） | [文字题解](https://leetcode-cn.com/problems/combinations/solution/hui-su-suan-fa-jian-zhi-python-dai-ma-java-dai-ma-/) |
-| 39   | [组合总和](https://leetcode-cn.com/problems/combination-sum/)（中等） | [文字题解](https://leetcode-cn.com/problems/combination-sum/solution/hui-su-suan-fa-jian-zhi-python-dai-ma-java-dai-m-2/) |
-| 40   | [组合总和 II](https://leetcode-cn.com/problems/combination-sum-ii/)（中等） | [文字题解](https://leetcode-cn.com/problems/combination-sum-ii/solution/) |
-| 113  | [路径总和 II](https://leetcode-cn.com/problems/path-sum-ii/)（中等） | [文字题解](https://leetcode-cn.com/problems/path-sum-ii/solution/hui-su-suan-fa-shen-du-you-xian-bian-li-zhuang-tai/) |
-| 60   | [第 k 个排列](https://leetcode-cn.com/problems/permutation-sequence/)（中等） | [文字题解](https://leetcode-cn.com/problems/permutation-sequence/solution/hui-su-jian-zhi-python-dai-ma-java-dai-ma-by-liwei/) |
-| 257  | [二叉树的所有路径](https://leetcode-cn.com/problems/binary-tree-paths/)（中等） | [文字题解](https://leetcode-cn.com/problems/binary-tree-paths/solution/shen-du-you-xian-bian-li-python-dai-ma-by-liweiwei/) |
-| 491  | [递增子序列](https://leetcode-cn.com/problems/increasing-subsequences/)（中等） |                                                              |
-| 1593 | [拆分字符串使唯一子字符串的数目最大](https://leetcode-cn.com/problems/split-a-string-into-the-max-number-of-unique-substrings/)（中等） |                                                              |
-| 1071 | [活字印刷](https://leetcode-cn.com/problems/letter-tile-possibilities/)（中等） | [设计递归函数返回值](https://leetcode-cn.com/problems/letter-tile-possibilities/solution/hui-su-suan-fa-python-dai-ma-by-liweiwei1419/) |
+::: danger 重点概括
 
-#### 题型二：字符串上的回溯问题
+回溯算法是对题目中所隐含的「树形结构」执行一次 **深度优先遍历**。
 
-重点理解：由于字符串每次都生成新字符，无须状态重置。
+:::
 
-| 题号 | 链接                                                         | 题解                                                         |
-| ---- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 17   | [电话号码的字母组合](https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number/)（中等） | [文字题解](https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number/solution/hui-su-sou-suo-wu-xian-shi-hui-su-yan-du-you-xian-/) |
-| 22   | [括号生成](https://leetcode-cn.com/problems/generate-parentheses/)（中等） | [文字题解](https://leetcode-cn.com/problems/generate-parentheses/solution/hui-su-suan-fa-by-liweiwei1419/) |
-| 93   | [复原IP地址](https://leetcode-cn.com/problems/restore-ip-addresses/)（中等） | [文字题解](https://leetcode-cn.com/problems/restore-ip-addresses/solution/hui-su-suan-fa-hua-tu-fen-xi-jian-zhi-tiao-jian-by/) |
-| 784  | [字母大小写全排列](https://leetcode-cn.com/problems/letter-case-permutation/)（中等） | [文字题解](https://leetcode-cn.com/problems/letter-case-permutation/solution/shen-du-you-xian-bian-li-hui-su-suan-fa-python-dai/) |
+以下是维基百科中「回溯算法」和「深度优先遍历」的定义。
 
-#### 题型三：Flood Fill
+::: info 回溯算法
 
-| 题号 | 链接                                                         | 题解                                                         |
-| ---- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 79   | [单词搜索](https://leetcode-cn.com/problems/word-search/)（中等） | [文字题解](https://leetcode-cn.com/problems/word-search/solution/zai-er-wei-ping-mian-shang-shi-yong-hui-su-fa-pyth/) |
-| 200  | [被围绕的区域](https://leetcode-cn.com/problems/surrounded-regions/)（中等） |                                                              |
-| 130  | [被围绕的区域](https://leetcode-cn.com/problems/surrounded-regions/)（中等） |                                                              |
+**回溯法** 采用试错的思想，它尝试分步的去解决一个问题。在分步解决问题的过程中，当它通过尝试发现现有的分步答案不能得到有效的正确的解答的时候，它将取消上一步甚至是上几步的计算，再通过其它的可能的分步解答再次尝试寻找问题的答案。回溯法通常用最简单的递归方法来实现，在反复重复上述的步骤后可能出现两种情况：
 
-#### **题型四**：一些游戏问题
++ 找到一个可能存在的正确的答案；
++ 在尝试了所有可能的分步方法后宣告该问题没有答案。
 
-| 序号 | 题目序号                                                     | 题解                                                         |
-| ---- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 51   | [N皇后](https://leetcode-cn.com/problems/n-queens/)（困难）  | [文字题解](https://leetcode-cn.com/problems/n-queens/solution/gen-ju-di-46-ti-quan-pai-lie-de-hui-su-suan-fa-si-/) |
-| 37   | [解数独](https://leetcode-cn.com/problems/sudoku-solver/)（困难） |                                                              |
-| 529  | [扫雷游戏](https://leetcode-cn.com/problems/minesweeper/)（中等） | [文字题解](https://blog.csdn.net/lw_power/article/details/109314152) |
+:::
 
-说明：
+::: info 深度优先搜索
 
-+ 第 51 题：经典问题，掌握「空间换时间」技巧；
-+ 第 529 题：寻找连通分量。DFS 和 BFS 均可。
+**深度优先搜索** 算法（英语：Depth-First-Search，DFS）是一种用于遍历或搜索树或图的算法。这个算法会 **尽可能深** 的搜索树的分支。当结点 `v` 的所在边都己被探寻过，搜索将 **回溯** 到发现结点 `v` 的那条边的起始结点。这一过程一直进行到已发现从源结点可达的所有结点为止。如果还存在未被发现的结点，则选择其中一个作为源结点并重复以上过程，整个进程反复进行直到所有结点都被访问为止。
+
+:::
+
+我刚开始学习「回溯算法」的时候觉得很抽象，一直不能理解为什么 **递归之后需要做和递归之前相同的逆向操作**，在做了很多相关的问题以后，我发现其实「回溯算法」与「 **深度优先遍历** 」有着千丝万缕的联系。
+
+## 树形问题
+
+::: danger 提示
+
+做对这一类问题，通过题目中给出的一个简单的例子，在草稿纸上 **画出题目中隐藏的树形结构图** 很重要。
+:::
+
+用于搜索一个树形问题的所有解，叫做「回溯算法」，是通过什么样的方式搜索的？是通过 **深度优先遍历** 的方式搜索的。因此 「回溯算法」和「深度优先遍历」是一回事。
+
+## 搜索与遍历
+
+我们每天使用的搜索引擎帮助我们在庞大的互联网上搜索信息。搜索引擎的「搜索」和「回溯搜索」算法里「搜索」的意思是一样的。
+
+搜索问题的解，可以通过 **遍历** 实现。所以很多教程把「回溯算法」称为爆搜（暴力解法）。因此回溯算法用于 **搜索一个问题的所有的解** ，通过深度优先遍历的思想实现。
+
+## 遍历的实现方式是递归
+
+递归算法能解决的一类典型问题，是具有 **树形结构** 的问题，即一个问题与一个或者多个规模更小、结构相同的问题之间存在联系，我们称这样的问题具有 **递归** 关系。
+
+## 「深度优先遍历」有「回退」的过程
+
+因为「深度优先遍历」有「回退」的过程，才需要「状态重置」或者称「撤销选择」，这是「回溯」的意思。
+
+::: danger 提示
+
+「回溯」是通过一个变量的变化搜索问题的所有解。
+:::
+
+## 「回溯算法」的模板代码
+
+网上会有人提供「回溯算法」的模板代码，但其实「回溯算法」需要看问题的树形结构是「二叉树」还是「多叉树」来决定代码应该如何编写。
+
+我的观点依然是：学习算法是不能靠模板来学的，思考、练习和调试非常重要，算法问题很灵活，盲目套模板是个误区。
+
+本节提供的练习大家只要认真完成了，写出回溯算法就很容易了。
+
+## 与动态规划的区别
+
+### 共同点
+
+用于求解多阶段决策问题。多阶段决策问题即：
+
++ 求解一个问题分为很多步骤（阶段）；
++ 每一个步骤（阶段）可以有多种选择。
+
+### 不同点
+
++ 动态规划只需要求我们评估最优解是多少，最优解对应的具体解是什么并不要求。因此很适合应用于评估一个方案的效果；
++ 回溯算法可以搜索得到所有的方案（当然包括最优解），但是本质上它是一种遍历算法，时间复杂度很高。
+
+## 总结
+
+「回溯算法」与「深度优先遍历」都有「不撞南墙不回头」的意思。我个人的理解是：「回溯算法」强调了「深度优先遍历」思想的用途，用一个 **不断变化** 的变量，在尝试各种可能的过程中，搜索需要的结果。强调了 **回退** 操作对于搜索的合理性。而「深度优先遍历」强调一种遍历的思想，与之对应的遍历思想是「广度优先遍历」。至于广度优先遍历为什么没有成为强大的搜索算法，我们在题解后面会提。
+
+在「力扣」第 51 题的题解《[回溯算法（第 46 题 + 剪枝）](https://leetcode-cn.com/problems/n-queens/solution/gen-ju-di-46-ti-quan-pai-lie-de-hui-su-suan-fa-si-/)》 中，展示了如何使用回溯算法搜索 $4$ 皇后问题的一个解，相信对大家直观地理解「回溯算法」是有帮助。
+
+
+
+
+
+
+
+
 
