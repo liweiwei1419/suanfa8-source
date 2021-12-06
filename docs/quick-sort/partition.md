@@ -1,5 +1,10 @@
 ---
-title: partition 几种写法比较
+title: 5.8 partition 几种写法比较
+icon: yongyan
+category: 排序算法
+tags:
+  - 分而治之
+  - 快速排序
 ---
 
 # partition 几种写法比较

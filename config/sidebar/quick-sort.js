@@ -1,4 +1,5 @@
 module.exports = [
+	"/quick-sort/intro.md",
 	"/quick-sort/quick-sort-basic.md",
 	"/quick-sort/quick-sort-optimize.md",
 	"/quick-sort/quick-sort-two-ways.md",

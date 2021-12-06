@@ -1,6 +1,12 @@
 ---
-title: 三路快排
+title: 5.5 三路快排
+icon: yongyan
+category: 排序算法
+tags:
+  - 分而治之
+  - 快速排序
 ---
+
 
 
 ::: danger 使用三路快排是为了避免下面这种情况：

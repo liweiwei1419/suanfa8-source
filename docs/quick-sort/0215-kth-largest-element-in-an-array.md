@@ -1,5 +1,10 @@
 ---
-title: 例 2：TopK 问题
+title: 5.7 例 2：TopK 问题
+icon: yongyan
+category: 排序算法
+tags:
+  - 分而治之
+  - 快速排序
 ---
 
 # 「力扣」第 215 题：数组第 k 大的元素

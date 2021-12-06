@@ -19,7 +19,7 @@ tags:
 
 ## 题目描述
 
-+ 中文：[27. 移除元素](https://leetcode-cn.com/problems/remove-element/description/) ；
++ 中文：[27. 移除元素](https://leetcode-cn.com/problems/remove-element/description/) <Badge text="简单" type="info"/>；
 + 英文：[27. Remove Element](https://leetcode.com/problems/remove-element/description/) 。
 
 给定一个数组 *nums* 和一个值 *val*，你需要**原地**移除所有数值等于 *val* 的元素，返回移除后数组的新长度。

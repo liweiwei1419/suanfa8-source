@@ -5,6 +5,7 @@ const sortBasic = require('./sort-basic.js');
 const mergeSort = require('./merge-sort.js');
 const quickSort = require('./quick-sort.js');
 const nonComparison = require('./non-comparison.js');
+const binarySearch = require('./binary-search.js');
 
 
 module.exports = [
@@ -49,7 +50,7 @@ module.exports = [
 	{
 		"title": "第 7 章 二分查找",
 		"icon": "chaxun",
-		"children": []
+		"children": binarySearch
 	},
 	{
 		"title": "第 8 章 滑动窗口",

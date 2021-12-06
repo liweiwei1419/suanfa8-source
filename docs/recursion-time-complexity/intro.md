@@ -15,3 +15,10 @@ icon: jianjie1
 + [视频：时间复杂度与空间复杂度](https://leetcode-cn.com/leetbook/read/learning-algorithms-with-leetcode/553v4h/)
 
 这个视频提到了时间复杂度是一个渐进概念，需要用动态的角度去理解。并且讲解了时间复杂度的严格定义（极限形式），以便大家理解时间复杂度的计算规则。并且还指出了：时间复杂度不是程序的运行时间；应该使用「空间换时间」，更多关注在优化「时间复杂度」。
+
+
+
+### 第 1 章 时间复杂度
+
+
+这部分内容介绍了 时间复杂度 这个概念，可以收看 [【视频讲解】](https://leetcode-cn.com/leetbook/read/learning-algorithms-with-leetcode/xs3ij1/) ，完全免费。 这一章节没有练习。
