@@ -1,83 +1,49 @@
-module.exports = [{
+const reference = require('./reference.js');
+const recursionTimeComplexity = require('./recursion-time-complexity.js');
+const loopInvariant = require('./loop-invariant.js');
+const sortBasic = require('./sort-basic.js');
+const mergeSort = require('./merge-sort.js');
+const quickSort = require('./quick-sort.js');
+const nonComparison = require('./non-comparison.js');
+
+
+module.exports = [
+	{
 		"title": "第 0 章 参考资料",
 		"icon": "ziliaoku",
-		"children": [
-			"/weixin/reference.md",
-			"/weixin/introduction-to-algorithms.md",
-			"/weixin/download.md",
-			"/weixin/how-to-ask-questions.md"
-		]
+		"children": reference
 	},
 	{
 		"title": "第 1 章 递归与时间复杂度",
 		"icon": "shijian1",
-		"children": [
-			"/recursion-time-complexity/intro.md",
-			"/recursion-time-complexity/recursion.md",
-			"/recursion-time-complexity/time-complexity.md"
-		]
+		"children": recursionTimeComplexity
 	},
 	{
 		"title": "第 2 章 循环不变量",
 		"icon": "process",
-		"children": [
-			"/loop-invariant/intro.md",
-			"/loop-invariant/0026-remove-duplicates-from-sorted-array.md",
-			"/loop-invariant/0283-move-zeroes.md",
-			"/loop-invariant/0027-remove-element.md",
-			"/loop-invariant/0080-remove-duplicates-from-sorted-array-ii.md"
-		]
+		"children": loopInvariant
 	},
 	{
 		"title": "第 3 章 基础排序算法",
 		"icon": "paixu",
-		"children": [
-			"/sort/basic/selection.md",
-			"/sort/basic/bubble.md",
-			"/sort/basic/bubble-optimization.md",
-			"/sort/basic/insertion.md",
-			"/sort/basic/insertion-meaning.md",
-			"/sort/basic/insertion-optimization.md",
-			"/sort/basic/shell.md"
-		]
+		"children": sortBasic
 	},
 	{
 
 		"title": "第 4 章 归并排序",
 		"icon": "huiguijueceshu",
-		"children": [
-			"/merge-sort/intro.md",
-			"/merge-sort/merge-sort.md",
-			"/merge-sort/merge-sort-optimize.md",
-			"/merge-sort/0051-shu-zu-zhong-de-ni-xu-dui-lcof.md",
-			"/merge-sort/0315-count-of-smaller-numbers-after-self.md",
-			"/merge-sort/bottom2up.md"
-		]
+		"children": mergeSort
 	},
 	{
 		"title": "第 5 章 快速排序",
 		"icon": "fenleijueceshu",
-		"children": [
-			"/quick-sort/quick-sort-basic.md",
-			"/quick-sort/quick-sort-optimize.md",
-			"/quick-sort/quick-sort-two-ways.md",
-			"/quick-sort/quick-sort-three-ways.md",
-			"/quick-sort/0075-sort-colors.md",
-			"/quick-sort/0215-kth-largest-element-in-an-array.md",
-			"/quick-sort/partition.md",
-			"/quick-sort/summary.md"
-		]
+		"children": quickSort
 	},
 	{
 
 		"title": "第 6 章 非比较排序算法",
 		"icon": "fl-tong",
-		"children": [
-			"/sort/non-comparison/intro.md",
-			"/sort/non-comparison/count-sort.md",
-			"/sort/non-comparison/radix-sort.md",
-			"/sort/non-comparison/bucket-sort.md"
-		]
+		"children": nonComparison
 	},
 
 	{
