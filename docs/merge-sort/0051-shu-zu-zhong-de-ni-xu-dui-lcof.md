@@ -1,10 +1,13 @@
 ---
-title: 例 1：逆序对
+title: 4.4 例 1：逆序对
 icon: shipin
 category: 排序算法
 tags:
   - 分而治之
+  - 归并排序
 ---
+
+
 
 
 # 《剑指 Offer》（第 2 版）第 51 题：计算数组的逆序对

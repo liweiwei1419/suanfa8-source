@@ -1,8 +1,10 @@
 ---
-title: 自底向上的归并排序
+title: 4.6 自底向上的归并排序（选学）
+icon: yongyan
 category: 排序算法
 tags:
   - 分而治之
+  - 归并排序
 ---
 
 
@@ -42,4 +44,4 @@ public void test07() {
 
 小结：自底向上的归并排序的过程。
 
-![image.png](https://cdn.nlark.com/yuque/0/2020/png/1354172/1593154034170-eae39f75-2cb8-434f-92c0-c638d24aa388.png)
+![image.png](https://tva1.sinaimg.cn/large/008i3skNgy1gx493lu9nuj315i0k2jtx.jpg)

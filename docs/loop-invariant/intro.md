@@ -1,4 +1,14 @@
-# 循环不变量是什么 <Badge text="视频" type="warning"/> <Badge text="重要" type=""/>
+---
+title: 2.1 简介
+icon: shipin
+category: 循环不变量
+tags:
+  - 数组
+  - 循环不变量
+---
+
+
+## 循环不变量是什么 <Badge text="视频" type="warning"/> <Badge text="重要" type=""/>
 
 ## :tv: **视频教程**
 
