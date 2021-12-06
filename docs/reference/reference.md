@@ -18,7 +18,7 @@ icon: tushu
 
 ## 算法可视化学习网站
 
-- [数据结构和算法动态可视化 (Chinese)](https://visualgo.net/zh)
++ [数据结构和算法动态可视化 (Chinese)](https://visualgo.net/zh)
 + [https://www.cs.usfca.edu/~galles/visualization/Algorithms.html](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html)
 + [https://algorithm-visualizer.org/](https://algorithm-visualizer.org/)
 

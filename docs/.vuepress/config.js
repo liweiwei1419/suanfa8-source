@@ -56,7 +56,9 @@ module.exports = config({
     },
 
     comment: {
-      type: "vssue",
+      type: "valine",
+      appId: "mqMDM2jkdekHlk3GRbuUPjoG-gzGzoHsz", // your appId
+      appKey: "8kmH8Wx6Dh5ewLScMuafVH9o", // your appKey
       // serverURL: "https://vuepress-theme-hope-comment.vercel.app",
     },
 
@@ -149,16 +151,16 @@ module.exports = config({
   },
 
   plugins: {
-    "@mr-hope/comment": {
-      type: "vssue",
-      // 设置 `platform` 而不是 `api`
-      platform: "github",
+    // "@mr-hope/comment": {
+    //   type: "vssue",
+    //   // 设置 `platform` 而不是 `api`
+    //   platform: "github",
 
-      // 其他的 Vssue 配置
-      owner: "suanfa8",
-      repo: "suanfa8.github.io",
-      clientId: "781767f080152279e543",
-      clientSecret: "5511f69d1a7e89d925b3fb4887b6f2db7fdf3856",
-    },
+    //   // 其他的 Vssue 配置
+    //   owner: "suanfa8",
+    //   repo: "suanfa8.github.io",
+    //   clientId: "781767f080152279e543",
+    //   clientSecret: "5511f69d1a7e89d925b3fb4887b6f2db7fdf3856",
+    // },
   },
 });

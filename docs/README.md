@@ -1,11 +1,18 @@
 ---
-title: 快来算法吧
+title: 快来算法吧 <Badge text="移除" type="error" />
+
 icon: huanyingye
 ---
 
-# 快来算法吧
+# 快来算法吧 
 
 本站为公益项目，内容开源，可以随意取用，转载需注明来源。
+
+<Badge text="beta" type="info"/>
+<Badge text="视频" type="warn"/>
+<Badge text="移除" type="error" />
+
+<Badge text="重要"/>
 
 留言需要注册 GitHub 账号。
 
@@ -21,7 +28,8 @@ icon: huanyingye
 
 **说明**：题目分类与我的 LeetBook 章节对应。
 
-### 第 1 章 时间复杂度
+### 第 1 章 时间复杂度 <Badge text="移除" type="error" />
+
 
 这部分内容介绍了 时间复杂度 这个概念，可以收看 [【视频讲解】](https://leetcode-cn.com/leetbook/read/learning-algorithms-with-leetcode/xs3ij1/) ，完全免费。 这一章节没有练习。
 
