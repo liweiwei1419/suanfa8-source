@@ -23,7 +23,7 @@ tags:
 
 《大话西游》里有这样的情节，至尊宝要对着「月光宝盒」喊一声「波若菠萝蜜」，时间就可以回到回去（所有的人物、事物都得一样，才能叫「回到过去」），他才能救人。这个道理其实和这里的「撤销选择」是一模一样的。 
 
-![image.png](https://pic.leetcode-cn.com/1598173544-FsXLpL-image.png)
+![image.png](https://tva1.sinaimg.cn/large/008i3skNgy1gx3bcn4awej30a906474f.jpg)
 
 理解回溯比较困难的是理解「回到过去」，**现实世界里我们无法回到过去，但是在算法的世界里可以**。
 
