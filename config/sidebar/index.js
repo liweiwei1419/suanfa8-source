@@ -1,6 +1,6 @@
 module.exports = [
 {
-	"title":"参考资料",
+	"title":"第 0 章 参考资料",
 	"icon":"ziliaoku",
 	"children":[
 		"/weixin/reference.md",
@@ -10,17 +10,16 @@ module.exports = [
 	]
 },
 {
-	"title": "递归",
-	"icon":"diguifuwuqi",
-	"children": ["/recursion/at-least-you-need-to-know.md"]
+	"title": "第 1 章 递归与时间复杂度",
+	"icon": "shijian1",
+	"children": [
+		"/recursion-time-complexity/intro.md",
+		"/recursion-time-complexity/recursion.md",
+		"/recursion-time-complexity/time-complexity.md"
+	]
 }, 
 {
-	"title": "时间复杂度",
-	"icon":"shijian",
-	"children": ["/time-complexity/at-least-you-need-to-know.md"]
-},
-{
-	"title":"循环不变量",
+	"title":"第 2 章 循环不变量",
 	"icon": "process",
 	"children":[
 		"/loop-invariant/detail.md",
@@ -31,7 +30,7 @@ module.exports = [
 	]
 }, 
 {
-	"title": "基础排序算法",
+	"title": "第 3 章 基础排序算法",
 	"icon": "paixu",
 	"children": [
 		"/sort/basic/selection.md",
@@ -45,7 +44,7 @@ module.exports = [
 }, 
 {
 
-	 "title": "归并排序",
+	 "title": "第 4 章 归并排序",
 	 "icon": "huiguijueceshu",
 	 "children": [
 	 	"/merge-sort/merge-sort.md",
@@ -56,7 +55,7 @@ module.exports = [
 	 ]
 	},
 	{
-	 "title": "快速排序",
+	 "title": "第 5 章 快速排序",
 	 "icon": "fenleijueceshu",
 	 "children": [
 	 	"/quick-sort/quick-sort-basic.md",
