@@ -7,7 +7,7 @@ tags:
   - 循环不变量
 ---
 
-# 「力扣」第 283 题：移动零
+
 
 ## :tv: **视频教程**
 
@@ -15,9 +15,9 @@ tags:
 
 * [3-3 例 2：「力扣」第 283 题：移动零（03:26）](https://www.bilibili.com/video/BV1Jg411M7Lp?p=3)
 
-## 题目描述
+## 「力扣」第 283 题：移动零 <Badge text="简单" type="info"/>
 
-+ 中文：[283. 移动零](https://leetcode-cn.com/problems/move-zeroes/description/) <Badge text="简单" type="info"/>；
++ 中文：[283. 移动零](https://leetcode-cn.com/problems/move-zeroes/description/)；
 + 英文：[283. Move Zeroes](https://leetcode.com/problems/move-zeroes/description/)。
 
 给定一个数组 `nums`，编写一个函数将所有 `0` 移动到数组的末尾，同时保持非零元素的相对顺序。
@@ -96,3 +96,9 @@ public class Solution {
 ```
 </CodeGroupItem>
 </CodeGroup>
+
+
+**复杂度分析**：
+
++ 时间复杂度：$O(N)$，这里 $N$ 是输入数组的长度；
++ 空间复杂度：$O(1)$，只使用了常数个变量。

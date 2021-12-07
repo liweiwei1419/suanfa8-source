@@ -132,7 +132,7 @@ module.exports = [{
       // },
 
       {
-            "text": "给本站留言",
+            "text": "留言反馈",
             "icon": "liuyanban-05",
             "link": "/suanfa8/bulletin-board.md"
       },

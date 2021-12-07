@@ -1,5 +1,5 @@
 ---
-title: 2.4 例 3：移动元素
+title: 2.4 例 3：移除元素
 icon: shipin
 category: 循环不变量
 tags:
@@ -8,8 +8,6 @@ tags:
 ---
 
 
-# 「力扣」第 27 题：移动元素
-
 ## :tv: **视频教程**
 
 建议使用 1.5 倍速观看。
@@ -17,9 +15,9 @@ tags:
 
 * [3-4 例 3：「力扣」第 27 题：移除元素（03:17）](https://www.bilibili.com/video/BV1Jg411M7Lp?p=4)
 
-## 题目描述
+## 「力扣」第 27 题：移除元素 <Badge text="简单" type="info"/>
 
-+ 中文：[27. 移除元素](https://leetcode-cn.com/problems/remove-element/description/) <Badge text="简单" type="info"/>；
++ 中文：[27. 移除元素](https://leetcode-cn.com/problems/remove-element/description/)；
 + 英文：[27. Remove Element](https://leetcode.com/problems/remove-element/description/) 。
 
 给定一个数组 *nums* 和一个值 *val*，你需要**原地**移除所有数值等于 *val* 的元素，返回移除后数组的新长度。
@@ -126,3 +124,8 @@ public class Solution {
 ```
 </CodeGroupItem>
 </CodeGroup>
+
+**复杂度分析**：
+
++ 时间复杂度：$O(N)$，这里 $N$ 是输入数组的长度；
++ 空间复杂度：$O(1)$，只使用了常数个变量。

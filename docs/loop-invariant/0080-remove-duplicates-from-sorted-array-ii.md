@@ -7,9 +7,6 @@ tags:
   - 循环不变量
 ---
 
-# 「力扣」第 80 题 ：删除排序数组中的重复项 II
-
-
 ## :tv: **视频教程**
 
 建议使用 1.5 倍速观看。
@@ -17,15 +14,15 @@ tags:
 
 * [3-5 例 4：「力扣」第 80 题：删除数组中重复的元素 II（07:30）](https://www.bilibili.com/video/BV1Jg411M7Lp?p=5)
 
-## 题目描述
+## 「力扣」第 80 题 ：删除排序数组中的重复项 II <Badge text="中等" type="warn"/>
 
 
-+ 中文网址：[80. 删除排序数组中的重复项 II](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array-ii/description/) <Badge text="中等" type="warn"/>；
++ 中文网址：[80. 删除排序数组中的重复项 II](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array-ii/description/)；
 + 英文网址：[80. Remove Duplicates from Sorted Array II](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/description/) 。
 
-给定一个排序数组，你需要在**原地**删除重复出现的元素，使得每个元素最多出现两次，返回移除后数组的新长度。
+给定一个排序数组，你需要在 **原地** 删除重复出现的元素，使得每个元素最多出现两次，返回移除后数组的新长度。
 
-不要使用额外的数组空间，你必须在**原地修改输入数组**并在使用 O(1) 额外空间的条件下完成。
+不要使用额外的数组空间，你必须在 **原地修改输入数组** 并在使用 O(1) 额外空间的条件下完成。
 
 **示例 1:**
 
@@ -51,7 +48,7 @@ tags:
 
 为什么返回数值是整数，但输出的答案是数组呢?
 
-请注意，输入数组是以**“引用”**方式传递的，这意味着在函数里修改输入数组对于调用者是可见的。
+请注意，输入数组是以 **“引用”** 方式传递的，这意味着在函数里修改输入数组对于调用者是可见的。
 
 你可以想象内部操作如下:
 
@@ -67,7 +64,6 @@ for (int i = 0; i < len; i++) {
 ```
 
 **参考代码**：
-
 
 <CodeGroup>
 <CodeGroupItem title="Java">
@@ -121,5 +117,8 @@ public class Solution2 {
 </CodeGroupItem>
 </CodeGroup>
 
+**复杂度分析**：
 
++ 时间复杂度：$O(N)$，这里 $N$ 是输入数组的长度；
++ 空间复杂度：$O(1)$，只使用了常数个变量。
 
