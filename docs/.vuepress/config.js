@@ -60,7 +60,7 @@ module.exports = config({
       appId: "mqMDM2jkdekHlk3GRbuUPjoG-gzGzoHsz", // your appId
       appKey: "8kmH8Wx6Dh5ewLScMuafVH9o", // your appKey
       // serverURL: "https://vuepress-theme-hope-comment.vercel.app",
-      placeholder: "留言请不要贴一段代码，找别人找 bug，请自己调试。给本站留言，站长不会收到通知，有反馈和建议请到右上角「留言反馈」处留言，或者给本 GitHub 提一个 issue。"
+      placeholder: "留言请不要贴一段代码，找别人找 bug，代码问题请自己调试。填写 E-mail 在收到回复的时候会有邮件通知，有反馈和建议请到右上角「留言反馈」处留言，或者给本 GitHub 提一个 issue。"
     },
 
     copyright: {
