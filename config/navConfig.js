@@ -145,12 +145,12 @@ module.exports = [{
             "text": "留言反馈",
             "icon": "liuyanban-05",
             "link": "/suanfa8/bulletin-board.md"
-      },
-      {
-            "text": "更新日志",
-            "icon": "rizhi",
-            "link": "/suanfa8/changelog.md"
       }
+      // {
+      //       "text": "更新日志",
+      //       "icon": "rizhi",
+      //       "link": "/suanfa8/changelog.md"
+      // }
 ]
 
 

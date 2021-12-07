@@ -3,5 +3,5 @@ module.exports = [
 	"/sort/non-comparison/count-sort.md",
 	"/sort/non-comparison/radix-sort.md",
 	"/sort/non-comparison/bucket-sort.md",
-	"/sort/non-comparison/practise.md"
+	// "/sort/non-comparison/practice.md"
 ]

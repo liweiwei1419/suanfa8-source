@@ -1,4 +1,10 @@
-# 滑动窗口是什么
+---
+title: 8.1 滑动窗口是什么
+icon: yongyan
+category: 滑动窗口
+tags:
+  - 滑动窗口
+---
 
 ![](https://tva1.sinaimg.cn/large/008i3skNgy1gwyeqkv8npj31120gmwfz.jpg)
 

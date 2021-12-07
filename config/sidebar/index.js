@@ -6,6 +6,22 @@ const mergeSort = require('./merge-sort.js');
 const quickSort = require('./quick-sort.js');
 const nonComparison = require('./non-comparison.js');
 const binarySearch = require('./binary-search.js');
+const slidingWindow = require('./sliding-window.js');
+const twoPointers = require('./two-pointers.js');
+const linkedList = require('./linked-list.js');
+const stack = require('./stack.js');
+const queue = require('./queue.js');
+const heap = require('./heap.js');
+const tree = require('./tree.js');
+const binarySearchTree = require('./binary-search-tree.js');
+
+const hashTable = require('./hash-table.js');
+const backtracking = require('./backtracking.js');
+
+// const bfs = require('./breadth-first-search.js');
+// const heap = require('./heap.js');
+// const heap = require('./heap.js');
+// const heap = require('./heap.js');
 
 
 module.exports = [
@@ -55,57 +71,57 @@ module.exports = [
 	{
 		"title": "第 8 章 滑动窗口",
 		"icon": "yemiantuiguang",
-		"children": []
+		"children": slidingWindow
 	},
 	{
 		"title": "第 9 章 双指针",
 		"icon": "xuanzezhizhen",
-		"children": []
+		"children": twoPointers
 	},
 	{
 		"title": "第 10 章 链表",
 		"icon": "lianjie",
-		"children": []
+		"children": linkedList
 	},
 	{
 		"title": "第 11 章 栈",
 		"icon": "line-stackduizhan",
-		"children": []
+		"children": stack
 	},
 	{
 		"title": "第 12 章 队列",
 		"icon": "mqxiaoxiduilieMQ",
-		"children": []
+		"children": queue
 	},
 	{
 		"title": "第 13 章 优先队列",
 		"icon": "mqxiaoxiduilieMQ",
-		"children": []
+		"children": heap
 	},
 	{
 		"title": "第 14 章 二叉树",
 		"icon": "mqxiaoxiduilieMQ",
-		"children": []
+		"children": tree
 	},
 	{
 		"title": "第 15 章 二叉搜索树",
 		"icon": "shuzhuangtu",
-		"children": []
+		"children": []// binarySearchTree
 	},
 	{
 		"title": "第 16 章 哈希表",
 		"icon": "haxi",
-		"children": []
+		"children": []// hashTable
 	},
 	{
 		"title": "第 17 章 回溯算法",
 		"icon": "huisuzonglan",
-		"children": []
+		"children": []// backtracking
 	},
 	{
 		"title": "第 18 章 广度优先遍历",
 		"icon": "shenduheguangdu",
-		"children": []
+		"children": []// bfs
 	},
 	{
 		"title": "第 19 章 动态规划",

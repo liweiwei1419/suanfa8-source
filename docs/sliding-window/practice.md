@@ -1,3 +1,11 @@
+---
+title: 8.2 滑动窗口 的练习
+icon: yongyan
+category: 滑动窗口
+tags:
+  - 滑动窗口
+---
+
 
 **重点问题**：
 
