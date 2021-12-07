@@ -1,6 +1,6 @@
 module.exports = [
-	'/two-pointers/intro.md',
-	'/two-pointers/practice.md',
+	'/algorithm-basic/two-pointers/intro.md',
+	'/algorithm-basic/two-pointers/practice.md',
 	// {
 	// 	"title": "基础问题",
 	// 	"icon": "jichu",

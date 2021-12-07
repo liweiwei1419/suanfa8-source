@@ -1,4 +1,4 @@
 module.exports = [
-	"/hash-table/intro.md",
-	"/hash-table/practice.md",
+	"/data-structure-basic/hash-table/intro.md",
+	"/data-structure-basic/hash-table/practice.md",
 ]

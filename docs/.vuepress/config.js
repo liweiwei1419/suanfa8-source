@@ -24,6 +24,17 @@ module.exports = config({
       "script",
       { src: "https://cdn.jsdelivr.net/npm/@babel/standalone/babel.min.js" },
     ],
+    [
+    "script", {}, `
+    var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?15b6e6a744ff92195a76bda533c2c0bf";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+    `
+  ],
     ['link', { rel: 'icon', href: '/suanfa8.png' }]
   ],
 
@@ -37,6 +48,7 @@ module.exports = config({
     nav: navConfig,
     sidebar: sidebarConfig,
     sidebarDepth: -1,
+    breadcrumb: true,
 
     // blog: {
     //   intro: "/intro/",

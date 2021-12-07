@@ -1,3 +1,3 @@
 module.exports = [
-	"/binary-search-tree/intro.md"
+	"/data-structure-basic/binary-search-tree/intro.md"
 ]

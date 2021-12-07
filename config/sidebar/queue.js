@@ -1,4 +1,4 @@
 module.exports = [
-	"/queue/intro.md",
-	"/queue/practice.md"
+	"/data-structure-basic/queue/intro.md",
+	"/data-structure-basic/queue/practice.md"
 ]

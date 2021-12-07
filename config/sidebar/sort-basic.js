@@ -1,9 +1,9 @@
 module.exports = [
-	"/sort/basic/selection.md",
-	"/sort/basic/bubble.md",
-	"/sort/basic/bubble-optimization.md",
-	"/sort/basic/insertion.md",
-	"/sort/basic/insertion-meaning.md",
-	"/sort/basic/insertion-optimization.md",
-	"/sort/basic/shell.md"
+	"/algorithm-basic/sort/basic/selection.md",
+	"/algorithm-basic/sort/basic/bubble.md",
+	"/algorithm-basic/sort/basic/bubble-optimization.md",
+	"/algorithm-basic/sort/basic/insertion.md",
+	"/algorithm-basic/sort/basic/insertion-meaning.md",
+	"/algorithm-basic/sort/basic/insertion-optimization.md",
+	"/algorithm-basic/sort/basic/shell.md"
 ]

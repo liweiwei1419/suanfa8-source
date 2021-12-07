@@ -1,4 +1,4 @@
 module.exports = [
-	"/heap/intro.md",
-	"/heap/practice.md"
+	"/data-structure-basic/heap/intro.md",
+	"/data-structure-basic/heap/practice.md"
 ]

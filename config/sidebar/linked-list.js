@@ -1,4 +1,4 @@
 module.exports = [
-	"/linked-list/intro.md",
-	"/linked-list/practice.md"
+	"/data-structure-basic/linked-list/intro.md",
+	"/data-structure-basic/linked-list/practice.md"
 ]
