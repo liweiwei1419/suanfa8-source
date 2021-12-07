@@ -1,5 +1,5 @@
 ---
-title: 第 5 节 剪枝
+title: 17.5 剪枝
 icon: yongyan
 categories: 回溯算法
 tags:

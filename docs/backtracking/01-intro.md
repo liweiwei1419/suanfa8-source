@@ -1,5 +1,5 @@
 ---
-title: 第 1 节 简介
+title: 17.1 简介
 icon: yongyan
 author: liweiwei1419
 categories: 回溯算法

@@ -1,5 +1,5 @@
 ---
-title: 第 4 节 几点说明
+title: 17.4 几点说明
 icon: yongyan
 author: liweiwei1419
 categories: 回溯算法

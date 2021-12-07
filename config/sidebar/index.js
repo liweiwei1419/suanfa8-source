@@ -14,11 +14,10 @@ const queue = require('./queue.js');
 const heap = require('./heap.js');
 const tree = require('./tree.js');
 const binarySearchTree = require('./binary-search-tree.js');
-
 const hashTable = require('./hash-table.js');
 const backtracking = require('./backtracking.js');
+const breadthFirstSearch = require('./breadth-first-search.js');
 
-// const bfs = require('./breadth-first-search.js');
 // const heap = require('./heap.js');
 // const heap = require('./heap.js');
 // const heap = require('./heap.js');
@@ -106,22 +105,22 @@ module.exports = [
 	{
 		"title": "第 15 章 二叉搜索树",
 		"icon": "shuzhuangtu",
-		"children": []// binarySearchTree
+		"children": binarySearchTree
 	},
 	{
 		"title": "第 16 章 哈希表",
 		"icon": "haxi",
-		"children": []// hashTable
+		"children": hashTable
 	},
 	{
 		"title": "第 17 章 回溯算法",
 		"icon": "huisuzonglan",
-		"children": []// backtracking
+		"children": backtracking
 	},
 	{
 		"title": "第 18 章 广度优先遍历",
 		"icon": "shenduheguangdu",
-		"children": []// bfs
+		"children": breadthFirstSearch
 	},
 	{
 		"title": "第 19 章 动态规划",

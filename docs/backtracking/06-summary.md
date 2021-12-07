@@ -1,5 +1,5 @@
 ---
-title:  第 6 节 总结
+title: 17.6  总结
 icon: yongyan
 categories: 回溯算法
 tags:
