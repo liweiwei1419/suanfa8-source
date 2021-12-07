@@ -6,19 +6,29 @@ module.exports = [{
 
       {
             "text": "文章列表",
+            "icon": "wenzhangliebiaoxiangqing",
             "link": "/article/"
       },
       {
             "text": "分类",
+            "icon": "fenlei",
             "link": "/category/"
       },
       {
             "text": "标签",
+            "icon": "biaoqian",
             "link": "/tag/"
       },
       {
             "text": "时间线",
+            "icon": "shijianxian",
             "link": "/timeline/"
+      },
+
+      {
+            "text":"精选题解",
+            "icon":"jingxuan",
+            "link":"/selected-solutions/"
       },
 
       
