@@ -3,6 +3,7 @@ title: 4.7 归并排序练习
 icon: yongyan
 category: 排序算法
 tags:
+  - 排序算法
   - 分而治之
   - 归并排序
 ---

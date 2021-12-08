@@ -1,12 +1,11 @@
 ---
-title: 第 2 节 冒泡排序
+title: 3.2 冒泡排序
 icon: shipin
 category: 排序算法
 tags:
+  - 排序算法  
   - 减治思想
 ---
-
-# 冒泡排序
 
 ## :tv: **视频教程**
 

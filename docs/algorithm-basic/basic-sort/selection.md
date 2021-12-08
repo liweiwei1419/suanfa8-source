@@ -1,14 +1,11 @@
 ---
-title: 第 1 节 选择排序
+title: 3.1 选择排序
 icon: shipin
 category: 排序算法
 tags:
+  - 排序算法  
   - 减治思想
-  - 贪心算法
 ---
-
-# 选择排序
-
 
 算法的入门，从排序算法开始。可以打开这个 [网站](https://visualgo.net/zh/sorting)，体验一下各种排序算法。
 

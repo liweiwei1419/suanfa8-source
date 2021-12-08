@@ -1,12 +1,10 @@
 ---
-title: 第 7 节 希尔排序
+title: 3.7 选择排序
 icon: shipin
 category: 排序算法
 tags:
-  - 减治思想
+  - 排序算法  
 ---
-
-# 希尔排序
 
 ::: danger 提示
 

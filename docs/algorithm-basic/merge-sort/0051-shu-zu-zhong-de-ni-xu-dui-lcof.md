@@ -3,6 +3,7 @@ title: 4.4 例 1：逆序对
 icon: shipin
 category: 排序算法
 tags:
+  - 排序算法
   - 分而治之
   - 归并排序
 ---

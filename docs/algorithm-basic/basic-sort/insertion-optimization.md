@@ -1,12 +1,14 @@
 ---
-title: 第 6 节 插入排序的优化
+title: 3.6 插入排序的优化
 icon: shipin
 category: 排序算法
 tags:
+  - 排序算法  
   - 减治思想
 ---
 
-# 插入排序的优化 <Badge text="视频" type="warning"/>
+
+## 插入排序的优化 <Badge text="视频" type="warning"/>
 
 ## :tv: **视频教程**
 

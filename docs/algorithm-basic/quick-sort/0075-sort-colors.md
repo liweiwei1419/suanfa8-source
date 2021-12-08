@@ -3,6 +3,7 @@ title: 5.6 例 1：颜色分类
 icon: shipin
 category: 排序算法
 tags:
+  - 排序算法
   - 分而治之
   - 快速排序
 ---

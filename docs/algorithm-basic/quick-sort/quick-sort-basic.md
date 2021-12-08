@@ -3,6 +3,7 @@ title: 5.2 快速排序（基础版本）
 icon: yongyan
 category: 排序算法
 tags:
+  - 排序算法
   - 分而治之
   - 快速排序
 ---

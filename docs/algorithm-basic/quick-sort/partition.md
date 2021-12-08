@@ -3,6 +3,7 @@ title: 5.8 partition 几种写法比较
 icon: yongyan
 category: 排序算法
 tags:
+  - 排序算法
   - 分而治之
   - 快速排序
 ---
