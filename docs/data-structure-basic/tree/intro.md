@@ -20,4 +20,4 @@ tags:
 
 ## 「力扣」二叉树题单
 
-+ [地址](https://leetcode-cn.com/tag/binary-tree/problemset/）。
++ [地址](https://leetcode-cn.com/tag/binary-tree/problemset/) 。

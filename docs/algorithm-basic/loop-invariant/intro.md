@@ -1,5 +1,5 @@
 ---
-title: 2.1 简介
+title: 2.1 循环不变量简介
 icon: shipin
 category: 循环不变量
 tags:

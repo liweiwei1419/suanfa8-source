@@ -1,29 +1,30 @@
-const reference = require('./reference.js');
-const recursionTimeComplexity = require('./recursion-time-complexity.js');
-const loopInvariant = require('./loop-invariant.js');
-const sortBasic = require('./sort-basic.js');
-const mergeSort = require('./merge-sort.js');
-const quickSort = require('./quick-sort.js');
-const nonComparison = require('./non-comparison.js');
-const binarySearch = require('./binary-search.js');
-const slidingWindow = require('./sliding-window.js');
-const twoPointers = require('./two-pointers.js');
-const linkedList = require('./linked-list.js');
-const stack = require('./stack.js');
-const queue = require('./queue.js');
-const heap = require('./heap.js');
-const tree = require('./tree.js');
-const binarySearchTree = require('./binary-search-tree.js');
-const hashTable = require('./hash-table.js');
-const backtracking = require('./backtracking.js');
-const breadthFirstSearch = require('./breadth-first-search.js');
-
-
-// const heap = require('./heap.js');
-// const heap = require('./heap.js');
-
-// const unionFind = require('./union-find.js');
-
+const reference = require('./front-page/reference.js');
+const recursionTimeComplexity = require('./front-page/recursion-time-complexity.js');
+const loopInvariant = require('./front-page/loop-invariant.js');
+const basicSort = require('./front-page/basic-sort.js');
+const mergeSort = require('./front-page/merge-sort.js');
+const quickSort = require('./front-page/quick-sort.js');
+const nonComparison = require('./front-page/non-comparison.js');
+const binarySearch = require('./front-page/binary-search.js');
+const slidingWindow = require('./front-page/sliding-window.js');
+const twoPointers = require('./front-page/two-pointers.js');
+const linkedList = require('./front-page/linked-list.js');
+const stack = require('./front-page/stack.js');
+const queue = require('./front-page/queue.js');
+const heap = require('./front-page/heap.js');
+const tree = require('./front-page/tree.js');
+const binarySearchTree = require('./front-page/binary-search-tree.js');
+const hashTable = require('./front-page/hash-table.js');
+const backtracking = require('./front-page/backtracking.js');
+const breadthFirstSearch = require('./front-page/breadth-first-search.js');
+const dynamicProgramming = require('./front-page/dynamic-programming.js');
+const greedy = require('./front-page/greedy.js');
+const unionFind = require('./front-page/union-find.js');
+const trie = require('./front-page/trie.js');
+const segmentTree = require('./front-page/segment-tree.js');
+const fenwickTree = require('./front-page/fenwick-tree.js');
+const dijkstra = require('./front-page/dijkstra.js');
+const minimumSpanningTree = require('./front-page/minimum-spanning-tree.js');
 
 module.exports = [
 	{
@@ -48,7 +49,7 @@ module.exports = [
 			{
 				"title": "第 3 章 基础排序算法",
 				"icon": "paixu",
-				"children": sortBasic
+				"children": basicSort
 			},
 			{
 
@@ -144,12 +145,12 @@ module.exports = [
 			{
 				"title": "第 19 章 动态规划",
 				"icon": "biaoge",
-				"children": []
+				"children": dynamicProgramming
 			},
 			{
-				"title": "第 19 章 贪心算法",
+				"title": "第 20 章 贪心算法",
 				"icon": "zu11",
-				"children": []
+				"children": greedy
 			}
 		]
 	},
@@ -159,19 +160,24 @@ module.exports = [
 		"icon": "gaojihuiyuan",
 		"children": [
 			{
-				"title": "第 20 章 并查集（选学）",
+				"title": "第 21 章  字典树",
 				"icon": "merge",
-				"children": []// unionFind
+				"children": trie
 			},
 			{
-				"title": "第 21 章 线段树（选学）",
+				"title": "第 22 章 并查集（选学）",
+				"icon": "merge",
+				"children": unionFind
+			},
+			{
+				"title": "第 23 章 线段树（选学）",
 				"icon": "xianduan",
-				"children": []
+				"children": segmentTree
 			},
 			{
-				"title": "第 22 章 树状数组（选学）",
+				"title": "第 24 章 树状数组（选学）",
 				"icon": "shuzhuangpailie",
-				"children": []
+				"children": fenwickTree
 			}
 		]
 	},
@@ -181,14 +187,14 @@ module.exports = [
 		"icon": "tuluntuilisuanfa",
 		"children": [
 			{
-				"title": "第 23 章 单源最短路径",
+				"title": "第 25 章 单源最短路径",
 				"icon": "tuluntuilisuanfa",
-				"children": []
+				"children": dijkstra
 			},
 			{
-				"title": "第 24 章 最小生成树",
+				"title": "第 26 章 最小生成树",
 				"icon": "tuluntuilisuanfa",
-				"children": []
+				"children": minimumSpanningTree
 			}
 		]
 	}

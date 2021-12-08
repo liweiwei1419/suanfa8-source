@@ -3,7 +3,7 @@ title: 0.2 如何看待《算法导论》
 icon: weixin
 ---
 
-# 如何看待《算法导论》和《算法》
+<!-- 如何看待《算法导论》和《算法》 -->
 
 ::: danger 说明
 本文来自我于 2021 年 8 月 2 日 发送的公众号文章 [我如何看待《算法导论》和《算法》](https://mp.weixin.qq.com/s/eNB_qcOWMcSJdNY8LMB4ZQ)。

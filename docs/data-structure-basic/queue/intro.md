@@ -1,5 +1,5 @@
 ---
-title: 12.1 队列是什么
+title: 12.1 队列简介
 icon: yongyan
 category: 队列
 tags:

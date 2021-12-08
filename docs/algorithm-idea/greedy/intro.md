@@ -1,12 +1,12 @@
-### 第 15 章 贪心算法
+---
+title: 20.1 贪心算法简介
+icon: yongyan
+category: 贪心算法
+tags:
+  - 贪心算法
+---
 
-| 题号 | 链接                                                         | 题解                                                         |
-| ---- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 12   | [整数转罗马数字](https://leetcode-cn.com/problems/integer-to-roman/)（中等） | [贪心算法（Java）](https://leetcode-cn.com/problems/integer-to-roman/solution/tan-xin-suan-fa-by-liweiwei1419/) |
-| 452  | [用最少数量的箭引爆气球](https://leetcode-cn.com/problems/minimum-number-of-arrows-to-burst-balloons)（中等） |                                                              |
-| 455  | [分发饼干](https://leetcode-cn.com/problems/assign-cookies)（中等） |                                                              |
-| 122  | [买卖股票的最佳时机 II](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii)（简单） |                                                              |
-| 56   | [合并区间](https://leetcode-cn.com/problems/merge-intervals/)（中等） | [贪心算法（Java）](https://leetcode-cn.com/problems/merge-intervals/solution/tan-xin-suan-fa-java-by-liweiwei1419-3/) |
-| 45   | [跳跃游戏 II](https://leetcode-cn.com/problems/jump-game-ii/)（困难） |                                                              |
-| 55   | [跳跃游戏](https://leetcode-cn.com/problems/jump-game/)（中等） |                                                              |
-| 376  | [摆动序列](https://leetcode-cn.com/problems/wiggle-subsequence/)（中等） |                                                              |
+::: danger 重点概括
++ 可以使用贪心算法解决问题一般都需要证明，但是一般面试和笔试对严格证明要求不高，所以有「贪心算法」的直觉比较重要；
++ 贪心算法可以和动态规划算法进行比较，动态规划需要从多个子问题中选择一个最优解，可以使用贪心算法解决问题，每一步只需要选择其中一个子问题。
+:::
