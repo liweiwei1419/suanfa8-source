@@ -1,21 +1,20 @@
 ---
-title: 24.1 单源最短路径
+title: 24.1 图论算法-单源最短路径
 icon: yongyan
 category: 图论
 tags:
   - Dijkstra
 ---
 
-### 第 21 章 图论算法（单源最短路径）
-
-+ 文章：[Dijkstra 算法（解决没有负权边的单源最短路径问题）](https://juejin.im/post/6857030974631313422)。
 
 
-（该文已经发公众号，地址：https://mp.weixin.qq.com/s/Gzm00enOVtyMZe_Qc-UIaw ）
++ 掘金地址：[Dijkstra 算法（解决没有负权边的单源最短路径问题）](https://juejin.im/post/6857030974631313422)；
++ [公众号地址](https://mp.weixin.qq.com/s/Gzm00enOVtyMZe_Qc-UIaw)。
+
 
 封面：
 
-![](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/024a1271fc2f466e8b7ae337e3878512~tplv-k3u1fbpfcp-zoom-1.image)
+![](https://tva1.sinaimg.cn/large/008i3skNgy1gxa95zwh7pj30w60eajs1.jpg)
 
 E. W. Dijkstra（1930/05/11-2002/08/06），杰出的计算机科学家，1972 年图灵奖得主。
 
@@ -32,7 +31,7 @@ E. W. Dijkstra（1930/05/11-2002/08/06），杰出的计算机科学家，1972 �
 
 解决没有负权边的单源最短路径问题：即从一个顶点出发到其它顶点的最短路径。
 
-![](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7eb1e603dbba431c8c7c249eef3898e1~tplv-k3u1fbpfcp-zoom-1.image)
+![](https://tva1.sinaimg.cn/large/008i3skNgy1gxa95yub99j31ma0pcaca.jpg)
 
 说明：这个例子来自于 liuyubobobo 老师在慕课网上开设的课程 [算法与数据结构-综合提升 C++版](https://coding.imooc.com/class/71.html) ，选择这个例子是因为它足够简单，能够把 Dijkstra 算法的思想说清楚。
 
@@ -41,7 +40,7 @@ E. W. Dijkstra（1930/05/11-2002/08/06），杰出的计算机科学家，1972 �
 + 理解源点，我们这里讲解的例子都认为 `0` 是源点；
 + 把源点从水平平面上拉起来，形成下面的图形。
 
-![](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/013296998f524549b18229f5841b61e6~tplv-k3u1fbpfcp-zoom-1.image)
+<img src="https://tva1.sinaimg.cn/large/008i3skNgy1gxa96485fuj30n40vgjsb.jpg" style="zoom: 50%;" />
 
 说明：这些弯曲的边，都是被「松弛操作」淘汰的边。
 
@@ -49,11 +48,11 @@ E. W. Dijkstra（1930/05/11-2002/08/06），杰出的计算机科学家，1972 �
 
 + 0 -> 2 这条路径，就是从顶点 0 到顶点 2 的最短路径。**由于没有负权边，因此不会有一条边，我们绕道走回到 顶点 2，路径之和更小**。
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2276b5b564b24617bd38d5ac87f5afa4~tplv-k3u1fbpfcp-zoom-1.image)
+![](https://tva1.sinaimg.cn/large/008i3skNgy1gxa96kq086j31dy0bkq3q.jpg)
 
 事实上，从 0 到 1 ，我们经过 2 再来到 1 ，路径之和 $2 + 1 < 5$，这就是松弛操作的意义。就像我们坐飞机，有的时候经停，费用可能更低。
 
-![](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b67d0475b9e94d7e9be5da985f7a059c~tplv-k3u1fbpfcp-zoom-1.image)
+![](https://tva1.sinaimg.cn/large/008i3skNgy1gxa96nvc68j31n20dwdho.jpg)
 
 再次理解松弛操作：$5$ 比 $2$ 大，$5$ 加上一个**非负整数**不可能比 $2$ 还小。
 
@@ -61,36 +60,36 @@ E. W. Dijkstra（1930/05/11-2002/08/06），杰出的计算机科学家，1972 �
 
 最开始的样子，0 到自己路径最短，最短路径为 0，到其它顶点暂时认为是负无穷。
 
-![](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/44c6bb7a10d843b88e9609452e30c0bf~tplv-k3u1fbpfcp-zoom-1.image)
+![](https://tva1.sinaimg.cn/large/008i3skNgy1gxa96qs14gj319o0lsq4r.jpg)
 
 从 0 出发的所有边中，到 2 的距离最短，因此我们就可以说 0 -> 2 这条边的长度，是从 0 开始到 2 的最短路径。
 同时更新从 0 出发到它的相邻顶点的距离。
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/69e2c7bfd80f417281528290622f29b3~tplv-k3u1fbpfcp-zoom-1.image)
+![](https://tva1.sinaimg.cn/large/008i3skNgy1gxa96s83fyj31fw0k6jtm.jpg)
 
 接下来考察，从 2 出发到其相邻顶点的距离有没有可能更短。
 
-![](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ed4cd50c5d314e709339875e0ab61a81~tplv-k3u1fbpfcp-zoom-1.image)
+![](https://tva1.sinaimg.cn/large/008i3skNgy1gxa96tjyh8j319a0hu75r.jpg)
 
 这个时候还没确定的顶点中，最短距离的顶点是 1 （距离是 3），因此源点 0 到顶点 1 的最短距离就是 3。
 
-![](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/29abf4c8d3874a37aa8516f36bf72180~tplv-k3u1fbpfcp-zoom-1.image)
+![](https://tva1.sinaimg.cn/large/008i3skNgy1gxa96wrorrj317y0hq3zw.jpg)
 
 现在我们更新出 3 出发的顶点，只有 3 -> 4 这条边（长度为 2）。现在到 3 的距离是 5，$5 + 2 > 4$，因此不更新 4 的距离。松弛操作没有找到更优的解。
 
 现在没有确定的顶点中，距离最短的是 4 ，从 4 出发没有相邻的顶点。
 
-![](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/504183a52d5f4391bebb3851b79d9703~tplv-k3u1fbpfcp-zoom-1.image)
+![](https://tva1.sinaimg.cn/large/008i3skNgy1gxa96zl5mwj31700hemyf.jpg)
 
 剩下的一个顶点就是 3 ，因此最后我们确定了 3 的距离。
 
-![](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c90ca9f21ba642cc9f36cd4c9e156679~tplv-k3u1fbpfcp-zoom-1.image)
+![](https://tva1.sinaimg.cn/large/008i3skNgy1gxa97402odj316u0hm0u1.jpg)
 
 
 现在我们再来看一下 Dijkstra 最初的想法，就很容易理解了。松弛操作没有选择的边，就是这个图例弯曲的边，它们一定不会是组成单源最短路径的边。
 
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b5579e54bce14d2697685ec34d686e25~tplv-k3u1fbpfcp-zoom-1.image)
+<img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b5579e54bce14d2697685ec34d686e25~tplv-k3u1fbpfcp-zoom-1.image" style="zoom:50%;" />
 
 
 ## 代码实现
