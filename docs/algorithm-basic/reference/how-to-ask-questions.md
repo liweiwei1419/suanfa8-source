@@ -5,6 +5,7 @@ icon: tiwen
 
 # 如何提问
 
++ [提问的智慧](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/main/README-zh_CN.md)；
 + [提问的智慧](https://wiki.yoitsu.moe/wiki/Portal:Ask/Nutshell#.E5.A5.BD.E9.97.AE.E9.A2.98.E4.B8.8E.E8.A0.A2.E9.97.AE.E9.A2.98)；
 + [How do I ask a good question? - Help Center - Stack Overflow](https://stackoverflow.com/help/how-to-ask)
 

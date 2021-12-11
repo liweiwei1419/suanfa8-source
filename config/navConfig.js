@@ -5,31 +5,52 @@ module.exports = [{
       },
 
       {
-            "text": "文章列表",
-            "icon": "wenzhangliebiaoxiangqing",
-            "link": "/article/"
+            "text":"二分查找精讲",
+            "icon":"jingjiang",
+            "link":"/binary-search/"
       },
       {
-            "text": "分类",
-            "icon": "fenlei",
-            "link": "/category/"
+            "text":"动态规划精讲",
+            "icon":"jingjiang",
+            "link":"/dynamic-programming/"
       },
-      {
-            "text": "标签",
-            "icon": "biaoqian",
-            "link": "/tag/"
-      },
-      {
-            "text": "时间线",
-            "icon": "shijianxian",
-            "link": "/timeline/"
-      },
-
+      
+      
       {
             "text":"精选题解",
             "icon":"jingxuan",
-            "link":"/selected-solutions/"
+            "link":"/choice/"
       },
+
+      {
+            "text": "系统功能",
+            "icon": "xitong",
+            "items": [
+                  {
+                        "text": "文章列表",
+                        "icon": "wenzhangliebiaoxiangqing",
+                        "link": "/article/"
+                  },
+                  {
+                        "text": "按分类",
+                        "icon": "fenlei",
+                        "link": "/category/"
+                  },
+                  {
+                        "text": "按标签",
+                        "icon": "biaoqian",
+                        "link": "/tag/"
+                  },
+                  {
+                        "text": "文章时间线",
+                        "icon": "shijianxian",
+                        "link": "/timeline/"
+                  },
+
+                  
+            ]
+      },
+      
 
       
 
