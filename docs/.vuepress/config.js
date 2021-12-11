@@ -43,7 +43,7 @@ module.exports = config({
     hostname: "http://suanfa8.com/",
 
     author: "liweiwei1419",
-    repo: "suanfa8/suanfa8.github.io",
+    repo: "liweiwei1419/liweiwei1419.github.io",
 
     nav: navConfig,
     sidebar: sidebarConfig,
