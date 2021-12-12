@@ -1,3 +1,3 @@
 # 二分查找精讲
 
-思维导图最后要加上哦。
+习题列表在 [这里](https://suanfa8.com/algorithm-basic/binary-search/intro/)。

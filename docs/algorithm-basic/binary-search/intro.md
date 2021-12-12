@@ -1,5 +1,5 @@
 ---
-title: 7 二分差早
+title: 7 二分查找
 icon: shipin
 category: 二分查找
 tags:
