@@ -6,7 +6,7 @@ const choice = require('./sidebar/choice/choice.js');
 module.exports = {
 	"/choice/": choice,
 	"/binary-search/": binarySearch,
-	// "/sliding-window/": slidingWindow,
+	"/dynamic-programming/": dynamicProgramming,
 	// "/two-pointers/": twoPointers,
 	// "/backtracking/": backtracking,
 	// "/quick-sort/": quickSort,
