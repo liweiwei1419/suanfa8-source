@@ -1,14 +1,21 @@
 ---
-title: 7.5 例题和练习
+title: 7 二分差早
 icon: shipin
 category: 二分查找
 tags:
   - 减治思想
 ---
 
+这部分内容请见我在「导航栏」编写的「二分查找精讲」：
+
+![image-20211212150658906](https://tva1.sinaimg.cn/large/008i3skNgy1gxb2dhagh1j31mc050wff.jpg)
+
+这部分内容我把整个知识体系，二分查找的思想、细节、需要注意的地方，不同二分查找写法的比较都做了详细的讲解，并且逐步细化了每一节的内容，阅读起来不会很吃力。
 
 + 可以我的  LeetBook 收看二分查找的知识点 [讲解](https://leetcode-cn.com/leetbook/read/learning-algorithms-with-leetcode/xsq0b7/)，免费；
 + 知识点讲解：[写对二分查找不能靠模板，需要理解加练习 （附练习题，持续更新）](https://leetcode-cn.com/problems/search-insert-position/solution/te-bie-hao-yong-de-er-fen-cha-fa-fa-mo-ban-python-/)、[【视频讲解】](https://www.bilibili.com/video/av83911694?p=1)。
+
+以下是练习（我写过很多「二分查找习题列表」，我暂时先把它们汇总在这里，有重复的部分再找时间去掉，多次出现的问题一定是很经典、很典型的问题）。
 
 ## 题型一：二分求下标
 
@@ -137,5 +144,3 @@ tags:
 + 「力扣」第 1011 题：在 D 天内送达包裹的能力（中等）
 + 「力扣」第 1482 题：制作 m 束花所需的最少天数（中等）
 + 「力扣」第 1552 题：两球之间的磁力（中等）
-
-# 推荐阅读

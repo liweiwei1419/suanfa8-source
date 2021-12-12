@@ -1,10 +1,5 @@
 module.exports = [
-	"/algorithm-basic/binary-search/1-decrease-and-conquer.md",
-	"/algorithm-basic/binary-search/2-describe.md",
-	"/algorithm-basic/binary-search/3-exclude.md",
-	"/algorithm-basic/binary-search/4-template-compare.md",
-	"/algorithm-basic/binary-search/5-practice.md"
-
+	"/algorithm-basic/binary-search/intro.md",
 	// {
 	// 	"title": "第 1 章 逐渐缩小搜索区间",
 	// 	"icon":"shu",

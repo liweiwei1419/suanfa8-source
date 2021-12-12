@@ -7,5 +7,6 @@ module.exports = [
 	"/binary-search/06.md",
 	"/binary-search/07.md",
 	"/binary-search/08.md",
-	"/binary-search/09.md"
+	"/binary-search/09.md",
+	"/binary-search/10.md"
 ]
