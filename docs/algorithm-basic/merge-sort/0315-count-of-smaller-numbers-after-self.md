@@ -9,7 +9,7 @@ tags:
 ---
 
 
-# 「力扣」第 315 题：计算右侧小于当前元素的个数
+「力扣」第 315 题：计算右侧小于当前元素的个数
 
 + 题目地址：[「力扣」第 315 题：计算右侧小于当前元素的个数](https://leetcode-cn.com/problems/count-of-smaller-numbers-after-self/)
 
