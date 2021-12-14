@@ -1,5 +1,5 @@
 ---
-title: 2.2 例 1：删除排序数组中的重复项
+title: 1.9 例 1：删除排序数组中的重复项
 icon: shipin
 category: 循环不变量
 tags:

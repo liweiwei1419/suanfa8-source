@@ -1,5 +1,5 @@
 ---
-title: 6.3 基数排序
+title: 2.27 基数排序
 icon: yongyan
 category: 排序算法
 tags:
@@ -16,7 +16,9 @@ tags:
 
 摘要：基数排序是一种基于「关键字」的排序方法，这里的「关键字」是每一个数位，重点在于理解结论：低位优先的有效性。
 
-> 重点理解基数排序的子过程：计数排序（因为要保证稳定性）。
+::: danger 重点理解
+基数排序的子过程：计数排序（因为要保证稳定性）。
+:::
 
 ![image-20200722143255898](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/fd7e4ed9ad77439381e99299fee0224b~tplv-k3u1fbpfcp-zoom-1.image)
 

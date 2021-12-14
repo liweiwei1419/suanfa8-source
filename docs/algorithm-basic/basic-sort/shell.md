@@ -1,5 +1,5 @@
 ---
-title: 3.7 希尔排序
+title: 2.8 希尔排序
 icon: shipin
 category: 排序算法
 tags:

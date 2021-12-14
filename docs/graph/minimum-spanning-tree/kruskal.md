@@ -1,5 +1,5 @@
 ---
-title: 26.4 Kruskal 算法
+title: 7.10 Kruskal 算法
 icon: yongyan
 category: 图论
 tags:

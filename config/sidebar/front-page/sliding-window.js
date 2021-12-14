@@ -1,6 +1,5 @@
 module.exports = [
-	'/algorithm-basic/sliding-window/intro.md',
-	'/algorithm-basic/sliding-window/practice.md',
+	
 
 	// {
 	// 	"title": "知识点讲解",

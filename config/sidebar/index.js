@@ -28,174 +28,173 @@ const minimumSpanningTree = require('./front-page/minimum-spanning-tree.js');
 
 module.exports = [
 	{
-		"title":"第 1 部分 算法基础",
-		"icon": "suanfa",
+		"title":"第 1 章 递归、时间复杂度、循环不变量",
+		"icon": "shu",
 		"children": [
-			{
-				"title": "第 0 章 参考资料",
-				"icon": "ziliaoku",
-				"children": reference
-			},
-			{
-				"title": "第 1 章 递归与时间复杂度",
-				"icon": "shijian1",
-				"children": recursionTimeComplexity
-			},
-			{
-				"title": "第 2 章 循环不变量",
-				"icon": "process",
-				"children": loopInvariant
-			},
-			{
-				"title": "第 3 章 基础排序算法",
-				"icon": "paixu",
-				"children": basicSort
-			},
-			{
-
-				"title": "第 4 章 归并排序",
-				"icon": "huiguijueceshu",
-				"children": mergeSort
-			},
-			{
-				"title": "第 5 章 快速排序",
-				"icon": "fenleijueceshu",
-				"children": quickSort
-			},
-			{
-
-				"title": "第 6 章 非比较排序算法",
-				"icon": "fl-tong",
-				"children": nonComparison
-			},
-
-			{
-				"title": "第 7 章 二分查找",
-				"icon": "chaxun",
-				"children": binarySearch
-			},
-			{
-				"title": "第 8 章 滑动窗口",
-				"icon": "yemiantuiguang",
-				"children": slidingWindow
-			},
-			{
-				"title": "第 9 章 双指针",
-				"icon": "xuanzezhizhen",
-				"children": twoPointers
-			}
+			"/algorithm-basic/reference/reference.md",
+			"/algorithm-basic/reference/introduction-to-algorithms.md",
+			"/algorithm-basic/reference/download.md",
+			"/algorithm-basic/reference/how-to-ask-questions.md",
+			"/algorithm-basic/recursion-time-complexity/intro.md",
+			"/algorithm-basic/recursion-time-complexity/recursion.md",
+			"/algorithm-basic/recursion-time-complexity/time-complexity.md",
+			"/algorithm-basic/loop-invariant/intro.md",
+			"/algorithm-basic/loop-invariant/0026-remove-duplicates-from-sorted-array.md",
+			"/algorithm-basic/loop-invariant/0283-move-zeroes.md",
+			"/algorithm-basic/loop-invariant/0027-remove-element.md",
+			"/algorithm-basic/loop-invariant/0080-remove-duplicates-from-sorted-array-ii.md"
 		]
+
 	},
 	{
-		"title": "第 2 部分 数据结构基础",
-		"icon": "shujujiegou",
+		"title":"第 2 章 排序算法",
+		"icon": "shu",
 		"children": [
-			{
-				"title": "第 10 章 链表",
-				"icon": "lianjie",
-				"children": linkedList
-			},
-			{
-				"title": "第 11 章 栈",
-				"icon": "line-stackduizhan",
-				"children": stack
-			},
-			{
-				"title": "第 12 章 队列",
-				"icon": "mqxiaoxiduilieMQ",
-				"children": queue
-			},
-			{
-				"title": "第 13 章 优先队列",
-				"icon": "mqxiaoxiduilieMQ",
-				"children": heap
-			},
-			{
-				"title": "第 14 章 二叉树",
-				"icon": "mqxiaoxiduilieMQ",
-				"children": tree
-			},
-			{
-				"title": "第 15 章 二叉搜索树",
-				"icon": "shuzhuangtu",
-				"children": binarySearchTree
-			},
-			{
-				"title": "第 16 章 哈希表",
-				"icon": "haxi",
-				"children": hashTable
-			},
+			"/algorithm-basic/basic-sort/intro.md",
+			"/algorithm-basic/basic-sort/selection.md",
+			"/algorithm-basic/basic-sort/bubble.md",
+			"/algorithm-basic/basic-sort/bubble-optimization.md",
+			"/algorithm-basic/basic-sort/insertion.md",
+			"/algorithm-basic/basic-sort/insertion-meaning.md",
+			"/algorithm-basic/basic-sort/insertion-optimization.md",
+			"/algorithm-basic/basic-sort/shell.md",
+
+			"/algorithm-basic/merge-sort/intro.md",
+			"/algorithm-basic/merge-sort/merge-sort.md",
+			"/algorithm-basic/merge-sort/merge-sort-optimize.md",
+			"/algorithm-basic/merge-sort/0051-shu-zu-zhong-de-ni-xu-dui-lcof.md",
+			"/algorithm-basic/merge-sort/0315-count-of-smaller-numbers-after-self.md",
+			"/algorithm-basic/merge-sort/bottom2up.md",
+			"/algorithm-basic/merge-sort/practice.md",
+
+			"/algorithm-basic/quick-sort/intro.md",
+			"/algorithm-basic/quick-sort/quick-sort-basic.md",
+			"/algorithm-basic/quick-sort/quick-sort-optimize.md",
+			"/algorithm-basic/quick-sort/quick-sort-two-ways.md",
+			"/algorithm-basic/quick-sort/quick-sort-three-ways.md",
+			"/algorithm-basic/quick-sort/0075-sort-colors.md",
+			"/algorithm-basic/quick-sort/0215-kth-largest-element-in-an-array.md",
+			"/algorithm-basic/quick-sort/partition.md",
+			"/algorithm-basic/quick-sort/summary.md",
+
+			"/algorithm-basic/non-comparison/intro.md",
+			"/algorithm-basic/non-comparison/count-sort.md",
+			"/algorithm-basic/non-comparison/radix-sort.md",
+			"/algorithm-basic/non-comparison/bucket-sort.md"
+		]
+
+	},
+
+	{
+		"title": "第 3 部分 二分查找、滑动窗口、双指针",
+		"icon": "shu",
+		"children": [
+			"/algorithm-basic/binary-search/intro.md",
+			'/algorithm-basic/sliding-window/intro.md',
+			'/algorithm-basic/sliding-window/practice.md',
+			'/algorithm-basic/two-pointers/intro.md',
+			'/algorithm-basic/two-pointers/practice.md',
+
+
+		]
+	},
+
+
+	{
+		"title": "第 4 部分 数据结构基础",
+		"icon": "shu",
+		"children": [
+			"/data-structure-basic/linked-list/intro.md",
+			"/data-structure-basic/linked-list/practice.md",
+			
+			"/data-structure-basic/stack/intro.md",
+			"/data-structure-basic/stack/practice.md",
+			
+			"/data-structure-basic/queue/intro.md",
+			"/data-structure-basic/queue/practice.md",
+			
+			"/data-structure-basic/heap/intro.md",
+			"/data-structure-basic/heap/practice.md",
+
+			"/data-structure-basic/tree/intro.md",
+			"/data-structure-basic/tree/practice.md",
+
+			"/data-structure-basic/hash-table/intro.md",
+			"/data-structure-basic/hash-table/practice.md",
+
 		]
 	},
 
 	{
-		"title": "第 3 部分 算法思想",
-		"icon": "jiyinsuanfa",
+		"title": "第 5 章 算法思想",
+		"icon": "shu",
 		"children": [
-			{
-				"title": "第 17 章 回溯算法",
-				"icon": "huisuzonglan",
-				"children": backtracking
-			},
-			{
-				"title": "第 18 章 广度优先遍历",
-				"icon": "shenduheguangdu",
-				"children": breadthFirstSearch
-			},
-			{
-				"title": "第 19 章 动态规划",
-				"icon": "biaoge",
-				"children": dynamicProgramming
-			},
-			{
-				"title": "第 20 章 贪心算法",
-				"icon": "zu11",
-				"children": greedy
-			}
+			"/algorithm-idea/backtracking/01-intro.md",
+			"/algorithm-idea/backtracking/02-tree.md",
+			"/algorithm-idea/backtracking/03-backtracking.md",
+			"/algorithm-idea/backtracking/04-questions.md",
+			"/algorithm-idea/backtracking/05-pruning.md",
+			"/algorithm-idea/backtracking/06-summary.md",
+			"/algorithm-idea/backtracking/07-practice.md",
+
+
+			"/algorithm-idea/breadth-first-search/intro.md",
+			"/algorithm-idea/breadth-first-search/practice.md",
+
+			"/algorithm-idea/dynamic-programming/intro.md",
+			"/algorithm-idea/dynamic-programming/practice.md",
+
+			"/algorithm-idea/greedy/intro.md",
+			"/algorithm-idea/greedy/practice.md",
 		]
 	},
 
 	{
-		"title": "第 4 部分 高级数据结构",
-		"icon": "gaojihuiyuan",
+		"title": "第 6 章 高级数据结构",
+		"icon": "shu",
 		"children": [
-			{
-				"title": "第 21 章  字典树",
-				"icon": "merge",
-				"children": trie
-			},
-			{
-				"title": "第 22 章 并查集（选学）",
-				"icon": "merge",
-				"children": unionFind
-			},
-			{
-				"title": "第 23 章 线段树（选学）",
-				"icon": "xianduan",
-				"children": segmentTree
-			},
-			{
-				"title": "第 24 章 树状数组（选学）",
-				"icon": "shuzhuangpailie",
-				"children": fenwickTree
-			}
+			"/data-structure-advance/trie/01.md",
+			"/data-structure-advance/trie/02.md",
+			"/data-structure-advance/trie/03.md",
+			"/data-structure-advance/trie/04.md",
+			"/data-structure-advance/trie/05.md",
+
+			"/data-structure-advance/union-find/intro.md",
+			"/data-structure-advance/union-find/practice.md",
+
+			"/data-structure-advance/segment-tree/01.md",
+			"/data-structure-advance/segment-tree/02.md",
+			"/data-structure-advance/segment-tree/03.md",
+			"/data-structure-advance/segment-tree/04.md",
+
+			"/data-structure-advance/fenwick-tree/01.md",
+			"/data-structure-advance/fenwick-tree/02.md",
+			"/data-structure-advance/fenwick-tree/03.md",
+			"/data-structure-advance/fenwick-tree/04.md",
+			"/data-structure-advance/fenwick-tree/05.md",
+			"/data-structure-advance/fenwick-tree/06.md",
+			"/data-structure-advance/fenwick-tree/07.md"
 		]
 	},
 
 	{
-		"title": "第 5 部分 图论",
-		"icon": "tuluntuilisuanfa",
+		"title": "第 7 章 图论",
+		"icon": "shu",
 		"children": [
-			{
-				"title": "第 25 章 单源最短路径",
-				"icon": "tuluntuilisuanfa",
-				"children": dijkstra
-			},
-			{
-				"title": "第 26 章 最小生成树",
-				"icon": "tuluntuilisuanfa",
-				"children": minimumSpanningTree
-			}
+			
+			"/graph/dijkstra/intro.md",
+			"/graph/dijkstra/geometrically-intuitive.md",
+			"/graph/dijkstra/relaxation.md",
+			"/graph/dijkstra/example.md",
+			"/graph/dijkstra/code.md",
+			"/graph/dijkstra/summarize.md",
+
+			"/graph/minimum-spanning-tree/intro.md",
+			"/graph/minimum-spanning-tree/application.md",
+			"/graph/minimum-spanning-tree/segmentation-theorem.md",
+			"/graph/minimum-spanning-tree/kruskal.md",
+			"/graph/minimum-spanning-tree/lazy-prim.md",
+			"/graph/minimum-spanning-tree/summarize.md"
 		]
 	}
 ]

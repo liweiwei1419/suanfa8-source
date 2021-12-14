@@ -1,5 +1,5 @@
 ---
-title: 4.5 例 2：计算右侧小于当前元素的个数
+title: 2.13 例 2：计算右侧小于当前元素的个数
 icon: shipin
 category: 排序算法
 tags:

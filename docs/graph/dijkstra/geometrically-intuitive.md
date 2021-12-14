@@ -1,5 +1,5 @@
 ---
-title: 25.2 Dijkstra 算法要解决的问题与几何直观
+title: 7.2 Dijkstra 算法要解决的问题与几何直观
 icon: yongyan
 category: 图论
 tags:

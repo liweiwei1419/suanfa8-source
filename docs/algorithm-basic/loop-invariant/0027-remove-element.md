@@ -1,5 +1,5 @@
 ---
-title: 2.4 例 3：移除元素
+title: 1.11 例 3：移除元素
 icon: shipin
 category: 循环不变量
 tags:

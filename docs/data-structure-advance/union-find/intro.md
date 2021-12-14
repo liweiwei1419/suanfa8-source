@@ -1,5 +1,5 @@
 ---
-title: 21.1 并查集基础问题
+title: 6.6 并查集基础问题
 icon: yongyan
 category: 并查集
 tags:

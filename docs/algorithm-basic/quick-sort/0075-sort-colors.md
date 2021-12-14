@@ -1,5 +1,5 @@
 ---
-title: 5.6 例 1：颜色分类
+title: 2.21 例 1：颜色分类
 icon: shipin
 category: 排序算法
 tags:

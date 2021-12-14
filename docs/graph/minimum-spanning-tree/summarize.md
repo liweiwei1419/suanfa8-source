@@ -1,5 +1,5 @@
 ---
-title: 26.6 总结与练习
+title: 7.12 最小生成树算法总结与练习
 icon: yongyan
 category: 图论
 tags:

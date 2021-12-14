@@ -1,5 +1,5 @@
 ---
-title: 8.2 滑动窗口 的练习
+title: 3.3 滑动窗口的练习
 icon: yongyan
 category: 滑动窗口
 tags:

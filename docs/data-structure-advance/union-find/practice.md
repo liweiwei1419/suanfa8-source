@@ -1,5 +1,5 @@
 ---
-title: 21.2 并查集进阶问题
+title: 6.7 并查集进阶问题
 icon: yongyan
 category: 并查集
 tags:

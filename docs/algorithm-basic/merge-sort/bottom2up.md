@@ -1,5 +1,5 @@
 ---
-title: 4.6 自底向上的归并排序（选学）
+title: 2.14 自底向上的归并排序（选学）
 icon: yongyan
 category: 排序算法
 tags:

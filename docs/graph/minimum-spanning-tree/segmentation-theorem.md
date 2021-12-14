@@ -1,5 +1,5 @@
 ---
-title: 26.3 切分定理
+title: 7.9 切分定理
 icon: yongyan
 category: 图论
 tags:

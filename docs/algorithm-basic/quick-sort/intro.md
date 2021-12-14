@@ -1,5 +1,5 @@
 ---
-title: 5.1 简介
+title: 2.16 快速排序简介
 icon: yongyan
 category: 排序算法
 tags:

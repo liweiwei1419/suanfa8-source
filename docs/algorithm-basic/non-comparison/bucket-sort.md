@@ -1,5 +1,5 @@
 ---
-title: 6.4 桶排序
+title: 2.28 桶排序
 icon: yongyan
 category: 排序算法
 tags:

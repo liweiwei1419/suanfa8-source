@@ -1,5 +1,5 @@
 ---
-title: 4.7 归并排序练习
+title: 2.15 归并排序练习
 icon: yongyan
 category: 排序算法
 tags:

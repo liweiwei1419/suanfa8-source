@@ -1,5 +1,5 @@
 ---
-title: 25.4 通过一个例子理解 Dijkstra 算法的执行步骤
+title: 7.4 通过一个例子理解 Dijkstra 算法的执行步骤
 icon: yongyan
 category: 图论
 tags:

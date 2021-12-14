@@ -1,5 +1,5 @@
 ---
-title: 8.1 滑动窗口是什么
+title: 3.2 滑动窗口是什么
 icon: yongyan
 category: 滑动窗口
 tags:

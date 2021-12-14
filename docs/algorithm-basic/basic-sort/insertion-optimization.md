@@ -1,5 +1,5 @@
 ---
-title: 3.6 插入排序的优化
+title: 2.7 插入排序的优化
 icon: shipin
 category: 排序算法
 tags:

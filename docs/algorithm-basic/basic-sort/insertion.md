@@ -1,5 +1,5 @@
 ---
-title: 3.4 插入排序
+title: 2.5 插入排序
 icon: shipin
 category: 排序算法
 tags:

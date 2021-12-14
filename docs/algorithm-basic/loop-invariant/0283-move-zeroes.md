@@ -1,5 +1,5 @@
 ---
-title: 2.3 例 2：移动零
+title: 1.10 例 2：移动零
 icon: shipin
 category: 循环不变量
 tags:

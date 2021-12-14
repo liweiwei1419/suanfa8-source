@@ -1,5 +1,5 @@
 ---
-title: 3.3 冒泡排序的优化
+title: 2.4 冒泡排序的优化
 icon: shipin
 category: 排序算法
 tags:

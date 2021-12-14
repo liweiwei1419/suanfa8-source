@@ -1,5 +1,5 @@
 ---
-title: 3.1 选择排序
+title: 2.2 选择排序
 icon: shipin
 category: 排序算法
 tags:

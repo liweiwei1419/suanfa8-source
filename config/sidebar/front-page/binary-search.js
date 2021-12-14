@@ -1,5 +1,5 @@
 module.exports = [
-	"/algorithm-basic/binary-search/intro.md",
+	
 	// {
 	// 	"title": "第 1 章 逐渐缩小搜索区间",
 	// 	"icon":"shu",

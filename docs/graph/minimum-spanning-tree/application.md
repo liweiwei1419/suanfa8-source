@@ -1,5 +1,5 @@
 ---
-title: 26.2 最小生成树的应用
+title: 7.8 最小生成树的应用
 icon: yongyan
 category: 图论
 tags:

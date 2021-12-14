@@ -1,5 +1,5 @@
 ---
-title: 5.4 快速排序的优化（避免递归树倾斜）
+title: 2.19 快速排序的优化（避免递归树倾斜）
 icon: yongyan
 category: 排序算法
 tags:

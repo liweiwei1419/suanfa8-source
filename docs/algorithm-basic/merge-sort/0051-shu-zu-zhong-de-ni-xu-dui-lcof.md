@@ -1,5 +1,5 @@
 ---
-title: 4.4 例 1：逆序对
+title: 2.12 例 1：逆序对
 icon: shipin
 category: 排序算法
 tags:

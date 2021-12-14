@@ -1,5 +1,5 @@
 ---
-title: 26.1 最小生成树简介与参考资料
+title: 7.7 最小生成树简介与参考资料
 icon: yongyan
 category: 图论
 tags:

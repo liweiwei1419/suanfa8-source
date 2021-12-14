@@ -1,5 +1,5 @@
 ---
-title: 16.2 哈希表练习
+title: 4.12 哈希表练习
 icon: yongyan
 category: 哈希表
 tags:

@@ -1,5 +1,5 @@
 ---
-title: 3.5 插入排序的意义
+title: 2.6 插入排序的意义
 icon: shipin
 category: 排序算法
 tags:

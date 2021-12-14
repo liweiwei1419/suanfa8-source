@@ -1,5 +1,5 @@
 ---
-title: 25.6 总结
+title: 7.6 单源最短路径算法总结
 icon: yongyan
 category: 图论
 tags:

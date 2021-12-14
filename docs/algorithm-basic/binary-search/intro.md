@@ -1,5 +1,5 @@
 ---
-title: 7 二分查找
+title: 3.1 二分查找习题分类
 icon: shipin
 category: 二分查找
 tags:

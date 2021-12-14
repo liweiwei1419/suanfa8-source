@@ -1,5 +1,5 @@
 ---
-title: 26.5 Prim 算法
+title: 7.11 Prim 算法
 icon: yongyan
 category: 图论
 tags:

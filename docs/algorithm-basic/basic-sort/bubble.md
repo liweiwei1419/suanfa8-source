@@ -1,5 +1,5 @@
 ---
-title: 3.2 冒泡排序
+title: 2.3 冒泡排序
 icon: shipin
 category: 排序算法
 tags:

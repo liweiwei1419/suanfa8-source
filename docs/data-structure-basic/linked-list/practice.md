@@ -1,5 +1,5 @@
 ---
-title: 10.2 链表的练习
+title: 4.2 链表的练习
 icon: yongyan
 category: 链表
 tags:
