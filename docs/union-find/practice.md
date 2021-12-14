@@ -1,5 +1,5 @@
 ---
-title: 第 1 节 本章内容介绍（请先看这里）
+title: 本章内容介绍（请先看这里）
 icon: yongyan
 category: 并查集
 tags:
