@@ -46,7 +46,7 @@ tags:
 - `citations` 按 **升序排列**
 
 
-### 理解题意
+## 理解题意
 
 这道问题理解题意要花很长时间，一个有效的办法就是仔细研究示例，然后去理解题目的意思。我真正明白题目的意思是看到这句描述：
 
@@ -70,17 +70,17 @@ h 指数是 **论文数量**，不是引用次数。
 
 再看看题目的示例：
 
-![image.png](https://pic.leetcode-cn.com/1625998400-VBXQNr-image.png)
+<img src="https://tva1.sinaimg.cn/large/008i3skNgy1gxdr86nz0qj30ru0didgn.jpg" alt="image.png" style="zoom:50%;" />
 
-这个例子有点儿特殊，论文被引用了 3 次，篇数有 3 篇。再来看一个更一般的例子：
+这个例子有点儿特殊，论文被引用了 $3$ 次，篇数有 $3$ 篇。再来看一个更一般的例子：
 
-![image.png](https://pic.leetcode-cn.com/1625998502-XMZfqD-image.png)
+<img src="https://tva1.sinaimg.cn/large/008i3skNgy1gxdr86c4cqj30ru0didgn.jpg" alt="image.png" style="zoom:50%;" />
 
 **结论**：这条分割线越靠左边，说明被引用的次数很多，文章还很多，h 指数越高。
 
 在有序数组中查找一个位置，可以使用二分查找。
 
-### 方法：二分查找
+## 方法：二分查找
 
 上面着重号的部分：分割线右边的最少引用次数 >= 分割线右边的论文篇数。
 
@@ -134,10 +134,10 @@ public class Solution {
 + `citations[mid]` 表示分割线右边的最少的被引用文章的引用次数；
 + `left - mid` 表示分割线右边的文章数量；
 + 退出循环以后，`mid` 就来到了合适的位置，题目要返回的是论文篇数，所以需要返回 `len - left`；
-+ 特殊判断 `citations[len - 1] == 0` 表示如果全部文章的引用次数都为 0，则 h 指数为 0；
++ 特殊判断 `citations[len - 1] == 0` 表示如果全部文章的引用次数都为 $0$，则 h 指数为 $0$；
 + 初始化 `int right = len - 1;` 这是因为分割线最右也只能在 `len - 1` 的左边，如下图所示：
 
-![image.png](https://pic.leetcode-cn.com/1625999967-WzmXph-image.png){:style="width:400px"}{:align=center}
+<img src="https://tva1.sinaimg.cn/large/008i3skNgy1gxdr90ug6ij31040bggm1.jpg" alt="image.png" style="zoom:50%;" />
 
 或者从代码层面上理解，`citations[len]` 会越界。
 

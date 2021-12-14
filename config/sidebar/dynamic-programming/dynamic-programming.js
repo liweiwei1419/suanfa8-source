@@ -1,5 +1,4 @@
 module.exports = [
-
 	"/dynamic-programming/01.md",
 	"/dynamic-programming/02.md",
 	"/dynamic-programming/03.md",

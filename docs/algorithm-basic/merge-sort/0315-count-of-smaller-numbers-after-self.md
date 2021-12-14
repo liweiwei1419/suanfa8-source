@@ -9,9 +9,10 @@ tags:
 ---
 
 
-「力扣」第 315 题：计算右侧小于当前元素的个数
+「力扣」第 315 题：计算右侧小于当前元素的个数。
 
-+ 题目地址：[「力扣」第 315 题：计算右侧小于当前元素的个数](https://leetcode-cn.com/problems/count-of-smaller-numbers-after-self/)
++ 题目地址：[「力扣」第 315 题：计算右侧小于当前元素的个数](https://leetcode-cn.com/problems/count-of-smaller-numbers-after-self/)；
++ 题解地址：[归并排序计算逆序对 + 索引数组（Java、Python）](https://leetcode-cn.com/problems/count-of-smaller-numbers-after-self/solution/gui-bing-pai-xu-suo-yin-shu-zu-python-dai-ma-java-/)。
 
 ## :tv: **视频教程**
 

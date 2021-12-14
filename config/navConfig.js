@@ -14,6 +14,11 @@ module.exports = [{
             "icon":"jingjiang",
             "link":"/dynamic-programming/"
       },
+      {
+            "text":"并查集精讲",
+            "icon":"new",
+            "link":"/union-find/"
+      },
       
       
       {

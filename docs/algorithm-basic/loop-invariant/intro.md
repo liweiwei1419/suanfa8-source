@@ -1,5 +1,5 @@
 ---
-title: 1.8 循环不变量简介
+title: 1.7 循环不变量简介
 icon: shipin
 category: 循环不变量
 tags:
@@ -8,9 +8,7 @@ tags:
 ---
 
 
-## 循环不变量是什么 <Badge text="视频" type="warning"/> <Badge text="重要" type=""/>
-
-## :tv: **视频教程**
+## :tv: **视频教程** <Badge text="视频" type="warning"/> <Badge text="重要" type=""/>
 
 建议使用 1.5 倍速观看。
 

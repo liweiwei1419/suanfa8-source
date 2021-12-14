@@ -11,4 +11,4 @@
 + 并且还需要多做题、多总结，习题列表在 [这里](https://suanfa8.com/algorithm-basic/binary-search/intro/)。
 :::
 
-请点击左侧边栏开始阅读吧。
+请点击左侧文章链接开始阅读吧。

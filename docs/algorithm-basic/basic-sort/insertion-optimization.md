@@ -8,9 +8,7 @@ tags:
 ---
 
 
-## 插入排序的优化 <Badge text="视频" type="warning"/>
-
-## :tv: **视频教程**
+## :tv: **视频教程** <Badge text="视频" type="warning"/>
 
 建议使用 1.5 倍速观看。
 
@@ -24,7 +22,8 @@ tags:
 ![image-20211202105353656](https://tva1.sinaimg.cn/large/008i3skNgy1gwzav2evuej317m02g3yz.jpg)
 
 
-## 先暂存再后移
+## 插入排序写法二：先暂存再后移
+
 
 「将一个数字插入一个有序的数组」这一步，可以不使用逐步交换，使用先赋值给「临时变量」，然后「适当的元素」后移，空出一个位置，最后把「临时变量」赋值给这个空位。
 
@@ -35,6 +34,8 @@ tags:
 其实这种插入方式更像插入排序本来的样子。《算法导论》上的图更形象。
 
 <img src="https://tva1.sinaimg.cn/large/008i3skNgy1gwyuyr6mtqj30hc0gg0tr.jpg" alt="《算法导论》第 2.1 节 插入排序" style="zoom:50%;" />
+
+
 
 **参考代码**：
 

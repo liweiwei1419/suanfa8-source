@@ -7,9 +7,7 @@ tags:
   - 减治思想
 ---
 
-## 插入排序及其重要意义 <Badge text="视频" type="warning"/>
-
-## :tv: **视频教程**
+## :tv: **视频教程** <Badge text="视频" type="warning"/>
 
 建议使用 1.5 倍速观看。
 
@@ -32,13 +30,8 @@ tags:
 
 <img src="https://tva1.sinaimg.cn/large/008i3skNgy1gwyuyr6mtqj30hc0gg0tr.jpg" alt="《算法导论》第 2.1 节 插入排序" style="zoom:50%;" />
 
-插入排序有个特点非常重要：接近有序的时候，插入排序可以很快完成。「接近有序」的意思是：每个元素和它排序以后最终所在的位置不远。这一点需要和「选择排序」进行比较。
 
-::: danger 重点
-「插入排序」是稳定排序，在数组的值 **接近有序** 的情况下，表现优异。
-:::
-
-### 插入排序写法一：基于交换
+## 插入排序写法一：基于交换
 
 **参考代码**：
 
@@ -79,6 +72,3 @@ public class Solution {
 ## 参考资料
 
 + [《算法 4》英文网站](https://algs4.cs.princeton.edu/21elementary/)
-
-
-<Utterances />

@@ -67,4 +67,40 @@ tags:
 
 ![](https://tva1.sinaimg.cn/large/008i3skNgy1gwyush556qg30hy03lwfy.gif)
 
-<Utterances />
+**参考代码**：
+
+```java
+public class Solution {
+
+    public int[] sortArray(int[] nums) {
+        int len = nums.length;
+        for (int detal = len / 2; detal > 0; detal /= 2) {
+            for (int start = 0; start < detal; start++) {
+                insertionSortForDetal(nums, len, detal, start);
+            }
+        }
+        return nums;
+    }
+
+    private void insertionSortForDetal(int[] nums, int len, int detal, int start) {
+        for (int i = start + detal; i < len; i += detal) {
+            int temp = nums[i];
+            int j = i;
+            for (; j - detal >= 0; j -= detal) {
+                if (nums[j - detal] > temp) {
+                    nums[j] = nums[j - detal];
+                } else {
+                    break;
+                }
+            }
+            // 此时 nums[j - 1] <= temp
+            // nums[j] 的值被赋值到了 nums[j + 1]
+            nums[j] = temp;
+        }
+    }
+}
+```
+
+**复杂度分析**：
+
+（已经超出本教程讲解的范围，感兴趣的朋友可以查阅相关资料，例如维基百科、《算法导论》《算法（第 4 版）》等学术著作。）

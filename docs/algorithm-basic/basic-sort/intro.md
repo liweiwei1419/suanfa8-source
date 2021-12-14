@@ -17,9 +17,7 @@ tags:
 + 堆排序暂时不涉及，我们放在「优先队列」专题进行介绍；
 + 非比较排序：计数排序、基数排序、桶排序。它们不是绝大多数面试和笔试的考点。
 
-本节所有的知识讲解，都把「力扣」第 912 题：[排序数组](https://leetcode-cn.com/problems/sort-an-array/) 作为检验的练习，就是实现自己的排序算法，提交给这一题的测试用例，以检验自己的学习成果。
-
-[题解](https://leetcode-cn.com/problems/sort-an-array/solution/fu-xi-ji-chu-pai-xu-suan-fa-java-by-liweiwei1419/)：总结了排序问题的一些要点和学习资料。
+本节所有的知识讲解，都把「力扣」第 912 题：[排序数组](https://leetcode-cn.com/problems/sort-an-array/) 作为检验的练习，就是实现自己的排序算法，提交给这一题的测试用例，以检验自己的学习成果。这道题的 [题解](https://leetcode-cn.com/problems/sort-an-array/solution/fu-xi-ji-chu-pai-xu-suan-fa-java-by-liweiwei1419/)：总结了排序问题的一些要点和学习资料。
 
 
 另外，数组的问题可以作为算法「新手场」，因为这些问题只需要掌握编程语言的基础知识就可以完成。
