@@ -20,6 +20,9 @@ tags:
 + 中文：[27. 移除元素](https://leetcode-cn.com/problems/remove-element/description/)；
 + 英文：[27. Remove Element](https://leetcode.com/problems/remove-element/description/) 。
 
+
+### 题目描述
+
 给定一个数组 *nums* 和一个值 *val*，你需要**原地**移除所有数值等于 *val* 的元素，返回移除后数组的新长度。
 
 不要使用额外的数组空间，你必须在**原地修改输入数组**并在使用 O(1) 额外空间的条件下完成。
@@ -66,6 +69,9 @@ for (int i = 0; i < len; i++) {
     print(nums[i]);
 }
 ```
+
+
+（思路分析在「视频教程」，在这里只给出「参考代码」。）
 
 
 **参考代码**：

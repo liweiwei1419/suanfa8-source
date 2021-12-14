@@ -11,14 +11,14 @@ tags:
 
 建议使用 1.5 倍速观看。
 
-
 * [3-5 例 4：「力扣」第 80 题：删除数组中重复的元素 II（07:30）](https://www.bilibili.com/video/BV1Jg411M7Lp?p=5)
 
 ## 「力扣」第 80 题 ：删除排序数组中的重复项 II <Badge text="中等" type="warn"/>
 
-
 + 中文网址：[80. 删除排序数组中的重复项 II](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array-ii/description/)；
 + 英文网址：[80. Remove Duplicates from Sorted Array II](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/description/) 。
+
+### 题目描述
 
 给定一个排序数组，你需要在 **原地** 删除重复出现的元素，使得每个元素最多出现两次，返回移除后数组的新长度。
 
@@ -62,6 +62,8 @@ for (int i = 0; i < len; i++) {
     print(nums[i]);
 }
 ```
+
+（思路分析在「视频教程」，在这里只给出「参考代码」。）
 
 **参考代码**：
 

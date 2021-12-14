@@ -1,6 +1,7 @@
 ---
 title: 1.3 时间复杂度
-icon: shijian
+# icon: shijian
+icon: shipin
 ---
 
 本节内容讲解了时间复杂度的严格定义（极限形式），以便大家理解时间复杂度的计算规则。并且还指出了：时间复杂度不是程序的运行时间，应该使用「空间换时间」，更多关注在优化「时间复杂度」。
@@ -19,5 +20,3 @@ icon: shijian
 可以观看 [这里](https://leetcode-cn.com/leetbook/read/learning-algorithms-with-leetcode/553v4h/) 的 视频和文字部分学习什么是「时间复杂度」。
 
 视频教程和文字教程中已经介绍得很详细了，因此本节不再过多讲述。
-
-

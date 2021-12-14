@@ -8,11 +8,6 @@ tags:
   - 归并排序
 ---
 
-
-
-
-# 《剑指 Offer》（第 2 版）第 51 题：计算数组的逆序对
-
 这里给出的例题的解题思路如果对于初学者来说可能不是很容易想到，不过其实你只要熟悉归并排序，按照归并排序的套路，是不难写出下面的代码。反正不过我是写不出的，不过我会看别人写的代码，理解之后，自己写出来。如果觉得理解这些代码比较吃力的话，可以暂时跳过，我写出来还是费了很大力气，并且也是调试和一段时间才把代码写正确的。
 
 ## :tv: **视频教程**
@@ -23,6 +18,9 @@ tags:
 + [B 站视频](https://www.bilibili.com/video/BV1Qk4y1r7u5?from=search&seid=16040119783228718204&spm_id_from=333.337.0.0)。
 
 ---
+
+
+## 《剑指 Offer》（第 2 版）第 51 题：计算数组的逆序对
 
 以下内容来自文字题解：[暴力解法、分治思想、树状数组](https://leetcode-cn.com/problems/shu-zu-zhong-de-ni-xu-dui-lcof/solution/bao-li-jie-fa-fen-zhi-si-xiang-shu-zhuang-shu-zu-b/)。
 

@@ -7,14 +7,5 @@ module.exports = {
 	"/choice/": choice,
 	"/binary-search/": binarySearch,
 	"/dynamic-programming/": dynamicProgramming,
-	// "/two-pointers/": twoPointers,
-	// "/backtracking/": backtracking,
-	// "/quick-sort/": quickSort,
-
-	// 
-	// "/breadth-first-search/": breadthFirstSearch,
-	// "/hash-table/": hashTable,
-	// "/greedy/": greedy,
-	// "/heap/": heap,
 	"/": index
 }

@@ -22,3 +22,18 @@ tags:
 | 1319 | [连通网络的操作次数](https://leetcode-cn.com/problems/number-of-operations-to-make-network-connected)（中等） | [文字题解](https://leetcode-cn.com/problems/number-of-operations-to-make-network-connected/solution/bing-cha-ji-by-liweiwei1419/) |
 | 128  | [最长连续序列（困难）](https://leetcode-cn.com/problems/longest-consecutive-sequence)（中等） |                                                              |
 
+
+## 参考资料
+
+
+**基础部分**：
+
++ 《算法》（第 4 版）第 1 章第 5 节：案例研究：union-find 算法（有关于复杂度的证明）
++ 《算法导论》第 21 章：用于不相交集合的数据结构（有关于复杂度的证明）
++ AlgoWiki 关于[「并查集」](https://ojeveryday.github.io/AlgoWiki/#/)的章节
+
+**进阶部分**：
+
++ 《算法竞赛进阶指南》（李煜东著）
++ 知乎问答：为什么并查集在路径压缩之后的时间复杂度是阿克曼函数?（有论文）
++ OI Wiki 关于[「并查集」](https://oi-wiki.org/ds/dsu/)的章节（有关于复杂度的证明）

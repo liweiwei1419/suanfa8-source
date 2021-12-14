@@ -20,7 +20,7 @@ tags:
 ```java
 public class Solution {
 
-    // 冒泡排序：超时
+    // 冒泡排序：在「力扣」运行超时
 
     public int[] sortArray(int[] nums) {
         int len = nums.length;
@@ -69,5 +69,3 @@ public class Solution {
 控制台输出：
 
 ![image.png](https://tva1.sinaimg.cn/large/008i3skNgy1gwxg3enwrlj30qi090jtc.jpg)
-
-<Utterances />

@@ -49,7 +49,7 @@ icon: weixin
 
 这本书给我的感觉是：纸张很白、摸起来很舒服。书本的最前面是红、黑双色印刷的彩图，给我的感觉是「很专业」。
 
-<img src="https://tva1.sinaimg.cn/large/008i3skNgy1gwng3xgn91j30rs0ja77b.jpg" style="zoom:80%;" />
+<img src="https://tva1.sinaimg.cn/large/008i3skNgy1gwng3xgn91j30rs0ja77b.jpg" style="zoom:50%;" />
 
 我从第 2 章「排序」开始看起的「选择排序」「插入排序」「归并排序」「快速排序」然后是「优先队列」。排序算法是我最早接触的算法。以前使用排序只知道 `Arrays.sort()`。
 
