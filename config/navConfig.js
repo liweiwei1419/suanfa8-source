@@ -20,11 +20,11 @@ module.exports = [{
             "link":"/union-find/"
       },
 
-      // {
-      //       "text":"优先队列精讲",
-      //       "icon":"new",
-      //       "link":"/union-find/"
-      // },
+      {
+            "text":"优先队列精讲",
+            "icon":"new",
+            "link":"/heap/"
+      },
 
       {
             "text":"图论精讲",
