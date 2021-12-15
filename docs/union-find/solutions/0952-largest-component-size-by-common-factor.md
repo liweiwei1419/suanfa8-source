@@ -6,52 +6,51 @@ tags:
   - 并查集
 ---
 
-## 「力扣」第 952 题：按公因数计算最大组件大小（困难）
-
 + [链接](https://leetcode-cn.com/problems/largest-component-size-by-common-factor/)
 + [题解链接](https://leetcode-cn.com/problems/largest-component-size-by-common-factor/solution/bing-cha-ji-java-python-by-liweiwei1419/)
 
-> 给定一个由不同正整数的组成的非空数组 `A`，考虑下面的图：
->
-> - 有 `A.length` 个节点，按从 `A[0]` 到 `A[A.length - 1]` 标记；
-> - 只有当 `A[i]` 和 `A[j]` 共用一个大于 1 的公因数时，`A[i]` 和 `A[j]` 之间才有一条边。
->
-> 返回图中最大连通组件的大小。
->
-> 
->
-> **示例 1：**
->
-> ```
-> 输入：[4,6,15,35]
-> 输出：4
-> ```
->
-> ![img](https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/12/01/ex1.png)
->
-> **示例 2：**
->
-> ```
-> 输入：[20,50,9,63]
-> 输出：2
-> ```
->
-> ![img](https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/12/01/ex2.png)
->
-> **示例 3：**
->
-> ```
-> 输入：[2,3,6,7,4,12,21,39]
-> 输出：8
-> ```
->
-> ![img](https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/12/01/ex3.png) 
->
-> **提示：**
->
-> 1. `1 <= A.length <= 20000`
-> 2. `1 <= A[i] <= 100000`
->
+## 题目描述
+
+给定一个由不同正整数的组成的非空数组 `A`，考虑下面的图：
+
+- 有 `A.length` 个节点，按从 `A[0]` 到 `A[A.length - 1]` 标记；
+- 只有当 `A[i]` 和 `A[j]` 共用一个大于 1 的公因数时，`A[i]` 和 `A[j]` 之间才有一条边。
+
+返回图中最大连通组件的大小。
+
+**示例 1：**
+
+```
+输入：[4,6,15,35]
+输出：4
+```
+
+![img](https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/12/01/ex1.png)
+
+**示例 2：**
+
+```
+输入：[20,50,9,63]
+输出：2
+```
+
+![img](https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/12/01/ex2.png)
+
+**示例 3：**
+
+```
+输入：[2,3,6,7,4,12,21,39]
+输出：8
+```
+
+![img](https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/12/01/ex3.png) 
+
+**提示：**
+
+1. `1 <= A.length <= 20000`
+2. `1 <= A[i] <= 100000`
+
+## 思路分析
 
 这道题题目都直接画成了连通图，显然可以考虑使用并查集。
 
@@ -66,8 +65,9 @@ tags:
 
 **参考代码**：
 
-Java 代码：
 
+<CodeGroup>
+<CodeGroupItem title="Java">
 ```java
 public class Solution {
 
@@ -131,9 +131,9 @@ public class Solution {
     }
 }
 ```
+</CodeGroupItem>
 
-Python 代码：
-
+<CodeGroupItem title="Python">
 ```python
 from math import sqrt
 from typing import List
@@ -177,9 +177,8 @@ class Solution:
             res = max(res, cnt[root])
         return res
 ```
-
-C++ 代码：
-
+</CodeGroupItem>
+<CodeGroupItem title="C++">
 ```cpp
 #include <iostream>
 #include <vector>
@@ -233,4 +232,15 @@ public:
     }
 };
 ```
+</CodeGroupItem>
+</CodeGroup>
+
+
+
+
+
+
+
+
+
 

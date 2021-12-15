@@ -6,11 +6,13 @@ tags:
   - 并查集
 ---
 
+（这题我没有时间写题解了，大家直接看「力扣」的题解区吧。）
 
-
-
++ 题目链接： [1559. 二维网格图中探测环](https://leetcode-cn.com/problems/detect-cycles-in-2d-grid/)
 
 ### 方法一：并查集
+
+**参考代码**：
 
 ```Java []
 public class Solution {
@@ -90,6 +92,8 @@ public class Solution {
 ```
 
 ### 方法二：深度优先遍历
+
+**参考代码**：
 
 ```Java []
 public class Solution {

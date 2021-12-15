@@ -6,9 +6,7 @@ tags:
   - 并查集
 ---
 
-## 「力扣」第 765 题：情侣牵手（中等）
-
-> 这题比较有意思，关键在表示相邻两个位置的技巧。
+这题比较有意思，关键在表示相邻两个位置的技巧。
 
 + [链接](https://leetcode-cn.com/problems/couples-holding-hands/)
 

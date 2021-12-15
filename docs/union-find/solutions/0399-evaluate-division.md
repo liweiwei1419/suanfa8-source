@@ -6,7 +6,13 @@ tags:
   - 并查集
 ---
 
-## 「力扣」第 399 题：除法求值（中等）
+这一节的视频讲解有很多知识点，不熟悉的朋友强烈建议观看。
+
+
+:tv: 视频讲解
+
++ [视频题解](https://leetcode-cn.com/problems/evaluate-division/solution/399-chu-fa-qiu-zhi-nan-du-zhong-deng-286-w45d/)
+
 
 > 带权值的「并查集」，搞清楚方向。
 
@@ -32,169 +38,6 @@ queries(问题方程式) = [ ["a", "c"], ["b", "a"], ["a", "e"], ["a", "a"], ["x
 输入总是有效的。你可以假设除法运算中不会出现除数为0的情况，且不存在任何矛盾的结果。
 
 
-
-思路：这道题别看题目很长，但是表达意思是很简单的。给出一些关系式，让我们根据这些关系式，求出题目问的两个变量的结果。
-
-+ 这道题和上一题其实蛮像的，只不过上一题是等式，而这一题两个变量之间有一个系数的关系。我们只需要维护这个变量的关系就好。
-+ 上一题，我们把元素放进并查集的时候，做了一个转换，因为等式都是小写字母，因此可以与 0 - 25 做一个映射，这里我们还需要绑定一个权值信息，进而我们将一个元素和一个结点类绑定在一起，为此我们设计一个结点类，并且并查集内部的数组我们使用哈希表代替（事实上不使用哈希表也是可以的，这里为了展示并查集实现的灵活性，使用哈希表代替，请大家自行完并查集内部使用两个数组，一个表示元素，另一个表示结点之间关系）。
-
-![image-20200106171023029](https://tva1.sinaimg.cn/large/006tNbRwly1gamygdg8icj315m0lsq5j.jpg)
-
-Java 代码：
-
-```java
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-public class Solution {
-
-    // 带权并查集问题，构建有向图
-
-    public double[] calcEquation(List<List<String>> equations, double[] values, List<List<String>> queries) {
-        // 第 1 步：给每一个字符串生成一个 id ，方便在并查集中做操作
-        int equationsSize = equations.size();
-        Map<String, Integer> hashMap = new HashMap<>();
-        UnionFind unionFind = new UnionFind(2 * equationsSize);
-
-        int id = 0;
-        for (int i = 0; i < equationsSize; i++) {
-            List<String> equation = equations.get(i);
-            String var1 = equation.get(0);
-            String var2 = equation.get(1);
-
-            if (!hashMap.containsKey(var1)) {
-                hashMap.put(var1, id);
-                id++;
-            }
-            if (!hashMap.containsKey(var2)) {
-                hashMap.put(var2, id);
-                id++;
-            }
-            unionFind.union(hashMap.get(var1), hashMap.get(var2), values[i]);
-        }
-
-        // 第 2 步：做查询
-        int queriesSize = queries.size();
-        double[] res = new double[queriesSize];
-        for (int i = 0; i < queriesSize; i++) {
-            String var1 = queries.get(i).get(0);
-            String var2 = queries.get(i).get(1);
-
-            Integer id1 = hashMap.get(var1);
-            Integer id2 = hashMap.get(var2);
-            if (id1 == null || id2 == null) {
-                res[i] = -1.0;
-            } else {
-
-                res[i] = unionFind.isConnected(id1, id2);
-            }
-        }
-        return res;
-    }
-
-
-    private class UnionFind {
-
-        private int[] parent;
-
-        /**
-         * 把父结点作为分母时的商
-         */
-        private double[] weight;
-
-        public UnionFind(int n) {
-            this.parent = new int[n];
-            this.weight = new double[n];
-            for (int i = 0; i < n; i++) {
-                parent[i] = i;
-                weight[i] = 1.0d;
-            }
-        }
-
-        public void union(int x, int y, double value) {
-            int rootX = find(x);
-            int rootY = find(y);
-            parent[rootX] = rootY;
-            // 需要列方程计算
-            weight[rootX] = weight[y] * value / weight[x];
-        }
-
-        public int find(int x) {
-            if (x != parent[x]) {
-                // 难点：这里维护 weight 的定义
-                int origin = parent[x];
-                parent[x] = find(parent[x]);
-
-                weight[x] *= weight[origin];
-            }
-            return parent[x];
-        }
-
-        public double isConnected(int x, int y) {
-            int rootX = find(x);
-            int rootY = find(y);
-            if (rootX == rootY) {
-                return weight[x] / weight[y];
-            } else {
-                return -1.0d;
-            }
-        }
-    }
-
-    public static void main(String[] args) {
-        List<List<String>> equations = new ArrayList<>();
-        List<String> item1 = new ArrayList<>();
-        item1.add("a");
-        item1.add("b");
-
-        List<String> item2 = new ArrayList<>();
-        item2.add("b");
-        item2.add("c");
-
-        equations.add(item1);
-        equations.add(item2);
-
-        double[] values = new double[]{2.0, 3.0};
-
-        List<List<String>> queries = new ArrayList<>();
-
-        List<String> query1 = new ArrayList<>();
-        query1.add("a");
-        query1.add("c");
-
-        List<String> query2 = new ArrayList<>();
-        query2.add("b");
-        query2.add("a");
-
-        List<String> query3 = new ArrayList<>();
-        query3.add("a");
-        query3.add("e");
-
-        List<String> query4 = new ArrayList<>();
-        query4.add("a");
-        query4.add("a");
-
-        List<String> query5 = new ArrayList<>();
-        query5.add("x");
-        query5.add("x");
-
-        queries.add(query1);
-        queries.add(query2);
-        queries.add(query3);
-        queries.add(query4);
-        queries.add(query5);
-
-        Solution solution = new Solution();
-        double[] res = solution.calcEquation(equations, values, queries);
-        System.out.println(Arrays.toString(res));
-    }
-}
-```
-
-这是一类经典的带权值的并查集问题，事实上，并查集问题是算法竞赛中的常客，我们学习并查集，主要理解它的思想和应用即可。太难的问题，我个人觉得如果只是应付面试，争取更好的工作机会，我个人觉得暂时没有必要一定要把很难的问题做出来。
 
 
 

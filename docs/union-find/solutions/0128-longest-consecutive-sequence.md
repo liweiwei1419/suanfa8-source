@@ -7,9 +7,9 @@ tags:
 permalink: leetcode-algo/
 ---
 
-## 「力扣」第 128 题：最长连续序列（困难）
-
-> 这道题因为有判断「是否在并查集」中的需要，因此需要把并查集的底层数组设置为「哈希表」。
+::: danger 提示
+这道题因为有判断「是否在并查集」中的需要，因此需要把并查集的底层数组设置为「哈希表」。
+:::
 
 + [题目链接](https://leetcode-cn.com/problems/longest-consecutive-sequence/)
 
@@ -27,20 +27,22 @@ permalink: leetcode-algo/
 解释: 最长连续序列是 [1, 2, 3, 4]。它的长度为 4。
 ```
 
-注意：这里封装的「并查集」有一些特殊，`union` 方法返回的是 `size` ，可以理解成基于 `size` 合并的意思，这里的 `size` 在这道问题里是有实际意义。
 
-理解：
+
+### 理解题意
 
 + 序列：即子序列，不需要连续；
 + 严格上升，并且间隔是 $1$，才能形成最长。
 
 关键的地方在于连续。
 
+
+
 ### 方法一：暴力解法（时间复杂度不符合要求）
 
 + 先排序，然后逐个判断是否连续。
 
-Java 代码：
+**参考代码**：
 
 ```java
 import java.util.Arrays;
@@ -92,7 +94,7 @@ public class Solution {
 
 + 空间换时间：每个数会被看 $3$ 次。
 
-Java 代码：
+**参考代码**：
 
 ```java
 import java.util.HashSet;
@@ -141,7 +143,7 @@ public class Solution {
 
 ### 方法三：针对方法二的优化
 
-Java 代码：
+**参考代码**：
 
 ```java
 import java.util.HashMap;
@@ -217,11 +219,18 @@ public class Solution {
 
 ### 方法四：并查集
 
+
+
 + 并查集底层用「哈希表」实现；
 + 因此设计 `size` ，这里是「按秩合并」的思想，「秩」表示以并查集根结点为子树的结点的个数；
 + 改造 `union` 方法，返回合并以后的新的连通分量的结点个数。
 
-Java 代码：
+
+::: info 注意
+这里封装的「并查集」有一些特殊，`union` 方法返回的是 `size` ，可以理解成基于 `size` 合并的意思，这里的 `size` 在这道问题里是有实际意义。
+:::
+
+**参考代码**：
 
 ```java
 import java.util.HashMap;

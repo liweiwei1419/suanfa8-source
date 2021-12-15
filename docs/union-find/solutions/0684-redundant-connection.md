@@ -6,11 +6,9 @@ tags:
   - 并查集
 ---
 
-## 「力扣」第 684 题：冗余连接（中等）
+这是一道考察「并查集」很基础的问题。
 
-> 这是一道考察「并查集」很基础的问题。
-
-+ [链接](https://leetcode-cn.com/problems/redundant-connection/)
++ [题目链接](https://leetcode-cn.com/problems/redundant-connection/)
 
 在本问题中, 树指的是一个连通且无环的**无向**图。
 
@@ -50,7 +48,7 @@ tags:
 **更新(2017-09-26):**
 我们已经重新检查了问题描述及测试用例，明确图是***无向*** 图。对于有向图详见**[冗余连接II](https://leetcodechina.com/problems/redundant-connection-ii/description/)。**对于造成任何不便，我们深感歉意。
 
-Java 代码：
+**参考代码**：
 
 ```java
 import java.util.Arrays;

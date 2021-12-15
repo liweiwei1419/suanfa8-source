@@ -177,26 +177,5 @@ module.exports = [
 			"/data-structure-advance/fenwick-tree/06.md",
 			"/data-structure-advance/fenwick-tree/07.md"
 		]
-	},
-
-	{
-		"title": "第 7 章 图论",
-		"icon": "shu",
-		"children": [
-			
-			"/graph/dijkstra/intro.md",
-			"/graph/dijkstra/geometrically-intuitive.md",
-			"/graph/dijkstra/relaxation.md",
-			"/graph/dijkstra/example.md",
-			"/graph/dijkstra/code.md",
-			"/graph/dijkstra/summarize.md",
-
-			"/graph/minimum-spanning-tree/intro.md",
-			"/graph/minimum-spanning-tree/application.md",
-			"/graph/minimum-spanning-tree/segmentation-theorem.md",
-			"/graph/minimum-spanning-tree/kruskal.md",
-			"/graph/minimum-spanning-tree/lazy-prim.md",
-			"/graph/minimum-spanning-tree/summarize.md"
-		]
 	}
 ]

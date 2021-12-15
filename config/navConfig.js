@@ -19,6 +19,18 @@ module.exports = [{
             "icon":"new",
             "link":"/union-find/"
       },
+
+      // {
+      //       "text":"优先队列精讲",
+      //       "icon":"new",
+      //       "link":"/union-find/"
+      // },
+
+      {
+            "text":"图论精讲",
+            "icon":"new",
+            "link":"/graph/"
+      },
       
       
       {

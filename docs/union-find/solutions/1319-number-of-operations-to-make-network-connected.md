@@ -6,12 +6,15 @@ tags:
   - 并查集
 ---
 
-## 「力扣」第 1319 题：连通网络的操作次数（中等）
+::: danger 提示
+连通性问题，比较容易想到使用并查集，并查集在写的时候，可以尽量封装起来，以凸显主干逻辑。并且路径压缩与按 `rank` 合并这两个优化技巧，选择其中一个即可。
+:::
 
-> 连通性问题，比较容易想到使用并查集，并查集在写的时候，可以尽量封装起来，以凸显主干逻辑。并且路径压缩与按 `rank` 合并这两个优化技巧，选择其中一个即可。
 
 + [链接](https://leetcode-cn.com/problems/number-of-operations-to-make-network-connected/)
 + [题解链接](https://leetcode-cn.com/problems/number-of-operations-to-make-network-connected/solution/bing-cha-ji-by-liweiwei1419/)
+
+## 题目描述
 
 用以太网线缆将 `n` 台计算机连接成一个网络，计算机的编号从 `0` 到 `n-1`。线缆用 `connections` 表示，其中 `connections[i] = [a, b]` 连接了计算机 `a` 和 `b`。
 
@@ -63,13 +66,7 @@ tags:
 - 没有重复的连接。
 - 两台计算机不会通过多条线缆连接。
 
-
-
-
-
-
-
-思路：
+## 解题思路
 
 + 记录一个变量，表示多余的边；
 + 在合并的时候，返回是否合并成功。如果合并不成功，表示在一个连通分量里，这条边是多余的边（用于以后连接独立的连通分量）；
@@ -77,8 +74,6 @@ tags:
 + 否则多余的边数够用，返回连通分量 -1 即可（减去的这个 1 是最大的那个连通分量）。
 
 **参考代码**：
-
-Java 代码：
 
 ```java
 public class Solution {
