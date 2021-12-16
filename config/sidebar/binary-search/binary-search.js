@@ -19,7 +19,7 @@ module.exports = [
 		"title":"第 2 章 二分查找基本问题",
 		"icon": "shu",
 		"children": [
-			// "/binary-search/01.md",
+			"/binary-search/practice.md",
 			// "/binary-search/02.md",
 			// "/binary-search/03.md",
 			// "/binary-search/04.md",

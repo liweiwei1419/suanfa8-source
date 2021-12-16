@@ -27,6 +27,11 @@ icon: huanyingye
 
 ## 变更日志 :new:
 
+### 2021 年 12 月 16 日（星期四）
+
++ 重写了「力扣」第 35 题 [题解](https://leetcode-cn.com/problems/search-insert-position/solution/te-bie-hao-yong-de-er-fen-cha-fa-fa-mo-ban-python-/) ，把一些常见的问题做了汇总；
++ 重修了「二分查找精讲」专栏，做了一些修修补补的工作。
+
 ### 2021 年 12 月 15 日（星期三）
 
 + 添加了「并查集精讲」专栏；
