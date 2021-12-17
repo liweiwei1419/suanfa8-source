@@ -131,8 +131,6 @@ private int function(int[] piles, int speed) {
 }
 ```
 
-
-
 **复杂度分析**：
 
 + 时间复杂度：$O(N \log \max(piles))$，这里 $N$ 表示数组 `piles` 的长度。我们在 $[1, \max{piles}]$ 里使用二分查找定位最小速度，而每一次执行判别函数的时间复杂度是 $O(N)$；

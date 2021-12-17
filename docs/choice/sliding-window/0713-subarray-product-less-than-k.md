@@ -32,9 +32,7 @@ tags:
 **说明:**
 
 - `0 < nums.length <= 50000`
-
 - `0 < nums[i] < 1000`
-
 - `0 <= k < 10^6`
 
 ## 思路分析
@@ -85,7 +83,7 @@ tags:
 
 **参考代码 1**：
 
-```Java []
+```java
 public class Solution {
 
     public int numSubarrayProductLessThanK(int[] nums, int k) {
@@ -120,7 +118,7 @@ public class Solution {
 
 **参考代码 2**：
 
-```Java []
+```java
 public class Solution {
 
     public int numSubarrayProductLessThanK(int[] nums, int k) {

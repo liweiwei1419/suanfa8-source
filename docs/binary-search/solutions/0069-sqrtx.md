@@ -1,41 +1,43 @@
 ---
-title: 第 5 节 死循环（什么时候取 mid + 1）
-icon: yongyan
+title: 「力扣」第 69 题：x 的平方根（简单）
+icon: jingxuan
 category: 二分查找
-tags:
+tags: 
   - 二分查找
 ---
 
-这一节，我们讲解一些「二分查找」的写法里，取中间数写成 `int mid = (left + right + 1) / 2` 的原因。我们以「力扣」第 69 题（x 的平方根）为例，这一个易于理解的这样做的问题。
+![0069](https://tva1.sinaimg.cn/large/008i3skNgy1gx8jg2mj5wj30p00angm2.jpg)
 
++ 题目链接：[69. Sqrt(x)](https://leetcode-cn.com/problems/sqrtx/)
++ 题解链接：[二分查找（Java）](https://leetcode-cn.com/problems/sqrtx/solution/er-fen-cha-zhao-niu-dun-fa-python-dai-ma-by-liweiw/)。
 
 ## 题目描述
 
 实现 `int sqrt(int x)` 函数。
 
-计算并返回 *x* 的平方根，其中 *x* 是非负整数。
+计算并返回 `x` 的平方根，其中 `x` 是非负整数。
 
 由于返回类型是整数，结果只保留整数的部分，小数部分将被舍去。
 
 **示例 1**：
 
 ```
-输入: 4
-输出: 2
+输入：4
+输出：2
 ```
 
 **示例 2**：
 
 ```
-输入: 8
-输出: 2
-说明: 8 的平方根是 2.82842..., 
-     由于返回类型是整数，小数部分将被舍去。
+输入：8
+输出：2
+说明：8 的平方根是 2.82842...，由于返回类型是整数，小数部分将被舍去。
 ```
 
-**数据范围**：
+**提示：**
 
 - $0 \le x \le 2^{31} - 1$
+
 
 ## 题意分析
 
@@ -110,6 +112,12 @@ public class Solution {
 }
 ```
 
+**复杂度分析**：
+
++ 时间复杂度：$O(\log x)$，每一次搜索的区间大小约为原来的 $\cfrac{1}{2}$，时间复杂度为 $O(\log_2 x) = O(\log x)$；
++ 空间复杂度：$O(1)$。
+
+
 **对代码编写逻辑的解释**：
 
 一、写 `if` 和 `else` 的原因：
@@ -121,11 +129,11 @@ public class Solution {
 
 + 退出 `while (left < right)` 循环的时候，由于边界搜索是 `left = mid` 与 `right = mid - 1`，因此退出循环的时候一定有 `left` 与 `right` 重合，返回 `right` 也可以。
 
-## `mid` 为什么要加 `1`
+---
 
-::: info 打印变量的值看一眼
+## 问题：`mid` 为什么要加 `1`？
+
 对着错误的测试用例打印出变量 `left` 、`right` 和 `mid` 的值看一下就很清楚了。
-:::
 
 **`mid` 不加 `1` 会造成死循环的代码**：
 
@@ -190,26 +198,7 @@ left = 3, right = 4, mid = 3
 
 **在区间只有 $2$ 个数的时候**，本题 `if`、`else` 的逻辑区间的划分方式是：`[left..mid - 1]` 与 `[mid..right]`。如果 `mid` 下取整，在区间只有 $2$ 个数的时候有 `mid` 的值等于 `left`，一旦进入分支 `[mid..right]` 区间不会再缩小，出现死循环。
 
-![image-20211212114643507](https://tva1.sinaimg.cn/large/008i3skNgy1gxawmev4wvj31hc0u0tc2.jpg)
+![image.png](https://pic.leetcode-cn.com/1639366986-BFgeWx-image.png)
+
 
 **解决办法**：把取中间数的方式改成上取整。
-
-下一节我们对 
-
-```
-int mid = (left + right) / 2;
-```
-
-这行代码做一些说明。
-
-
-## 总结
-**当搜索区间 `[left..right]` 里只有 2 个元素的时候**：
-
-+ 如果划分区间的逻辑是 `left = mid + 1;` 和 `right = mid;` 时，`while(left < right)` 退出循环以后 `left == right` 成立，此时 `mid` 中间数正常下取整就好；
-+ 如果划分区间的逻辑是 `left = mid;` 和 `right = mid - 1;` 时，`while(left < right)` 退出循环以后 `left == right` 成立，此时为了避免死循环，`mid` 中间数需要改成上取整。
-
-
----
-
-最近正在 B 站讲解《算法不好玩》系列教程，[地址](https://space.bilibili.com/236935093)，以新手视角讲解算法与数据结构，通俗易懂且不失严谨。公众号：算法不好玩。感谢大家支持！

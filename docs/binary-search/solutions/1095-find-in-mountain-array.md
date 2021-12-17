@@ -1,4 +1,11 @@
-# 「力扣」第 1095 题：山脉数组中查找目标值（ 中等）
+---
+title: 「力扣」第 1095 题：山脉数组中查找目标值（ 中等）
+icon: yongyan
+category: 二分查找
+tags:
+  - 二分查找
+---
+
 
 ![1095](https://tva1.sinaimg.cn/large/008i3skNgy1gx8zka1oo4j30p00ant9c.jpg)
 

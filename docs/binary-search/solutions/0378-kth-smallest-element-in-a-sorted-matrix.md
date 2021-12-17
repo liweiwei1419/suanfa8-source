@@ -1,4 +1,15 @@
-#### [378. 有序矩阵中第 K 小的元素](https://leetcode-cn.com/problems/kth-smallest-element-in-a-sorted-matrix/) （中等）
+---
+title: 「力扣」第 378 题：有序矩阵中第 K 小的元素
+icon: yongyan
+category: 二分查找
+tags:
+  - 二分查找
+---
+
++  [题目链接](https://leetcode-cn.com/problems/kth-smallest-element-in-a-sorted-matrix/) （中等）
+
+
+## 题目描述
 
 给你一个 `n x n` 矩阵 `matrix` ，其中每行和每列元素均按升序排序，找到矩阵中第 `k` 小的元素。
 
@@ -28,7 +39,11 @@
 - 题目数据 **保证** `matrix` 中的所有行和列都按 **非递减顺序** 排列
 - `1 <= k <= n^2`
 
+::: danger 提示
 解决这道问题需要解决「力扣」 [240. 搜索二维矩阵 II](/problems/search-a-2d-matrix-ii/) 和二分查找算法的「二分答案」的经验。
+:::
+
+
 
 ## 思路分析
 
@@ -46,7 +61,7 @@
 **参考代码 1**：从矩阵的右下角开始找
 
 
-```Java []
+```java
 public class Solution {
 
     public int kthSmallest(int[][] matrix, int k) {
@@ -92,12 +107,13 @@ public class Solution {
 }
 ```
 
-**时间复杂度**：$O((matrix[n-1][n-1] - matrix[0][0]) \log n)$，这里 $matrix[n-1][n-1] - matrix[0][0]$ 表示二分查找需要猜测的数的范围，每一次猜测需要「看一下矩阵」，「看一下矩阵」的时间复杂度为 $O(n)$。
+**时间复杂度**：$O((matrix[n-1][n-1] - matrix[0][0]) \log n)$。  
+这里 $matrix[n-1][n-1] - matrix[0][0]$ 表示二分查找需要猜测的数的范围，每一次猜测需要「看一下矩阵」，「看一下矩阵」的时间复杂度为 $O(n)$。
 
 
 **参考代码 2**：从矩阵的左上角开始找
 
-```Java []
+```java
 public class Solution {
 
     public int kthSmallest(int[][] matrix, int k) {
@@ -163,20 +179,6 @@ public class Solution {
 **如果整个数组里小于等于 $13$ 的元素也有 $8$ 个，那么 $13$ 就是正确答案**。接下来我们数一下整个数组里小于等于 $13$ 的元素真的有 $8$ 个，所以 $13$ 才是正确答案。
 
 所以当整个数组里的元素恰好小于等于 $k$ 的时候，至多答案是 `mid`，下一轮搜索区间在 `[left..mid]` ，此时设置 `right = mid`。
-
-## 为什么二分查找分三种情况讨论的结果需要合并
-
-这里和大家提及一下为什么二分查找虽然可以分三种情况讨论，但是写代码的时候需要合并成两种情况。
-
-结论是：如何不合并的话，在最后一轮搜索区间只有两个数的时候，如果不合并有可能会造成 `left` 和`right` 在退出以后不能重合。
-
-这是因为，**当搜索区间 `[left..right]` 里只有 2 个元素的时候**：
-
-+ 如果划分区间的逻辑是 `left = mid + 1;` 和 `right = mid;` 时，`while(left < right)` 退出循环以后 `left == right` 成立，此时 `mid` 中间数正常下取整就好；
-+ 如果划分区间的逻辑是 `left = mid;` 和 `right = mid - 1;` 时，`while(left < right)` 退出循环以后 `left == right` 成立，此时为了避免死循环，`mid` 中间数需要改成上取整。
-
-> 这一点是我今年在「力扣」第 34 题题解区和网友朋友们的讨论得到的。经常和网友讨论问题，会有不少收获。 
-
 :::
 
 

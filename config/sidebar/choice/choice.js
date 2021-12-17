@@ -3,13 +3,8 @@ module.exports = [
 		"title":"二分查找",
 		"icon": "jingxuan",
 		"children": [
-			"/choice/binary-search/0035-search-insert-position.md",
-			"/choice/binary-search/0069-sqrtx.md",
-			"/choice/binary-search/0275-h-index-ii.md",
-			"/choice/binary-search/0287-find-the-duplicate-number.md",
-			"/choice/binary-search/0611-valid-triangle-number.md",
-			"/choice/binary-search/0875-koko-eating-bananas.md",
-			"/choice/binary-search/0004-median-of-two-sorted-arrays.md",
+			"/choice/binary-search/intro.md",
+			
 		]
 	},
 	{
@@ -18,6 +13,7 @@ module.exports = [
 		"children": [
 			"/choice/sliding-window/0003-longest-substring-without-repeating-characters.md",
 			"/choice/sliding-window/0713-subarray-product-less-than-k.md",
+			"/choice/sliding-window/0719-find-k-th-smallest-pair-distance.md"
 		]
 	},
 	{

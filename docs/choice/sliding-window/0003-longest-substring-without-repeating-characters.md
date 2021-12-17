@@ -127,16 +127,19 @@ public class Solution {
 
 下面给出的另一种「滑动窗口」的代码，基本的思想是：**当前得到的最长不重复的字符，一定存在于两个相同的字符之间**。因此，可以在遍历的时候，记录遍历到的字符出现的位置：如果当前遍历到的字符以前出现过，以前出现过的位置 + 1，到当前位置就是一个最长不重复的子串。
 
-![image.png](https://pic.leetcode-cn.com/1630724197-DphsTe-image.png){:style="width:500px"}{:align=center}
+<img src="https://tva1.sinaimg.cn/large/008i3skNgy1gxgxc6u4nsj31aq0faab5.jpg" alt="image.png" style="zoom: 50%;" />
 
 这里要注意一个细节：以前出现过的位置，如果在左边界 `left` 之前，是「无效」的，请看下面这个例子。
 
-![image.png](https://pic.leetcode-cn.com/1630725009-VJYTRI-image.png){:style="width:400px"}{:align=center}
+<img src="https://tva1.sinaimg.cn/large/008i3skNgy1gxgxc5te10j30zc0kmjsi.jpg" alt="image.png" style="zoom: 33%;" />
 
 所以只有在上一次出现的位置在 `left` 以及 `left` 以后，才更新 `left` 到上一次出现的位置的下一个。
 
 **参考代码 2**：
 
+
+<CodeGroup>
+<CodeGroupItem title="Java">
 ```java
 import java.util.Arrays;
 
@@ -167,7 +170,10 @@ public class Solution {
     }
 }
 ```
-```Java []
+</CodeGroupItem>
+
+<CodeGroupItem title="Java">
+```java
 import java.util.Arrays;
 
 public class Solution {
@@ -197,6 +203,11 @@ public class Solution {
     }
 }
 ```
+</CodeGroupItem>
+</CodeGroup>
+
+
+
 
 
 ---
