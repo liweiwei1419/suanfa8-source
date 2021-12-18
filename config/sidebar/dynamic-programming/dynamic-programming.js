@@ -21,6 +21,58 @@ module.exports = [
 		"icon": "shu",
 		"children": [
 			"/dynamic-programming/practice.md",
+			"/dynamic-programming/solutions/0509-fibonacci-number.md",
+			"/dynamic-programming/solutions/0070-climbing-stairs.md",
+
+			"/dynamic-programming/solutions/0053-maximum-subarray.md",
+			
+			"/dynamic-programming/solutions/0062-unique-paths.md",
+			"/dynamic-programming/solutions/0063-unique-paths-ii.md",
+			"/dynamic-programming/solutions/0064-minimum-path-sum.md",
+			"/dynamic-programming/solutions/0120-triangle.md",
+			
+			"/dynamic-programming/solutions/0091-decode-ways.md",
+			
+			// "/dynamic-programming/solutions/0139-word-break.md",
+			// "/dynamic-programming/solutions/0152-maximum-product-subarray.md",
+			// "/dynamic-programming/solutions/0198-house-robber.md",
+			// "/dynamic-programming/solutions/0221-maximal-square.md",
+			// "/dynamic-programming/solutions/0279-perfect-squares.md",
+			// "/dynamic-programming/solutions/0300-longest-increasing-subsequence.md",
+			// "/dynamic-programming/solutions/0322-coin-change.md",
+			// "/dynamic-programming/solutions/0354-russian-doll-envelopes.md",
+			// "/dynamic-programming/solutions/0376-wiggle-subsequence.md",
+			// "/dynamic-programming/solutions/0377-combination-sum-iv.md",
+			// "/dynamic-programming/solutions/0416-partition-equal-subset-sum.md",
+			// "/dynamic-programming/solutions/0474-ones-and-zeroes.md",
+			// "/dynamic-programming/solutions/0494-target-sum.md",
+			// "/dynamic-programming/solutions/0518-coin-change-2.md",
+			// "/dynamic-programming/solutions/0983-minimum-cost-for-tickets.md"
+		]
+	},
+
+	{
+		"title": "区间动态规划",
+		"icon": "shu",
+		"children": [
+
+			"/dynamic-programming/solutions/0005-longest-palindromic-substring.md",
+			"/dynamic-programming/solutions/0516-longest-palindromic-subsequence.md",
+
+		]
+	},
+	{
+		"title": "树形动态规划",
+		"icon": "shu",
+		"children": []
+	},
+
+	{
+		
+		"title": "两个字符串的动态规划",
+		"icon": "shu",
+		"children": [
+			"/dynamic-programming/solutions/0072-edit-distance.md",
 		]
 	}
 	

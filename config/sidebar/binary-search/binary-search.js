@@ -26,6 +26,7 @@ module.exports = [
 			"/binary-search/solutions/0611-valid-triangle-number.md",
 			"/binary-search/solutions/0275-h-index-ii.md",
 			"/binary-search/solutions/0378-kth-smallest-element-in-a-sorted-matrix.md",
+			"/binary-search/solutions/0436-find-right-interval.md",
 			"/binary-search/solutions/0004-median-of-two-sorted-arrays.md"
 		]	
 	},
