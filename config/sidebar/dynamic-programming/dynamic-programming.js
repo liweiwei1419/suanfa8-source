@@ -20,24 +20,24 @@ module.exports = [
 		"title": "第 2 章 基础、重点动态规划问题",
 		"icon": "shu",
 		"children": [
-			"/dynamic-programming/practice.md",
-			"/dynamic-programming/solutions/0509-fibonacci-number.md",
-			"/dynamic-programming/solutions/0070-climbing-stairs.md",
+			"/dynamic-programming/solutions/basic/practice.md",
+			"/dynamic-programming/solutions/basic/0509-fibonacci-number.md",
+			"/dynamic-programming/solutions/basic/0070-climbing-stairs.md",
+			"/dynamic-programming/solutions/basic/0053-maximum-subarray.md",
+			"/dynamic-programming/solutions/basic/0152-maximum-product-subarray.md",
 
-			"/dynamic-programming/solutions/0053-maximum-subarray.md",
-			"/dynamic-programming/solutions/0152-maximum-product-subarray.md",
-			"/dynamic-programming/solutions/0198-house-robber.md",
-			"/dynamic-programming/solutions/0062-unique-paths.md",
-			"/dynamic-programming/solutions/0063-unique-paths-ii.md",
-			"/dynamic-programming/solutions/0064-minimum-path-sum.md",
-			"/dynamic-programming/solutions/0120-triangle.md",
+			// "/dynamic-programming/solutions/0198-house-robber.md",
+			// "/dynamic-programming/solutions/0062-unique-paths.md",
+			// "/dynamic-programming/solutions/0063-unique-paths-ii.md",
+			// "/dynamic-programming/solutions/0064-minimum-path-sum.md",
+			// "/dynamic-programming/solutions/0120-triangle.md",
 
-			"/dynamic-programming/solutions/0300-longest-increasing-subsequence.md",
+			// "/dynamic-programming/solutions/0300-longest-increasing-subsequence.md",
 			
-			"/dynamic-programming/solutions/0091-decode-ways.md",
-			"/dynamic-programming/solutions/0139-word-break.md",
-			"/dynamic-programming/solutions/0983-minimum-cost-for-tickets.md",
-			"/dynamic-programming/solutions/0377-combination-sum-iv.md"
+			// "/dynamic-programming/solutions/0091-decode-ways.md",
+			// "/dynamic-programming/solutions/0139-word-break.md",
+			// "/dynamic-programming/solutions/0983-minimum-cost-for-tickets.md",
+			// "/dynamic-programming/solutions/0377-combination-sum-iv.md"
 			
 			// "/dynamic-programming/solutions/0221-maximal-square.md",
 			// "/dynamic-programming/solutions/0279-perfect-squares.md",

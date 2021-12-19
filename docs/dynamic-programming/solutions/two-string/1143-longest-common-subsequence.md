@@ -1,5 +1,5 @@
 ---
-title: 「力扣」第 1145 题：最长公共子序列（中等）
+title: 「力扣」第 1143 题：最长公共子序列（中等）
 icon: shipin
 categories: 动态规划
 tags:
