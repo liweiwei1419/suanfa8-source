@@ -46,9 +46,7 @@ tags:
 - 树中节点数目范围是 `[1, 3 * 10^4]`
 - `-1000 <= Node.val <= 1000`
 
-
-
-
+---
 
 
 本题解介绍了这一类问题需要如何思考。最重要的思想是「**后序遍历**」和动态规划的「**无后效性**」。
@@ -66,11 +64,11 @@ tags:
 
 下图展示的是同一棵树，不同的结点 A 和结点 B 定义的直径（图中绿色标注的部分）。其中左图展示的路径经过了根结点，右图展示的路径不经过根结点。
 
-![image.png](https://pic.leetcode-cn.com/1621619421-SJXSGP-image.png)
+![image.png](https://tva1.sinaimg.cn/large/008i3skNgy1gxizoat3ckj31hc0u0ack.jpg)
 
 下面的树种绿色结点构成的部分不符合题目中路径的定义。
 
-![image.png](https://pic.leetcode-cn.com/1621619636-IBVQPM-image.png)
+![image.png](https://tva1.sinaimg.cn/large/008i3skNgy1gxizodwwsbj31hc0u0aby.jpg)
 
 
 也就是说：**路径上的每一个结点最多只与 2 条边连接**。
@@ -88,7 +86,7 @@ tags:
 
 另一件事情，**路径可能是「直」的，也可能是「弯」的**。「直」和「弯」的定义如下（虽然左边「直」的看起来也很「弯」，大家看图中红字的定义哦）：
 
-![image.png](https://pic.leetcode-cn.com/1621619774-vsreMV-image.png)
+![image.png](https://tva1.sinaimg.cn/large/008i3skNgy1gxizohnsntj31hc0u041k.jpg)
 
 **我们只规定子问题求解得到的路径是「直」的**。为什么这么规定呢？因为 **「直的」情况简单，它可以组成复杂的「弯」的情况**。
 
