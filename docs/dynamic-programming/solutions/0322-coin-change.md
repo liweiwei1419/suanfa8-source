@@ -1,104 +1,123 @@
 ---
-title: 「力扣」第 322 题：零钱兑换
-date: 2018-05-01 08:00:00
-author: liweiwei419
-top: false
-mathjax: true
-categories: 专题 15：动态规划
+title: 「力扣」第 322 题：零钱兑换（中等）
+icon: yongyan
+categories: 动态规划
 tags:
   - 动态规划
-  - 滑动窗口
-  - 广度优先遍历
-permalink: leetcode-algo/dp/0003-longest-substring-without-repeating-characters
+  - 背包问题
+  - 完全背包
 ---
 
-## 「力扣」第 322 题：零钱兑换
+满足「完全背包问题」的背景。
 
-+ 传送门：[322. 零钱兑换](https://leetcode-cn.com/problems/coin-change/)；
+1. 每个硬币可以使用多次；
+2. 不计算顺序；
+3. 并且有「最优子结构」。
 
-+ 题解链接：https://leetcode-cn.com/problems/coin-change/solution/dong-tai-gui-hua-shi-yong-wan-quan-bei-bao-wen-ti-/
+**要求的是恰好填满「背包」**，所以初始化的时候需要赋值为一个不可能的值： `amount + 1`。只有在有「正常值」的时候，「状态转移」才可以正常发生。
 
-> 满足「完全背包问题」的背景。
->
-> 1、每个硬币可以使用多次；
->
-> 2、不计算顺序；
->
-> 3、并且有「最优子结构」。
++ 题目链接：[322. 零钱兑换](https://leetcode-cn.com/problems/coin-change/)；
++ 题解链接：[动态规划、完全背包、BFS（包含完全背包问题公式推导）](https://leetcode-cn.com/problems/coin-change/solution/dong-tai-gui-hua-shi-yong-wan-quan-bei-bao-wen-ti-/)
 
-> **要求的是恰好填满「背包」**，所以初始化的时候需要赋值为一个不可能的值： `amount + 1`。只有在有「正常值」的时候，「状态转移」才可以正常发生。
+## 题目描述
 
-+ [链接](https://leetcode-cn.com/problems/coin-change/)
-+ [题解链接](https://leetcode-cn.com/problems/coin-change/solution/dong-tai-gui-hua-shi-yong-wan-quan-bei-bao-wen-ti-/)
+给你一个整数数组 `coins` ，表示不同面额的硬币；以及一个整数 `amount` ，表示总金额。
 
-> 给定不同面额的硬币 coins 和一个总金额 amount。编写一个函数来计算可以凑成总金额所需的最少的硬币个数。如果没有任何一种硬币组合能组成总金额，返回 `-1`。
->
-> **示例 1:**
->
-> ```
-> 输入: coins = [1, 2, 5], amount = 11
-> 输出: 3 
-> 解释: 11 = 5 + 5 + 1
-> ```
->
-> **示例 2:**
->
-> ```
-> 输入: coins = [2], amount = 3
-> 输出: -1
-> ```
->
-> **说明**:
-> 你可以认为每种硬币的数量是无限的。
+计算并返回可以凑成总金额所需的 **最少的硬币个数** 。如果没有任何一种硬币组合能组成总金额，返回 `-1` 。
 
-### 方法一：动态规划
+你可以认为每种硬币的数量是无限的。
 
-思路：
+**示例 1：**
 
-+ 看题目的问法，只问最优值是多少，没有要我们求最优解，一般情况下就是「动态规划」可以解决的问题；
-+ 最优子结构其实比较明显，根据示例 1：
+```
+输入：coins = [1, 2, 5], amount = 11
+输出：3 
+解释：11 = 5 + 5 + 1
+```
+
+**示例 2：**
+
+```
+输入：coins = [2], amount = 3
+输出：-1
+```
+
+**示例 3：**
+
+```
+输入：coins = [1], amount = 0
+输出：0
+```
+
+**示例 4：**
+
+```
+输入：coins = [1], amount = 1
+输出：1
+```
+
+**示例 5：**
+
+```
+输入：coins = [1], amount = 2
+输出：2
+```
+
+**提示：**
+
+- $1 \le coins.length \le 12$
+- $1 \le coins[i] \le 2^{31} - 1$
+- $0 \le amount \le 104$
+
+---
+
+看题目的问法，只问最优值是多少，没有要我们求最优解，一般情况下可以用「动态规划」解决。
+
+![image.png](https://pic.leetcode-cn.com/1603723743-vFAFXG-image.png)
+
+
+---
+
+### 方法一：动态规划与记忆化递归
+
+**思路**：分析最优子结构。根据示例 1：
 
 ```
 输入: coins = [1, 2, 5], amount = 11
 ```
 
-凑成面值为 `11` 的最小硬币数可以由以下 $3$ 者的最小值得到：
+凑成面值为 $11$ 的最少硬币个数可以由以下三者的最小值得到：
 
-1、凑成面值为 `10` 的最小硬币数 + 面值为 `1` 的这一枚硬币；
-
-2、凑成面值为 `9` 的最小硬币数 + 面值为 `2` 的这一枚硬币；
-
-3、凑成面值为 `6` 的最小硬币数 + 面值为 `5` 的这一枚硬币；
++ 凑成面值为 $10$ 的最少硬币个数 + 面值为 `1` 的这一枚硬币；
++ 凑成面值为 $9$ 的最少硬币个数 + 面值为 `2` 的这一枚硬币；
++ 凑成面值为 $6$ 的最少硬币个数 + 面值为 `5` 的这一枚硬币。
 
 即 `dp[11] = min (dp[10] + 1, dp[9] + 1, dp[6] + 1)`。
 
-+ 可以直接把题目的问法设计成状态。
+可以直接把问题的问法设计成状态。
 
-#### 第 1 步：定义「状态」
++ 第 1 步：定义「状态」。`dp[i] `：凑齐总价值 `i ` 需要的最少硬币个数；
++ 第 2 步：写出「状态转移方程」。根据对示例 1 的分析：
 
-`dp[i] `：凑齐总价值 `i ` 需要的最少硬币数，状态就是问的问题。
-
-#### 第 2 步：写出「状态转移方程」
-
-根据对具体例子的分析：
-
-```java
-dp[amount] = min(1 + dp[amount - coin[i]]) for i in [0, len - 1] if coin[i] <= amount
+```
+dp[amount] = min(dp[amount], 1 + dp[amount - coins[i]]) for i in [0, len - 1] if coins[i] <= amount
 ```
 
-注意的是：
+**说明**：感谢 [@paau](/u/paau/) 朋友纠正状态转移方程。
 
-1、首先硬币的面值首先要**小于等于**当前要凑出来的面值；
+**注意**：
 
-2、剩余的那个面值应该要能够凑出来，例如：求 `dp[11]` 需要参考 `dp[10]` ，如果不能凑出来的话，`dp[10]` 应该等于一个不可能的值，可以设计为 `11 + 1`，也可以设计为 `-1` ，它们的区别只是在具体的代码编写细节上不一样而已。
++ **单枚硬币的面值首先要小于等于** 当前要凑出来的面值；
++ 剩余的那个面值也要能够凑出来，例如：求 `dp[11]` 需要参考 `dp[10]`。如果不能凑出 `dp[10]`，则 `dp[10]` 应该等于一个不可能的值，可以设计为 `11 + 1`，也可以设计为 `-1` ，它们的区别只是在编码的细节上不一样。
 
-再强调一次：新状态的值要参考的值以前计算出来的「有效」状态值。这一点在编码的时候需要特别注意。
-
-因此，不妨先假设凑不出来，因为比的是小，所以设置一个不可能的数。
+**再次强调**：新状态的值要参考的值以前计算出来的「有效」状态值。因此，不妨先假设凑不出来，因为求的是小，所以设置一个不可能的数。
 
 
-Java 代码：
-```java
+**参考代码 1**：
+
+**注意**：要求的是「恰好凑出面值」，所以初始化的时候需要赋值为一个不可能的值：`amount + 1`。只有在有「正常值」的时候，「状态转移」才可以正常发生。
+
+```Java []
 import java.util.Arrays;
 
 public class Solution {
@@ -110,8 +129,8 @@ public class Solution {
         // 注意：因为要比较的是最小值，这个不可能的值就得赋值成为一个最大值
         Arrays.fill(dp, amount + 1);
 
+        // 理解 dp[0] = 0 的合理性，单独一枚硬币如果能够凑出面值，符合最优子结构
         dp[0] = 0;
-
         for (int i = 1; i <= amount; i++) {
             for (int coin : coins) {
                 if (i - coin >= 0 && dp[i - coin] != amount + 1) {
@@ -128,34 +147,195 @@ public class Solution {
 }
 ```
 
-> 要求的是恰好填满「背包」，所以初始化的时候需要赋值为一个不可能的值： `amount + 1`。只有在有「正常值」的时候，「状态转移」才可以正常发生。
+**复杂度分析**：
 
-### 方法二：套「完全背包」问题的公式
++ 时间复杂度：$O(N \times amount)$，这里 $N$ 是可选硬币的种类数，$amount$ 是题目输入的面值；
++ 空间复杂度：$O(amount)$，状态数组的大小为 $amount$。
+
+「动态规划」是「自底向上」求解。事实上，可以 **直接面对问题求解** ，即「自顶向下」，但是这样的问题有 **重复子问题**，需要缓存已经求解过的答案，这叫 **记忆化递归**。
+
+
+**参考代码 2**：
+
+**注意**：由于 $-1$ 是一个特殊的、有意义状态值（题目要求不能使用给出硬币面值凑出的时候，返回 $-1$），因此初值赋值为 $-2$，表示还未计算出结果。
+
+```Java []
+import java.util.Arrays;
+
+public class Solution {
+
+    public int coinChange(int[] coins, int amount) {
+        int[] memo = new int[amount + 1];
+        Arrays.fill(memo, -2);
+        Arrays.sort(coins);
+        return dfs(coins, amount, memo);
+    }
+
+    private int dfs(int[] coins, int amount, int[] memo) {
+        int res = Integer.MAX_VALUE;
+        if (amount == 0) {
+            return 0;
+        }
+
+        if (memo[amount] != -2) {
+            return memo[amount];
+        }
+
+        for (int coin : coins) {
+            if (amount - coin < 0) {
+                break;
+            }
+
+            int subRes = dfs(coins, amount - coin, memo);
+            if (subRes == -1) {
+                continue;
+            }
+            res = Math.min(res, subRes + 1);
+        }
+        return memo[amount] = (res == Integer.MAX_VALUE) ? -1 : res;
+    }
+}
+```
+```Python []
+from typing import List
+
+
+class Solution:
+    def coinChange(self, coins: List[int], amount: int) -> int:
+
+        def dfs(coins, amount, memo):
+            res = 9999
+            if amount == 0:
+                return 0
+
+            if memo[amount] != -2:
+                return memo[amount]
+
+            for coin in coins:
+
+                if amount - coin < 0:
+                    break
+                sub_res = dfs(coins, amount - coin, memo)
+                if sub_res == -1:
+                    continue
+                res = min(res, sub_res + 1)
+
+            if res == 9999:
+                memo[amount] = -1
+                return -1
+            memo[amount] = res
+            return res
+
+        # 由于 -1 是一个特殊的、有意义状态值，因此初值赋值为 -2，表示还未计算
+        memo = [-2 for _ in range(amount + 1)]
+        # 剪枝方便
+        coins.sort()
+        return dfs(coins, amount, memo)
+```
+
+**复杂度分析**：
+
++ 时间复杂度：$O(N \times amount)$，这里 $N$ 是可选硬币的种类数，$amount$ 是题目输入的面值；
++ 空间复杂度：$O(amount)$，状态数组的大小为 $amount$。
+
+---
+
+### 方法二：广度优先遍历
+
+具体在纸上画一下，就知道这其实是一个在「图」上的最短路径问题，「广度优先遍历」是求解这一类问题的算法。广度优先遍历借助「队列」实现。
+
+![image.png](https://pic.leetcode-cn.com/144770504b1560d414b9cbcb69ad4203e40b868f51b8c95de1106d1eac7d1e0a-image.png)
+
+**注意**：
++ 由于是「图」，有回路，所以需要一个 `visited` 数组，记录哪一些结点已经访问过。
++ 在添加到队列的时候，就得将 `visited` 数组对应的值设置为 `true`，否则可能会出现同一个元素多次入队的情况。
+
+**参考代码 3**：
+
+```Java []
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class Solution {
+
+    public int coinChange(int[] coins, int amount) {
+        if (amount == 0) {
+            return 0;
+        }
+
+        Queue<Integer> queue = new LinkedList<>();
+        boolean[] visited = new boolean[amount + 1];
+
+        visited[amount] = true;
+        queue.offer(amount);
+
+        // 排序是为了加快广度优先遍历过程中，对硬币面值的遍历，起到剪枝的效果
+        Arrays.sort(coins);
+
+        int step = 1;
+        while (!queue.isEmpty()) {
+            int size = queue.size();
+            for (int i = 0; i < size; i++) {
+                Integer head = queue.poll();
+                for (int coin : coins) {
+                    int next = head - coin;
+                    // 只要遇到 0，就找到了一个最短路径
+                    if (next == 0) {
+                        return step;
+                    }
+
+                    if (next < 0) {
+                        // 由于 coins 升序排序，后面的面值会越来越大，剪枝
+                        break;
+                    }
+
+                    if (!visited[next]) {
+                        queue.offer(next);
+                        // 添加到队列的时候，就应该立即设置为 true
+                        // 否则还会发生重复访问
+                        visited[next] = true;
+                    }
+                }
+            }
+            step++;
+        }
+        // 进入队列的顶点都出队，都没有看到 0 ，就表示凑不出当前面值
+        return -1;
+    }
+}
+```
+
+**复杂度分析**：（待纠正）
+
++ 时间复杂度：$O(amount)$，这里 $amount$ 是题目输入的面值；
++ 空间复杂度：$O(amount)$，队列的大小为 $amount$。
+
+---
+
+
+### 方法三：套「完全背包」问题的公式
 
 为什么是「完全背包」问题：
 
-1、每个硬币可以使用无限次；
-
-2、硬币总额有限制；
-
-3、并且具体组合是顺序无关的，还以示例 1 为例：面值总额为 `11`，方案 `[1, 5, 5]` 和方案 `[5, 1, 5]` 视为同一种方案。
++ 每个硬币可以使用无限次；
++ 硬币总额有限制；
++ 并且具体组合是顺序无关的，还以示例 1 为例：面值总额为 `11`，方案 `[1, 5, 5]` 和方案 `[5, 1, 5]` 视为同一种方案。
 
 但是与「完全」背包问题不一样的地方是：
 
-1、要求恰好填满容积为 `amount` 的背包，重点是「恰好」、「刚刚好」，而原始的「完全背包」问题只是要求「不超过」；
++ 要求恰好填满容积为 `amount` 的背包，重点是「恰好」、「刚刚好」，而原始的「完全背包」问题只是要求「不超过」；
++ 题目问的是总的硬币数最少，原始的「完全背包」问题让我们求的是总价值最多。
 
-2、题目问的是总的硬币数最少，原始的「完全背包」问题让我们求的是总价值最多。
+这一点可以认为是：每一个硬币有一个「占用空间」属性，并且值是固定的，固定值为 $1$；作为「占用空间」而言，考虑的最小化是有意义的。等价于把「完全背包」问题的「体积」和「价值」属性调换了一下。因此，这个问题的背景是「完全背包」问题。
 
-+ 这一点可以认为是：每一个硬币有一个「占用空间」属性，并且值是固定的，固定值为 $1$；
-+ 作为「占用空间」而言，考虑的最小化是有意义的。
+可以使用「完全背包」问题的解题思路（「0-1 背包」问题也是这个思路）：
 
-相当于是把「完全背包」问题的「体积」和「价值」属性调换了一下。
+一个一个硬币去看，一点点扩大考虑的价值的范围（自底向上考虑问题的思想）。其实就是在不断地做尝试和比较，实际生活中，人也是这么干的，「盗贼」拿东西也是这样的，看到一个体积小，价值大的东西，就会从背包里把占用地方大，廉价的物品换出来。
 
-因此，这个问题的背景是「完全背包」问题，可以使用「完全背包」问题的解题思路：（「0-1 背包」问题也是这个思路）**一个一个硬币去看，一点点扩大考虑的价值的范围（自底向上考虑问题的思想），其实就是在不断地做尝试和比较，实际生活中，人也是这么干的，「盗贼」拿东西也是这样的，看到一个体积小，价值大的东西，就会从背包里把占用地方大，廉价的物品换出来**。
+所以在代码里：外层循环先遍历的是硬币面值，内层循环遍历的是面值总和。
 
-所以代码里：外层循环先遍历的是硬币面试，内层循环遍历的是面值总和，这是这样写的依据。
-
-说明：以下代码提供的是「完全背包」问题「最终版本」的代码。建议读者按照以下路径进行学习，相信就不难理解这个代码为什么这样写了。
+**说明**：以下代码提供的是「完全背包」问题「最终版本」的代码。建议读者按照以下路径进行学习，相信就不难理解这个代码为什么这样写了。
 
 + 「0-1 背包」问题，二维表格的写法；
 + 「0-1 背包」问题，滚动数组的写法；
@@ -166,9 +346,9 @@ public class Solution {
 
 （这里省略了 2 版代码，请读者自己学习背包问题的知识，将它们补上。）
 
-Java 代码：
+**参考代码 4**：
 
-```java
+```Java []
 import java.util.Arrays;
 
 public class Solution {
@@ -192,70 +372,8 @@ public class Solution {
 }
 ```
 
-### 方法三：广度优先遍历
+**复杂度分析**：（待纠正）
 
-这个问题其实有点像「组合问题」，具体在纸上画一下，就知道这其实是一个在「图」上的「最短路径问题」。很显然，「广度优先遍历」是求这个问题的算法，广度优先遍历借助「队列」实现。
++ 时间复杂度：$O(N \times amount)$，这里 $N$ 是可选硬币的种类数，$amount$ 是题目输入的面值；
++ 空间复杂度：$O(amount)$，状态数组的大小为 $amount$。
 
-![image-20200320111420490](https://tva1.sinaimg.cn/large/00831rSTly1gd080qhhmvj312j0u0wmu.jpg)
-
-因为是「图」，有回路，所以要设计一个 `visited` 数组。
-
-注意：在添加到队列的时候，就得将 `visited` 数组对应的值设置为 `true`，否则可能会出现同一个元素多次入队的情况。广度优先遍历的代码是很常见的，大家多写几遍也就会了。
-
-Java 代码：
-
-```java
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.Queue;
-
-public class Solution {
-
-    public int coinChange(int[] coins, int amount) {
-        if (amount == 0) {
-            return 0;
-        }
-
-        Queue<Integer> queue = new LinkedList<>();
-        boolean[] visited = new boolean[amount + 1];
-
-        visited[amount] = true;
-        queue.offer(amount);
-
-        // 排序是为了加快广度优先遍历过程中，对硬币面值的遍历
-        // 起到前置的效果
-        Arrays.sort(coins);
-
-        int step = 1;
-        while (!queue.isEmpty()) {
-            int size = queue.size();
-            for (int i = 0; i < size; i++) {
-                Integer head = queue.poll();
-                for (int coin : coins) {
-                    int next = head - coin;
-                    if (next == 0) {
-                        return step;
-                    }
-
-                    if (next < 0) {
-                        // 由于 coins 升序排序，后面的面值会越来越大，剪枝
-                        break;
-                    }
-
-                    if (!visited[next]) {
-                        queue.offer(next);
-                        // 添加到队列的时候，就应该立即设置为 true
-                        // 否则还会发生重复访问
-                        visited[next] = true;
-                    }
-                }
-            }
-            step++;
-        }
-        // 进入队列的顶点都出队，都没有看到 0 ，就表示凑不出硬币
-        return -1;
-    }
-}
-```
-
-（本节完）

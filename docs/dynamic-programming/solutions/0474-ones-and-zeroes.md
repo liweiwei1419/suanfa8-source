@@ -1,20 +1,16 @@
 ---
-title: 「力扣」第474 题：一和零
-date: 2018-05-08 08:00:00
-author: liweiwei419
-top: false
-mathjax: true
-categories: 专题 15：动态规划
+title: 「力扣」第 474 题：一和零（中等）
+icon: yongyan
+categories: 动态规划
 tags:
   - 动态规划
-permalink: leetcode-algo/0474-ones-and-zeroes
 ---
 
-## 「力扣」第474 题：一和零
-
-> 二维背包问题，数组有三维，可以降到一维。
+二维背包问题，数组有三维，可以降到一维。
 
 + [474. 一和零](https://leetcode-cn.com/problems/ones-and-zeroes/)
+
+## 题目链接
 
 在计算机界中，我们总是追求用有限的资源获取最大的收益。
 
@@ -47,7 +43,7 @@ permalink: leetcode-algo/0474-ones-and-zeroes
 
 注意：什么叫组成？必须用完？还是有剩余就可以？
 
-Java 代码：
+**参考代码**：
 
 ```java
 public class Solution {
@@ -84,5 +80,4 @@ public class Solution {
     }
 }
 ```
-
 
