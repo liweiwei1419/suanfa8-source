@@ -1,37 +1,51 @@
-module.exports = [{
+module.exports = [
+      {
             "text": "主页",
             "icon": "home",
             "link": "/"
       },
 
       {
-            "text":"二分查找精讲",
-            "icon":"jingjiang",
-            "link":"/binary-search/"
-      },
-      {
-            "text":"动态规划精讲",
-            "icon":"jingjiang",
-            "link":"/dynamic-programming/"
-      },
-      {
-            "text":"并查集精讲",
-            "icon":"new",
-            "link":"/union-find/"
+            "text": "视频讲解",
+            "icon": "shipin",
+            "link": "/video/"
       },
 
       {
-            "text":"优先队列精讲",
-            "icon":"new",
-            "link":"/heap/"
+            "text": "专题精讲",
+            "icon": "jingjiang",
+            "items": [
+                  {
+                        "text":"二分查找精讲",
+                        "icon":"jingjiang",
+                        "link":"/binary-search/"
+                  },
+                  {
+                        "text":"动态规划精讲",
+                        "icon":"jingjiang",
+                        "link":"/dynamic-programming/"
+                  },
+                  {
+                        "text":"并查集精讲",
+                        "icon":"new",
+                        "link":"/union-find/"
+                  },
+
+                  {
+                        "text":"优先队列精讲",
+                        "icon":"jingjiang",
+                        "link":"/heap/"
+                  },
+
+                  {
+                        "text":"图论精讲",
+                        "icon":"jingjiang",
+                        "link":"/graph/"
+                  },
+
+            ]
       },
 
-      {
-            "text":"图论精讲",
-            "icon":"new",
-            "link":"/graph/"
-      },
-      
       
       {
             "text":"精选题解",
