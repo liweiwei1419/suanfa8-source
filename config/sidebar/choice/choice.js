@@ -33,29 +33,29 @@ module.exports = [
 			"/choice/stack/1673-find-the-most-competitive-subsequence.md"
 		]
 	},
-	{
-		"title":"二叉树",
-		"icon": "jingxuan",
-		"children": [
-			"/choice/binary-search/105.md",
-			"/choice/binary-search/106.md"
-		]
-	},
-	{
-		"title":"并查集",
-		"icon": "jingxuan",
-		"children": [
-			"/choice/binary-search/990.md",
-			"/choice/binary-search/399.md"
-		]
-	},
-	{
-		"title":"动态规划",
-		"icon": "jingxuan",
-		"children": [
-			"/choice/binary-search/0053.md"
-		]
-	},
+	// {
+	// 	"title":"二叉树",
+	// 	"icon": "jingxuan",
+	// 	"children": [
+	// 		"/choice/binary-search/105.md",
+	// 		"/choice/binary-search/106.md"
+	// 	]
+	// },
+	// {
+	// 	"title":"并查集",
+	// 	"icon": "jingxuan",
+	// 	"children": [
+	// 		"/choice/binary-search/990.md",
+	// 		"/choice/binary-search/399.md"
+	// 	]
+	// },
+	// {
+	// 	"title":"动态规划",
+	// 	"icon": "jingxuan",
+	// 	"children": [
+	// 		"/choice/binary-search/0053.md"
+	// 	]
+	// },
 
 	{
 		"title":"优先队列（堆）",
@@ -78,11 +78,11 @@ module.exports = [
 		]
 	},
 	
-	{
-		"title":"递归",
-		"icon": "jingxuan",
-		"children": [
-			"/choice/binary-search/0050"
-		]
-	}
+	// {
+	// 	"title":"递归",
+	// 	"icon": "jingxuan",
+	// 	"children": [
+	// 		"/choice/binary-search/0050"
+	// 	]
+	// }
 ]
