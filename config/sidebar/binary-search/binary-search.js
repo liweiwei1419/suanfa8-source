@@ -37,6 +37,8 @@ module.exports = [{
 			"/binary-search/solutions/find-index/0081-search-in-rotated-sorted-array-ii.md",
 			"/binary-search/solutions/find-index/0153-find-minimum-in-rotated-sorted-array.md",
 			"/binary-search/solutions/find-index/0154-find-minimum-in-rotated-sorted-array-ii.md",
+			
+			"/binary-search/solutions/find-index/0162-find-peak-element.md",
 			"/binary-search/solutions/find-index/0852-peak-index-in-a-mountain-array.md",
 			"/binary-search/solutions/find-index/1095-find-in-mountain-array.md"
 		]
