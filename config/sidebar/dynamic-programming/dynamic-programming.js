@@ -1,5 +1,4 @@
 module.exports = [
-
 	{
 		"title": "第 1 章 知识点精讲",
 		"icon": "shu",

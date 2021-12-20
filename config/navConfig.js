@@ -26,6 +26,11 @@ module.exports = [
                         "link":"/dynamic-programming/"
                   },
                   {
+                        "text":"链表问题分类",
+                        "icon":"jingjiang",
+                        "link":"/linked-list/"
+                  },
+                  {
                         "text":"并查集精讲",
                         "icon":"new",
                         "link":"/union-find/"

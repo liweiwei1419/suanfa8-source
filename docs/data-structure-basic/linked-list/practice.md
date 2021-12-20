@@ -17,7 +17,7 @@ tags:
 | ---- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | 2    | [两数相加](https://leetcode-cn.com/problems/add-two-numbers) |                                                              |
 | 82   | [删除排序链表中的重复元素 II](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list-ii/) |                                                              |
-| 26   | [反转链表](https://leetcode-cn.com/problems/reverse-linked-list) |                                                              |
+| 206   | [反转链表](https://leetcode-cn.com/problems/reverse-linked-list) |                                                              |
 | 24   | [两两交换链表中的节点](https://leetcode-cn.com/problems/swap-nodes-in-pairs) |                                                              |
 | 25   | [K 个一组翻转链表](https://leetcode-cn.com/problems/reverse-nodes-in-k-group) |                                                              |
 | 328  | [奇偶链表](https://leetcode-cn.com/problems/odd-even-linked-list) |                                                              |
@@ -44,7 +44,7 @@ tags:
 | 19   | [倒数第 k 个结点](https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/) |      |
 | 141  | [环形链表](https://leetcode-cn.com/problems/linked-list-cycle/) |      |
 | 142  | [环形链表 II](https://leetcode-cn.com/problems/linked-list-cycle-ii/) |      |
-| 161  | [相交链表](https://leetcode-cn.com/problems/intersection-of-two-linked-lists/) |      |
+| 160  | [相交链表](https://leetcode-cn.com/problems/intersection-of-two-linked-lists/) |      |
 
 **说明**：
 
