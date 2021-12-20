@@ -20,7 +20,7 @@ module.exports = [
 		"children": [
 			"/union-find/practice.md",
 			"/union-find/solutions/0990-satisfiability-of-equality-equations.md",
-			"/union-find/solutions/0399-longest-consecutive-sequence.md",
+			"/union-find/solutions/0399-evaluate-division.md",
 			"/union-find/solutions/0128-longest-consecutive-sequence.md",
 			"/union-find/solutions/0130-surrounded-regions.md",
 			"/union-find/solutions/0200-number-of-islands.md",
