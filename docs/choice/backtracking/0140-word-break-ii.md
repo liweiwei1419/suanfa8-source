@@ -1,9 +1,10 @@
 ---
 title: 「力扣」第 140 题：单词拆分 II（困难）
 icon: yongyan
-category: 
+category: 回溯算法
 tags:
-  - 
+  - 动态规划
+  - 回溯算法
 ---
 
 + 题目链接：[140. 单词拆分 II](https://leetcode-cn.com/problems/word-break-ii/)
