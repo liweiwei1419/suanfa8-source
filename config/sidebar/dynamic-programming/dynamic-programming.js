@@ -11,8 +11,8 @@ module.exports = [
 			"/dynamic-programming/06.md",
 			"/dynamic-programming/07.md",
 			"/dynamic-programming/08.md",
-			"/dynamic-programming/09.md",
-			"/dynamic-programming/10.md"
+			"/dynamic-programming/09.md"
+			// "/dynamic-programming/10.md"
 		]
 	},
 	{
