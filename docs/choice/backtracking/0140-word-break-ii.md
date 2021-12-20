@@ -1,8 +1,16 @@
-
+---
+title: 「力扣」第 140 题：单词拆分 II（困难）
+icon: yongyan
+category: 
+tags:
+  - 
+---
 
 + 题目链接：[140. 单词拆分 II](https://leetcode-cn.com/problems/word-break-ii/)
 + [动态规划求是否有解、回溯算法求所有具体解（Java）](https://leetcode-cn.com/problems/word-break-ii/solution/dong-tai-gui-hua-hui-su-qiu-jie-ju-ti-zhi-python-d/)
 
+
+## 题目描述
 
 **概述**：
 

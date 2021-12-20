@@ -1,7 +1,7 @@
 ---
 title: 「力扣」第 316 题：去除重复字母（中等）
 icon: shipin
-categories: 专题 7：栈
+categories: 栈
 tags:
   - 栈
 ---

@@ -1,12 +1,17 @@
-# 「力扣」第 200 题：岛屿数量
+---
+title: 「力扣」第 200 题：岛屿数量
+icon: yongyan
+category: 广度优先遍历
+tags:
+  - 广度优先遍历
+---
+
 
 传送门：[200. 岛屿数量](https://leetcode-cn.com/problems/number-of-islands/)。
 
 题解地址：[DFS + BFS + 并查集（Python 代码、Java 代码）](https://leetcode-cn.com/problems/number-of-islands/solution/dfs-bfs-bing-cha-ji-python-dai-ma-java-dai-ma-by-l/)。
 
-
-
-
+## 题目描述
 
 >给定一个由 '1'（陆地）和 '0'（水）组成的的二维网格，计算岛屿的数量。一个岛被水包围，并且它是通过水平方向或垂直方向上相邻的陆地连接而成的。你可以假设网格的四个边均被水包围。
 >

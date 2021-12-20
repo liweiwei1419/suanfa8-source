@@ -1,4 +1,11 @@
-# 「力扣」第 127 题：单词接龙
+---
+title: 「力扣」第 127 题：单词接龙
+icon: yongyan
+category: 广度优先遍历
+tags:
+  - 广度优先遍历
+---
+
 
 + 题目链接：[127. 单词接龙](https://leetcode-cn.com/problems/word-ladder/)
 + 题解链接：[广度优先遍历、双向广度优先遍历（Java、Python）](https://leetcode-cn.com/problems/word-ladder/solution/yan-du-you-xian-bian-li-shuang-xiang-yan-du-you-2/)
@@ -43,6 +50,7 @@ wordList = ["hot","dot","dog","lot","log"]
 解释: endWord "cog" 不在字典中，所以无法进行转换。
 ```
 
+---
 
 
 ### 一句话题解

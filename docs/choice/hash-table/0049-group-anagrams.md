@@ -1,4 +1,13 @@
-「力扣」第 49 题：字母异位词分组（哈希表）
+---
+title: 「力扣」第 49 题：字母异位词分组（哈希表）
+icon: yongyan
+category: 哈希表
+tags:
+  - 哈希表
+  - 滚动哈希
+---
+
+
 
 
 | 题目                                                         | 难度 | 题解                                                         |
@@ -13,8 +22,8 @@
 + 每个字符串其实对应一个 key，相同字母组合对应的 key 是相等的。这里考察了哈希函数。
 
 
-
-Java 代码：
+<CodeGroup>
+<CodeGroupItem title="Java">
 ```java
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -69,10 +78,9 @@ public class Solution {
     }
 }
 ```
+</CodeGroupItem>
 
-
-
-Python 代码：
+<CodeGroupItem title="Python">
 ```python
 class Solution:
     def groupAnagrams(self, strs):
@@ -115,8 +123,9 @@ if __name__ == '__main__':
     print(result)
 
 ```
+</CodeGroupItem>
 
-Python 代码：
+<CodeGroupItem title="Python">
 ```python
 class Solution:
     def groupAnagrams(self, strs):
@@ -137,4 +146,14 @@ class Solution:
                 map[key].append(s)
 
         return list(map.values())
-```
+```    
+</CodeGroupItem>
+</CodeGroup>
+
+
+
+
+
+
+
+
