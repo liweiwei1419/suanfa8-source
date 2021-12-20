@@ -16,14 +16,14 @@ module.exports = [
 			"/choice/sliding-window/0719-find-k-th-smallest-pair-distance.md"
 		]
 	},
-	{
-		"title":"双指针",
-		"icon": "jingxuan",
-		"children": [
-			"/choice/binary-search/15.md",
-			"/choice/binary-search/16.md"
-		]
-	},
+	// {
+	// 	"title":"双指针",
+	// 	"icon": "jingxuan",
+	// 	"children": [
+	// 		"/choice/binary-search/15.md",
+	// 		"/choice/binary-search/16.md"
+	// 	]
+	// },
 	{
 		"title":"栈与单调栈",
 		"icon": "jingxuan",
