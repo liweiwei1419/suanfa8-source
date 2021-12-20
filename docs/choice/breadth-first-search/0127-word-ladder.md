@@ -456,6 +456,6 @@ if __name__ == '__main__':
 
 （2）char[] 数组这件事情，其实还可以用 StringBuilder。（3）考虑能不能使用 Trie。
 
-<script src="https://gist.github.com/liweiwei1419/8e7e0d3914e103c1d3ba4634033c9c9c.js"></script>
+
 
 Python 代码：
