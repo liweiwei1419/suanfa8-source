@@ -3,7 +3,7 @@ title: 「力扣」第 355 题：设计推特（中等）
 icon: yongyan
 categories: 链表
 tags:
-  - 单链表
+  - 链表
   - 快慢指针
 ---
 

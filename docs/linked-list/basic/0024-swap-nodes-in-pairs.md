@@ -54,7 +54,7 @@ tags:
 
 2. 非递归，即「穿针引线」。这里建议一定要画图，否则不太好想。
 
-这道题因为涉及第 1 个结点的操作，为了避免分类讨论，我们引入虚拟头结点（这是套路了）。
+这道题因为涉及第 1 个结点的操作，为了避免分类讨论，我们引入虚拟头结点（这一点很常见）。
 
 
 ### 方法一：穿针引线
@@ -64,7 +64,71 @@ tags:
 
 **参考代码 1**：
 
-```Java []
+```java
+public class Solution {
+
+    public ListNode swapPairs(ListNode head) {
+        if (head == null || head.next == null) {
+            return head;
+        }
+
+        // 这里设置 dummyNode 是为了处理头结点的特殊情况
+        // 使得头结点和非头结点可以统一处理
+        ListNode dummyNode = new ListNode(-1);
+        dummyNode.next = head;
+        ListNode curNode = dummyNode;
+
+        while (curNode.next != null && curNode.next.next != null) {
+            // 重新初始化 p1 和 p2
+            ListNode p1 = curNode.next;
+            ListNode p2 = p1.next;
+
+            // "穿针引线"的步骤就 3 步
+            p1.next = p2.next;
+            p2.next = p1;
+            curNode.next = p2;
+
+            // 循环变量更新
+            curNode = p1;
+        }
+        return dummyNode.next;
+    }
+}
+```
+
+如果你觉得穿针引线很麻烦，不妨尝试使用递归来做。因为在递归的过程中，系统栈会帮我们记录一些信息，所以要简单一些。
+
+### 方法二：递归
+
+**参考代码 2**：
+
+```java
+public class Solution {
+
+    public ListNode swapPairs(ListNode head) {
+        // 特判
+        if (head == null || head.next == null) {
+            return head;
+        }
+
+        // 没有必要设置虚拟头结点了
+        ListNode p1 = head;
+        ListNode p2 = head.next;
+
+        p1.next = swapPairs(p2.next);
+        p2.next = p1;
+        return p2;
+    }
+}
+```
+
+---
+
+补充：
+
+用于测试的结点类（这部分代码不用提交给「力扣」）。
+
+```java
 class ListNode {
     int val;
     ListNode next;
@@ -98,72 +162,18 @@ class ListNode {
         return s.toString();
     }
 }
+```
 
+用于测试的主方法（这部分代码不用提交给「力扣」）。
 
-public class Solution {
-
-    public ListNode swapPairs(ListNode head) {
-        if (head == null || head.next == null) {
-            return head;
-        }
-
-        // 这里设置 dummyNode 是为了处理头结点的特殊情况
-        // 使得头结点和非头结点可以统一处理
-        ListNode dummyNode = new ListNode(-1);
-        dummyNode.next = head;
-        ListNode curNode = dummyNode;
-
-        while (curNode.next != null && curNode.next.next != null) {
-            // 重新初始化 p1 和 p2
-            ListNode p1 = curNode.next;
-            ListNode p2 = p1.next;
-
-            // "穿针引线"的步骤就 3 步
-            p1.next = p2.next;
-            p2.next = p1;
-            curNode.next = p2;
-
-            // 循环变量更新
-            curNode = p1;
-        }
-        return dummyNode.next;
-    }
-
-    public static void main(String[] args) {
-        // 给定 1->2->3->4, 你应该返回 2->1->4->3.
-        int[] nums = {1, 2, 3, 4, 5};
-        ListNode head = new ListNode(nums);
-        Solution solution = new Solution();
-        ListNode swapPairs = solution.swapPairs(head);
-        System.out.println(swapPairs);
-    }
+```java
+public static void main(String[] args) {
+    // 给定 1->2->3->4, 你应该返回 2->1->4->3.
+    int[] nums = {1, 2, 3, 4, 5};
+    ListNode head = new ListNode(nums);
+    Solution solution = new Solution();
+    ListNode swapPairs = solution.swapPairs(head);
+    System.out.println(swapPairs);
 }
 ```
 
-
-
-如果你觉得穿针引线很麻烦，不妨尝试使用递归来做。因为在递归的过程中，系统栈会帮我们记录一些信息，所以要简单一些。
-
-### 方法二：递归
-
-**参考代码 2**：
-
-```Java []
-public class Solution {
-
-    public ListNode swapPairs(ListNode head) {
-        // 特判
-        if (head == null || head.next == null) {
-            return head;
-        }
-
-        // 没有必要设置虚拟头结点了
-        ListNode p1 = head;
-        ListNode p2 = head.next;
-
-        p1.next = swapPairs(p2.next);
-        p2.next = p1;
-        return p2;
-    }
-}
-```

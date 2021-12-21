@@ -3,7 +3,7 @@ title: 「力扣」第 206 题：反转链表（简单）
 icon: yongyan
 categories: 链表
 tags:
-  - 单链表
+  - 链表
   - 递归
 ---
 
@@ -48,7 +48,7 @@ tags:
 - 链表中节点的数目范围是 `[0, 5000]`
 - `-5000 <= Node.val <= 5000`
 
-**进阶：**链表可以选用迭代或递归方式完成反转。你能否用两种方法解决这道题？
+**进阶：** 链表可以选用迭代或递归方式完成反转。你能否用两种方法解决这道题？
 
 ## 方法一：穿针引线
 
@@ -74,40 +74,6 @@ tags:
 **参考代码 1**： 
 
 ```java
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode(int x) {
-        val = x;
-    }
-
-    public ListNode(int[] nums) {
-        if (nums == null || nums.length == 0) {
-            throw new IllegalArgumentException("arr can not be empty");
-        }
-        this.val = nums[0];
-        ListNode curr = this;
-        for (int i = 1; i < nums.length; i++) {
-            curr.next = new ListNode(nums[i]);
-            curr = curr.next;
-        }
-    }
-
-    @Override
-    public String toString() {
-        StringBuilder s = new StringBuilder();
-        ListNode cur = this;
-        while (cur != null) {
-            s.append(cur.val);
-            s.append(" -> ");
-            cur = cur.next;
-        }
-        s.append("NULL");
-        return s.toString();
-    }
-}
-
 public class Solution {
     public ListNode reverseList(ListNode head) {
         // 特判
@@ -169,3 +135,48 @@ public class Solution {
 
 + 时间复杂度：$O(N)$，仅仅遍历了一次链表；
 + 空间复杂度：$O(N)$，递归需要消耗递归栈。
+
+
+
+---
+
+补充：
+
+用于测试的结点类（这部分代码不用提交给「力扣」）。
+
+```java
+class ListNode {
+    int val;
+    ListNode next;
+
+    ListNode(int x) {
+        val = x;
+    }
+
+    public ListNode(int[] nums) {
+        if (nums == null || nums.length == 0) {
+            throw new IllegalArgumentException("arr can not be empty");
+        }
+        this.val = nums[0];
+        ListNode curr = this;
+        for (int i = 1; i < nums.length; i++) {
+            curr.next = new ListNode(nums[i]);
+            curr = curr.next;
+        }
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder s = new StringBuilder();
+        ListNode cur = this;
+        while (cur != null) {
+            s.append(cur.val);
+            s.append(" -> ");
+            cur = cur.next;
+        }
+        s.append("NULL");
+        return s.toString();
+    }
+}
+```
+

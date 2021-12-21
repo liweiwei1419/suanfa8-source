@@ -9,8 +9,6 @@ tags:
 
 + 题目链接：[82. 删除排序链表中的重复元素 II](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list-ii/)。
 
-
-
 ## 题目描述
 
 存在一个按升序排列的链表，给你这个链表的头节点 `head` ，请你删除链表中所有存在数字重复情况的节点，只保留原始链表中 **没有重复出现** 的数字。
@@ -52,40 +50,6 @@ tags:
 <CodeGroup>
 <CodeGroupItem title="Java">
 ```java
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode(int x) {
-        val = x;
-    }
-
-    public ListNode(int[] nums) {
-        if (nums == null || nums.length == 0) {
-            throw new IllegalArgumentException("arr can not be empty");
-        }
-        this.val = nums[0];
-        ListNode curr = this;
-        for (int i = 1; i < nums.length; i++) {
-            curr.next = new ListNode(nums[i]);
-            curr = curr.next;
-        }
-    }
-
-    @Override
-    public String toString() {
-        StringBuilder s = new StringBuilder();
-        ListNode cur = this;
-        while (cur != null) {
-            s.append(cur.val);
-            s.append(" -> ");
-            cur = cur.next;
-        }
-        s.append("NULL");
-        return s.toString();
-    }
-}
-
 public class Solution {
 
     public ListNode deleteDuplicates(ListNode head) {
@@ -158,14 +122,6 @@ public class Solution {
         }
         return dummyNode.next;
     }
-    
-    public static void main(String[] args) {
-        int[] nums = {1, 1, 1, 2, 3, 3, 4, 4, 5, 6, 7, 8, 8, 8, 9};
-        ListNode head = new ListNode(nums);
-        Solution solution = new Solution();
-        ListNode deleteDuplicates = solution.deleteDuplicates(head);
-        System.out.println(deleteDuplicates);
-    }
 }
 ```
 </CodeGroupItem>
@@ -199,16 +155,65 @@ class Solution:
             else:
                 cur = cur.next
         return dummy.next
-```    
+```
 </CodeGroupItem>
 </CodeGroup>
 
+---
+
+补充：
+
+用于测试的结点类（这部分代码不用提交给「力扣」）。
+
+```java
+class ListNode {
+    int val;
+    ListNode next;
+
+    ListNode(int x) {
+        val = x;
+    }
+
+    public ListNode(int[] nums) {
+        if (nums == null || nums.length == 0) {
+            throw new IllegalArgumentException("arr can not be empty");
+        }
+        this.val = nums[0];
+        ListNode curr = this;
+        for (int i = 1; i < nums.length; i++) {
+            curr.next = new ListNode(nums[i]);
+            curr = curr.next;
+        }
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder s = new StringBuilder();
+        ListNode cur = this;
+        while (cur != null) {
+            s.append(cur.val);
+            s.append(" -> ");
+            cur = cur.next;
+        }
+        s.append("NULL");
+        return s.toString();
+    }
+}
+```
 
 
+用于测试的主方法（这部分代码不用提交给「力扣」）。
 
 
-
-
+```java
+public static void main(String[] args) {
+    int[] nums = {1, 1, 1, 2, 3, 3, 4, 4, 5, 6, 7, 8, 8, 8, 9};
+    ListNode head = new ListNode(nums);
+    Solution solution = new Solution();
+    ListNode deleteDuplicates = solution.deleteDuplicates(head);
+    System.out.println(deleteDuplicates);
+}
+```
 
 
 

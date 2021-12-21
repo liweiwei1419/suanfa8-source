@@ -3,7 +3,7 @@ title: 「力扣」第 160 题：相交链表（简单）
 icon: yongyan
 categories: 链表
 tags:
-  - 单链表
+  - 链表
   - 快慢指针
 ---
 

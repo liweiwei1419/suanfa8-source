@@ -49,62 +49,38 @@ tags:
 - `0 <= Node.val <= 9`
 - 题目数据保证列表表示的数字不含前导零
 
-## 思路
+## 思路分析
 
 需要考虑的问题：
 
 1. 数字中是否有前置的 $0$（除了 $0$ 以外，没有前置的 $0$）；
 2. 负数是否考虑。
 
+::: danger 提示
+题目最后的「提示」已经给出了答案，如果面试的时候，数据范围不确定的时候，一定要和面试官确认清楚。
+
+不同的数据范围决定了采用的不同的方法。
+:::
+
+
 编码过程中需要思考的问题：
 
 1. 如何分别获得这个数组的个位、十位、百位、千位；
 2. 分别相加，如果大于 $10$，进一。
 
-### 方法一：穿针引线
+## 方法：穿针引线
 
 
 **参考代码**：
 
 <CodeGroup>
 <CodeGroupItem title="Java">
+
 ```java
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode(int x) {
-        val = x;
-    }
-
-    public ListNode(int[] nums) {
-        this.val = nums[0];
-        ListNode curNode = this;
-        for (int i = 1; i < nums.length; i++) {
-            curNode.next = new ListNode(nums[i]);
-            curNode = curNode.next;
-        }
-    }
-
-    @Override
-    public String toString() {
-        ListNode curNode = this;
-        StringBuilder stringBuilder = new StringBuilder();
-        while (curNode != null) {
-            stringBuilder.append(curNode.val);
-            stringBuilder.append(" -> ");
-            curNode = curNode.next;
-        }
-        stringBuilder.append("NULL");
-        return stringBuilder.toString();
-    }
-}
-
-
 public class Solution {
 
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-        // 特判
+        // 特殊判断
         if (l1 == null) {
             return l2;
         }
@@ -131,16 +107,6 @@ public class Solution {
             curNode.next = new ListNode(1);
         }
         return dummyNode.next;
-    }
-
-    public static void main(String[] args) {
-        int[] nums1 = new int[]{5};
-        int[] nums2 = new int[]{5};
-        ListNode l1 = new ListNode(nums1);
-        ListNode l2 = new ListNode(nums2);
-        Solution solution = new Solution();
-        ListNode addTwoNumbers = solution.addTwoNumbers(l1, l2);
-        System.out.println(addTwoNumbers);
     }
 }
 ```
@@ -180,12 +146,6 @@ public class Solution {
 
 <CodeGroupItem title="Python">
 ```python
-class ListNode:
-    def __init__(self, x):
-        self.val = x
-        self.next = None
-
-
 class Solution:
     def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
         if l1 is None:
@@ -212,6 +172,78 @@ class Solution:
         if s == 1:
             cur_node.next = ListNode(1)
         return dummy_node.next
-```    
+```
 </CodeGroupItem>
 </CodeGroup>
+
+---
+
+补充：
+
+用于测试的结点类（这部分代码不用提交给「力扣」）。
+
+
+<CodeGroup>
+<CodeGroupItem title="Java">
+```java
+class ListNode {
+    int val;
+    ListNode next;
+
+    ListNode(int x) {
+        val = x;
+    }
+
+    public ListNode(int[] nums) {
+        this.val = nums[0];
+        ListNode curNode = this;
+        for (int i = 1; i < nums.length; i++) {
+            curNode.next = new ListNode(nums[i]);
+            curNode = curNode.next;
+        }
+    }
+
+    @Override
+    public String toString() {
+        ListNode curNode = this;
+        StringBuilder stringBuilder = new StringBuilder();
+        while (curNode != null) {
+            stringBuilder.append(curNode.val);
+            stringBuilder.append(" -> ");
+            curNode = curNode.next;
+        }
+        stringBuilder.append("NULL");
+        return stringBuilder.toString();
+    }
+}
+```
+</CodeGroupItem>
+
+<CodeGroupItem title="Python">
+```python
+class ListNode:
+    def __init__(self, x):
+        self.val = x
+        self.next = None
+```
+</CodeGroupItem>
+</CodeGroup>
+
+
+
+
+
+用于测试的主方法（这部分代码不用提交给「力扣」）。
+
+```java
+public static void main(String[] args) {
+    int[] nums1 = new int[]{5};
+    int[] nums2 = new int[]{5};
+    ListNode l1 = new ListNode(nums1);
+    ListNode l2 = new ListNode(nums2);
+    Solution solution = new Solution();
+    ListNode addTwoNumbers = solution.addTwoNumbers(l1, l2);
+    System.out.println(addTwoNumbers);
+}
+```
+

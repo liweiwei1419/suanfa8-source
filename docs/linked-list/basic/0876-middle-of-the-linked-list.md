@@ -50,18 +50,9 @@ ans.val = 3, ans.next.val = 4, ans.next.next.val = 5, 以及 ans.next.next.next 
 
 **参考代码**：
 
-Java 代码：
-
-```Java []
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode(int x) {
-        val = x;
-    }
-}
-
+<CodeGroup>
+<CodeGroupItem title="Java">
+```java
 public class Solution {
 
     public ListNode middleNode(ListNode head) {
@@ -79,15 +70,10 @@ public class Solution {
     }
 }
 ```
+</CodeGroupItem>
 
-Python 代码：
-
-```Python []
-class ListNode:
-    def __init__(self, x):
-        self.val = x
-        self.next = None
-
+<CodeGroupItem title="Python">
+```python
 class Solution:
     def middleNode(self, head: ListNode) -> ListNode:
         if head is None:
@@ -101,4 +87,5 @@ class Solution:
             fast = fast.next.next
         return slow
 ```
-
+</CodeGroupItem>
+</CodeGroup>

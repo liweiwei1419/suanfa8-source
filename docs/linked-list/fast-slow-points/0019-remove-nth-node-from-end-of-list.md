@@ -3,7 +3,7 @@ title: 「力扣」第 19 题：删除链表的倒数第 N 个节点（中等）
 icon: yongyan
 categories: 链表
 tags:
-  - 单链表
+  - 链表
   - 快慢指针
 ---
 

@@ -3,8 +3,7 @@ title: 「力扣」第 1206 题：设计跳表（困难）
 icon: yongyan
 categories: 链表
 tags:
- - 哈希表
- - 双向链表
+ - 链表
 ---
 
 + 题目链接：[1206. 设计跳表](https://leetcode-cn.com/problems/design-skiplist/)

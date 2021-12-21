@@ -3,7 +3,7 @@ title: 「力扣」第 142 题：环形链表 II（中等）
 icon: yongyan
 categories: 链表
 tags:
-  - 单链表
+  - 链表
   - 快慢指针
 ---
 

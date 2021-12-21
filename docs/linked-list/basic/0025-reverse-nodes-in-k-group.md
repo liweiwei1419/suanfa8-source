@@ -4,6 +4,7 @@ icon: yongyan
 categories: 链表
 tags:
   - 链表
+  - 递归
 ---
 
 + 题目链接：[25. k个一组翻转链表](https://leetcode-cn.com/problems/reverse-nodes-in-k-group/description/)；
