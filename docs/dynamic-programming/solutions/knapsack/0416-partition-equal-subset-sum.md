@@ -84,14 +84,16 @@ dp[i][j] = dp[i - 1][j] or dp[i - 1][j - nums[i]]
 
 因此完整的状态转移方程是：
 
-$$
+![image-20211222091338997](https://tva1.sinaimg.cn/large/008i3skNgy1gxmccynfx9j315606emxu.jpg)
+
+<!-- $$
 \text{dp}[i][j]=
 \begin{cases}
 \text{dp}[i - 1][j], & 至少是这个答案，如果 \ \text{dp}[i - 1][j] \ 为真，直接计算下一个状态 \\
 \text{true}, & \text{nums[i] = j} \\
 \text{dp}[i - 1][j - nums[i]]. & \text{nums[i] < j}
 \end{cases}
-$$
+$$ -->
 
 说明：虽然写成花括号，但是它们的关系是 **或者** 。
 
