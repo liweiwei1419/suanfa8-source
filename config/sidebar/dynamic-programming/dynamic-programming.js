@@ -25,6 +25,11 @@ module.exports = [
 			"/dynamic-programming/solutions/basic/0053-maximum-subarray.md",
 			"/dynamic-programming/solutions/basic/0152-maximum-product-subarray.md",
 
+
+			"/dynamic-programming/solutions/basic/0096-unique-binary-search-trees.md",
+			"/dynamic-programming/solutions/basic/0413-arithmetic-slices.md",
+			"/dynamic-programming/solutions/basic/0343-integer-break.md",
+
 			// "/dynamic-programming/solutions/0198-house-robber.md",
 			// "/dynamic-programming/solutions/0062-unique-paths.md",
 			// "/dynamic-programming/solutions/0063-unique-paths-ii.md",

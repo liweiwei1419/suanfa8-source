@@ -1,14 +1,49 @@
-+ [题目链接](https://leetcode-cn.com/problems/unique-binary-search-trees)
-### 方法一：动态规划
+---
+title: 「力扣」第 96 题：不同的二叉搜索树（中等）
+icon: yongyan
+categories: 动态规划
+tags:
+  - 动态规划
+---
 
-![image-20191125044218390](https://imgconvert.csdnimg.cn/aHR0cHM6Ly90dmExLnNpbmFpbWcuY24vbGFyZ2UvMDA3UzhaSWxseTFnZWgwMnM3cjdtajMxYzQwZDY0MGQuanBn?x-oss-process=image/format,png)
++ 题目链接：[96. 不同的二叉搜索树](https://leetcode-cn.com/problems/unique-binary-search-trees/)。
+
+## 题目描述
+
+给你一个整数 `n` ，求恰由 `n` 个节点组成且节点值从 `1` 到 `n` 互不相同的 **二叉搜索树** 有多少种？返回满足题意的二叉搜索树的种数。
+
+**示例 1：**
+
+![img](https://assets.leetcode.com/uploads/2021/01/18/uniquebstn3.jpg)
+
+```
+输入：n = 3
+输出：5
+```
+
+**示例 2：**
+
+```
+输入：n = 1
+输出：1
+```
+
+**提示：**
+
+- `1 <= n <= 19`
+
+## 方法一：动态规划
+
+![image-20191125044218390](https://tva1.sinaimg.cn/large/007S8ZIlly1geh02s7r7mj31c40d640d.jpg)
 
 这里 `j` 表示左子树的元素个数，最小是 `0` ，最大是 `i - 1`。
 
 注意：这里 $0$ 个结点构成的子树的个数为 $1$，这个值是我们需要的，因此需要多开 $1$ 个空间。
 
-Java 代码：
+**参考代码 1**：
 
+<CodeGroup>
+<CodeGroupItem title="Java">
 ```java
 public class Solution {
 
@@ -30,9 +65,9 @@ public class Solution {
     }
 }
 ```
+</CodeGroupItem>
 
-Python 代码：
-
+<CodeGroupItem title="Python">
 ```python
 class Solution:
     def numTrees(self, n: int) -> int:
@@ -46,11 +81,9 @@ class Solution:
                 dp[i] += dp[j] * dp[i - j - 1]
         return dp[n]
 ```
+</CodeGroupItem>
 
-（另一种写法）
-
-Python 代码：
-
+<CodeGroupItem title="Python">
 ```python
 class Solution:
     def numTrees(self, n: int) -> int:
@@ -65,11 +98,18 @@ class Solution:
 
         return dp[n]
 ```
+</CodeGroupItem>
+</CodeGroup>
 
-### 方法二：动态规划的优化
 
-Java 代码：
 
+## 方法二：动态规划的优化
+
+**参考代码 2**：
+
+
+<CodeGroup>
+<CodeGroupItem title="Java">
 ```java
 public class Solution {
 
@@ -91,23 +131,8 @@ public class Solution {
     }
 }
 ```
+</CodeGroupItem>
 
-Python 代码：
-
-```python
-class Solution:
-    def numTrees(self, n: int) -> int:
-        # 因为需要 0 ，所以多开 1 个空间
-        dp = [0 for _ in range(n + 1)]
-        dp[0] = 1
-        dp[1] = 1
-
-        for i in range(2, n + 1):
-            for j in range(i // 2):
-                dp[i] += 2 * (dp[j] * dp[i - j - 1])
-            if i & 1:
-                # 如果是奇数
-                dp[i] += dp[i // 2] * dp[i // 2]
-
-        return dp[n]
-```
+<CodeGroupItem title="Python">
+</CodeGroupItem>
+</CodeGroup>

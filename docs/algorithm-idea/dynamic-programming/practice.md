@@ -102,7 +102,7 @@ tags:
 
 | 题号 | 链接                                                         | 题解                                                         |
 | ---- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 1143 | [最长公共子序列](https://leetcode-cn.com/problems/longest-common-subsequence/)（中等） | [文字题解](https://leetcode-cn.com/problems/russian-doll-envelopes/solution/tan-xin-suan-fa-er-fen-cha-zhao-python-dai-ma-java/) |
+| 1143 | [最长公共子序列](https://leetcode-cn.com/problems/longest-common-subsequence/)（中等） | [文字题解](https://suanfa8.com/dynamic-programming/solutions/two-string/1143-longest-common-subsequence/) |
 | 72   | [ 编辑距离](https://leetcode-cn.com/problems/edit-distance/)（困难） | [文字题解](https://leetcode-cn.com/problems/edit-distance/solution/dong-tai-gui-hua-java-by-liweiwei1419/)、[CDSN](https://blog.csdn.net/lw_power/article/details/103818533) |
 | 10   | [正则表达式匹配](https://leetcode-cn.com/problems/regular-expression-matching/)（困难） |                                                              |
 
@@ -131,7 +131,7 @@ tags:
 
 ## 十、背包问题
 
-![image.png](https://pic.leetcode-cn.com/1606097488-eTRqgH-image.png)
+![image.png](https://tva1.sinaimg.cn/large/008i3skNgy1gxn0p7jvn0j31hc0u00vq.jpg)
 
 背包九讲：https://github.com/tianyicui/pack
 
