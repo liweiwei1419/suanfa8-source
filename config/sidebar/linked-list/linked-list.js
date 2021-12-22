@@ -3,6 +3,7 @@ module.exports = [
 		"title": "第 1 章 链表基本问题",
 		"icon": "shu",
 		"children": [
+			"/linked-list/basic/intro.md",
 			"/linked-list/basic/0002-add-two-numbers.md",
 			"/linked-list/basic/0021-merge-two-sorted-lists.md",
 			"/linked-list/basic/0023-merge-k-sorted-lists.md",
@@ -25,7 +26,7 @@ module.exports = [
 			"/linked-list/basic/0328-odd-even-linked-list.md",
 			"/linked-list/basic/0445-add-two-numbers-ii.md",
 			"/linked-list/basic/0876-middle-of-the-linked-list.md",
-			"/linked-list/basic/0876-精选题解.md",
+			
 		]
 	},
 

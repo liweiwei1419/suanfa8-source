@@ -1,45 +1,84 @@
 ---
 title: 「力扣」第 460 题：LFU 缓存
 icon: yongyan
-categories: 专题 6：链表
+categories: 链表
 tags:
  - 哈希表
  - 双向链表
 ---
 
-+ [题目链接](https://leetcode-cn.com/problems/lfu-cache)
-+ [题解链接](https://leetcode-cn.com/problems/lfu-cache/solution/ha-xi-biao-shuang-xiang-lian-biao-java-by-liweiwei/)
++ 题目链接：[460. LFU 缓存](https://leetcode-cn.com/problems/lfu-cache/)
++ 题解链接：[哈希表 + 双向链表（Java）](https://leetcode-cn.com/problems/lfu-cache/solution/ha-xi-biao-shuang-xiang-lian-biao-java-by-liweiwei/)
 
-> 设计并实现最不经常使用（LFU）缓存的数据结构。它应该支持以下操作：get 和 put。
->
-> get(key) - 如果键存在于缓存中，则获取键的值（总是正数），否则返回 -1。
-> put(key, value) - 如果键不存在，请设置或插入值。当缓存达到其容量时，它应该在插入新项目之前，使最不经常使用的项目无效。在此问题中，当存在平局（即两个或更多个键具有相同使用频率）时，最近最少使用的键将被去除。
->
-> 进阶：
-> 你是否可以在 O(1) 时间复杂度内执行两项操作？
->
-> 示例：
->
-> ```
-> LFUCache cache = new LFUCache( 2 /* capacity (缓存容量) */ );
-> 
-> cache.put(1, 1);
-> cache.put(2, 2);
-> cache.get(1);       // 返回 1
-> cache.put(3, 3);    // 去除 key 2
-> cache.get(2);       // 返回 -1 (未找到key 2)
-> cache.get(3);       // 返回 3
-> cache.put(4, 4);    // 去除 key 1
-> cache.get(1);       // 返回 -1 (未找到 key 1)
-> cache.get(3);       // 返回 3
-> cache.get(4);       // 返回 4
-> ```
->
+## 题目描述
+
+请你为 [最不经常使用（LFU）](https://baike.baidu.com/item/缓存算法)缓存算法设计并实现数据结构。
+
+实现 `LFUCache` 类：
+
+- `LFUCache(int capacity)` - 用数据结构的容量 `capacity` 初始化对象
+
+- `int get(int key)` - 如果键存在于缓存中，则获取键的值，否则返回 -1。
+- `void put(int key, int value)` - 如果键已存在，则变更其值；如果键不存在，请插入键值对。当缓存达到其容量时，则应该在插入新项之前，使最不经常使用的项无效。在此问题中，当存在平局（即两个或更多个键具有相同使用频率）时，应该去除 **最近最久未使用** 的键。
+
+**注意**「项的使用次数」就是自插入该项以来对其调用 `get` 和 `put` 函数的次数之和。使用次数会在对应项被移除后置为 0 。
+
+为了确定最不常使用的键，可以为缓存中的每个键维护一个 **使用计数器** 。使用计数最小的键是最久未使用的键。
+
+当一个键首次插入到缓存中时，它的使用计数器被设置为 `1` (由于 put 操作)。对缓存中的键执行 `get` 或 `put` 操作，使用计数器的值将会递增。
+
+ **示例：**
+
+```
+输入：
+["LFUCache", "put", "put", "get", "put", "get", "get", "put", "get", "get", "get"]
+[[2], [1, 1], [2, 2], [1], [3, 3], [2], [3], [4, 4], [1], [3], [4]]
+输出：
+[null, null, null, 1, null, -1, 3, null, -1, 3, 4]
+
+解释：
+// cnt(x) = 键 x 的使用计数
+// cache=[] 将显示最后一次使用的顺序（最左边的元素是最近的）
+LFUCache lFUCache = new LFUCache(2);
+lFUCache.put(1, 1);   // cache=[1,_], cnt(1)=1
+lFUCache.put(2, 2);   // cache=[2,1], cnt(2)=1, cnt(1)=1
+lFUCache.get(1);      // 返回 1
+                      // cache=[1,2], cnt(2)=1, cnt(1)=2
+lFUCache.put(3, 3);   // 去除键 2 ，因为 cnt(2)=1 ，使用计数最小
+                      // cache=[3,1], cnt(3)=1, cnt(1)=2
+lFUCache.get(2);      // 返回 -1（未找到）
+lFUCache.get(3);      // 返回 3
+                      // cache=[3,1], cnt(3)=2, cnt(1)=2
+lFUCache.put(4, 4);   // 去除键 1 ，1 和 3 的 cnt 相同，但 1 最久未使用
+                      // cache=[4,3], cnt(4)=1, cnt(3)=2
+lFUCache.get(1);      // 返回 -1（未找到）
+lFUCache.get(3);      // 返回 3
+                      // cache=[3,4], cnt(4)=1, cnt(3)=3
+lFUCache.get(4);      // 返回 4
+                      // cache=[3,4], cnt(4)=2, cnt(3)=3
+```
 
 
-题目意思：缓存是有限的，在缓存满的时候，删除哪些元素，就有不同的缓存删除策略。
 
-说明：如果缓存不限制大小，就没有下面的这两道问题了。即下面这两种策略是在缓存满的情况下，两种不同的缓存删除规则。
+**提示：**
+
+- $0 \le capacity, key, value \le 10^4$
+- 最多调用 $10^5$  次 `get` 和 `put` 方法
+
+
+
+**进阶：**你可以为这两种操作设计时间复杂度为 `O(1)` 的实现吗？
+
+---
+
+## 理解题意
+
+::: info 题意概括
+缓存是有限的，在缓存满的时候，删除哪些元素，就有不同的缓存删除策略。
+
+如果缓存不限制大小，就没有下面的这两道问题了。即下面这两种策略是在缓存满的情况下，两种不同的缓存删除规则。
+:::
+
 
 ### LRU （Least Recently Used）缓存机制（看时间）
 
