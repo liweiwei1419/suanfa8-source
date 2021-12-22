@@ -52,3 +52,9 @@ skiplist.search(1);   // 返回 false，1 已被擦除
 
 - `0 <= num, target <= 20000`
 - 最多调用 `50000` 次 `search`, `add`, 以及 `erase`操作。
+
+
+---
+
+
+这是我见过的讲解最好的跳表 [视频](https://www.bilibili.com/video/BV1tK4y1X7de/?spm_id_from=333.788.recommend_more_video.-1)，大家可以观看完，理解了跳表的设计思想以后，到「力扣」的评论区，参考适合自己的代码完成这道问题。
