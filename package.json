@@ -4,7 +4,7 @@
   "description": "A project of vuepress-theme-hope",
   "license": "MIT",
   "scripts": {
-    // "docs:build": "vuepress build docs",
+    "docs:build": "vuepress build docs",
     "docs:build": "node --max_old_space_size=8192 ./node_modules/vuepress/cli.js build docs",
     "docs:clean-dev": "vuepress dev docs --no-cache",
     "docs:dev": "vuepress dev docs",
