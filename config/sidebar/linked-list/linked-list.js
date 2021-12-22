@@ -15,7 +15,7 @@ module.exports = [
 			"/linked-list/basic/0086-partition-list.md",
 			"/linked-list/basic/0092-reverse-linked-list-ii.md",
 			"/linked-list/basic/0109-convert-sorted-list-to-binary-search-tree.md",
-			"/linked-list/basic/0138-copy-list-with-random-pointer.md",
+			// "/linked-list/basic/0138-copy-list-with-random-pointer.md",
 			"/linked-list/basic/0143-reorder-list.md",
 			"/linked-list/basic/0147-insertion-sort-list.md",
 			"/linked-list/basic/0148-sort-list.md",
