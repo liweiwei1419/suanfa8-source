@@ -5,7 +5,7 @@ const unionFind = require('./sidebar/union-find/union-find.js');
 const choice = require('./sidebar/choice/choice.js');
 const heap = require('./sidebar/heap/heap.js');
 const graph = require('./sidebar/graph/graph.js');
-const linkedList = require('./sidebar/linked-list/linked-list.js');
+// const linkedList = require('./sidebar/linked-list/linked-list.js');
 
 module.exports = {
 	"/choice/": choice,
@@ -14,6 +14,6 @@ module.exports = {
 	"/union-find/": unionFind,
 	"/heap/": heap,
 	"/graph/": graph,
-	"/linked-list/": linkedList,
+	// "/linked-list/": linkedList,
 	"/": index
 }

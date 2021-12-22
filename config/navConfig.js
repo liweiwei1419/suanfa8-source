@@ -25,20 +25,20 @@ module.exports = [
                         "icon":"jingjiang",
                         "link":"/dynamic-programming/"
                   },
-                  {
-                        "text":"链表问题分类",
-                        "icon":"jingjiang",
-                        "link":"/linked-list/"
-                  },
+                  // {
+                  //       "text":"链表问题分类",
+                  //       "icon":"jingjiang",
+                  //       "link":"/linked-list/"
+                  // },
                   {
                         "text":"并查集精讲",
-                        "icon":"new",
+                        "icon":"jingjiang",
                         "link":"/union-find/"
                   },
 
                   {
                         "text":"优先队列精讲",
-                        "icon":"jingjiang",
+                        "icon":"new",
                         "link":"/heap/"
                   },
 
