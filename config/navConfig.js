@@ -25,11 +25,11 @@ module.exports = [
                         "icon":"jingjiang",
                         "link":"/dynamic-programming/"
                   },
-                  // {
-                  //       "text":"链表问题分类",
-                  //       "icon":"jingjiang",
-                  //       "link":"/linked-list/"
-                  // },
+                  {
+                        "text":"链表问题分类",
+                        "icon":"jingjiang",
+                        "link":"/linked-list/"
+                  },
                   {
                         "text":"并查集精讲",
                         "icon":"jingjiang",
@@ -85,6 +85,12 @@ module.exports = [
 
                   
             ]
+      },
+
+      {
+            "text":"闲聊",
+            "icon":"xianliaoshequ",
+            "link":"/chat/"
       },
       
 
