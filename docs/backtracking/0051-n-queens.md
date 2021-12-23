@@ -1,20 +1,15 @@
 ---
-title: 「力扣」第 51 题：N 皇后
-date: 2018-02-21 08:00:00
-author: liweiwei1419
-top: false
-mathjax: true
-categories: 专题 14：回溯算法
+title: 「力扣」第 51 题：N 皇后（困难）
+icon: yongyan
+categories: 回溯算法
 tags:
   - 回溯算法
   - 递归
   - 树形问题
   - 深度优先遍历
-  - 字符串
-permalink: leetcode-solution/0051-n-queens
+  - 剪枝
 ---
 
-## 「力扣」第 51 题：N 皇后
 
 ## 题目描述
 
