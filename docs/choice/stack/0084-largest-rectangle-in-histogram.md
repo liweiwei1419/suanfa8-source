@@ -1,6 +1,6 @@
 ---
 title: 「力扣」第 84 题：柱状图中最大的矩形（困难）
-icon: yongyan
+icon: shipin
 category: 栈
 tags:
   - 栈

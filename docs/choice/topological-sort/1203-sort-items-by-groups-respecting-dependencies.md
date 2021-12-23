@@ -1,6 +1,6 @@
 ---
 title: 「力扣」第 1203 题：项目管理（困难）
-icon: yongyan
+icon: shipin
 category: 广度优先遍历
 tags:
   - 广度优先遍历  
@@ -8,7 +8,7 @@ tags:
 ---
 
 + 题目链接：[1203. 项目管理（困难）](https://leetcode-cn.com/problems/sort-items-by-groups-respecting-dependencies/)；
-+ 题解链接：[视频题解与文字题解](https://leetcode-cn.com/problems/sort-items-by-groups-respecting-dependencies/solution/1203-xiang-mu-guan-li-by-leetcode-t63b/)。
++ :tv: 题解链接：[视频题解与文字题解](https://leetcode-cn.com/problems/sort-items-by-groups-respecting-dependencies/solution/1203-xiang-mu-guan-li-by-leetcode-t63b/)。
 
 ## 题目描述
 

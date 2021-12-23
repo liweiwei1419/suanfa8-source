@@ -40,11 +40,7 @@ module.exports = [
 			"/algorithm-basic/recursion-time-complexity/time-complexity.md",
 
 			"/algorithm-basic/loop-invariant/intro.md",
-			"/algorithm-basic/loop-invariant/practice.md",
-			// "/algorithm-basic/loop-invariant/0026-remove-duplicates-from-sorted-array.md",
-			// "/algorithm-basic/loop-invariant/0283-move-zeroes.md",
-			// "/algorithm-basic/loop-invariant/0027-remove-element.md",
-			// "/algorithm-basic/loop-invariant/0080-remove-duplicates-from-sorted-array-ii.md"
+
 		]
 
 	},
@@ -62,23 +58,10 @@ module.exports = [
 			"/algorithm-basic/basic-sort/shell.md",
 
 			"/algorithm-basic/merge-sort/intro.md",
-			"/algorithm-basic/merge-sort/merge-sort.md",
-			"/algorithm-basic/merge-sort/merge-sort-optimize.md",
-			"/algorithm-basic/merge-sort/0051-shu-zu-zhong-de-ni-xu-dui-lcof.md",
-			"/algorithm-basic/merge-sort/0315-count-of-smaller-numbers-after-self.md",
-			"/algorithm-basic/merge-sort/bottom2up.md",
-			"/algorithm-basic/merge-sort/practice.md",
 
 			"/algorithm-basic/quick-sort/intro.md",
-			"/algorithm-basic/quick-sort/quick-sort-basic.md",
-			"/algorithm-basic/quick-sort/quick-sort-optimize.md",
-			"/algorithm-basic/quick-sort/quick-sort-two-ways.md",
-			"/algorithm-basic/quick-sort/quick-sort-three-ways.md",
-			"/algorithm-basic/quick-sort/0075-sort-colors.md",
-			"/algorithm-basic/quick-sort/0215-kth-largest-element-in-an-array.md",
-			"/algorithm-basic/quick-sort/partition.md",
-			"/algorithm-basic/quick-sort/summary.md",
 
+			
 			"/algorithm-basic/non-comparison/intro.md",
 			"/algorithm-basic/non-comparison/count-sort.md",
 			"/algorithm-basic/non-comparison/radix-sort.md",

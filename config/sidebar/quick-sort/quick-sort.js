@@ -1,0 +1,24 @@
+module.exports = [
+	{
+		"title": "第 1 部分 知识点讲解",
+		"icon": "shu",
+		"children": [
+			"/quick-sort/intro.md",
+			"/quick-sort/quick-sort-basic.md",
+			"/quick-sort/quick-sort-optimize.md",
+			"/quick-sort/quick-sort-two-ways.md",
+			"/quick-sort/quick-sort-three-ways.md",
+			"/quick-sort/summary.md"
+		]
+	},
+	{
+		"title": "第 2 部分 习题精讲",
+		"icon": "shu",
+		"children": [
+			"/quick-sort/0075-sort-colors.md",
+			"/quick-sort/0215-kth-largest-element-in-an-array.md",
+			"/quick-sort/partition.md",
+			"/quick-sort/0451-sort-characters-by-frequency.md",
+		]
+	}
+]

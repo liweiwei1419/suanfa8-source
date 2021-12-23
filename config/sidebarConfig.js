@@ -5,7 +5,11 @@ const unionFind = require('./sidebar/union-find/union-find.js');
 const choice = require('./sidebar/choice/choice.js');
 const heap = require('./sidebar/heap/heap.js');
 const graph = require('./sidebar/graph/graph.js');
+const mergeSort = require('./sidebar/merge-sort/merge-sort.js');
+const quickSort = require('./sidebar/quick-sort/quick-sort.js');
+
 const linkedList = require('./sidebar/linked-list/linked-list.js');
+const loopInvariant = require('./sidebar/loop-invariant/loop-invariant.js');
 const chat = require('./sidebar/chat/chat.js');
 
 module.exports = {
@@ -15,7 +19,10 @@ module.exports = {
 	"/union-find/": unionFind,
 	"/heap/": heap,
 	"/graph/": graph,
+	"/merge-sort/": mergeSort,
+	"/quick-sort/": quickSort,
 	"/linked-list/": linkedList,
+	"/loop-invariant/": loopInvariant,
 	"/chat/": chat,
 	"/": index
 }

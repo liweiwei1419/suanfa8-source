@@ -16,20 +16,45 @@ module.exports = [
             "icon": "jingjiang",
             "items": [
                   {
+                        "text":"循环不变量精讲",
+                        "icon":"new",
+                        "link":"/loop-invariant/"
+                  },
+                  {
                         "text":"二分查找精讲",
                         "icon":"jingjiang",
                         "link":"/binary-search/"
+                  },
+
+                  {
+                        "text":"基础排序算法精讲",
+                        "icon":"new",
+                        "link":"/basic-sort/"
+                  },
+
+                  {
+                        "text":"归并排序精讲",
+                        "icon":"new",
+                        "link":"/merge-sort/"
+                  },
+
+                  {
+                        "text":"快速排序精讲",
+                        "icon":"new",
+                        "link":"/quick-sort/"
+                  },
+
+                  {
+                        "text":"链表问题分类",
+                        "icon":"jingjiang",
+                        "link":"/linked-list/"
                   },
                   {
                         "text":"动态规划精讲",
                         "icon":"jingjiang",
                         "link":"/dynamic-programming/"
                   },
-                  {
-                        "text":"链表问题分类",
-                        "icon":"jingjiang",
-                        "link":"/linked-list/"
-                  },
+                  
                   {
                         "text":"并查集精讲",
                         "icon":"jingjiang",
@@ -47,7 +72,6 @@ module.exports = [
                         "icon":"jingjiang",
                         "link":"/graph/"
                   },
-
             ]
       },
 
