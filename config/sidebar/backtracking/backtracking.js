@@ -59,9 +59,7 @@ module.exports = [
 		"icon": "shu",
 		"children": [
 			"/backtracking/0126-word-ladder-ii.md",
-			"/backtracking/0126.md",
 			"/backtracking/0140-word-break-ii.md",
-			"/backtracking/草稿.md"
 		]
 	}
 ]

@@ -1,18 +1,15 @@
 ---
 title: 「力扣」第 37 题：求解数独（困难、回溯算法）
-date: 2020-08-07 11:00:00
-author: liweiwei1419
-top: false
-mathjax: true
-categories: 专题 14：回溯算法
+icon: yongyan
+categories: 回溯算法
 tags:
   - 回溯算法
   - 递归
   - 树形问题
   - 深度优先遍历
-  - 字符串
-permalink: leetcode-solution/0037-sudoku-solver
+  - 剪枝
 ---
+
 
 ## 「力扣」第 37 题：求解数独（困难、回溯算法）
 
