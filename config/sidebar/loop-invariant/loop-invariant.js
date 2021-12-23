@@ -1,14 +1,14 @@
 module.exports = [
-
 	{
-		"title": "第 1 部分 知识点介绍",
+		"title": "第 1 部分 知识点讲解",
 		"icon": "shu",
 		"children": [
 			"/loop-invariant/intro.md",
-			"/loop-invariant/practice.md",
+			"/loop-invariant/application.md",
+			"/loop-invariant/example.md",
+			"/loop-invariant/summary.md"
 		]
 	},
-
 	{
 		"title": "第 2 部分 习题精讲",
 		"icon": "shu",
@@ -21,7 +21,4 @@ module.exports = [
 			"/loop-invariant/0080-remove-duplicates-from-sorted-array-ii.md"
 		]
 	},
-
-
-
 ]

@@ -49,6 +49,13 @@ module.exports = [
                         "icon":"jingjiang",
                         "link":"/linked-list/"
                   },
+
+                  {
+                        "text":"回溯算法习题分类",
+                        "icon":"new",
+                        "link":"/backtracking/"
+                  },
+
                   {
                         "text":"动态规划精讲",
                         "icon":"jingjiang",

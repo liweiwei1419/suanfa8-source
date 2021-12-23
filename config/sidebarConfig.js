@@ -8,6 +8,8 @@ const graph = require('./sidebar/graph/graph.js');
 const mergeSort = require('./sidebar/merge-sort/merge-sort.js');
 const quickSort = require('./sidebar/quick-sort/quick-sort.js');
 
+const backtracking = require('./sidebar/backtracking/backtracking.js');
+
 const linkedList = require('./sidebar/linked-list/linked-list.js');
 const loopInvariant = require('./sidebar/loop-invariant/loop-invariant.js');
 const chat = require('./sidebar/chat/chat.js');
@@ -23,6 +25,7 @@ module.exports = {
 	"/quick-sort/": quickSort,
 	"/linked-list/": linkedList,
 	"/loop-invariant/": loopInvariant,
+	"/backtracking/": backtracking,
 	"/chat/": chat,
 	"/": index
 }
