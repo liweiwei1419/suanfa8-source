@@ -26,11 +26,11 @@ module.exports = [
                         "link":"/binary-search/"
                   },
 
-                  {
-                        "text":"基础排序算法精讲",
-                        "icon":"new",
-                        "link":"/basic-sort/"
-                  },
+                  // {
+                  //       "text":"基础排序算法精讲",
+                  //       "icon":"new",
+                  //       "link":"/basic-sort/"
+                  // },
 
                   {
                         "text":"归并排序精讲",
