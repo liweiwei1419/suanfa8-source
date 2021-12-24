@@ -18,7 +18,9 @@ module.exports = [
 			"/quick-sort/0075-sort-colors.md",
 			"/quick-sort/0215-kth-largest-element-in-an-array.md",
 			"/quick-sort/partition.md",
-			"/quick-sort/0451-sort-characters-by-frequency.md",
+			"/quick-sort/17-14-smallest-k-lcci.md",
+			"/quick-sort/0040-zui-xiao-de-kge-shu-lcof.md",
+			"/quick-sort/0451-sort-characters-by-frequency.md"
 		]
 	}
 ]

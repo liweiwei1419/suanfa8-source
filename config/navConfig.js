@@ -26,6 +26,12 @@ module.exports = [
                         "link":"/binary-search/"
                   },
 
+                  {
+                        "text":"滑动窗口习题分类",
+                        "icon":"new",
+                        "link":"/sliding-window/"
+                  },
+
                   // {
                   //       "text":"基础排序算法精讲",
                   //       "icon":"new",

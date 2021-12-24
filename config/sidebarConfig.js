@@ -10,6 +10,8 @@ const quickSort = require('./sidebar/quick-sort/quick-sort.js');
 
 const backtracking = require('./sidebar/backtracking/backtracking.js');
 
+const slidingWindow = require('./sidebar/sliding-window/sliding-window.js');
+
 const linkedList = require('./sidebar/linked-list/linked-list.js');
 const loopInvariant = require('./sidebar/loop-invariant/loop-invariant.js');
 const chat = require('./sidebar/chat/chat.js');
@@ -24,6 +26,7 @@ module.exports = {
 	"/merge-sort/": mergeSort,
 	"/quick-sort/": quickSort,
 	"/linked-list/": linkedList,
+	"/sliding-window/": slidingWindow,
 	"/loop-invariant/": loopInvariant,
 	"/backtracking/": backtracking,
 	"/chat/": chat,

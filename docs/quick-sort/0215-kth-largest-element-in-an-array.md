@@ -4,8 +4,9 @@ icon: yongyan
 category: 排序算法
 tags:
   - 排序算法
-  - 分而治之
+  - 减而治之
   - 快速排序
+  - 优先队列
 ---
 
 + 中文网址：[215. 数组中的第K个最大元素](https://leetcode-cn.com/problems/kth-largest-element-in-an-array/description/) ；

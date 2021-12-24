@@ -16,7 +16,10 @@ module.exports = [
 		"title" : "第 2 章 经典问题列表",
 		"icon": "book",
 		"children" : [
-			"/heap/practice.md"
+			"/heap/practice.md",
+			"/heap/solutions/0295-find-median-from-data-stream.md",
+			"/heap/solutions/0218-the-skyline-problem.md",
+			"/heap/solutions/0973-k-closest-points-to-origin.md"
 		]
 	}
 ]

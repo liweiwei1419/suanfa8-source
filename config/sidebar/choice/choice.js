@@ -11,9 +11,7 @@ module.exports = [
 		"title":"滑动窗口",
 		"icon": "jingxuan",
 		"children": [
-			"/choice/sliding-window/0003-longest-substring-without-repeating-characters.md",
-			"/choice/sliding-window/0713-subarray-product-less-than-k.md",
-			"/choice/sliding-window/0719-find-k-th-smallest-pair-distance.md"
+			
 		]
 	},
 	// {
@@ -56,15 +54,6 @@ module.exports = [
 	// 		"/choice/binary-search/0053.md"
 	// 	]
 	// },
-
-	{
-		"title":"优先队列（堆）",
-		"icon": "jingxuan",
-		"children": [
-			"/choice/heap/0295-find-median-from-data-stream.md",
-			"/choice/heap/0218-the-skyline-problem.md"
-		]
-	},
 	{
 		"title":"拓扑排序",
 		"icon": "jingxuan",

@@ -428,10 +428,6 @@ class Solution:
 </CodeGroupItem>
 </CodeGroup>
 
-
-
-
-
 **复杂度分析**：
 
 + 时间复杂度：$O(N \log N)$，这里递归的深度是对数级别的，每一层需要遍历一遍数组（或者数组的一半、四分之一）；

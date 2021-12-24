@@ -51,7 +51,8 @@ module.exports = [{
 			"/binary-search/solutions/find-integer/0374-guess-number-higher-or-lower.md",
 			"/binary-search/solutions/find-integer/0069-sqrtx.md",
 			"/binary-search/solutions/find-integer/0287-find-the-duplicate-number.md",
-			"/binary-search/solutions/find-integer/0378-kth-smallest-element-in-a-sorted-matrix.md"
+			"/binary-search/solutions/find-integer/0378-kth-smallest-element-in-a-sorted-matrix.md",
+			"/binary-search/solutions/find-integer/0719-find-k-th-smallest-pair-distance.md"
 		]
 	},
 

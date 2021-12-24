@@ -1,20 +1,51 @@
-「剑指 Offer」第 40题：最小的 k 个数（快速排序、堆）
+---
+title: 「剑指 Offer」第 40题：最小的 k 个数
+icon: yongyan
+category: 
+tags:
+  - 快速排序
+  - 优先队列
+  - 减而治之
+---
 
++ 题目链接：[剑指 Offer 40. 最小的k个数](https://leetcode-cn.com/problems/zui-xiao-de-kge-shu-lcof/)。
 
-Java 代码：
+## 题目描述
+
+输入整数数组 `arr` ，找出其中最小的 `k` 个数。例如，输入4、5、1、6、2、7、3、8这8个数字，则最小的4个数字是1、2、3、4。
+
+**示例 1：**
+
+```
+输入：arr = [3,2,1], k = 2
+输出：[1,2] 或者 [2,1]
+```
+
+**示例 2：**
+
+```
+输入：arr = [0,1,2,1], k = 1
+输出：[0]
+```
+
+ **限制：**
+
+- `0 <= k <= arr.length <= 10000`
+- `0 <= arr[i] <= 10000`
+
+## 方法一：减而治之
+
++ 知识点：快速排序；
++ 最小的 `k` 个数的：即下标区间为 `[0..k - 1]` 的这些数，使用 `partition` 过程找到下标为 k - 1 的那个数即可；
+
++  缺点：一次性得将所有元素读入内存。
+
+**参考代码 1**：
 
 ```java
 import java.util.Arrays;
 
 public class Solution {
-
-    // 知识点：快速排序
-    // 最小的 k 个数的：即下标区间为 [0, k - 1] 的这些数
-    // 使用 partition 过程找到下标为 k - 1 的那个数即可
-
-    // 缺点：一次性得将所有元素读入内存
-    // 时间复杂度：O(N \logN)
-    // 空间复杂度：O(1)
 
     public int[] getLeastNumbers(int[] arr, int k) {
         int len = arr.length;
@@ -34,11 +65,11 @@ public class Solution {
                 System.arraycopy(arr, 0, res, 0, k);
                 return res;
             } else if (pIndex < target) {
-                // 下一轮搜索区间在 [pIndex + 1, right]
+                // 下一轮搜索区间在 [pIndex + 1..right]
                 left = pIndex + 1;
             } else {
                 // pIndex > target
-                // 下一轮搜索区间在 [left, pIndex - 1]
+                // 下一轮搜索区间在 [left..pIndex - 1]
                 right = pIndex - 1;
             }
         }
@@ -48,8 +79,8 @@ public class Solution {
         // 这里最好随机化
 
         // 循环不变量定义
-        // [left + 1, lt] < pivot
-        // (lt, i) >= pivot
+        // [left + 1..lt] < pivot
+        // (lt..i) >= pivot
         int pivot = arr[left];
         int lt = left;
 
@@ -80,18 +111,22 @@ public class Solution {
 }
 ```
 
+**复杂度分析**：
 
-Java 代码：
++ 时间复杂度：$O(N \log N)$；
++ 空间复杂度：$O(1)$。
+
+## 方法二：优先队列
+
+使用最大堆。
+
+**参考代码 2**：
 
 ```java
 import java.util.Arrays;
 import java.util.PriorityQueue;
 
-public class Solution2 {
-
-    // 使用最大堆
-    // 时间复杂度：O(N \logK)
-    // 空间复杂度：O(K)
+public class Solution {
 
     public int[] getLeastNumbers(int[] arr, int k) {
 
@@ -120,11 +155,16 @@ public class Solution2 {
     }
 
     public static void main(String[] args) {
-        Solution2 solution2 = new Solution2();
+        Solution solution = new Solution();
         int[] arr = {3, 2, 1};
         int k = 2;
-        int[] res = solution2.getLeastNumbers(arr, k);
+        int[] res = solution.getLeastNumbers(arr, k);
         System.out.println(Arrays.toString(res));
     }
 }
 ```
+
+**复杂度分析**：
+
++ 时间复杂度：$O(N \log K)$;
++ 空间复杂度：$O(K)$。
