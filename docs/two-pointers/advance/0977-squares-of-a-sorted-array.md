@@ -6,13 +6,13 @@ tags:
   - 双指针
 ---
 
-## 题目描述
++ 题目链接：[977. 有序数组的平方](https://leetcode-cn.com/problems/squares-of-a-sorted-array/)。
 
-+ [题目链接](https://leetcode-cn.com/problems/squares-of-a-sorted-array/)
+## 题目描述
 
 给你一个按 **非递减顺序** 排序的整数数组 `nums`，返回 **每个数字的平方** 组成的新数组，要求也按 **非递减顺序** 排序。
 
-示例 1：
+**示例 1：**
 
 ```
 输入：nums = [-4,-1,0,3,10]
@@ -24,7 +24,7 @@ tags:
 排序后，数组变为 [0,1,9,16,100]
 ```
 
-示例 2：
+**示例 2：**
 
 ```
 输入：nums = [-7,-3,2,3,11]
@@ -32,13 +32,17 @@ tags:
 输出：[4,9,9,49,121]
 ```
 
-![img](https://tva1.sinaimg.cn/large/008i3skNgy1gu5ou27u5kj60na0bqmxm02.jpg)
+**提示：**
+
+- $1 \le nums.length \le 10^4$
+- $-10^4 \le nums[i] \le 10^4$
+- `nums` 已按 **非递减顺序** 排序
 
 ## 理解题意
 
 注意题目中给出的条件：给出的数组 `nums` 是一个非递减数组。
 
-## 解题思路
+**参考代码**：
 
 ```java
 public class Solution {
