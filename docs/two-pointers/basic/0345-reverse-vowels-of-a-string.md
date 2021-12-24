@@ -9,6 +9,9 @@ tags:
 + 中文网址：[345. 反转字符串中的元音字母](https://leetcode-cn.com/problems/reverse-vowels-of-a-string/description/)；
 + 英文网址：[345. Reverse Vowels of a String](https://leetcode.com/problems/reverse-vowels-of-a-string/description/) 。
 
+
+## 题目描述
+
 > 编写一个函数，以字符串作为输入，反转该字符串中的元音字母。
 >
 > **示例 1:**

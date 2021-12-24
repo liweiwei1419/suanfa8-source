@@ -7,105 +7,36 @@ tags:
 ---
 
 
-+ 中文网址：[344. 反转字符串](https://leetcode-cn.com/problems/reverse-string/description/) 。
++ 题目链接：[344. 反转字符串](https://leetcode-cn.com/problems/reverse-string/description/) 。
 
-+ 英文网址：[344. Reverse String](https://leetcode.com/problems/reverse-string/description/) ，
+## 题目描述
 
-> 编写一个函数，其作用是将输入的字符串反转过来。输入字符串以字符数组 `char[]` 的形式给出。
->
-> 不要给另外的数组分配额外的空间，你必须**原地修改输入数组**、使用 O(1) 的额外空间解决这一问题。
->
-> 你可以假设数组中的所有字符都是 [ASCII](https://baike.baidu.com/item/ASCII) 码表中的可打印字符。
->
-> 
->
-> **示例 1：**
->
-> ```
-> 输入：["h","e","l","l","o"]
-> 输出：["o","l","l","e","h"]
-> ```
->
-> **示例 2：**
->
-> ```
-> 输入：["H","a","n","n","a","h"]
-> 输出：["h","a","n","n","a","H"]
-> ```
+编写一个函数，其作用是将输入的字符串反转过来。输入字符串以字符数组 `char[]` 的形式给出。
 
-**参考代码**：
+不要给另外的数组分配额外的空间，你必须**原地修改输入数组**、使用 O(1) 的额外空间解决这一问题。
 
-
-
-```python
-class Solution(object):
-
-    def reverseString(self, s):
-        """
-        :type s: str
-        :rtype: str
-        """
-        if len(s) < 2:
-            return s
-
-        left = 0
-        right = len(s) - 1
-        l = list(s)
-        # 重合在一个就没有交换的必要了，因此是 left < right
-        while left < right:
-            l[left], l[right] = l[right], l[left]
-            left += 1
-            right -= 1
-        return ''.join(l)
+**示例 1：**
 
 ```
+输入：["h","e","l","l","o"]
+输出：["o","l","l","e","h"]
+```
 
+**示例 2：**
 
+```
+输入：["H","a","n","n","a","h"]
+输出：["h","a","n","n","a","H"]
+```
 
----
-title: 「力扣」第 26 题：删除排序数组中的重复项
-date: 2017-06-14 08:00:00
-author: liweiwei1419
-top: false
-mathjax: true
-categories: 专题 3：数组
-tags:
-  - 数组
-  - 循环不变量
-permalink: leetcode-algo/0344-reverse-string
----
+**提示：**
 
-### 「力扣」第 344 题：反转字符串
-
-+ 中文网址：[344. 反转字符串](https://leetcode-cn.com/problems/reverse-string/description/) ；
-+ 英文网址：[344. Reverse String](https://leetcode.com/problems/reverse-string/description/) 。
-
-> 编写一个函数，其作用是将输入的字符串反转过来。输入字符串以字符数组 `char[]` 的形式给出。
->
-> 不要给另外的数组分配额外的空间，你必须**原地修改输入数组**、使用 O(1) 的额外空间解决这一问题。
->
-> 你可以假设数组中的所有字符都是 [ASCII](https://baike.baidu.com/item/ASCII) 码表中的可打印字符。
->
-> 
->
-> **示例 1：**
->
-> ```
-> 输入：["h","e","l","l","o"]
-> 输出：["o","l","l","e","h"]
-> ```
->
-> **示例 2：**
->
-> ```
-> 输入：["H","a","n","n","a","h"]
-> 输出：["h","a","n","n","a","H"]
-> ```
-
+- `1 <= s.length <= 105`
+- `s[i]` 都是 [ASCII](https://baike.baidu.com/item/ASCII) 码表中的可打印字符
 
 ### 方法一：使用 Java 语言提供的反转 API 完成
 
-Java 代码：
+**参考代码 1**：
 
 ```java
 public class Solution {
@@ -129,8 +60,10 @@ public class Solution {
 
 ### 方法二：使用指针对撞
 
-Java 代码实现：
+**参考代码 2**：
 
+<CodeGroup>
+<CodeGroupItem title="Java">
 ```java
 public class Solution {
     public String reverseString(String s) {
@@ -159,9 +92,9 @@ public class Solution {
     }
 }
 ```
+</CodeGroupItem>
 
-Python 代码：
-
+<CodeGroupItem title="Python">
 ```python
 class Solution(object):
 
@@ -184,56 +117,5 @@ class Solution(object):
         return ''.join(l)
 
 ```
-
-（本节完）
-
-### Leetcode 第 344 题：[反转字符串](https://leetcode-cn.com/problems/reverse-string)
-
-传送门：英文网址：[344. Reverse String](https://leetcode.com/problems/reverse-string/description/) ，中文网址：[344. 反转字符串](https://leetcode-cn.com/problems/reverse-string/description/) 。
-
-> 编写一个函数，其作用是将输入的字符串反转过来。输入字符串以字符数组 `char[]` 的形式给出。
->
-> 不要给另外的数组分配额外的空间，你必须**原地修改输入数组**、使用 O(1) 的额外空间解决这一问题。
->
-> 你可以假设数组中的所有字符都是 [ASCII](https://baike.baidu.com/item/ASCII) 码表中的可打印字符。
->
-> 
->
-> **示例 1：**
->
-> ```
-> 输入：["h","e","l","l","o"]
-> 输出：["o","l","l","e","h"]
-> ```
->
-> **示例 2：**
->
-> ```
-> 输入：["H","a","n","n","a","h"]
-> 输出：["h","a","n","n","a","H"]
-> ```
-
-Python 代码：
-
-```python
-class Solution(object):
-
-    def reverseString(self, s):
-        """
-        :type s: str
-        :rtype: str
-        """
-        if len(s) < 2:
-            return s
-
-        left = 0
-        right = len(s) - 1
-        l = list(s)
-        # 重合在一个就没有交换的必要了，因此是 left < right
-        while left < right:
-            l[left], l[right] = l[right], l[left]
-            left += 1
-            right -= 1
-        return ''.join(l)
-
-```
+</CodeGroupItem>
+</CodeGroup>
