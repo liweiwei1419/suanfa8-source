@@ -1,5 +1,5 @@
 ---
-title: 接雨水
+title: 「力扣」第 42 题：接雨水（困难）
 icon: yongyan
 category: 双指针
 tags:
@@ -9,7 +9,7 @@ tags:
   - 单调栈
 ---
 
-# 「力扣」第 42 题：接雨水（困难）
+# 
 
 
 @slidestart 

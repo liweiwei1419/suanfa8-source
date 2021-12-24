@@ -1,4 +1,5 @@
-module.exports = [{
+module.exports = [
+	{
 		"title": "第 1 章 知识点讲解",
 		"icon": "shu",
 		"children": [

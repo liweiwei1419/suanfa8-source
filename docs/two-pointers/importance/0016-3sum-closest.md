@@ -1,12 +1,12 @@
 ---
-title: 最接近的三数之和
+title: 「力扣」第 16 题：最接近的三数之和（中等）
 icon: yongyan
 category: 双指针
 tags:
   - 双指针
 ---
 
-# 「力扣」第 16 题：最接近的三数之和（中等）
+# 
 
 + 题目地址：[16. 最接近的三数之和](https://leetcode-cn.com/problems/3sum-closest/)；
 + 题解地址：[双指针对撞（Python 代码、Java 代码）](https://leetcode-cn.com/problems/3sum-closest/solution/shuang-zhi-zhen-dui-zhuang-python-dai-ma-java-dai-/)。

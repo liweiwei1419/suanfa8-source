@@ -1,15 +1,15 @@
 ---
-title: 两数之和 II
+title: 「力扣」第 167 题：两数之和 II - 输入有序数组（简单）
 icon: yongyan
 category: 双指针
 tags:
   - 双指针
 ---
 
-# 「力扣」第 167 题：两数之和 II - 输入有序数组（简单）
-
 + 题目地址：[167. 两数之和 II - 输入有序数组](https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/)；
 + 题解地址：[双指针对撞 + 二分法（Python 代码、Java 代码）]()。
+
+## 题目描述
 
 给定一个已按照 **非递减顺序排列** 的整数数组 `numbers` ，请你从数组中找出两个数满足相加之和等于目标数 `target` 。
 

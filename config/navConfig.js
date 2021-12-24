@@ -32,6 +32,12 @@ module.exports = [
                         "link":"/sliding-window/"
                   },
 
+                  {
+                        "text":"双指针习题分类",
+                        "icon":"new",
+                        "link":"/two-pointers/"
+                  },
+
                   // {
                   //       "text":"基础排序算法精讲",
                   //       "icon":"new",

@@ -1,12 +1,10 @@
 ---
-title: 反转字符串中的元音字母
+title: 「力扣」第 345 题：反转字符串中的元音字母（简单）
 icon: yongyan
 category: 双指针
 tags:
   - 双指针
 ---
-
-# 「力扣」第 345 题：反转字符串中的元音字母（简单）
 
 + 中文网址：[345. 反转字符串中的元音字母](https://leetcode-cn.com/problems/reverse-vowels-of-a-string/description/)；
 + 英文网址：[345. Reverse Vowels of a String](https://leetcode.com/problems/reverse-vowels-of-a-string/description/) 。

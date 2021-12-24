@@ -84,9 +84,7 @@ module.exports = [
 			"/algorithm-basic/binary-search/intro.md",
 			'/algorithm-basic/sliding-window/intro.md',
 			'/algorithm-basic/sliding-window/practice.md',
-			'/algorithm-basic/two-pointers/intro.md',
-			'/algorithm-basic/two-pointers/practice.md',
-
+			'/algorithm-basic/two-pointers/intro.md'
 
 		]
 	},

@@ -1,13 +1,11 @@
 ---
-title: 盛最多水的容器
+title: 「力扣」第 11 题：盛最多水的容器（中等）
 icon: yongyan
 category: 双指针
 tags:
   - 双指针
 ---
 
-
-# 「力扣」第 11 题：盛最多水的容器（中等）
 
 + 中文网址：[11. 盛最多水的容器](https://leetcode-cn.com/problems/container-with-most-water/description/) ；
 + 英文网址：[11. Container With Most Water](https://leetcode.com/problems/container-with-most-water/description/) 。

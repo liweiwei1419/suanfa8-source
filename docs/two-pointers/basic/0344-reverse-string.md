@@ -1,12 +1,11 @@
 ---
-title: 反转字符串
+title: 「力扣」第 344 题：反转字符串（简单）
 icon: yongyan
 category: 双指针
 tags:
   - 双指针
 ---
 
-# 「力扣」第 344 题：反转字符串（简单）
 
 + 中文网址：[344. 反转字符串](https://leetcode-cn.com/problems/reverse-string/description/) 。
 
