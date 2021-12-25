@@ -46,19 +46,17 @@ module.exports = [
 	},
 
 	{
-		"title": "第 4 章 二分答案",
+		"title": "第 4 章 二分答案（查找一个有范围的整数）",
 		"icon": "shu",
 		"children": [
-			"/binary-search/solutions/find-integer/0374-guess-number-higher-or-lower.md",
 			"/binary-search/solutions/find-integer/0069-sqrtx.md",
+			"/binary-search/solutions/0367-valid-perfect-square.md"
+			"/binary-search/solutions/find-integer/0374-guess-number-higher-or-lower.md",
 			"/binary-search/solutions/find-integer/0287-find-the-duplicate-number.md",
 			"/binary-search/solutions/find-integer/0378-kth-smallest-element-in-a-sorted-matrix.md",
 			"/binary-search/solutions/find-integer/0719-find-k-th-smallest-pair-distance.md"
 		]
 	},
-
-
-
 	{
 		"title": "第 5 章 每一轮都要把输入数组看一遍的二分查找",
 		"icon": "shu",

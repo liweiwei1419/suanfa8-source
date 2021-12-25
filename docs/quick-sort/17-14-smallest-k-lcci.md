@@ -8,6 +8,8 @@ tags:
   - 减而治之
 ---
 
+![17.14 最小 k 个数](https://tva1.sinaimg.cn/large/008i3skNgy1gxpckzwdesj30p00anwf4.jpg)
+
 + 题目链接：[面试题 17.14. 最小K个数](https://leetcode-cn.com/problems/smallest-k-lcci/)；
 + 题解链接：[排序、优先队列、快速排序的子过程（Java）](https://leetcode-cn.com/problems/smallest-k-lcci/solution/pai-xu-you-xian-dui-lie-kuai-su-pai-xu-d-ryrd/)。
 
