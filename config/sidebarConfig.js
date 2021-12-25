@@ -16,6 +16,7 @@ const graph = require('./sidebar/graph/graph.js');
 const backtracking = require('./sidebar/backtracking/backtracking.js');
 
 
+const presumHashtable = require('./sidebar/presum-hashtable/presum-hashtable.js');
 
 const linkedList = require('./sidebar/linked-list/linked-list.js');
 const loopInvariant = require('./sidebar/loop-invariant/loop-invariant.js');
@@ -36,6 +37,7 @@ module.exports = {
 	"/graph/": graph,
 	
 	"/linked-list/": linkedList,
+	"/presum-hashtable/": presumHashtable,
 
 
 	"/loop-invariant/": loopInvariant,

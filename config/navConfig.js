@@ -69,6 +69,12 @@ module.exports = [
                   },
 
                   {
+                        "text":"前缀和与哈希表",
+                        "icon":"new",
+                        "link":"/presum-hashtable/"
+                  },
+
+                  {
                         "text":"动态规划精讲",
                         "icon":"jingjiang",
                         "link":"/dynamic-programming/"

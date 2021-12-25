@@ -19,5 +19,5 @@ module.exports = [
 			"/merge-sort/0315-count-of-smaller-numbers-after-self.md",
 			"/merge-sort/0493-reverse-pairs.md"
 		]
-	},
+	}
 ]
