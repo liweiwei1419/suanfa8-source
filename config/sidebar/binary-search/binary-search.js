@@ -50,7 +50,7 @@ module.exports = [
 		"icon": "shu",
 		"children": [
 			"/binary-search/solutions/find-integer/0069-sqrtx.md",
-			"/binary-search/solutions/0367-valid-perfect-square.md"
+			"/binary-search/solutions/0367-valid-perfect-square.md",
 			"/binary-search/solutions/find-integer/0374-guess-number-higher-or-lower.md",
 			"/binary-search/solutions/find-integer/0287-find-the-duplicate-number.md",
 			"/binary-search/solutions/find-integer/0378-kth-smallest-element-in-a-sorted-matrix.md",
