@@ -18,7 +18,7 @@
 // const backtracking = require('./front-page/backtracking.js');
 // const breadthFirstSearch = require('./front-page/breadth-first-search.js');
 // const dynamicProgramming = require('./front-page/dynamic-programming.js');
-// const greedy = require('./front-page/greedy.js');
+
 // const unionFind = require('./front-page/union-find.js');
 // const trie = require('./front-page/trie.js');
 // const segmentTree = require('./front-page/segment-tree.js');

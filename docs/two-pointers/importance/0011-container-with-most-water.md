@@ -63,6 +63,8 @@ tags:
 
 ## 方法一：暴力解法
 
+枚举所有的容器的两个内壁的下标，计算水的容量，选出最大值。
+
 使用双层 `for` 循环枚举所有可能的区间。暴力解法的时间复杂度太高，我们使用指针对撞的方法。
 
 参考代码：
@@ -147,6 +149,36 @@ if __name__ == '__main__':
 
 **参考代码 2：**
 
+```java
+public class Solution {
+
+    public int maxArea(int[] height) {
+        int len = height.length;
+        if (len < 2) {
+            return 0;
+        }
+
+        int left = 0;
+        int right = len - 1;
+
+        int res = 0;
+        while (left < right) {
+            int minHeight = Math.min(height[left], height[right]);
+            res = Math.max(res, minHeight * (right - left));
+
+            if (height[left] == minHeight) {
+                left++;
+            } else {
+                right--;
+            }
+        }
+        return res;
+    }
+}
+```
+
+
+
 <CodeGroup>
 <CodeGroupItem title="Java">
 
@@ -221,5 +253,12 @@ if __name__ == '__main__':
 **复杂度分析**：
 
 + 时间复杂度：$O(N)$，这里 $N$ 是输入数组的长度；
-
 + 空间复杂度：$O(1)$ 。
+
+使用双指针的原因是根据这个问题的特点，存水的高度取决于两边较短的那个内壁的高度。
+
+使用指针对撞的方式不会错过最优解。
+
+经验：双指针、滑动窗口的问题，一般先从暴力枚举开始思考，然后更改枚举的顺序，以达到剪枝加快计算的效果。
+
+可以参考 [盛最多水的容器（双指针法，易懂解析，图解）](https://leetcode-cn.com/problems/container-with-most-water/solution/container-with-most-water-shuang-zhi-zhen-fa-yi-do/)，写题解的同学 @Krahets 非常用心，且很热心解答朋友的疑问。我写题解的结构也参考了他的思路，希望对大家有帮助。

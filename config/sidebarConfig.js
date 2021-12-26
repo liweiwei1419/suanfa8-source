@@ -22,6 +22,15 @@ const linkedList = require('./sidebar/linked-list/linked-list.js');
 const loopInvariant = require('./sidebar/loop-invariant/loop-invariant.js');
 const chat = require('./sidebar/chat/chat.js');
 
+
+// 
+
+
+
+const binarySearchTree = require('./sidebar/binary-search-tree/binary-search-tree.js');
+const breadthFirstSearch = require('./sidebar/breadth-first-search/breadth-first-search.js');
+const greedy = require('./sidebar/greedy/greedy.js');
+
 module.exports = {
 	"/choice/": choice,
 	"/binary-search/": binarySearch,
@@ -39,6 +48,12 @@ module.exports = {
 	"/linked-list/": linkedList,
 	"/presum-hashtable/": presumHashtable,
 
+	// 
+	"/binary-search-tree/": binarySearchTree,
+	"/breadth-first-search/": breadthFirstSearch,
+	"/greedy/": greedy,
+
+	//
 
 	"/loop-invariant/": loopInvariant,
 	"/backtracking/": backtracking,

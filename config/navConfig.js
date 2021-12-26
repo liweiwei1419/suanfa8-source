@@ -97,6 +97,19 @@ module.exports = [
                         "icon":"jingjiang",
                         "link":"/graph/"
                   },
+
+                  {
+                        "text":"二分搜索树习题分类",
+                        "icon":"jingjiang",
+                        "link":"/binary-search-tree/"
+                        
+                  },
+                  {
+                        "text":"贪心算法习题分类",
+                        "icon":"jingjiang",
+                        "link":"/greedy/"
+                        
+                  }
             ]
       },
 

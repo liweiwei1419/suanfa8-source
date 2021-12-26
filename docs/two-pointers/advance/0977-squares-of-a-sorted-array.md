@@ -38,11 +38,38 @@ tags:
 - $-10^4 \le nums[i] \le 10^4$
 - `nums` 已按 **非递减顺序** 排序
 
+**进阶：**
+
+- 请你设计时间复杂度为 `O(n)` 的算法解决本问题
+
 ## 理解题意
 
 注意题目中给出的条件：给出的数组 `nums` 是一个非递减数组。
 
-**参考代码**：
+## 方法一：暴力解法
+
+**参考代码 1**：
+
+```Java []
+import java.util.Arrays;
+
+public class Solution {
+
+    public int[] sortedSquares(int[] A) {
+        int len = A.length;
+        int[] res = new int[len];
+        for (int i = 0; i < len; i++) {
+            res[i] = A[i] * A[i];
+        }
+        Arrays.sort(res);
+        return res;
+    }
+}
+```
+
+## 方法二：双指针
+
+**参考代码 2**：
 
 ```java
 public class Solution {
@@ -70,3 +97,31 @@ public class Solution {
 }
 ```
 
+
+
+```Java []
+public class Solution {
+
+    public int[] sortedSquares(int[] A) {
+        int n = A.length;
+        int[] ans = new int[n];
+
+        // 从后向前赋值
+        int index = n - 1;
+        // 双指针
+        int left = 0;
+        int right = n - 1;
+        while (left <= right) {
+            if (A[left] * A[left] > A[right] * A[right]) {
+                ans[index] = A[left] * A[left];
+                left++;
+            } else {
+                ans[index] = A[right] * A[right];
+                right--;
+            }
+            index--;
+        }
+        return ans;
+    }
+}
+```
