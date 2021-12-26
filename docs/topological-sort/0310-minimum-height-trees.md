@@ -72,13 +72,13 @@ tags:
 
 直觉上，一棵树越靠「外面」的结点，我们越不可能把它作为根结点，如果这样做的话，可能树的高度是很高的，例如下面这张图。
 
-![image.png](https://pic.leetcode-cn.com/63f5a0f0118b4314b03c2e97264fd12af14c9f104fe96583239e486c324450bd-image.png)
+![image.png](https://tva1.sinaimg.cn/large/008i3skNgy1gxrxg8gxyej31400a0my2.jpg)
 
 因此，我们使用「剔除边缘结点」的策略，这里的边缘结点就是指连接其它结点最少的结点，用专业的名词来说，就是指向它的结点最少的结点，「入度」最少的结点，为此我们可以画几张图看一下。
 
 > 有的时候分析问题，自己动手，比看别人的思路的理解要深刻。
 
-![image.png](https://pic.leetcode-cn.com/53e7c6f6854eda2dadf4b37ddcb3161b5e141fe7dbb4268fd213cf7d97561a56-image.png)
+![image.png](https://tva1.sinaimg.cn/large/008i3skNgy1gxrxgdh2r6j30su0zc42t.jpg)
 
 
 **画完这张图，我们能归纳出，结点最后只会剩下 1 个或者 2 个**。如果对这个结论还不确定的朋友，不妨多画几张图，把结点个数为 6 个 、7 个时候的情况也考虑一下。

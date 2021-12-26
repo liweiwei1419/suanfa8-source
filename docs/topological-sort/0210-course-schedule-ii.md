@@ -75,15 +75,15 @@ tags:
 
 ## 方法一：拓扑排序（Kahn 算法、类似广度优先遍历的思路）
 
-![0210.gif](https://pic.leetcode-cn.com/ca22fa351d5278e95c4c8c94aba6da42ae45d465ff3e8e82149777274293e194-0210.gif)
+![0210.gif](https://tva1.sinaimg.cn/large/008i3skNgy1gxrxexgdv0g31hc0u0777.gif)
 
-![207-1.png](https://pic.leetcode-cn.com/1c2294cf156a56b90a5d750b6cded3b80e92ab8821abbcb47296cc20845d162a-207-1.png)
+![207-1.png](https://tva1.sinaimg.cn/large/008i3skNgy1gxrxezmch5j31hc0u0jvv.jpg)
 
 如果优先图中，存在环，拓扑排序不能继续得到入度值为 0 的节点，退出循环，此时图中存在没有遍历到的节点，说明图中存在环。
 
 此时说明课程设计不合理，有循环依赖。
 
-![207-13.png](https://pic.leetcode-cn.com/e580001fca6eeed32f3c44ce0840ed67dfdca47bd88910d7f8fa19f040529d08-207-13.png)
+![207-13.png](https://tva1.sinaimg.cn/large/008i3skNgy1gxrxf378nyj31hc0u0dip.jpg)
 
 
 拓扑排序实际上应用的是贪心算法，贪心算法简而言之：每一步最优，则全局最优。
@@ -414,8 +414,6 @@ class Solution(object):
 ```
 </CodeGroupItem>
 </CodeGroup>
-
-
 
 
 **复杂度分析：**
