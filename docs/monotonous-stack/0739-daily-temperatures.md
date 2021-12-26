@@ -1,5 +1,5 @@
 ---
-title: 「力扣」第 456 题：132 模式（中等）
+title: 「力扣」第 739 题：每日温度（中等）
 icon: yongyan
 category: 栈
 tags:
@@ -12,20 +12,6 @@ tags:
 
 ## 题目描述
 
----
-title: 「力扣」第 739 题：每日温度（单调栈）（单调栈）
-date: 2017-09-23 08:00:00
-author: liweiwei1419
-top: false
-mathjax: true
-categories: 专题 8：单调栈
-tags:
-  - 栈
-  - 单调栈
-permalink: leetcode-algo/0739-daily-temperatures
----
-
-## 「力扣」第 739 题：每日温度（单调栈）
 
 链接：https://leetcode-cn.com/problems/daily-temperatures
 
