@@ -1,5 +1,5 @@
 ---
-title: 「力扣」第 207 题：课程表
+title: 「力扣」第 207 题：课程表（中等）
 icon: yongyan
 category: 广度优先遍历
 tags:
@@ -370,7 +370,7 @@ public class Solution {
         return false;
     }
 }
-```    
+```
 </CodeGroupItem>
 
 <CodeGroupItem title="Python">

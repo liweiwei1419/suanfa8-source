@@ -7,12 +7,6 @@ tags:
   - 拓扑排序
 ---
 
-
-
-
-
-
-
 ## 知识点总结
 
 拓扑排序并非一种排序算法，它能得到一个 AOV 网络的拓扑序列，用于判断**有向无环图**中是否有环，即可以判断一系列活动是否有循环依赖；
@@ -30,5 +24,3 @@ tags:
 LeetCode 上拓扑排序目前（截止 2019 年 2 月 16 日早）一共有 5 题。
 
 ![LeetCode 专题：拓扑排序-1](http://upload-images.jianshu.io/upload_images/414598-e6aa20da04b9f6ea.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/800)
-
- 我们就做两题。

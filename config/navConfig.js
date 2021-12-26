@@ -101,55 +101,51 @@ module.exports = [
                         
                   },
 
-                  // {
-                  //       "text":"前缀和与哈希表",
-                  //       "icon":"new",
-                  //       "link":"/presum-hashtable/"
-                  // },
-                  // {
-                  //       "text":"贪心算法习题分类",
-                  //       "icon":"jingjiang",
-                  //       "link":"/greedy/"
-                  // },
+                  {
+                        "text":"前缀和与哈希表",
+                        "icon":"new",
+                        "link":"/presum-hashtable/"
+                  },
+                  {
+                        "text":"贪心算法习题分类",
+                        "icon":"jingjiang",
+                        "link":"/greedy/"
+                  },
 
-                  // {
-                  //       "text":"拓扑排序",
-                  //       "icon":"jingjiang",
-                  //       "link":"/topological-sort/"
-                  // },
-                  // {
-                  //       "text":"哈希表",
-                  //       "icon":"jingjiang",
-                  //       "link":"/hash-table/"
-                  // },
-                  // {
-                  //       "text": "栈",
-                  //       "icon": "jingjiang",
-                  //       "link": "/stack/"
-                  // },
-                  // {
-                  //       "text": "单调栈",
-                  //       "icon": "line-stackduizhan",
-                  //       "link": "/monotonous-stack/"
-                  // },
-                  // {
-                  //       "text": "队列",
-                  //       "icon": "jingjiang",
-                  //       "link": "/queue/"
-                  // },
-
-
-
-                  
+                  {
+                        "text":"拓扑排序",
+                        "icon":"jingjiang",
+                        "link":"/topological-sort/"
+                  },
+                  {
+                        "text":"哈希表",
+                        "icon":"jingjiang",
+                        "link":"/hash-table/"
+                  },
+                  {
+                        "text": "栈",
+                        "icon": "jingjiang",
+                        "link": "/stack/"
+                  },
+                  {
+                        "text": "单调栈",
+                        "icon": "line-stackduizhan",
+                        "link": "/monotonous-stack/"
+                  },
+                  {
+                        "text": "队列",
+                        "icon": "jingjiang",
+                        "link": "/queue/"
+                  }
             ]
       },
 
       
-      {
-            "text":"精选题解",
-            "icon":"jingxuan",
-            "link":"/choice/"
-      },
+      // {
+      //       "text":"精选题解",
+      //       "icon":"jingxuan",
+      //       "link":"/choice/"
+      // },
 
       {
             "text": "系统功能",
