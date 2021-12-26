@@ -1,17 +1,9 @@
 ---
 title: 「力扣」第 36 题：有效的数独（中等）
-date: 2020-08-07 10:00:00
-author: liweiwei1419
-top: false
-mathjax: true
-categories: 专题 14：回溯算法
+icon: yongyan
+categories: 哈希表
 tags:
-  - 回溯算法
-  - 递归
-  - 树形问题
-  - 深度优先遍历
-  - 字符串
-permalink: leetcode-solution/0036-valid-sudoku
+  - 哈希表
 ---
 
 ## 「力扣」第 36 题：有效的数独（中等、哈希表）

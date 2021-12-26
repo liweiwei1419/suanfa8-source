@@ -1,15 +1,9 @@
 ---
 title: 「力扣」第 376 题：摆动序列
-date: 2018-05-05 08:00:00
-author: liweiwei419
-top: false
-mathjax: true
-categories: 专题 15：动态规划
+icon: yongyan
+categories: 动态规划
 tags:
   - 动态规划
-  - 滑动窗口
-  - 哈希表
-permalink: leetcode-algo/0376-wiggle-subsequence
 ---
 
 ## 「力扣」第 376 题：摆动序列

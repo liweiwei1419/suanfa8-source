@@ -1,14 +1,9 @@
 ---
 title: 「力扣」第 983 题：最低票价
-date: 2020-05-06 08:00:00
-author: liweiwei419
-top: false
-mathjax: true
-categories: 专题 15：动态规划
+icon: yongyan
+categories: 动态规划
 tags:
   - 动态规划
-  - 字符串
-permalink: leetcode-algo/1143-longest-common-subsequence
 ---
 
 ## 「力扣」第 983 题：最低票价

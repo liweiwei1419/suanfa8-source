@@ -4,7 +4,6 @@ icon: yongyan
 categories: 并查集
 tags:
   - 并查集
-permalink: leetcode-algo/
 ---
 
 ::: danger 提示

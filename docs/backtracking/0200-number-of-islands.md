@@ -1,16 +1,12 @@
 ---
 title: 「力扣」第 200 题：岛屿的个数
-date: 2018-03-01 08:00:00
-author: liweiwei1419
-top: false
-mathjax: true
-categories: 专题 14：回溯算法
+icon: yongyan
+category: 回溯算法
 tags:
   - 回溯算法
   - 递归
   - 树形问题
   - 深度优先遍历
-permalink: leetcode-solution/0200-number-of-islands
 ---
 
 ## 「力扣」第 200 题：岛屿的个数

@@ -1,13 +1,9 @@
 ---
 title: 「力扣」第 300 题：最长上升子序列（中等）
-date: 2018-04-29 08:00:00
-author: liweiwei419
-top: false
-mathjax: true
-categories: 专题 15：动态规划
+icon: yongyan
+categories: 动态规划
 tags:
   - 动态规划
-permalink: leetcode-algo/0300-longest-increasing-subsequence
 ---
 
 ## 「力扣」第 300 题：最长上升子序列（中等）

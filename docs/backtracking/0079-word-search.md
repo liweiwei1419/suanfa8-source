@@ -1,9 +1,6 @@
 ---
 title: 「力扣」第 79 题：单词搜索
-date: 2018-02-24 08:00:00
-author: liweiwei1419
-top: false
-mathjax: true
+icon: yongyan
 categories: 专题 14：回溯算法
 tags:
   - 回溯算法
@@ -11,7 +8,6 @@ tags:
   - 树形问题
   - 深度优先遍历
   - 字符串
-permalink: leetcode-solution/0079-word-search
 ---
 
 ## 「力扣」第 79 题：单词搜索

@@ -1,15 +1,9 @@
 ---
 title: 「力扣」第 354 题：俄罗斯套娃
-date: 2018-05-04 08:00:00
-author: liweiwei419
-top: false
-mathjax: true
-categories: 专题 15：动态规划
+icon: yongyan
+categories: 动态规划
 tags:
   - 动态规划
-  - 滑动窗口
-  - 哈希表
-permalink: leetcode-algo/0354-russian-doll-envelopes
 ---
 
 Python 代码：
