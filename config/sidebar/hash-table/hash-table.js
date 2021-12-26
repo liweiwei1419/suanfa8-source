@@ -4,7 +4,7 @@ module.exports = [
 		"icon": "shu",
 		"children": [
 			"/hash-table/solutions/0001-two-sum.md",
-			"/hash-table/solutions/0041-first-missing-positive.md",
+			// "/hash-table/solutions/0041-first-missing-positive.md",
 			"/hash-table/solutions/0049-group-anagrams.md",
 			"/hash-table/solutions/0202-happy-number.md",
 			"/hash-table/solutions/0205-isomorphic-strings.md",
