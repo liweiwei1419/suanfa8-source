@@ -6,22 +6,46 @@ tags:
   - 哈希表
 ---
 
-+ 题目链接：[]()；
-+ 题解链接：[]()。
++ 题目链接：[242. 有效的字母异位词](https://leetcode-cn.com/problems/valid-anagram/)。
 
 ## 题目描述
 
-#### [242. 有效的字母异位词](https://leetcode-cn.com/problems/valid-anagram/)
+给定两个字符串 `*s*` 和 `*t*` ，编写一个函数来判断 `*t*` 是否是 `*s*` 的字母异位词。
+
+**注意：**若 `*s*` 和 `*t*` 中每个字符出现的次数都相同，则称 `*s*` 和 `*t*` 互为字母异位词。
+
+**示例 1:**
+
+```
+输入: s = "anagram", t = "nagaram"
+输出: true
+```
+
+**示例 2:**
+
+```
+输入: s = "rat", t = "car"
+输出: false
+```
+
+ **提示:**
+
+- `1 <= s.length, t.length <= 5 * 104`
+- `s` 和 `t` 仅包含小写字母
+
+**Constraints:**
+
+- `1 <= s.length, t.length <= 5 * 104`
+- `s` and `t` consist of lowercase English letters.
+
+**Follow up:** What if the inputs contain Unicode characters? How would you adapt your solution to such a case?
+
+## 方法一
 
 
+把两个字符串都转换成字符数组以后，进行排序，然后逐位进行比较。
 
-
-
-### 「力扣」第 242 题：Valid Anagram
-
-思路1：把两个字符串都转换成字符数组以后，进行排序，然后逐位进行比较。
-
-Java 代码：
+**参考代码 1**：
 
 ```java
 public class Solution {
@@ -46,9 +70,11 @@ public class Solution {
 }
 ```
 
-思路2：放入一个 Map 中，只要后面有一个元素不出现在 Map 中，就退出，最后应该使得这个 Map 里所有元素的 value 值都为 0。
+## 方法二
 
-Java 代码：
+放入一个 `Map` 中，只要后面有一个元素不出现在 `Map` 中，就退出，最后应该使得这个 `Map` 里所有元素的 `value` 值都为 `0`。
+
+**参考代码 2**：
 
 ```java
 public class Solution2 {

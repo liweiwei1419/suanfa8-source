@@ -61,11 +61,11 @@ module.exports = [{
                                     "link": "/backtracking/"
                               },
 
-                              {
-                                    "text": "广度优先遍历",
-                                    "icon": "jingjiang",
-                                    "link": "/breadth-first-search/"
-                              },
+                              // {
+                              //       "text": "广度优先遍历",
+                              //       "icon": "jingjiang",
+                              //       "link": "/breadth-first-search/"
+                              // },
 
                               {
                                     "text": "拓扑排序",
@@ -79,11 +79,11 @@ module.exports = [{
                                     "icon": "jingjiang",
                                     "link": "/dynamic-programming/"
                               },
-                              {
-                                    "text": "贪心算法",
-                                    "icon": "jingjiang",
-                                    "link": "/greedy/"
-                              },
+                              // {
+                              //       "text": "贪心算法",
+                              //       "icon": "jingjiang",
+                              //       "link": "/greedy/"
+                              // },
 
 
                               {
@@ -105,42 +105,42 @@ module.exports = [{
                                     "link": "/linked-list/"
                               },
 
-                              {
-                                    "text": "栈",
-                                    "icon": "jingjiang",
-                                    "link": "/stack/"
-                              },
-                              {
-                                    "text": "单调栈",
-                                    "icon": "jingjiang",
-                                    "link": "/monotonous-stack/"
-                              },
-                              {
-                                    "text": "队列",
-                                    "icon": "jingjiang",
-                                    "link": "/queue/"
-                              },
-                              {
-                                    "text": "优先队列",
-                                    "icon": "jingjiang",
-                                    "link": "/heap/"
-                              },
-                              {
-                                    "text": "二分搜索树",
-                                    "icon": "jingjiang",
-                                    "link": "/binary-search-tree/"
+                              // {
+                              //       "text": "栈",
+                              //       "icon": "jingjiang",
+                              //       "link": "/stack/"
+                              // },
+                              // {
+                              //       "text": "单调栈",
+                              //       "icon": "jingjiang",
+                              //       "link": "/monotonous-stack/"
+                              // },
+                              // {
+                              //       "text": "队列",
+                              //       "icon": "jingjiang",
+                              //       "link": "/queue/"
+                              // },
+                              // {
+                              //       "text": "优先队列",
+                              //       "icon": "jingjiang",
+                              //       "link": "/heap/"
+                              // },
+                              // {
+                              //       "text": "二分搜索树",
+                              //       "icon": "jingjiang",
+                              //       "link": "/binary-search-tree/"
 
-                              },
+                              // },
                               {
                                     "text": "哈希表",
                                     "icon": "jingjiang",
                                     "link": "/hash-table/"
                               },
-                              {
-                                    "text": "前缀和与哈希表",
-                                    "icon": "jingjiang",
-                                    "link": "/presum-hashtable/"
-                              },
+                              // {
+                              //       "text": "前缀和与哈希表",
+                              //       "icon": "jingjiang",
+                              //       "link": "/presum-hashtable/"
+                              // },
                               {
                                     "text": "并查集",
                                     "icon": "jingjiang",

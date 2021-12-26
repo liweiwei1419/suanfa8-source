@@ -7,16 +7,12 @@ tags:
   - 滚动哈希
 ---
 
-
++ 题目链接：[49. 字母异位词分组](https://leetcode-cn.com/problems/group-anagrams/)。
 
 
 | 题目                                                         | 难度 | 题解                                                         |
 | ------------------------------------------------------------ | ---- | ------------------------------------------------------------ |
 | [49. 字母异位词分组](https://leetcode-cn.com/problems/group-anagrams/) | 中等 | [自定义字符串的哈希规则，使用质数作为乘法因子（Java）](https://leetcode-cn.com/problems/group-anagrams/solution/zi-ding-yi-zi-fu-chuan-de-ha-xi-gui-ze-shi-yong-zh/) |
-
-
-
-+ 题目链接：[49. 字母异位词分组](https://leetcode-cn.com/problems/group-anagrams/)
 
 给定一个字符串数组，将字母异位词组合在一起。字母异位词指字母相同，但排列不同的字符串。
 
@@ -28,7 +24,7 @@ tags:
 说明：1、所有输入均为小写字母。2、不考虑答案输出的顺序。
 ```
 
-## 参考代码：
+**参考代码**：
 
 ```python
 class Solution:
@@ -179,10 +175,9 @@ class Solution:
                 map[key].append(s)
 
         return list(map.values())
-```    
+```
 </CodeGroupItem>
 </CodeGroup>
-
 
 
 

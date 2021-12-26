@@ -11,13 +11,37 @@ tags:
 
 ## 题目描述
 
-说明：文本首发在力扣的题解版块，更新也会在第 1 时间在上面的网站中更新，这篇文章只是上面的文章的一个快照，您可以点击上面的链接看到其他网友对本文的评论。
+在歌曲列表中，第 `i` 首歌曲的持续时间为 `time[i]` 秒。
 
-传送门：。
+返回其总持续时间（以秒为单位）可被 `60` 整除的歌曲对的数量。形式上，我们希望下标数字 `i` 和 `j` 满足 `i < j` 且有 `(time[i] + time[j]) % 60 == 0`。
 
-## 数组 + 哈希表（Python 代码、Java 代码）
+**示例 1：**
 
-**思路分析**：
+```
+输入：time = [30,20,150,100,40]
+输出：3
+解释：这三对的总持续时间可被 60 整除：
+(time[0] = 30, time[2] = 150): 总持续时间 180
+(time[1] = 20, time[3] = 100): 总持续时间 120
+(time[1] = 20, time[4] = 40): 总持续时间 60
+```
+
+**示例 2：**
+
+```
+输入：time = [60,60,60]
+输出：3
+解释：所有三对的总持续时间都是 120，可以被 60 整除。
+```
+
+ 
+
+**提示：**
+
+- `1 <= time.length <= 6 * 104`
+- `1 <= time[i] <= 500`
+
+## 思路分析
 
 思路有点像 [「力扣」第 1 题： 两个数之和](https://leetcode-cn.com/problems/two-sum/)和[「力扣」第 454 题：四数相加 II](https://leetcode-cn.com/problems/4sum-ii/)。
 
@@ -36,39 +60,10 @@ tags:
 
 **参考代码**：
 
-Python 代码：
 
-
-```Python []
-from typing import List
-
-
-class Solution:
-
-    def numPairsDivisibleBy60(self, time: List[int]) -> int:
-        # 预处理：把数组中的元素全都模 60
-        time = [t % 60 for t in time]
-
-        from collections import defaultdict
-        d = defaultdict(int)
-
-        res = 0
-        for t in time:
-            # 1、先计数
-            # 针对 [0, 0, 0] 这一类特殊用例，要模 60
-            residue = (60 - t) % 60
-            if residue in d:
-                res += d[residue]
-
-            # 2、再记录频数
-            d[t] += 1
-
-        return res
-```
-
-Java 代码：
-
-```Java []
+<CodeGroup>
+<CodeGroupItem title="Java">
+```java
 import java.util.HashMap;
 import java.util.Map;
 
@@ -105,11 +100,43 @@ public class Solution {
 
 }
 ```
+</CodeGroupItem>
+
+<CodeGroupItem title="Python3">
+```python
+from typing import List
+
+
+class Solution:
+
+    def numPairsDivisibleBy60(self, time: List[int]) -> int:
+        # 预处理：把数组中的元素全都模 60
+        time = [t % 60 for t in time]
+
+        from collections import defaultdict
+        d = defaultdict(int)
+
+        res = 0
+        for t in time:
+            # 1、先计数
+            # 针对 [0, 0, 0] 这一类特殊用例，要模 60
+            residue = (60 - t) % 60
+            if residue in d:
+                res += d[residue]
+
+            # 2、再记录频数
+            d[t] += 1
+
+        return res
+```
+</CodeGroupItem>
+</CodeGroup>
+
+
+
 
 **复杂度分析：**
 
-+ 时间复杂度：$O(N)$，这里 $N$ 是数组的长度，算法把数组看了两次。
++ 时间复杂度：$O(N)$，这里 $N$ 是数组的长度，算法把数组看了两次；
 + 空间复杂度：$O(N)$，使用了长度为 $N$ 的哈希表。
 
-
-<Vssue title="pairs-of-songs-with-total-durations-divisible-by-60"/>
