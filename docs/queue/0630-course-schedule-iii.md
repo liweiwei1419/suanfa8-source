@@ -1,4 +1,12 @@
-## 「力扣」第 630 题：课程表 III
+---
+title: 「力扣」第 630 题：课程表 III
+icon: yongyan
+categories: 队列
+tags:
+  - 队列
+---
+
+
 
 + 链接：https://leetcode-cn.com/problems/course-schedule-iii
 

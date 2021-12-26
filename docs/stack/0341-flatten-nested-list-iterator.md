@@ -1,20 +1,17 @@
 ---
 title: 「力扣」第 341 题：扁平化嵌套列表迭代器（中等）
-date: 2017-09-17 08:00:00
-author: liweiwei1419
-top: false
-mathjax: true
-categories: 专题 7：栈
+icon: yongyan
+category: 栈
 tags:
   - 栈
-permalink: leetcode-algo/0341-flatten-nested-list-iterator
 ---
 
-## 「力扣」第 341 题：扁平化嵌套列表迭代器（中等）
++ 题目链接：[341. 扁平化嵌套列表迭代器](https://leetcode-cn.com/problems/flatten-nested-list-iterator/description/)；
++ 题解链接：[]()。
 
-+ 链接：https://leetcode-cn.com/problems/flatten-nested-list-iterator
-+ 中文网址：[341. 扁平化嵌套列表迭代器](https://leetcode-cn.com/problems/flatten-nested-list-iterator/description/) ；
-+ 英文网址：[341. Flatten Nested List Iterator](https://leetcode.com/problems/flatten-nested-list-iterator/description/) 。
+
+## 题目描述
+
 
 > 给定一个嵌套的整型列表。设计一个迭代器，使其能够遍历这个整型列表中的所有整数。
 >

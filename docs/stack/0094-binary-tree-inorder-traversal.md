@@ -1,10 +1,23 @@
-## 「力扣」第 94 题：二叉树的中序遍历（中等）
+---
+title: 「力扣」第 94 题：二叉树的中序遍历（中等）
+icon: yongyan
+category: 栈
+tags:
+  - 栈
+---
 
-题解地址：[模拟系统栈完成非递归中序遍历，同理可以完成非递归的前序遍历和后序遍历（Python 代码、Java 代码）](https://leetcode-cn.com/problems/binary-tree-inorder-traversal/solution/mo-ni-xi-tong-zhan-wan-cheng-fei-di-gui-zhong-xu-b/)。
++ 题目链接：[94. 二叉树的中序遍历](https://leetcode-cn.com/problems/binary-tree-inorder-traversal/)；
++ 题解地址：[模拟系统栈完成非递归中序遍历，同理可以完成非递归的前序遍历和后序遍历（Python 代码、Java 代码）](https://leetcode-cn.com/problems/binary-tree-inorder-traversal/solution/mo-ni-xi-tong-zhan-wan-cheng-fei-di-gui-zhong-xu-b/)。
+
+
+## 题目描述
+
+
+
 
 说明：文本首发在力扣的题解版块，更新也会在第 1 时间在上面的网站中更新，这篇文章只是上面的文章的一个快照，您可以点击上面的链接看到其他网友对本文的评论。
 
-传送门：[94. 二叉树的中序遍历](https://leetcode-cn.com/problems/binary-tree-inorder-traversal/)。
+传送门：。
 
 >给定一个二叉树，返回它的中序 遍历。
 >

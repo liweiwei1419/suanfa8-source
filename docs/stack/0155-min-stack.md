@@ -1,22 +1,25 @@
 ---
 title: 「力扣」第 155 题：最小栈
-date: 2017-09-10 08:00:00
-author: liweiwei1419
-top: false
-mathjax: true
-categories: 专题 7：栈
+icon: yongyan
+category: 栈
 tags:
   - 栈
-permalink: leetcode-algo/0155-min-stack
 ---
 
-## 「力扣」第 155 题：最小栈
 
-题解地址：[使用辅助栈（同步和不同步，Python 代码、Java 代码）](https://leetcode-cn.com/problems/min-stack/solution/shi-yong-fu-zhu-zhan-tong-bu-he-bu-tong-bu-python-/)。
+
+
+
+
+
++ 题目链接：[155. 最小栈](https://leetcode-cn.com/problems/min-stack/)；
++ 题解地址：[使用辅助栈（同步和不同步，Python 代码、Java 代码）](https://leetcode-cn.com/problems/min-stack/solution/shi-yong-fu-zhu-zhan-tong-bu-he-bu-tong-bu-python-/)。
+
+## 题目描述
 
 说明：文本首发在力扣的题解版块，更新也会在第 1 时间在上面的网站中更新，这篇文章只是上面的文章的一个快照，您可以点击上面的链接看到其他网友对本文的评论。
 
-传送门：[155. 最小栈](https://leetcode-cn.com/problems/min-stack/)。
+传送门：。
 
 >设计一个支持 push，pop，top 操作，并能在常数时间内检索到最小元素的栈。
 >

@@ -1,18 +1,18 @@
 ---
 title: 「力扣」第 331 题：验证二叉树的前序序列化（中等）
-date: 2017-09-16 08:00:00
-author: liweiwei1419
-top: false
-mathjax: true
-categories: 专题 7：栈
+icon: yongyan
+category: 栈
 tags:
   - 栈
-permalink: leetcode-algo/0331-verify-preorder-serialization-of-a-binary-tree
 ---
 
-## 「力扣」第 331 题：验证二叉树的前序序列化（中等）
++ 题目链接：[]()；
++ 题解链接：[]()。
 
-我写的题解地址：
+
+## 题目描述
+
+
 
 > 序列化二叉树的一种方法是使用前序遍历。当我们遇到一个非空节点时，我们可以记录下这个节点的值。如果它是一个空节点，我们可以使用一个标记值记录，例如 #。
 >

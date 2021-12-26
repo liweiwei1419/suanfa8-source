@@ -1,20 +1,22 @@
 ---
 title: 「力扣」第 225 题：用队列实现栈（简单）
-date: 2017-09-12 08:00:00
-author: liweiwei1419
-top: false
-mathjax: true
-categories: 专题 7：栈
+icon: yongyan
+category: 栈
 tags:
   - 栈
-permalink: leetcode-algo/0225-implement-stack-using-queues
 ---
 
-## 「力扣」第 225 题：用队列实现栈（简单）
++ 题目链接：[225. 用队列实现栈](https://leetcode-cn.com/problems/implement-stack-using-queues)；
++ 题解链接：[题解地址](https://leetcode-cn.com/problems/implement-stack-using-queues/solution/peek-he-pop-shi-yi-ci-jiang-dui-shou-yuan-su-chu-d/)。
 
-+ 链接：https://leetcode-cn.com/problems/implement-stack-using-queues
 
-+ [题解地址](https://leetcode-cn.com/problems/implement-stack-using-queues/solution/peek-he-pop-shi-yi-ci-jiang-dui-shou-yuan-su-chu-d/)
+## 题目描述
+
+
+
++ 链接：
+
++ 
 
 >使用队列实现栈的下列操作：
 >

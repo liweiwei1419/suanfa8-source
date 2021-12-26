@@ -1,6 +1,21 @@
+---
+title: 
+icon: yongyan
+category: 栈
+tags:
+  - 栈
+---
+
++ 题目链接：[144. 二叉树的前序遍历](https://leetcode-cn.com/problems/binary-tree-preorder-traversal/description/)；
++ 题解链接：[]()。
+
+
+## 题目描述
+
+
 ## 「力扣」第 144 题：二叉树的前序遍历
 
-传送门：英文网址：[144. Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/description/) ，中文网址：[144. 二叉树的前序遍历](https://leetcode-cn.com/problems/binary-tree-preorder-traversal/description/) 。
+传送门：英文网址：[144. Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/description/) ，中文网址： 。
 
 > 给定一个二叉树，返回它的 *前序* 遍历。
 >

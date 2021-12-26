@@ -1,18 +1,18 @@
 ---
 title: 「力扣」第 145 题：二叉树的后序遍历
-date: 2017-09-08 08:00:00
-author: liweiwei1419
-top: false
-mathjax: true
-categories: 专题 7：栈
+icon: yongyan
+category: 栈
 tags:
   - 栈
-permalink: leetcode-algo/0145-binary-tree-postorder-traversal
 ---
 
-## 「力扣」第 145 题：二叉树的后序遍历
++ 题目链接：[145. 二叉树的后序遍历](https://leetcode-cn.com/problems/binary-tree-postorder-traversal/description/) 。
 
-传送门：英文网址：[145. Binary Tree Postorder Traversal](https://leetcode.com/problems/binary-tree-postorder-traversal/description/) ，中文网址：[145. 二叉树的后序遍历](https://leetcode-cn.com/problems/binary-tree-postorder-traversal/description/) 。
+
+## 题目描述
+
+
+
 
 > 给定一个整数 *n*，生成所有由 1 ... *n* 为节点所组成的**二叉搜索树**。
 >

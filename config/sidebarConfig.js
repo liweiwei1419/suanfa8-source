@@ -30,6 +30,11 @@ const chat = require('./sidebar/chat/chat.js');
 const binarySearchTree = require('./sidebar/binary-search-tree/binary-search-tree.js');
 const breadthFirstSearch = require('./sidebar/breadth-first-search/breadth-first-search.js');
 const greedy = require('./sidebar/greedy/greedy.js');
+const topologicalSort = require('./sidebar/topological-sort/topological-sort.js');
+const hashTable = require('./sidebar/hash-table/hash-table.js');
+const stack = require('./sidebar/stack/stack.js');
+const monotonousStack = require('./sidebar/monotonous-stack/monotonous-stack.js');
+const queue = require('./sidebar/queue/queue.js');
 
 module.exports = {
 	"/choice/": choice,
@@ -52,7 +57,11 @@ module.exports = {
 	"/binary-search-tree/": binarySearchTree,
 	"/breadth-first-search/": breadthFirstSearch,
 	"/greedy/": greedy,
-
+	"/topological-sort/": topologicalSort,
+	"/hash-table/": hashTable,
+	"/stack/": stack,
+	"/queue/": queue,
+	"/monotonous-stack/":monotonousStack,
 	//
 
 	"/loop-invariant/": loopInvariant,

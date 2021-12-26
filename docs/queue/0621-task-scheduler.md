@@ -1,4 +1,10 @@
-# 「力扣」第 621 题：任务调度器（中等）
+---
+title: 「力扣」第 621 题：任务调度器（中等）
+icon: yongyan
+categories: 广度优先遍历
+tags:
+  - 广度优先遍历
+---
 
 + 链接：https://leetcode-cn.com/problems/task-scheduler
 

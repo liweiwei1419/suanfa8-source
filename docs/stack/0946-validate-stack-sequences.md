@@ -1,19 +1,21 @@
 ---
 title: 「力扣」第 946 题：验证栈序列（中等）
-date: 2017-09-20 08:00:00
-author: liweiwei1419
-top: false
-mathjax: true
-categories: 专题 7：栈
+icon: yongyan
+category: 栈
 tags:
   - 栈
-permalink: leetcode-algo/0946-validate-stack-sequences
 ---
 
++ 题目链接：[946. 验证栈序列](https://leetcode-cn.com/problems/validate-stack-sequences)。
 
-## 「力扣」第 946 题：验证栈序列（中等）
 
-+ 链接：https://leetcode-cn.com/problems/validate-stack-sequences
+
+## 题目描述
+
+
+
+
++ 链接：
 
 > 给定 pushed 和 popped 两个序列，每个序列中的 值都不重复，只有当它们可能是在最初空栈上进行的推入 push 和弹出 pop 操作序列的结果时，返回 true；否则，返回 false 。
 >

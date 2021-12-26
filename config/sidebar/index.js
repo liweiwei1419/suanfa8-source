@@ -1,14 +1,5 @@
 // const reference = require('./front-page/reference.js');
 // const recursionTimeComplexity = require('./front-page/recursion-time-complexity.js');
-// const loopInvariant = require('./front-page/loop-invariant.js');
-// const basicSort = require('./front-page/basic-sort.js');
-// const mergeSort = require('./front-page/merge-sort.js');
-// const quickSort = require('./front-page/quick-sort.js');
-// const nonComparison = require('./front-page/non-comparison.js');
-// const binarySearch = require('./front-page/binary-search.js');
-// const slidingWindow = require('./front-page/sliding-window.js');
-// const twoPointers = require('./front-page/two-pointers.js');
-// const linkedList = require('./front-page/linked-list.js');
 // const stack = require('./front-page/stack.js');
 // const queue = require('./front-page/queue.js');
 // const heap = require('./front-page/heap.js');

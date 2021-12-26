@@ -1,18 +1,18 @@
 ---
 title: 「力扣」第 232 题：用栈实现队列（简单）
-date: 2017-09-14 08:00:00
-author: liweiwei1419
-top: false
-mathjax: true
-categories: 专题 7：栈
+icon: yongyan
+category: 栈
 tags:
   - 栈
-permalink: leetcode-algo/0232-implement-queue-using-stacks
 ---
 
-## 「力扣」第 232 题：用栈实现队列（简单）
++ 题目链接：[232. 用栈实现队列]()；
++ 题解链接：[](https://leetcode-cn.com/problems/implement-queue-using-stacks/solution/shi-yong-liang-ge-zhan-yi-ge-zhuan-men-ru-dui-yi-g/)。
 
-我写的题解地址：https://leetcode-cn.com/problems/implement-queue-using-stacks/solution/shi-yong-liang-ge-zhan-yi-ge-zhuan-men-ru-dui-yi-g/
+
+## 题目描述
+
+
 
 > 使用栈实现队列的下列操作：
 >

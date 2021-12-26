@@ -1,16 +1,18 @@
 ---
 title: 「力扣」第 150 题： 逆波兰表达式求值
-date: 2017-09-09 08:00:00
-author: liweiwei1419
-top: false
-mathjax: true
-categories: 专题 7：栈
+icon: yongyan
+category: 栈
 tags:
   - 栈
-permalink: leetcode-algo/0150-evaluate-reverse-polish-notation
 ---
 
-## 「力扣」第 150 题： 逆波兰表达式求值
++ 题目链接：[]()；
++ 题解链接：[]()。
+
+
+## 题目描述
+
+
 
 传送门：[150. 逆波兰表达式求值](https://leetcode-cn.com/problems/evaluate-reverse-polish-notation/)。
 

@@ -108,8 +108,37 @@ module.exports = [
                         "text":"贪心算法习题分类",
                         "icon":"jingjiang",
                         "link":"/greedy/"
-                        
-                  }
+                  },
+
+                  {
+                        "text":"拓扑排序",
+                        "icon":"jingjiang",
+                        "link":"/topological-sort/"
+                  },
+                  {
+                        "text":"哈希表",
+                        "icon":"jingjiang",
+                        "link":"/hash-table/"
+                  },
+                  {
+                        "text": "普通栈",
+                        "icon": "jingjiang",
+                        "link": "/stack/"
+                  },
+                  {
+                        "text": "单调栈",
+                        "icon": "line-stackduizhan",
+                        "link": "/monotonous-stack/"
+                  },
+                  {
+                        "text": "队列",
+                        "icon": "jingjiang",
+                        "link": "/queue/"
+                  },
+
+
+
+                  
             ]
       },
 

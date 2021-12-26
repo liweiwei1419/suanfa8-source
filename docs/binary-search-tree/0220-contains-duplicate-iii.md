@@ -233,3 +233,113 @@ public class Solution {
 
 **复杂度分析**：（同上）
 
+---
+
+备份：
+
+### 「力扣」第 220 题：Contains Duplicate |||
+
+提示：滑动窗口 + 查找表，这里的查找表是能查询上界和下界的 BST。
+
+Java 代码：滑动窗口 + 查找表，这里的查找表是能查询上界和下界的 BST。
+
+```java
+class Solution {
+    public boolean containsNearbyAlmostDuplicate(int[] nums, int k, int t) {
+        // 特判
+        int len = nums.length;
+        if (len == 0 || k <= 0 || t < 0) {
+            return false;
+        }
+        TreeSet<Integer> treeSet = new TreeSet<>();
+        for (int i = 0; i < len; i++) {
+            // 大于等于 nums[i] 的最小数
+            Integer ceiling = treeSet.ceiling(nums[i]);
+            if (ceiling != null && (long) ceiling - (long) nums[i] <= t) {
+                return true;
+            }
+            // 小于等于 nums[i] 的最大数
+            Integer floor = treeSet.floor(nums[i]);
+            if (floor != null && (long) nums[i] - (long) floor <= t) {
+                return true;
+            }
+            treeSet.add(nums[i]);
+            if (i >= k) {
+                treeSet.remove(nums[i - k]);
+            }
+        }
+        return false;
+    }
+}
+```
+
+### LeetCode 第 220 题：存在重复元素 III    
+
+传送门：[220. 存在重复元素 III](https://leetcode-cn.com/problems/contains-duplicate-iii/)。
+
+> 给定一个整数数组，判断数组中是否有两个不同的索引 *i* 和 *j*，使得 **nums [i]** 和 **nums [j]** 的差的绝对值最大为 *t*，并且 *i* 和 *j* 之间的差的绝对值最大为 *ķ*。
+>
+> **示例 1:**
+>
+> ```
+> 输入: nums = [1,2,3,1], k = 3, t = 0
+> 输出: true
+> ```
+>
+> **示例 2:**
+>
+> ```
+> 输入: nums = [1,0,1,1], k = 1, t = 2
+> 输出: true
+> ```
+>
+> **示例 3:**
+>
+> ```
+> 输入: nums = [1,5,9,1,5,9], k = 2, t = 3
+> 输出: false
+> ```
+
+Java 代码：滑动窗口 + 查找表，这里的查找表是能查询上界和下界的 BST。
+
+```java
+class Solution {
+    public boolean containsNearbyAlmostDuplicate(int[] nums, int k, int t) {
+        int len = nums.length;
+        if (len == 0 || k <= 0 || t < 0) {
+            return false;
+        }
+        TreeSet<Integer> treeSet = new TreeSet<>();
+        for (int i = 0; i < len; i++) {
+            // 大于等于 nums[i] 的最小数
+            Integer ceiling = treeSet.ceiling(nums[i]);
+            if (ceiling != null && (long) ceiling - (long) nums[i] <= t) {
+                return true;
+            }
+            // 小于等于 nums[i] 的最大数
+            Integer floor = treeSet.floor(nums[i]);
+            if (floor != null && (long) nums[i] - (long) floor <= t) {
+                return true;
+            }
+            treeSet.add(nums[i]);
+            if (i >= k) {
+                treeSet.remove(nums[i - k]);
+            }
+        }
+        return false;
+    }
+}
+```
+
+参考资料：
+
+1、https://blog.csdn.net/qq_20141867/article/details/82024222
+
+使用有序字典。
+
+2、Python 代码，使用自己实现的 BST：https://leetcode.com/problems/contains-duplicate-iii/discuss/174416/Python-balanced-BST-solution
+
+（本节完）
+
+
+

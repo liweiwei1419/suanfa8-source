@@ -1,18 +1,18 @@
 ---
 title: 「力扣」第 173 题：二叉搜索树迭代器（中等）
-date: 2017-09-11 08:00:00
-author: liweiwei1419
-top: false
-mathjax: true
-categories: 专题 7：栈
+icon: yongyan
+category: 栈
 tags:
   - 栈
-permalink: leetcode-algo/0173-binary-search-tree-iterator
 ---
 
-## 「力扣」第 173 题：二叉搜索树迭代器（中等）
++ 题目链接：[]()；
++ 题解链接：[]()。
 
-我写的题解地址：
+
+## 题目描述
+
+
 
 > 实现一个二叉搜索树迭代器。你将使用二叉搜索树的根节点初始化迭代器。
 >

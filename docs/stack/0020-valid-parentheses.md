@@ -1,7 +1,16 @@
-## 「力扣」第 20 题：有效的括号（简单）
+---
+title: 「力扣」第 20 题：有效的括号（简单）
+icon: yongyan
+category: 栈
+tags:
+  - 栈
+---
 
-+ 中文网址：[20. 有效的括号](https://leetcode-cn.com/problems/valid-parentheses/description/) ；
-+ 英文网址：[20. Valid Parentheses](https://leetcode.com/problems/valid-parentheses/description/) ，
++ 题目链接：[20. 有效的括号](https://leetcode-cn.com/problems/valid-parentheses/description/)。
+
+
+## 题目描述
+
 
 给定一个只包括 `'('`，`')'`，`'{'`，`'}'`，`'['`，`']'` 的字符串，判断字符串是否有效。
 
@@ -149,3 +158,150 @@ public class Solution {
 ```
 
 **复杂度分析**（同上）
+
+---
+
+
+我的解答（看起来有些繁琐）：
+
+下面我按照老师的解法，写了一个不是优化了很多的解法：
+
+
+
+
+
+
+
+Java 代码：
+
+```java
+public class Solution {
+
+    public boolean isValid(String s) {
+        boolean isValid = false;
+        Stack<Character> stack = new Stack<>();
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+            if (c == '{' || c == '(' || c == '[') {
+                stack.push(c);
+            }
+            if (c == '}' || c == ')' || c == ']') {
+                // 出栈之前，应该先检查一下栈中是否还有元素
+                if (stack.isEmpty()) {
+                    return isValid;
+                }
+                Character popElement = stack.pop();
+                Character match = null;
+                if (c == '}') {
+                    match = '{';
+                }
+                if (c == ']') {
+                    match = '[';
+                }
+                if (c == ')') {
+                    match = '(';
+                }
+
+                if (popElement != match) {
+                    return isValid;
+                }
+            }
+        }
+        if (stack.isEmpty()) {
+            isValid = true;
+        }
+        return isValid;
+    }
+
+    public static void main(String[] args) {
+        Solution solution = new Solution();
+        boolean result = solution.isValid("8{90[s(d)f]44}33");
+        System.out.println(result);
+    }
+
+}
+```
+
+说明：最后的这一步：
+
+```java
+if (stack.isEmpty()) {
+    isValid = true;
+}
+```
+
+很容易忽略，请留意。
+
+
+学到栈的时候，也学习了一些经典的使用栈解决问题，我们要思考一下为什么使用栈？
+使用栈的原因：在一个嵌套的关系中，通过栈顶元素来获得最近的那个我们须要处理的元素。
+
+栈顶元素反映了在嵌套的层次关系中，最近的需要匹配的元素。
+
+Python 代码：
+
+```python
+# 20. 有效的括号
+# 给定一个只包括 '('，')'，'{'，'}'，'['，']' 的字符串，判断字符串是否有效。
+class Solution:
+    def isValid(self, s):
+        """
+        :type s: str
+        :rtype: bool
+        """
+        stack = []
+        d = ["()", "[]", "{}"]
+        for i in range(0, len(s)):
+            stack.append(s[i])
+            if len(stack) >= 2 and stack[-2] + stack[-1] in d:
+                stack.pop()
+                stack.pop()
+        return len(stack) == 0
+```
+
+
+
+
+
+Java 代码：
+
+```java
+import java.util.Stack;
+
+
+public class Solution {
+
+    public boolean isValid(String s) {
+        int len = s.length();
+        if (len == 0) {
+            return true;
+        }
+
+        if ((len & 1) == 1) {
+            return false;
+        }
+        Stack<Character> stack = new Stack<>();
+        for (int i = 0; i < len; i++) {
+            char c = s.charAt(i);
+
+            switch (c) {
+                case '(':
+                    stack.push(')');
+                    break;
+                case '[':
+                    stack.push(']');
+                    break;
+                case '{':
+                    stack.push('}');
+                    break;
+                default:
+                    if (stack.isEmpty() || stack.pop() != c) {
+                        return false;
+                    }
+                    break;
+            }
+        }
+        return stack.isEmpty();
+    }
+}
+```

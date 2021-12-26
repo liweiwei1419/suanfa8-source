@@ -1,4 +1,19 @@
-# 「力扣」第 71 题：简化路径（中等）
+---
+title: 「力扣」第 71 题：简化路径（中等）
+icon: yongyan
+category: 栈
+tags:
+  - 栈
+---
+
++ 题目链接：[]()；
++ 题解链接：[]()。
+
+
+## 题目描述
+
+
+# 
 
 传送门：[71. 简化路径](https://leetcode-cn.com/problems/simplify-path/)。
 
