@@ -79,11 +79,11 @@ module.exports = [{
                                     "icon": "jingjiang",
                                     "link": "/dynamic-programming/"
                               },
-                              // {
-                              //       "text": "贪心算法",
-                              //       "icon": "jingjiang",
-                              //       "link": "/greedy/"
-                              // },
+                              {
+                                    "text": "贪心算法",
+                                    "icon": "jingjiang",
+                                    "link": "/greedy/"
+                              },
 
 
                               {
@@ -105,16 +105,16 @@ module.exports = [{
                                     "link": "/linked-list/"
                               },
 
-                              // {
-                              //       "text": "栈",
-                              //       "icon": "jingjiang",
-                              //       "link": "/stack/"
-                              // },
-                              // {
-                              //       "text": "单调栈",
-                              //       "icon": "jingjiang",
-                              //       "link": "/monotonous-stack/"
-                              // },
+                              {
+                                    "text": "栈",
+                                    "icon": "jingjiang",
+                                    "link": "/stack/"
+                              },
+                              {
+                                    "text": "单调栈",
+                                    "icon": "jingjiang",
+                                    "link": "/monotonous-stack/"
+                              },
                               // {
                               //       "text": "队列",
                               //       "icon": "jingjiang",

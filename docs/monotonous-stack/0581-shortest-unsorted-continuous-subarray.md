@@ -9,19 +9,9 @@ tags:
 
 
 + 题目链接：[581. 最短无序连续子数组](https://leetcode-cn.com/problems/shortest-unsorted-continuous-subarray/)；
-+ 题解链接：[]()。
++ 题解链接：[题解链接](https://blog.csdn.net/lw_power/article/details/106386048)。
 
-
-
-
-- [题解链接](https://blog.csdn.net/lw_power/article/details/106386048)
-
-**摘要**：这道问题关键在于审题，题目只要求我们返回「最短的连续子区间」的长度。还可以借助「栈」的结论，通过 **出栈元素的下标** 找到需要修改的左边界最小值和右边界最大值。
-
----
-
-
-「力扣」第 581 题：[最短无序连续子数组](https://leetcode-cn.com/problems/shortest-unsorted-continuous-subarray/)（中等）
+## 题目描述
 
 给你一个整数数组 `nums` ，你需要找出一个 **连续子数组** ，如果对这个子数组进行升序排序，那么整个数组都会变为升序排序。
 
@@ -55,6 +45,10 @@ tags:
 - $-10^5 \le nums[i] \le 10^5$
 
 **进阶：** 你可以设计一个时间复杂度为 `O(n)` 的解决方案吗？
+
+---
+
+**摘要**：这道问题关键在于审题，题目只要求我们返回「最短的连续子区间」的长度。还可以借助「栈」的结论，通过 **出栈元素的下标** 找到需要修改的左边界最小值和右边界最大值。
 
 **思路分析**：
 

@@ -1,38 +1,73 @@
 ---
-title: 
+title: 「力扣」第 144 题：二叉树的前序遍历（中等）
 icon: yongyan
 category: 栈
 tags:
   - 栈
 ---
 
-+ 题目链接：[144. 二叉树的前序遍历](https://leetcode-cn.com/problems/binary-tree-preorder-traversal/description/)；
-+ 题解链接：[]()。
++ 题目链接：[144. 二叉树的前序遍历](https://leetcode-cn.com/problems/binary-tree-preorder-traversal/description/)。
 
 
 ## 题目描述
 
+给你二叉树的根节点 `root` ，返回它节点值的 **前序** 遍历。
 
-## 「力扣」第 144 题：二叉树的前序遍历
+ 
 
-传送门：英文网址：[144. Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/description/) ，中文网址： 。
+**示例 1：**
 
-> 给定一个二叉树，返回它的 *前序* 遍历。
->
-> **示例:**
->
-> ```
-> 输入: [1,null,2,3]  
-> 1
-> \
-> 2
-> /
-> 3 
-> 
-> 输出: [1,2,3]
-> ```
->
-> **进阶:** 递归算法很简单，你可以通过迭代算法完成吗？
+![img](https://assets.leetcode.com/uploads/2020/09/15/inorder_1.jpg)
+
+```
+输入：root = [1,null,2,3]
+输出：[1,2,3]
+```
+
+**示例 2：**
+
+```
+输入：root = []
+输出：[]
+```
+
+**示例 3：**
+
+```
+输入：root = [1]
+输出：[1]
+```
+
+**示例 4：**
+
+![img](https://tva1.sinaimg.cn/large/008i3skNgy1gxs82cp3uqj305m05mglg.jpg)
+
+
+
+
+
+```
+输入：root = [1,2]
+输出：[1,2]
+```
+
+**示例 5：**
+
+![img](https://assets.leetcode.com/uploads/2020/09/15/inorder_4.jpg)
+
+```
+输入：root = [1,null,2]
+输出：[1,2]
+```
+
+ 
+
+**提示：**
+
+- 树中节点数目在范围 `[0, 100]` 内
+- `-100 <= Node.val <= 100`
+
+## 思路分析
 
 递归的写法。下面这种写法是错的：这是我想当然，轻视问题而写出的错误程序。
 
@@ -206,4 +241,3 @@ public class Solution4 {
 }
 ```
 
-### 

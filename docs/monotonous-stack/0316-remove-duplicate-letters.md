@@ -20,6 +20,8 @@ tags:
 
 ---
 
++ 题目链接：[316. 去除重复字母](https://leetcode-cn.com/problems/remove-duplicate-letters/)；
++ 题解链接：[栈 + 哨兵技巧（Java）](https://leetcode-cn.com/problems/remove-duplicate-letters/solution/zhan-by-liweiwei1419/)。
 
 
 ## 题目描述

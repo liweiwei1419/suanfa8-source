@@ -1,16 +1,12 @@
 ---
-title: 「力扣」第 1400 题：构造 K 个回文字符串
+title: 「力扣」第 1400 题：构造 K 个回文字符串（中等）
 icon: yongyan
 category: 贪心算法
 tags:
   - 贪心算法
 ---
 
-
-
-
-#### [1400. 构造 K 个回文字符串](https://leetcode-cn.com/problems/construct-k-palindrome-strings/)
-
++ 题目链接：[1400. 构造 K 个回文字符串](https://leetcode-cn.com/problems/construct-k-palindrome-strings/)。
 
 ## 题目描述
 

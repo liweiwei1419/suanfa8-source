@@ -1,5 +1,5 @@
 ---
-title: 「力扣」第 860 题：柠檬水找零
+title: 「力扣」第 860 题：柠檬水找零（简单）
 icon: yongyan
 category: 贪心算法
 tags:

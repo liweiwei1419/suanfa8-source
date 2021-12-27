@@ -1,5 +1,5 @@
 ---
-title: 「力扣」第 145 题：二叉树的后序遍历
+title: 「力扣」第 145 题：二叉树的后序遍历（困难）
 icon: yongyan
 category: 栈
 tags:
@@ -11,32 +11,35 @@ tags:
 
 ## 题目描述
 
+Given the `root` of a binary tree, return the postorder traversal of its nodes' values.
 
+**Example 1:**
 
+![img](https://assets.leetcode.com/uploads/2020/08/28/pre1.jpg)
 
-> 给定一个整数 *n*，生成所有由 1 ... *n* 为节点所组成的**二叉搜索树**。
->
-> **示例:**
->
-> ```
-> 输入: 3
-> 输出:
-> [
-> [1,null,3,2],
-> [3,2,null,1],
-> [3,1,null,null,2],
-> [2,1,3],
-> [1,null,2,null,3]
-> ]
-> 解释:
-> 以上的输出对应以下 5 种不同结构的二叉搜索树：
-> 
-> 1         3     3      2      1
->  \       /     /      / \      \
->   3     2     1      1   3      2
->  /     /       \                 \
-> 2     1         2                 3
-> ```
+```
+Input: root = [1,null,2,3]
+Output: [3,2,1]
+```
+
+**Example 2:**
+
+```
+Input: root = []
+Output: []
+```
+
+**Example 3:**
+
+```
+Input: root = [1]
+Output: [1]
+```
+
+ **Constraints:**
+
+- The number of the nodes in the tree is in the range `[0, 100]`.
+- `-100 <= Node.val <= 100`
 
 Python 代码：
 
@@ -72,4 +75,3 @@ class Solution:
 
 上面的过程更好地体现了递归过程中系统栈的作用，按照这种方式，所有的递归的代码都可以改造成非递归的代码。
 
-（本节完）

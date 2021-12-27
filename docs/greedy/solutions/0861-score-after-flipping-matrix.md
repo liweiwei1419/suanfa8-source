@@ -6,13 +6,10 @@ tags:
   - 贪心算法
 ---
 
-+ 题目链接：[861. 翻转矩阵后的得分](https://leetcode-cn.com/problems/score-after-flipping-matrix/)；
-+ 题解链接：[]()。
++ 题目链接：[861. 翻转矩阵后的得分](https://leetcode-cn.com/problems/score-after-flipping-matrix/)。
 
 
 ## 题目描述
-
-## 例 7：「力扣」第 861 题：翻转矩阵后的得分（中等）
 
 有一个二维矩阵 `A` 其中每个元素的值为 `0` 或 `1` 。
 

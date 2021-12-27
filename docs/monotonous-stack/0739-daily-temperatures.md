@@ -6,26 +6,42 @@ tags:
   - 栈
 ---
 
-+ 题目链接：[]()；
-+ 题解链接：[]()。
-
++ 题目链接：[739. 每日温度](https://leetcode-cn.com/problems/daily-temperatures/)；
++ 题解链接：[暴力解法 + 栈（单调栈）](https://leetcode-cn.com/problems/daily-temperatures/solution/bao-li-jie-fa-dan-diao-zhan-by-liweiwei1419/)。
 
 ## 题目描述
 
+请根据每日 `气温` 列表 `temperatures` ，请计算在每一天需要等几天才会有更高的温度。如果气温在这之后都不会升高，请在该位置用 `0` 来代替。
 
-链接：https://leetcode-cn.com/problems/daily-temperatures
+**示例 1:**
 
-题解链接：https://leetcode-cn.com/problems/daily-temperatures/solution/bao-li-jie-fa-dan-diao-zhan-by-liweiwei1419/
+```
+输入: temperatures = [73,74,75,71,69,72,76,73]
+输出: [1,1,4,2,1,1,0,0]
+```
 
-难易程度：中等。
+**示例 2:**
 
-> 根据每日 `气温` 列表，请重新生成一个列表，对应位置的输入是你需要再等待多久温度才会升高超过该日的天数。如果之后都不会升高，请在该位置用 0 来代替。
->
-> 例如，给定一个列表 `temperatures = [73, 74, 75, 71, 69, 72, 76, 73]`，你的输出应该是 `[1, 1, 4, 2, 1, 1, 0, 0]`。
->
-> 提示：气温 列表长度的范围是 `[1, 30000]`。每个气温的值的均为华氏度，都是在 `[30, 100]` 范围内的整数。
+```
+输入: temperatures = [30,40,50,60]
+输出: [1,1,1,0]
+```
 
-### 方法一：暴力解法（Brute Force）
+**示例 3:**
+
+```
+输入: temperatures = [30,60,90]
+输出: [1,1,0]
+```
+
+
+
+**提示：**
+
+- `1 <= temperatures.length <= 105`
+- `30 <= temperatures[i] <= 100`
+
+## 方法一：暴力解法（Brute Force）
 
 关键是：**找出右边第 1 个严格大于自己的元素的索引**。
 
@@ -64,7 +80,7 @@ public class Solution {
 
 ![image-20191203111906535](https://tva1.sinaimg.cn/large/006tNbRwly1g9jd8e10k2j30sk06ogmg.jpg)
 
-### 方法二：单调栈
+## 方法二：单调栈
 
 > 要点：
 >
