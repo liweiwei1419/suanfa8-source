@@ -1,15 +1,14 @@
 ---
-title: 「力扣」第 433 题：最小基因变化
+title: 「力扣」第 433 题：最小基因变化（中等）
 icon: yongyan
 category: 广度优先遍历
 tags:
   - 广度优先遍历
 ---
 
++ 题目链接：[433. 最小基因变化](https://leetcode-cn.com/problems/minimum-genetic-mutation/)。
 
-#### [433. 最小基因变化](https://leetcode-cn.com/problems/minimum-genetic-mutation/)（单向、双向广度优先遍历）
-
----
+## 题目描述
 
 一条基因序列由一个带有 $8$ 个字符的字符串表示，其中每个字符都属于 `"A"`, `"C"`, `"G"`, `"T"`中的任意一个。
 
@@ -57,15 +56,9 @@ bank: ["AAAACCCC", "AAACCCCC", "AACCCCCC"]
 返回值: 3
 ```
 
-参考代码：
+## 方法一：单向广度优先遍历
 
-
-
-
-
-### 方法一：单向广度优先遍历
-
-
+**参考代码 1**：
 
 ```Java []
 import java.util.Collections;
@@ -125,11 +118,9 @@ public class Solution {
 }
 ```
 
-### 方法二：双向广度优先遍历
+## 方法二：双向广度优先遍历
 
 参考资料：https://leetcode-cn.com/problems/minimum-genetic-mutation/solution/shen-du-you-xian-yan-du-you-xian-shuang-xiang-yan-/
 
-```Java []
 
-```
 

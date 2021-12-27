@@ -1,8 +1,15 @@
-# 题解 | 「力扣」第 1282 题：用户分组（中等、优先队列）
+---
+title: 「力扣」第 1282 题：用户分组（中等）
+icon: jingxuan
+category: 优先队列
+tags: 
+  - 优先队列
+---
 
-+ [题目链接](https://leetcode-cn.com/problems/group-the-people-given-the-group-size-they-belong-to/)
 
++ 题目链接：[1282. 用户分组](https://leetcode-cn.com/problems/group-the-people-given-the-group-size-they-belong-to/)。
 
+## 题目描述
 
 有 `n` 位用户参加活动，他们的 **ID** 从 `0` 到 `n - 1`，每位用户都 **恰好** 属于某一用户组。给你一个长度为 `n` 的数组 `groupSizes`，其中包含每位用户所处的用户组的大小，请你返回用户分组情况（存在的用户组以及每个组中用户的 ID）。
 
@@ -30,9 +37,7 @@
 - `1 <= n <= 500`
 - `1 <= groupSizes[i] <= n`
 
-
-
-**思路分析**：
+## 思路分析
 
 + 观察示例 1 和示例 2，如果 `size = 1` ，这个用户一定单独为一组，因此我们可以把有相同 `size` 的用户分为一类；
 + 我们观察到：数组 `groupSizes` 里的元素的值的特点：**相同值的个数一定是这个相同值的倍数**：

@@ -1,5 +1,5 @@
 ---
-title: 「力扣」第 127 题：单词接龙
+title: 「力扣」第 127 题：单词接龙（困难）
 icon: yongyan
 category: 广度优先遍历
 tags:
@@ -10,48 +10,44 @@ tags:
 + 题目链接：[127. 单词接龙](https://leetcode-cn.com/problems/word-ladder/)
 + 题解链接：[广度优先遍历、双向广度优先遍历（Java、Python）](https://leetcode-cn.com/problems/word-ladder/solution/yan-du-you-xian-bian-li-shuang-xiang-yan-du-you-2/)
 
-给定两个单词（ `beginWord` 和 `endWord`）和一个字典，找到从 `beginWord` 到 `endWord` 的最短转换序列的长度。转换需遵循如下规则：
+## 题目描述
 
-1. 每次转换只能改变一个字母。
-2. 转换过程中的中间单词必须是字典中的单词。
+字典 `wordList` 中从单词 `beginWord` 和 `endWord` 的 **转换序列** 是一个按下述规格形成的序列：
 
-**说明:**
+- 序列中第一个单词是 `beginWord` 。
+- 序列中最后一个单词是 `endWord` 。
+- 每次转换只能改变一个字母。
+- 转换过程中的中间单词必须是字典 `wordList` 中的单词。
 
-- 如果不存在这样的转换序列，返回 0。
-- 所有单词具有相同的长度。
-- 所有单词只由小写字母组成。
-- 字典中不存在重复的单词。
-- 你可以假设 `beginWord` 和 `endWord` 是非空的，且二者不相同。
+给你两个单词 `beginWord` 和 `endWord` 和一个字典 `wordList` ，找到从 `beginWord` 到 `endWord` 的 **最短转换序列** 中的 **单词数目** 。如果不存在这样的转换序列，返回 0。
 
-**示例 1:**
+**示例 1：**
 
 ```
-输入:
-beginWord = "hit",
-endWord = "cog",
-wordList = ["hot","dot","dog","lot","log","cog"]
-
-输出: 5
-
-解释: 一个最短转换序列是 "hit" -> "hot" -> "dot" -> "dog" -> "cog",
-     返回它的长度 5。
+输入：beginWord = "hit", endWord = "cog", wordList = ["hot","dot","dog","lot","log","cog"]
+输出：5
+解释：一个最短转换序列是 "hit" -> "hot" -> "dot" -> "dog" -> "cog", 返回它的长度 5。
 ```
 
-**示例 2:**
+**示例 2：**
 
 ```
-输入:
-beginWord = "hit"
-endWord = "cog"
-wordList = ["hot","dot","dog","lot","log"]
-
-输出: 0
-
-解释: endWord "cog" 不在字典中，所以无法进行转换。
+输入：beginWord = "hit", endWord = "cog", wordList = ["hot","dot","dog","lot","log"]
+输出：0
+解释：endWord "cog" 不在字典中，所以无法进行转换。
 ```
 
----
+**提示：**
 
+- `1 <= beginWord.length <= 10`
+- `endWord.length == beginWord.length`
+- `1 <= wordList.length <= 5000`
+- `wordList[i].length == beginWord.length`
+- `beginWord`、`endWord` 和 `wordList[i]` 由小写英文字母组成
+- `beginWord != endWord`
+- `wordList` 中的所有字符串 **互不相同**
+
+## 思路分析
 
 ### 一句话题解
 
@@ -61,7 +57,7 @@ wordList = ["hot","dot","dog","lot","log"]
 >
 > 已知目标顶点的情况下，可以分别从起点和目标顶点（终点）执行广度优先遍历，直到遍历的部分有交集，这是双向广度优先遍历的思想。
 
-### 方法一：广度优先遍历
+## 方法一：广度优先遍历
 
 分析题意：
 
@@ -219,7 +215,7 @@ if __name__ == '__main__':
     print(res)
 ```
 
-### 方法二：双向 BFS
+## 方法二：双向 BFS
 
 
 + 已知目标顶点的情况下，可以分别从起点和目标顶点（终点）执行广度优先遍历，直到遍历的部分有交集。这种方式搜索的单词数量会更小一些；
@@ -398,64 +394,3 @@ if __name__ == '__main__':
 
 
 
-### 练习：LeetCode 第 127 题：单词接龙
-
-传送门：[127. 单词接龙](https://leetcode-cn.com/problems/word-ladder/)。
-
-> 给定两个单词（*beginWord* 和 *endWord*）和一个字典，找到从 *beginWord* 到 *endWord* 的最短转换序列的长度。转换需遵循如下规则：
->
-> 1. 每次转换只能改变一个字母。
-> 2. 转换过程中的中间单词必须是字典中的单词。
->
-> **说明:**
->
-> - 如果不存在这样的转换序列，返回 0。
-> - 所有单词具有相同的长度。
-> - 所有单词只由小写字母组成。
-> - 字典中不存在重复的单词。
-> - 你可以假设 *beginWord* 和 *endWord* 是非空的，且二者不相同。
->
-> **示例 1:**
->
-> ```
-> 输入:
-> beginWord = "hit",
-> endWord = "cog",
-> wordList = ["hot","dot","dog","lot","log","cog"]
-> 
-> 输出: 5
-> 
-> 解释: 一个最短转换序列是 "hit" -> "hot" -> "dot" -> "dog" -> "cog",
->      返回它的长度 5。
-> ```
->
-> **示例 2:**
->
-> ```
-> 输入:
-> beginWord = "hit"
-> endWord = "cog"
-> wordList = ["hot","dot","dog","lot","log"]
-> 
-> 输出: 0
-> 
-> 解释: endWord "cog" 不在字典中，所以无法进行转换。
-> ```
-
-分析：这道题目可以建模成一个有向图，原问题就可以抽象成一个有向无权图的最短路径问题，可以称之为套路的解决方案就是“广度优先遍历（BFS）”，明白了这些以后，写出正确的代码就不是难事。
-
-注意：（1）“图”的广度优先遍历使用的辅助数据结构有两个，一个是队列（用于一层一层排队），一个是一个数组或者是集合（用于判断当前考虑的元素是否以前已经处理过）。
-
-回顾：如果是树结构的广度优先遍历，就无需设置辅助的数组或者集合用于判断以前是否处理过。
-
-其实，只要思路很清楚，写出 AC 解就是自然而然的事情了。这里我说的自然而然是相比较于要考虑很多特殊情况（边界情况，+1或者 -1 情况）的简单问题来说，这道问题应该划分到简单。毕竟广度优先遍历是一个常规问题，不需要使用到什么小技巧。
-
-下面谈一谈我在解题过程中的一些优化：
-
-（1）原来是遍历 wordList，看看目标 word 与它们只差一个字母的情况，此时在 wordList 很大的情况下效率低下，故将 wordList 改成 HashSet，利用 HashSet 查询高效性避免了去遍历这件事情；
-
-（2）char[] 数组这件事情，其实还可以用 StringBuilder。（3）考虑能不能使用 Trie。
-
-
-
-Python 代码：

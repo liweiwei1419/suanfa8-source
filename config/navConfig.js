@@ -61,11 +61,11 @@ module.exports = [{
                                     "link": "/backtracking/"
                               },
 
-                              // {
-                              //       "text": "广度优先遍历",
-                              //       "icon": "jingjiang",
-                              //       "link": "/breadth-first-search/"
-                              // },
+                              {
+                                    "text": "广度优先遍历",
+                                    "icon": "jingjiang",
+                                    "link": "/breadth-first-search/"
+                              },
 
                               {
                                     "text": "拓扑排序",
@@ -115,32 +115,32 @@ module.exports = [{
                                     "icon": "jingjiang",
                                     "link": "/monotonous-stack/"
                               },
-                              // {
-                              //       "text": "队列",
-                              //       "icon": "jingjiang",
-                              //       "link": "/queue/"
-                              // },
-                              // {
-                              //       "text": "优先队列",
-                              //       "icon": "jingjiang",
-                              //       "link": "/heap/"
-                              // },
-                              // {
-                              //       "text": "二分搜索树",
-                              //       "icon": "jingjiang",
-                              //       "link": "/binary-search-tree/"
+                              {
+                                    "text": "队列",
+                                    "icon": "jingjiang",
+                                    "link": "/queue/"
+                              },
+                              {
+                                    "text": "优先队列（堆）",
+                                    "icon": "jingjiang",
+                                    "link": "/heap/"
+                              },
+                              {
+                                    "text": "二分搜索树",
+                                    "icon": "jingjiang",
+                                    "link": "/binary-search-tree/"
 
-                              // },
+                              },
                               {
                                     "text": "哈希表",
                                     "icon": "jingjiang",
                                     "link": "/hash-table/"
                               },
-                              // {
-                              //       "text": "前缀和与哈希表",
-                              //       "icon": "jingjiang",
-                              //       "link": "/presum-hashtable/"
-                              // },
+                              {
+                                    "text": "前缀和与哈希表",
+                                    "icon": "jingjiang",
+                                    "link": "/presum-hashtable/"
+                              },
                               {
                                     "text": "并查集",
                                     "icon": "jingjiang",
@@ -201,7 +201,7 @@ module.exports = [{
 
 
 
-// 「力扣」滑动窗口题单：https://leetcode-cn.com/tag/sliding-window/
+// 
 
 // {
                               //       "text":"基础排序算法精讲",
@@ -329,7 +329,7 @@ module.exports = [{
       //       "link": "/suanfa8/changelog.md"
       // }
 
-// 
+// 「力扣」滑动窗口题单：https://leetcode-cn.com/tag/sliding-window/
 // 字符串：https://leetcode-cn.com/tag/string/problemset/
 // 「力扣」树状数组题单：https://leetcode-cn.com/tag/binary-indexed-tree/
 // 单调队列：https://leetcode-cn.com/tag/monotonic-queue/
@@ -338,16 +338,13 @@ module.exports = [{
 // 哈希表：https://leetcode-cn.com/tag/hash-table/problemset/
 // 深度优先搜索：https://leetcode-cn.com/tag/depth-first-search/problemset/
 // 广度优先搜索：https://leetcode-cn.com/tag/breadth-first-search/problemset/
-// 
 // 贪心算法：https://leetcode-cn.com/tag/greedy/problemset/
 // 拓扑排序：https://leetcode-cn.com/tag/topological-sort/problemset/
-
-// 
-      // { text: '双指针', link: '/binary-search/'},
-      // { text: '链表', link: '/binary-search/'},
-      // { text: '栈与队列', link: '/binary-search/'},
-      // { text: '优先队列', link: '/binary-search/'},
-      // { text: '二叉树', link: '/binary-search/'},
-      // { text: '回溯算法', link: '/binary-search/'},
-      // { text: '动态规划', link: '/binary-search/'},
-      // { text: '贪心算法', link: '/binary-search/'},
+// { text: '双指针', link: '/binary-search/'},
+// { text: '链表', link: '/binary-search/'},
+// { text: '栈与队列', link: '/binary-search/'},
+// { text: '优先队列', link: '/binary-search/'},
+// { text: '二叉树', link: '/binary-search/'},
+// { text: '回溯算法', link: '/binary-search/'},
+// { text: '动态规划', link: '/binary-search/'},
+// { text: '贪心算法', link: '/binary-search/'},

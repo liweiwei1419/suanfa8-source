@@ -33,7 +33,7 @@ tags:
 
 **数据范围**：
 
-- $1 \le nums.length \le 10^5$
+- $1 \le \text{nums.length} \le 10^5$
 - 输入数组的值只包含 $0$ 和 $1$
 
 ## 思路分析

@@ -17,9 +17,15 @@ module.exports = [
 		"icon": "book",
 		"children" : [
 			"/heap/practice.md",
-			"/heap/solutions/0295-find-median-from-data-stream.md",
+
+			"/heap/solutions/0347-top-k-frequent-elements.md",
+			"/heap/solutions/0703-kth-largest-element-in-a-stream.md",
+			"/heap/solutions/0973-k-closest-points-to-origin.md",
+
 			"/heap/solutions/0218-the-skyline-problem.md",
-			"/heap/solutions/0973-k-closest-points-to-origin.md"
+			"/heap/solutions/0295-find-median-from-data-stream.md",
+			
+			"/heap/solutions/1282-group-the-people-given-the-group-size-they-belong-to.md"
 		]
 	}
 ]
