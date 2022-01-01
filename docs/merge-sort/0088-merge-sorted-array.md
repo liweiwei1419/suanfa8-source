@@ -437,5 +437,65 @@ class Solution:
 
 说明：`range(m + n - 1, -1, -1)` 表示索引的最大值是 `m + n - 1` ，最小值是 `0`。
 
-（本节完）
+---
+
++ [题目链接](https://leetcode-cn.com/problems/merge-sorted-array)
+
+
+
+**关键**：从后向前归并排序。
+
+其实就是归并排序，从后面向前面归并排序，扩展：字符串替换空格。
+
+**参考代码**：
+
+```java
+public class Solution {
+
+    /**
+     * @param nums1 一个排好序的数组1
+     * @param m
+     * @param nums2 一个排好序的数组2
+     * @param n     结果放在 nums1 中
+     */
+    public void merge(int[] nums1, int m, int[] nums2, int n) {
+        int[] temp = new int[m + n];
+        for (int i = 0; i < m; i++) {
+            temp[i] = nums1[i];
+        }
+        for (int i = 0; i < n; i++) {
+            temp[m + i] = nums2[i];
+        }
+
+
+        int left = 0; // 数组1的第1个元素
+        int right = m; // 数组2的第1个元素
+
+        // 这种特殊情况要考虑进去
+        if (m > 0 && n > 0 && temp[m - 1] <= temp[m]) {
+            for (int i = 0; i < m + n; i++) {
+                nums1[i] = temp[i];
+            }
+            return;
+        }
+
+        // 要赋值完 m+n 个元素，就要遍历 m+n 个元素
+        for (int i = 0; i < m + n; i++) {
+            if (left >= m) { // 如果左边用完了，就一直拿右边的元素
+                nums1[i] = temp[right];
+                right++;
+            } else if (right >= m + n) {
+                nums1[i] = temp[left];
+                left++;
+            } else if (temp[left] < temp[right]) {
+                nums1[i] = temp[left];
+                left++;
+            } else { // temp[left] >= temp[right]
+                nums1[i] = temp[right];
+                right++;
+            }
+        }
+    }
+} 
+```
 

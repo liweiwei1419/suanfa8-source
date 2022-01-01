@@ -17,7 +17,8 @@ module.exports = [
 		"children": [
 			"/merge-sort/0051-shu-zu-zhong-de-ni-xu-dui-lcof.md",
 			"/merge-sort/0315-count-of-smaller-numbers-after-self.md",
-			"/merge-sort/0493-reverse-pairs.md"
+			"/merge-sort/0493-reverse-pairs.md",
+			"/merge-sort/0050-powx-n.md"
 		]
 	}
 ]

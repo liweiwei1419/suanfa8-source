@@ -90,6 +90,21 @@ module.exports = [{
                                     "text": "图论精讲",
                                     "icon": "jingjiang",
                                     "link": "/graph/"
+                              },
+                              {
+                                    "text": "数学",
+                                    "icon": "jingjiang",
+                                    "link": "/math/"
+                              },
+                              {
+                                    "text": "位运算",
+                                    "icon": "jingjiang",
+                                    "link": "/bit-manipulation/"
+                              },
+                              {
+                                    "text": "差分",
+                                    "icon": "jingjiang",
+                                    "link": "/difference/"
                               }
                         ]
                   },
@@ -98,6 +113,11 @@ module.exports = [{
                         "text": "数据结构精讲",
                         "icon": "jingjiang",
                         "items": [
+                              {
+                                    "text": "数组",
+                                    "icon": "jingjiang",
+                                    "link": "/array/"
+                              },
 
                               {
                                     "text": "链表",
@@ -141,6 +161,7 @@ module.exports = [{
                                     "icon": "jingjiang",
                                     "link": "/presum-hashtable/"
                               },
+
                               {
                                     "text": "并查集",
                                     "icon": "jingjiang",

@@ -23,7 +23,7 @@ const loopInvariant = require('./sidebar/loop-invariant/loop-invariant.js');
 const chat = require('./sidebar/chat/chat.js');
 
 
-// 
+
 
 
 
@@ -35,6 +35,13 @@ const hashTable = require('./sidebar/hash-table/hash-table.js');
 const stack = require('./sidebar/stack/stack.js');
 const monotonousStack = require('./sidebar/monotonous-stack/monotonous-stack.js');
 const queue = require('./sidebar/queue/queue.js');
+
+const math = require('./sidebar/math/math.js');
+
+const bitManipulation = require('./sidebar/bit-manipulation/bit-manipulation.js');
+const difference = require('./sidebar/difference/difference.js');
+
+const array = require('./sidebar/array/array.js');
 
 module.exports = {
 	"/choice/": choice,
@@ -61,10 +68,14 @@ module.exports = {
 	"/stack/": stack,
 	"/queue/": queue,
 	"/monotonous-stack/":monotonousStack,
-	//
+	
+	"/math/":math,
+	"/difference/" : difference,
+	"/array/" : array,
 
 	"/loop-invariant/": loopInvariant,
 	"/backtracking/": backtracking,
 	"/chat/": chat,
+	"/bit-manipulation/" : bitManipulation,
 	"/": index
 }
