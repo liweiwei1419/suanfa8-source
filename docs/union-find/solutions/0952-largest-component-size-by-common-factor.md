@@ -1,7 +1,7 @@
 ---
 title: 「力扣」第 952 题：按公因数计算最大组件大小（困难）
 icon: yongyan
-categories: 并查集
+category: 并查集
 tags:
   - 并查集
 ---

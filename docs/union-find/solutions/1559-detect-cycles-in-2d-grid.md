@@ -1,7 +1,7 @@
 ---
 title: 「力扣」第 1559 题：二维网格图中探测环（中等）
 icon: yongyan
-categories: 并查集
+category: 并查集
 tags:
   - 并查集
 ---

@@ -1,15 +1,15 @@
 ---
 title: 「力扣」第 547 题：朋友圈（中等）
 icon: yongyan
-categories: 并查集
+category: 并查集
 tags:
   - 并查集
 ---
 
 这道题是并查集的典型问题，题目也非常接地气，现在改名叫「省份数量」了。
 
-+ [链接](https://leetcode-cn.com/problems/friend-circles/)
-+ [题解链接](https://leetcode-cn.com/problems/friend-circles/solution/bing-cha-ji-python-dai-ma-java-dai-ma-by-liweiwei1/)
++ 题目链接：[547. 省份数量](https://leetcode-cn.com/problems/number-of-provinces/)
++ 题解链接：[并查集（Python 代码、Java 代码）](https://leetcode-cn.com/problems/number-of-provinces/solution/bing-cha-ji-python-dai-ma-java-dai-ma-by-liweiwei1/)
 
 班上有 **N** 名学生。其中有些人是朋友，有些则不是。他们的友谊具有是传递性。如果已知 A 是 B 的朋友，B 是 C 的朋友，那么我们可以认为 A 也是 C 的朋友。所谓的朋友圈，是指所有朋友的集合。
 

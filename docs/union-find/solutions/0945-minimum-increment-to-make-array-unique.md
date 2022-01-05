@@ -1,7 +1,7 @@
 ---
 title: 「力扣」第 945 题：使数组唯一的最小增量（中等）
 icon: yongyan
-categories: 并查集
+category: 并查集
 tags:
   - 并查集
 ---

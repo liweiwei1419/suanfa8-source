@@ -1,7 +1,7 @@
 ---
 title: 「力扣」第 990 题：等式方程的可满足性（中等）
 icon: yongyan
-categories: 并查集
+category: 并查集
 tags:
   - 并查集
 ---

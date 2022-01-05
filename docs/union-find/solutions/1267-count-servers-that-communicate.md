@@ -1,7 +1,7 @@
 ---
 title: 「力扣」第 1267 题：统计参与通信的服务器（中等）
 icon: yongyan
-categories: 并查集
+category: 并查集
 tags:
   - 并查集
 ---

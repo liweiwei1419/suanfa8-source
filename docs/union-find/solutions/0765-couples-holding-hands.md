@@ -1,7 +1,7 @@
 ---
 title: 「力扣」第 765 题：情侣牵手（中等）
 icon: yongyan
-categories: 并查集
+category: 并查集
 tags:
   - 并查集
 ---
