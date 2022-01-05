@@ -1,7 +1,7 @@
 ---
 title: 「力扣」第 23 题：合并 K 个排序链表（困难）
 icon: yongyan
-categories: 链表
+category: 链表
 tags:
   - 贪心算法
   - 优先队列
@@ -55,4 +55,55 @@ tags:
 - `-10^4 <= lists[i][j] <= 10^4`
 - `lists[i]` 按 **升序** 排列
 - `lists[i].length` 的总和不超过 `10^4`
+
+
+## 方法一：优先队列
+
+请见 [优先队列]() 专题。 
+
+
+## 方法二：分治算法
+
+还可以采用归并排序的分治思想来解决，代码结构和归并排序可以说是同出一辙。
+
+1. 先一分为二地解决了这个问题；
+
+2. 再考虑如何合并，这个合并的过程也是一个递归方法。 
+
+Python 代码：
+
+```python
+class Solution:
+    def mergeKLists(self, lists):
+        """
+        :type lists: List[ListNode]
+        :rtype: ListNode
+        """
+
+        size = len(lists)
+        if size == 0:
+            return None
+        return self.__merge_k_lists(lists, 0, size - 1)
+
+    def __merge_k_lists(self, lists, left, right):
+        if left >= right:
+            return lists[left]
+        mid = left + (right - left) // 2
+        listnode1 = self.__merge_k_lists(lists, left, mid)
+        listnode2 = self.__merge_k_lists(lists, mid + 1, right)
+        return self.__merge_two_sorted_list_node(listnode1, listnode2)
+
+    def __merge_two_sorted_list_node(self, list1, list2):
+        if list1 is None:
+            return list2
+        if list2 is None:
+            return list1
+
+        if list1.val < list2.val:
+            list1.next = self.__merge_two_sorted_list_node(list1.next, list2)
+            return list1
+        else:
+            list2.next = self.__merge_two_sorted_list_node(list1, list2.next)
+            return list2
+```
 

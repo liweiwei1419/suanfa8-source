@@ -1,7 +1,7 @@
 ---
 title: 「力扣」第 82 题：删除排序链表中的重复元素 II（中等）
 icon: yongyan
-categories: 链表
+category: 链表
 tags:
   - 链表
 ---

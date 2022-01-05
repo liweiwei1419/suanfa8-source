@@ -1,13 +1,13 @@
 ---
 title: 「力扣」第 92 题：反转链表 II（中等）
 icon: yongyan
-categories: 链表
+category: 链表
 tags:
   - 链表
 ---
 
-+ 题目链接：[92. 反转链表 II](https://leetcode-cn.com/problems/reverse-linked-list-ii)
-+ 题解链接：[4 个指针、3 个指针](https://leetcode-cn.com/problems/reverse-linked-list-ii/solution/4-ge-zhi-zhen-3-ge-zhi-zhen-by-liweiwei1419/)
++ 题目链接：[92. 反转链表 II](https://leetcode-cn.com/problems/reverse-linked-list-ii)；
++ 题解链接：[4 个指针、3 个指针](https://leetcode-cn.com/problems/reverse-linked-list-ii/solution/4-ge-zhi-zhen-3-ge-zhi-zhen-by-liweiwei1419/)。
 
 ## 题目描述
 

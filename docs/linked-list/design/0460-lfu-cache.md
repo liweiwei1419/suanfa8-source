@@ -1,7 +1,7 @@
 ---
 title: 「力扣」第 460 题：LFU 缓存
 icon: yongyan
-categories: 链表
+category: 链表
 tags:
  - 哈希表
  - 双向链表

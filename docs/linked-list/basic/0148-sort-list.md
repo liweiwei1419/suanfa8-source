@@ -1,7 +1,7 @@
 ---
 title: 「力扣」第 148 题：排序链表
 icon: yongyan
-categories: 链表
+category: 链表
 tags:
   - 链表
 ---

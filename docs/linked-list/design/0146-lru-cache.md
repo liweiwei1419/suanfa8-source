@@ -1,7 +1,7 @@
 ---
 title: 「力扣」第 146 题：LRU 缓存机制（中等）
 icon: yongyan
-categories: 链表
+category: 链表
 tags:
   - 哈希表
   - 双向链表

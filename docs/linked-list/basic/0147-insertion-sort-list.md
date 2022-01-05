@@ -1,7 +1,7 @@
 ---
 title: 「力扣」第 147 题：对链表进行插入排序（中等）
 icon: yongyan
-categories: 链表
+category: 链表
 tags:
   - 链表
 ---

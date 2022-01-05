@@ -1,7 +1,7 @@
 ---
 title: 「力扣」第 25 题：K 个一组翻转链表（困难）
 icon: yongyan
-categories: 链表
+category: 链表
 tags:
   - 链表
   - 递归

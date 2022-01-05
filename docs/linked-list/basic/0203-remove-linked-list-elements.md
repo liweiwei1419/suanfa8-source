@@ -1,7 +1,7 @@
 ---
 title: 「力扣」第 203 题：移除链表元素（简单）
 icon: yongyan
-categories: 链表
+category: 链表
 tags:
   - 单链表
 ---

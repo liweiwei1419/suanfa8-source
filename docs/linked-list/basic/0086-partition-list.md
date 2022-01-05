@@ -1,7 +1,7 @@
 ---
 title: 「力扣」第 86 题：分隔链表（中等）
 icon: yongyan
-categories: 链表
+category: 链表
 tags:
   - 链表
 ---

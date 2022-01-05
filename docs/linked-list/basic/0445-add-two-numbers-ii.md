@@ -1,7 +1,7 @@
 ---
 title: 「力扣」第 445 题：两数相加 II（中等）
 icon: yongyan
-categories: 链表
+category: 链表
 tags:
   - 链表
   - 递归

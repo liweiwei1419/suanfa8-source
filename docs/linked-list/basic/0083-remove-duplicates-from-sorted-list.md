@@ -1,7 +1,7 @@
 ---
 title: 「力扣」第 83 题：删除排序链表中的重复元素（简单）
 icon: yongyan
-categories: 链表
+category: 链表
 tags:
   - 链表
 ---

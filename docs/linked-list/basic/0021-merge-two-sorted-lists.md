@@ -1,7 +1,7 @@
 ---
 title: 「力扣」第 21 题：合并两个有序链表（简单）
 icon: yongyan
-categories: 链表
+category: 链表
 tags:
   - 链表
   - 递归

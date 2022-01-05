@@ -1,7 +1,7 @@
 ---
 title: 「力扣」第 876 题：链表的中间结点（简单）
 icon: yongyan
-categories: 链表
+category: 链表
 tags:
   - 链表
 ---

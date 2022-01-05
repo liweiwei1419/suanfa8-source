@@ -1,7 +1,7 @@
 ---
 title: 「力扣」第 1206 题：设计跳表（困难）
 icon: yongyan
-categories: 链表
+category: 链表
 tags:
   - 链表
 ---

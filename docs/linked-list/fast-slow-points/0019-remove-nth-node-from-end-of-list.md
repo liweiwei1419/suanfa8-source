@@ -1,7 +1,7 @@
 ---
 title: 「力扣」第 19 题：删除链表的倒数第 N 个节点（中等）
 icon: yongyan
-categories: 链表
+category: 链表
 tags:
   - 链表
   - 快慢指针
@@ -9,6 +9,10 @@ tags:
 
 + 中文网址：[19. 删除链表的倒数第N个节点](https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/description/) ；
 + 英文网址：[19. Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/description/) 。
+
+
++ 题目链接：[19. 删除链表的倒数第 N 个结点](https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/)；
++ 题解链接：[快慢指针](https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/solution/kuai-man-zhi-zhen-by-liweiwei1419/)。
 
 ## 题目描述
 

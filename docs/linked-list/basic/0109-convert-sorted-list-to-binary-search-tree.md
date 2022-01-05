@@ -1,7 +1,7 @@
 ---
 title: 「力扣」第 109 题：有序链表转换二叉搜索树（中等）
 icon: yongyan
-categories: 链表
+category: 链表
 tags:
   - 链表
   - 分治法

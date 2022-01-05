@@ -1,7 +1,7 @@
 ---
 title: 「力扣」第 24 题：两两交换链表中的结点（中等）
 icon: yongyan
-categories: 链表
+category: 链表
 tags:
   - 链表
   - 递归

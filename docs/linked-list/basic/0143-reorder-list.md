@@ -1,7 +1,7 @@
 ---
 title: 「力扣」第 143 题：重排链表（中等）
 icon: yongyan
-categories: 链表
+category: 链表
 tags:
   - 链表
 ---

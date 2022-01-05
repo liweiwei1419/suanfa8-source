@@ -1,13 +1,14 @@
 ---
 title: 「力扣」第 2 题：两个数相加（中等）
 icon: yongyan
-categories: 链表
+category: 链表
 tags:
   - 链表
 ---
 
-+ 中文链接：[2. 两数相加](https://leetcode-cn.com/problems/add-two-numbers/description/) ；
-+ 英文链接：[2. Add Two Numbers](https://leetcode.com/problems/add-two-numbers/description/) 。
+
++ 题目链接：[2. 两数相加](https://leetcode-cn.com/problems/add-two-numbers/description/)；
++ 题解链接：[穿针引线](https://leetcode-cn.com/problems/add-two-numbers/solution/chuan-zhen-yin-xian-by-liweiwei1419-3/)。
 
 
 ## 题目描述
@@ -48,6 +49,144 @@ tags:
 - 每个链表中的节点数在范围 `[1, 100]` 内
 - `0 <= Node.val <= 9`
 - 题目数据保证列表表示的数字不含前导零
+
+---
+
+
+
+编码不难，注意体会以下两种写法的区别。
+
+考查知识点：
+
+1、虚拟结点的设置；
+
+2、穿针引线；
+
+3、链表调试。
+
+
+### 方法一：在两个链表的结点都到达末尾时结束遍历
+
+**参考代码 1**：
+
+```Java []
+class ListNode {
+    int val;
+    ListNode next;
+
+    ListNode(int x) {
+        val = x;
+    }
+
+    public ListNode(int[] nums) {
+        this.val = nums[0];
+        ListNode curNode = this;
+        for (int i = 1; i < nums.length; i++) {
+            curNode.next = new ListNode(nums[i]);
+            curNode = curNode.next;
+        }
+    }
+
+    @Override
+    public String toString() {
+        ListNode curNode = this;
+        StringBuilder stringBuilder = new StringBuilder();
+        while (curNode != null) {
+            stringBuilder.append(curNode.val);
+            stringBuilder.append(" -> ");
+            curNode = curNode.next;
+        }
+        stringBuilder.append("NULL");
+        return stringBuilder.toString();
+    }
+}
+
+
+public class Solution {
+
+    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+        // 特判
+        if (l1 == null) {
+            return l2;
+        }
+        if (l2 == null) {
+            return l1;
+        }
+        
+        ListNode dummyNode = new ListNode(-1);
+        ListNode curNode = dummyNode;
+
+        // carry 是进位的意思，一开始不进位
+        int carry = 0;
+
+        // 注意：这里是或者
+        while (l1 != null || l2 != null) {
+            if (l1 != null) {
+                carry += l1.val;
+                l1 = l1.next;
+            }
+            if (l2 != null) {
+                carry += l2.val;
+                l2 = l2.next;
+            }
+            curNode.next = new ListNode(carry % 10);
+            carry /= 10;
+            curNode = curNode.next;
+        }
+        if (carry == 1) {
+            curNode.next = new ListNode(1);
+        }
+        return dummyNode.next;
+    }
+}
+```
+
+### 方法二：在两个链表的结点其中有一个到达末尾时结束遍历
+
+**参考代码 2**：
+
+```Java []
+public class Solution {
+
+    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+        // 特判
+        if (l1 == null) {
+            return l2;
+        }
+        if (l2 == null) {
+            return l1;
+        }
+
+        ListNode dummyNode = new ListNode(-1);
+        ListNode curNode = dummyNode;
+
+        int carry = 0;
+        // 注意：这里是并且
+        while (l1 != null && l2 != null) {
+            int val = l1.val + l2.val + carry;
+            curNode.next = new ListNode(val % 10);
+            carry = val / 10;
+            curNode = curNode.next;
+            l1 = l1.next;
+            l2 = l2.next;
+        }
+
+        if (l1 == null) {
+            curNode.next = l2;
+        } else {
+            curNode.next = l1;
+        }
+
+        if (carry == 1) {
+            curNode.next = new ListNode(1);
+        }
+        return dummyNode.next;
+    }
+}
+```
+
+---
+
 
 ## 思路分析
 
