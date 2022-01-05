@@ -1,7 +1,7 @@
 ---
 title: 「力扣」第 22 题：括号生成（中等）
 icon: yongyan
-categories: 回溯算法
+category: 回溯算法
 tags:
   - 回溯算法
   - 递归

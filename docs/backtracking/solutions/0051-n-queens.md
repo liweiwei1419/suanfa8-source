@@ -1,7 +1,7 @@
 ---
 title: 「力扣」第 51 题：N 皇后（困难）
 icon: yongyan
-categories: 回溯算法
+category: 回溯算法
 tags:
   - 回溯算法
   - 递归

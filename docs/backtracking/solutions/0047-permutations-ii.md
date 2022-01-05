@@ -1,7 +1,7 @@
 ---
 title: 「力扣」第 47 题：全排列 II（中等）
 icon: shipin
-categories: 回溯算法
+category: 回溯算法
 tags:
   - 回溯算法
   - 递归

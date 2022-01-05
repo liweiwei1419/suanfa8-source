@@ -1,7 +1,7 @@
 ---
 title: 「力扣」第 842 题：将数组拆分成斐波那契序列（中等）
 icon: yongyan
-categories: 回溯算法
+category: 回溯算法
 tags:
   - 回溯算法
   - 递归

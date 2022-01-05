@@ -1,7 +1,7 @@
 ---
 title: 「力扣」第 1391 题：检查网格中是否存在有效路径（中等）
 icon: yongyan
-categories: 回溯算法
+category: 回溯算法
 tags:
   - 回溯算法
   - 递归

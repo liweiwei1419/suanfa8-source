@@ -1,7 +1,7 @@
 ---
 title: 「力扣」第 733 题：图像渲染（简单）
 icon: yongyan
-categories: 回溯算法
+category: 回溯算法
 tags:
   - 回溯算法
   - 递归

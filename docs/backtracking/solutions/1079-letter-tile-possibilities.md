@@ -1,7 +1,7 @@
 ---
 title: 「力扣」第 1079 题：活字印刷（中等）
 icon: yongyan
-categories: 回溯算法
+category: 回溯算法
 tags:
   - 回溯算法
   - 递归

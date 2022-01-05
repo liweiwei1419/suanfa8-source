@@ -1,7 +1,7 @@
 ---
 title: 「力扣」第 17 题：电话号码的字母组合（中等）
 icon: yongyan
-categories: 回溯算法
+category: 回溯算法
 tags:
   - 回溯算法
   - 递归

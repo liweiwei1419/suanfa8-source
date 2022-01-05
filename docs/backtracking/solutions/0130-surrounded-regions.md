@@ -1,7 +1,7 @@
 ---
 title: 「力扣」第 130 题：被围绕的区域
 icon: yongyan
-categories: 回溯算法
+category: 回溯算法
 tags:
   - 回溯算法
   - 递归

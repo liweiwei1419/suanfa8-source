@@ -1,7 +1,7 @@
 ---
 title: 「力扣」第 78 题：子集（中等）
 icon: yongyan
-categories: 回溯算法
+category: 回溯算法
 tags:
   - 回溯算法
   - 递归

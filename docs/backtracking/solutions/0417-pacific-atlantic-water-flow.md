@@ -1,7 +1,7 @@
 ---
-title: 「力扣」第 417 题：太平洋大西洋水流问题
+title: 「力扣」第 417 题：太平洋大西洋水流问题（中等）
 icon: yongyan
-categories: 回溯算法
+category: 回溯算法
 tags:
   - 回溯算法
   - 递归

@@ -1,7 +1,7 @@
 ---
 title: 「力扣」第 60 题：第 k 个排列（困难）
 icon: yongyan
-categories: 回溯算法
+category: 回溯算法
 tags:
   - 回溯算法
   - 递归

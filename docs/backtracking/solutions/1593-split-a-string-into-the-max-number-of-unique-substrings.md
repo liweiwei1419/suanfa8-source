@@ -1,7 +1,7 @@
 ---
 title: 「力扣」第 1593 题：拆分字符串使唯一子字符串的数目最大（中等）
 icon: yongyan
-categories: 回溯算法
+category: 回溯算法
 tags:
   - 回溯算法
   - 递归
