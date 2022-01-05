@@ -41,13 +41,12 @@ tags:
 
 <CodeGroup>
 <CodeGroupItem title="Java">
-
 ``` java {7,8}
 public class Solution {
 
     public int[] sortArray(int[] nums) {
         int len = nums.length;
-        // 循环不变量：将 nums[i] 插入到区间 [0, i) 使之成为有序数组
+        // 循环不变量：将 nums[i] 插入到区间 [0..i) 使之成为有序数组
         for (int i = 1; i < len; i++) {
             // 先暂存这个元素，然后之前元素逐个后移，留出空位
             int temp = nums[i];
@@ -63,7 +62,31 @@ public class Solution {
     }
 }
 ```
+</CodeGroupItem>
+<CodeGroupItem title="Java">
+```java
+public class Solution {
 
+    public int[] sortArray(int[] nums) {
+        int len = nums.length;
+        for (int i = 1; i < len; i++) {
+            int temp = nums[i];
+            int j = i;
+            for (; j > 0; j--) {
+                if (nums[j - 1] > temp) {
+                    nums[j] = nums[j - 1];
+                } else {
+                    break;
+                }
+            }
+            // 此时 nums[j - 1] <= temp
+            // nums[j] 的值被赋值到了 nums[j + 1]
+            nums[j] = temp;
+        }
+        return nums;
+    }
+}
+```
 </CodeGroupItem>
 
 <CodeGroupItem title="Python">

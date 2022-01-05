@@ -17,10 +17,10 @@ tags:
 
 **参考代码**：
 
+> 说明：该代码在「力扣」运行超时。
+
 ```java
 public class Solution {
-
-    // 冒泡排序：在「力扣」运行超时
 
     public int[] sortArray(int[] nums) {
         int len = nums.length;
@@ -49,6 +49,39 @@ public class Solution {
     }
 }
 ```
+
+补充说明：下面这份代码是讲课的时候写的代码，区别仅在于内层循环中对 `j` 的定义不同。
+
+```java
+public class Solution {
+
+    public int[] sortArray(int[] nums) {
+        int len = nums.length;
+        for (int i = 0; i < len - 1; i++) {
+            boolean sorted = true;
+            for (int j = 1; j < len - i; j++) {
+                if (nums[j - 1] > nums[j]) {
+                    swap(nums, j - 1, j);
+                    sorted = false;
+                }
+            }
+            if (sorted) {
+                return nums;
+            }
+        }
+        return nums;
+    }
+    
+    private void swap(int[] nums, int index1, int index2) {
+        int temp = nums[index1];
+        nums[index1] = nums[index2];
+        nums[index2] = temp;
+    }
+}
+```
+
+
+
 
 
 **复杂度分析**：

@@ -40,6 +40,7 @@ public class Solution {
 
     public int[] sortArray(int[] nums) {
         int len = nums.length;
+        // 把 nums[i] 插入有序数组 nums[0..i - 1]
         for (int i = 1; i < len; i++) {
             for (int j = i; j > 0; j--) {
                 // 注意：前面的数严格大于后面的数才交换
