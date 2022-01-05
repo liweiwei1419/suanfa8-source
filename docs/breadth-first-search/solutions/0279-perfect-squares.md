@@ -1,5 +1,5 @@
 ---
-title: 「力扣」第 279 题：完全平方式
+title: 「力扣」第 279 题：完全平方式（中等）
 icon: yongyan
 category: 广度优先遍历
 tags:
