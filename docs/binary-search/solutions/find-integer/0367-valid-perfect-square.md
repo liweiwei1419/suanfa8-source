@@ -1,5 +1,5 @@
 ---
-title: 「力扣」第 367 题：有效的完全平方数
+title: 「力扣」第 367 题：有效的完全平方数（中等）
 icon: yongyan
 category: 二分查找
 tags:

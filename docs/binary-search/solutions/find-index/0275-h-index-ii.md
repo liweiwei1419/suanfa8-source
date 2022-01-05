@@ -1,6 +1,6 @@
 ---
 title: 「力扣」第 275 题：H 指数 II（中等）
-icon: jingxuan
+icon: yongyan
 category: 二分查找
 tags: 
   - 二分查找

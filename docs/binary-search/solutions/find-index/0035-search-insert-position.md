@@ -1,6 +1,6 @@
 ---
 title: 「力扣」第 35 题：搜索插入位置（简单）
-icon: jingxuan
+icon: shipin
 category: 二分查找
 tags: 
   - 二分查找

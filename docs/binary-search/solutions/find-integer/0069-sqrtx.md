@@ -1,6 +1,6 @@
 ---
 title: 「力扣」第 69 题：x 的平方根（简单）
-icon: jingxuan
+icon: yongyan
 category: 二分查找
 tags: 
   - 二分查找

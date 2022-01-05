@@ -1,5 +1,5 @@
 ---
-title: 「力扣」第 1482 题：制作 m 束花所需的最少天数
+title: 「力扣」第 1482 题：制作 m 束花所需的最少天数（中等）
 icon: yongyan
 category: 二分查找
 tags:

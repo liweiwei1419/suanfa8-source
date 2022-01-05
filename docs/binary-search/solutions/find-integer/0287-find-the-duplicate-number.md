@@ -1,5 +1,5 @@
 ---
-title: 「力扣」第 287 题：数组中的重复数字
+title: 「力扣」第 287 题：数组中的重复数字（中等）
 icon: yongyan
 category: 二分查找
 tags:

@@ -1,10 +1,14 @@
 ---
-title: 「力扣」第 436 题：寻找右区间
+title: 「力扣」第 436 题：寻找右区间（中等）
 icon: yongyan
 category: 二分查找
 tags:
   - 二分查找
 ---
+
+
++ 题目链接：[436. 寻找右区间](https://leetcode-cn.com/problems/find-right-interval/)；
++ 题解链接：[二分查找、二分搜索树](https://leetcode-cn.com/problems/find-right-interval/solution/er-fen-cha-zhao-hong-hei-shu-by-liweiwei1419/)。
 
 ## 题目描述
 

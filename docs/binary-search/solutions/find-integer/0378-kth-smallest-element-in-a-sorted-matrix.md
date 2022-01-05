@@ -1,5 +1,5 @@
 ---
-title: 「力扣」第 378 题：有序矩阵中第 K 小的元素
+title: 「力扣」第 378 题：有序矩阵中第 K 小的元素（中等）
 icon: yongyan
 category: 二分查找
 tags:

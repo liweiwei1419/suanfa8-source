@@ -1,6 +1,5 @@
 ---
 title: 「力扣」第 4 题：寻找两个有序数组的中位数（困难）
-# icon: jingxuan
 icon: shipin
 category: 二分查找
 tags: 

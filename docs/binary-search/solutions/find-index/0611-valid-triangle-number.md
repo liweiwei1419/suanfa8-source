@@ -1,5 +1,5 @@
 ---
-title: 「力扣」第 611 题：有效三角形的个数
+title: 「力扣」第 611 题：有效三角形的个数（中等）
 icon: yongyan
 category: 二分查找
 tags:

@@ -6,8 +6,7 @@ tags:
   - 二分查找
 ---
 
-+ 题目链接：[81. 搜索旋转排序数组 II](https://leetcode-cn.com/problems/search-in-rotated-sorted-array-ii/)。
-
++ 题目链接：[81. 搜索旋转排序数组 II](https://leetcode-cn.com/problems/search-in-rotated-sorted-array-ii/)；
 + 题解地址：[二分查找（Python 代码、Java 代码）](https://leetcode-cn.com/problems/search-in-rotated-sorted-array-ii/solution/er-fen-cha-zhao-by-liweiwei1419/)。
 
 ## 题目描述

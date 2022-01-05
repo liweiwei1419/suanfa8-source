@@ -1,5 +1,5 @@
 ---
-title: 「力扣」第 875 题：爱吃香蕉的珂珂
+title: 「力扣」第 875 题：爱吃香蕉的珂珂（中等）
 icon: yongyan
 category: 二分查找
 tags:

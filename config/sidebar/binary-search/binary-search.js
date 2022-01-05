@@ -23,6 +23,8 @@ module.exports = [
 			"/binary-search/solutions/find-index/0035-search-insert-position.md",
 
 			"/binary-search/solutions/find-index/0611-valid-triangle-number.md",
+			"/binary-search/solutions/find-index/0658-find-k-closest-elements.md",
+			"/binary-search/solutions/find-index/0744-find-smallest-letter-greater-than-target.md",
 			"/binary-search/solutions/find-index/0275-h-index-ii.md",
 
 			"/binary-search/solutions/find-index/0436-find-right-interval.md",
@@ -54,7 +56,9 @@ module.exports = [
 			"/binary-search/solutions/find-integer/0374-guess-number-higher-or-lower.md",
 			"/binary-search/solutions/find-integer/0287-find-the-duplicate-number.md",
 			"/binary-search/solutions/find-integer/0378-kth-smallest-element-in-a-sorted-matrix.md",
-			"/binary-search/solutions/find-integer/0719-find-k-th-smallest-pair-distance.md"
+			"/binary-search/solutions/find-integer/0719-find-k-th-smallest-pair-distance.md",
+			"/binary-search/solutions/find-integer/1300-sum-of-mutated-array-closest-to-target.md",
+			"/binary-search/solutions/find-integer/1276-number-of-burgers-with-no-waste-of-ingredients.md"
 		]
 	},
 	{
@@ -64,6 +68,7 @@ module.exports = [
 			"/binary-search/solutions/maximum-minimization/intro.md",
 			"/binary-search/solutions/maximum-minimization/0410-split-array-largest-sum.md",
 			"/binary-search/solutions/maximum-minimization/0875-koko-eating-bananas.md",
+			"/binary-search/solutions/maximum-minimization/1283-find-the-smallest-divisor-given-a-threshold.md",
 			"/binary-search/solutions/maximum-minimization/1011-capacity-to-ship-packages-within-d-days.md",
 			"/binary-search/solutions/maximum-minimization/1482-minimum-number-of-days-to-make-m-bouquets.md",
 			"/binary-search/solutions/maximum-minimization/1552-magnetic-force-between-two-balls.md",

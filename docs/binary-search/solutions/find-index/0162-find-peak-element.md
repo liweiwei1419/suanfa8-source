@@ -5,7 +5,11 @@ category: 二分查找
 tags:
   - 二分查找
 ---
-+ [题目链接](https://leetcode-cn.com/problems/find-peak-element/)
+
+
++ 题目链接：[162. 寻找峰值](https://leetcode-cn.com/problems/find-peak-element/)；
++ 题解链接：[减而治之，二分查找](https://leetcode-cn.com/problems/find-peak-element/solution/jian-er-zhi-zhi-er-fen-cha-zhao-by-liweiwei1419/)。
+
 
 ## 题目描述
 
@@ -120,6 +124,55 @@ public class Solution {
 
 + 时间复杂度：$O(\log N)$，其中 $N$ 是输入数组 `nums` 的长度；
 + 空间复杂度：$O(1)$。
+
+
+---
+
+
+### 方法：二分查找
+
+**思路分析**：
+
+题目中说：
+
+> 你的解法应该是 $O(\log N)$ 时间复杂度的。
+
+就是在疯狂暗示你使用二分查找法。二分查找法的思想是“减而治之”（“分而治之”的特例），说成大白话就是“排除法”。
+
+题目中只要求我们返回任意一个峰值的索引，并且也提示我们看右边的元素 `nums[i] != nums[i + 1]`。因此，如果右边元素大，左边界就可以收缩到中间位置 `+ 1`，根据[“二分查找法的模板”](https://leetcode-cn.com/problems/search-insert-position/solution/te-bie-hao-yong-de-er-fen-cha-fa-fa-mo-ban-python-/)很容易写出以下代码。
+
+Java 代码：
+
+```Java []
+public class Solution {
+
+    // 返回任何一个峰值，看相邻位置
+
+    public int findPeakElement(int[] nums) {
+        int len = nums.length;
+        int left = 0;
+        int right = len - 1;
+        while (left < right) {
+            int mid = (left + right) >>> 1;
+            // 正好看到的是右边元素，
+            // 分支排除了左边界，并且使用左中位数
+            // 可以保证逻辑是完备的
+            if (nums[mid] < nums[mid + 1]) {
+                left = mid + 1;
+            } else {
+                right = mid;
+            }
+        }
+        // 峰值元素一定存在，因此无需后处理
+        return left;
+    }
+}
+```
+
+**复杂度分析**：
++ 时间复杂度：$O(\log N)$，这里 $N$ 是数组的长度。
++ 空间复杂度：$O(1)$，这里使用的变量个数都是常数个。
+
 
 
 
