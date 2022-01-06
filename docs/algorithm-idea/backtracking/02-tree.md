@@ -2,7 +2,7 @@
 title: 5.2 树形问题
 icon: yongyan
 author: liweiwei1419
-categories: 回溯算法
+category: 回溯算法
 tags:
   - 回溯算法
   - 递归

@@ -2,7 +2,7 @@
 title: 5.1 回溯算法简介
 icon: yongyan
 author: liweiwei1419
-categories: 回溯算法
+category: 回溯算法
 tags:
   - 回溯算法
   - 递归

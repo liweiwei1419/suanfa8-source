@@ -1,7 +1,7 @@
 ---
 title: 5.7 回溯算法视频讲解以及练习列表
 icon: shipin
-categories: 回溯算法
+category: 回溯算法
 tags:
   - 回溯算法
   - 递归

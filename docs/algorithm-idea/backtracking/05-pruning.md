@@ -1,7 +1,7 @@
 ---
 title:  5.5 剪枝
 icon: yongyan
-categories: 回溯算法
+category: 回溯算法
 tags:
   - 回溯算法
   - 递归
