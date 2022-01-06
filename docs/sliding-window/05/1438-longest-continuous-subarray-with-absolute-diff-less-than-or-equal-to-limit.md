@@ -1,7 +1,7 @@
 ---
 title: 「力扣」第 1438 题：绝对差不超过限制的最长连续子数组（中等）
 icon: yongyan
-categories: 滑动窗口
+category: 滑动窗口
 tags:
   - 滑动窗口
 ---

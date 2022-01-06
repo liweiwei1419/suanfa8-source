@@ -1,7 +1,7 @@
 ---
 title: 「力扣」第 904 题：水果成篮（中等）
 icon: yongyan
-categories: 滑动窗口
+category: 滑动窗口
 tags:
   - 滑动窗口
 ---

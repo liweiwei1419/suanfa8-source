@@ -1,7 +1,7 @@
 ---
 title: 「力扣」第 438 题：找到字符串中所有字母异位词（中等）
 icon: yongyan
-categories: 滑动窗口
+category: 滑动窗口
 tags:
   - 滑动窗口
 ---

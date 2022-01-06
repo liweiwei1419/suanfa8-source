@@ -1,7 +1,7 @@
 ---
 title: 「力扣」第 76 题：最小覆盖子串（困难）
 icon: yongyan
-categories: 滑动窗口
+category: 滑动窗口
 tags:
   - 滑动窗口
 ---

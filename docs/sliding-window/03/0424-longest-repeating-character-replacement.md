@@ -1,7 +1,7 @@
 ---
 title: 「力扣」第 424 题：替换后的最长重复字符（中等）
 icon: yongyan
-categories: 滑动窗口
+category: 滑动窗口
 tags:
   - 滑动窗口
 ---

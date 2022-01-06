@@ -1,7 +1,7 @@
 ---
 title: 「力扣」第 567 题：字符串的排列（中等、滑动窗口）
 icon: yongyan
-categories: 滑动窗口
+category: 滑动窗口
 tags:
   - 滑动窗口
 ---

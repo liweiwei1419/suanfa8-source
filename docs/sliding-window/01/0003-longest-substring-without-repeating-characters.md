@@ -1,5 +1,5 @@
 ---
-title: 「力扣」第 3 题：无重复字符的最长子串
+title: 「力扣」第 3 题：无重复字符的最长子串（中等）
 icon: yongyan
 category: 滑动窗口
 tags:
