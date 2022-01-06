@@ -1,6 +1,6 @@
 ---
-title: 「力扣」第 347 题：前K个高频元素
-icon: jingxuan
+title: 「力扣」第 703 题：数据流中的第 K 大元素（简单）
+icon: yongyan
 category: 优先队列
 tags: 
   - 优先队列
@@ -43,3 +43,32 @@ kthLargest.add(4);   // return 8
 - `-104 <= val <= 104`
 - 最多调用 `add` 方法 `104` 次
 - 题目数据保证，在查找第 `k` 大元素时，数组中至少有 `k` 个元素
+
+**参考代码**：
+
+```java
+import java.util.PriorityQueue;
+
+public class KthLargest {
+
+    private PriorityQueue<Integer> minHeap;
+    private int k;
+
+    public KthLargest(int k, int[] nums) {
+        this.minHeap = new PriorityQueue<>(k);
+        this.k = k;
+        for (int num : nums) {
+            add(num);
+        }
+    }
+
+    public int add(int val) {
+        minHeap.offer(val);
+        if (minHeap.size() > k) {
+            minHeap.poll();
+        }
+        return minHeap.peek();
+    }
+}
+```
+

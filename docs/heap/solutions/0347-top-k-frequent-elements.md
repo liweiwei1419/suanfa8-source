@@ -1,6 +1,6 @@
 ---
 title: 「力扣」第 347 题：前 K 个高频元素（中等）
-icon: jingxuan
+icon: yongyan
 category: 优先队列
 tags: 
   - 优先队列

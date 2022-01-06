@@ -1,6 +1,6 @@
 ---
 title: 「力扣」第 1282 题：用户分组（中等）
-icon: jingxuan
+icon: yongyan
 category: 优先队列
 tags: 
   - 优先队列
