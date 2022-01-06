@@ -10,7 +10,6 @@ tags:
 ---
 
 + 题目链接：[42. 接雨水](https://leetcode-cn.com/problems/trapping-rain-water/)；
-
 + 题解链接：[暴力解法、优化、双指针、单调栈](https://leetcode-cn.com/problems/trapping-rain-water/solution/bao-li-jie-fa-yi-kong-jian-huan-shi-jian-zhi-zhen-/)。
 
 ## 题目描述
