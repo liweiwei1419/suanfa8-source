@@ -8,7 +8,7 @@ tags:
 
 
 + 题目链接：[343. 整数拆分](https://leetcode-cn.com/problems/integer-break/)；
-+ 题解链接：[“贪心选择”性质的简单证明、记忆化搜索、动态规划 （Python 代码、Java 代码）](https://leetcode-cn.com/problems/integer-break/solution/tan-xin-xuan-ze-xing-zhi-de-jian-dan-zheng-ming-py/)。
++ 题解链接：[记忆化递归、动态规划 、贪心算法（Java、Python）](https://leetcode-cn.com/problems/integer-break/solution/tan-xin-xuan-ze-xing-zhi-de-jian-dan-zheng-ming-py/)。
 
 ## 题目描述
 
