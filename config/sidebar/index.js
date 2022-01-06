@@ -143,6 +143,7 @@ module.exports = [
 			"/data-structure-advance/union-find/intro.md",
 			"/data-structure-advance/union-find/practice.md",
 
+			"/data-structure-advance/segment-tree/intro.md",
 			"/data-structure-advance/segment-tree/01.md",
 			"/data-structure-advance/segment-tree/02.md",
 			"/data-structure-advance/segment-tree/03.md",

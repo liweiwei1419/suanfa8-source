@@ -25,19 +25,7 @@ module.exports = [
 			"/linked-list/basic/0237-delete-node-in-a-linked-list.md",
 			"/linked-list/basic/0328-odd-even-linked-list.md",
 			"/linked-list/basic/0445-add-two-numbers-ii.md",
-			"/linked-list/basic/0876-middle-of-the-linked-list.md",
-
-
-			// "/linked-list/basic/0876-middle-of-the-linked-list.md",
-			// "/linked-list/basic/0021-merge-two-sorted-lists.md",
-			// "/linked-list/basic/0024-swap-nodes-in-pairs.md",
-			// "/linked-list/basic/0025-reverse-nodes-in-k-group.md",
-			// "/linked-list/basic/0061-rotate-list.md",
-			// "/linked-list/basic/0086-partition-list.md",
-			// "/linked-list/basic/0206-reverse-linked-list.md",
-			// "/linked-list/basic/0234-palindrome-linked-list.md",
-			// "/linked-list/basic/0445-add-two-numbers-ii.md"
-			
+			"/linked-list/basic/0876-middle-of-the-linked-list.md"
 		]
 	},
 
