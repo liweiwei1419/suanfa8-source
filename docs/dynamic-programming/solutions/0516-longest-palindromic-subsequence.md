@@ -1,7 +1,7 @@
 ---
-title: 「力扣」第 516 题：最长回文子序列
-icon: shipin
-categories: 动态规划
+title: 「力扣」第 516 题：最长回文子序列（中等）
+icon: yongyan
+category: 动态规划
 tags:
   - 动态规划
 ---

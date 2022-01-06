@@ -1,3 +1,12 @@
+---
+title: 「力扣」第 664 题：奇怪的打印机（困难）
+icon: yongyan
+category: 动态规划
+tags:
+  - 动态规划
+  - 区间 DP
+---
+
 **本题重点**：
 
 + 「动态规划」没有为一个问题设计专门的算法，考虑了一个问题所有的情况，其实也是「暴力解法」或者称用到了穷举的思想；
@@ -98,7 +107,7 @@ public class Solution {
 ```
 
 
-![](https://files.mdnice.com/user/5576/a33e431c-22c2-4fb1-a04c-e8f6560d587c.png =40%x)
+![](https://files.mdnice.com/user/5576/a33e431c-22c2-4fb1-a04c-e8f6560d587c.png)
 
 
 （待添加：还可以考虑别的方向。）
@@ -149,7 +158,7 @@ public class Solution {
 ```
 
 
-![](https://files.mdnice.com/user/5576/617ec28e-07a5-49c3-8f23-1a6e95529cff.png =40%x)
+![](https://files.mdnice.com/user/5576/617ec28e-07a5-49c3-8f23-1a6e95529cff.png)
 
 
 

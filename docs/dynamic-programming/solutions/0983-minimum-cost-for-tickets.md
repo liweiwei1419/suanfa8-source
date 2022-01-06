@@ -1,14 +1,12 @@
 ---
-title: 「力扣」第 983 题：最低票价
+title: 「力扣」第 983 题：最低票价（中等）
 icon: yongyan
-categories: 动态规划
+category: 动态规划
 tags:
   - 动态规划
 ---
 
-## 「力扣」第 983 题：最低票价
-
-+ 链接：https://leetcode-cn.com/problems/minimum-cost-for-tickets
++ 题目链接：[983. 最低票价](https://leetcode-cn.com/problems/minimum-cost-for-tickets)。
 
 在一个火车旅行很受欢迎的国度，你提前一年计划了一些火车旅行。在接下来的一年里，你要旅行的日子将以一个名为 ys 的数组给出。每一项是一个从 1 到 365 的整数。
 

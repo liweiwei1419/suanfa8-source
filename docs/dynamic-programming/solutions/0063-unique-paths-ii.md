@@ -1,7 +1,7 @@
 ---
 title: 「力扣」第 63 题：不同路径 II（中等）
 icon: yongyan
-categories: 动态规划
+category: 动态规划
 tags:
   - 动态规划
 ---

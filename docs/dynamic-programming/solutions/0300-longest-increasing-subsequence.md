@@ -1,17 +1,16 @@
 ---
 title: 「力扣」第 300 题：最长上升子序列（中等）
 icon: yongyan
-categories: 动态规划
+category: 动态规划
 tags:
   - 动态规划
 ---
 
-## 「力扣」第 300 题：最长上升子序列（中等）
 
 > 经典的「动态规划」问题，不同的定义状态的方式，可以得到不同复杂度的求解方法。
 
-+ [链接](https://leetcode-cn.com/problems/combination-sum/)
-+ [题解链接](https://leetcode-cn.com/problems/combination-sum/solution/hui-su-suan-fa-jian-zhi-python-dai-ma-java-dai-m-2/)
++ 题目链接：[300. 最长递增子序列](https://leetcode-cn.com/problems/combination-sum/)
++ 题解链接：[动态规划 （包含O (N log N) 解法的状态定义以及解释）](https://leetcode-cn.com/problems/combination-sum/solution/hui-su-suan-fa-jian-zhi-python-dai-ma-java-dai-m-2/)
 
 给定一个无序的整数数组，找到其中最长上升子序列的长度。
 

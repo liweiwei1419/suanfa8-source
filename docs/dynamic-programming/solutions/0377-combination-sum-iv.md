@@ -1,15 +1,15 @@
 ---
-title: 「力扣」第 377 题：组合总和 Ⅳ
+title: 「力扣」第 377 题：组合总和 Ⅳ（中等）
 icon: yongyan
-categories: 动态规划
+category: 动态规划
 tags:
   - 动态规划
 ---
 
-## 「力扣」第 377 题：组合总和 Ⅳ
++ 题目链接：[377. 组合总和 Ⅳ](https://leetcode-cn.com/problems/combination-sum-iv/)
++ 题解链接：[动态规划](https://leetcode-cn.com/problems/combination-sum-iv/solution/dong-tai-gui-hua-python-dai-ma-by-liweiwei1419/)
 
-+ [链接](https://leetcode-cn.com/problems/combination-sum-iv/)
-+ [题解链接](https://leetcode-cn.com/problems/combination-sum-iv/solution/dong-tai-gui-hua-python-dai-ma-by-liweiwei1419/)
+## 题目描述
 
 给定一个由正整数组成且不存在重复数字的数组，找出和为给定目标正整数的组合的个数。
 
