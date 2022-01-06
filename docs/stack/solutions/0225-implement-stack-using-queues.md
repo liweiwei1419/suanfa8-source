@@ -7,7 +7,7 @@ tags:
 ---
 
 + 题目链接：[225. 用队列实现栈](https://leetcode-cn.com/problems/implement-stack-using-queues)；
-+ 题解链接：[题解地址](https://leetcode-cn.com/problems/implement-stack-using-queues/solution/peek-he-pop-shi-yi-ci-jiang-dui-shou-yuan-su-chu-d/)。
++ 题解链接：[负负得正，peek 和 pop 时，依次将队首元素出队，放到队尾](https://leetcode-cn.com/problems/implement-stack-using-queues/solution/peek-he-pop-shi-yi-ci-jiang-dui-shou-yuan-su-chu-d/)。
 
 
 ## 题目描述
