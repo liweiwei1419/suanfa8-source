@@ -1,5 +1,5 @@
 ---
-title: 「力扣」第 350 题：两个数组的交集 II
+title: 「力扣」第 350 题：两个数组的交集 II（中等）
 icon: yongyan
 category: 哈希表
 tags:

@@ -7,7 +7,7 @@ tags:
 ---
 
 + 题目链接：[219. 存在重复元素 II](https://leetcode-cn.com/problems/contains-duplicate-ii/);
-+ 题解链接：[]()。
++ 题解链接：[哈希表（Java、Python）](https://leetcode-cn.com/problems/contains-duplicate-ii/solution/ha-xi-biao-python-dai-ma-java-dai-ma-by-liweiwei14/)。
 
 ## 题目描述
 
@@ -46,9 +46,15 @@ tags:
 ## 思路分析
 
 
+如果你做过 [「力扣」第 1 题： 两数之和](https://leetcode-cn.com/problems/two-sum/)，这道题就变得很容易了。
 
-在遍历的过程中，即要检测重复，又要知道重复元素的索引是什么，哈希表就可以胜任。
+1、判定重复元素，首先我们会想到使用哈希表；
 
+2、题目又要求“ `i` 和 `j` 的差的绝对值最大为 `k`”，因此，哈希表的 key 为数组元素，value 为其对应的索引；
+
+3、“是否存在问题”的做法是：在遍历的过程中找到就直接返回，如果找不到，才返回 `false`。因此找到（或者说存在）的充分必要条件是：
+
+> 找到重复元素的索引与之前出现过的这个元素的索引的差小于等于 `k`，后出现的数的索引一定比前出现的数的索引大，因此绝对值不用考虑。
 
 
 
@@ -112,3 +118,8 @@ class Solution:
 ```
 </CodeGroupItem>
 </CodeGroup>
+
+**复杂度分析：**
+
++ 时间复杂度：$O(N)$，这里 $N$ 是数组的元素个数，算法遍历了一次数组；
++ 空间复杂度：$O(N)$，这里使用了哈希表存储已经出现的数，可以说是以空间换时间了。

@@ -1,7 +1,7 @@
 ---
 title: 「力扣」第 36 题：有效的数独（中等）
 icon: yongyan
-categories: 哈希表
+category: 哈希表
 tags:
   - 哈希表
 ---
