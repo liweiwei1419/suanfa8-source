@@ -1,7 +1,7 @@
 ---
 title: 「力扣」第 79 题：单词搜索（中等）
 icon: yongyan
-category: 专题 14：回溯算法
+category: 回溯算法
 tags:
   - 回溯算法
   - 递归
