@@ -1,5 +1,5 @@
 ---
-title: 「力扣」第 773 题：滑动谜题（中等）
+title: 「力扣」第 752 题：打开转盘锁（中等）
 icon: yongyan
 category: 广度优先遍历
 tags:
