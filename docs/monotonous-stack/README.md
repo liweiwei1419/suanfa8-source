@@ -1,7 +1,7 @@
 ---
 title: 单调栈
 icon: yongyan
-categories: 栈
+category: 栈
 tags:
   - 栈
   - 单调栈
