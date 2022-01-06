@@ -1,11 +1,15 @@
 ---
-title: 「力扣」第 50 题：Pow(x, n)
+title: 「力扣」第 50 题：Pow(x, n)（中等）
 icon: yongyan
-categories: 递归
+category: 递归
 tags:
   - 分治算法
   - 位运算
 ---
+
++ 题目链接：[50. Pow(x, n)](https://leetcode-cn.com/problems/powx-n/)；
++ 题解链接：[自顶向下（递归）与自顶向上（递推）](https://leetcode-cn.com/problems/powx-n/solution/ba-zhi-shu-bu-fen-kan-zuo-er-jin-zhi-shu-python-da/)。
+
 
 今天要和大家分享的是「力扣」第 50 题：Pow(x, n)。这题有一个名称叫「快速幂」，我们这里只分享「递归」和「非递归」的写法，其中 **「递归」对应「当指数为奇数时，把指数分解成偶数 + 1，当指数为偶数时，把指数除以 2」，「非递归」对应把指数转化成二进制**。「快速幂」还有矩阵的求法，感兴趣的朋友可以在网络上自行搜索（我也不会）。
 

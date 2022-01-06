@@ -1,18 +1,17 @@
 ---
 title: 「力扣」第 88 题：合并两个有序数组（简单）
-category: 归并排序
 icon: yongyan
+category: 归并排序
 tags:
   - 数组
 ---
 
 # 「力扣」第 88 题：合并两个有序数组（简单）
 
-题解地址：[归并排序子步骤（Java）](https://leetcode-cn.com/problems/merge-sorted-array/solution/si-xiang-mei-you-chuang-xin-de-di-fang-zhu-yao-ti-/)。
++ 题目链接：[88. 合并两个有序数组](https://leetcode-cn.com/problems/merge-sorted-array/)；
++ 题解链接：[归并排序子步骤（Java）](https://leetcode-cn.com/problems/merge-sorted-array/solution/si-xiang-mei-you-chuang-xin-de-di-fang-zhu-yao-ti-/)。
 
-说明：文本首发在力扣的题解版块，更新也会在第 1 时间在上面的网站中更新，这篇文章只是上面的文章的一个快照，您可以点击上面的链接看到其他网友对本文的评论。
 
-传送门：[88. 合并两个有序数组](https://leetcode-cn.com/problems/merge-sorted-array/)。
 
 >给定两个有序整数数组 nums1 和 nums2，将 nums2 合并到 nums1 中，使得 num1 成为一个有序数组。
 >
