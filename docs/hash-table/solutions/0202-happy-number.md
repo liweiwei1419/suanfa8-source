@@ -1,7 +1,6 @@
 ---
 title: 「力扣」第 202 题：快乐数（简单）
 icon: yongyan
-password: 1
 category: 哈希表
 tags:
   - 哈希表

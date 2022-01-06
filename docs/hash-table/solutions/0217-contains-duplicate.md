@@ -1,5 +1,5 @@
 ---
-title: 「力扣」第 217 题：存在重复元素
+title: 「力扣」第 217 题：存在重复元素（简单）
 icon: yongyan
 category: 哈希表
 tags:

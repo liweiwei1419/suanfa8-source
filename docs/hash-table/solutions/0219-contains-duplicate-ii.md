@@ -1,5 +1,5 @@
 ---
-title: 「力扣」第 219 题： 存在重复元素 II
+title: 「力扣」第 219 题： 存在重复元素 II（中等）
 icon: yongyan
 category: 哈希表
 tags:

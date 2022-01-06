@@ -1,5 +1,5 @@
 ---
-title: 「力扣」第 242 题：有效的字母异位词
+title: 「力扣」第 242 题：有效的字母异位词（简单）
 icon: yongyan
 category: 哈希表
 tags:
