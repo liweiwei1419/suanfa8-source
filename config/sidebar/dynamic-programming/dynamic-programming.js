@@ -72,14 +72,14 @@ module.exports = [
 		"title": "树形动态规划",
 		"icon": "shu",
 		"children": [
-			"/dynamic-programming/solutions/tree/tree.md",
-			"/dynamic-programming/solutions/tree/0337-house-robber-iii.md",
-			"/dynamic-programming/solutions/tree/0124-binary-tree-maximum-path-sum.md",
-			"/dynamic-programming/solutions/tree/0543-diameter-of-binary-tree.md",
-			"/dynamic-programming/solutions/tree/0687-longest-univalue-path.md",
-			"/dynamic-programming/solutions/tree/0968-binary-tree-cameras.md",
-			"/dynamic-programming/solutions/tree/1372-longest-zigzag-path-in-a-binary-tree.md",
-			"/dynamic-programming/solutions/tree/0865-smallest-subtree-with-all-the-deepest-nodes.md",
+			"/dynamic-programming/solutions/tree.md",
+			"/dynamic-programming/solutions/0337-house-robber-iii.md",
+			"/dynamic-programming/solutions/0124-binary-tree-maximum-path-sum.md",
+			"/dynamic-programming/solutions/0543-diameter-of-binary-tree.md",
+			"/dynamic-programming/solutions/0687-longest-univalue-path.md",
+			"/dynamic-programming/solutions/0968-binary-tree-cameras.md",
+			"/dynamic-programming/solutions/1372-longest-zigzag-path-in-a-binary-tree.md",
+			"/dynamic-programming/solutions/0865-smallest-subtree-with-all-the-deepest-nodes.md",
 		]
 
 	},
