@@ -28,7 +28,7 @@ module.exports = config({
 
     [
       "script", {
-        data-ad-client: "ca-pub-6066632930480255",
+        "data-ad-client": "ca-pub-6066632930480255",
         async: true,
         src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
       }
