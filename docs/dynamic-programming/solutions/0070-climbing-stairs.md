@@ -8,8 +8,7 @@ tags:
 
 斐波拉契数列，画出树形结构，发现大量重叠子问题。「动态规划」告诉我们「自顶向上」求解问题的思路。
 
-+ [题目链接](https://leetcode-cn.com/problems/climbing-stairs)
-+ [英文地址](https://leetcode.com/problems/climbing-stairs/description/) 
++ 题目链接：[70. 爬楼梯](https://leetcode-cn.com/problems/climbing-stairs)。
 
 ## 题目描述
 
@@ -17,9 +16,9 @@ tags:
 
 每次你可以爬 1 或 2 个台阶。你有多少种不同的方法可以爬到楼顶呢？
 
-注意：给定 n 是一个正整数。
+**注意**：给定 n 是一个正整数。
 
-示例 1：
+**示例 1：**
 
 ```
 输入： 2
@@ -30,7 +29,7 @@ tags:
 2.  2 阶
 ```
 
-示例 2：
+**示例 2：**
 
 ```
 输入： 3
@@ -41,6 +40,10 @@ tags:
 2.  1 阶 + 2 阶
 3.  2 阶 + 1 阶
 ```
+
+**Constraints（约束）:**
+
+- `1 <= n <= 45`
 
 ## 思路分析
 

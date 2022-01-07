@@ -7,12 +7,14 @@ tags:
  - 分治算法
 ---
 
-提示：经典的「动态规划」问题，一定要掌握。
+::: danger 提示
+这是一道很经典的「动态规划」问题，一定要掌握：设置合适的子问题（状态定义），便于发现不同规模问题之间的联系（状态转移方程），这些子问题的解求得问题需要的答案。
+:::
 
-动态规划告诉我们可以不用直接去解决题目，而是去发现这个问题最开始的样子，通过「状态」转移，每一步参考了之前计算的结果，得到最终的答案。
+动态规划告诉我们可以不用直接去解决题目，而是去发现这个问题最开始的样子，通过「状态」转移；，每一步参考了之前计算的结果，得到最终的答案。
 
-+ [题目链接](https://leetcode-cn.com/problems/maximum-subarray/)
-+ [题解链接](https://leetcode-cn.com/problems/maximum-subarray/solution/dong-tai-gui-hua-fen-zhi-fa-python-dai-ma-java-dai/)
++ 题目链接：[53. 最大子序和](https://leetcode-cn.com/problems/maximum-subarray/)；
++ 题解链接：[经典动态规划问题（理解「无后效性」）](https://leetcode-cn.com/problems/maximum-subarray/solution/dong-tai-gui-hua-fen-zhi-fa-python-dai-ma-java-dai/)。
 
 ## :tv: 视频讲解
 

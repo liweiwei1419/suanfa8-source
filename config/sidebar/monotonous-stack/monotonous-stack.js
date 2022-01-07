@@ -11,6 +11,7 @@ module.exports = [
 			"/monotonous-stack/solutions/0581-shortest-unsorted-continuous-subarray.md",
 			"/monotonous-stack/solutions/0739-daily-temperatures.md",
 			"/monotonous-stack/solutions/0970-sum-of-subarray-minimums.md",
+			"/monotonous-stack/solutions/0962-maximum-width-ramp.md",
 			"/monotonous-stack/solutions/1673-find-the-most-competitive-subsequence.md"
 		]
 	},

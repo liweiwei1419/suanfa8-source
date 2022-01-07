@@ -19,7 +19,7 @@ module.exports = [
 		"title": "第 2 章 基础、重点动态规划问题",
 		"icon": "shu",
 		"children": [
-			"/dynamic-programming/solutions/practice.md",
+			// "/dynamic-programming/solutions/practice.md",
 			"/dynamic-programming/solutions/0053-maximum-subarray.md",
 			"/dynamic-programming/solutions/0062-unique-paths.md",
 			"/dynamic-programming/solutions/0063-unique-paths-ii.md",
