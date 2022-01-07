@@ -7,10 +7,13 @@ tags:
 ---
 
 + 中文网址：[215. 数组中的第K个最大元素](https://leetcode-cn.com/problems/kth-largest-element-in-an-array/description/) ；
-+ 英文网址：[215. Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/description/) 。
-+ 题解地址：https://leetcode-cn.com/problems/kth-largest-element-in-an-array/solution/partitionfen-er-zhi-zhi-you-xian-dui-lie-java-dai-/
++ 题解地址：[通过 partition 减治 + 优先队列（Java）](https://leetcode-cn.com/problems/kth-largest-element-in-an-array/solution/partitionfen-er-zhi-zhi-you-xian-dui-lie-java-dai-/)。
 
-在未排序的数组中找到第 **k** 个最大的元素。请注意，你需要找的是数组排序后的第 k 个最大的元素，而不是第 k 个不同的元素。
+## 题目描述
+
+给定整数数组 `nums` 和整数 `k`，请返回数组中第 `k` 个最大的元素。
+
+请注意，你需要找的是数组排序后的第 `k` 个最大的元素，而不是第 `k` 个不同的元素。
 
 **示例 1:**
 
@@ -26,9 +29,10 @@ tags:
 输出: 4
 ```
 
-**说明:**
+**提示：**
 
-你可以假设 k 总是有效的，且 1 ≤ k ≤ 数组的长度。
+- `1 <= k <= nums.length <= 10^4`
+- `-10^4 <= nums[i] <= 10^4`
 
 ---
 

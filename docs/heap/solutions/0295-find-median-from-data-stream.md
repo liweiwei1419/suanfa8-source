@@ -9,7 +9,7 @@ tags:
 ![0295](https://tva1.sinaimg.cn/large/008i3skNgy1gxcp0ikfmej30p00angmb.jpg)
 
 
-+ 题目链接：[数据流的中位数](https://leetcode-cn.com/problems/find-median-from-data-stream/)
++ 题目链接：[295. 数据流的中位数](https://leetcode-cn.com/problems/find-median-from-data-stream/)。
 
 ## 题目描述
 

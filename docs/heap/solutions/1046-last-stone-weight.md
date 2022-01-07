@@ -40,15 +40,13 @@ tags:
 - `1 <= stones.length <= 30`
 - `1 <= stones[i] <= 1000`
 
-
-
 ## 思路分析
 
 由于需要**动态维护数据的有序性**（支持增加、删除），这里使用优先队列是最合适的数据结构。知道了这一点以后，根据题目意思模拟就好了。
 
 **参考代码**：
 
-```Java []
+```java
 import java.util.PriorityQueue;
 
 public class Solution {
@@ -57,7 +55,7 @@ public class Solution {
         int len = stones.length;
         PriorityQueue<Integer> maxHeap = new PriorityQueue<>(len, (o1, o2) -> -o1 + o2);
         for (int stone : stones) {
-            maxHeap.add(stone);
+            maxHeap.offer(stone);
         }
 
         while (maxHeap.size() >= 2) {
@@ -82,33 +80,3 @@ public class Solution {
 + 时间复杂度：$O(N \log N)$，（粗略计算，忽略常数倍数和常数项）每个元素入队一次，出队和入队调整堆的复杂度是 $O(\log N)$；
 + 空间复杂度：$O(N)$，优先队列的大小。
 
----
-
-```java
-import java.util.PriorityQueue;
-
-public class Solution {
-
-    public int lastStoneWeight(int[] stones) {
-        int len = stones.length;
-        PriorityQueue<Integer> maxHeap = new PriorityQueue<>(len, (o1, o2) -> -o1 + o2);
-        for (int stone : stones) {
-            maxHeap.add(stone);
-        }
-
-        while (maxHeap.size() >= 2) {
-            Integer head1 = maxHeap.poll();
-            Integer head2 = maxHeap.poll();
-            if (head1.equals(head2)) {
-                continue;
-            }
-            maxHeap.offer(head1 - head2);
-        }
-
-        if (maxHeap.isEmpty()) {
-            return 0;
-        }
-        return maxHeap.poll();
-    }
-}
-```

@@ -53,7 +53,10 @@ tags:
 
 **提示：**
 
-- `1 <= num <= 108`
+- `1 <= num <= 10^8`
+
+
+**参考代码**：
 
 <CodeGroup>
 <CodeGroupItem title="Java">
