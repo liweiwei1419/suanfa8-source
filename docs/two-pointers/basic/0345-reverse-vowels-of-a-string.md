@@ -6,8 +6,7 @@ tags:
   - 双指针
 ---
 
-+ 中文网址：[345. 反转字符串中的元音字母](https://leetcode-cn.com/problems/reverse-vowels-of-a-string/description/)；
-+ 英文网址：[345. Reverse Vowels of a String](https://leetcode.com/problems/reverse-vowels-of-a-string/description/) 。
++ 题目地址：[345. 反转字符串中的元音字母](https://leetcode-cn.com/problems/reverse-vowels-of-a-string/description/)。
 
 
 ## 题目描述
@@ -41,8 +40,6 @@ tags:
 
 - 使用指针对撞，遇到元音字符的时候就听下来交换，交换以后指针继续向前；
 - 这样的代码其实是套路，多写几遍就不会忘记了，我们在基础算法的学习中，曾经也有遇到过。
-
-
 
 **参考代码**：
 

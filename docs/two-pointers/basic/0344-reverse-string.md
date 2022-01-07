@@ -34,7 +34,7 @@ tags:
 - `1 <= s.length <= 105`
 - `s[i]` 都是 [ASCII](https://baike.baidu.com/item/ASCII) 码表中的可打印字符
 
-### 方法一：使用 Java 语言提供的反转 API 完成
+## 方法一：使用 Java 语言提供的反转 API 完成
 
 **参考代码 1**：
 
@@ -58,7 +58,7 @@ public class Solution {
 }
 ```
 
-### 方法二：使用指针对撞
+## 方法二：使用指针对撞
 
 **参考代码 2**：
 

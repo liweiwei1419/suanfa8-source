@@ -80,6 +80,7 @@ public class Solution {
 
         // 从后向前赋值，平方值最大的数只能出现在输入数组的头和尾
         int index = len - 1;
+      	// 双指针
         int left = 0;
         int right = len - 1;
         while (left <= right) {
@@ -93,35 +94,6 @@ public class Solution {
             index--;
         }
         return res;
-    }
-}
-```
-
-
-
-```Java []
-public class Solution {
-
-    public int[] sortedSquares(int[] A) {
-        int n = A.length;
-        int[] ans = new int[n];
-
-        // 从后向前赋值
-        int index = n - 1;
-        // 双指针
-        int left = 0;
-        int right = n - 1;
-        while (left <= right) {
-            if (A[left] * A[left] > A[right] * A[right]) {
-                ans[index] = A[left] * A[left];
-                left++;
-            } else {
-                ans[index] = A[right] * A[right];
-                right--;
-            }
-            index--;
-        }
-        return ans;
     }
 }
 ```

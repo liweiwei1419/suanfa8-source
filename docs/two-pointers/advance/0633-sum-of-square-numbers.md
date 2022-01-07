@@ -73,8 +73,8 @@ tags:
 
 **参考代码 1**：
 
-```Java [sol1-Java]
-class Solution {
+```java
+public class Solution {
     public boolean judgeSquareSum(int c) {
         if (c == 0 || c == 1 || c == 2) {
             return true;
@@ -111,8 +111,8 @@ $a$ 和 $b$ 是两个待定的整数，我们可以枚举 $a$ 的值，通过二
 
 **参考代码 2**：
 
-```Java [sol1-Java]
-class Solution {
+```java
+public class Solution {
 
     public boolean judgeSquareSum(int c) {
         if (c == 0 || c == 1 || c == 2) {
@@ -143,7 +143,6 @@ class Solution {
 
 **复杂度分析**
 
-- 时间复杂度：$O(\sqrt{c}\log c)$，其中枚举 $a$ 的时间复杂度为 $O(\sqrt{c})$，二分查找的时间复杂度为 $O(\log c)$。
-
+- 时间复杂度：$O(\sqrt{c}\log c)$，其中枚举 $a$ 的时间复杂度为 $O(\sqrt{c})$，二分查找的时间复杂度为 $O(\log c)$；
 - 空间复杂度：$O(1)$。
 
