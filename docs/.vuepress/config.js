@@ -24,6 +24,16 @@ module.exports = config({
       "script",
       { src: "https://cdn.jsdelivr.net/npm/@babel/standalone/babel.min.js" },
     ],
+
+
+    [
+      "script": {
+        data-ad-client: "ca-pub-6066632930480255",
+        async: true,
+        src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+      }
+    ],
+
     [
     "script", {}, `
     var _hmt = _hmt || [];
