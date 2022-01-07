@@ -8,12 +8,8 @@ tags:
 
 ![0316](https://tva1.sinaimg.cn/large/008i3skNgy1gx91kwzpu1j30p00anwex.jpg)
 
----
 
-
-
-
-可以观看 [视频题解](https://leetcode-cn.com/problems/remove-duplicate-letters/solution/qu-chu-zhong-fu-zi-mu-by-leetcode-soluti-vuso/)。：
+可以观看 [视频题解](https://leetcode-cn.com/problems/remove-duplicate-letters/solution/qu-chu-zhong-fu-zi-mu-by-leetcode-soluti-vuso/)：
 
 视频讲解勘误：
 
@@ -51,16 +47,12 @@ tags:
 - `1 <= s.length <= 104`
 - `s` 由小写英文字母组成
 
-
-
-
+## 思路分析
 
 ::: danger 一句话题解
 
 分析出解决这个问题需要 **后进先出** 的 **线性** 数据结构，因此使用 **栈**。
 :::
-
-
 
 
 **字典序**：字典序是 **按照单词出现在字典中的顺序** 比较两个字符串的方法。
@@ -113,18 +105,16 @@ tags:
 
 之所以会造成 **分段单调递增** 的现象，是因为 **某个单调递增段的最后一个元素，在以后不会再遍历到**，而题目又要求我们保持选取字母的相对顺序，因此 **某个单调递增段的最后一个元素** 必需被放置在现在放置的位置。
 
-（反证）如果接下来还会遍历到 `d` 那么按照之前设计的算法逻辑，我们会丢弃第 1 个 `d` 而让 `b` 靠前，这样得到的字典序的子段 `bd` 更小。
+**反证**：如果接下来还会遍历到 `d` 那么按照之前设计的算法逻辑，我们会丢弃第 1 个 `d` 而让 `b` 靠前，这样得到的字典序的子段 `bd` 更小。
 
 再接着例 2 的第 ⑧ 步说，既然已经出现在栈中的元素，不可能是 **某个单调递增段的最后一个元素**，因此如果丢弃之前遇到的那个相同字符，它紧挨着的下一个字符的 ASCII 值更大。ASCII 值更大的字符靠前一位，整体字典序更大。因此应该丢弃当前遇到的相同字符。
-
-
 
 
 **参考代码 1**：
 
 **说明**：
 
-```Java []
+```java
 import java.util.ArrayDeque;
 import java.util.Deque;
 
@@ -190,7 +180,7 @@ public class Solution {
 
 这里注意到
 
-```Java []
+```java
 while (!stack.empty() && stack.peek() > currentChar && lastAppearIndex[stack.peek() - 'a'] >= i) {
     char top = stack.pop();
     set[top - 'a'] = false;
@@ -201,7 +191,7 @@ while (!stack.empty() && stack.peek() > currentChar && lastAppearIndex[stack.pee
 
 **参考代码 2**：
 
-```Java []
+```java
 import java.util.ArrayDeque;
 import java.util.Deque;
 
@@ -258,10 +248,6 @@ public class Solution {
 ## 练习
 
 
-
-
-
-
 + 「力扣」第 20 题：[有效的括号](https://leetcode-cn.com/problems/valid-parentheses)（简单）
 + 「力扣」第 71 题：[简化路径](https://leetcode-cn.com/problems/simplify-path)（中等）
 + 「力扣」第 150 题：[逆波兰表达式求值](https://leetcode-cn.com/problems/evaluate-reverse-polish-notation)（中等）
@@ -278,500 +264,6 @@ public class Solution {
 + 「力扣」第 402 题：[移掉K位数字](https://leetcode-cn.com/problems/remove-k-digits)（中等）
 + 「力扣」第 321 题：[拼接最大数](https://leetcode-cn.com/problems/create-maximum-number)（困难）
 + 「力扣」第 1673 题：[找出最具竞争力的子序列](https://leetcode-cn.com/problems/find-the-most-competitive-subsequence)（中等）
-
-
-
-
-
-
-
-
-
-
-
-
-
-
----
-
-
-
-## 
-
-我写的题解地址：
-
-> 给定一个仅包含小写字母的字符串，去除字符串中重复的字母，使得每个字母只出现一次。需保证返回结果的字典序最小（要求不能打乱其他字符的相对位置）。
->
-> 示例 1:
->
-> ```
-> 输入: "bcabc"
-> 输出: "abc"
-> ```
->
->
-> 示例 2:
->
-> ```
-> 输入: "cbacdcbc"
-> 输出: "acdb"
-> ```
->
-> 
-
-来源：力扣（LeetCode）
-链接：https://leetcode-cn.com/problems/remove-duplicate-letters
-著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
-
-同「力扣」第 1081 题：[1081. 不同字符的最小子序列](https://leetcode-cn.com/problems/smallest-subsequence-of-distinct-characters/)。
-
-### 方法：使用栈
-
-> 1、栈里永远存放的是目前看到的字典序最小的子序列；
->
-> 2、什么时候栈顶出栈？（1）非空；（2）字典序：栈顶 > 新来的字符；（3）栈顶元素在以后还会看到。
->
-> 此时，可以得到一个字典序更小的子序列。
->
-> 3、如果新来的字符，栈里没有，并且以后也不会看到，就必须添加；
->
-> 如果新来的字符，栈里有，就不用管了，因为如果抛弃了栈里的，得到的字典序更大。
-
-![image-20191207212106043](/Users/liwei/Library/Application Support/typora-user-images/image-20191207212106043.png)
-
-Java 代码：
-
-```java
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
-import java.util.Stack;
-
-public class Solution {
-
-    public String removeDuplicateLetters(String s) {
-        int len = s.length();
-        // 预处理，我把一个字符出现的最后一个位置记录下来
-        Map<Character, Integer> map = new HashMap<>();
-        for (int i = 0; i < len; i++) {
-            map.put(s.charAt(i), i);
-        }
-
-        // 保存已经出现过的
-        Set<Character> set = new HashSet<>();
-        Stack<Character> stack = new Stack<>();
-
-        for (int i = 0; i < len; i++) {
-
-            Character curChar = s.charAt(i);
-            if (set.contains(curChar)) {
-                continue;
-            }
-
-            // 注意：这里条件判断语句很长，map.get(stack.peek()) 不要写成了 map.get(curChar)
-            while (!stack.isEmpty() && map.get(stack.peek()) > i && curChar < stack.peek()) {
-                // 出栈的同时，也要从哈希表中移除
-                set.remove(stack.pop());
-            }
-
-            stack.push(curChar);
-            set.add(curChar);
-        }
-
-        StringBuilder stringBuilder = new StringBuilder();
-        while (!stack.isEmpty()) {
-            stringBuilder.insert(0, stack.pop());
-        }
-
-        return stringBuilder.toString();
-    }
-
-    public static void main(String[] args) {
-        Solution solution = new Solution();
-        String res = solution.removeDuplicateLetters("cbacdcbc");
-        System.out.println(res);
-    }
-}
-```
-
-
-
-
-
-## 参考资料
-
-1、https://leetcode-cn.com/problems/smallest-subsequence-of-distinct-characters/solution/mei-you-qi-ji-yin-qiao-zhi-you-chun-cui-de-tan-xin/
-
-
-
-Java 代码：
-
-```java
-import java.util.Stack;
-
-public class Solution {
-
-    // 贪心算法
-
-    public String removeDuplicateLetters(String s) {
-        // 计算 26 字母数量
-        int[] charsCount = new int[26];
-        // 标记字母是否已经入栈
-        boolean[] visited = new boolean[26];
-        int len = s.length();
-        char[] sChars = s.toCharArray();
-        for (char c : sChars) {
-            charsCount[c - 'a']++;
-        }
-        Stack<Character> stack = new Stack<>();
-        // 最终字符的长度
-        int index = 0;
-        for (int count : charsCount) {
-            if (count > 0) {
-                index++;
-            }
-        }
-
-        char[] res = new char[index];
-        // len 是字符串的长度
-        for (int i = 0; i < len; i++) {
-            char c = s.charAt(i);
-            // 有小字符的且满足其前面的字符在小字符后还有同样字符的，则出栈
-            while (!stack.isEmpty() && c < stack.peek() && charsCount[stack.peek() - 'a'] > 1 && !visited[c - 'a']) {
-                Character pop = stack.pop();
-                visited[pop - 'a'] = false;
-                charsCount[pop - 'a']--;
-            }
-            if (visited[c - 'a']) {
-                //重复的字符根据游标往后移动，数量减一
-                charsCount[c - 'a']--;
-                continue;
-            }
-            stack.push(c);
-            visited[c - 'a'] = true;
-        }
-
-        while (!stack.isEmpty()) {
-            res[--index] = stack.pop();
-        }
-        return String.valueOf(res);
-    }
-}
-```
-
-Java 代码：
-
-```java
-import java.util.Stack;
-
-public class Solution {
-
-    public String removeDuplicateLetters(String s) {
-        int len = s.length();
-        Stack<Character> stack = new Stack<>();
-        for (int i = 0; i < len; i++) {
-            if (stack.contains(s.charAt(i))) {
-                continue;
-            }
-            while (!stack.isEmpty() && s.charAt(i) < stack.peek() && s.indexOf(stack.peek(), i) != -1) {
-                stack.pop();
-            }
-            stack.add(s.charAt(i));
-        }
-
-        StringBuilder sb = new StringBuilder();
-        for (Character c : stack) {
-            sb.append(c);
-        }
-        return sb.toString();
-    }
-}
-
-```
-
-
-
-# LeetCode 第 316 题：去除重复字母（困难）
-
-传送门：[LeetCode 第 316 题：去除重复字母](https://leetcode-cn.com/problems/remove-duplicate-letters/)。
-
-同  [LeetCode 第 1081 题：不同字符的最小子序列](https://leetcode-cn.com/problems/smallest-subsequence-of-distinct-characters/)。
-
-> 给定一个仅包含小写字母的字符串，去除字符串中重复的字母，使得每个字母只出现一次。需保证返回结果的字典序最小（要求不能打乱其他字符的相对位置）。
-
-示例 1:
-
-```
-输入: "bcabc"
-输出: "abc"
-```
-
-
-示例 2:
-
-```
-输入: "cbacdcbc"
-输出: "acdb"
-```
-
-来源：力扣（LeetCode）
-链接：https://leetcode-cn.com/problems/remove-duplicate-letters
-著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
-
-
-
-
-
-**思路分析：**
-
-首先解释一下字典序是什么。
-
-**字典序**
-
-字典序是指从前到后比较两个字符串大小的方法。
-
-+ 首先比较第 1 个字符，如果不同则第 1 个字符较小的字符串更小；
-+ 如果相同则继续比较第 2 个字符 …… 如此继续，比较整个字符串的大小。
-
-整理题目要求：
-
-1、去除字符串中重复的字母，使得每个字母只出现一次；
-
-2、保证返回结果的字典序最小；
-
-3、不能打乱其他字符的相对位置。
-
-
-观察示例 1：`bcabc`。
-
-+ 如果某个字符在字符串中只出现一次，那么这个字符串必须被选取，这里 `a` 必须被选取；
-+ 字符 `b` 出现了两次，显然选择 `a`后面的那个，因为字典序 `ab` 在 `ba` 前面。同理，有两个相同的字符 `c` ，我们选择后一个。因此，输出就是 `abc`。
-
-
-再观察示例 2：`cbacdcbc`。
-
-+ 有 4 个字符：`a`、`b`、`c`、`d`。其中 `a` 和 `d` 只出现一次，必须被选取；
-+ `b` 出现 2 次，一个在 `a` 前面，一个在 `a` 后面，显然保留在 `a` 后面的；
-+ `c` 出现 4 次，我们把几种可能都列出来一下：
-
-情况 1：`cadb`
-情况 2：`acdb`（字典序最小）
-情况 3：`adcb`
-情况 4：`adbc`
-
-一种最理想的情况是：`abcd`，在遍历的时候，遇到的字符串的 ASCII 值逐渐增大。下面我们就思考，当遍历到的字符的 ASCII 值减少的时候，应该如何处理。
-
-还看示例 1：已经遍历读到了 `bc`，即将读到的 `a` 比 `c` 的ASCII 值小。这时候看字符 `c` 在后面还会不会出现，`c` 会出现，那么 `a` 之前的 `c` 我们舍弃。同理，我们舍弃之前的 `b`，因为 `b` 在将来还会出现，构成的字典序更小。
-
-到此为止，应该想到我们需要借助栈帮助我们完成这题。
-
-
-然后，根据这个思路，走一下示例 2：`cbacdcbc`。
-
-第 1 步：读到 `c`，入栈，此时栈中元素 `[c]`；
-
-第 2 步：读到 `b`，`b` 比之前 `a` 小，`c` 在以后还会出现，因此 `c` 出栈，`b` 入栈，此时栈中元素 `[b]`；
-
-第 3 步：读到 `a`，`a` 比之前 `b` 小，`b` 在以后还会出现，因此 `b` 出栈，`a` 入栈，此时栈中元素 `[a]`；
-
-第 4 步：读到 `c`，`c` 比之前 `a` 大，直接让 `c` 入栈，此时栈中元素 `[a, c]`；
-
-第 5 步：读到 `d`，`d` 比之前 `d` 大，直接让 `d` 入栈，此时栈中元素 `[a, c, d]`；
-
-第 6 步：读到 `c`，这里要注意：**此时栈中已经有 `c` 了，此时栈中元素构成的字符顺序就是最小的字典序，不可能舍弃之前的 c，而用现在的读到的 `c`**，因此这个 `c` 不需要，直接跳过；
-
-第 7 步：读到 `b`，`b` 比之前的 `c` 小，但是，后面不会再出现 `b` 了，因此 `b` 就应该放在这个位置，因此让 `b` 入栈，此时栈中元素 `[a, c, d, b]`；
-
-第 8 步：读到 `c`，同第 6 步，这个 `c` 我们不需要。
-
-于是，我们可以设计如下算法：
-
-
-> 1、遍历字符串里的字符，如果读到的字符的 ASCII 值是升序，依次存到一个栈中；
-> 2、如果读到的字符在栈中已经存在，这个字符我们不需要；
-> 3、如果读到的 ASCII 值比栈顶元素严格小，看看栈顶元素在后面是否还会出现，如果还会出现，则舍弃栈顶元素，而选择后出现的那个字符，这样得到的字典序更小。
-
-因为需要判断读到的字符在栈中是否已经存在，因此可以使用哈希表，又因为题目中说，字符只会出现小写字母，用一个布尔数组也是可以的，注意在出栈入栈的时候，需要同步更新一下这个布尔数组。
-又因为要判断栈顶元素在后面是否会被遍历到，因此我们需要先遍历一次字符，存一下这个字符最后出现的位置，就能判断栈顶元素在后面是否会被遍历到。
-
-**参考代码 1**：
-
-```Java []
-import java.util.Stack;
-
-public class Solution {
-
-    public String removeDuplicateLetters(String s) {
-        int len = s.length();
-        // 特判
-        if (len < 2) {
-            return s;
-        }
-
-        // 记录是否在已经得到的字符串中
-        boolean[] set = new boolean[26];
-
-        // 记录每个字符出现的最后一个位置
-        int[] indexes = new int[26];
-        for (int i = 0; i < len; i++) {
-            indexes[s.charAt(i) - 'a'] = i;
-        }
-
-        Stack<Character> stack = new Stack<>();
-        for (int i = 0; i < len; i++) {
-            char currentChar = s.charAt(i);
-            if (set[currentChar - 'a']) {
-                continue;
-            }
-
-            while (!stack.empty() && stack.peek() > currentChar && indexes[stack.peek() - 'a'] >= i) {
-                char top = stack.pop();
-                set[top - 'a'] = false;
-            }
-
-            stack.push(currentChar);
-            set[currentChar - 'a'] = true;
-        }
-
-        StringBuilder stringBuilder = new StringBuilder();
-        while (!stack.empty()) {
-            stringBuilder.insert(0, stack.pop());
-        }
-        return stringBuilder.toString();
-    }
-}
-```
-
-```Python []
-
-```
-
-
-
-
-
-
-
-
-
-Java 代码：
-
-```Java
-import java.util.Stack;
-
-/**
- * @author liwei
- * @date 2019/6/27 10:26 AM
- */
-public class Solution2 {
-
-    public String removeDuplicateLetters(String s) {
-        int len = s.length();
-        Stack<Character> stack = new Stack<>();
-        for (int i = 0; i < len; i++) {
-            if (stack.contains(s.charAt(i))) {
-                continue;
-            }
-            while (!stack.isEmpty() && s.charAt(i) < stack.peek() && s.indexOf(stack.peek(), i) != -1) {
-                stack.pop();
-            }
-            stack.add(s.charAt(i));
-        }
-
-        StringBuilder sb = new StringBuilder();
-        for (Character c : stack) {
-            sb.append(c);
-        }
-        return sb.toString();
-    }
-}
-```
-
-Java 代码：
-
-```java
-import java.util.Stack;
-
-public class Solution {
-
-    // 贪心算法
-
-    public String removeDuplicateLetters(String s) {
-        // 计算 26 字母数量
-        int[] charsCount = new int[26];
-        // 标记字母是否已经入栈
-        boolean[] visited = new boolean[26];
-        int len = s.length();
-        char[] sChars = s.toCharArray();
-        for (char c : sChars) {
-            charsCount[c - 'a']++;
-        }
-        Stack<Character> stack = new Stack<>();
-        // 最终字符的长度
-        int index = 0;
-        for (int count : charsCount) {
-            if (count > 0) {
-                index++;
-            }
-        }
-
-        char[] res = new char[index];
-        // len 是字符串的长度
-        for (int i = 0; i < len; i++) {
-            char c = s.charAt(i);
-            // 有小字符的且满足其前面的字符在小字符后还有同样字符的，则出栈
-            while (!stack.isEmpty() && c < stack.peek() && charsCount[stack.peek() - 'a'] > 1 && !visited[c - 'a']) {
-                Character pop = stack.pop();
-                visited[pop - 'a'] = false;
-                charsCount[pop - 'a']--;
-            }
-            if (visited[c - 'a']) {
-                //重复的字符根据游标往后移动，数量减一
-                charsCount[c - 'a']--;
-                continue;
-            }
-            stack.push(c);
-            visited[c - 'a'] = true;
-        }
-
-        while (!stack.isEmpty()) {
-            res[--index] = stack.pop();
-        }
-        return String.valueOf(res);
-    }
-
-    public static void main(String[] args) {
-        Solution solution = new Solution();
-        String res =solution.removeDuplicateLetters("bcabc");
-        System.out.println(res);
-    }
-}
-```
-
-Python 代码：
-
-```python
-class Solution:
-    def removeDuplicateLetters(self, s: str) -> str:
-        size = len(s)
-        stack = []
-
-        for i in range(size):
-            if stack.count(s[i]) > 0:
-                continue
-            while stack and ord(s[i]) < ord(stack[-1]) \
-                    and s.find(stack[-1], i) != -1:
-                stack.pop()
-
-            
-
-            stack.append(s[i])
-        return ''.join(stack)
-```
-
-
-
 
 
 ---

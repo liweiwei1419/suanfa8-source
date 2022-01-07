@@ -54,7 +54,7 @@ tags:
 - `1 <= heights.length <=105`
 - `0 <= heights[i] <= 104`
 
-### 方法一：暴力解法（超时）
+## 方法一：暴力解法（超时）
 
 这道问题的暴力解法比「接雨水」那道题要其实好想得多：可以枚举以每个柱形为高度的最大矩形的面积。
 
@@ -147,7 +147,7 @@ class Solution:
 
 很容易想到的优化的思路就是「以空间换时间」。我们需要在遍历的过程中记录一些信息。
 
-### 方法二：以空间换时间，可以使用的数据结构是栈
+## 方法二：以空间换时间，可以使用的数据结构是栈
 
 说明：下面文字有点长，大家可以直接收看 [官方题解](https://leetcode-cn.com/problems/largest-rectangle-in-histogram/solution/zhu-zhuang-tu-zhong-zui-da-de-ju-xing-by-leetcode-/)。
 

@@ -49,19 +49,13 @@ tags:
 - `nums1`和`nums2`中所有整数 **互不相同**
 - `nums1` 中的所有整数同样出现在 `nums2` 中
 
-## 思路分析
-
-
-
-
-
-### 方法一：暴力解法（Brute Force）
+## 方法一：暴力解法（Brute Force）
 
 就根据题目意思来写。
 
 **参考代码 1**：
 
-```Java []
+```java
 import java.util.Arrays;
 
 public class Solution {
@@ -104,7 +98,7 @@ public class Solution {
 + 时间复杂度：$O(NM)$，这里 $N$ 是数组 `nums1` 的长度， $M$ 是数组 `nums2` 的长度
 + 空间复杂度：$O(N)$。
 
-### 方法二：单调栈
+## 方法二：单调栈
 
 1、**找右边第 1 个大于自己的元素，这种问题的套路就是使用栈**，并且这个栈的特点是：从栈底到栈顶是单调不增的；
 
@@ -132,7 +126,7 @@ key：弹出元素，value：入栈元素。
 
 **参考代码 2**：
 
-```Java []
+```java
 import java.util.ArrayDeque;
 import java.util.Arrays;
 import java.util.Deque;

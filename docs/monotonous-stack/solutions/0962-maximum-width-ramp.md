@@ -45,8 +45,6 @@ tags:
 
 **参考代码**：
 
-
-
 ```java
 import java.util.ArrayDeque;
 import java.util.Deque;
