@@ -57,7 +57,7 @@ tags:
 
 ---
 
-思路：
+## 思路分析
 
 1、模拟题目中描述的过程；
 
@@ -71,7 +71,7 @@ tags:
 
 **参考代码**：
 
-```Java []
+```java
 import java.util.LinkedList;
 import java.util.Queue;
 

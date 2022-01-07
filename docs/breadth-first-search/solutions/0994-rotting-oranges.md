@@ -6,7 +6,7 @@ tags:
   - 广度优先遍历
 ---
 
-+ 题目链接：[994. 腐烂的橘子](https://leetcode-cn.com/problems/rotting-oranges/)
++ 题目链接：[994. 腐烂的橘子](https://leetcode-cn.com/problems/rotting-oranges/)。
 
 ## 题目描述
 

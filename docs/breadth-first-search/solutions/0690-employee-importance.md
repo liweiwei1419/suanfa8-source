@@ -21,12 +21,34 @@ tags:
 
 **示例：**
 
+![img](https://assets.leetcode.com/uploads/2021/05/31/emp1-tree.jpg)
+
 ```
 输入：[[1, 5, [2, 3]], [2, 3, []], [3, 3, []]], 1
 输出：11
 解释：
 员工 1 自身的重要度是 5 ，他有两个直系下属 2 和 3 ，而且 2 和 3 的重要度均为 3 。因此员工 1 的总重要度是 5 + 3 + 3 = 11 。
 ```
+
+**Example 2:**
+
+![img](https://assets.leetcode.com/uploads/2021/05/31/emp2-tree.jpg)
+
+```
+Input: employees = [[1,2,[5]],[5,-3,[]]], id = 5
+Output: -3
+Explanation: Employee 5 has an importance value of -3 and has no direct subordinates.
+Thus, the total importance value of employee 5 is -3.
+```
+
+**Constraints:**
+
+- `1 <= employees.length <= 2000`
+- `1 <= employees[i].id <= 2000`
+- All `employees[i].id` are **unique**.
+- `-100 <= employees[i].importance <= 100`
+- One employee has at most one direct leader and may have several subordinates.
+- The IDs in `employees[i].subordinates` are valid IDs.
 
 **提示：**
 
@@ -36,13 +58,15 @@ tags:
 
 ![image.png](https://pic.leetcode-cn.com/b713f4b56ccb1ca9659e5575afd03d7a973a74e23b40463f1eea8af027e79c1a-image.png)
 
-### 方法一：深度优先遍历
+## 方法一：深度优先遍历
 
 分为递归与非递归写法。
 
 **参考代码 1**：使用递归写法。
 
-```Java []
+<CodeGroup>
+<CodeGroupItem title="Java">
+```java
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -93,7 +117,10 @@ public class Solution {
     }
 }
 ```
-```Python []
+</CodeGroupItem>
+
+<CodeGroupItem title="Python3">
+```python
 class Employee:
     def __init__(self, id, importance, subordinates):
         # It's the unique id of each node.
@@ -134,11 +161,19 @@ class Solution:
         for id in employee.subordinates:
             self.__dfs(self.hash_map[id])
 ```
+</CodeGroupItem>
+</CodeGroup>
+
+
+
 
 **参考代码 2**：使用栈的非递归写法。
 
 
-```Java []
+
+<CodeGroup>
+<CodeGroupItem title="Java">
+```java
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -180,7 +215,10 @@ public class Solution {
     }
 }
 ```
-```Python []
+</CodeGroupItem>
+
+<CodeGroupItem title="Python3">
+```python
 class Employee:
     def __init__(self, id, importance, subordinates):
         # It's the unique id of each node.
@@ -220,14 +258,18 @@ class Solution:
                 stack.append(subordinate_id)
         return res
 ```
+</CodeGroupItem>
+</CodeGroup>
 
-### 方法二：广度优先遍历
+## 方法二：广度优先遍历
 
 广度优先遍历，使用队列。
 
 **参考代码 3**：
 
-```Java []
+<CodeGroup>
+<CodeGroupItem title="Java">
+```java
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -263,7 +305,10 @@ public class Solution {
     }
 }
 ```
-```Python []
+</CodeGroupItem>
+
+<CodeGroupItem title="Python3">
+```python
 class Employee:
     def __init__(self, id, importance, subordinates):
         # It's the unique id of each node.
@@ -301,3 +346,7 @@ class Solution:
                 queue.append(subordinate_id)
         return res
 ```
+</CodeGroupItem>
+</CodeGroup>
+
+

@@ -9,7 +9,46 @@ tags:
 + 题目链接：[365. 水壶问题](https://leetcode-cn.com/problems/water-and-jug-problem/)；
 + 题解链接：[图的广度优先遍历（Java）](https://leetcode-cn.com/problems/water-and-jug-problem/solution/tu-de-yan-du-you-xian-bian-li-by-liweiwei1419/)。
 
+## 题目描述
 
+有两个容量分别为 *x*升 和 *y*升 的水壶以及无限多的水。请判断能否通过使用这两个水壶，从而可以得到恰好 *z*升 的水？
+
+如果可以，最后请用以上水壶中的一或两个来盛放取得的 *z升* 水。
+
+你允许：
+
+- 装满任意一个水壶
+- 清空任意一个水壶
+- 从一个水壶向另外一个水壶倒水，直到装满或者倒空
+
+**示例 1:** (From the famous [*"Die Hard"* example](https://www.youtube.com/watch?v=BVtQNK_ZUJg))
+
+```
+输入: x = 3, y = 5, z = 4
+输出: True
+```
+
+**示例 2:**
+
+```
+输入: x = 2, y = 6, z = 5
+输出: False
+```
+
+**Example 3:**
+
+```
+Input: jug1Capacity = 1, jug2Capacity = 2, targetCapacity = 3
+Output: true
+```
+
+
+
+**Constraints:**
+
+- `1 <= jug1Capacity, jug2Capacity, targetCapacity <= 10^6`
+
+## 思路分析
 
 
 对示例 1 的理解，感谢朋友 [@robotliu0327](/u/robotliu0327/) 提供的图例。
@@ -69,8 +108,6 @@ tags:
 我写的代码，由于把状态设置成有序数对，在哈希表里要判重，所以代码写出来特别不好看。
 
 感谢评论区朋友 [@antonzhao](/u/antonzhao/) 的推荐，状态图比较有意思，是个网状的样子，让我想起来了「n 皇后」那个问题的状态图，有点类似哦。这位朋友推荐的这篇题解的「状态」设置就很不错，欢迎大家围观[题解](https://leetcode-cn.com/problems/water-and-jug-problem/solution/hu-dan-long-wei-liang-zhang-you-yi-si-de-tu-by-ant/)。
-
-
 
 **参考代码**：
 

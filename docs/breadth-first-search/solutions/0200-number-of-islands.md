@@ -8,10 +8,8 @@ tags:
   - 并查集
 ---
 
-
-传送门：[200. 岛屿数量](https://leetcode-cn.com/problems/number-of-islands/)。
-
-题解地址：[DFS + BFS + 并查集（Python 代码、Java 代码）](https://leetcode-cn.com/problems/number-of-islands/solution/dfs-bfs-bing-cha-ji-python-dai-ma-java-dai-ma-by-l/)。
++ 题目地址：[200. 岛屿数量](https://leetcode-cn.com/problems/number-of-islands/)；
++ 题解地址：[DFS + BFS + 并查集（Python 代码、Java 代码）](https://leetcode-cn.com/problems/number-of-islands/solution/dfs-bfs-bing-cha-ji-python-dai-ma-java-dai-ma-by-l/)。
 
 ## 题目描述
 
@@ -64,9 +62,10 @@ tags:
 
 **参考代码：**
 
-Java 代码：
 
-```Java []
+<CodeGroup>
+<CodeGroupItem title="Java">
+```java
 import java.util.LinkedList;
 
 /**
@@ -153,10 +152,10 @@ public class Solution2 {
     }
 }
 ```
+</CodeGroupItem>
 
-Python 代码：
-
-```Python []
+<CodeGroupItem title="Python3">
+```python
 from typing import List
 from collections import deque
 
@@ -234,4 +233,12 @@ if __name__ == '__main__':
     result = solution.numIslands(grid)
     print(result)
 ```
+</CodeGroupItem>
+</CodeGroup>
+
+
+
+
+
+
 

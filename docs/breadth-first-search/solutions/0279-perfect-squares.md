@@ -36,10 +36,17 @@ tags:
 
 - `1 <= n <= 104`
 
-## 思路分析
+::: warning 说明
+因时间和精力关系，本题没有写详解，只给出了参考代码。读者可以在「力扣」这道题的评论区和题解区找到适合自己的思路分析和代码。如果确实需要我编写具体的解题思路，可以发邮件到 liweiwei1419@gmail.com。
+:::
 
-Java 代码：
 
+
+
+**参考代码 1**：
+
+<CodeGroup>
+<CodeGroupItem title="Java">
 ```java
 import java.util.ArrayDeque;
 import java.util.LinkedList;
@@ -87,9 +94,9 @@ public class Solution {
     }
 }
 ```
+</CodeGroupItem>
 
-Python 代码：
-
+<CodeGroupItem title="Python3">
 ```python
 class Solution:
     def numSquares(self, n: int) -> int:
@@ -128,9 +135,8 @@ if __name__ == '__main__':
     print('结果', res)
 
 ```
-
-Python 代码：
-
+</CodeGroupItem>
+<CodeGroupItem title="Python3">
 ```python
 class Solution:
     def numSquares(self, n: int) -> int:
@@ -158,9 +164,8 @@ if __name__ == '__main__':
     res = s.numSquares(4)
     print('结果', res)
 ```
-
-Python 代码：
-
+</CodeGroupItem>
+<CodeGroupItem title="Python3">
 ```python
 from collections import deque
 
@@ -199,10 +204,26 @@ if __name__ == '__main__':
     res = solution.numSquares(n)
     print(res)
 ```
+</CodeGroupItem>
+</CodeGroup>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### 方法二：动态规划
 
-Java 代码：
+**参考代码 2**：
 
 ```java
 import java.util.Arrays;

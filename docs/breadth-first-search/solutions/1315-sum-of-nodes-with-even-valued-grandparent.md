@@ -10,9 +10,43 @@ tags:
 + 题目链接：[1315. 祖父节点值为偶数的节点和](https://leetcode-cn.com/problems/sum-of-nodes-with-even-valued-grandparent/)；
 + 题解链接：[层序遍历](https://leetcode-cn.com/problems/sum-of-nodes-with-even-valued-grandparent/solution/ceng-xu-bian-li-by-liweiwei1419/)。
 
+## 题目描述
 
+给你一棵二叉树，请你返回满足以下条件的所有节点的值之和：
 
-思路：层序遍历。如果当前结点的值是偶数，给它的子节点一个标记。队首元素出队的时候收到这个标记，则表示当前队首的孩子结点的值（如果有的话）都要收集起来。
+- 该节点的祖父节点的值为偶数。（一个节点的祖父节点是指该节点的父节点的父节点。）
+
+如果不存在祖父节点值为偶数的节点，那么返回 `0` 。
+
+ 
+
+**示例 1：**
+
+![img](https://assets.leetcode.com/uploads/2021/08/10/even1-tree.jpg)
+
+```
+输入：root = [6,7,8,2,7,1,3,9,null,1,4,null,null,null,5]
+输出：18
+解释：图中红色节点的祖父节点的值为偶数，蓝色节点为这些红色节点的祖父节点。
+```
+
+**Example 2:**
+
+![img](https://assets.leetcode.com/uploads/2021/08/10/even2-tree.jpg)
+
+```
+Input: root = [1]
+Output: 0
+```
+
+**提示：**
+
+- 树中节点的数目在 `1` 到 `10^4` 之间。
+- 每个节点的值在 `1` 到 `100` 之间。
+
+## 思路分析
+
+层序遍历。如果当前结点的值是偶数，给它的子节点一个标记。队首元素出队的时候收到这个标记，则表示当前队首的孩子结点的值（如果有的话）都要收集起来。
 
 具体做法是：
 
@@ -22,7 +56,7 @@ tags:
 
 **参考代码**：
 
-```Java []
+```java
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -81,5 +115,5 @@ public class Solution {
 
 **复杂度分析**：
 
-+ 时间复杂度：$O(N)$，这里 $N$ 是树的结点个数。
++ 时间复杂度：$O(N)$，这里 $N$ 是树的结点个数；
 + 空间复杂度：队列的长度不会超过每一层结点总数的最大值。

@@ -56,6 +56,14 @@ bank: ["AAAACCCC", "AAACCCCC", "AACCCCCC"]
 返回值: 3
 ```
 
+**Constraints:**
+
+- `start.length == 8`
+- `end.length == 8`
+- `0 <= bank.length <= 10`
+- `bank[i].length == 8`
+- `start`, `end`, and `bank[i]` consist of only the characters `['A', 'C', 'G', 'T']`.
+
 ## 方法一：单向广度优先遍历
 
 **参考代码 1**：
