@@ -10,12 +10,9 @@ tags:
   - 字符串
 ---
 
-## 「力扣」第 257 题：二叉树的所有路径
++ 题目链接：[257. 二叉树的所有路径](https://leetcode-cn.com/problems/binary-tree-paths/)；
 
-+ 题目链接：[257. 二叉树的所有路径](https://leetcode-cn.com/problems/binary-tree-paths/)
-
-+ 题解链接：[
-回溯算法（Python 代码、Java 代码）](https://leetcode-cn.com/problems/binary-tree-paths/solution/shen-du-you-xian-bian-li-python-dai-ma-by-liweiwei/)
++ 题解链接：[回溯算法（Python 代码、Java 代码）](https://leetcode-cn.com/problems/binary-tree-paths/solution/shen-du-you-xian-bian-li-python-dai-ma-by-liweiwei/)。
 
 ## 题目描述
 

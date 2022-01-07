@@ -1,5 +1,5 @@
 ---
-title: 「力扣」第 94 题：二叉树的中序遍历（中等）
+title: 「力扣」第 94 题：二叉树的中序遍历（简单）
 icon: yongyan
 category: 二叉树
 tags:
@@ -10,30 +10,60 @@ tags:
 + 题目链接：[94. 二叉树的中序遍历](https://leetcode-cn.com/problems/binary-tree-inorder-traversal/)；
 + 题解链接：[模拟系统栈完成非递归中序遍历，同理可以完成非递归的前序遍历和后序遍历](https://leetcode-cn.com/problems/binary-tree-inorder-traversal/solution/mo-ni-xi-tong-zhan-wan-cheng-fei-di-gui-zhong-xu-b/)。
 
+## 题目描述
 
-## 「力扣」第 94 题：二叉树的中序遍历（中等）
+给定一个二叉树的根节点 `root` ，返回它的 **中序** 遍历。
 
-+ 链接：https://leetcode-cn.com/problems/binary-tree-inorder-traversal/。
+**示例 1：**
 
-> 给定一个二叉树，返回它的中序 遍历。
->
-> 示例：
->
-> ```
-> 输入: [1, null, 2, 3]
->    1
->     \
->      2
->     /
->    3
-> 
-> 输出: [1, 3, 2]
-> ```
->
->
-> 进阶：递归算法很简单，你可以通过迭代算法完成吗？
+![img](https://assets.leetcode.com/uploads/2020/09/15/inorder_1.jpg)
 
-### 方法一：递归
+
+
+
+```
+输入：root = [1,null,2,3]
+输出：[1,3,2]
+```
+
+**示例 2：**
+
+```
+输入：root = []
+输出：[]
+```
+
+**示例 3：**
+
+```
+输入：root = [1]
+输出：[1]
+```
+
+**示例 4：**
+
+![img](https://assets.leetcode.com/uploads/2020/09/15/inorder_5.jpg)
+
+```
+输入：root = [1,2]
+输出：[2,1]
+```
+
+**示例 5：**
+
+![img](https://assets.leetcode.com/uploads/2020/09/15/inorder_4.jpg)
+
+```
+输入：root = [1,null,2]
+输出：[1,2]
+```
+
+**提示：**
+
+- 树中节点数目在范围 `[0, 100]` 内
+- `-100 <= Node.val <= 100`
+
+## 方法一：递归
 
 Java 代码实现：
 
@@ -57,7 +87,7 @@ public class Solution {
 }
 ```
 
-### 方法二：非递归写法 1 
+## 方法二：非递归写法 1 
 
 Java 代码：
 
@@ -88,7 +118,7 @@ public class Solution {
 }
 ```
 
-### 方法三：非递归写法 2
+## 方法三：非递归写法 2
 
 Java 代码实现：
 
@@ -157,7 +187,7 @@ public class Solution {
 ---
 
 
-### 方法：模拟系统栈
+## 方法：模拟系统栈
 
 模拟系统栈的方法其实并不难理解，就是在栈中放入结点的同时，**同时传入一个指令，这个指令可以有 2 个含义**：
 

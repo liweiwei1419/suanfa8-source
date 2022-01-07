@@ -12,42 +12,65 @@ tags:
 
 和二叉树相关的问题，在面试中是非常常见的。一旦我们熟悉了这些问题以后，会发现这些问题其实是非常简单的。
 
-### 
+## 题目描述
 
-+ 中文网址：[226. 翻转二叉树](https://leetcode-cn.com/problems/invert-binary-tree/description/) ；
+翻转一棵二叉树。
 
-+ 英文网址：[226. Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/description/) 。
+**示例：**
 
-> 翻转一棵二叉树。
->
-> **示例：**
->
-> 输入：
->
-> ```
-> 4
-> /   \
-> 2     7
-> / \   / \
-> 1   3 6   9
-> ```
->
-> 输出：
->
-> ```
-> 4
-> /   \
-> 7     2
-> / \   / \
-> 9   6 3   1
-> ```
->
-> **备注:**
-> 这个问题是受到 [Max Howell ](https://twitter.com/mxcl)的 [原问题](https://twitter.com/mxcl/status/608682016205344768) 启发的 ：
->
-> > 谷歌：我们90％的工程师使用您编写的软件(Homebrew)，但是您却无法在面试时在白板上写出翻转二叉树这道题，这太糟糕了。
+输入：
 
-分析：算法是非常重要的基本功。即使是大公司都非常注重基础问题的考察。
+![img](https://assets.leetcode.com/uploads/2021/03/14/invert1-tree.jpg)
+
+```
+     4
+   /   \
+  2     7
+ / \   / \
+1   3 6   9
+```
+
+输出：
+
+```
+     4
+   /   \
+  7     2
+ / \   / \
+9   6 3   1
+```
+
+**Example 2:**
+
+![img](https://assets.leetcode.com/uploads/2021/03/14/invert2-tree.jpg)
+
+```
+Input: root = [2,1,3]
+Output: [2,3,1]
+```
+
+**Example 3:**
+
+```
+Input: root = []
+Output: []
+```
+
+ 
+
+**备注:**
+这个问题是受到 [Max Howell ](https://twitter.com/mxcl)的 [原问题](https://twitter.com/mxcl/status/608682016205344768) 启发的 ：
+
+> 谷歌：我们90％的工程师使用您编写的软件(Homebrew)，但是您却无法在面试时在白板上写出翻转二叉树这道题，这太糟糕了。
+
+**Constraints:**
+
+- The number of nodes in the tree is in the range `[0, 100]`.
+- `-100 <= Node.val <= 100`
+
+## 思路分析
+
+算法是非常重要的基本功。即使是大公司都非常注重基础问题的考察。
 
 这道问题可以说是一个经典的问题。LeetCode 上有如下备注：
 
@@ -109,7 +132,7 @@ public class Solution2 {
 }
 ```
 
-### 方法一：前序遍历
+## 方法一：前序遍历
 
 Java 代码：
 
@@ -144,7 +167,7 @@ public class Solution {
 }
 ```
 
-### 方法二：中序遍历
+## 方法二：中序遍历
 
 **注意**：写中序遍历的时候，不能仅仅只是将前序遍历的代码顺序调整一下。
 
@@ -174,7 +197,7 @@ public class Solution {
 
 ```
 
-### 方法三：后序遍历
+## 方法三：后序遍历
 
 Java 代码：
 
@@ -197,7 +220,7 @@ public class Solution {
 }
 ```
 
-### 方法四：层序遍历
+## 方法四：层序遍历
 
 Java 代码：
 

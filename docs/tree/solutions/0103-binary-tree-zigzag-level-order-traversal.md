@@ -6,33 +6,53 @@ tags:
   - 二叉树
 ---
 
++ 题目链接：[103. 二叉树的锯齿形层次遍历](https://leetcode-cn.com/problems/binary-tree-zigzag-level-order-traversal/)。
 
-## 「力扣」第 103 题：二叉树的锯齿形层次遍历（中等）
+## 题目描述
 
-传送门：[103. 二叉树的锯齿形层次遍历](https://leetcode-cn.com/problems/binary-tree-zigzag-level-order-traversal/)。
+给定一个二叉树，返回其节点值的锯齿形层序遍历。（即先从左往右，再从右往左进行下一层遍历，以此类推，层与层之间交替进行）。
 
-> 给定一个二叉树，返回其节点值的锯齿形层次遍历。（即先从左往右，再从右往左进行下一层遍历，以此类推，层与层之间交替进行）。
->
-> 例如：
-> 给定二叉树 `[3,9,20,null,null,15,7]`,
->
-> ```
->  3
-> / \
-> 9  20
->  /  \
-> 15   7
-> ```
->
-> 返回锯齿形层次遍历如下：
->
-> ```
-> [
-> [3],
-> [20,9],
-> [15,7]
-> ]
-> ```
+例如：
+给定二叉树 `[3,9,20,null,null,15,7]`,
+
+![img](https://assets.leetcode.com/uploads/2021/02/19/tree1.jpg)
+
+```
+    3
+   / \
+  9  20
+    /  \
+   15   7
+```
+
+返回锯齿形层序遍历如下：
+
+```
+[
+  [3],
+  [20,9],
+  [15,7]
+]
+```
+
+**Example 2:**
+
+```
+Input: root = [1]
+Output: [[1]]
+```
+
+**Example 3:**
+
+```
+Input: root = []
+Output: []
+```
+
+**Constraints:**
+
++ The number of nodes in the tree is in the range `[0, 2000]`.
++ `-100 <= Node.val <= 100`
 
 Java 代码：
 
@@ -116,12 +136,3 @@ public class Solution {
     }
 }
 ```
-
-
-
-Python 代码：
-
-```python
-
-```
-

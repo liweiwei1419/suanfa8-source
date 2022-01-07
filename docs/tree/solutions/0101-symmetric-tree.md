@@ -7,39 +7,39 @@ tags:
   - 递归
 ---
 
-## 「力扣」第 101 题：判断两棵二叉树是否左右对称
++ 题目链接：[101. 对称二叉树](https://leetcode-cn.com/problems/symmetric-tree/description/)。
 
-+ 中文网址：[101. 对称二叉树](https://leetcode-cn.com/problems/symmetric-tree/description/) ；
+## 题目描述
 
-+ 英文网址：[101. Symmetric Tree](https://leetcode.com/problems/symmetric-tree/description/) 。
+给定一个二叉树，检查它是否是镜像对称的。
 
-> 给定一个二叉树，检查它是否是镜像对称的。
->
-> 例如，二叉树 `[1,2,2,3,4,4,3]` 是对称的。
->
-> ```
->  1
-> / \
-> 2   2
-> / \ / \
-> 3  4 4  3
-> ```
->
-> 但是下面这个 `[1,2,2,null,3,null,3]` 则不是镜像对称的:
->
-> ```
->  1
-> / \
-> 2   2
-> \   \
-> 3    3
-> ```
->
-> **说明:**
->
-> 如果你可以运用递归和迭代两种方法解决这个问题，会很加分。
+例如，二叉树 `[1,2,2,3,4,4,3]` 是对称的。
 
-思路1：递归处理，需要引入辅助函数。
+```
+    1
+   / \
+  2   2
+ / \ / \
+3  4 4  3
+```
+
+但是下面这个 `[1,2,2,null,3,null,3]` 则不是镜像对称的:
+
+```
+    1
+   / \
+  2   2
+   \   \
+   3    3
+```
+
+**进阶：**
+
+你可以运用递归和迭代两种方法解决这个问题吗？
+
+## 方法一：递归
+
+需要引入辅助函数。
 
 Python 代码1：
 
@@ -79,11 +79,13 @@ class Solution(object):
 
 ```
 
-思路2：非递归写法，借助双端队列辅助判断。自己画一个图，就好理解了。
+## 方法二：非递归
+
+借助双端队列辅助判断。自己画一个图，就好理解了。
 
 ![LeetCode 第 101 题：判断两棵二叉树是否左右对称](https://liweiwei1419.gitee.io/images/leetcode-solution/101-1.jpg)
 
-Python 代码2：
+Python 代码：
 
 ```python
 # Definition for a binary tree node.
@@ -240,5 +242,3 @@ class Solution(object):
             deque.append(r_node.right)
         return True
 ```
-
-### 

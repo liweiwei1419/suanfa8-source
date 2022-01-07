@@ -6,37 +6,48 @@ tags:
   - 二叉树
 ---
 
++ 题目描述：[107. 二叉树的层次遍历 II](https://leetcode-cn.com/problems/binary-tree-level-order-traversal-ii/)。
+
+## 题目描述
+
+Given the `root` of a binary tree, return *the bottom-up level order* *traversal of its nodes' values*. (i.e., from left  to right, level by level from leaf to root).
+
+**Example 1:**
+
+![img](https://assets.leetcode.com/uploads/2021/02/19/tree1.jpg)
+
+```
+Input: root = [3,9,20,null,null,15,7]
+Output: [[15,7],[9,20],[3]]
+```
+
+**Example 2:**
+
+```
+Input: root = [1]
+Output: [[1]]
+```
+
+**Example 3:**
+
+```
+Input: root = []
+Output: []
+```
 
 
-## 「力扣」第 107 题：二叉树的层次遍历 II（中等）
 
-传送门：[107. 二叉树的层次遍历 II](https://leetcode-cn.com/problems/binary-tree-level-order-traversal-ii/)。
+**Constraints:**
 
-> 给定一个二叉树，返回其节点值自底向上的层次遍历。 （即按从叶子节点所在层到根节点所在的层，逐层从左向右遍历）
->
-> 例如：
-> 给定二叉树 `[3,9,20,null,null,15,7]`,
->
-> ```
->  3
-> / \
-> 9  20
->  /  \
-> 15   7
-> ```
->
-> 返回其自底向上的层次遍历为：
->
-> ```
-> [
-> [15,7],
-> [9,20],
-> [3]
-> ]
-> ```
+- The number of nodes in the tree is in the range `[0, 2000]`.
+- `-1000 <= Node.val <= 1000`
 
-Java 代码：
 
+
+**参考代码**：
+
+<CodeGroup>
+<CodeGroupItem title="Java">
 ```java
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -82,9 +93,9 @@ public class Solution {
     }
 }
 ```
+</CodeGroupItem>
 
-Python 代码：
-
+<CodeGroupItem title="Python3">
 ```python
 from typing import List
 from collections import deque
@@ -118,6 +129,5 @@ class Solution:
             res.insert(0, cur)
         return res
 ```
-
- 
-
+</CodeGroupItem>
+</CodeGroup>

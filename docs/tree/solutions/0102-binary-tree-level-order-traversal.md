@@ -6,41 +6,68 @@ tags:
   - 二叉树
 ---
 
-
-
 求解关键：非常标准的层序遍历的做法，使用队列作为辅助的数据结构。
 
++ 题目描述：[102. 二叉树的层次遍历](https://leetcode-cn.com/problems/binary-tree-level-order-traversal/)。
+
+## 题目描述
+
+给你一个二叉树，请你返回其按 **层序遍历** 得到的节点值。 （即逐层地，从左到右访问所有节点）。
 
 
-传送门：[102. 二叉树的层次遍历](https://leetcode-cn.com/problems/binary-tree-level-order-traversal/)。
 
->给定一个二叉树，返回其按层次遍历的节点值。 （即逐层地，从左到右访问所有节点）。
->
->例如:
->给定二叉树: `[3,9,20,null,null,15,7]`,
->
->```
->3
->/ \
->9  20
->/  \
->15   7
->```
->
->返回其层次遍历结果：
->
->```
->[
->[3],
->[9,20],
->[15,7]
->]
->```
+**示例 1：**
+二叉树：`[3,9,20,null,null,15,7]`,
 
-分析：非常标准的层序遍历的做法，使用队列作为辅助的数据结构。
+![img](https://assets.leetcode.com/uploads/2021/02/19/tree1.jpg)
 
-Java 代码：
+```
+    3
+   / \
+  9  20
+    /  \
+   15   7
+```
 
+返回其层序遍历结果：
+
+```
+[
+  [3],
+  [9,20],
+  [15,7]
+]
+```
+
+
+
+**Example 2:**
+
+```
+Input: root = [1]
+Output: [[1]]
+```
+
+**Example 3:**
+
+```
+Input: root = []
+Output: []
+```
+
+**Constraints:**
+
+- The number of nodes in the tree is in the range `[0, 2000]`.
+- `-1000 <= Node.val <= 1000`
+
+## 思路分析
+
+非常标准的层序遍历的做法，使用队列作为辅助的数据结构。
+
+**参考代码**：
+
+<CodeGroup>
+<CodeGroupItem title="Java">
 ```java
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -87,9 +114,9 @@ public class Solution {
     }
 }
 ```
+</CodeGroupItem>
 
-Python 代码：
-
+<CodeGroupItem title="Python3">
 ```python
 from typing import List
 
@@ -124,4 +151,5 @@ class Solution:
             res.append(cur)
         return res
 ```
-
+</CodeGroupItem>
+</CodeGroup>
