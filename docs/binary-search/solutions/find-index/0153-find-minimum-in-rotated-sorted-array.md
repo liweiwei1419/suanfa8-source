@@ -58,11 +58,11 @@ tags:
 
 ---
 
-### 方法一：暴力法
+## 方法一：暴力法
 
 遍历一次数组，选出最小值。这个方法叫「假设修正法」。
 
-### 方法二：二分查找
+## 方法二：二分查找
 
 **思路分析**：二分法也可以解决这个问题，因为「旋转排序数组」，几乎有序的数组，也可以通过比较特定位置的元素的值的判断达到「减治」的效果（ **逐渐缩小搜索区间** ）。
 
@@ -97,7 +97,10 @@ tags:
 
 **参考代码 1**：
 
-```Java []
+
+<CodeGroup>
+<CodeGroupItem title="Java">
+```java
 public class Solution {
 
     public int findMin(int[] nums) {
@@ -122,6 +125,11 @@ public class Solution {
         return nums[left];
     }
 }
+```
+</CodeGroupItem>
+
+<CodeGroupItem title="Python3">
+```python
 from typing import List
 
 
@@ -149,13 +157,18 @@ class Solution:
         # 一定存在最小元素，因此无需再做判断
         return nums[left]
 ```
+</CodeGroupItem>
+</CodeGroup>
+
+
+
 **复杂度分析**：
 
 + 时间复杂度：$O(\log N)$，这里 $N$ 是输入数组的长度；
 + 空间复杂度：$O(1)$，只使用了常数个临时变量。
 
 
-### 方法三：分治法
+## 方法三：分治法
 
 分治法将原问题划分成若干与原问题同结构且规模更小的子问题，等到这些子问题解决了以后，原问题也得到了解决。
 
@@ -163,7 +176,9 @@ class Solution:
 
 **参考代码 2**：（Python 代码未与 Java 代码同步）
 
-```Java []
+<CodeGroup>
+<CodeGroupItem title="Java">
+```java
 public class Solution {
 
     public int findMin(int[] nums) {
@@ -196,6 +211,11 @@ public class Solution {
         }
     }
 }
+```
+</CodeGroupItem>
+
+<CodeGroupItem title="Python3">
+```python
 from typing import List
 
 
@@ -222,6 +242,9 @@ class Solution:
             # [4,5,6,7,8,1,2]
             return min(nums[left], self.__find_min(nums, mid + 1, right))
 ```
+</CodeGroupItem>
+</CodeGroup>
+
 
 **复杂度分析**：
 

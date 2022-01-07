@@ -99,7 +99,7 @@ h 指数想说的是这样一件事情，一个人的论文根据被引用的次
 
 **参考代码**：
 
-```Java []
+```java
 import java.util.Arrays;
 
 public class Solution {

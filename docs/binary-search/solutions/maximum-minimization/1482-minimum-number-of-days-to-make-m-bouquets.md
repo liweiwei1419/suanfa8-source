@@ -6,7 +6,7 @@ tags:
   - 二分查找
 ---
 
-+ 题目链接：[1482. 制作 m 束花所需的最少天数](https://leetcode-cn.com/problems/minimum-number-of-days-to-make-m-bouquets/)
++ 题目链接：[1482. 制作 m 束花所需的最少天数](https://leetcode-cn.com/problems/minimum-number-of-days-to-make-m-bouquets/)。
 
 ## 题目描述
 
@@ -82,7 +82,7 @@ tags:
 
 **参考代码**：
 
-```Java
+```java
 public class Solution {
 
     public int minTime(int[] time, int m) {

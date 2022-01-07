@@ -6,7 +6,7 @@ tags:
   - 二分查找
 ---
 
-+ 题目链接：[1552. 两球之间的磁力](https://leetcode-cn.com/problems/magnetic-force-between-two-balls/)
++ 题目链接：[1552. 两球之间的磁力](https://leetcode-cn.com/problems/magnetic-force-between-two-balls/)。
 
 ## 题目描述
 
@@ -53,7 +53,7 @@ tags:
 
 **参考代码**：
 
-```Java
+```java
 import java.util.Arrays;
 
 public class Solution {
@@ -90,3 +90,4 @@ public class Solution {
     }
 }
 ```
+

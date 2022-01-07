@@ -6,7 +6,7 @@ tags:
   - 二分查找
 ---
 
-+ 题目链接：[1011. 在 D 天内送达包裹的能力](https://leetcode-cn.com/problems/capacity-to-ship-packages-within-d-days/)
++ 题目链接：[1011. 在 D 天内送达包裹的能力](https://leetcode-cn.com/problems/capacity-to-ship-packages-within-d-days/)。
 
 ## 题目描述
 
@@ -58,7 +58,7 @@ tags:
 
 **提示：**
 
-- `1 <= days <= weights.length <= 5 * 104`
+- `1 <= days <= weights.length <= 5 * 10^4`
 - `1 <= weights[i] <= 500`
 
 ## 分析题意

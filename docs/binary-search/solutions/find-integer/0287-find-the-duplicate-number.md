@@ -9,7 +9,7 @@ tags:
 ![0287](https://tva1.sinaimg.cn/large/008i3skNgy1gx8zhudpnkj30p00anjrs.jpg)
 
 + 题目链接：[寻找重复数](https://leetcode-cn.com/problems/find-the-duplicate-number)；
-+ 题解链接：[使用二分法查找一个有范围的整数（结合抽屉原理）](https://leetcode-cn.com/problems/find-the-duplicate-number/solution/er-fen-fa-si-lu-ji-dai-ma-python-by-liweiwei1419/)
++ 题解链接：[使用二分法查找一个有范围的整数（结合抽屉原理）](https://leetcode-cn.com/problems/find-the-duplicate-number/solution/er-fen-fa-si-lu-ji-dai-ma-python-by-liweiwei1419/)。
 
 ## 题目描述
 

@@ -129,7 +129,7 @@ public class Solution {
 ---
 
 
-### 方法：二分查找
+## 方法：二分查找
 
 **思路分析**：
 
@@ -141,9 +141,9 @@ public class Solution {
 
 题目中只要求我们返回任意一个峰值的索引，并且也提示我们看右边的元素 `nums[i] != nums[i + 1]`。因此，如果右边元素大，左边界就可以收缩到中间位置 `+ 1`，根据[“二分查找法的模板”](https://leetcode-cn.com/problems/search-insert-position/solution/te-bie-hao-yong-de-er-fen-cha-fa-fa-mo-ban-python-/)很容易写出以下代码。
 
-Java 代码：
+**参考代码 2**：
 
-```Java []
+```java
 public class Solution {
 
     // 返回任何一个峰值，看相邻位置
@@ -153,7 +153,7 @@ public class Solution {
         int left = 0;
         int right = len - 1;
         while (left < right) {
-            int mid = (left + right) >>> 1;
+            int mid = (left + right) / 2;
             // 正好看到的是右边元素，
             // 分支排除了左边界，并且使用左中位数
             // 可以保证逻辑是完备的
@@ -170,9 +170,8 @@ public class Solution {
 ```
 
 **复杂度分析**：
-+ 时间复杂度：$O(\log N)$，这里 $N$ 是数组的长度。
++ 时间复杂度：$O(\log N)$，这里 $N$ 是数组的长度；
 + 空间复杂度：$O(1)$，这里使用的变量个数都是常数个。
-
 
 
 

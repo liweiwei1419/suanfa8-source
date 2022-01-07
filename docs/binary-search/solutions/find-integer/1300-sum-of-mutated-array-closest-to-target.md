@@ -6,9 +6,47 @@ tags:
   - 二分查找
 ---
 
-
 + 题目链接：[1300. 转变数组后最接近目标值的数组和](https://leetcode-cn.com/problems/sum-of-mutated-array-closest-to-target/)；
 + 题解链接：[二分查找（附相关练习）](https://leetcode-cn.com/problems/sum-of-mutated-array-closest-to-target/solution/er-fen-cha-zhao-by-liweiwei1419-2/)。
+
+## 题目描述
+
+给你一个整数数组 `arr` 和一个目标值 `target` ，请你返回一个整数 `value` ，使得将数组中所有大于 `value` 的值变成 `value` 后，数组的和最接近 `target` （最接近表示两者之差的绝对值最小）。
+
+如果有多种使得和最接近 `target` 的方案，请你返回这些整数中的最小值。
+
+请注意，答案不一定是 `arr` 中的数字。
+
+
+
+**示例 1：**
+
+```
+输入：arr = [4,9,3], target = 10
+输出：3
+解释：当选择 value 为 3 时，数组会变成 [3, 3, 3]，和为 9 ，这是最接近 target 的方案。
+```
+
+**示例 2：**
+
+```
+输入：arr = [2,3,5], target = 10
+输出：5
+```
+
+**示例 3：**
+
+```
+输入：arr = [60864,25176,27249,21296,20204], target = 56803
+输出：11361
+```
+
+**提示：**
+
+- `1 <= arr.length <= 10^4`
+- `1 <= arr[i], target <= 10^5`
+
+## 思路分析
 
 一句话题解：
 
@@ -178,7 +216,6 @@ public class Solution {
 | [35. 搜索插入位置](https://leetcode-cn.com/problems/search-insert-position/) | [详解第 2 种思路：在循环体中排除元素](https://leetcode-cn.com/problems/search-insert-position/solution/te-bie-hao-yong-de-er-fen-cha-fa-fa-mo-ban-python-/) |
 | [34. 在排序数组中查找元素的第一个和最后一个位置](https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/) | [示例：讲解如何缩小搜索范围](https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/solution/si-lu-hen-jian-dan-xi-jie-fei-mo-gui-de-er-fen-cha/) |
 | [4. 寻找两个正序数组的中位数](https://leetcode-cn.com/problems/median-of-two-sorted-arrays/) | [示例：讲解如何应用在复杂的问题上](https://leetcode-cn.com/problems/median-of-two-sorted-arrays/solution/xun-zhao-liang-ge-you-xu-shu-zu-de-zhong-wei-s-114/) |
-
 
 
 

@@ -32,9 +32,8 @@ target = "j"
 
 **参考代码 1**：特殊判断放在最后面，**此时要注意二分搜索初始化的右边界**。
 
-Java 代码：
 
-```Java []
+```java
 public class Solution {
 
     // 比目标字母大的最小字母
@@ -70,9 +69,8 @@ public class Solution {
 
 **参考代码 2**：一开始就做特殊判断，接下来就可以确定在 `[0, len - 1]` 范围里一定有解，无需后处理。
 
-Java 代码：
 
-```Java []
+```java
 public class Solution {
     public char nextGreatestLetter(char[] letters, char target) {
         int len = letters.length;

@@ -59,7 +59,7 @@ tags:
 > 关键：解本题的关键在于举例，在尝试举例的过程中，考虑到不同的情况，得到解题思路。
 
 
-### 方法一：二分法
+## 方法一：二分法
 
 **注意**：这里的说是「中间数」，即 **位于中间的那个数**，不是数学意义上的中位数。
 
@@ -107,13 +107,10 @@ tags:
 **关键**：
 
 
-
-
-
 **参考代码 1**：
 
 
-```Java []
+```java
 public class Solution {
 
     public int findMin(int[] nums) {
@@ -140,13 +137,15 @@ public class Solution {
 }
 ```
 
-### 方法二：分治法
+
+## 方法二：分治法
 
 分治法将原问题划分成若干与原问题同结构且规模更小的子问题，等到这些子问题解决了以后，原问题也得到了解决。
 
 **参考代码 2**：
 
-```Java []
+
+```java
 public class Solution {
 
     public int findMin(int[] nums) {
@@ -177,7 +176,7 @@ public class Solution {
 
 **参考代码 3**：
 
-```Java []
+```java
 public class Solution {
 
     public int findMin(int[] nums) {

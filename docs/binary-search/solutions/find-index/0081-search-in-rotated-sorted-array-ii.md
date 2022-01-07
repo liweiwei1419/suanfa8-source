@@ -60,7 +60,7 @@ tags:
 **参考代码 1**：
 
 
-```Java []
+```java
 public class Solution {
 
     // 中间的数与左边界比较
@@ -110,7 +110,7 @@ public class Solution {
 **参考代码 2**：
 
 
-```Java []
+```java
 public class Solution {
 
     // 中间的数与右边界比较
