@@ -8,6 +8,8 @@ tags:
 
 + 题目链接：[904. 水果成篮](https://leetcode-cn.com/problems/fruit-into-baskets/)（中等）
 
+## 题目描述
+
 在一排树中，第 `i` 棵树产生 `tree[i]` 型的水果。
 
 你可以**从你选择的任何树开始**，然后重复执行以下步骤：
@@ -74,7 +76,7 @@ public class Solution {
 }
 ```
 
-**参考代码 2**：使用数组记录频数
+**参考代码 2**：使用数组记录频数。
 
 ```java
 public class Solution {

@@ -61,6 +61,8 @@ tags:
 
 ## 方法一：前缀和 + 二分查找
 
+**参考代码 1**：
+
 ```java
 public class Solution {
 
@@ -110,6 +112,8 @@ public class Solution {
 ## 方法二：滑动窗口
 
 这题与之前的差别就在于，每一次转换的耗费是预处理的。
+
+**参考代码 2**：
 
 ```java
 public class Solution {

@@ -1,5 +1,5 @@
 ---
-title: 「力扣」第 713 题：乘积小于 K 的子数组
+title: 「力扣」第 713 题：乘积小于 K 的子数组（中等）
 icon: yongyan
 category: 滑动窗口
 tags:

@@ -55,6 +55,8 @@ tags:
 
 思路还是比较直观的，可以学习一下。
 
+**参考代码**：
+
 ```java
 public class Solution {
 
@@ -91,8 +93,14 @@ public class Solution {
 }
 ```
 
+
+
 ## 方法二：滑动窗口
 
+**参考代码**：
+
+<CodeGroup>
+<CodeGroupItem title="Java">
 ```java
 public class Solution {
 
@@ -120,7 +128,9 @@ public class Solution {
     }
 }
 ```
+</CodeGroupItem>
 
+<CodeGroupItem title="Java">
 ```java
 public class Solution {
 
@@ -145,4 +155,11 @@ public class Solution {
     }
 }
 ```
+</CodeGroupItem>
+</CodeGroup>
+
+
+
+
+
 

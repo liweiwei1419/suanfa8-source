@@ -36,8 +36,9 @@ tags:
 **Constraints:**
 
 - `1 <= s.length <= 104`
-
 - `s` consists of English letters.
+
+## 思路分析
 
 > 如果刚好包含 **3 种不同字符**，右边界不需要继续向右边扩展，此时应该把左边界向右边扩展。
 
@@ -74,5 +75,3 @@ public class Solution {
     }
 }
 ```
-
-#### 

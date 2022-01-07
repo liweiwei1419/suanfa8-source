@@ -41,7 +41,11 @@ tags:
 - `s` consists of only uppercase English letters.
 - `0 <= k <= s.length`
 
+::: warning 说明
+本题详解请见本文的「题解链接」，有视频讲解和文字讲解。
+:::
 
+**参考代码**：
 
 
 
