@@ -66,6 +66,10 @@ tags:
 
 **提示：**
 
-- `1 <= nums.length <= 105`
-- `-104 <= nums[i] <= 104`
+- `1 <= nums.length <= 10^5`
+- `-104 <= nums[i] <= 10^4`
 - `1 <= k <= nums.length`
+
+---
+
+文字题解和参考代码请见：[最大索引堆 + 双端队列存索引值的思路分析（Python 代码、Java 代码）](https://leetcode-cn.com/problems/sliding-window-maximum/solution/zui-da-suo-yin-dui-shuang-duan-dui-lie-cun-suo-yin/)。
