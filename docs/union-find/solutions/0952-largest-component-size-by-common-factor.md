@@ -6,8 +6,8 @@ tags:
   - 并查集
 ---
 
-+ [链接](https://leetcode-cn.com/problems/largest-component-size-by-common-factor/)
-+ [题解链接](https://leetcode-cn.com/problems/largest-component-size-by-common-factor/solution/bing-cha-ji-java-python-by-liweiwei1419/)
++ 题目链接：[952. 按公因数计算最大组件大小](https://leetcode-cn.com/problems/largest-component-size-by-common-factor/)；
++ 题解链接：[并查集（Java、Python）](https://leetcode-cn.com/problems/largest-component-size-by-common-factor/solution/bing-cha-ji-java-python-by-liweiwei1419/)。
 
 ## 题目描述
 
@@ -234,7 +234,6 @@ public:
 ```
 </CodeGroupItem>
 </CodeGroup>
-
 
 
 

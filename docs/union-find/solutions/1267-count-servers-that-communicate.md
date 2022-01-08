@@ -6,9 +6,9 @@ tags:
   - 并查集
 ---
 
-## 「力扣」第 1267 题：[统计参与通信的服务器](https://leetcode-cn.com/problems/count-servers-that-communicate/)
++ 题目链接：[1267. 统计参与通信的服务器](https://leetcode-cn.com/problems/count-servers-that-communicate/)。
 
-+ [链接](https://leetcode-cn.com/problems/count-servers-that-communicate)
+## 题目链接
 
 这里有一幅服务器分布图，服务器的位置标识在 m * n 的整数矩阵网格 grid 中，1 表示单元格上有服务器，0 表示没有。
 
@@ -16,7 +16,39 @@ tags:
 
 请你统计并返回能够与至少一台其他服务器进行通信的服务器的数量。
 
-提示：
+**示例 1：**
+
+![img](https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2019/11/24/untitled-diagram-6.jpg)
+
+```
+输入：grid = [[1,0],[0,1]]
+输出：0
+解释：没有一台服务器能与其他服务器进行通信。
+```
+
+**示例 2：**
+
+![img](https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2019/11/24/untitled-diagram-4-1.jpg)
+
+```
+输入：grid = [[1,0],[1,1]]
+输出：3
+解释：所有这些服务器都至少可以与一台别的服务器进行通信。
+```
+
+**示例 3：**
+
+![img](https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2019/11/24/untitled-diagram-1-3.jpg)
+
+```
+输入：grid = [[1,1,0,0],[0,0,1,0],[0,0,1,0],[0,0,0,1]]
+输出：4
+解释：第一行的两台服务器互相通信，第三列的两台服务器互相通信，但右下角的服务器无法与其他服务器通信。
+```
+
+
+
+**提示：**
 
 + `m == grid.length`
 + `n == grid[i].length`

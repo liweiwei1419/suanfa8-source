@@ -17,8 +17,8 @@ tags:
 
 有些问题不以并查集为背景，但的确可以使用并查集的知识帮助我们解决问题。由于等式相等具有传递性，比较容易想到使用并查集。
 
-+ [题目链接](https://leetcode-cn.com/problems/satisfiability-of-equality-equations/)
-+ [题解链接](https://leetcode-cn.com/problems/satisfiability-of-equality-equations/solution/shi-yong-bing-cha-ji-chu-li-bu-xiang-jiao-ji-he-we/)
++ 题目链接：[990. 等式方程的可满足性](https://leetcode-cn.com/problems/satisfiability-of-equality-equations/)；
++ 题解链接：[使用并查集处理不相交集合问题（Java、Python）](https://leetcode-cn.com/problems/satisfiability-of-equality-equations/solution/shi-yong-bing-cha-ji-chu-li-bu-xiang-jiao-ji-he-we/)。
 
 ## 题目描述
 

@@ -8,7 +8,7 @@ tags:
 
 注意细节的调试。
 
-+ [题目链接](https://leetcode-cn.com/problems/redundant-connection-ii/)
++ 题目链接：[685. 冗余连接 II](https://leetcode-cn.com/problems/redundant-connection-ii/)。
 
 ## 题目描述
 

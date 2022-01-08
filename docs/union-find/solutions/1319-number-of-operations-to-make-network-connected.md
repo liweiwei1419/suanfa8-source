@@ -1,5 +1,5 @@
 ---
-title: 「力扣」第 1319 题：等式方程的可满足性（中等）
+title: 「力扣」第 1319 题：连通网络的操作次数（中等）
 icon: yongyan
 category: 并查集
 tags:
@@ -11,8 +11,8 @@ tags:
 :::
 
 
-+ [链接](https://leetcode-cn.com/problems/number-of-operations-to-make-network-connected/)
-+ [题解链接](https://leetcode-cn.com/problems/number-of-operations-to-make-network-connected/solution/bing-cha-ji-by-liweiwei1419/)
++ 题目链接：[1319. 连通网络的操作次数](https://leetcode-cn.com/problems/number-of-operations-to-make-network-connected/)；
++ 题解链接：[并查集](https://leetcode-cn.com/problems/number-of-operations-to-make-network-connected/solution/bing-cha-ji-by-liweiwei1419/)。
 
 ## 题目描述
 

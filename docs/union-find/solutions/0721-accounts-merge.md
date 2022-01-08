@@ -8,7 +8,9 @@ tags:
 
 这题就是题目有点长，但是是相对容易的。这题有点麻烦，不是一个好的问题，以后把它删除吧。
 
-+ [链接](https://leetcode-cn.com/problems/accounts-merge/)
++ 题目链接：[721. 账户合并](https://leetcode-cn.com/problems/accounts-merge/)。
+
+## 题目描述
 
 给定一个列表 `accounts`，每个元素 `accounts[i]` 是一个字符串列表，其中第一个元素 `accounts[i][0]` 是 *名称 (name)*，其余元素是 *emails* 表示该帐户的邮箱地址。
 

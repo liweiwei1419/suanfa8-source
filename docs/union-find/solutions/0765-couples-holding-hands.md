@@ -8,7 +8,9 @@ tags:
 
 这题比较有意思，关键在表示相邻两个位置的技巧。
 
-+ [链接](https://leetcode-cn.com/problems/couples-holding-hands/)
++ 题目链接：[765. 情侣牵手](https://leetcode-cn.com/problems/couples-holding-hands/)。
+
+## 题目描述
 
 N 对情侣坐在连续排列的 $2N$ 个座位上，想要牵到对方的手。 计算最少交换座位的次数，以便每对情侣可以并肩坐在一起。 *一*次交换可选择任意两人，让他们站起来交换座位。
 

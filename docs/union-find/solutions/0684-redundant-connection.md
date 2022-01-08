@@ -8,7 +8,9 @@ tags:
 
 这是一道考察「并查集」很基础的问题。
 
-+ [题目链接](https://leetcode-cn.com/problems/redundant-connection/)
++ 题目链接：[684. 冗余连接](https://leetcode-cn.com/problems/redundant-connection/)。
+
+## 题目描述
 
 在本问题中, 树指的是一个连通且无环的**无向**图。
 

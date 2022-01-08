@@ -6,6 +6,8 @@ tags:
   - 并查集
 ---
 
++ 题目链接：[399. 除法求值](https://leetcode-cn.com/problems/longest-consecutive-sequence/)。
+
 这一节的视频讲解有很多知识点，不熟悉的朋友强烈建议观看。
 
 
@@ -16,7 +18,7 @@ tags:
 
 > 带权值的「并查集」，搞清楚方向。
 
-+ [链接](https://leetcode-cn.com/problems/longest-consecutive-sequence/)
+## 题目描述
 
 给出方程式 `A / B = k`, 其中 `A` 和 `B` 均为代表字符串的变量， `k` 是一个浮点型数字。根据已知方程式求解问题，并返回计算结果。如果结果不存在，则返回 `-1.0`。
 
