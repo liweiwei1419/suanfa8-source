@@ -59,7 +59,7 @@ tags:
 
 ## 思路分析
 
-### 方法：模拟系统栈
+## 方法：模拟系统栈
 
 模拟系统栈的方法其实并不难理解，就是在栈中放入结点的同时，**同时传入一个指令，这个指令可以有 2 个含义**：
 
@@ -171,30 +171,7 @@ public class Solution {
 }
 ```
 
-
-
 ---
-
-### LeetCode 第 94 题：[94. 二叉树的中序遍历](https://leetcode-cn.com/problems/binary-tree-inorder-traversal/)
-
-传送门：英文网址：[94. Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/description/) ，中文网址：[94. 二叉树的中序遍历](https://leetcode-cn.com/problems/binary-tree-inorder-traversal/description/) 。
-
-> 给定一个二叉树，返回它的*中序* 遍历。
->
-> **示例:**
->
-> ```
-> 输入: [1,null,2,3]
-> 1
->  \
->   2
->  /
-> 3
-> 
-> 输出: [1,3,2]
-> ```
->
-> **进阶:** 递归算法很简单，你可以通过迭代算法完成吗？
 
 Python 代码：
 

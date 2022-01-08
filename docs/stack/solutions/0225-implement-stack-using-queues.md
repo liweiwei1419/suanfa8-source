@@ -62,7 +62,7 @@ myStack.empty(); // 返回 False
 >
 > 2、引入一个状态变量。
 
-### 方法一：使用两个队列实现栈
+## 方法一：使用两个队列实现栈
 
 Java 代码：
 
@@ -132,7 +132,7 @@ public class MyStack {
 
 ```
 
-### 方法二：使用一个队列实现栈
+## 方法二：使用一个队列实现栈
 
 Java 代码：
 
@@ -200,5 +200,4 @@ public class MyStack {
  * boolean param_4 = obj.empty();
  */
 ```
-
 

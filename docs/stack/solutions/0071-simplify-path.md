@@ -275,8 +275,6 @@ public class Solution {
 
 第 2 种情况下，要求我们的程序能够有一定的容错处理的能力。
 
-
-
 我的解答参考了如下的文章：
 http://blog.csdn.net/u012249528/article/details/46705867
 
