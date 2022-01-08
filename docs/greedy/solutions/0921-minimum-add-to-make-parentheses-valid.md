@@ -52,6 +52,35 @@ tags:
 1. `S.length <= 1000`
 2. `S` 只包含 `'('` 和 `')'` 字符。
 
+**参考代码**：
+
+```java
+public class Solution {
+
+    public int minAddToMakeValid(String S) {
+        int len = S.length();
+
+        int leftCount = 0;
+        int rightCount = 0;
+        char[] charArray = S.toCharArray();
+        for (int i = 0; i < len; i++) {
+            char c = charArray[i];
+
+            if (c == '(') {
+                rightCount++;
+            } else {
+                if (rightCount > 0) {
+                    rightCount--;
+                } else {
+                    leftCount++;
+                }
+            }
+        }
+        return leftCount + rightCount;
+    }
+}
+```
+
 ## 参考资料
 
 https://leetcode-cn.com/problems/minimum-add-to-make-parentheses-valid/solution/tan-xin-by-hu-li-hu-wai-mnch/
