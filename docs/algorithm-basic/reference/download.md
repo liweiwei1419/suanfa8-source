@@ -11,10 +11,10 @@ icon: yunxiazai
 
 ## 书籍
 
-### 1. 《图解算法》（用于入门）
+### 1. 《算法图解》（用于入门）
 
 + 很小的一本入门书籍，可以用于培养学习算法与数据结构的兴趣；
-+ 里面的 0-1 背包问题、动态规划的思想、BFS 的「找律师」的例子，令我记忆犹新；
++ 里面的 0-1 背包问题、动态规划的思想、BFS 的「寻找芒果销售商」的例子，令我记忆犹新；
 + 下载 1：[Gitee](https://gitee.com/liweiwei1419/books/blob/master/algo/%E3%80%8A%E7%AE%97%E6%B3%95%E5%9B%BE%E8%A7%A3%E3%80%8B.pdf)；
 + 下载 2（阿里云盘）：「《算法图解》.pdf」，点击链接保存，或者复制本段内容，打开「阿里云盘」APP ，无需下载，极速在线查看享用。
 链接：[https://www.aliyundrive.com/s/X3k2GkXqKKn](https://www.aliyundrive.com/s/X3k2GkXqKKn)。
@@ -22,8 +22,8 @@ icon: yunxiazai
 ### 2. 《算法（第 4 版）》（用于深入，不要死磕）
 
 + 我主要的学习书籍之一；
-+ 图文并茂，可能较《算法图解》更合适；
-+ 代码不规范，不建议学习；
++ 图文并茂，比《算法图解》内容更丰富、更具体；
++ 代码不规范，不建议模仿这本书上的代码风格。
 
 ![image-20211122042657269](https://tva1.sinaimg.cn/large/008i3skNgy1gwnfhepdlxj318e0iygqe.jpg)
 
