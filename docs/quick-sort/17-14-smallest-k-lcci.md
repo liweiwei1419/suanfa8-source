@@ -1,5 +1,5 @@
 ---
-title: 「程序员面试金典」17.14. 最小K个数
+title: 「程序员面试金典」17.14. 最小 K 个数（中等）
 icon: yongyan
 category: 
 tags:

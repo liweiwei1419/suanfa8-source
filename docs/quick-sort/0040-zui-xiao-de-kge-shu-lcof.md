@@ -1,5 +1,5 @@
 ---
-title: 「剑指 Offer」第 40题：最小的 k 个数
+title: 「剑指 Offer」第 40题：最小的 k 个数（中等）
 icon: yongyan
 category: 
 tags:

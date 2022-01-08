@@ -1,5 +1,5 @@
 ---
-title: 「力扣」第 75 题：颜色分类
+title: 「力扣」第 75 题：颜色分类（中等）
 icon: shipin
 category: 排序算法
 tags:
@@ -10,8 +10,6 @@ tags:
 
 + 题目链接：[75. 颜色分类](https://leetcode-cn.com/problems/sort-colors/)；
 + 题解链接：[快速排序的子过程 partition（重点在设计循环不变量）](https://leetcode-cn.com/problems/sort-colors/solution/kuai-su-pai-xu-partition-guo-cheng-she-ji-xun-huan/)。
-
-
 
 ::: danger 视频讲解
 

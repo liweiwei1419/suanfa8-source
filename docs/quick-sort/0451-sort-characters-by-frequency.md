@@ -1,5 +1,5 @@
 ---
-title: 「力扣」第 451 题：根据字符出现频率排序
+title: 「力扣」第 451 题：根据字符出现频率排序（中等）
 icon: yongyan
 category: 排序算法
 tags:
@@ -9,7 +9,63 @@ tags:
 ---
 
 
-+ 题目链接：[451. 根据字符出现频率排序](https://leetcode-cn.com/problems/sort-characters-by-frequency/)
++ 题目链接：[451. 根据字符出现频率排序](https://leetcode-cn.com/problems/sort-characters-by-frequency/)。
+
+## 题目描述
+
+给定一个字符串，请将字符串里的字符按照出现的频率降序排列。
+
+**示例 1:**
+
+```
+输入:
+"tree"
+
+输出:
+"eert"
+
+解释:
+'e'出现两次，'r'和't'都只出现一次。
+因此'e'必须出现在'r'和't'之前。此外，"eetr"也是一个有效的答案。
+```
+
+**示例 2:**
+
+```
+输入:
+"cccaaa"
+
+输出:
+"cccaaa"
+
+
+解释:
+'c'和'a'都出现三次。此外，"aaaccc"也是有效的答案。
+注意"cacaca"是不正确的，因为相同的字母必须放在一起。
+```
+
+**示例 3:**
+
+```
+输入:
+"Aabb"
+
+输出:
+"bbAa"
+
+解释:
+此外，"bbaA"也是一个有效的答案，但"Aabb"是不正确的。
+注意'A'和'a'被认为是两种不同的字符。
+```
+
+**Constraints:**
+
+- `1 <= s.length <= 5 * 10^5`
+- `s` consists of uppercase and lowercase English letters and digits.
+
+解释题意：给定一个字符串，请将字符串里的字符按照出现的频率降序排列。
+
+## 方法：使用三路快排来做
 
 **参考代码**：
 
@@ -17,8 +73,6 @@ tags:
 import java.util.Random;
 
 public class Solution {
-
-    // 使用三路快排来做
 
     private int[] freq;
 
@@ -80,37 +134,3 @@ public class Solution {
     }
 }
 ```
-
-
-
-给定一个字符串，请将字符串里的字符按照出现的频率降序排列。
-
-Python 代码：
-
-```python
-class Solution:
-    def frequencySort(self, s):
-        l = len(s)
-        if l <= 1:
-            return s
-
-        d = dict()
-        for alpha in s:
-            d[alpha] = d.setdefault(alpha, 0) + 1
-        # print(d.items())
-
-        import heapq
-        h = []
-        for alpha, counter in d.items():
-            heapq.heappush(h, (-counter, alpha))
-        res = ''
-
-        dl = len(d.items())
-
-        for _ in range(dl):
-            counter, alpha = heapq.heappop(h)
-            res += alpha * (-counter)
-        return res
-```
-
-说明：Python 提供的 heapq 是最小堆。思路 2：三路快排。

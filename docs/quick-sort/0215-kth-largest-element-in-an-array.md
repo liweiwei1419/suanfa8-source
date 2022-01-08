@@ -1,5 +1,5 @@
 ---
-title: TopK 问题：「力扣」第 215 题：数组第 k 大的元素
+title: TopK 问题：「力扣」第 215 题：数组第 k 大的元素（中等）
 icon: yongyan
 category: 排序算法
 tags:
@@ -9,9 +9,10 @@ tags:
   - 优先队列
 ---
 
-+ 中文网址：[215. 数组中的第K个最大元素](https://leetcode-cn.com/problems/kth-largest-element-in-an-array/description/) ；
-+ 英文网址：[215. Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/description/) 。
-+ 题解地址：https://leetcode-cn.com/problems/kth-largest-element-in-an-array/solution/partitionfen-er-zhi-zhi-you-xian-dui-lie-java-dai-/
++ 题目链接：[215. 数组中的第K个最大元素](https://leetcode-cn.com/problems/kth-largest-element-in-an-array/description/)；
++ 题解链接：[通过 partition 减治 + 优先队列（Java）](https://leetcode-cn.com/problems/kth-largest-element-in-an-array/solution/partitionfen-er-zhi-zhi-you-xian-dui-lie-java-dai-/)。
+
+## 题目描述
 
 在未排序的数组中找到第 **k** 个最大的元素。请注意，你需要找的是数组排序后的第 k 个最大的元素，而不是第 k 个不同的元素。
 
@@ -68,7 +69,7 @@ tags:
 
 ---
 
-### 方法一：暴力解法
+## 方法一：暴力解法
 
 **参考代码 1**：
 
@@ -119,7 +120,7 @@ class Solution:
 
 ---
 
-### 方法二：减而治之（逐渐缩小问题规模）
+## 方法二：减而治之（逐渐缩小问题规模）
 
 **注意**：随机化切分元素。快速排序虽然快，但是在遇到特殊测试用例（顺序数组或者逆序数组）的时候，递归树会退化成链表，时间复杂度会变成 $O(N^2)$。
 
@@ -257,7 +258,7 @@ public class Solution {
 
 ---
 
-### 方法三：优先队列
+## 方法三：优先队列
 
 优先队列的思路是很朴素的。由于找第 `K` 大元素，其实就是整个数组排序以后后半部分最小的那个元素。因此，我们可以维护一个有 `K` 个元素的最小堆：
 
