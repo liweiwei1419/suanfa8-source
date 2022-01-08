@@ -56,8 +56,8 @@ Output: [3,1]
 
 **Constraints:**
 
-- The number of nodes in `head` is in the range `[0, 2 * 104]`.
-- $-105 \le Node.val \le 105$
+- The number of nodes in `head` is in the range `[0, 2 * 10^4]`.
+- $-10^5 \le Node.val \le 10^5$
 
 ## 思路分析
 
@@ -201,7 +201,6 @@ class TreeNode:
 ```
 </CodeGroupItem>
 </CodeGroup>
-
 
 
 
