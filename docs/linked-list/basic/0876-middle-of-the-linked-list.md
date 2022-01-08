@@ -63,7 +63,7 @@ ans.val = 3, ans.next.val = 4, ans.next.next.val = 5, 以及 ans.next.next.next 
 
 ----
 
-### 方法：快慢指针（Python 代码、Java 代码）
+## 方法：快慢指针（Python 代码、Java 代码）
 
 使用快慢指针是求单链表中间结点，以及 [倒数第 k 个结点](https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/) 的常用方法。
 
@@ -178,7 +178,7 @@ class ListNode {
         return s.toString();
     }
 }
-```    
+```
 </CodeGroupItem>
 
 <CodeGroupItem title="Python">

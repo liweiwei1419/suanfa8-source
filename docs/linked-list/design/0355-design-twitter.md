@@ -8,7 +8,7 @@ tags:
 ---
 
 + 题目链接：[355. 设计推特（中等）](https://leetcode-cn.com/problems/design-twitter)；
-+ 题解链接：[哈希表 + 链表 + 优先队列（经典多路归并问题）（Java）](https://leetcode-cn.com/problems/design-twitter/solution/ha-xi-biao-lian-biao-you-xian-dui-lie-java-by-liwe/)
++ 题解链接：[哈希表 + 链表 + 优先队列（经典多路归并问题）（Java）](https://leetcode-cn.com/problems/design-twitter/solution/ha-xi-biao-lian-biao-you-xian-dui-lie-java-by-liwe/)。
 
 ## 题目描述
 

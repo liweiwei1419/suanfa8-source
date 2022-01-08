@@ -8,15 +8,8 @@ tags:
 ---
 
 
-+ 题目链接：[]()；
-+ 题解链接：[]()。
-
-
-| 题目地址                                                     | 题解                                                         |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [LeetCode 第 109 题：有序链表转换二叉搜索树](https://leetcode-cn.com/problems/convert-sorted-list-to-binary-search-tree/) | [分治法（Python 代码、Java 代码）](https://leetcode-cn.com/problems/convert-sorted-list-to-binary-search-tree/solution/fen-zhi-fa-python-dai-ma-java-dai-ma-by-liweiwei14/) |
-
-
++ 题目链接：[109. 有序链表转换二叉搜索树](https://leetcode-cn.com/problems/convert-sorted-list-to-binary-search-tree/)；
++ 题解链接：[分治法（Python 代码、Java 代码）](https://leetcode-cn.com/problems/convert-sorted-list-to-binary-search-tree/solution/fen-zhi-fa-python-dai-ma-java-dai-ma-by-liweiwei14/)。
 
 ## 题目描述
 

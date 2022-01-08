@@ -6,8 +6,7 @@ tags:
   - 链表
 ---
 
-+ 中文网址：[86. 分隔链表](https://leetcode-cn.com/problems/partition-list/description/)；
-+ 英文网址：[86. Partition List](https://leetcode.com/problems/partition-list/description/)。
++ 题目链接：[86. 分隔链表](https://leetcode-cn.com/problems/partition-list/description/)。
 
 ## 题目描述
 

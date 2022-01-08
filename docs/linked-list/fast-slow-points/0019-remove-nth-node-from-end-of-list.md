@@ -7,9 +7,6 @@ tags:
   - 快慢指针
 ---
 
-+ 中文网址：[19. 删除链表的倒数第N个节点](https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/description/) ；
-+ 英文网址：[19. Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/description/) 。
-
 
 + 题目链接：[19. 删除链表的倒数第 N 个结点](https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/)；
 + 题解链接：[快慢指针](https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/solution/kuai-man-zhi-zhen-by-liweiwei1419/)。
@@ -56,7 +53,7 @@ tags:
 
 重点：1、设置虚拟头结点；2、快慢指针。
 
-### 方法一：先数出有多少个结点，然后走 `len - n` 步
+## 方法一：先数出有多少个结点，然后走 `len - n` 步
 
 **参考代码**：
 
@@ -92,7 +89,7 @@ public class Solution {
 }
 ```
 
-### 方法二：快慢指针
+## 方法二：快慢指针
 
 其实只要掌握了如何找到距离末尾 $n$ 个元素的位置，就很容易了。还要注意的就是边界值的选取，其实往往我们认为的值与正确值无非就是 $+1$ 或者 $-1$ ，为了避免粗心出错，我们可以拿一个具体的例子。另外，涉及链表头结点的操作，一般都会引入虚拟结点，以减少讨论的可能，这是一个常见的技巧。
 

@@ -6,7 +6,7 @@ tags:
   - 链表
 ---
 
-+  题目链接：[143. 重排链表](https://leetcode-cn.com/problems/reorder-list/)
++  题目链接：[143. 重排链表](https://leetcode-cn.com/problems/reorder-list/)。
 
 ## 题目描述
 
@@ -49,7 +49,7 @@ L0 → Ln → L1 → Ln - 1 → L2 → Ln - 2 → …
 - 链表的长度范围为 $[1, 5 * 10^4]$
 - $1 \le node.val \le 1000$
 
-### 方法一：递归
+## 方法一：递归
 
 **参考代码 1**：
 
@@ -108,7 +108,7 @@ public class Solution {
 }
 ```
 
-### 方法二：穿针引线
+## 方法二：穿针引线
 
 ```java
 public class Solution {

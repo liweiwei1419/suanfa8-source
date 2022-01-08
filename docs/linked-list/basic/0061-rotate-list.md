@@ -54,7 +54,7 @@ tags:
 
 关键：画图分析穿针引线的步骤。这道题的难度定为「简单」会更合适一点。
 
-![image.png](https://pic.leetcode-cn.com/0d3f7795cfae2afa8d4145f66216ba837f72ca08d86ecbc010ad1ae9e66696c2-image.png)
+![image.png](https://tva1.sinaimg.cn/large/008i3skNgy1gy5z4hqz5zj30uj0u079d.jpg)
 
 **参考代码**：
 

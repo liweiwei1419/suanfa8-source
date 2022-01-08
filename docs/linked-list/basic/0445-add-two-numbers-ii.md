@@ -7,7 +7,7 @@ tags:
   - 递归
 ---
 
-+ 题目地址：[445. 两数相加 II](https://leetcode-cn.com/problems/add-two-numbers-ii/description/) ；
++ 题目地址：[445. 两数相加 II](https://leetcode-cn.com/problems/add-two-numbers-ii/description/)；
 + 题解地址：[两个栈、使用头插法生成结果链表](https://leetcode-cn.com/problems/add-two-numbers-ii/solution/liang-ge-zhan-shi-yong-tou-cha-fa-sheng-cheng-jie-/)。
 
 ## 题目描述
@@ -150,8 +150,6 @@ class Solution:
 </CodeGroupItem>
 </CodeGroup>
 
-
-
 补充：
 
 用于测试的结点类（这部分代码不用提交给「力扣」）。
@@ -192,7 +190,5 @@ class ListNode {
         return s.toString();
     }
 }
-
-
 ```
 

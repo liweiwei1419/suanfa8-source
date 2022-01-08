@@ -46,7 +46,7 @@ tags:
 - `-100 <= Node.val <= 100`
 - 题目数据保证链表已经按升序排列
 
-### 方法一：穿针引线
+## 方法一：穿针引线
 
 ```
 // 我觉得就是细心一点，把穿针引线的细节考虑到
@@ -81,7 +81,7 @@ public class Solution {
         return head;
     }
 }
-```    
+```
 </CodeGroupItem>
 
 <CodeGroupItem title="Python">
@@ -119,7 +119,7 @@ class Solution(object):
 </CodeGroupItem>
 </CodeGroup>
 
-### 方法二：依旧是穿针引线（用于参考、留作备份）
+## 方法二：依旧是穿针引线（用于参考、留作备份）
 
 **思路**：有序链表，相同元素最多保留 $1$ 个。
 
@@ -189,8 +189,6 @@ class Solution(object):
 </CodeGroupItem>
 </CodeGroup>
 
-
-
 ---
 
 补充：
@@ -229,7 +227,6 @@ class ListNode {
     }
 }
 ```
-
 
 
 

@@ -1,5 +1,5 @@
 ---
-title: 「力扣」第 460 题：LFU 缓存
+title: 「力扣」第 460 题：LFU 缓存（困难）
 icon: yongyan
 category: 链表
 tags:
@@ -7,8 +7,8 @@ tags:
  - 双向链表
 ---
 
-+ 题目链接：[460. LFU 缓存](https://leetcode-cn.com/problems/lfu-cache/)
-+ 题解链接：[哈希表 + 双向链表（Java）](https://leetcode-cn.com/problems/lfu-cache/solution/ha-xi-biao-shuang-xiang-lian-biao-java-by-liweiwei/)
++ 题目链接：[460. LFU 缓存](https://leetcode-cn.com/problems/lfu-cache/)；
++ 题解链接：[哈希表 + 双向链表（Java）](https://leetcode-cn.com/problems/lfu-cache/solution/ha-xi-biao-shuang-xiang-lian-biao-java-by-liweiwei/)。
 
 ## 题目描述
 
@@ -80,7 +80,7 @@ lFUCache.get(4);      // 返回 4
 :::
 
 
-### LRU （Least Recently Used）缓存机制（看时间）
+## LRU （Least Recently Used）缓存机制（看时间）
 
 「力扣」第 146 题：[LRU缓存机制](https://leetcode-cn.com/problems/lru-cache/)
 
@@ -90,7 +90,7 @@ lFUCache.get(4);      // 返回 4
 就是喜新厌旧，淘汰在缓存里呆的时间最久的元素。在删除元素的时候，只看「时间」这一个维度。
 
 
-### LFU （Least Frequently Used）缓存机制（看访问次数）
+## LFU （Least Frequently Used）缓存机制（看访问次数）
 
 + 在缓存满的时候，删除缓存里使用次数最少的元素，然后在缓存中放入新元素；
 + 数据的访问次数很重要，**访问次数越多**，就越不容易被删除；
@@ -424,5 +424,3 @@ public class LFUCache {
     }
 }
 ```
-
-（本节完）

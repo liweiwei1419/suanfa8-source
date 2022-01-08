@@ -134,7 +134,10 @@ $$
 
 **参考代码 1**：
 
-```Java []
+
+<CodeGroup>
+<CodeGroupItem title="Java">
+```java
 public class Solution {
 
     public ListNode detectCycle(ListNode head) {
@@ -173,8 +176,43 @@ public class Solution {
         return slow;
     }
 }
+```    
+</CodeGroupItem>
+
+<CodeGroupItem title="Python3">
+```python
+class ListNode:
+    def __init__(self, x):
+        self.val = x
+        self.next = None
+
+
+class Solution:
+    def detectCycle(self, head: ListNode) -> ListNode:
+        if head is None or head.next is None:
+            return None
+
+        slow = head
+        fast = head
+        while fast.next and fast.next.next:
+            fast = fast.next.next
+            slow = slow.next
+            if fast == slow:
+                break
+
+        if fast.next is None or fast.next.next is None:
+            return None
+
+        slow = head
+        while slow != fast:
+            slow = slow.next
+            fast = fast.next
+        return slow
 ```
-```C++ []
+</CodeGroupItem>
+
+<CodeGroupItem title="C++">
+```C++
 #include <iostream>
 
 using namespace std;
@@ -211,42 +249,18 @@ public:
     }
 };
 ```
-```Python []
-class ListNode:
-    def __init__(self, x):
-        self.val = x
-        self.next = None
+</CodeGroupItem>
+</CodeGroup>
 
 
-class Solution:
-    def detectCycle(self, head: ListNode) -> ListNode:
-        if head is None or head.next is None:
-            return None
 
-        slow = head
-        fast = head
-        while fast.next and fast.next.next:
-            fast = fast.next.next
-            slow = slow.next
-            if fast == slow:
-                break
 
-        if fast.next is None or fast.next.next is None:
-            return None
-
-        slow = head
-        while slow != fast:
-            slow = slow.next
-            fast = fast.next
-        return slow
-```
 
 
 ---
 
-
-Java 代码：
-
+<CodeGroup>
+<CodeGroupItem title="Java">
 ```java
 class ListNode {
     int val;
@@ -323,9 +337,9 @@ public class Solution {
     }
 }
 ```
+</CodeGroupItem>
 
-Python 代码：
-
+<CodeGroupItem title="Python3">
 ```python
 class ListNode:
     def __init__(self, x):
@@ -355,3 +369,11 @@ class Solution:
             fast = fast.next
         return slow
 ```
+</CodeGroupItem>
+</CodeGroup>
+
+
+
+
+
+

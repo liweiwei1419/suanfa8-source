@@ -8,7 +8,7 @@ tags:
 ---
 
 + 题目链接：[146. LRU 缓存机制](https://leetcode-cn.com/problems/lru-cache/)；
-+ 题解链接：[哈希表 + 双向链表（Java）](https://leetcode-cn.com/problems/lru-cache/solution/ha-xi-biao-shuang-xiang-lian-biao-java-by-liweiw-2/)
++ 题解链接：[哈希表 + 双向链表（Java）](https://leetcode-cn.com/problems/lru-cache/solution/ha-xi-biao-shuang-xiang-lian-biao-java-by-liweiw-2/)。
 
 ## 题目描述
 
@@ -59,7 +59,7 @@ lRUCache.get(4);    // 返回 4
 缓存是有限的，在缓存满的时候，删除哪些元素，就有不同的缓存删除策略。
 :::
 
-### LRU （Least Recently Used）缓存机制
+## LRU （Least Recently Used）缓存机制
 
 + 在缓存满的时候，删除缓存里最久未使用的数据，然后再放入新元素；
 + 数据的访问时间很重要，**访问时间距离现在最近**，就最不容易被删除。

@@ -6,7 +6,7 @@ tags:
   - 链表
 ---
 
-+ 题目链接：[1206. 设计跳表](https://leetcode-cn.com/problems/design-skiplist/)
++ 题目链接：[1206. 设计跳表](https://leetcode-cn.com/problems/design-skiplist/)。
 
 ## 题目描述
 
