@@ -7,19 +7,15 @@ tags:
   - 循环不变量
 ---
 
-
-## 例 1：「力扣」第 26 题：删除排序数组中的重复项 <Badge text="简单" type="info"/>
-
-+ 中文：[26. 删除排序数组中的重复项](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/description/)；
-+ 英文：[26. Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/) 。
++ 题目链接：[26. 删除排序数组中的重复项](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/description/) <Badge text="简单" type="info"/>。
 
 ### :tv: **视频教程**
 
 建议使用 1.5 倍速观看。
 
-* [3-2 例 1：「力扣」第 26 题：删除数组中重复的元素（06:20）](https://www.bilibili.com/video/BV1Jg411M7Lp?p=2) 
+* [3-2 例 1：「力扣」第 26 题：删除数组中重复的元素（06:20）](https://www.bilibili.com/video/BV1Jg411M7Lp?p=2)。
 
-### 题目描述
+## 题目描述
 
 给定一个排序数组，你需要在 **原地** 删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。
 

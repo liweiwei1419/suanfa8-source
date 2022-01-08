@@ -7,11 +7,8 @@ tags:
   - 循环不变量
 ---
 
-## 例 3：「力扣」第 27 题：移除元素 <Badge text="简单" type="info"/>
 
-
-+ 中文：[27. 移除元素](https://leetcode-cn.com/problems/remove-element/description/)；
-+ 英文：[27. Remove Element](https://leetcode.com/problems/remove-element/description/) 。
++ 题目链接：[27. 移除元素](https://leetcode-cn.com/problems/remove-element/description/) <Badge text="简单" type="info"/>。
 
 
 ### :tv: **视频教程**
@@ -19,11 +16,9 @@ tags:
 建议使用 1.5 倍速观看。
 
 
-* [3-4 例 3：「力扣」第 27 题：移除元素（03:17）](https://www.bilibili.com/video/BV1Jg411M7Lp?p=4)
+* [3-4 例 3：「力扣」第 27 题：移除元素（03:17）](https://www.bilibili.com/video/BV1Jg411M7Lp?p=4)。
 
-
-
-### 题目描述
+## 题目描述
 
 给定一个数组 *nums* 和一个值 *val*，你需要**原地**移除所有数值等于 *val* 的元素，返回移除后数组的新长度。
 
