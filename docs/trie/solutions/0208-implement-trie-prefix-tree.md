@@ -6,13 +6,9 @@ tags:
   - 前缀树
 ---
 
+- 题目地址：[208. 实现 Trie (前缀树)](https://leetcode-cn.com/problems/implement-trie-prefix-tree/description/) 。
 
-## 例题：「力扣」第 208 题：Implement Trie (Prefix Tree)
-
-- 中文网址：[208. 实现 Trie (前缀树)](https://leetcode-cn.com/problems/implement-trie-prefix-tree/description/) ；
-- 英文网址：[208. Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/description/) 。
-
-### 题目描述
+## 题目描述
 
 **[Trie](https://baike.baidu.com/item/字典树/9825209?fr=aladdin)**（发音类似 "try"）或者说 **前缀树** 是一种树形数据结构，用于高效地存储和检索字符串数据集中的键。这一数据结构有相当多的应用情景，例如自动补完和拼写检查。
 
@@ -48,7 +44,7 @@ trie.search("app");     // 返回 True
 - `word` 和 `prefix` 仅由小写英文字母组成
 - `insert`、`search` 和 `startsWith` 调用次数 **总计** 不超过 `3 * 10^4` 次
 
-### 思路分析
+## 思路分析
 
 这道问题要求我们实现一个 Trie (前缀树)，包含 `insert`, `search` 和 `startsWith` 这三个操作。其实就是我们上面列出的「添加」「查询」「前缀查询」操作。
 

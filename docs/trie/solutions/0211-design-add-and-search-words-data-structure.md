@@ -6,13 +6,10 @@ tags:
   - 前缀树
 ---
 
++ 题目链接：[211. 添加与搜索单词 - 数据结构设计](https://leetcode-cn.com/problems/design-add-and-search-words-data-structure/)；
++ 题解链接：[遇到通配符时递归处理（Python 代码、Java 代码）](https://leetcode-cn.com/problems/add-and-search-word-data-structure-design/solution/yu-dao-tong-pei-fu-shi-di-gui-chu-li-python-dai-ma/) 。
 
-## 例题：「力扣」第 211 题：添加与搜索单词 - 数据结构设计
-
-- 中文网址：[211. 添加与搜索单词 - 数据结构设计](https://leetcode-cn.com/problems/add-and-search-word-data-structure-design/description/) ；
-- 英文网址：[211. Add and Search Word - Data structure design](https://leetcode.com/problems/add-and-search-word-data-structure-design/description/)。
-
-### 题目描述
+## 题目描述
 
 请你设计一个数据结构，支持 添加新单词 和 查找字符串是否与任何先前添加的字符串匹配 。
 
@@ -50,7 +47,7 @@ wordDictionary.search("b.."); // return True
 - `search` 中的 `word` 由 '.' 或小写英文字母组成
 - 最多调用 `50000` 次 `addWord` 和 `search`
 
-### 思路分析
+## 思路分析
 
 关于这道问题的难点是通配符 `"."` 的处理，其实也不难：**在遇到 `"."` 的时候，需要遍历，因此使用递归方法，将该结点的每一个分支都看过去，只要有一个分支返回 `true` 就可以了**，全部分支都走过去，都没有返回 `true` 的才返回 `false`。
 
@@ -58,7 +55,7 @@ wordDictionary.search("b.."); // return True
 对于 Trie 树还不太熟悉的朋友可以先完成「力扣」 [第 208 题：实现 Trie (前缀树)](https://leetcode-cn.com/problems/implement-trie-prefix-tree/)，这里要注意的是，一个结点指向孩子结点的「指针」（一般情况下多于 1 个），可以使用数组表示，也可以使用哈希表表示，如果题目中限制了测试用例「所有的输入都是由小写字母 a-z 构成的」，则可以使用数组表示。
 
 
-### 一个结点指向的所有孩子结点用「数组」表示
+## 一个结点指向的所有孩子结点用「数组」表示
 
 **参考代码**：
 
@@ -191,7 +188,7 @@ class WordDictionary:
 </CodeGroupItem>
 </CodeGroup>
 
-### 一个结点指向的所有孩子结点用「哈希表」表示
+## 一个结点指向的所有孩子结点用「哈希表」表示
 
 参考代码：
 
@@ -401,12 +398,7 @@ class WordDictionary(object):
 </CodeGroup>
 
 
-+ 题目链接：[211. 添加与搜索单词 - 数据结构设计](https://leetcode-cn.com/problems/design-add-and-search-words-data-structure/)；
-+ 题解链接：[遇到通配符时递归处理（Python 代码、Java 代码）](https://leetcode-cn.com/problems/add-and-search-word-data-structure-design/solution/yu-dao-tong-pei-fu-shi-di-gui-chu-li-python-dai-ma/) 。
-
-
-
-
++ 
 
 | 题目地址                                                     | 题解                                                         |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
