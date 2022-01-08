@@ -67,11 +67,9 @@ class Solution:
 
 两种方法各有优劣，体现在下面的「复杂度分析」中。
 
-### 方法一：哈希表
+## 方法一：哈希表
 
 **参考代码**：
-
-
 
 <CodeGroup>
 <CodeGroupItem title="Java">
