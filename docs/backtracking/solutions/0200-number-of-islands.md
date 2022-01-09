@@ -10,7 +10,7 @@ tags:
 ---
 
 + 题目链接：[200. 岛屿数量](https://leetcode-cn.com/problems/number-of-islands)；
-+ 题解链接：[深度优先遍历、广度优先遍历、并查集（Java 代码）](https://leetcode-cn.com/problems/number-of-islands/solution/dfs-bfs-bing-cha-ji-python-dai-ma-java-dai-ma-by-l/)
++ 题解链接：[深度优先遍历、广度优先遍历、并查集（Java 代码）](https://leetcode-cn.com/problems/number-of-islands/solution/dfs-bfs-bing-cha-ji-python-dai-ma-java-dai-ma-by-l/)。
 
 ## 题目描述
 

@@ -10,7 +10,7 @@ tags:
 ---
 
 + 题目链接：[216. 组合总和 III](https://leetcode-cn.com/problems/combination-sum-iii/)；
-+ 题解链接：[回溯 + 剪枝（Java）](https://leetcode-cn.com/problems/combination-sum-iii/solution/hui-su-jian-zhi-by-liweiwei1419/)
++ 题解链接：[回溯 + 剪枝（Java）](https://leetcode-cn.com/problems/combination-sum-iii/solution/hui-su-jian-zhi-by-liweiwei1419/)。
 
 ## 题目描述
 

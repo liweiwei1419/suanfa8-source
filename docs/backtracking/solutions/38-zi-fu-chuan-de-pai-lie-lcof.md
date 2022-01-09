@@ -9,6 +9,33 @@ tags:
 + 题目链接：[剑指 Offer 38. 字符串的排列](https://leetcode-cn.com/problems/zi-fu-chuan-de-pai-lie-lcof/)；
 + 题解链接：[回溯算法（Java）](https://leetcode-cn.com/problems/zi-fu-chuan-de-pai-lie-lcof/solution/hui-su-suan-fa-java-by-liweiwei1419/)。
 
+## 题目描述
+
+输入一个字符串，打印出该字符串中字符的所有排列。
+
+ 
+
+你可以以任意顺序返回这个字符串数组，但里面不能有重复元素。
+
+
+
+**示例:**
+
+```
+输入：s = "abc"
+输出：["abc","acb","bac","bca","cab","cba"]
+```
+
+
+
+**限制：**
+
+```
+1 <= s 的长度 <= 8
+```
+
+---
+
 
 
 这道题其实就是字符上的全排列问题，使用回溯算法就可以完成。

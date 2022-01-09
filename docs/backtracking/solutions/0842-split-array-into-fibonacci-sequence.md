@@ -9,7 +9,7 @@ tags:
   - 深度优先遍历
 ---
 
-+ 题目链接：[842. 将数组拆分成斐波那契序列](https://leetcode-cn.com/problems/split-array-into-fibonacci-sequence/)
++ 题目链接：[842. 将数组拆分成斐波那契序列](https://leetcode-cn.com/problems/split-array-into-fibonacci-sequence/)。
 
 ## 题目描述
 
@@ -70,9 +70,12 @@ tags:
 1. `1 <= S.length <= 200`
 2. 字符串 `S` 中只含有数字。
 
----
+## 思路分析
 
-知识点：1、回溯；2、设计递归函数的返回值
+知识点：
+
+1. 回溯；
+2. 设计递归函数的返回值
 
 很像 IP 地址分割那个问题（第 93 题）。
 
