@@ -16,8 +16,8 @@ module.exports = [
 			"/bit-manipulation/solutions/0421-3.md",
 			"/bit-manipulation/solutions/0421-maximum-xor-of-two-numbers-in-an-array.md",
 			"/bit-manipulation/solutions/0442-find-all-duplicates-in-an-array.md",
-			"/bit-manipulation/solutions/0477-total-hamming-distance.md",
-			"/bit-manipulation/solutions/0868-binary-gap.md"
+			"/bit-manipulation/solutions/0477-total-hamming-distance.md"
+			// "/bit-manipulation/solutions/0868-binary-gap.md"
 		]
 	}
 ]

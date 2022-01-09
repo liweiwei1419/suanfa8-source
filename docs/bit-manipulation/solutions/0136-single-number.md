@@ -9,75 +9,49 @@ tags:
 
 + 题目链接：[136. 只出现一次的数字](https://leetcode-cn.com/problems/single-number/)。
 
+## 题目描述
 
+给定一个**非空**整数数组，除了某个元素只出现一次以外，其余每个元素均出现两次。找出那个只出现了一次的元素。
 
-传送门：
+**说明：**
 
-> 给定一个**非空**整数数组，除了某个元素只出现一次以外，其余每个元素均出现两次。找出那个只出现了一次的元素。
->
-> **说明：**
->
-> 你的算法应该具有线性时间复杂度。 你可以不使用额外空间来实现吗？
->
-> **示例 1:**
->
-> ```
-> 输入: [2,2,1]
-> 输出: 1
-> ```
->
-> **示例 2:**
->
-> ```
-> 输入: [4,1,2,1,2]
-> 输出: 4
-> ```
+你的算法应该具有线性时间复杂度。 你可以不使用额外空间来实现吗？
 
+**示例 1:**
 
-
-
-
-
-
-思路：==按位分组==。
-
-Python 代码：
-
-```python
-class Solution(object):
-    def findNumsAppearOnce(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: List[int]
-        """
-        l = len(nums)
-        if l < 2:
-            raise Exception('程序出错')
-        if l == 2:
-            return nums
-
-        # 全部相与一遍
-        xor = 0
-        for num in nums:
-            xor ^= num
-            
-        # 最末尾的 1 从右向左边数在第几位
-        counter = 0
-        while xor & 1 == 0:
-            xor >>= 1
-            counter += 1
-
-        res = [0, 0]
-        for num in nums:
-            if (num >> counter) & 1 == 1:
-                res[1] ^= num
-            else:
-                res[0] ^= num
-        return res
+```
+输入: [2,2,1]
+输出: 1
 ```
 
-Java 代码：
+**示例 2:**
 
+```
+输入: [4,1,2,1,2]
+输出: 4
+```
+
+**Example 3:**
+
+```
+Input: nums = [1]
+Output: 1
+```
+
+
+
+**Constraints:**
+
+- `1 <= nums.length <= 3 * 10^4`
+- `-3 * 10^4 <= nums[i] <= 3 * 10^4`
+- Each element in the array appears twice except for one element which appears only once.
+
+
+
+**参考代码**：
+
+<CodeGroup>
+<CodeGroupItem title="Java">
 ```java
 import java.util.Arrays;
 
@@ -134,27 +108,48 @@ public class Solution {
         // 走到这里满足 (num & 1) == 1
         return index;
     }
-
-    public static void main(String[] args) {
-        int[] nums = {2, 4, 3, 6, 3, 2, 5, 5};
-        Solution solution = new Solution();
-        int[] res = solution.findNumbersAppearanceOnce(nums);
-        System.out.println(Arrays.toString(res));
-
-        int[] nums2 = {2, 4, 3, 6, 3, 2, 5, 5};
-        int[] res2 = solution.findNumbersAppearanceOnce(nums2);
-        System.out.println(Arrays.toString(res2));
-
-        int[] nums3 = {4, 6};
-        int[] res3 = solution.findNumbersAppearanceOnce(nums3);
-        System.out.println(Arrays.toString(res3));
-
-        int[] nums4 = {4, 6, 1, 1, 1, 1};
-        int[] res4 = solution.findNumbersAppearanceOnce(nums4);
-        System.out.println(Arrays.toString(res4));
-    }
 }
 ```
+</CodeGroupItem>
+
+<CodeGroupItem title="Python3">
+```python
+class Solution(object):
+    def findNumsAppearOnce(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[int]
+        """
+        l = len(nums)
+        if l < 2:
+            raise Exception('程序出错')
+        if l == 2:
+            return nums
+
+        # 全部相与一遍
+        xor = 0
+        for num in nums:
+            xor ^= num
+            
+        # 最末尾的 1 从右向左边数在第几位
+        counter = 0
+        while xor & 1 == 0:
+            xor >>= 1
+            counter += 1
+
+        res = [0, 0]
+        for num in nums:
+            if (num >> counter) & 1 == 1:
+                res[1] ^= num
+            else:
+                res[0] ^= num
+        return res
+```
+</CodeGroupItem>
+</CodeGroup>
+
+
+
 
 
 

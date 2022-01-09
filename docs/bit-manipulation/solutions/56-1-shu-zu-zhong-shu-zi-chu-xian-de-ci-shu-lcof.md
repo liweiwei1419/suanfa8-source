@@ -33,8 +33,11 @@ tags:
 
 + `2 <= nums <= 10000`
 
-Java 代码：
+**参考代码**：
 
+
+<CodeGroup>
+<CodeGroupItem title="Java">
 ```java
 import java.util.Arrays;
 
@@ -90,30 +93,11 @@ public class Solution {
         // 走到这里满足 (num & 1) == 1
         return index;
     }
-
-    public static void main(String[] args) {
-        int[] nums = {2, 4, 3, 6, 3, 2, 5, 5};
-        Solution solution = new Solution();
-        int[] res = solution.singleNumbers(nums);
-        System.out.println(Arrays.toString(res));
-
-        int[] nums2 = {2, 4, 3, 6, 3, 2, 5, 5};
-        int[] res2 = solution.singleNumbers(nums2);
-        System.out.println(Arrays.toString(res2));
-
-        int[] nums3 = {4, 6};
-        int[] res3 = solution.singleNumbers(nums3);
-        System.out.println(Arrays.toString(res3));
-
-        int[] nums4 = {4, 6, 1, 1, 1, 1};
-        int[] res4 = solution.singleNumbers(nums4);
-        System.out.println(Arrays.toString(res4));
-    }
 }
-```
+```    
+</CodeGroupItem>
 
-Python 代码：
-
+<CodeGroupItem title="Python3">
 ```python
 from typing import List
 
@@ -144,17 +128,6 @@ class Solution:
             else:
                 res[0] ^= num
         return res
-
-
-if __name__ == '__main__':
-    nums = [1, 2, 3, 3, 4, 4]
-    solution = Solution()
-    result = solution.singleNumbers(nums)
-    print(result)
-
 ```
-
-
-
-
-
+</CodeGroupItem>
+</CodeGroup>
