@@ -6,8 +6,8 @@ tags:
   - 动态规划
 ---
 
-+ 题目理解：[309. 最佳买卖股票时机含冷冻期](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/)。
-+ [题解链接](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/solution/dong-tai-gui-hua-by-liweiwei1419-5/)
++ 题目理解：[309. 最佳买卖股票时机含冷冻期](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/);
++ 题解链接：[动态规划（Java）](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/solution/dong-tai-gui-hua-by-liweiwei1419-5/)。
 
 ## 题目描述
 
@@ -18,7 +18,7 @@ tags:
 - 你不能同时参与多笔交易（你必须在再次购买前出售掉之前的股票）。
 - 卖出股票后，你无法在第二天买入股票 (即冷冻期为 1 天)。
 
-**示例:**
+**示例 1:**
 
 ```
 输入: [1,2,3,0,2]
@@ -26,7 +26,19 @@ tags:
 解释: 对应的交易状态为: [买入, 卖出, 冷冻期, 买入, 卖出]
 ```
 
----
+**Example 2:**
+
+```
+Input: prices = [1]
+Output: 0
+```
+
+**Constraints:**
+
+- `1 <= prices.length <= 5000`
+- `0 <= prices[i] <= 1000`
+
+
 
 **说明**：
 

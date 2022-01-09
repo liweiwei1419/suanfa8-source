@@ -28,6 +28,11 @@ tags:
 
 **注意：**两结点之间的路径长度是以它们之间边的数目表示。
 
+**Constraints:**
+
+- The number of nodes in the tree is in the range `[1, 10^4]`.
+- `-100 <= Node.val <= 100`
+
 ---
 
 ## 理解什么是二叉树的直径

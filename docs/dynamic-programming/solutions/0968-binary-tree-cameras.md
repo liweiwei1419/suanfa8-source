@@ -7,7 +7,7 @@ tags:
   - 树形 DP
 ---
 
-+ 题目链接：[968. 监控二叉树](https://leetcode-cn.com/problems/binary-tree-cameras/)
++ 题目链接：[968. 监控二叉树](https://leetcode-cn.com/problems/binary-tree-cameras/)。
 
 ## 题目描述
 
@@ -41,6 +41,11 @@ tags:
 
 1. 给定树的节点数的范围是 `[1, 1000]`。
 2. 每个节点的值都是 0。
+
+**Constraints:**
+
+- The number of nodes in the tree is in the range `[1, 1000]`.
+- `Node.val == 0`
 
 ---
 

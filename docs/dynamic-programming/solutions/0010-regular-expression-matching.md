@@ -68,7 +68,7 @@ tags:
 
 ### 方法一：递归
 
-**参考代码**：
+**参考代码 1**：
 
 ```java
 public class Solution {
@@ -113,7 +113,7 @@ public class Solution {
 
 ### 方法二：动态规划
 
-**参考代码**：
+**参考代码 2**：
 
 ```java
 public class Solution {

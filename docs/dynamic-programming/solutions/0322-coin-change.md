@@ -67,7 +67,7 @@ tags:
 
 - $1 \le coins.length \le 12$
 - $1 \le coins[i] \le 2^{31} - 1$
-- $0 \le amount \le 104$
+- $0 \le amount \le 10^4$
 
 ---
 

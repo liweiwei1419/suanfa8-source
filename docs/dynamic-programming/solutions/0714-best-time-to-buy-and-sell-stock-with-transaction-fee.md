@@ -6,8 +6,8 @@ tags:
   - 动态规划
 ---
 
-+ [题目链接](https://leetcode-cn.com/problems/combination-sum/)
-+ [题解链接](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/solution/dong-tai-gui-hua-by-liweiwei1419-6/)
++ 题目链接：[714. 买卖股票的最佳时机含手续费](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/)；
++ 题解链接：[动态规划（Java）](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/solution/dong-tai-gui-hua-by-liweiwei1419-6/)。
 
 ## 题目描述
 
@@ -79,13 +79,13 @@ tags:
 
 也就是说，不可以在买入股票和卖出股票的时候同时扣除手续费，不能扣两次手续费。
 
-### 第 1 步：状态定义
+## 第 1 步：状态定义
 
 + `dp[i][j]` 表示：`[0, i]` 区间内，到下标为 `i` 这一天天（从 $0$ 开始）状态为 `j` 时的我们手上拥有的现金数；
 + 其中 `j` 取两个值：`0` 表示不持股，`1` 表示持股。
 
 
-### 第 2 步：推导状态转移方程：
+## 第 2 步：推导状态转移方程：
 
 `dp[i][0]`：当天不持股，可以由昨天不持股和昨天持股转换而来。
 
@@ -102,11 +102,11 @@ tags:
 
 因此：`dp[i][1] = max(dp[i - 1][1], dp[i - 1][0] - prices[i] - fee);`。
 
-### 第 3 步：思考初始化
+## 第 3 步：思考初始化
 
 在下标为 $0$ 这一天，不持股的初始化值为 $0$，持股的初始化值为 `-prices[0] - fee`（规定在买入股票的时候扣除手续费）。
 
-### 第 4 步：思考输出
+## 第 4 步：思考输出
 
 每一天都由前面几天的状态转换而来，最优值在最后一天，并且是不持股的状态。
 
@@ -177,7 +177,7 @@ class Solution:
 ---
 
 
-### 第 5 步：思考空间优化
+## 第 5 步：思考空间优化
 
 因为当前行总是参考上一行的值，可以使用滚动数组优化。
 

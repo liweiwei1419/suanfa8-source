@@ -6,8 +6,8 @@ tags:
   - 动态规划
 ---
 
-+ [题目链接](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iii/)
-+ [题解链接](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iii/solution/dong-tai-gui-hua-by-liweiwei1419-7/)
++ 题目链接：[123. 买卖股票的最佳时机 III](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iii/)；
++ 题解链接：[动态规划（Java）](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iii/solution/dong-tai-gui-hua-by-liweiwei1419-7/)。
 
 ## 题目描述
 

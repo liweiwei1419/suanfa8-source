@@ -7,14 +7,14 @@ tags:
   - 字符串
 ---
 
-## 「力扣」第 91 题：解码方法（中等）
-
 > 1、画图；2、分类（用加法）、分步（用乘法）
 
-+ [链接](https://leetcode-cn.com/problems/decode-ways)
-+ [动态规划（Java、Python）](https://leetcode-cn.com/problems/decode-ways/solution/dong-tai-gui-hua-java-python-by-liweiwei1419/)
++ 题目链接：[91. 解码方法](https://leetcode-cn.com/problems/decode-ways/)；
++ 题解链接：[动态规划（Java、Python）](https://leetcode-cn.com/problems/decode-ways/solution/dong-tai-gui-hua-java-python-by-liweiwei1419/)。
 
-要求：一条包含字母 `A-Z` 的消息通过以下方式进行了编码：
+## 题目描述
+
+一条包含字母 `A-Z` 的消息通过以下映射进行了 **编码** ：
 
 ```
 'A' -> 1
@@ -23,7 +23,9 @@ tags:
 'Z' -> 26
 ```
 
-给定一个只包含数字的**非空**字符串，请计算解码方法的总数。
+要 **解码** 已编码的消息，所有数字必须基于上述映射的方法，反向映射回字母（可能有多种方法）。例如，`"11106"` 可以映射为：
+
+
 
 **示例 1**：
 

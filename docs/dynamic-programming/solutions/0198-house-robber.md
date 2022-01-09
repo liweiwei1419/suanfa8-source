@@ -8,8 +8,8 @@ tags:
 
 熟悉定义状态和状态转移，掌握「动态规划」的「自底向上」，递推去求解问题的方法。不是直接针对问题求解，而是把小规模的问题都解决了，再解决大问题。
 
-+ [题目链接](https://leetcode-cn.com/problems/house-robber)
-+ [题解链接](https://leetcode-cn.com/problems/combination-sum/solution/hui-su-suan-fa-jian-zhi-python-dai-ma-java-dai-m-2/)
++ 题目链接：[198. 打家劫舍](https://leetcode-cn.com/problems/house-robber)；
++ 题解链接：[回溯算法 + 剪枝（回溯经典例题详解）](https://leetcode-cn.com/problems/combination-sum/solution/hui-su-suan-fa-jian-zhi-python-dai-ma-java-dai-m-2/)。
 
 ## 题目描述
 
@@ -203,7 +203,6 @@ class Solution:
 + 技巧：状态压缩（不用掌握，仅供参考，个人觉得这样的写法理解起来很费劲，不容易维护）
 
 提示：状态转移，如果使用滚动变量的写法，可以把空间复杂度降到 $O(1)$。
-
 
 
 

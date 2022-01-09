@@ -9,10 +9,42 @@ tags:
 + 题目链接：[1025. 除数博弈](https://leetcode-cn.com/problems/divisor-game/)；
 + 题解链接：[记忆化递归、动态规划、数学方法（Java）](https://leetcode-cn.com/problems/divisor-game/solution/ji-yi-hua-di-gui-dong-tai-gui-hua-shu-xue-fang-fa-/)。
 
+## 题目描述
 
+爱丽丝和鲍勃一起玩游戏，他们轮流行动。爱丽丝先手开局。
 
+最初，黑板上有一个数字 `N` 。在每个玩家的回合，玩家需要执行以下操作：
 
-思路：拿一个具体的数值，根据题意分析下去。
+- 选出任一 `x`，满足 `0 < x < N` 且 `N % x == 0` 。
+- 用 `N - x` 替换黑板上的数字 `N` 。
+
+如果玩家无法执行这些操作，就会输掉游戏。
+
+只有在爱丽丝在游戏中取得胜利时才返回 `True`，否则返回 `False`。假设两个玩家都以最佳状态参与游戏。
+
+**示例 1：**
+
+```
+输入：2
+输出：true
+解释：爱丽丝选择 1，鲍勃无法进行操作。
+```
+
+**示例 2：**
+
+```
+输入：3
+输出：false
+解释：爱丽丝选择 1，鲍勃也选择 1，然后爱丽丝无法进行操作。
+```
+
+ **提示：**
+
+1. `1 <= N <= 1000`
+
+## 思路分析
+
+拿一个具体的数值，根据题意分析下去。
 
 
 ![image.png](https://pic.leetcode-cn.com/3dcd82b4b436e2630873de4fd5f7535ddd4afbd9d33a0eb256ea3a9ff1dc61b7-image.png)

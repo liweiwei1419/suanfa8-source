@@ -6,8 +6,8 @@ tags:
   - 动态规划
 ---
 
-+ 题目链接：[516. 最长回文子序列](https://leetcode-cn.com/problems/longest-palindromic-subsequence/)
-+ 题解链接：[动态规划（Java）](https://leetcode-cn.com/problems/longest-palindromic-subsequence/solution/dong-tai-gui-hua-java-by-liweiwei1419-yz55/)
++ 题目链接：[516. 最长回文子序列](https://leetcode-cn.com/problems/longest-palindromic-subsequence/)；
++ 题解链接：[动态规划（Java）](https://leetcode-cn.com/problems/longest-palindromic-subsequence/solution/dong-tai-gui-hua-java-by-liweiwei1419-yz55/)。
 
 ## 题目描述
 

@@ -9,8 +9,6 @@ tags:
 
 通过这道题体会「动态规划」问题「自底向上」「填表」的思路和一些细节。
 
-
-
 + 题目链接：[5. 最长回文子串](https://leetcode-cn.com/problems/longest-palindromic-substring/)；
 + 题解链接：[动态规划、中心扩散、Manacher 算法](https://leetcode-cn.com/problems/longest-palindromic-substring/solution/zhong-xin-kuo-san-dong-tai-gui-hua-by-liweiwei1419/)。
 

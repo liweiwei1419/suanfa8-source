@@ -6,8 +6,8 @@ tags:
   - 动态规划
 ---
 
-+ [题目链接](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iv//)
-+ [题解链接](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iv/solution/dong-tai-gui-hua-by-liweiwei1419-4/)
++ 题目链接：[188. 买卖股票的最佳时机 IV](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iv//)；
++ 题解链接：[动态规划（「力扣」更新过用例，只有优化空间的版本可以 AC）](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iv/solution/dong-tai-gui-hua-by-liweiwei1419-4/)。
 
 ## 题目描述
 
@@ -64,7 +64,7 @@ tags:
 思路：最多可以完成 $k$ 笔交易，是一个限制条件，因此需要把这个限制条件作为状态的一维设计到状态数组中。
 
 
-### 方法一：动态规划（最原始版本，超出内存限制）
+## 方法一：动态规划（最原始版本，超出内存限制）
 
 为了避免大段文字影响阅读，先给出代码以及代码注释。
 
@@ -146,7 +146,7 @@ public class Solution {
 会看到 $N = 1000$ 的时候，不能通过测试。为此尝试优化空间。
 
 
-### 方法二：动态规划（优化空间，可以通过）
+## 方法二：动态规划（优化空间，可以通过）
 
 由于今天的状态值只参考了昨天的状态值，可以直接把第一维去掉。
 

@@ -6,8 +6,8 @@ tags:
   - 动态规划
 ---
 
-+ [题目链接](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/)
-+ [题解链接](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/solution/bao-li-mei-ju-dong-tai-gui-hua-chai-fen-si-xiang-b/)
++ 题目链接：[121. 买卖股票的最佳时机](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/)；
++ 题解链接：[暴力解法、动态规划（Java）](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/solution/bao-li-mei-ju-dong-tai-gui-hua-chai-fen-si-xiang-b/)。
 
 ## 题目描述
 

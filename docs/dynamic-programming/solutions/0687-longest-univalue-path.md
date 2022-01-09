@@ -7,7 +7,7 @@ tags:
   - 树形 DP
 ---
 
-+ 题目链接：[687. 最长同值路径](https://leetcode-cn.com/problems/longest-univalue-path/)
++ 题目链接：[687. 最长同值路径](https://leetcode-cn.com/problems/longest-univalue-path/)。
 
 ## 题目描述
 
@@ -16,6 +16,8 @@ tags:
 **注意**：两个节点之间的路径长度由它们之间的边数表示。
 
 **示例 1:**
+
+![img](https://assets.leetcode.com/uploads/2020/10/13/ex1.jpg)
 
 输入:
 
@@ -35,6 +37,8 @@ tags:
 
 **示例 2:**
 
+![img](https://assets.leetcode.com/uploads/2020/10/13/ex2.jpg)
+
 输入:
 
 ```
@@ -51,7 +55,13 @@ tags:
 2
 ```
 
-**注意:** 给定的二叉树不超过10000个结点。 树的高度不超过1000。
+**注意:** 给定的二叉树不超过 10000 个结点。 树的高度不超过1000。
+
+**Constraints:**
+
++ The number of nodes in the tree is in the range `[0, 10^4]`.
++ `-1000 <= Node.val <= 1000`
++ The depth of the tree will not exceed `1000`.
 
 ---
 

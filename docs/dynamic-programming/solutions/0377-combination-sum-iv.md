@@ -6,19 +6,23 @@ tags:
   - 动态规划
 ---
 
-+ 题目链接：[377. 组合总和 Ⅳ](https://leetcode-cn.com/problems/combination-sum-iv/)
-+ 题解链接：[动态规划](https://leetcode-cn.com/problems/combination-sum-iv/solution/dong-tai-gui-hua-python-dai-ma-by-liweiwei1419/)
++ 题目链接：[377. 组合总和 Ⅳ](https://leetcode-cn.com/problems/combination-sum-iv/)；
++ 题解链接：[动态规划](https://leetcode-cn.com/problems/combination-sum-iv/solution/dong-tai-gui-hua-python-dai-ma-by-liweiwei1419/)。
 
 ## 题目描述
 
-给定一个由正整数组成且不存在重复数字的数组，找出和为给定目标正整数的组合的个数。
+给你一个由 **不同** 整数组成的数组 `nums` ，和一个目标整数 `target` 。请你从 `nums` 中找出并返回总和为 `target` 的元素组合的个数。
 
-**示例:**
+题目数据保证答案符合 32 位整数范围。
+
+ 
+
+**示例 1：**
 
 ```
-nums = [1, 2, 3]
-target = 4
-
+输入：nums = [1,2,3], target = 4
+输出：7
+解释：
 所有可能的组合为：
 (1, 1, 1, 1)
 (1, 1, 2)
@@ -27,21 +31,26 @@ target = 4
 (2, 1, 1)
 (2, 2)
 (3, 1)
-
 请注意，顺序不同的序列被视作不同的组合。
-
-因此输出为 7。
 ```
 
-**进阶：**
-如果给定的数组中含有负数会怎么样？
-问题会产生什么变化？
-我们需要在题目中添加什么限制来允许负数的出现？
+**示例 2：**
 
-**致谢：**
-特别感谢 [@pbrother](https://leetcode.com/pbrother/) 添加此问题并创建所有测试用例。
+```
+输入：nums = [9], target = 3
+输出：0
+```
 
-### 方法：动态规划
+**提示：**
+
+- `1 <= nums.length <= 200`
+- `1 <= nums[i] <= 1000`
+- `nums` 中的所有元素 **互不相同**
+- `1 <= target <= 1000`
+
+**进阶：**如果给定的数组中含有负数会发生什么？问题会产生何种变化？如果允许负数出现，需要向题目中添加哪些限制条件？
+
+## 方法：动态规划
 
 **题意分析**：
 
@@ -71,7 +80,7 @@ target = 4
 
 虽然这个问题没有明显的「最优子结构」，但这种「从底向上」递推的思路是很深刻的，我们也把它归纳到「动态规划」的解法中。
 
-### 方法：动态规划
+## 方法：动态规划
 
 “动态规划”的两个步骤是思考“状态”以及“状态转移方程”。
 
@@ -182,7 +191,6 @@ class Solution:
 
         return dp[-1]
 ```
-
 
 
 

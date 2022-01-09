@@ -4,13 +4,11 @@ icon: yongyan
 category: 动态规划
 tags:
   - 动态规划
---- 
-
-
-
-1449. 数位成本和为目标值的最大数字（困难、完全背包问题）.md
+---
 
 + 题目链接：[1449. 数位成本和为目标值的最大数字](https://leetcode-cn.com/problems/form-largest-integer-with-digits-that-add-up-to-target/)。
+
+## 题目描述
 
 给你一个整数数组 `cost` 和一个整数 `target` 。请你返回满足如下规则可以得到的 **最大** 整数：
 
@@ -71,11 +69,7 @@ tags:
 
 ---
 
-
-
-https://leetcode-cn.com/problems/form-largest-integer-with-digits-that-add-up-to-target/solution/xiang-xi-jiang-jie-wan-quan-bei-bao-zhuang-tai-de-/
-
-
+## 思路分析
 
 恰好构成 `target` ，大多与背包有关。并且「每个数字可以无限选」，所以是「完全背包问题」。
 
@@ -372,3 +366,5 @@ string largestNumber(vector<int>& cost, int target) {
     }
 };
 ```
+
+参考资料：https://leetcode-cn.com/problems/form-largest-integer-with-digits-that-add-up-to-target/solution/xiang-xi-jiang-jie-wan-quan-bei-bao-zhuang-tai-de-/

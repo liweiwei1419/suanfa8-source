@@ -7,7 +7,7 @@ tags:
 ---
 
 + 题目链接：[139. 单词拆分](https://leetcode-cn.com/problems/word-break/)；
-+ [题解链接](https://leetcode-cn.com/problems/word-break/solution/dong-tai-gui-hua-python-dai-ma-by-liweiwei1419-2/)
++ 题解链接：[动态规划（Java）](https://leetcode-cn.com/problems/word-break/solution/dong-tai-gui-hua-python-dai-ma-by-liweiwei1419-2/)。
 
 ## 题目描述
 

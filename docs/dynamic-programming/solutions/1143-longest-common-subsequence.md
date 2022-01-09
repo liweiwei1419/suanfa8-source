@@ -6,7 +6,7 @@ tags:
   - 动态规划
 ---
 
-+ 题目链接： [1143. 最长公共子序列](https://leetcode-cn.com/problems/longest-common-subsequence/)
++ 题目链接： [1143. 最长公共子序列](https://leetcode-cn.com/problems/longest-common-subsequence/)。
 
 ## 题目描述
 
@@ -47,7 +47,7 @@ tags:
 - `1 <= text1.length, text2.length <= 1000`
 - `text1` 和 `text2` 仅由小写英文字符组成。
 
----
+## 思路分析
 
 这里要为了考虑清楚边界问题，需要设置一个特殊的状态 `0`，这是基于特殊用例一个非空字符串与空字符串而来的。
 

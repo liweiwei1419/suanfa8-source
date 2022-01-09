@@ -6,8 +6,8 @@ tags:
   - 动态规划
 ---
 
-+ [题目链接](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/)
-+ [题解链接](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/solution/tan-xin-suan-fa-by-liweiwei1419-2/)
++ 题目链接：[122. 买卖股票的最佳时机 II](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/)；
++ 题解链接：[暴力搜索、贪心算法、动态规划（Java）](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/solution/tan-xin-suan-fa-by-liweiwei1419-2/)。
 
 ## 题目描述
 
@@ -68,7 +68,7 @@ tags:
 
 ---
 
-### 方法一：暴力搜索（超时）
+## 方法一：暴力搜索（超时）
 
 根据题意：由于不限制交易次数，在每一天，就可以根据当前是否持有股票选择相应的操作。「暴力搜索」在树形问题里也叫「回溯搜索」、「回溯法」。
 
@@ -129,7 +129,7 @@ public class Solution {
 ![image.png](https://pic.leetcode-cn.com/c09995ebd543a96851314b0272914e4f6dd1e0f074f21648ef1b1318a8845892-image.png)
 
 
-### 方法二：动态规划（通用）
+## 方法二：动态规划（通用）
 
 根据 「力扣」第 121 题的思路，需要设置一个二维矩阵表示状态。
 
@@ -287,7 +287,7 @@ public class Solution {
 + 空间复杂度：$O(1)$，分别使用两个滚动变量，将一维数组状态优化到常数大小。
 
 
-### 方法三：贪心算法（针对这道问题的特殊解法）
+## 方法三：贪心算法（针对这道问题的特殊解法）
 
 **贪心算法的直觉**：由于不限制交易次数，只要今天股价比昨天高，就交易。
 

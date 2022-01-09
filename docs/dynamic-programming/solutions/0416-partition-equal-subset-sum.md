@@ -8,8 +8,10 @@ tags:
   - 0-1 背包问题
 ---
 
-+ 题目链接：[416. 分割等和子集](https://leetcode-cn.com/problems/partition-equal-subset-sum/)
-+ 题解链接：[动态规划（转换为 0-1 背包问题）](https://leetcode-cn.com/problems/partition-equal-subset-sum/solution/0-1-bei-bao-wen-ti-xiang-jie-zhen-dui-ben-ti-de-yo/)
++ 题目链接：[416. 分割等和子集](https://leetcode-cn.com/problems/partition-equal-subset-sum/)；
++ 题解链接：[动态规划（转换为 0-1 背包问题）](https://leetcode-cn.com/problems/partition-equal-subset-sum/solution/0-1-bei-bao-wen-ti-xiang-jie-zhen-dui-ben-ti-de-yo/)。
+
++ :tv: 视频讲解：[力扣](https://leetcode-cn.com/problems/partition-equal-subset-sum/solution/fen-ge-deng-he-zi-ji-by-leetcode-solution/)。
 
 ## 题目描述
 

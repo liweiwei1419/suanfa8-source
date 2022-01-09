@@ -8,7 +8,7 @@ tags:
 ---
 
 + 题目链接：[343. 整数拆分](https://leetcode-cn.com/problems/integer-break/)；
-+ 题解链接：[记忆化递归、动态规划 、贪心算法（Java、Python）](https://leetcode-cn.com/problems/integer-break/solution/tan-xin-xuan-ze-xing-zhi-de-jian-dan-zheng-ming-py/)
++ 题解链接：[记忆化递归、动态规划 、贪心算法（Java、Python）](https://leetcode-cn.com/problems/integer-break/solution/tan-xin-xuan-ze-xing-zhi-de-jian-dan-zheng-ming-py/)。
 
 ## 题目描述
 
@@ -31,6 +31,10 @@ tags:
 ```
 
 **说明:** 你可以假设 *n* 不小于 2 且不大于 58。
+
+**Constraints:**
+
+- `2 <= n <= 58`
 
 ## 思路分析
 

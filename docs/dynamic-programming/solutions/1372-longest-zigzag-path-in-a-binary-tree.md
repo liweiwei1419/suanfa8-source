@@ -7,7 +7,7 @@ tags:
   - 树形 DP
 ---
 
-+ 题目链接：[1372. 二叉树中的最长交错路径](https://leetcode-cn.com/problems/longest-zigzag-path-in-a-binary-tree/)
++ 题目链接：[1372. 二叉树中的最长交错路径](https://leetcode-cn.com/problems/longest-zigzag-path-in-a-binary-tree/)。
 
 ## 题目描述
 
