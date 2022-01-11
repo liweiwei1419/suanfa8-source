@@ -8,8 +8,8 @@ tags:
 
 ![0611-新](https://tva1.sinaimg.cn/large/008i3skNgy1gx8wdkqf89j30p00anwf0.jpg)
 
-+ 题目链接：[611. 有效三角形的个数](https://leetcode-cn.com/problems/valid-triangle-number/)
-+ 题解链接：[排序以后找第 1 个大于等于两边之和的下标（Java）](https://leetcode-cn.com/problems/valid-triangle-number/solution/er-fen-cha-zhao-python-dai-ma-java-dai-ma-by-liwei/)
++ 题目链接：[611. 有效三角形的个数](https://leetcode-cn.com/problems/valid-triangle-number/)；
++ 题解链接：[排序以后找第 1 个大于等于两边之和的下标（Java）](https://leetcode-cn.com/problems/valid-triangle-number/solution/er-fen-cha-zhao-python-dai-ma-java-dai-ma-by-liwei/)。
 
 
 ## 题目描述

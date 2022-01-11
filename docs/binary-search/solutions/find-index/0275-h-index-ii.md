@@ -9,8 +9,8 @@ tags:
 ![0275](https://tva1.sinaimg.cn/large/008i3skNgy1gx93fac2tcj30p00an74m.jpg)
 
 
-+ 题目链接：[275. H 指数 II](https://leetcode-cn.com/problems/h-index-ii/)
-+ 题解链接：[二分查找猜论文篇数（Java）](https://leetcode-cn.com/problems/h-index-ii/solution/jian-er-zhi-zhi-er-fen-cha-zhao-by-liweiwei1419-2/)
++ 题目链接：[275. H 指数 II](https://leetcode-cn.com/problems/h-index-ii/)；
++ 题解链接：[二分查找猜论文篇数（Java）](https://leetcode-cn.com/problems/h-index-ii/solution/jian-er-zhi-zhi-er-fen-cha-zhao-by-liweiwei1419-2/)。
 
 ## 题目描述
 

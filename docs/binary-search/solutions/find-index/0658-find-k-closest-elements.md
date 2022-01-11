@@ -47,7 +47,7 @@ tags:
 
 以下介绍的两种方法，排除法比较容易想到，而**二分法基于排除法的思想**，希望读者能够认真体会，代码虽然简单，但是要做一些分类讨论才能解释得清楚。
 
-### 方法一：排除法（双指针）
+## 方法一：排除法（双指针）
 
 
 以 `arr = [1, 2, 3, 4, 5, 6, 7]` , `x = 5`, `k = 3` 为例。 
@@ -58,16 +58,37 @@ tags:
 
 2、一共 $7$ 个元素，要保留 $3$ 个元素，因此要删除 $4$ 个元素；
 
-3、因为要删除的元素都位于边界，于是可以使用**双指针**对撞的方式确定保留区间，即“最优区间”。
+3、因为要删除的元素都位于边界，于是可以使用 **双指针** 对撞的方式确定保留区间，即“最优区间”。
 
 （温馨提示：下面的幻灯片中，有几页上有较多的文字，可能需要您停留一下，可以点击右下角的后退 “|◀” 或者前进 “▶|” 按钮控制幻灯片的播放。）
 
-![658-1.png](https://pic.leetcode-cn.com/7cac52f799ba654e9483f47cd17533706a380dbc15fbb6dbc93a83bce11c45db-658-1.png),![658-2.png](https://pic.leetcode-cn.com/ab9c789d3c7fc18cdb1dd7d383c3fa984033f4420412ffe91d747cdfe3623994-658-2.png),![658-3.png](https://pic.leetcode-cn.com/0ae58bb7d22e120a900c8eb7a5735ef5e777373885d17f8f90fe0a172579716a-658-3.png),![658-4.png](https://pic.leetcode-cn.com/3b003257d123fe2e944f0f06f94d88d1b35cc0f071748dc5ca2f77362c69621e-658-4.png),![658-5.png](https://pic.leetcode-cn.com/9b971313fa81e97893a9321769478375dac74fa92d8cdc75563386949f18731d-658-5.png)
+@slidestart
+
+![658-1.png](https://pic.leetcode-cn.com/7cac52f799ba654e9483f47cd17533706a380dbc15fbb6dbc93a83bce11c45db-658-1.png)
+
+---
+
+![658-2.png](https://pic.leetcode-cn.com/ab9c789d3c7fc18cdb1dd7d383c3fa984033f4420412ffe91d747cdfe3623994-658-2.png)
+
+---
+
+![658-3.png](https://pic.leetcode-cn.com/0ae58bb7d22e120a900c8eb7a5735ef5e777373885d17f8f90fe0a172579716a-658-3.png)
+
+---
+
+![658-4.png](https://pic.leetcode-cn.com/3b003257d123fe2e944f0f06f94d88d1b35cc0f071748dc5ca2f77362c69621e-658-4.png)
+
+---
+
+![658-5.png](https://pic.leetcode-cn.com/9b971313fa81e97893a9321769478375dac74fa92d8cdc75563386949f18731d-658-5.png)
+
+
+@slideend
 
 **参考代码**：
 
-Java 代码：
-
+<CodeGroup>
+<CodeGroupItem title="Java">
 ```java
 import java.util.ArrayList;
 import java.util.List;
@@ -107,9 +128,9 @@ public class Solution {
     }
 }
 ```
+</CodeGroupItem>
 
-Python 代码：
-
+<CodeGroupItem title="Python3">
 ```python
 from typing import List
 
@@ -135,10 +156,12 @@ class Solution:
             remove_nums -= 1
         return arr[left:left + k]
 ```
+</CodeGroupItem>
+</CodeGroup>
 
 **复杂度分析**：
 
-+ 时间复杂度：$O(N)$，这里 $N$ 是数组的长度。
++ 时间复杂度：$O(N)$，这里 $N$ 是数组的长度；
 + 空间复杂度：$O(1)$，只使用了常数个额外的辅助空间。
 
 ---
@@ -151,7 +174,7 @@ class Solution:
 
 因此，只要我们找到了左边界的索引，从左边界开始数 `k` 个数，返回就好了。我们把这件事情定义为“寻找最优区间”，“寻找最优区间”等价于“寻找最优区间的左边界”。因此本题使用二分查找法在有序数组中**定位含有 `k` 个元素的连续子区间的左边界**，即使用二分法找“最优区间的左边界”。
 
-### 方法二：二分查找最优区间的左边界
+## 方法二：二分查找最优区间的左边界
 
 由排除法，我们知道：
 
@@ -256,33 +279,9 @@ else:
 
 **参考代码**：
 
-Python 代码：
-
-```Python []
-from typing import List
-
-
-class Solution:
-    def findClosestElements(self, arr: List[int], k: int, x: int) -> List[int]:
-        size = len(arr)
-        left = 0
-        right = size - k
-
-        while left < right:
-            # mid = left + (right - left) // 2
-            mid = (left + right) >> 1
-            # 尝试从长度为 k + 1 的连续子区间删除一个元素
-            # 从而定位左区间端点的边界值
-            if x - arr[mid] > arr[mid + k] - x:
-                left = mid + 1
-            else:
-                right = mid
-        return arr[left:left + k]
-```
-
-Java 代码：
-
-```Java []
+<CodeGroup>
+<CodeGroupItem title="Java">
+```java
 import java.util.ArrayList;
 import java.util.List;
 
@@ -323,13 +322,40 @@ public class Solution {
     }
 }
 ```
+</CodeGroupItem>
+
+<CodeGroupItem title="Python3">
+```python
+from typing import List
+
+
+class Solution:
+    def findClosestElements(self, arr: List[int], k: int, x: int) -> List[int]:
+        size = len(arr)
+        left = 0
+        right = size - k
+
+        while left < right:
+            # mid = left + (right - left) // 2
+            mid = (left + right) >> 1
+            # 尝试从长度为 k + 1 的连续子区间删除一个元素
+            # 从而定位左区间端点的边界值
+            if x - arr[mid] > arr[mid + k] - x:
+                left = mid + 1
+            else:
+                right = mid
+        return arr[left:left + k]
+```
+</CodeGroupItem>
+</CodeGroup>
+
+
+
+
+
 
 **复杂度分析**：
 
-+ 时间复杂度：$O(\log N)$，这里 $N$ 是数组的长度，使用二分法的时间复杂度是对数级别的。
++ 时间复杂度：$O(\log N)$，这里 $N$ 是数组的长度，使用二分法的时间复杂度是对数级别的；
 + 空间复杂度：$O(1)$，只使用了常数个额外的辅助空间。
-
-（本节完）
-
-
 

@@ -8,8 +8,8 @@ tags:
 
 ![0004](https://tva1.sinaimg.cn/large/008i3skNgy1gx80k8s2lhj30p00anwf9.jpg)
 
-+ [链接](https://leetcode-cn.com/problems/median-of-two-sorted-arrays/)
-+ [题解链接](https://leetcode-cn.com/problems/median-of-two-sorted-arrays/solution/he-bing-yi-hou-zhao-gui-bing-guo-cheng-zhong-zhao-/)
++ 题目链接：[4. 寻找两个正序数组的中位数](https://leetcode-cn.com/problems/median-of-two-sorted-arrays/)；
++ 题解链接：[二分查找定位短数组的「分割线」（Java ）](https://leetcode-cn.com/problems/median-of-two-sorted-arrays/solution/he-bing-yi-hou-zhao-gui-bing-guo-cheng-zhong-zhao-/)。
 
 
 ::: danger 视频讲解
@@ -68,7 +68,7 @@ tags:
 - `0 <= m <= 1000`
 - `0 <= n <= 1000`
 - `1 <= m + n <= 2000`
-- `-106 <= nums1[i], nums2[i] <= 106`
+- `-10^6 <= nums1[i], nums2[i] <= 10^6`
 
 ---
 

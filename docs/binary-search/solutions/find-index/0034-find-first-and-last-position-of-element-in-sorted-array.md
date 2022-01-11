@@ -8,40 +8,55 @@ tags:
 
 ![0034](https://tva1.sinaimg.cn/large/008i3skNgy1gx928a7ukhj30p00anq3g.jpg)
 
-+ 题目链接：[34. 在排序数组中查找元素的第一个和最后一个位置](https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/)
+
+::: warning 温馨提示
+查找第一个元素和最后一个元素的代码不是背出来的，仔细分析就不难写出代码，关键是要认真。二分查找不是难点，也不是重点。
+:::
 
 
-## :tv: **力扣」第 34 题视频题解**
++ 题目链接：[34. 在排序数组中查找元素的第一个和最后一个位置](https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/)。
+
+
+## :tv: **「力扣」第 34 题视频题解**
 
 建议使用 1.5 倍速观看。
 
-+ [B 站](https://www.bilibili.com/video/BV147411i7zu?p=3)
++ [B 站](https://www.bilibili.com/video/BV147411i7zu?p=3)。
 
 
-## :notebook_with_decorative_cover: 力扣」第 34 题文字题解
+## :notebook_with_decorative_cover:  「力扣」第 34 题文字题解
 
-+ 题解链接：[两次二分查找（Java）](https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/solution/si-lu-hen-jian-dan-xi-jie-fei-mo-gui-de-er-fen-cha/)
++ 题解链接：[两次二分查找（Java）](https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/solution/si-lu-hen-jian-dan-xi-jie-fei-mo-gui-de-er-fen-cha/)。
 
 ## 题目描述
 
 给定一个按照升序排列的整数数组 `nums`，和一个目标值 `target`。找出给定目标值在数组中的开始位置和结束位置。
 
-你的算法时间复杂度必须是 $O(\log n)$ 级别。
+如果数组中不存在目标值 `target`，返回 `[-1, -1]`。
 
-如果数组中不存在目标值，返回 `[-1, -1]`。
+**进阶：**
 
-示例 1：
+- 你可以设计并实现时间复杂度为 `O(log n)` 的算法解决此问题吗？
+
+**示例 1：**
 
 ```
 输入: nums = [5, 7, 7, 8, 8, 10], target = 8
 输出: [3, 4]
 ```
 
-示例 2：
+**示例 2：**
 
 ```
 输入: nums = [5, 7, 7, 8, 8, 10], target = 6
 输出: [-1, -1]
+```
+
+**示例 3：**
+
+```
+输入：nums = [], target = 0
+输出：[-1,-1]
 ```
 
 **提示：**
@@ -119,7 +134,12 @@ public class Solution {
 
 ## 对参考代码的说明
 
-`findFirstPosition()`，分成三种情况：下面的描述可能有一点啰嗦，但是很多时候问题并不难，仔细一点分析就不难做对。
+`findFirstPosition()`，分成三种情况。
+
+::: danger 温馨提示
+下面的描述有一点啰嗦，只是为了说清楚，读者了解思路就可以了，不必全部看完。
+:::
+
 
 **情况 1** ：当 `nums[mid] < target` 时
 
@@ -129,7 +149,6 @@ public class Solution {
 
 因此下一轮搜索区间是 `[mid + 1..right]`，此时设置 `left = mid + 1`；
 
-
 **情况 2** ：当 `nums[mid] == target` 时
 
 + `mid` 有可能是 `target` 第一次出现的位置；
@@ -137,7 +156,6 @@ public class Solution {
 + `mid` 的右边一定不是 `target` 第一次出现的位置。
 
 因此下一轮搜索区间在 `[left..mid]`，此时设置 `right = mid`。
-
 
 **情况 3** ：当 `nums[mid] > target` 时
 

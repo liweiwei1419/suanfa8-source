@@ -8,10 +8,8 @@ tags:
 
 ![0035](https://tva1.sinaimg.cn/large/008i3skNgy1gx8jfpbcuxj30p00ant9b.jpg)
 
-+ [链接](https://leetcode-cn.com/problems/search-insert-position)
-+ [题解链接](https://leetcode-cn.com/problems/search-insert-position/solution/te-bie-hao-yong-de-er-fen-cha-fa-fa-mo-ban-python-/)
-
-
++ 题目链接：[35. 搜索插入位置](https://leetcode-cn.com/problems/search-insert-position/)；
++ 题解链接：[写对二分查找不是套模板并往里面填空，需要仔细分析题意](https://leetcode-cn.com/problems/search-insert-position/solution/te-bie-hao-yong-de-er-fen-cha-fa-fa-mo-ban-python-/)。
 
 ## 题目描述
 
@@ -168,5 +166,5 @@ public class Solution {
 }
 ```
 
-**复杂度分析**：（同参考代码 1）
+**复杂度分析**：（同参考代码 1）。
 
