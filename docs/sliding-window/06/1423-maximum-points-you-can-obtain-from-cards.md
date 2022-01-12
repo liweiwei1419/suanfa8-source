@@ -6,8 +6,7 @@ tags:
   - 滑动窗口
 ---
 
-
-+ 题目链接：[可获得的最大点数](https://leetcode-cn.com/problems/maximum-points-you-can-obtain-from-cards/)
+- 题目链接：[可获得的最大点数](https://leetcode-cn.com/problems/maximum-points-you-can-obtain-from-cards/)
 
 ## 题目描述
 
@@ -48,7 +47,7 @@ tags:
 ```
 输入：cardPoints = [1,1000,1], k = 1
 输出：1
-解释：你无法拿到中间那张卡牌，所以可以获得的最大点数为 1 。 
+解释：你无法拿到中间那张卡牌，所以可以获得的最大点数为 1 。
 ```
 
 **示例 5：**
@@ -96,4 +95,3 @@ public class Solution {
     }
 }
 ```
-

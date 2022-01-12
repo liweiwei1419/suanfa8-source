@@ -6,8 +6,8 @@ tags:
   - 滑动窗口
 ---
 
-+ 题目链接：[438. 找到字符串中所有字母异位词](https://leetcode-cn.com/problems/find-all-anagrams-in-a-string/)；
-+ 题解链接：[滑动窗口（Java）](https://leetcode-cn.com/problems/VabMRr/solution/hua-dong-chuang-kou-java-by-liweiwei1419-r567/)。
+- 题目链接：[438. 找到字符串中所有字母异位词](https://leetcode-cn.com/problems/find-all-anagrams-in-a-string/)；
+- 题解链接：[滑动窗口（Java）](https://leetcode-cn.com/problems/VabMRr/solution/hua-dong-chuang-kou-java-by-liweiwei1419-r567/)。
 
 ## 题目描述
 
@@ -48,8 +48,6 @@ s: "abab" p: "ab"
 起始索引等于 1 的子串是 "ba", 它是 "ab" 的字母异位词。
 起始索引等于 2 的子串是 "ab", 它是 "ab" 的字母异位词。
 ```
-
-
 
 **提示:**
 

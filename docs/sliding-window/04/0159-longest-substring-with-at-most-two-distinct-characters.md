@@ -6,12 +6,11 @@ tags:
   - 滑动窗口
 ---
 
-+ 题目链接：（会员题）「力扣」第 159 题：[至多包含两个不同字符的最长子串](https://leetcode-cn.com/problems/longest-substring-with-at-most-two-distinct-characters/)。
-
+- 题目链接：（会员题）「力扣」第 159 题：[至多包含两个不同字符的最长子串](https://leetcode-cn.com/problems/longest-substring-with-at-most-two-distinct-characters/)。
 
 ## 题目描述
 
-给定一个字符串 ***s*** ，找出 **至多** 包含两个不同字符的最长子串 ***t*** ，并返回该子串的长度。
+给定一个字符串 **_s_** ，找出 **至多** 包含两个不同字符的最长子串 **_t_** ，并返回该子串的长度。
 
 示例 1：
 
@@ -20,7 +19,7 @@ tags:
 
 输出: 3
 
-解释: t 是 "ece"，长度为3。
+解释: t 是 "ece"，长度为 3。
 ```
 
 示例 2:
@@ -30,12 +29,12 @@ tags:
 
 输出: 5
 
-解释: t 是 "aabbb"，长度为5。
+解释: t 是 "aabbb"，长度为 5。
 ```
 
 **Constraints:**
 
-- `1 <= s.length <= 104`
+- `1 <= s.length <= 10^4`
 - `s` consists of English letters.
 
 ## 思路分析

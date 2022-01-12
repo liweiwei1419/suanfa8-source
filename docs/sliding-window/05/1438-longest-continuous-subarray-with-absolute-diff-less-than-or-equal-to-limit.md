@@ -6,8 +6,7 @@ tags:
   - 滑动窗口
 ---
 
-+ 题目链接：[1438. 绝对差不超过限制的最长连续子数组](https://leetcode-cn.com/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/)。
-
+- 题目链接：[1438. 绝对差不超过限制的最长连续子数组](https://leetcode-cn.com/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/)。
 
 ## 题目描述
 
@@ -20,13 +19,13 @@ tags:
 ```
 输入：nums = [8,2,4,7], limit = 4
 
-输出：2 
+输出：2
 
 解释：所有子数组如下：
 
 [8] 最大绝对差 |8-8| = 0 &lt;= 4.
 
-[8,2] 最大绝对差 |8-2| = 6 &gt; 4. 
+[8,2] 最大绝对差 |8-2| = 6 &gt; 4.
 
 [8,2,4] 最大绝对差 |8-2| = 6 &gt; 4.
 
@@ -42,7 +41,7 @@ tags:
 
 [4,7] 最大绝对差 |4-7| = 3 &lt;= 4.
 
-[7] 最大绝对差 |7-7| = 0 &lt;= 4. 
+[7] 最大绝对差 |7-7| = 0 &lt;= 4.
 
 因此，满足题意的最长子数组的长度为 2 。
 ```
@@ -52,7 +51,7 @@ tags:
 ```
 输入：nums = [10,1,2,4,7,2], limit = 5
 
-输出：4 
+输出：4
 
 解释：满足题意的最长子数组是 [2,4,7,2]，其最大绝对差 |2-7| = 5 &lt;= 5 。
 ```

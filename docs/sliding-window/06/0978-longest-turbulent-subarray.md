@@ -6,9 +6,12 @@ tags:
   - 滑动窗口
 ---
 
+- 题目链接：[978. 最长湍流子数组](https://leetcode-cn.com/problems/longest-turbulent-subarray/)；
+- 题解链接：[🎦 最长湍流子数组](https://leetcode-cn.com/problems/longest-turbulent-subarray/solution/zui-chang-tuan-liu-zi-shu-zu-by-leetcode-zqoq/)。
 
-+ 题目链接：[978. 最长湍流子数组](https://leetcode-cn.com/problems/longest-turbulent-subarray/)；
-+ 题解链接：[🎦 最长湍流子数组](https://leetcode-cn.com/problems/longest-turbulent-subarray/solution/zui-chang-tuan-liu-zi-shu-zu-by-leetcode-zqoq/)。
+::: danger 温馨提示
+本题在 [B 站](https://www.bilibili.com/video/BV1PV411i73Y) 和 [官方题解](https://leetcode-cn.com/problems/longest-turbulent-subarray/solution/zui-chang-tuan-liu-zi-shu-zu-by-leetcode-zqoq/) 可以收看视频题解，示例代码在本文最后。
+:::
 
 ## 题目描述
 
@@ -47,8 +50,3 @@ tags:
 
 1. `1 <= A.length <= 40000`
 2. `0 <= A[i] <= 10^9`
-
-
-::: warning 说明
-本题详解请见本文的「题解链接」，有视频讲解和文字讲解。
-:::

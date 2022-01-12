@@ -6,9 +6,7 @@ tags:
   - 滑动窗口
 ---
 
-
-+ 题目链接：[1493. 删掉一个元素以后全为 1 的最长子数组](https://leetcode-cn.com/problems/longest-subarray-of-1s-after-deleting-one-element/)。
-
+- 题目链接：[1493. 删掉一个元素以后全为 1 的最长子数组](https://leetcode-cn.com/problems/longest-subarray-of-1s-after-deleting-one-element/)。
 
 ## 题目描述
 
@@ -17,8 +15,6 @@ tags:
 请你在删掉元素的结果数组中，返回最长的且只包含 1 的非空子数组的长度。
 
 如果不存在这样的子数组，请返回 0 。
-
- 
 
 **提示 1：**
 
@@ -58,14 +54,13 @@ tags:
 输出：0
 ```
 
- 
-
 **提示：**
 
 - `1 <= nums.length <= 10^5`
 - `nums[i]` 要么是 `0` 要么是 `1` 。
 
 ---
+
 ## 思路分析
 
 因为题目说：请你在删掉元素的结果数组中，返回最长的且只包含 1 的非空子数组的长度。所以最后返回的滑动窗口的长度要减 1。
@@ -116,8 +111,10 @@ public class Solution {
         int res = solution.longestSubarray(nums);
         System.out.println(res);
     }
+
 }
-```
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Java">
@@ -154,11 +151,7 @@ public class Solution {
         return right - left - 1;
     }
 }
-```
+````
+
 </CodeGroupItem>
 </CodeGroup>
-
-
-
-
-

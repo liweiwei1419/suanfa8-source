@@ -6,7 +6,11 @@ tags:
   - 滑动窗口
 ---
 
-+ 题目链接：[76. 最小覆盖子串](https://leetcode-cn.com/problems/minimum-window-substring/)。
+- 题目链接：[76. 最小覆盖子串](https://leetcode-cn.com/problems/minimum-window-substring/)。
+
+::: danger 温馨提示
+本题在 [B 站](https://www.bilibili.com/video/BV1aK4y1t7Qd) 和 [官方题解](https://leetcode-cn.com/problems/minimum-window-substring/solution/zui-xiao-fu-gai-zi-chuan-by-leetcode-solution/) 可以收看视频题解，示例代码在本文最后。
+:::
 
 ## 题目描述
 
@@ -40,17 +44,12 @@ tags:
 因此没有符合条件的子字符串，返回空字符串。
 ```
 
-
-
 **提示：**
 
 - $1 <= s.length, t.length <= 10^5$
 - `s` 和 `t` 由英文字母组成
 
 **进阶：**你能设计一个在 `o(n)` 时间内解决此问题的算法吗？
-
-# 题目描述
-
 
 ---
 
@@ -192,6 +191,3 @@ public class Solution {
     }
 }
 ```
-
-
-

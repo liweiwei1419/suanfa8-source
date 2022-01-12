@@ -6,8 +6,7 @@ tags:
   - 滑动窗口
 ---
 
-
-+ 题目链接：[1004. 最大连续1的个数 III](https://leetcode-cn.com/problems/max-consecutive-ones-iii/)。
+- 题目链接：[1004. 最大连续 1 的个数 III](https://leetcode-cn.com/problems/max-consecutive-ones-iii/)。
 
 ## 题目描述
 
@@ -20,7 +19,7 @@ tags:
 ```
 输入：A = [1,1,1,0,0,0,1,1,1,1,0], K = 2
 输出：6
-解释： 
+解释：
 [1,1,1,0,0,1,1,1,1,1,1]
 粗体数字从 0 翻转到 1，最长的子数组长度为 6。
 ```
@@ -43,13 +42,13 @@ tags:
 
 ---
 
-可以参考官方题解：[最大连续1的个数 III](https://leetcode-cn.com/problems/max-consecutive-ones-iii/solution/zui-da-lian-xu-1de-ge-shu-iii-by-leetcod-hw12/)
+可以参考官方题解：[最大连续 1 的个数 III](https://leetcode-cn.com/problems/max-consecutive-ones-iii/solution/zui-da-lian-xu-1de-ge-shu-iii-by-leetcod-hw12/)
 
 **知识点：前缀和与二分查找**
 
 **这题还可以用「二分查找」，需要留意。**
 
-技巧：**要想快速判断一个区间内 0 的个数，我们可以考虑将数组** ***A*** **中的 0 变成 1，1 变成 0。**
+技巧：**要想快速判断一个区间内 0 的个数，我们可以考虑将数组** **_A_** **中的 0 变成 1，1 变成 0。**
 
 ## 方法一：前缀和 + 二分查找
 
@@ -93,8 +92,6 @@ public class Solution {
 }
 ```
 
-
-
 ## 方法二：滑动窗口
 
 **参考代码**：
@@ -126,8 +123,10 @@ public class Solution {
         }
         return res;
     }
+
 }
-```
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Java">
@@ -154,12 +153,7 @@ public class Solution {
         return right - left;
     }
 }
-```
+````
+
 </CodeGroupItem>
 </CodeGroup>
-
-
-
-
-
-

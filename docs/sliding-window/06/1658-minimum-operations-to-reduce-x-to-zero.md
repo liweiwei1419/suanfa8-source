@@ -6,7 +6,7 @@ tags:
   - 滑动窗口
 ---
 
-+ 题目链接：[将 x 减到 0 的最小操作数](https://leetcode-cn.com/problems/minimum-operations-to-reduce-x-to-zero/)。
+- 题目链接：[将 x 减到 0 的最小操作数](https://leetcode-cn.com/problems/minimum-operations-to-reduce-x-to-zero/)。
 
 ## 题目描述
 
@@ -53,7 +53,6 @@ tags:
 
 **这里保留值 = sum(数组) - x**
 
-
 **参考代码**：
 
 ```java
@@ -95,4 +94,3 @@ public class Solution {
     }
 }
 ```
-

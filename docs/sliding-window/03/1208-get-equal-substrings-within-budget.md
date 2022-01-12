@@ -6,8 +6,7 @@ tags:
   - 滑动窗口
 ---
 
-
-+ 题目链接：[1208. 尽可能使字符串相等](https://leetcode-cn.com/problems/get-equal-substrings-within-budget/)。
+- 题目链接：[1208. 尽可能使字符串相等](https://leetcode-cn.com/problems/get-equal-substrings-within-budget/)。
 
 ## 题目描述
 
@@ -146,4 +145,3 @@ public class Solution {
     }
 }
 ```
-

@@ -35,7 +35,7 @@ tags:
 
 **Constraints:**
 
-- `1 <= s.length <= 5 * 104`
+- `1 <= s.length <= 5 * 10^4`
 
 - `0 <= k <= 50`
 

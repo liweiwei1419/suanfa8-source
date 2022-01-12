@@ -6,7 +6,7 @@ tags:
   - 滑动窗口
 ---
 
-+ 题目链接：[674. 最长连续递增序列](https://leetcode-cn.com/problems/longest-continuous-increasing-subsequence/)。
+- 题目链接：[674. 最长连续递增序列](https://leetcode-cn.com/problems/longest-continuous-increasing-subsequence/)。
 
 ## 题目描述
 
@@ -20,7 +20,7 @@ tags:
 输入: [1,3,5,4,7]
 输出: 3
 解释: 最长连续递增序列是 [1,3,5], 长度为3。
-尽管 [1,3,5,7] 也是升序的子序列, 但它不是连续的，因为 5 和 7 在原数组里被 4 隔开。 
+尽管 [1,3,5,7] 也是升序的子序列, 但它不是连续的，因为 5 和 7 在原数组里被 4 隔开。
 ```
 
 **示例 2:**
@@ -40,7 +40,6 @@ tags:
 要求是连续的子数组，画图分析。
 
 ## 滑动窗口
-
 
 **参考代码**：
 
@@ -68,6 +67,3 @@ public class Solution {
     }
 }
 ```
-
-
-

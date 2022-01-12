@@ -8,8 +8,8 @@ tags:
 
 ![0713](https://tva1.sinaimg.cn/large/008i3skNgy1gx95j60i7mj30p00an0ta.jpg)
 
-+ 题目链接：[713. 乘积小于K的子数组](https://leetcode-cn.com/problems/subarray-product-less-than-k/)、[剑指 Offer II 009. 乘积小于 K 的子数组](https://leetcode-cn.com/problems/ZVAVXX/)（两题一模一样）
-+ 题解链接：[滑动窗口（Java）](https://leetcode-cn.com/problems/ZVAVXX/solution/hua-dong-chuang-kou-java-by-liweiwei1419-p81h/)
+- 题目链接：[713. 乘积小于 K 的子数组](https://leetcode-cn.com/problems/subarray-product-less-than-k/)、[剑指 Offer II 009. 乘积小于 K 的子数组](https://leetcode-cn.com/problems/ZVAVXX/)（两题一模一样）
+- 题解链接：[滑动窗口（Java）](https://leetcode-cn.com/problems/ZVAVXX/solution/hua-dong-chuang-kou-java-by-liweiwei1419-p81h/)
 
 ## 题目描述
 
@@ -37,13 +37,14 @@ tags:
 
 ## 思路分析
 
-+ 暴力解法：枚举所有的输入数组的连续子数组，逐个判断它们的乘积是否严格小于 `k`；
-+ 暴力解法没有利用到「**输入数组是正整数数组**」这个条件。
+- 暴力解法：枚举所有的输入数组的连续子数组，逐个判断它们的乘积是否严格小于 `k`；
+- 暴力解法没有利用到「**输入数组是正整数数组**」这个条件。
 
 ::: danger 关键字
-+ 正整数：输入数组里所有的元素都是正整数，这一点很关键；
-+ 连续子数组：连续很重要。
-:::
+
+- 正整数：输入数组里所有的元素都是正整数，这一点很关键；
+- 连续子数组：连续很重要。
+  :::
 
 ::: info 本题可以使用「滑动窗口」的原因
 
@@ -55,7 +56,6 @@ tags:
 
 基于以上两点，我们可以设计「滑动窗口」算法。因此「滑动窗口」方法是「暴力解法」的优化。
 :::
-
 
 因此我们可以使用「滑动窗口」找到 **最大可以撑开的** 窗口的长度，然后一下子计算出此时符合题意的子数组的个数。
 
@@ -73,9 +73,8 @@ tags:
 
 **说明**：这里把区间定义成左闭右闭也是完全可以的。我这样定义的原因是：
 
-+ `right` 定义为开区间的端点，表示的意思是 `right` 左边的数值程序都看到过；
-+ 此时 `[left..right)` 区间的长度表示为 `right - left`。
-
+- `right` 定义为开区间的端点，表示的意思是 `right` 左边的数值程序都看到过；
+- 此时 `[left..right)` 区间的长度表示为 `right - left`。
 
 下面的「参考代码 1」和「参考代码 2」我们对区间的定义是不一样的，影响了编码中的一些细节，供大家比对。
 
@@ -113,8 +112,7 @@ public class Solution {
 
 **复杂度分析**：
 
-+ 时间复杂度：$O(N)$，这里 $N$ 是输入数组的长度。`right` 需要遍历输入数组一次，绝大多数情况下，`left` 还没有遍历到输入数组的末尾就停了下来。
-
+- 时间复杂度：$O(N)$，这里 $N$ 是输入数组的长度。`right` 需要遍历输入数组一次，绝大多数情况下，`left` 还没有遍历到输入数组的末尾就停了下来。
 
 **参考代码 2**：
 
@@ -148,4 +146,3 @@ public class Solution {
 这就是这一节的分享，我讲解的算法特别好懂，欢迎关注我的公众号「算法不好玩」。
 
 ![](https://files.mdnice.com/user/5576/e99835c7-09e3-4820-9956-721c37d13a14.png)
-

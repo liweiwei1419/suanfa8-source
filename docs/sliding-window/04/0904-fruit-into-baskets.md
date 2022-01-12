@@ -6,7 +6,7 @@ tags:
   - 滑动窗口
 ---
 
-+ 题目链接：[904. 水果成篮](https://leetcode-cn.com/problems/fruit-into-baskets/)（中等）
++ 题目链接：[904. 水果成篮](https://leetcode-cn.com/problems/fruit-into-baskets/)。
 
 ## 题目描述
 
@@ -29,9 +29,9 @@ tags:
 
 - `0 <= tree[i] < tree.length`
 
-题目的意思难懂：**求只包含两种元素的最长连续子序列****。**
-
 ## 思路分析
+
+题目的意思难懂：**求只包含两种元素的最长连续子序列****。
 
 注意：由于要判定滑动窗口内已经出现的数字的个数，使用哈希表表示频数数组。
 

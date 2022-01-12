@@ -6,7 +6,7 @@ tags:
   - 滑动窗口
 ---
 
-+ 题目链接：[643. 子数组最大平均数 I](https://leetcode-cn.com/problems/maximum-average-subarray-i/)。
+- 题目链接：[643. 子数组最大平均数 I](https://leetcode-cn.com/problems/maximum-average-subarray-i/)。
 
 ## 题目描述
 
@@ -15,8 +15,6 @@ tags:
 请你找出平均数最大且 **长度为 `k`** 的连续子数组，并输出该最大平均数。
 
 任何误差小于 `10-5` 的答案都将被视为正确答案。
-
- 
 
 **示例 1：**
 
@@ -47,12 +45,11 @@ tags:
 
 我们把第 1 个长度为 `k` 的连续子区间的和计算出来以后，后面的长度为 `k` 的连续子区间的和就可以以 $O(1)$ 的时间复杂度计算出来。
 
-
 **参考代码**：
 
 ```Java []
 public class Solution {
-    
+
     public double findMaxAverage(int[] nums, int k) {
         int len = nums.length;
         // 因为题目限制了 k <= len，因此不用做特判
@@ -71,4 +68,3 @@ public class Solution {
     }
 }
 ```
-
