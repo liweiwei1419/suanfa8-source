@@ -6,10 +6,8 @@ tags:
   - 链表
 ---
 
-
-+ 题目链接：[2. 两数相加](https://leetcode-cn.com/problems/add-two-numbers/description/)；
-+ 题解链接：[穿针引线](https://leetcode-cn.com/problems/add-two-numbers/solution/chuan-zhen-yin-xian-by-liweiwei1419-3/)。
-
+- 题目链接：[2. 两数相加](https://leetcode-cn.com/problems/add-two-numbers/description/)；
+- 题解链接：[穿针引线](https://leetcode-cn.com/problems/add-two-numbers/solution/chuan-zhen-yin-xian-by-liweiwei1419-3/)。
 
 ## 题目描述
 
@@ -22,7 +20,6 @@ tags:
 **示例 1：**
 
 ![img](https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2021/01/02/addtwonumber1.jpg)
-
 
 ```
 输入：l1 = [2,4,3], l2 = [5,6,4]
@@ -52,8 +49,6 @@ tags:
 
 ---
 
-
-
 编码不难，注意体会以下两种写法的区别。
 
 考查知识点：
@@ -63,7 +58,6 @@ tags:
 2、穿针引线；
 
 3、链表调试。
-
 
 ### 方法一：在两个链表的结点都到达末尾时结束遍历
 
@@ -112,7 +106,7 @@ public class Solution {
         if (l2 == null) {
             return l1;
         }
-        
+
         ListNode dummyNode = new ListNode(-1);
         ListNode curNode = dummyNode;
 
@@ -187,7 +181,6 @@ public class Solution {
 
 ---
 
-
 ## 思路分析
 
 需要考虑的问题：
@@ -201,14 +194,12 @@ public class Solution {
 不同的数据范围决定了采用的不同的方法。
 :::
 
-
 编码过程中需要思考的问题：
 
 1. 如何分别获得这个数组的个位、十位、百位、千位；
 2. 分别相加，如果大于 $10$，进一。
 
 ## 方法：穿针引线
-
 
 **参考代码**：
 
@@ -249,6 +240,7 @@ public class Solution {
     }
 }
 ```
+
 </CodeGroupItem>
 
 <CodeGroupItem title="Java">
@@ -279,8 +271,10 @@ public class Solution {
         }
         return dummyNode.next;
     }
+
 }
-```
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Python">
@@ -311,7 +305,8 @@ class Solution:
         if s == 1:
             cur_node.next = ListNode(1)
         return dummy_node.next
-```
+````
+
 </CodeGroupItem>
 </CodeGroup>
 
@@ -320,7 +315,6 @@ class Solution:
 补充：
 
 用于测试的结点类（这部分代码不用提交给「力扣」）。
-
 
 <CodeGroup>
 <CodeGroupItem title="Java">
@@ -354,8 +348,10 @@ class ListNode {
         stringBuilder.append("NULL");
         return stringBuilder.toString();
     }
+
 }
-```
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Python">
@@ -364,13 +360,10 @@ class ListNode:
     def __init__(self, x):
         self.val = x
         self.next = None
-```
+````
+
 </CodeGroupItem>
 </CodeGroup>
-
-
-
-
 
 用于测试的主方法（这部分代码不用提交给「力扣」）。
 
@@ -385,4 +378,3 @@ public static void main(String[] args) {
     System.out.println(addTwoNumbers);
 }
 ```
-

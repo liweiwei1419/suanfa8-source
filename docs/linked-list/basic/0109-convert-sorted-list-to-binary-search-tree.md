@@ -7,9 +7,8 @@ tags:
   - 分治法
 ---
 
-
-+ 题目链接：[109. 有序链表转换二叉搜索树](https://leetcode-cn.com/problems/convert-sorted-list-to-binary-search-tree/)；
-+ 题解链接：[分治法（Python 代码、Java 代码）](https://leetcode-cn.com/problems/convert-sorted-list-to-binary-search-tree/solution/fen-zhi-fa-python-dai-ma-java-dai-ma-by-liweiwei14/)。
+- 题目链接：[109. 有序链表转换二叉搜索树](https://leetcode-cn.com/problems/convert-sorted-list-to-binary-search-tree/)；
+- 题解链接：[分治法（Python 代码、Java 代码）](https://leetcode-cn.com/problems/convert-sorted-list-to-binary-search-tree/solution/fen-zhi-fa-python-dai-ma-java-dai-ma-by-liweiwei14/)。
 
 ## 题目描述
 
@@ -20,10 +19,6 @@ tags:
 **Example 1:**
 
 ![img](https://assets.leetcode.com/uploads/2020/08/17/linked.jpg)
-
-
-
-
 
 ```
 Input: head = [-10,-3,0,5,9]
@@ -51,8 +46,6 @@ Output: [0]
 Input: head = [1,3]
 Output: [3,1]
 ```
-
-
 
 **Constraints:**
 
@@ -110,8 +103,10 @@ public class Solution {
         root.right = sortedListToBST(newHead);
         return root;
     }
+
 }
-```
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Python">
@@ -150,10 +145,10 @@ class Solution:
             root.left = self.sortedListToBST(head)
         root.right = self.sortedListToBST(new_head)
         return root
-```
+````
+
 </CodeGroupItem>
 </CodeGroup>
-
 
 ---
 
@@ -171,18 +166,21 @@ class ListNode {
     ListNode(int x) {
         val = x;
     }
+
 }
 
 class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
+int val;
+TreeNode left;
+TreeNode right;
 
     TreeNode(int x) {
         val = x;
     }
+
 }
-```
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Python">
@@ -198,10 +196,9 @@ class TreeNode:
         self.val = x
         self.left = None
         self.right = None
-```
+````
+
 </CodeGroupItem>
 </CodeGroup>
-
-
 
 用于测试的主方法（这部分代码不用提交给「力扣」）。

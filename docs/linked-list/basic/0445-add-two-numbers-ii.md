@@ -7,8 +7,8 @@ tags:
   - 递归
 ---
 
-+ 题目地址：[445. 两数相加 II](https://leetcode-cn.com/problems/add-two-numbers-ii/description/)；
-+ 题解地址：[两个栈、使用头插法生成结果链表](https://leetcode-cn.com/problems/add-two-numbers-ii/solution/liang-ge-zhan-shi-yong-tou-cha-fa-sheng-cheng-jie-/)。
+- 题目地址：[445. 两数相加 II](https://leetcode-cn.com/problems/add-two-numbers-ii/description/)；
+- 题解地址：[两个栈、使用头插法生成结果链表](https://leetcode-cn.com/problems/add-two-numbers-ii/solution/liang-ge-zhan-shi-yong-tou-cha-fa-sheng-cheng-jie-/)。
 
 ## 题目描述
 
@@ -16,32 +16,28 @@ tags:
 
 你可以假设除了数字 0 之外，这两个数字都不会以零开头。
 
-**示例1：**
+**示例 1：**
 
 ![img](https://pic.leetcode-cn.com/1626420025-fZfzMX-image.png)
-
-
 
 ```
 输入：l1 = [7,2,4,3], l2 = [5,6,4]
 输出：[7,8,0,7]
 ```
 
-**示例2：**
+**示例 2：**
 
 ```
 输入：l1 = [2,4,3], l2 = [5,6,4]
 输出：[8,0,7]
 ```
 
-**示例3：**
+**示例 3：**
 
 ```
 输入：l1 = [0], l2 = [0]
 输出：[0]
 ```
-
- 
 
 **提示：**
 
@@ -49,10 +45,11 @@ tags:
 - `0 <= node.val <= 9`
 - 输入数据保证链表代表的数字无前导 0
 
+**进阶：**如果输入链表不能翻转该如何解决？
+
 查考知识点：在链表的头结点插入新结点。
 
 **参考代码**：
-
 
 <CodeGroup>
 <CodeGroupItem title="Java">
@@ -106,8 +103,10 @@ public class Solution {
         }
         return nextNode;
     }
+
 }
-```
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Python">
@@ -146,7 +145,8 @@ class Solution:
             cur_node.next = ListNode(res.pop())
             cur_node = cur_node.next
         return head
-```
+````
+
 </CodeGroupItem>
 </CodeGroup>
 
@@ -191,4 +191,3 @@ class ListNode {
     }
 }
 ```
-

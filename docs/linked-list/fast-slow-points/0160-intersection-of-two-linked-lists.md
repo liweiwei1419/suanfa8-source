@@ -7,7 +7,7 @@ tags:
   - 快慢指针
 ---
 
-+ 题目链接：[160. 相交链表](https://leetcode-cn.com/problems/intersection-of-two-linked-lists/)
+- 题目链接：[160. 相交链表](https://leetcode-cn.com/problems/intersection-of-two-linked-lists/)。
 
 这一节我们再来看一个常见的问题：相交链表。这道题是「力扣」第 160 题，这道题要我们编写一个程序，找到两个单链表相交的起始节点。
 
@@ -25,7 +25,7 @@ tags:
 
 **自定义评测：**
 
-**评测系统** 的输入如下（你设计的程序 **不适用** 此输入）： 
+**评测系统** 的输入如下（你设计的程序 **不适用** 此输入）：
 
 - `intersectVal` - 相交的起始节点的值。如果不存在相交节点，这一值为 `0`
 - `listA` - 第一个链表
@@ -51,8 +51,6 @@ tags:
 **示例 2：**
 
 ![img](https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/12/14/160_example_2.png)
-
-
 
 ```
 输入：intersectVal = 2, listA = [1,9,1,2,4], listB = [3,2,4], skipA = 3, skipB = 1
@@ -199,4 +197,3 @@ public class Solution {
     }
 }
 ```
-

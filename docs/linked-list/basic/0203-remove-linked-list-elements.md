@@ -6,8 +6,8 @@ tags:
   - 单链表
 ---
 
-+ 中文网址：[203. 删除链表中的结点](https://leetcode-cn.com/problems/remove-linked-list-elements/description/)；
-+ 英文网址：[203. Remove Linked List Elements](https://leetcode.com/problems/remove-linked-list-elements/description/)。
+- 中文网址：[203. 删除链表中的结点](https://leetcode-cn.com/problems/remove-linked-list-elements/description/)；
+- 英文网址：[203. Remove Linked List Elements](https://leetcode.com/problems/remove-linked-list-elements/description/)。
 
 ## 题目描述
 
@@ -16,10 +16,6 @@ tags:
 **示例 1：**
 
 ![img](https://assets.leetcode.com/uploads/2021/03/06/removelinked-list.jpg)
-
-
-
-
 
 ```
 输入：head = [1,2,6,3,4,5,6], val = 6
@@ -40,7 +36,7 @@ tags:
 输出：[]
 ```
 
- **提示：**
+**提示：**
 
 - 列表中的节点数目在范围 $[0, 10^4]$ 内
 - `1 <= Node.val <= 50`
@@ -51,8 +47,8 @@ tags:
 1. 涉及第 $1$ 个结点的操作，因此需要设置「虚拟头结点」；
 2. 两种方法：
 
-+ 穿针引线；
-+ 递归。
+- 穿针引线；
+- 递归。
 
 ## 方法一：穿针引线
 
@@ -82,8 +78,8 @@ public class Solution {
 
 **复杂度分析**：
 
-+ 时间复杂度：$O(N)$，这里 $N$ 是链表的长度；
-+ 空间复杂度：$O(1)$，只需要常数个变量。
+- 时间复杂度：$O(N)$，这里 $N$ 是链表的长度；
+- 空间复杂度：$O(1)$，只需要常数个变量。
 
 ## 方法二：递归
 
@@ -109,6 +105,5 @@ public class Solution {
 
 **复杂度分析**：
 
-+ 时间复杂度：$O(N)$，这里 $N$ 是链表的长度；
-+ 空间复杂度：$O(N)$，递归调用栈的深度最多为 $N$。
-
+- 时间复杂度：$O(N)$，这里 $N$ 是链表的长度；
+- 空间复杂度：$O(N)$，递归调用栈的深度最多为 $N$。

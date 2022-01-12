@@ -7,9 +7,8 @@ tags:
   - 快慢指针
 ---
 
-
-+ 题目链接：[19. 删除链表的倒数第 N 个结点](https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/)；
-+ 题解链接：[快慢指针](https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/solution/kuai-man-zhi-zhen-by-liweiwei1419/)。
+- 题目链接：[19. 删除链表的倒数第 N 个结点](https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/)；
+- 题解链接：[快慢指针](https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/solution/kuai-man-zhi-zhen-by-liweiwei1419/)。
 
 ## 题目描述
 
@@ -37,8 +36,6 @@ tags:
 输入：head = [1,2], n = 1
 输出：[1]
 ```
-
- 
 
 **提示：**
 
@@ -99,7 +96,6 @@ public class Solution {
 
 **参考代码**：
 
-
 <CodeGroup>
 <CodeGroupItem title="Java">
 ```java
@@ -135,8 +131,10 @@ public class Solution {
         deleteNode.next = null;
         return dummyNode.next;
     }
+
 }
-```
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Python">
@@ -163,6 +161,7 @@ class Solution(object):
             slow = slow.next
             fast = fast.next
         return slow
-```
+````
+
 </CodeGroupItem>
 </CodeGroup>

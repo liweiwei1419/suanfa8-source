@@ -6,8 +6,8 @@ tags:
   - 链表
 ---
 
-+ 题目链接：[61. 旋转链表](https://leetcode-cn.com/problems/rotate-list/)；
-+ 题解链接：[穿针引线](https://leetcode-cn.com/problems/rotate-list/solution/chuan-zhen-yin-xian-by-liweiwei1419/)。
+- 题目链接：[61. 旋转链表](https://leetcode-cn.com/problems/rotate-list/)；
+- 题解链接：[穿针引线](https://leetcode-cn.com/problems/rotate-list/solution/chuan-zhen-yin-xian-by-liweiwei1419/)。
 
 ## 题目描述
 
@@ -16,8 +16,6 @@ tags:
 **示例 1：**
 
 ![img](https://assets.leetcode.com/uploads/2020/11/13/rotate1.jpg)
-
-
 
 ```
 输入：head = [1,2,3,4,5], k = 2
@@ -28,14 +26,12 @@ tags:
 
 ![img](https://assets.leetcode.com/uploads/2020/11/13/roate2.jpg)
 
-
-
 ```
 输入：head = [0,1,2], k = 4
 输出：[2,0,1]
 ```
 
- **提示：**
+**提示：**
 
 - 链表中节点的数目在范围 `[0, 500]` 内
 - `-100 <= Node.val <= 100`
@@ -46,7 +42,6 @@ tags:
 问题本身不难，但是要处理一些细节。
 
 1. 一定要先求出链表的总长度；
-
 
 2. 求得总长度的时候，顺便标记好末尾结点，并且把末尾结点的 next 指针指到头结点去，形成环，否则容易出现空指针异常；
 
@@ -92,8 +87,8 @@ class ListNode {
         s.append("NULL");
         return s.toString();
     }
-}
 
+}
 
 // 关键在于边界条件的讨论，和代码调试
 
@@ -132,8 +127,10 @@ public class Solution {
         slowNode.next = null;
         return newHead;
     }
+
 }
-```
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Python">
@@ -171,13 +168,7 @@ class Solution:
         new_head = node.next
         node.next = None
         return new_head
-```
+````
+
 </CodeGroupItem>
 </CodeGroup>
-
-
-
-
-
-
-

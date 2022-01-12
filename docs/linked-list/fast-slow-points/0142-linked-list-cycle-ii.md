@@ -7,8 +7,8 @@ tags:
   - 快慢指针
 ---
 
-+ 题目链接：[142. 环形链表 II](https://leetcode-cn.com/problems/linked-list-cycle-ii)；
-+ 题解链接：[快慢指针（Java、C++、Python）](https://leetcode-cn.com/problems/linked-list-cycle-ii/solution/kuai-man-zhi-zhen-by-liweiwei1419-2/)。
+- 题目链接：[142. 环形链表 II](https://leetcode-cn.com/problems/linked-list-cycle-ii)；
+- 题解链接：[快慢指针（Java、C++、Python）](https://leetcode-cn.com/problems/linked-list-cycle-ii/solution/kuai-man-zhi-zhen-by-liweiwei1419-2/)。
 
 ## 题目链接
 
@@ -51,11 +51,7 @@ tags:
 **进阶：**
 你是否可以不用额外空间解决此题？
 
-
-
-
 ---
-
 
 这道题首先要判断链表中是否有环，根据「力扣」第 141 题：[“环形链表”](https://leetcode-cn.com/problems/linked-list-cycle/)的方法，使用“快慢指针”。刚开始的时候，“快指针”和“慢指针”都在链表的起始结点。然后快指针一次走 2 步，慢指针一次走 1 步，如果链表中有环，当慢指针进入环的时候，由于它们每次行走步伐的差恒定为 1，“快指针”一定可以从“慢指针”的后面赶上“慢指针”。
 
@@ -70,7 +66,6 @@ tags:
 3. 快慢指针相遇的结点。
 
 ![142-1.png](https://pic.leetcode-cn.com/de08d221c812c1da6e4528f770c38f35b78fb615a8e92879bedc88c20d972c63-142-1.png)
-
 
 这 3 个结点，把这个有环的链表分成了 3 个部分，我们用左闭右开区间分别表示它们：
 
@@ -88,16 +83,15 @@ tags:
 
 ---
 
-
 如图，从绿色结点的开始到黄色结点的开始，一共走了 $6$ 步，恰恰好就是绿色结点的个数。
 
-在任何时刻，都有“慢指针走过的步数 * 2 = 快指针走过的步数”。特别地，在“快慢指针”相遇的时候
+在任何时刻，都有“慢指针走过的步数 \* 2 = 快指针走过的步数”。特别地，在“快慢指针”相遇的时候
 
 1、“慢指针走过的步数” = $a + b$；
 
 2、“快指针走过的步数” = $a + N * ( b + c ) + b$。
 
-根据“慢指针走过的步数 * 2 = 快指针走过的步数”，我们可以得到：
+根据“慢指针走过的步数 \* 2 = 快指针走过的步数”，我们可以得到：
 
 $$
 2 \times（a + b） = a + N（b + c）+ b
@@ -105,11 +99,11 @@ $$
 
 这里 $N$ 表示快指针在环中走过了多少圈，$N \ge 1$，$N$ 是自然数。
 
-我们化简一下这个等式，等式的两边都有 $a$  和 $b$ 这两项，我们可以在等式两边同时减去 $a$ 和 $b$，得到：
+我们化简一下这个等式，等式的两边都有 $a$ 和 $b$ 这两项，我们可以在等式两边同时减去 $a$ 和 $b$，得到：
+
 $$
 a + b = N \times (b + c)
 $$
-
 
 我们看到，左边和右边都有 $b$ ，我们把右边 $N$ 个 $(b + c)$ 中拿 $1$ 个出来，写成：
 
@@ -117,14 +111,13 @@ $$
 a + b = b + c + (N - 1) \times (b + c)
 $$
 
-
 两边再约去 $b$，得到
 
 $$
 a =  c + (N - 1) \times (b + c)
 $$
-这里 $b + c$ 其实就是环中的结点个数，$a$ 就是从链表起点到环的入口结点要走过的步数，$c$ 是从相遇结点到环入口结点走过的步数。
 
+这里 $b + c$ 其实就是环中的结点个数，$a$ 就是从链表起点到环的入口结点要走过的步数，$c$ 是从相遇结点到环入口结点走过的步数。
 
 因此再看一眼我们之前画出来的图和强调过的一个事实：“从一个颜色结点的开始，走到另一个颜色结点的开始，走的步数恰好等于这个颜色结点的个数”。
 
@@ -133,7 +126,6 @@ $$
 它们再一次相遇的时候，**在环中的这个结点可能已经绕着环走了几圈了**，走几圈都是有可能的。大家可以画几个具体的例子验证一下。这个方法虽然节约了空间，但是相应的时间也多消耗了一些。
 
 **参考代码 1**：
-
 
 <CodeGroup>
 <CodeGroupItem title="Java">
@@ -175,8 +167,10 @@ public class Solution {
         }
         return slow;
     }
+
 }
-```    
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Python3">
@@ -208,7 +202,8 @@ class Solution:
             slow = slow.next
             fast = fast.next
         return slow
-```
+````
+
 </CodeGroupItem>
 
 <CodeGroupItem title="C++">
@@ -219,10 +214,10 @@ using namespace std;
 
 class Solution {
 public:
-    ListNode *detectCycle(ListNode *head) {
-        if (head == NULL || head->next == NULL) {
-            return NULL;
-        }
+ListNode *detectCycle(ListNode *head) {
+if (head == NULL || head->next == NULL) {
+return NULL;
+}
 
         ListNode *slow = head;
         ListNode *fast = head;
@@ -247,8 +242,10 @@ public:
         }
         return slow;
     }
+
 };
-```
+
+````
 </CodeGroupItem>
 </CodeGroup>
 
@@ -336,7 +333,8 @@ public class Solution {
         return slow;
     }
 }
-```
+````
+
 </CodeGroupItem>
 
 <CodeGroupItem title="Python3">
@@ -346,11 +344,10 @@ class ListNode:
         self.val = x
         self.next = None
 
-
 class Solution:
-    def detectCycle(self, head: ListNode) -> ListNode:
-        if head is None or head.next is None:
-            return None
+def detectCycle(self, head: ListNode) -> ListNode:
+if head is None or head.next is None:
+return None
 
         slow = head
         fast = head
@@ -368,6 +365,7 @@ class Solution:
             slow = slow.next
             fast = fast.next
         return slow
+
 ```
 </CodeGroupItem>
 </CodeGroup>
@@ -377,3 +375,4 @@ class Solution:
 
 
 
+```

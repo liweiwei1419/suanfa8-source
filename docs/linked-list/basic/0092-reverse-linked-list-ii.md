@@ -6,8 +6,8 @@ tags:
   - 链表
 ---
 
-+ 题目链接：[92. 反转链表 II](https://leetcode-cn.com/problems/reverse-linked-list-ii)；
-+ 题解链接：[4 个指针、3 个指针](https://leetcode-cn.com/problems/reverse-linked-list-ii/solution/4-ge-zhi-zhen-3-ge-zhi-zhen-by-liweiwei1419/)。
+- 题目链接：[92. 反转链表 II](https://leetcode-cn.com/problems/reverse-linked-list-ii)；
+- 题解链接：[4 个指针、3 个指针](https://leetcode-cn.com/problems/reverse-linked-list-ii/solution/4-ge-zhi-zhen-3-ge-zhi-zhen-by-liweiwei1419/)。
 
 ## 题目描述
 
@@ -16,8 +16,6 @@ tags:
 **示例 1：**
 
 ![img](https://assets.leetcode.com/uploads/2021/02/19/rev2ex2.jpg)
-
-
 
 ```
 输入：head = [1,2,3,4,5], left = 2, right = 4
@@ -44,7 +42,6 @@ tags:
 
 使用若干个指针变量可以完成任务。
 
-
 ## 方法一：使用 4 个指针变量（复用「力扣」第 92 题结果）
 
 1、利用第 206 题的做法：把介于 `m` 和 `n` 的链表截取出来，反转一下，再接回去。
@@ -53,16 +50,13 @@ tags:
 
 ![image-20191129104224767](https://pic.leetcode-cn.com/824b2faab034826f1343735a3873251f728ae8094f9cdd007078ba71f9197696.jpg)
 
-
-
 2、为此，我们需要一些指针变量，它们是 `m` 和 `n` 的边界，`m` 的前一个结点，`n` 的后一个结点。
 
 ![image-20191129104329202](https://pic.leetcode-cn.com/66c273da59e61874db532a8c9127548dcc5d74eb0762b57284013382dc8441f1.jpg)
 
-3、因此，首先要遍历分别得到 `p1` 和 `p2`，然后 `p3` 和  `p4` 就可以确定了。
+3、因此，首先要遍历分别得到 `p1` 和 `p2`，然后 `p3` 和 `p4` 就可以确定了。
 
 ![image-20191129104638461](https://pic.leetcode-cn.com/04cf821ff558c4aac72ffda125e003bde8d45cd2fbbeecb7c2ba954b57cbd000.jpg)
-
 
 **参考代码 1**：
 
@@ -131,9 +125,7 @@ public class Solution {
 
 ![92-1.jpg](https://pic.leetcode-cn.com/cb45e041067f47c64c32e958cdaf7f88518a660c80ade5771d2772b00844af21-92-1.jpg)
 
-
 ![92-2.jpg](https://pic.leetcode-cn.com/daedbf172be2dadbd3cd89d0cac11fac9ef2afb475cc20f84f3060aab9d0b891-92-2.jpg)
-
 
 **参考代码 2**：
 

@@ -6,9 +6,8 @@ tags:
   - 链表
 ---
 
-
-+ 中文网址：[147. 对链表进行插入排序](https://leetcode-cn.com/problems/insertion-sort-list/description/) 。
-+ 题解地址：[穿针引线](https://leetcode-cn.com/problems/insertion-sort-list/solution/chuan-zhen-yin-xian-by-liweiwei1419-2/)。
+- 中文网址：[147. 对链表进行插入排序](https://leetcode-cn.com/problems/insertion-sort-list/description/) 。
+- 题解地址：[穿针引线](https://leetcode-cn.com/problems/insertion-sort-list/solution/chuan-zhen-yin-xian-by-liweiwei1419-2/)。
 
 ## 题目描述
 
@@ -18,8 +17,6 @@ tags:
 
 插入排序的动画演示如上。从第一个元素开始，该链表可以被认为已经部分排序（用黑色表示）。
 每次迭代时，从输入数据中移除一个元素（用红色表示），并原地将其插入到已排好序的链表中。
-
-
 
 插入排序算法：
 
@@ -41,9 +38,14 @@ tags:
 输出: -1->0->3->4->5
 ```
 
+**Constraints:**
+
+- The number of nodes in the list is in the range `[1, 5000]`.
+- `-5000 <= Node.val <= 5000`
+
 ## 思路分析
 
-这道题的题意我们感觉有那么些误导我们的意思，我们能想到从头开始找结点应该插入的位置，但感觉这种做法又不像插入排序。解决这个问题不要太死板，不要怕麻烦我觉得是解这道问题的关键（这句话感觉跟没说一个样，^_^）。
+这道题的题意我们感觉有那么些误导我们的意思，我们能想到从头开始找结点应该插入的位置，但感觉这种做法又不像插入排序。解决这个问题不要太死板，不要怕麻烦我觉得是解这道问题的关键（这句话感觉跟没说一个样，^\_^）。
 
 1. 插入排序每次会将遍历到的一个元素插入到已经排序的部分；
 2. 熟悉插入排序的朋友们都知道，这种插入过程是从后向前的，但是对于单链表来说，只保存了当前结点到下一个结点的 next 指针，并没有保存从当前结点到上一个节点的 pre 指针；
@@ -56,7 +58,6 @@ tags:
 ![LeetCode 第 147 题：单链表的插入排序-1](https://liweiwei1419.gitee.io/images/leetcode-solution/147-1.jpg)
 
 ![LeetCode 第 147 题：单链表的插入排序-2](https://liweiwei1419.gitee.io/images/leetcode-solution/147-2.jpg)
-
 
 **参考代码**：
 
@@ -143,8 +144,10 @@ public class Solution {
         }
         return dummyNode.next;
     }
+
 }
-```
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Java">
@@ -178,17 +181,15 @@ public class Solution {
         return dummyNode.next;
     }
 }
-```
+````
+
 </CodeGroupItem>
 </CodeGroup>
 
 **复杂度分析**：
 
-+ 时间复杂度： $O(N^2)$ ，这里 $N$ 表示链表结点的个数，对于每个结点找合适位置时，最多需要遍历 $O(N)$ 次；
-+ 空间复杂度：$O(1)$。
-
-
-
+- 时间复杂度： $O(N^2)$ ，这里 $N$ 表示链表结点的个数，对于每个结点找合适位置时，最多需要遍历 $O(N)$ 次；
+- 空间复杂度：$O(1)$。
 
 ---
 
@@ -231,7 +232,6 @@ class ListNode {
 }
 ```
 
-
 用于测试的主方法（这部分代码不用提交给「力扣」）。
 
 ```java
@@ -243,8 +243,3 @@ public static void main(String[] args) {
     System.out.println(insertionSortList);
 }
 ```
-
-
-
-
-

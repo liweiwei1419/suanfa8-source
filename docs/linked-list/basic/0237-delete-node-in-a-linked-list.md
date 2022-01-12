@@ -7,15 +7,13 @@ tags:
   - 递归
 ---
 
-+ 题目链接：[237. 删除链表中的节点](https://leetcode-cn.com/problems/delete-node-in-a-linked-list/description/) 。
+- 题目链接：[237. 删除链表中的节点](https://leetcode-cn.com/problems/delete-node-in-a-linked-list/description/) 。
 
 ## 题目描述
 
 请编写一个函数，用于 **删除单链表中某个特定节点** 。在设计函数时需要注意，你无法访问链表的头节点 `head` ，只能直接访问 **要被删除的节点** 。
 
 题目数据保证需要删除的节点 **不是末尾节点** 。
-
-
 
 **示例 1：**
 
@@ -58,8 +56,6 @@ tags:
 输出：[5,-99]
 ```
 
- 
-
 **提示：**
 
 - 链表中节点的数目范围是 `[2, 1000]`
@@ -83,8 +79,10 @@ public class Solution {
         node.next = nextNode.next;
         nextNode.next = null;
     }
+
 }
-```
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Java">
@@ -111,16 +109,10 @@ public class Solution {
         deleteNode = null;
     }
 }
-```
+````
 
 </CodeGroupItem>
 </CodeGroup>
-
-
-
-
-
-
 
 ---
 
@@ -161,7 +153,6 @@ class ListNode {
 }
 ```
 
-
 用于测试的主方法（这部分代码不用提交给「力扣」）。
 
 ```java
@@ -173,4 +164,3 @@ public static void main(String[] args) {
     solution.deleteNode(node1);
 }
 ```
-

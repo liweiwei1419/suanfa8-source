@@ -10,8 +10,8 @@ tags:
 
 ![0218](https://tva1.sinaimg.cn/large/008i3skNgy1gx93q006ujj30p00anjs2.jpg)
 
-- 题目链接：[218. 天际线问题](https://leetcode-cn.com/problems/the-skyline-problem/)
-- 题解链接：[优先队列 + 延迟删除技巧（Java）](https://leetcode-cn.com/problems/the-skyline-problem/solution/you-xian-dui-lie-java-by-liweiwei1419-jdb5/)
+- 题目链接：[218. 天际线问题](https://leetcode-cn.com/problems/the-skyline-problem/)；
+- 题解链接：[优先队列 + 延迟删除技巧（Java）](https://leetcode-cn.com/problems/the-skyline-problem/solution/you-xian-dui-lie-java-by-liweiwei1419-jdb5/)。
 
 ## 题目描述
 

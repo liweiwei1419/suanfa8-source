@@ -6,8 +6,7 @@ tags:
   - 链表
 ---
 
-
-+ 题目链接：[82. 删除排序链表中的重复元素 II](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list-ii/)。
+- 题目链接：[82. 删除排序链表中的重复元素 II](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list-ii/)。
 
 ## 题目描述
 
@@ -39,11 +38,9 @@ tags:
 - `-100 <= Node.val <= 100`
 - 题目数据保证链表已经按升序排列
 
-
 ## 方法：穿针引线
 
-
-**参考代码**： 
+**参考代码**：
 
 关键：要两个两个一起判断。
 
@@ -77,8 +74,10 @@ public class Solution {
         }
         return dummyNode.next;
     }
+
 }
-```
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Java">
@@ -123,7 +122,8 @@ public class Solution {
         return dummyNode.next;
     }
 }
-```
+````
+
 </CodeGroupItem>
 
 <CodeGroupItem title="Python">
@@ -155,7 +155,8 @@ class Solution:
             else:
                 cur = cur.next
         return dummy.next
-```
+
+````
 </CodeGroupItem>
 </CodeGroup>
 
@@ -199,11 +200,9 @@ class ListNode {
         return s.toString();
     }
 }
-```
-
+````
 
 用于测试的主方法（这部分代码不用提交给「力扣」）。
-
 
 ```java
 public static void main(String[] args) {
@@ -214,6 +213,3 @@ public static void main(String[] args) {
     System.out.println(deleteDuplicates);
 }
 ```
-
-
-

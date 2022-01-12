@@ -7,12 +7,12 @@ tags:
   - 递归
 ---
 
-+ 中文网址：[21. 合并两个有序链表](https://leetcode-cn.com/problems/merge-two-sorted-lists/description/) ；
-+ 题解地址：[穿针引线（Java 代码）](https://leetcode-cn.com/problems/merge-two-sorted-lists/solution/chuan-zhen-yin-xian-java-dai-ma-by-liweiwei1419/)。
+- 中文网址：[21. 合并两个有序链表](https://leetcode-cn.com/problems/merge-two-sorted-lists/description/) ；
+- 题解地址：[穿针引线（Java 代码）](https://leetcode-cn.com/problems/merge-two-sorted-lists/solution/chuan-zhen-yin-xian-java-dai-ma-by-liweiwei1419/)。
 
 ## 题目描述
 
-将两个升序链表合并为一个新的 **升序** 链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。 
+将两个升序链表合并为一个新的 **升序** 链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。
 
 **示例 1：**
 
@@ -59,7 +59,6 @@ tags:
 
 **参考代码 1**：
 
-
 ```Java []
 public class Solution {
 
@@ -95,8 +94,8 @@ public class Solution {
 
 **复杂度分析：**
 
-+ 时间复杂度：$O(N)$，这里 $N$ 为两个链表的结点个数之和；
-+ 空间复杂度：$O(1)$，这里需要的指针和辅助结点的个数都是常数。
+- 时间复杂度：$O(N)$，这里 $N$ 为两个链表的结点个数之和；
+- 空间复杂度：$O(1)$，这里需要的指针和辅助结点的个数都是常数。
 
 ### 方法二：递归
 
@@ -133,8 +132,8 @@ public class Solution {
 
 **复杂度分析：**
 
-+ 时间复杂度：$O(N)$，这里 $N$ 为两个链表的结点个数之和；
-+ 空间复杂度：$O(N)$，递归调用栈的深度为 $N$。
+- 时间复杂度：$O(N)$，这里 $N$ 为两个链表的结点个数之和；
+- 空间复杂度：$O(N)$，递归调用栈的深度为 $N$。
 
 ---
 
@@ -193,4 +192,3 @@ public static void main(String[] args) {
     System.out.println(mergeTwoLists);
 }
 ```
-

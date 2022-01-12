@@ -7,7 +7,7 @@ tags:
   - 快慢指针
 ---
 
-+ 题目链接：[141. 环形链表](https://leetcode-cn.com/problems/linked-list-cycle/)
+- 题目链接：[141. 环形链表](https://leetcode-cn.com/problems/linked-list-cycle/)。
 
 ## 题目描述
 
@@ -91,7 +91,6 @@ public class Solution4 {
 
 **参考代码 2**：
 
-
 <CodeGroup>
 <CodeGroupItem title="Java">
 ```java
@@ -119,8 +118,10 @@ public class Solution2 {
         }
         return false;
     }
+
 }
-```
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Python">
@@ -153,14 +154,10 @@ class Solution(object):
             point = point.next
         return False
 
-```
+````
+
 </CodeGroupItem>
 </CodeGroup>
-
-
-
-
-
 
 ## 方法三：并查集思想
 
@@ -198,9 +195,8 @@ public class Solution {
 
 ## 方法四：快慢指针
 
-+ 慢指针一次走一步、快指针一次走两步；
-+ **注意**：快指针可以走的条件 `fast != null && fast.next != null`。
-
+- 慢指针一次走一步、快指针一次走两步；
+- **注意**：快指针可以走的条件 `fast != null && fast.next != null`。
 
 <CodeGroup>
 <CodeGroupItem title="Java">
@@ -228,8 +224,10 @@ public class Solution {
         }
         return false;
     }
+
 }
-```
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Java">
@@ -260,7 +258,8 @@ public class Solution {
         return false;
     }
 }
-```
+````
+
 </CodeGroupItem>
 <CodeGroupItem title="Python">
 ```python
@@ -273,7 +272,7 @@ class Solution(object):
         """
         if head is None or head.next is None:
             return False
-    
+
         slow = head
         # 快指针先走一步
         fast = head.next
@@ -283,7 +282,8 @@ class Solution(object):
             slow = slow.next
             fast = fast.next.next
         return True
-```
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Python">
@@ -313,7 +313,7 @@ class Solution(object):
             if fast == slow:
                 return True
         return False
-```
+````
+
 </CodeGroupItem>
 </CodeGroup>
-

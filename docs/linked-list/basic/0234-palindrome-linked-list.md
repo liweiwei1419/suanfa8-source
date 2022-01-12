@@ -7,8 +7,8 @@ tags:
   - 递归
 ---
 
-+ 题目链接：[234. 回文链表](https://leetcode-cn.com/problems/palindrome-linked-list/)；
-+ 题解链接：[转到字符数组中判断、使用栈、反转后半部分](https://leetcode-cn.com/problems/palindrome-linked-list/solution/zhuan-dao-zi-fu-shu-zu-zhong-pan-duan-shi-yong-zha/)。
+- 题目链接：[234. 回文链表](https://leetcode-cn.com/problems/palindrome-linked-list/)；
+- 题解链接：[转到字符数组中判断、使用栈、反转后半部分](https://leetcode-cn.com/problems/palindrome-linked-list/solution/zhuan-dao-zi-fu-shu-zu-zhong-pan-duan-shi-yong-zha/)。
 
 ## 题目描述
 
@@ -31,8 +31,6 @@ tags:
 输入：head = [1,2]
 输出：false
 ```
-
- 
 
 **提示：**
 
@@ -218,4 +216,3 @@ class ListNode {
     }
 }
 ```
-

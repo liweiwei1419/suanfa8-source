@@ -7,16 +7,16 @@ tags:
   - 递归
 ---
 
-+ 题目链接：[25. k个一组翻转链表](https://leetcode-cn.com/problems/reverse-nodes-in-k-group/description/)；
-+ 英文链接：[25. Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/description/)。
+- 题目链接：[25. k 个一组翻转链表](https://leetcode-cn.com/problems/reverse-nodes-in-k-group/description/)；
+- 英文链接：[25. Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/description/)。
 
 ## 题目描述
 
-给你一个链表，每 *k* 个节点一组进行翻转，请你返回翻转后的链表。
+给你一个链表，每 _k_ 个节点一组进行翻转，请你返回翻转后的链表。
 
-*k* 是一个正整数，它的值小于或等于链表的长度。
+_k_ 是一个正整数，它的值小于或等于链表的长度。
 
-如果节点总数不是 *k* 的整数倍，那么请将最后剩余的节点保持原有顺序。
+如果节点总数不是 _k_ 的整数倍，那么请将最后剩余的节点保持原有顺序。
 
 **进阶：**
 
@@ -26,8 +26,6 @@ tags:
 **示例 1：**
 
 ![img](https://assets.leetcode.com/uploads/2020/10/03/reverse_ex1.jpg)
-
-
 
 ```
 输入：head = [1,2,3,4,5], k = 2
@@ -62,13 +60,11 @@ tags:
 - `0 <= Node.val <= 1000`
 - `1 <= k <= sz`
 
-
 ::: warning 说明
 因时间和精力关系，本题没有写详解，只给出了参考代码。读者可以在「力扣」这道题的评论区和题解区找到适合自己的思路分析和代码。如果确实需要我编写具体的解题思路，可以发邮件到 liweiwei1419@gmail.com。
 :::
 
 **参考代码**：
-
 
 <CodeGroup>
 <CodeGroupItem title="Java">
@@ -110,8 +106,10 @@ class Solution {
         }
         return head;
     }
+
 }
-```
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Java">
@@ -190,17 +188,7 @@ public class Solution {
         System.out.println(reverseKGroup);
     }
 }
-```
+````
+
 </CodeGroupItem>
 </CodeGroup>
-
-
-
-
-
-
-
-
-
-
-

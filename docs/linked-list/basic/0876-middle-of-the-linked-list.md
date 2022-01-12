@@ -6,8 +6,8 @@ tags:
   - 链表
 ---
 
-+ 中文地址：[「力扣」第 876 题：链表的中间结点（简单）](https://leetcode-cn.com/problems/middle-of-the-linked-list/)；
-+ 题解地址：[快慢指针（Python 代码、Java 代码）](https://leetcode-cn.com/problems/middle-of-the-linked-list/solution/kuai-man-zhi-zhen-zhu-yao-zai-yu-diao-shi-by-liwei/)。
+- 中文地址：[「力扣」第 876 题：链表的中间结点（简单）](https://leetcode-cn.com/problems/middle-of-the-linked-list/)；
+- 题解地址：[快慢指针（Python 代码、Java 代码）](https://leetcode-cn.com/problems/middle-of-the-linked-list/solution/kuai-man-zhi-zhen-zhu-yao-zai-yu-diao-shi-by-liwei/)。
 
 ## 题目描述
 
@@ -25,8 +25,6 @@ tags:
 ans.val = 3, ans.next.val = 4, ans.next.next.val = 5, 以及 ans.next.next.next = NULL.
 ```
 
-
-
 **示例 2：**
 
 ```
@@ -38,6 +36,7 @@ ans.val = 3, ans.next.val = 4, ans.next.next.val = 5, 以及 ans.next.next.next 
 **提示：**
 
 - 给定链表的结点数介于 `1` 和 `100` 之间。
+- `1 <= Node.val <= 100`
 
 ---
 
@@ -45,30 +44,29 @@ ans.val = 3, ans.next.val = 4, ans.next.next.val = 5, 以及 ans.next.next.next 
 
 缺点：
 
-+ 必须先遍历完整个链表，然后才可以「干正事」，再遍历到一半，找到中间结点；
-+ 在链表的长度很长的时候，**这种方法之前的等待会很久**。
+- 必须先遍历完整个链表，然后才可以「干正事」，再遍历到一半，找到中间结点；
+- 在链表的长度很长的时候，**这种方法之前的等待会很久**。
 
 **快慢指针**：比较经典的做法是：
 
-+ 使用两个指针变量，刚开始都位于链表的第 1 个结点，一个永远一次只走 1 步，一个永远一次只走 2 步，一个在前，一个在后，**同时走**。这样当快指针走完的时候，慢指针就来到了链表的中间位置。
+- 使用两个指针变量，刚开始都位于链表的第 1 个结点，一个永远一次只走 1 步，一个永远一次只走 2 步，一个在前，一个在后，**同时走**。这样当快指针走完的时候，慢指针就来到了链表的中间位置。
 
 思想是：快慢指针的前进方向相同，且它们步伐的「差」是恒定的，根据这种确定性去解决链表中的一些问题。使用这种思想还可以解决链表的以下问题：
 
-+ 「力扣」第 19 题： [倒数第 k 个结点](https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/)，快指针先走几步，不是靠猜的，要在纸上画图模拟一下，就清楚了；
-+ 「力扣」第 141 题：[环形链表](https://leetcode-cn.com/problems/linked-list-cycle/)，在环中的时候可以想象，A 同学开始有存款 100 元，每天赚 1 元，B 同学开始有存款 50 元，每天赚 2 元，B 同学一定会在某一天和 A 同学的存款一样；
-+ 「力扣」第 142 题：[环形链表 II](https://leetcode-cn.com/problems/linked-list-cycle-ii/)；
-+ 「力扣」第 161 题：[相交链表](https://leetcode-cn.com/problems/intersection-of-two-linked-lists/)，起点不同，构造相同长度让它们相遇，同样是利用了同步走这个等量关系。
+- 「力扣」第 19 题： [倒数第 k 个结点](https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/)，快指针先走几步，不是靠猜的，要在纸上画图模拟一下，就清楚了；
+- 「力扣」第 141 题：[环形链表](https://leetcode-cn.com/problems/linked-list-cycle/)，在环中的时候可以想象，A 同学开始有存款 100 元，每天赚 1 元，B 同学开始有存款 50 元，每天赚 2 元，B 同学一定会在某一天和 A 同学的存款一样；
+- 「力扣」第 142 题：[环形链表 II](https://leetcode-cn.com/problems/linked-list-cycle-ii/)；
+- 「力扣」第 161 题：[相交链表](https://leetcode-cn.com/problems/intersection-of-two-linked-lists/)，起点不同，构造相同长度让它们相遇，同样是利用了同步走这个等量关系。
 
 解决这些问题的共同特点就是使用两个指针变量同步移动。
 
-----
+---
 
 ## 方法：快慢指针（Python 代码、Java 代码）
 
 使用快慢指针是求单链表中间结点，以及 [倒数第 k 个结点](https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/) 的常用方法。
 
 题目要求：如果有两个中间结点，则返回第二个中间结点。此时快指针可以前进的条件是：当前快指针和当前快指针的下一个结点都非空。
-
 
 如果题目要求「在两个中间结点的时候，返回第一个中间结点」，此时快指针可以前进的条件是：当前快指针的下一个结点和当前快指针的 **下下一个结点** 都非空。
 
@@ -77,11 +75,7 @@ ans.val = 3, ans.next.val = 4, ans.next.next.val = 5, 以及 ans.next.next.next 
 ![876-1.png](https://pic.leetcode-cn.com/2b7a4130111600cf615b5584b3cc7f863d289a9a7d43b90147c79f51f68a5aa6-876-1.png)
 ![876-2.png](https://pic.leetcode-cn.com/5c3f88cc6b312b7193a6e071cef93ec5eb3070005af23cad22a11e10ea0aca3e-876-2.png)
 
-
 说明：图例中使用了 Python 语言的写法，例如 `while fast` 在 `fast` 变量不是空结点的时候，返回 `True`，写成 `while fast is not None` 是语义更清晰的写法，但由于约定，且这种写法非常常见，我们就简写了。
-
-
-
 
 **参考代码**：
 
@@ -103,8 +97,10 @@ public class Solution {
         }
         return slow;
     }
+
 }
-```
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Python">
@@ -121,26 +117,21 @@ class Solution:
             slow = slow.next
             fast = fast.next.next
         return slow
-```
+````
+
 </CodeGroupItem>
 </CodeGroup>
 
-
-
-
-
 **复杂度分析**：
 
-+ 时间复杂度：$O(N)$，$N$ 是链表的长度，快指针变量需要遍历完整个链表，因此最多走 $N$ 步；
-+ 空间复杂度：$O(1)$。
+- 时间复杂度：$O(N)$，$N$ 是链表的长度，快指针变量需要遍历完整个链表，因此最多走 $N$ 步；
+- 空间复杂度：$O(1)$。
 
 ---
 
 补充：
 
 用于测试的结点类（这部分代码不用提交给「力扣」）。
-
-
 
 <CodeGroup>
 <CodeGroupItem title="Java">
@@ -177,8 +168,10 @@ class ListNode {
         s.append("NULL");
         return s.toString();
     }
+
 }
-```
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Python">
@@ -209,13 +202,12 @@ def print_linked_list(list_node):
         print(cur.val, '->', end=' ')
         cur = cur.next
     print('null')
-```
+````
+
 </CodeGroupItem>
 </CodeGroup>
 
-
 用于测试的主方法（这部分代码不用提交给「力扣」）。
-
 
 <CodeGroup>
 <CodeGroupItem title="Java">
@@ -244,4 +236,3 @@ if __name__ == '__main__':
 ```
 </CodeGroupItem>
 </CodeGroup>
-

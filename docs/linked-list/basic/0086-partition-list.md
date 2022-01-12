@@ -6,7 +6,7 @@ tags:
   - 链表
 ---
 
-+ 题目链接：[86. 分隔链表](https://leetcode-cn.com/problems/partition-list/description/)。
+- 题目链接：[86. 分隔链表](https://leetcode-cn.com/problems/partition-list/description/)。
 
 ## 题目描述
 
@@ -121,7 +121,6 @@ class Solution(object):
         return dummy_node_l.next
 ```
 
-
 ---
 
 补充：
@@ -161,7 +160,6 @@ class ListNode {
     }
 }
 ```
-
 
 用于测试的主方法（这部分代码不用提交给「力扣」）。
 

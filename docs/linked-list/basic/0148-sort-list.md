@@ -6,8 +6,8 @@ tags:
   - 链表
 ---
 
-+ 题目地址：[148. 排序链表](https://leetcode-cn.com/problems/sort-list/)；
-+ 题解地址：[类似哈希表「链接法」的归并排序](https://leetcode-cn.com/problems/sort-list/solution/zi-di-xiang-shang-de-gui-bing-pai-xu-java-dai-ma-b/)。
+- 题目地址：[148. 排序链表](https://leetcode-cn.com/problems/sort-list/)；
+- 题解地址：[类似哈希表「链接法」的归并排序](https://leetcode-cn.com/problems/sort-list/solution/zi-di-xiang-shang-de-gui-bing-pai-xu-java-dai-ma-b/)。
 
 ## 题目描述
 
@@ -21,10 +21,6 @@ tags:
 
 ![img](https://assets.leetcode.com/uploads/2020/09/14/sort_list_1.jpg)
 
-
-
-
-
 ```
 输入：head = [4,2,1,3]
 输出：[1,2,3,4]
@@ -33,8 +29,6 @@ tags:
 **示例 2：**
 
 ![img](https://assets.leetcode.com/uploads/2020/09/14/sort_list_2.jpg)
-
-
 
 ```
 输入：head = [-1,5,3,4,0]
@@ -105,10 +99,9 @@ public class Solution {
 
 ## 方法二：自下而上进行归并
 
-这个方法比较 tricky，可能编码上还有优化的空间，大家看一看就好了。
+这个方法比较有技巧，编码上还有优化的空间，大家看一看就好了。
 
 （温馨提示：下面的幻灯片中，有几页上有较多的文字，可能需要您停留一下，可以点击右下角的后退 “|◀” 或者前进 “▶|” 按钮控制幻灯片的播放。）
-
 
 @slidestart
 
@@ -206,10 +199,7 @@ public class Solution {
 
 ![148-24.png](https://pic.leetcode-cn.com/a2dc861706e5193ecfa52a5c28dc8032b1d0a48c8ad065d362e130bd2b9cc65e-148-24.png)
 
-
 @slideend
-
-
 
 **参考代码 2**：
 
@@ -297,6 +287,3 @@ public class Solution {
     }
 }
 ```
-
-
-

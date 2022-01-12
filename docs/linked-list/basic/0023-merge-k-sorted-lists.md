@@ -9,8 +9,8 @@ tags:
   - 链表
 ---
 
-+ 题目链接：[23. 合并K个升序链表](https://leetcode-cn.com/problems/merge-k-sorted-lists/)
-+ 题解链接：[贪心算法、优先队列 + 分治法（Python 代码、Java 代码）](https://leetcode-cn.com/problems/merge-k-sorted-lists/solution/tan-xin-suan-fa-you-xian-dui-lie-fen-zhi-fa-python/)
+- 题目链接：[23. 合并 K 个升序链表](https://leetcode-cn.com/problems/merge-k-sorted-lists/)
+- 题解链接：[贪心算法、优先队列 + 分治法（Python 代码、Java 代码）](https://leetcode-cn.com/problems/merge-k-sorted-lists/solution/tan-xin-suan-fa-you-xian-dui-lie-fen-zhi-fa-python/)
 
 ## 题目描述
 
@@ -47,7 +47,7 @@ tags:
 输出：[]
 ```
 
- **提示：**
+**提示：**
 
 - `k == lists.length`
 - `0 <= k <= 10^4`
@@ -56,11 +56,9 @@ tags:
 - `lists[i]` 按 **升序** 排列
 - `lists[i].length` 的总和不超过 `10^4`
 
-
 ## 方法一：优先队列
 
-请见 [优先队列]() 专题。 
-
+请见 [优先队列]() 专题。
 
 ## 方法二：分治算法
 
@@ -68,7 +66,7 @@ tags:
 
 1. 先一分为二地解决了这个问题；
 
-2. 再考虑如何合并，这个合并的过程也是一个递归方法。 
+2. 再考虑如何合并，这个合并的过程也是一个递归方法。
 
 Python 代码：
 
@@ -106,4 +104,3 @@ class Solution:
             list2.next = self.__merge_two_sorted_list_node(list1, list2.next)
             return list2
 ```
-

@@ -6,7 +6,7 @@ tags:
   - 链表
 ---
 
-+  题目链接：[143. 重排链表](https://leetcode-cn.com/problems/reorder-list/)。
+- 题目链接：[143. 重排链表](https://leetcode-cn.com/problems/reorder-list/)。
 
 ## 题目描述
 
@@ -28,8 +28,6 @@ L0 → Ln → L1 → Ln - 1 → L2 → Ln - 2 → …
 
 ![img](https://pic.leetcode-cn.com/1626420311-PkUiGI-image.png)
 
-
-
 ```
 输入：head = [1,2,3,4]
 输出：[1,4,2,3]
@@ -44,7 +42,7 @@ L0 → Ln → L1 → Ln - 1 → L2 → Ln - 2 → …
 输出：[1,5,2,4,3]
 ```
 
- **提示：**
+**提示：**
 
 - 链表的长度范围为 $[1, 5 * 10^4]$
 - $1 \le node.val \le 1000$

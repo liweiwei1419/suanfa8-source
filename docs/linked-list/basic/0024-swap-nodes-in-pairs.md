@@ -7,14 +7,12 @@ tags:
   - 递归
 ---
 
-+ 题目链接：[24. 两两交换链表中的节点](https://leetcode-cn.com/problems/swap-nodes-in-pairs/description/) ；
-+ 题解链接：[穿针引线、递归](https://leetcode-cn.com/problems/swap-nodes-in-pairs/solution/chuan-zhen-yin-xian-di-gui-by-liweiwei1419-2/)。
+- 题目链接：[24. 两两交换链表中的节点](https://leetcode-cn.com/problems/swap-nodes-in-pairs/description/) ；
+- 题解链接：[穿针引线、递归](https://leetcode-cn.com/problems/swap-nodes-in-pairs/solution/chuan-zhen-yin-xian-di-gui-by-liweiwei1419-2/)。
 
 ## 题目描述
 
 给你一个链表，两两交换其中相邻的节点，并返回交换后链表的头节点。你必须在不修改节点内部的值的情况下完成本题（即，只能进行节点交换）。
-
-
 
 **示例 1：**
 
@@ -39,7 +37,7 @@ tags:
 输出：[1]
 ```
 
- **提示：**
+**提示：**
 
 - 链表中节点的数目在范围 `[0, 100]` 内
 - `0 <= Node.val <= 100`
@@ -56,11 +54,9 @@ tags:
 
 这道题因为涉及第 1 个结点的操作，为了避免分类讨论，我们引入虚拟头结点（这一点很常见）。
 
-
 ## 方法一：穿针引线
 
 ![image.png](https://pic.leetcode-cn.com/d106387437a1ef4e598b3e660a1fdff4922060d4e544007e9327c3ef72b017bf-image.png)
-
 
 **参考代码 1**：
 
@@ -176,4 +172,3 @@ public static void main(String[] args) {
     System.out.println(swapPairs);
 }
 ```
-

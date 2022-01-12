@@ -6,15 +6,13 @@ tags:
   - 链表
 ---
 
-+ 题目链接：[删除排序链表中的重复元素](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list)。
+- 题目链接：[删除排序链表中的重复元素](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list)。
 
 ## 题目描述
 
 存在一个按升序排列的链表，给你这个链表的头节点 `head` ，请你删除所有重复的元素，使每个元素 **只出现一次** 。
 
 返回同样按升序排列的结果链表。
-
-
 
 **示例 1：**
 
@@ -29,16 +27,10 @@ tags:
 
 ![img](https://assets.leetcode.com/uploads/2021/01/04/list2.jpg)
 
-
-
-
-
 ```
 输入：head = [1,1,2,3,3]
 输出：[1,2,3]
 ```
-
-
 
 **提示：**
 
@@ -56,8 +48,6 @@ tags:
 ```
 
 **参考代码**：
-
-
 
 <CodeGroup>
 <CodeGroupItem title="Java">
@@ -80,8 +70,10 @@ public class Solution {
         }
         return head;
     }
+
 }
-```
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Python">
@@ -115,7 +107,8 @@ class Solution(object):
             else:
                 cur = cur.next
         return head
-```
+````
+
 </CodeGroupItem>
 </CodeGroup>
 
@@ -150,8 +143,10 @@ public class Solution {
         }
         return head;
     }
+
 }
-```
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Python">
@@ -185,7 +180,8 @@ class Solution(object):
             else:
                 cur = cur.next
         return head
-```
+````
+
 </CodeGroupItem>
 </CodeGroup>
 
@@ -194,6 +190,7 @@ class Solution(object):
 补充：
 
 用于测试的结点类（这部分代码不用提交给「力扣」）。
+
 ```java
 class ListNode {
     int val;
@@ -227,6 +224,3 @@ class ListNode {
     }
 }
 ```
-
-
-
