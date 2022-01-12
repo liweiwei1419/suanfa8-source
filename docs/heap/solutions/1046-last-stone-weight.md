@@ -6,9 +6,8 @@ tags:
   - 优先队列
 ---
 
-
-+ 题目链接：[1046. 最后一块石头的重量](https://leetcode-cn.com/problems/last-stone-weight/)；
-+ 题解链接：[使用优先队列模拟问题（Java）](https://leetcode-cn.com/problems/last-stone-weight/solution/shi-yong-you-xian-dui-lie-mo-ni-wen-ti-java-by-liw/)。
+- 题目链接：[1046. 最后一块石头的重量](https://leetcode-cn.com/problems/last-stone-weight/)；
+- 题解链接：[使用优先队列模拟问题（Java）](https://leetcode-cn.com/problems/last-stone-weight/solution/shi-yong-you-xian-dui-lie-mo-ni-wen-ti-java-by-liw/)。
 
 ## 题目描述
 
@@ -20,8 +19,6 @@ tags:
 - 如果 `x != y`，那么重量为 `x` 的石头将会完全粉碎，而重量为 `y` 的石头新重量为 `y-x`。
 
 最后，最多只会剩下一块石头。返回此石头的重量。如果没有石头剩下，就返回 `0`。
-
-
 
 **示例：**
 
@@ -77,6 +74,5 @@ public class Solution {
 
 **复杂度分析**：
 
-+ 时间复杂度：$O(N \log N)$，（粗略计算，忽略常数倍数和常数项）每个元素入队一次，出队和入队调整堆的复杂度是 $O(\log N)$；
-+ 空间复杂度：$O(N)$，优先队列的大小。
-
+- 时间复杂度：$O(N \log N)$，（粗略计算，忽略常数倍数和常数项）每个元素入队一次，出队和入队调整堆的复杂度是 $O(\log N)$；
+- 空间复杂度：$O(N)$，优先队列的大小。

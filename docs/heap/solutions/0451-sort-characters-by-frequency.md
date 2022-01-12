@@ -2,11 +2,11 @@
 title: 「力扣」第 451 题：根据字符出现频率排序（中等）
 icon: yongyan
 category: 优先队列
-tags: 
+tags:
   - 优先队列
 ---
 
-+ 题目链接：[451. 根据字符出现频率排序](https://leetcode-cn.com/problems/sort-characters-by-frequency/)。
+- 题目链接：[451. 根据字符出现频率排序](https://leetcode-cn.com/problems/sort-characters-by-frequency/)。
 
 ## 题目描述
 
@@ -134,4 +134,3 @@ class Solution:
 ```
 
 说明：Python 提供的 `heapq` 是最小堆。
-

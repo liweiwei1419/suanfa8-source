@@ -2,12 +2,11 @@
 title: 「力扣」第 1282 题：用户分组（中等）
 icon: yongyan
 category: 优先队列
-tags: 
+tags:
   - 优先队列
 ---
 
-
-+ 题目链接：[1282. 用户分组](https://leetcode-cn.com/problems/group-the-people-given-the-group-size-they-belong-to/)。
+- 题目链接：[1282. 用户分组](https://leetcode-cn.com/problems/group-the-people-given-the-group-size-they-belong-to/)。
 
 ## 题目描述
 
@@ -20,7 +19,7 @@ tags:
 ```
 输入：groupSizes = [3,3,3,3,3,1,3]
 输出：[[5],[0,1,2],[3,4,6]]
-解释： 
+解释：
 其他可能的解决方案有 [[2,1,6],[5],[0,4,3]] 和 [[5],[0,6,2],[4,3,1]]。
 ```
 
@@ -39,17 +38,16 @@ tags:
 
 ## 思路分析
 
-+ 观察示例 1 和示例 2，如果 `size = 1` ，这个用户一定单独为一组，因此我们可以把有相同 `size` 的用户分为一类；
-+ 我们观察到：数组 `groupSizes` 里的元素的值的特点：**相同值的个数一定是这个相同值的倍数**：
-  + 观察示例 1：有 $6$ 个 `3`；
-  + 观察示例 2：有 $1$ 个 `1`，有 $2$ 个 `2`，有 $3$ 个 `3`。
-
+- 观察示例 1 和示例 2，如果 `size = 1` ，这个用户一定单独为一组，因此我们可以把有相同 `size` 的用户分为一类；
+- 我们观察到：数组 `groupSizes` 里的元素的值的特点：**相同值的个数一定是这个相同值的倍数**：
+  - 观察示例 1：有 $6$ 个 `3`；
+  - 观察示例 2：有 $1$ 个 `1`，有 $2$ 个 `2`，有 $3$ 个 `3`。
 
 从上面的分析中，可以归纳出算法：
 
-+ 如果 `size = 1`，这个用户单独为 1 组，接着可以找到 `size` 等于 $2$、$3$、$4$ 等等，只要凑够数就可以分出来成为一组；
-+ 需要对 `groupSizes` 数组预处理，排个序即可。**不过又要从小到大依次取出元素，因此优先队列是一个可选择的数据结构**；
-+ 因为要输出 `ID`， 因此，放入优先队列的时候，需要绑定 `ID`。
+- 如果 `size = 1`，这个用户单独为 1 组，接着可以找到 `size` 等于 $2$、$3$、$4$ 等等，只要凑够数就可以分出来成为一组；
+- 需要对 `groupSizes` 数组预处理，排个序即可。**不过又要从小到大依次取出元素，因此优先队列是一个可选择的数据结构**；
+- 因为要输出 `ID`， 因此，放入优先队列的时候，需要绑定 `ID`。
 
 **参考代码**：
 
@@ -92,8 +90,10 @@ public class Solution {
         }
         return res;
     }
+
 }
-```
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Java">
@@ -133,7 +133,8 @@ public class Solution {
         return res;
     }
 }
-```
+````
+
 </CodeGroupItem>
 
 <CodeGroupItem title="Python3">
@@ -141,10 +142,9 @@ public class Solution {
 from typing import List
 import heapq
 
-
 class Solution:
-    def groupThePeople(self, groupSizes: List[int]) -> List[List[int]]:
-        size = len(groupSizes)
+def groupThePeople(self, groupSizes: List[int]) -> List[List[int]]:
+size = len(groupSizes)
 
         res = []
 
@@ -170,6 +170,7 @@ class Solution:
 
             res.append(cur_res)
         return res
+
 ```
 </CodeGroupItem>
 </CodeGroup>
@@ -186,3 +187,4 @@ class Solution:
 
 
 
+```

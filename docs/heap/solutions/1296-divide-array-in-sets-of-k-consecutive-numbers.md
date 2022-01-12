@@ -6,8 +6,8 @@ tags:
   - 优先队列
 ---
 
-+ 题目链接：[1296. 划分数组为连续数字的集合](https://leetcode-cn.com/problems/divide-array-in-sets-of-k-consecutive-numbers/)；
-+ 题解链接：[优先队列（适合 Java 代码，C++ 和 Python 不支持 remove 操作，故不适用）](https://leetcode-cn.com/problems/divide-array-in-sets-of-k-consecutive-numbers/solution/you-xian-dui-lie-by-liweiwei1419-2/)。
+- 题目链接：[1296. 划分数组为连续数字的集合](https://leetcode-cn.com/problems/divide-array-in-sets-of-k-consecutive-numbers/)；
+- 题解链接：[优先队列（适合 Java 代码，C++ 和 Python 不支持 remove 操作，故不适用）](https://leetcode-cn.com/problems/divide-array-in-sets-of-k-consecutive-numbers/solution/you-xian-dui-lie-by-liweiwei1419-2/)。
 
 ## 题目描述
 
@@ -15,10 +15,7 @@ tags:
 
 如果可以，请返回 `true`；否则，返回 `false`。
 
- 
-
 **示例 1：**
-
 
 ```java
 输入：nums = [1,2,3,3,4,4,5,6], k = 4
@@ -49,7 +46,7 @@ tags:
 解释：数组不能分成几个大小为 3 的子数组。
 ```
 
- **提示：**
+**提示：**
 
 - $1 \le k \le nums.length \le 10^5$
 - $1 \le nums[i] \le 10^9$
@@ -70,8 +67,8 @@ tags:
 
 先把数组中所有的数放入优先队列（最小堆）中。
 
-+ 每次从队首**出队**一个数 `i`，就需要依次从堆中再移除  `i + 1, i + 2, ..., i + (k - 1)` ，只要移除失败，就可以直接返回 `false`；
-+ 如果每次都能移除成功，最后优先队列就会为空，直接返回 `true` 即可。
+- 每次从队首**出队**一个数 `i`，就需要依次从堆中再移除 `i + 1, i + 2, ..., i + (k - 1)` ，只要移除失败，就可以直接返回 `false`；
+- 如果每次都能移除成功，最后优先队列就会为空，直接返回 `true` 即可。
 
 **参考代码**：
 
@@ -109,10 +106,8 @@ public class Solution {
 }
 ```
 
-
 **复杂度分析**：
 
-+ 时间复杂度：$O(N^2)$，这里 $N$ 是数组的长度，如果是 `heapify` 建堆，时间复杂度可以达到 $O(N)$ ，只不过 Java 的优先队列不支持 `heapify`。（这里感谢 [@Victor](/u/happy_yuxuan/) 指出我原来的错误）。另外 `remove` 操作是 $O(N)$ 复杂度，因此总的时间复杂度是 $O(N^2)$，为了 A 题也是肝了；
+- 时间复杂度：$O(N^2)$，这里 $N$ 是数组的长度，如果是 `heapify` 建堆，时间复杂度可以达到 $O(N)$ ，只不过 Java 的优先队列不支持 `heapify`。（这里感谢 [@Victor](/u/happy_yuxuan/) 指出我原来的错误）。另外 `remove` 操作是 $O(N)$ 复杂度，因此总的时间复杂度是 $O(N^2)$；
 
-
-+ 空间复杂度：$O(N)$，优先队列的长度是 $N$。
+- 空间复杂度：$O(N)$，优先队列的长度是 $N$。

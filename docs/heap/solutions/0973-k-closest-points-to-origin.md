@@ -6,8 +6,7 @@ tags:
   - 优先队列
 ---
 
-
-+ 题目链接：[973. 最接近原点的 K 个点](https://leetcode-cn.com/problems/k-closest-points-to-origin/)
+- 题目链接：[973. 最接近原点的 K 个点](https://leetcode-cn.com/problems/k-closest-points-to-origin/)。
 
 ## 题目描述
 
@@ -22,7 +21,7 @@ tags:
 ```
 输入：points = [[1,3],[-2,2]], K = 1
 输出：[[-2,2]]
-解释： 
+解释：
 (1, 3) 和原点之间的距离为 sqrt(10)，
 (-2, 2) 和原点之间的距离为 sqrt(8)，
 由于 sqrt(8) < sqrt(10)，(-2, 2) 离原点更近。
@@ -42,7 +41,6 @@ tags:
 1. `1 <= K <= points.length <= 10000`
 2. `-10000 < points[i][0] < 10000`
 3. `-10000 < points[i][1] < 10000`
-
 
 **参考代码**：
 

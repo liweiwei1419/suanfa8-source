@@ -2,17 +2,15 @@
 title: 「力扣」第 347 题：前 K 个高频元素（中等）
 icon: yongyan
 category: 优先队列
-tags: 
+tags:
   - 优先队列
 ---
 
-+ 题目链接：[347. 前K个高频元素](https://leetcode-cn.com/problems/top-k-frequent-elements/)。
+- 题目链接：[347. 前 K 个高频元素](https://leetcode-cn.com/problems/top-k-frequent-elements/)。
 
 ## 题目描述
 
 给你一个整数数组 `nums` 和一个整数 `k` ，请你返回其中出现频率前 `k` 高的元素。你可以按 **任意顺序** 返回答案。
-
-
 
 **示例 1:**
 
@@ -30,7 +28,7 @@ tags:
 
 **提示：**
 
-- `1 <= nums.length <= 105`
+- `1 <= nums.length <= 10^5`
 - `k` 的取值范围是 `[1, 数组中不相同的元素的个数]`
 - 题目数据保证答案唯一，换句话说，数组中前 `k` 个高频元素的集合是唯一的
 
@@ -68,5 +66,3 @@ class Solution:
             res.append(key)
         return res
 ```
-
-

@@ -2,11 +2,11 @@
 title: 「力扣」第 703 题：数据流中的第 K 大元素（简单）
 icon: yongyan
 category: 优先队列
-tags: 
+tags:
   - 优先队列
 ---
 
-+ 题目链接：[703. 数据流中的第 K 大元素](https://leetcode-cn.com/problems/kth-largest-element-in-a-stream/)。
+- 题目链接：[703. 数据流中的第 K 大元素](https://leetcode-cn.com/problems/kth-largest-element-in-a-stream/)。
 
 ## 题目描述
 
@@ -71,4 +71,3 @@ public class KthLargest {
     }
 }
 ```
-

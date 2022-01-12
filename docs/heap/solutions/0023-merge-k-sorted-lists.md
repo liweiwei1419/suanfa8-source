@@ -6,8 +6,8 @@ tags:
   - 优先队列
 ---
 
-+ 题目链接：[23. 合并K个排序链表](https://leetcode-cn.com/problems/merge-k-sorted-lists/)；
-+ 题解链接：[贪心算法、优先队列 + 分治法（Python 代码、Java 代码）](https://leetcode-cn.com/problems/merge-k-sorted-lists/solution/tan-xin-suan-fa-you-xian-dui-lie-fen-zhi-fa-python/)
+- 题目链接：[23. 合并 K 个排序链表](https://leetcode-cn.com/problems/merge-k-sorted-lists/)；
+- 题解链接：[贪心算法、优先队列 + 分治法（Python 代码、Java 代码）](https://leetcode-cn.com/problems/merge-k-sorted-lists/solution/tan-xin-suan-fa-you-xian-dui-lie-fen-zhi-fa-python/)。
 
 ## 题目描述
 
@@ -44,7 +44,7 @@ tags:
 输出：[]
 ```
 
- **提示：**
+**提示：**
 
 - `k == lists.length`
 - `0 <= k <= 10^4`
@@ -52,7 +52,6 @@ tags:
 - `-10^4 <= lists[i][j] <= 10^4`
 - `lists[i]` 按 **升序** 排列
 - `lists[i].length` 的总和不超过 `10^4`
-
 
 ## 思路分析
 
@@ -66,7 +65,7 @@ tags:
 
 1. 让 3 个班的学生按列站在你的面前，这时你能看到站在队首的学生的全身，其余同学只能看到比前面同学脑袋高出的那部分；
 
-2. 每一次队首的 3 名同学，请出最矮的同学出列到“队伍4”（即我们最终认为排好序的队列），出列的这一列的后一名同学向前走一步；
+2. 每一次队首的 3 名同学，请出最矮的同学出列到“队伍 4”（即我们最终认为排好序的队列），出列的这一列的后一名同学向前走一步；
 
 3. 重复第 2 步，直到 3 个班的同学全部出列完毕。
 
@@ -113,8 +112,10 @@ public class Solution {
         }
         return dummyNode.next;
     }
+
 }
-```
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Python3">
@@ -149,7 +150,8 @@ class Solution:
                 head.next = None
 
         return dummy_node.next
-```
+````
+
 </CodeGroupItem>
 <CodeGroupItem title="Python2">
 ```python
@@ -175,9 +177,11 @@ class Solution:
                 heapq.heappush(l, (head.next.val, head.next))
 
         return dummy_node.next
+
 ```
 </CodeGroupItem>
 </CodeGroup>
 
 
 
+```
