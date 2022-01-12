@@ -45,7 +45,7 @@ tags:
 **提示：**
 
 - `1 <= nums1.length <= nums2.length <= 1000`
-- `0 <= nums1[i], nums2[i] <= 104`
+- `0 <= nums1[i], nums2[i] <= 10^4`
 - `nums1`和`nums2`中所有整数 **互不相同**
 - `nums1` 中的所有整数同样出现在 `nums2` 中
 
@@ -95,7 +95,7 @@ public class Solution {
 
 **复杂度分析**：
 
-+ 时间复杂度：$O(NM)$，这里 $N$ 是数组 `nums1` 的长度， $M$ 是数组 `nums2` 的长度
++ 时间复杂度：$O(NM)$，这里 $N$ 是数组 `nums1` 的长度， $M$ 是数组 `nums2` 的长度；
 + 空间复杂度：$O(N)$。
 
 ## 方法二：单调栈
@@ -160,7 +160,7 @@ public class Solution {
 }
 ```
 
-+ 时间复杂度：$O(N + M)$，分别遍历数组 `nums1` 和数组 `nums2` 各一次即可。
++ 时间复杂度：$O(N + M)$，分别遍历数组 `nums1` 和数组 `nums2` 各一次即可；
 + 空间复杂度：$O(N)$。
 
 

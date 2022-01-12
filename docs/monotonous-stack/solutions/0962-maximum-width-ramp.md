@@ -6,7 +6,7 @@ tags:
   - 单调栈
 ---
 
-+ 题目描述：[962. 最大宽度坡](https://leetcode-cn.com/problems/maximum-width-ramp/)。
+- 题目描述：[962. 最大宽度坡](https://leetcode-cn.com/problems/maximum-width-ramp/)。
 
 ## 题目描述
 
@@ -37,11 +37,13 @@ tags:
 1. `2 <= A.length <= 50000`
 2. `0 <= A[i] <= 50000`
 
-
 ::: warning 说明
-因时间和精力关系，本题没有写详解，只给出了参考代码。读者可以在「力扣」这道题的评论区和题解区找到适合自己的思路分析和代码。如果确实需要我编写具体的解题思路，可以发邮件到 liweiwei1419@gmail.com。
-:::
+因时间和个人精力关系，本题没有写详解，只给出了参考代码。
 
+读者可以在「力扣」这道题的评论区和题解区找到适合自己的思路分析和代码。
+
+如果确实需要我编写具体的解题思路，可以发邮件到 liweiwei1419@gmail.com 或者给本项目的 [issue](https://github.com/liweiwei1419/liweiwei1419.github.io/issues) 留言。
+:::
 
 **参考代码**：
 

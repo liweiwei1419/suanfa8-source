@@ -29,8 +29,8 @@ tags:
 
 **Constraints:**
 
-- `1 <= nums.length <= 104`
-- `-109 <= nums[i] <= 109`
+- `1 <= nums.length <= 10^4`
+- `-109 <= nums[i] <= 10^9`
 
 ## 思路分析
 

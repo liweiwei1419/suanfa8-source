@@ -8,19 +8,25 @@ tags:
 
 ![0316](https://tva1.sinaimg.cn/large/008i3skNgy1gx91kwzpu1j30p00anwex.jpg)
 
-
 可以观看 [视频题解](https://leetcode-cn.com/problems/remove-duplicate-letters/solution/qu-chu-zhong-fu-zi-mu-by-leetcode-soluti-vuso/)：
 
 视频讲解勘误：
 
-+ 02:00 正确应为：`c` 出现了 $3$ 次；
-+ 09:30 正确应为：记录每一个字符最后一次出现的下标，可以使用整形数组或者哈希表。
+- 02:00 正确应为：`c` 出现了 $3$ 次；
+- 09:30 正确应为：记录每一个字符最后一次出现的下标，可以使用整形数组或者哈希表。
 
 ---
 
-+ 题目链接：[316. 去除重复字母](https://leetcode-cn.com/problems/remove-duplicate-letters/)；
-+ 题解链接：[栈 + 哨兵技巧（Java）](https://leetcode-cn.com/problems/remove-duplicate-letters/solution/zhan-by-liweiwei1419/)。
+- 题目链接：[316. 去除重复字母](https://leetcode-cn.com/problems/remove-duplicate-letters/)；
+- 题解链接：[栈 + 哨兵技巧（Java）](https://leetcode-cn.com/problems/remove-duplicate-letters/solution/zhan-by-liweiwei1419/)。
 
+::: danger 说明
+这一题在录制视频题解的时候，和官方题解的作者有过讨论。我们在选择这个问题的标签的时候，没有把「单调栈」选择进去。
+
+这是因为其实所有的「单调栈」的问题，其实都是「栈」的问题，**不是为了保持「栈」的「单调」而解决问题，而是解决这一类问题恰好满足了「栈」单调的特点**。
+
+所以「单调栈」其实是一个不必要的标签，认识到：解决这一类问题恰好满足「后进先出」是重要的，即：设计算法的合理性。
+:::
 
 ## 题目描述
 
@@ -54,50 +60,52 @@ tags:
 分析出解决这个问题需要 **后进先出** 的 **线性** 数据结构，因此使用 **栈**。
 :::
 
-
 **字典序**：字典序是 **按照单词出现在字典中的顺序** 比较两个字符串的方法。
 首先比较第 1 个字符的 ASCII 码：
 
-  + 如果不同，则第 1 个字符 ASCII 码较小的字符，整体字典序更靠前；
-  + 如果相同，则继续比较第 2 个字符，…… 
-    如此继续，比较整个字符串的大小。
+- 如果不同，则第 1 个字符 ASCII 码较小的字符，整体字典序更靠前；
+- 如果相同，则继续比较第 2 个字符，……
+  如此继续，比较整个字符串的大小。
 
 ---
 
 **分析示例**：观察示例 1：`bcabc`。
 
-+ 字符 `a` 在字符串中只出现一次，根据题目要求，字符 `a` 必须被选取；
-+ 字符 `b` 出现了两次，显然选择 `a`后面的那个 `b`。因为 **字典序 `ab` 靠前，`ba` 靠后**。同理，相同的字符 `c` ，我们选择后一个 `c`。因此，输出是 `abc`。
+- 字符 `a` 在字符串中只出现一次，根据题目要求，字符 `a` 必须被选取；
+- 字符 `b` 出现了两次，显然选择 `a`后面的那个 `b`。因为 **字典序 `ab` 靠前，`ba` 靠后**。同理，相同的字符 `c` ，我们选择后一个 `c`。因此，输出是 `abc`。
 
 选出 `abc` 可以从左到右遍历一次字符串：
 
 第 ① 步：看到 `b`，只有一个字符，暂时保存起来；
 第 ② 步：看到 `c`，`bc` 是单调递增的，已经是字典序最小的，暂时保存起来；
-第 ③ 步：看到 `a`，`a` 的字典序比之前看到的 `b` 和 `c` 都靠前，因此应该 **想办法让 `a` 的位置往前靠，ASCII 值越小的字母越靠前，整体字符串的字典序就更靠前**，这件事情等价于，先看看最近看到的 `c` 以后会不会出现，`c` 以后还会出现，因此可以舍弃 `c` ，再看看最早看到的 `b` 在以后会不会出现，`b` 以后还会出现，因此可以舍弃 `b`，此时 `a` 前面没有读到的字典了。**`b` 比 `c` 先读到，而比 `c` 后丢弃**，因此解决这个问题可以使用 「后进先出」的数据结构：栈。 
+第 ③ 步：看到 `a`，`a` 的字典序比之前看到的 `b` 和 `c` 都靠前，因此应该 **想办法让 `a` 的位置往前靠，ASCII 值越小的字母越靠前，整体字符串的字典序就更靠前**，这件事情等价于，先看看最近看到的 `c` 以后会不会出现，`c` 以后还会出现，因此可以舍弃 `c` ，再看看最早看到的 `b` 在以后会不会出现，`b` 以后还会出现，因此可以舍弃 `b`，此时 `a` 前面没有读到的字典了。**`b` 比 `c` 先读到，而比 `c` 后丢弃**，因此解决这个问题可以使用 「后进先出」的数据结构：栈。
 
 ---
 
 ## 方法：栈
 
-
 再观察示例 2：`cbacdcbc`。
 
-+ 一共出现 $4$ 种字符：`a`、`b`、`c`、`d`。其中 **`a` 和 `d` 只出现一次，必须被选取**；
-+ `b` 出现 $2$ 次，一个在 `a` 前面，一个在 `a` 后面，显然保留在 `a` 后面的；
-+ `c` 出现 $4$ 次。
+- 一共出现 $4$ 种字符：`a`、`b`、`c`、`d`。其中 **`a` 和 `d` 只出现一次，必须被选取**；
+- `b` 出现 $2$ 次，一个在 `a` 前面，一个在 `a` 后面，显然保留在 `a` 后面的；
+- `c` 出现 $4$ 次。
 
 下面的示意图展示了程序的执行流程，请大家注意第 ⑥ 步和第 ⑧ 步的分析。
 
 ![image.png](https://pic.leetcode-cn.com/1603768499-DmVdis-image.png)
 
-+ 第 ① 步：读到 `c`，入栈，此时栈中元素 `[c]`；
-+ 第 ② 步：读到 `b`，`b` 的字典序比之前的 `c` 小，`c` 在以后还会出现，因此 `c` 出栈，`b` 入栈，此时栈中元素 `[b]`；
-+ 第 ③ 步：读到 `a`，`a` 的字典序比之前的 `b` 小，`b` 在以后还会出现，因此 `b` 出栈，`a` 入栈，此时栈中元素 `[a]`；
-+ 第 ④ 步：读到 `c`，`c` 的字典序比之前的 `a` 大，直接让 `c` 入栈，此时栈中元素 `[a, c]`；
-+ 第 ⑤ 步：读到 `d`，`d` 的字典序比之前的 `d` 大，直接让 `d` 入栈，此时栈中元素 `[a, c, d]`；
-+ 第 ⑥ 步：读到 `c`，此时栈中已经有 `c`，题目要求不能有重复字符，所以舍弃当前看到的 `c` ，**注意**：如果当前遍历到栈中已经有的字符，可以舍弃当前遍历到的重复字符。原因放在第 ⑧ 步说；
-+ 第 ⑦ 步：读到 `b`，`b` 的字典序比之前的 `d` 小，但是后面不会再出现 `d` ，因此 `b` 就应该放在这个位置，因此让 `b` 入栈，此时栈中元素 `[a, c, d, b]`；
-+ 第 ⑧ 步：读到 `c`，下面我们证明：如果遍历到当前栈中已经有的字符，可以舍弃当前遍历到的字符。
+- 第 ① 步：读到 `c`，入栈，此时栈中元素 `[c]`；
+- 第 ② 步：读到 `b`，`b` 的字典序比之前的 `c` 小，`c` 在以后还会出现，因此 `c` 出栈，`b` 入栈，此时栈中元素 `[b]`；
+- 第 ③ 步：读到 `a`，`a` 的字典序比之前的 `b` 小，`b` 在以后还会出现，因此 `b` 出栈，`a` 入栈，此时栈中元素 `[a]`；
+- 第 ④ 步：读到 `c`，`c` 的字典序比之前的 `a` 大，直接让 `c` 入栈，此时栈中元素 `[a, c]`；
+- 第 ⑤ 步：读到 `d`，`d` 的字典序比之前的 `d` 大，直接让 `d` 入栈，此时栈中元素 `[a, c, d]`；
+- 第 ⑥ 步：读到 `c`，此时栈中已经有 `c`，题目要求不能有重复字符，所以舍弃当前看到的 `c` ，**注意**：如果当前遍历到栈中已经有的字符，可以舍弃当前遍历到的重复字符。原因放在第 ⑧ 步说；
+- 第 ⑦ 步：读到 `b`，`b` 的字典序比之前的 `d` 小，但是后面不会再出现 `d` ，因此 `b` 就应该放在这个位置，因此让 `b` 入栈，此时栈中元素 `[a, c, d, b]`；
+- 第 ⑧ 步：读到 `c`，下面我们证明：如果遍历到当前栈中已经有的字符，可以舍弃当前遍历到的字符。
+
+::: danger 温馨提示
+理解下面这件事情，是本题的关键，否则使用「栈」的方法不成立。
+:::
 
 ### 如果遍历到当前栈中已经有的字符，可以舍弃当前遍历到的字符
 
@@ -108,7 +116,6 @@ tags:
 **反证**：如果接下来还会遍历到 `d` 那么按照之前设计的算法逻辑，我们会丢弃第 1 个 `d` 而让 `b` 靠前，这样得到的字典序的子段 `bd` 更小。
 
 再接着例 2 的第 ⑧ 步说，既然已经出现在栈中的元素，不可能是 **某个单调递增段的最后一个元素**，因此如果丢弃之前遇到的那个相同字符，它紧挨着的下一个字符的 ASCII 值更大。ASCII 值更大的字符靠前一位，整体字典序更大。因此应该丢弃当前遇到的相同字符。
-
 
 **参考代码 1**：
 
@@ -168,15 +175,14 @@ public class Solution {
 
 **说明**：
 
-+ 为了突出使用栈作为数据结构，使用了 `Deque` 的实现类 `ArrayDeque`，这是 Java 官方推荐的做法。事实上，这个栈里存的是字符，因此可以直接使用 `StringBuilder`，这样最后就不用最好把栈里的元素依次弹出。之所以没有这么做，是因为栈的 `pop()` 、`peek()`、`push()` 的功能体现不出来。
+- 为了突出使用栈作为数据结构，使用了 `Deque` 的实现类 `ArrayDeque`，这是 Java 官方推荐的做法。事实上，这个栈里存的是字符，因此可以直接使用 `StringBuilder`，这样最后就不用最好把栈里的元素依次弹出。之所以没有这么做，是因为栈的 `pop()` 、`peek()`、`push()` 的功能体现不出来。
 
 **复杂度分析**：
 
-+ 时间复杂度：$O(N)$，这里 $N$ 是字符的长度；
-+ 空间复杂度：$O(N)$ ，最坏情况下，这个字符串本身就是字典序最小的字符串，栈中就要存字符串长度这么多的字符串。
+- 时间复杂度：$O(N)$，这里 $N$ 是字符的长度；
+- 空间复杂度：$O(N)$ ，最坏情况下，这个字符串本身就是字典序最小的字符串，栈中就要存字符串长度这么多的字符串。
 
-### 方法二：栈 + 哨兵
-
+## 方法二：栈 + 哨兵
 
 这里注意到
 
@@ -247,26 +253,19 @@ public class Solution {
 
 ## 练习
 
-
-+ 「力扣」第 20 题：[有效的括号](https://leetcode-cn.com/problems/valid-parentheses)（简单）
-+ 「力扣」第 71 题：[简化路径](https://leetcode-cn.com/problems/simplify-path)（中等）
-+ 「力扣」第 150 题：[逆波兰表达式求值](https://leetcode-cn.com/problems/evaluate-reverse-polish-notation)（中等）
-+ 「力扣」第 32 题：[最长有效括号](https://leetcode-cn.com/problems/longest-valid-parentheses)（困难）
-
----
-
-+ 「力扣」第 739 题：[每日温度](https://leetcode-cn.com/problems/daily-temperatures)（中等）
-+ 「力扣」第 496 题：[下一个更大元素 I](https://leetcode-cn.com/problems/next-greater-element-i)（简单）
-+ 「力扣」第 84 题：[柱状图中最大的矩形](https://leetcode-cn.com/problems/largest-rectangle-in-histogram)（困难）
-+ 「力扣」第 42 题：[接雨水](https://leetcode-cn.com/problems/trapping-rain-water)（困难）
-+ 「力扣」第 901 题：[股票价格跨度](https://leetcode-cn.com/problems/online-stock-span)（中等）
-+ 「力扣」第 581 题：[最短无序连续子数组](https://leetcode-cn.com/problems/shortest-unsorted-continuous-subarray)（中等）
-+ 「力扣」第 402 题：[移掉K位数字](https://leetcode-cn.com/problems/remove-k-digits)（中等）
-+ 「力扣」第 321 题：[拼接最大数](https://leetcode-cn.com/problems/create-maximum-number)（困难）
-+ 「力扣」第 1673 题：[找出最具竞争力的子序列](https://leetcode-cn.com/problems/find-the-most-competitive-subsequence)（中等）
-
+- 「力扣」第 20 题：[有效的括号](https://leetcode-cn.com/problems/valid-parentheses)（简单）
+- 「力扣」第 71 题：[简化路径](https://leetcode-cn.com/problems/simplify-path)（中等）
+- 「力扣」第 150 题：[逆波兰表达式求值](https://leetcode-cn.com/problems/evaluate-reverse-polish-notation)（中等）
+- 「力扣」第 32 题：[最长有效括号](https://leetcode-cn.com/problems/longest-valid-parentheses)（困难）
 
 ---
 
-
-
+- 「力扣」第 739 题：[每日温度](https://leetcode-cn.com/problems/daily-temperatures)（中等）
+- 「力扣」第 496 题：[下一个更大元素 I](https://leetcode-cn.com/problems/next-greater-element-i)（简单）
+- 「力扣」第 84 题：[柱状图中最大的矩形](https://leetcode-cn.com/problems/largest-rectangle-in-histogram)（困难）
+- 「力扣」第 42 题：[接雨水](https://leetcode-cn.com/problems/trapping-rain-water)（困难）
+- 「力扣」第 901 题：[股票价格跨度](https://leetcode-cn.com/problems/online-stock-span)（中等）
+- 「力扣」第 581 题：[最短无序连续子数组](https://leetcode-cn.com/problems/shortest-unsorted-continuous-subarray)（中等）
+- 「力扣」第 402 题：[移掉 K 位数字](https://leetcode-cn.com/problems/remove-k-digits)（中等）
+- 「力扣」第 321 题：[拼接最大数](https://leetcode-cn.com/problems/create-maximum-number)（困难）
+- 「力扣」第 1673 题：[找出最具竞争力的子序列](https://leetcode-cn.com/problems/find-the-most-competitive-subsequence)（中等）
