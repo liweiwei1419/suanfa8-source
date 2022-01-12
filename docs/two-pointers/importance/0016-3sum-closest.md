@@ -3,11 +3,11 @@ title: 「力扣」第 16 题：最接近的三数之和（中等）
 icon: yongyan
 category: 双指针
 tags:
-  - 双指针 
+  - 双指针
 ---
 
-+ 题目地址：[16. 最接近的三数之和](https://leetcode-cn.com/problems/3sum-closest/)；
-+ 题解地址：[双指针对撞（Python 代码、Java 代码）](https://leetcode-cn.com/problems/3sum-closest/solution/shuang-zhi-zhen-dui-zhuang-python-dai-ma-java-dai-/)。
+- 题目地址：[16. 最接近的三数之和](https://leetcode-cn.com/problems/3sum-closest/)；
+- 题解地址：[双指针对撞（Python 代码、Java 代码）](https://leetcode-cn.com/problems/3sum-closest/solution/shuang-zhi-zhen-dui-zhuang-python-dai-ma-java-dai-/)。
 
 ## 题目描述
 
@@ -16,8 +16,6 @@ tags:
 返回这三个数的和。
 
 假定每组输入只存在恰好一个解。
-
-
 
 **示例 1：**
 
@@ -34,8 +32,6 @@ tags:
 输出：0
 ```
 
-
-
 **提示：**
 
 - `3 <= nums.length <= 1000`
@@ -49,7 +45,6 @@ tags:
 编码的注意事项和细节已经体现在“参考代码”的注释中。
 
 **参考代码**：
-
 
 <CodeGroup>
 <CodeGroupItem title="Java">
@@ -211,5 +206,5 @@ class Solution(object):
 
 **复杂度分析：**
 
-+ 时间复杂度：$O(N^2)$，这里 $N$ 是数组的长度，排序的时间复杂度是 $O(N \log N)$，外层循环遍历 `i` ，内层循环指针对撞，时间复杂度是 $O(N^2)$；
-+ 空间复杂度：$O(1)$，指针对撞和保存结果及中间变量的空间都为常数个。
+- 时间复杂度：$O(N^2)$，这里 $N$ 是数组的长度，排序的时间复杂度是 $O(N \log N)$，外层循环遍历 `i` ，内层循环指针对撞，时间复杂度是 $O(N^2)$；
+- 空间复杂度：$O(1)$，指针对撞和保存结果及中间变量的空间都为常数个。

@@ -6,7 +6,7 @@ tags:
   - 双指针
 ---
 
-+ 题目链接：[977. 有序数组的平方](https://leetcode-cn.com/problems/squares-of-a-sorted-array/)。
+- 题目链接：[977. 有序数组的平方](https://leetcode-cn.com/problems/squares-of-a-sorted-array/)。
 
 ## 题目描述
 

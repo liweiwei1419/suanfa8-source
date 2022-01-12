@@ -6,16 +6,13 @@ tags:
   - 双指针
 ---
 
-+ 题目地址：[345. 反转字符串中的元音字母](https://leetcode-cn.com/problems/reverse-vowels-of-a-string/description/)。
-
+- 题目地址：[345. 反转字符串中的元音字母](https://leetcode-cn.com/problems/reverse-vowels-of-a-string/description/)。
 
 ## 题目描述
 
 给你一个字符串 `s` ，仅反转字符串中的所有元音字母，并返回结果字符串。
 
 元音字母包括 `'a'`、`'e'`、`'i'`、`'o'`、`'u'`，且可能以大小写两种形式出现。
-
-
 
 **示例 1：**
 
@@ -31,7 +28,7 @@ tags:
 输出："leotcede"
 ```
 
- **提示：**
+**提示：**
 
 - $1 <= s.length <= 3 * 10^5$
 - `s` 由 **可打印的 ASCII** 字符组成
@@ -42,7 +39,6 @@ tags:
 - 这样的代码其实是套路，多写几遍就不会忘记了，我们在基础算法的学习中，曾经也有遇到过。
 
 **参考代码**：
-
 
 <CodeGroup>
 <CodeGroupItem title="Java">
@@ -100,8 +96,10 @@ public class Solution {
         System.out.println(result3);
 
     }
+
 }
-```
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Python">
@@ -126,10 +124,10 @@ class Solution(object):
                 left += 1
                 right -= 1
         return ''.join(s)
-```
+````
+
 </CodeGroupItem>
 </CodeGroup>
-
 
 ## 要注意的地方
 
@@ -146,4 +144,3 @@ while (j >= 0 && !checkVowels(chars[j])) {
 ```
 
 上述代码特别容易忽略掉：`i < chars.length` 和 `j >= 0` 这两个前提条件。
-

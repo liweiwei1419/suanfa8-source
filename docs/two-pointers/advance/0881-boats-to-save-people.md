@@ -6,7 +6,7 @@ tags:
   - 双指针
 ---
 
-+ 题目链接：[881. 救生艇](https://leetcode-cn.com/problems/boats-to-save-people/)。
+- 题目链接：[881. 救生艇](https://leetcode-cn.com/problems/boats-to-save-people/)。
 
 ## 题目描述
 
@@ -14,7 +14,7 @@ tags:
 
 ![0881](https://tva1.sinaimg.cn/large/008i3skNgy1gx1p4x1zscj30p00ant92.jpg)
 
-+ [题目链接](https://leetcode-cn.com/problems/boats-to-save-people/)
+- [题目链接](https://leetcode-cn.com/problems/boats-to-save-people/)
 
 第 `i` 个人的体重为 `people[i]`，每艘船可以承载的最大重量为 `limit`。
 
@@ -55,20 +55,20 @@ tags:
 
 ## 理解题意
 
-+ 题目当中很重要的信息是：每艘船最多可同时载两人；
-+ 保证每个人都能被船载，题目最后给出的提示也告诉我们： `people[i] <= limit`。
+- 题目当中很重要的信息是：每艘船最多可同时载两人；
+- 保证每个人都能被船载，题目最后给出的提示也告诉我们： `people[i] <= limit`。
 
 ## 解题思路
 
 让当前体重最轻的人能够与当前体重最重的人配对（乘坐同一艘船）：
 
-+ 如果不能配对，说明 **当前体重最重的人** 需要单独配一艘船；
-+ 如果可以配对，则将他们配对（乘坐同一艘船）。
+- 如果不能配对，说明 **当前体重最重的人** 需要单独配一艘船；
+- 如果可以配对，则将他们配对（乘坐同一艘船）。
 
 因此，可以将输入数组升序排序，在数组的头和尾分别设置一个变量 `left` 和 `right` （双指针算法）：
 
-+ 如果 `people[left] + people[right] <= limit` ：说明 `left` 和 `right` 指向的人可以配对（乘坐同一艘船），此时 `left` 和 `right` 各向中间走一步；
-+ 如果 `people[left] + people[right] > limit` ：说明 `right` 指向的人太重了，他应该单独乘坐一艘船。即 `right` 向中间走一步（`right--`）。
+- 如果 `people[left] + people[right] <= limit` ：说明 `left` 和 `right` 指向的人可以配对（乘坐同一艘船），此时 `left` 和 `right` 各向中间走一步；
+- 如果 `people[left] + people[right] > limit` ：说明 `right` 指向的人太重了，他应该单独乘坐一艘船。即 `right` 向中间走一步（`right--`）。
 
 按照上面的方式，直到 `left` 与 `right` 重合，这样就可以完成任务。
 
@@ -101,8 +101,8 @@ public class Solution {
 
 **复杂度分析**：
 
-+ 时间复杂度：$O(N)$，这里 $N$ 是输入数组的长度，` left` 和 `right` 一起遍历了数组的长度；
-+ 空间复杂度：$O(1)$，只使用了常数个变量。
+- 时间复杂度：$O(N)$，这里 $N$ 是输入数组的长度，` left` 和 `right` 一起遍历了数组的长度；
+- 空间复杂度：$O(1)$，只使用了常数个变量。
 
 ## 总结
 

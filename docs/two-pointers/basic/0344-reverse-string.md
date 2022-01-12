@@ -6,8 +6,7 @@ tags:
   - 双指针
 ---
 
-
-+ 题目链接：[344. 反转字符串](https://leetcode-cn.com/problems/reverse-string/description/) 。
+- 题目链接：[344. 反转字符串](https://leetcode-cn.com/problems/reverse-string/description/) 。
 
 ## 题目描述
 
@@ -31,7 +30,7 @@ tags:
 
 **提示：**
 
-- `1 <= s.length <= 105`
+- `1 <= s.length <= 10^5`
 - `s[i]` 都是 [ASCII](https://baike.baidu.com/item/ASCII) 码表中的可打印字符
 
 ## 方法一：使用 Java 语言提供的反转 API 完成
@@ -90,8 +89,10 @@ public class Solution {
         String result = solution.reverseString("hello world");
         System.out.println(result);
     }
+
 }
-```
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Python">
@@ -116,6 +117,7 @@ class Solution(object):
             right -= 1
         return ''.join(l)
 
-```
+````
+
 </CodeGroupItem>
 </CodeGroup>

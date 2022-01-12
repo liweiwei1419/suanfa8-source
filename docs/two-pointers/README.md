@@ -14,8 +14,8 @@ tags:
 
 ::: danger 提示
 解决这些问题重点在于想明白为什么可以这样操作，即使用「双指针」方法解决问题的 **合理性**。
-::: 
+:::
 
 ## 「力扣」双指针题单
 
-+ [题单](https://leetcode-cn.com/tag/two-pointers/problemset/)
+- [题单](https://leetcode-cn.com/tag/two-pointers/problemset/)

@@ -6,8 +6,7 @@ tags:
   - 双指针
 ---
 
-+ 题目地址：[125. 验证回文串](https://leetcode-cn.com/problems/valid-palindrome/description/)。
-
+- 题目地址：[125. 验证回文串](https://leetcode-cn.com/problems/valid-palindrome/description/)。
 
 ## 题目描述
 
@@ -66,8 +65,10 @@ public class Solution {
         }
         return true;
     }
+
 }
-```
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Python">
@@ -94,6 +95,7 @@ class Solution(object):
             left += 1
             right -= 1
         return True
-```
+````
+
 </CodeGroupItem>
 </CodeGroup>

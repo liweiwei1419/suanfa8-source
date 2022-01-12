@@ -6,8 +6,8 @@ tags:
   - 双指针
 ---
 
-+ 题目地址：[167. 两数之和 II - 输入有序数组](https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/)；
-+ 题解地址：[双指针对撞 + 二分法（Java、Python）]()。
+- 题目地址：[167. 两数之和 II - 输入有序数组](https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/)；
+- 题解地址：[双指针对撞 + 二分法（Java、Python）](https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/solution/shuang-zhi-zhen-dui-zhuang-er-fen-fa-python-dai-ma/)。
 
 ## 题目描述
 
@@ -53,7 +53,6 @@ tags:
 
 **参考代码**：
 
-
 ```Python []
 from typing import List
 
@@ -89,11 +88,11 @@ public class Solution {
     }
 }
 ```
+
 **复杂度分析**：
 
-+ 时间复杂度：$O(N)$，这里 $N$ 表示数组中的元素的大小。
-+ 空间复杂度：$O(1)$，只使用了常数个变量。
-
+- 时间复杂度：$O(N)$，这里 $N$ 表示数组中的元素的大小。
+- 空间复杂度：$O(1)$，只使用了常数个变量。
 
 既然是有序数组，不妨考虑使用二分查找。
 
@@ -104,7 +103,6 @@ public class Solution {
 二分查找，起点得固定，因此，外面要套上一层循环。
 
 **参考代码**：
-
 
 ```Python []
 from typing import List
@@ -159,12 +157,8 @@ public class Solution {
 
 }
 ```
+
 **复杂度分析**：
 
-+ 时间复杂度：$O(N \log N)$，这里 $N$ 表示数组中的元素的大小，外层循环是线性时间复杂度，内层循环是对数级别的时间复杂度；
-+ 空间复杂度：$O(1)$，只使用了常数个变量。
-
-
-
-
-
+- 时间复杂度：$O(N \log N)$，这里 $N$ 表示数组中的元素的大小，外层循环是线性时间复杂度，内层循环是对数级别的时间复杂度；
+- 空间复杂度：$O(1)$，只使用了常数个变量。
