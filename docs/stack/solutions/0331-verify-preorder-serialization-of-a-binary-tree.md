@@ -6,8 +6,7 @@ tags:
   - 栈
 ---
 
-+ 题目链接：[331. 验证二叉树的前序序列化](https://leetcode-cn.com/problems/verify-preorder-serialization-of-a-binary-tree/)。
-
+- 题目链接：[331. 验证二叉树的前序序列化](https://leetcode-cn.com/problems/verify-preorder-serialization-of-a-binary-tree/)。
 
 ## 题目描述
 
@@ -22,8 +21,6 @@ tags:
 / \ / \   / \
 # # # #   # #
 ```
-
-
 
 例如，上面的二叉树可以被序列化为字符串 "9,3,4,#,#,1,#,#,2,#,6,#,#"，其中 # 代表一个空节点。
 
@@ -53,6 +50,14 @@ tags:
 输入: "9,#,#,1"
 输出: false
 ```
+
+::: warning 说明
+因时间和个人精力关系，本题没有写详解，只给出了参考代码。
+
+读者可以在「力扣」这道题的评论区和题解区找到适合自己的思路分析和代码。
+
+如果确实需要我编写具体的解题思路，可以发邮件到 liweiwei1419@gmail.com 或者给本项目的 [issue](https://github.com/liweiwei1419/liweiwei1419.github.io/issues) 留言。
+:::
 
 **参考代码**：
 
@@ -98,4 +103,3 @@ public class Solution {
     }
 }
 ```
-

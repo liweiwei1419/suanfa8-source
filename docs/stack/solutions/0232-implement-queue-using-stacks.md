@@ -6,7 +6,7 @@ tags:
   - 栈
 ---
 
-+ 题目链接：[232. 用栈实现队列]()；
++ 题目链接：[232. 用栈实现队列](https://leetcode-cn.com/problems/implement-queue-using-stacks/)；
 + 题解链接：[负负得正，使用两个栈，一个专门入队，一个专门出队](https://leetcode-cn.com/problems/implement-queue-using-stacks/solution/shi-yong-liang-ge-zhan-yi-ge-zhuan-men-ru-dui-yi-g/)。
 
 

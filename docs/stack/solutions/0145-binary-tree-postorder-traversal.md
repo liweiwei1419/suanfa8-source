@@ -6,8 +6,7 @@ tags:
   - 栈
 ---
 
-+ 题目链接：[145. 二叉树的后序遍历](https://leetcode-cn.com/problems/binary-tree-postorder-traversal/description/) 。
-
+- 题目链接：[145. 二叉树的后序遍历](https://leetcode-cn.com/problems/binary-tree-postorder-traversal/description/) 。
 
 ## 题目描述
 
@@ -36,12 +35,12 @@ Input: root = [1]
 Output: [1]
 ```
 
- **Constraints:**
+**Constraints:**
 
 - The number of the nodes in the tree is in the range `[0, 100]`.
 - `-100 <= Node.val <= 100`
 
-Python 代码：
+**参考代码**：
 
 ```python
 # Definition for a binary tree node.
@@ -74,4 +73,3 @@ class Solution:
 ```
 
 上面的过程更好地体现了递归过程中系统栈的作用，按照这种方式，所有的递归的代码都可以改造成非递归的代码。
-

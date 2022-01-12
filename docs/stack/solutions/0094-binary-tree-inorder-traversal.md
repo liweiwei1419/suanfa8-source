@@ -6,9 +6,8 @@ tags:
   - 栈
 ---
 
-+ 题目链接：[94. 二叉树的中序遍历](https://leetcode-cn.com/problems/binary-tree-inorder-traversal/)；
-+ 题解地址：[模拟系统栈完成非递归中序遍历，同理可以完成非递归的前序遍历和后序遍历（Python 代码、Java 代码）](https://leetcode-cn.com/problems/binary-tree-inorder-traversal/solution/mo-ni-xi-tong-zhan-wan-cheng-fei-di-gui-zhong-xu-b/)。
-
+- 题目链接：[94. 二叉树的中序遍历](https://leetcode-cn.com/problems/binary-tree-inorder-traversal/)；
+- 题解地址：[模拟系统栈完成非递归中序遍历，同理可以完成非递归的前序遍历和后序遍历（Python 代码、Java 代码）](https://leetcode-cn.com/problems/binary-tree-inorder-traversal/solution/mo-ni-xi-tong-zhan-wan-cheng-fei-di-gui-zhong-xu-b/)。
 
 ## 题目描述
 
@@ -46,8 +45,6 @@ tags:
 输出：[2,1]
 ```
 
-
-
 **示例 5：**
 
 ![img](https://assets.leetcode.com/uploads/2020/09/15/inorder_4.jpg)
@@ -59,7 +56,7 @@ tags:
 
 ## 思路分析
 
-## 方法：模拟系统栈
+方法：模拟系统栈
 
 模拟系统栈的方法其实并不难理解，就是在栈中放入结点的同时，**同时传入一个指令，这个指令可以有 2 个含义**：
 
@@ -73,55 +70,22 @@ tags:
 
 **参考代码**：
 
-Python 代码：
-
-```Python []
-class TreeNode:
-    def __init__(self, x):
-        self.val = x
-        self.left = None
-        self.right = None
-
-
-class Solution:
-
-    def inorderTraversal(self, root: TreeNode) -> List[int]:
-        if not root:
-            return []
-        # 1 表示递归处理
-        stack = [(1, root)]
-        res = []
-        while stack:
-            command, node = stack.pop()
-            if command == 0:
-                # 0 表示当前马上执行将结点的值添加到结果集中
-                res.append(node.val)
-            else:
-                # 关键在这里：因为是模拟系统栈，应该把中序遍历的顺序倒过来写
-                # 调整一下顺序就可以完成前序遍历和后序遍历
-                if node.right:
-                    stack.append((1, node.right))
-                stack.append((0, node))
-                if node.left:
-                    stack.append((1, node.left))
-        return res
-```
-
-Java 代码：
-
-```Java []
+<CodeGroup>
+<CodeGroupItem title="Java">
+```java
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
 class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
+int val;
+TreeNode left;
+TreeNode right;
 
     TreeNode(int x) {
         val = x;
     }
+
 }
 
 public class Solution {
@@ -168,13 +132,13 @@ public class Solution {
         }
         return res;
     }
+
 }
-```
 
----
+````
+</CodeGroupItem>
 
-Python 代码：
-
+<CodeGroupItem title="Python3">
 ```python
 class TreeNode:
     def __init__(self, x):
@@ -184,21 +148,57 @@ class TreeNode:
 
 
 class Solution:
-    def inorderTraversal(self, root):
+
+    def inorderTraversal(self, root: TreeNode) -> List[int]:
         if not root:
             return []
+        # 1 表示递归处理
         stack = [(1, root)]
         res = []
         while stack:
             command, node = stack.pop()
             if command == 0:
+                # 0 表示当前马上执行将结点的值添加到结果集中
                 res.append(node.val)
             else:
+                # 关键在这里：因为是模拟系统栈，应该把中序遍历的顺序倒过来写
+                # 调整一下顺序就可以完成前序遍历和后序遍历
                 if node.right:
                     stack.append((1, node.right))
                 stack.append((0, node))
                 if node.left:
                     stack.append((1, node.left))
         return res
-```
+````
 
+</CodeGroupItem>
+<CodeGroupItem title="Python3">
+```python
+class TreeNode:
+    def __init__(self, x):
+        self.val = x
+        self.left = None
+        self.right = None
+
+class Solution:
+def inorderTraversal(self, root):
+if not root:
+return []
+stack = [(1, root)]
+res = []
+while stack:
+command, node = stack.pop()
+if command == 0:
+res.append(node.val)
+else:
+if node.right:
+stack.append((1, node.right))
+stack.append((0, node))
+if node.left:
+stack.append((1, node.left))
+return res
+
+```
+</CodeGroupItem>
+</CodeGroup>
+```

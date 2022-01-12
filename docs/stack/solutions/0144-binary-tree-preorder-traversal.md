@@ -6,14 +6,11 @@ tags:
   - 栈
 ---
 
-+ 题目链接：[144. 二叉树的前序遍历](https://leetcode-cn.com/problems/binary-tree-preorder-traversal/description/)。
-
+- 题目链接：[144. 二叉树的前序遍历](https://leetcode-cn.com/problems/binary-tree-preorder-traversal/description/)。
 
 ## 题目描述
 
 给你二叉树的根节点 `root` ，返回它节点值的 **前序** 遍历。
-
- 
 
 **示例 1：**
 
@@ -42,10 +39,6 @@ tags:
 
 ![img](https://tva1.sinaimg.cn/large/008i3skNgy1gxs82cp3uqj305m05mglg.jpg)
 
-
-
-
-
 ```
 输入：root = [1,2]
 输出：[1,2]
@@ -60,41 +53,19 @@ tags:
 输出：[1,2]
 ```
 
- 
-
 **提示：**
 
 - 树中节点数目在范围 `[0, 100]` 内
 - `-100 <= Node.val <= 100`
 
-## 思路分析
+## 方法一：递归
 
-递归的写法。下面这种写法是错的：这是我想当然，轻视问题而写出的错误程序。
+因为这里要求返回一个数组，而不是在遍历的时候打印这个节点的值，所以如果要使用递归来解决问题，应该在这个方法之外声明一个成员变量，作为返回值；并且另外声明一个递归函数来完成递归的任务。
 
-```java
-/**
- * 使用递归的方式实现二叉树的前序遍历
- *
- * @param root
- * @return
- */
-public List<Integer> preorderTraversal(TreeNode root) {
-    List<Integer> result = new ArrayList<>();
-    if (root != null) {
-        result.add(root.val);
-        preorderTraversal(root.left);
-        preorderTraversal(root.right);
-    }
-    return result;
-}
-```
-
-因为这里要求返回一个数组，而不是在遍历的时候打印这个节点的值，所以如果要使用递归来解决问题，应该在这个方法之外声明一个成员变量，作为返回值；并且另外声明一个递归函数来完成递归的任务，正确的代码如下：
-
-Java 代码：
+**参考代码 1**：
 
 ```java
-public class Solution3 {
+public class Solution {
 
     private List<Integer> result = new ArrayList<>();
     /**
@@ -118,7 +89,11 @@ public class Solution3 {
 }
 ```
 
-Python 代码：在入栈的时候，就可以判断是不是空，只将非空结点入栈。顺序问题：如果我们期望代码执行的顺序是 1 2 3 ， 那么，我们应该以 3 2 1 的方式将代码入栈。即顺序执行 a b c 这件事情，须要往栈里依次推入 c b a
+## 方法二：非递归
+
+在入栈的时候，就可以判断是不是空，只将非空结点入栈。顺序问题：如果我们期望代码执行的顺序是 1 2 3 ， 那么，我们应该以 3 2 1 的方式将代码入栈。即顺序执行 a b c 这件事情，须要往栈里依次推入 c b a
+
+**参考代码 2**：
 
 ```python
 # 掌握前序遍历，使用栈的写法
@@ -154,57 +129,35 @@ class Solution:
         return res
 ```
 
-我们借助“栈”完成了二叉树的非递归前序遍历，其实借助这种思路，即“模拟系统栈”，可以完成二叉树的 3 种遍历。
+我们借助「栈」完成了二叉树的非递归前序遍历，其实借助这种思路，即“模拟系统栈”，可以完成二叉树的 3 种遍历。
 
-Python 代码2：“模拟系统栈”实现二叉树的“前序遍历”。
+## 方法三：模拟系统栈
 
-```python
-class TreeNode:
-    def __init__(self, x):
-        self.val = x
-        self.left = None
-        self.right = None
+**参考代码 3**：
 
+非递归的写法，使用模拟的系统栈，写出一个非递归的程序
 
-class Solution:
-    def preorderTraversal(self, root):
-        if not root:
-            return []
-        res = []
-        stack = [(1, root)]
-        while stack:
-            command, node = stack.pop()
-            if command == 0:
-                res.append(node.val)
-            else:
-                if node.right:
-                    stack.append((1, node.right))
-                if node.left:
-                    stack.append((1, node.left))
-                stack.append((0, node))
-        return res
-```
-
-Java 代码：非递归的写法，使用模拟的系统栈，写出一个非递归的程序
-
+<CodeGroup>
+<CodeGroupItem title="Java">
 ```java
 enum UseType {
     RECURSION, ADD
 }
 
+/\*\*
 
-/**
- * 我们自定义的 Command 类
- */
-class MyCommand {
-    UseType useType; // 是对这个节点进行操作，还是递归调用这个节点
-    TreeNode treeNode;
+- 我们自定义的 Command 类
+  \*/
+  class MyCommand {
+  UseType useType; // 是对这个节点进行操作，还是递归调用这个节点
+  TreeNode treeNode;
 
-    MyCommand(UseType useType, TreeNode treeNode) {
-        this.useType = useType;
-        this.treeNode = treeNode;
-    }
-}
+      MyCommand(UseType useType, TreeNode treeNode) {
+          this.useType = useType;
+          this.treeNode = treeNode;
+      }
+
+  }
 
 public class Solution4 {
 
@@ -238,6 +191,39 @@ public class Solution4 {
         }
         return result;
     }
-}
-```
 
+}
+
+````
+</CodeGroupItem>
+
+<CodeGroupItem title="Python3">
+```python
+class TreeNode:
+    def __init__(self, x):
+        self.val = x
+        self.left = None
+        self.right = None
+
+
+class Solution:
+    def preorderTraversal(self, root):
+        if not root:
+            return []
+        res = []
+        stack = [(1, root)]
+        while stack:
+            command, node = stack.pop()
+            if command == 0:
+                res.append(node.val)
+            else:
+                if node.right:
+                    stack.append((1, node.right))
+                if node.left:
+                    stack.append((1, node.left))
+                stack.append((0, node))
+        return res
+````
+
+</CodeGroupItem>
+</CodeGroup>

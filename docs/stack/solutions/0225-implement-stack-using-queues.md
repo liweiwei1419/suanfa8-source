@@ -6,9 +6,8 @@ tags:
   - 栈
 ---
 
-+ 题目链接：[225. 用队列实现栈](https://leetcode-cn.com/problems/implement-stack-using-queues)；
-+ 题解链接：[负负得正，peek 和 pop 时，依次将队首元素出队，放到队尾](https://leetcode-cn.com/problems/implement-stack-using-queues/solution/peek-he-pop-shi-yi-ci-jiang-dui-shou-yuan-su-chu-d/)。
-
+- 题目链接：[225. 用队列实现栈](https://leetcode-cn.com/problems/implement-stack-using-queues)；
+- 题解链接：[负负得正，peek 和 pop 时，依次将队首元素出队，放到队尾](https://leetcode-cn.com/problems/implement-stack-using-queues/solution/peek-he-pop-shi-yi-ci-jiang-dui-shou-yuan-su-chu-d/)。
 
 ## 题目描述
 
@@ -25,8 +24,6 @@ tags:
 
 - 你只能使用队列的基本操作 —— 也就是 `push to back`、`peek/pop from front`、`size` 和 `is empty` 这些操作。
 - 你所使用的语言也许不支持队列。 你可以使用 list （列表）或者 deque（双端队列）来模拟一个队列 , 只要是标准的队列操作即可。
-
-
 
 **示例：**
 
@@ -54,17 +51,15 @@ myStack.empty(); // 返回 False
 
 **进阶：**你能否实现每种操作的均摊时间复杂度为 `O(1)` 的栈？换句话说，执行 `n` 个操作的总时间复杂度 `O(n)` ，尽管其中某个操作可能需要比其他操作更长的时间。你可以使用两个以上的队列。
 
----
+## 思路分析
 
+1、可以只使用一个队列来实现栈。
 
-
-> 1、可以只使用一个队列来实现栈。
->
-> 2、引入一个状态变量。
+2、引入一个状态变量。
 
 ## 方法一：使用两个队列实现栈
 
-Java 代码：
+**参考代码 1**：
 
 ```java
 import java.util.LinkedList;
@@ -134,7 +129,7 @@ public class MyStack {
 
 ## 方法二：使用一个队列实现栈
 
-Java 代码：
+**参考代码 2**：
 
 ```java
 import java.util.LinkedList;
@@ -200,4 +195,3 @@ public class MyStack {
  * boolean param_4 = obj.empty();
  */
 ```
-

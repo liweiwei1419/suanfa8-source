@@ -6,8 +6,7 @@ tags:
   - 栈
 ---
 
-+ 题目链接：[150. 逆波兰表达式求值](https://leetcode-cn.com/problems/evaluate-reverse-polish-notation/)。
-
+- 题目链接：[150. 逆波兰表达式求值](https://leetcode-cn.com/problems/evaluate-reverse-polish-notation/)。
 
 ## 题目描述
 
@@ -41,7 +40,7 @@ tags:
 ```
 输入: ["10", "6", "9", "3", "+", "-11", "*", "/", "*", "17", "+", "5", "+"]
 输出: 22
-解释: 
+解释:
   ((10 * (6 / ((9 + 3) * -11))) + 17) + 5
 = ((10 * (6 / (12 * -11))) + 17) + 5
 = ((10 * (6 / -132)) + 17) + 5
@@ -51,144 +50,43 @@ tags:
 = 22
 ```
 
+**提示：**
+
+- `1 <= tokens.length <= 10^4`
+- `tokens[i]` 要么是一个算符（`"+"`、`"-"`、`"*"` 或 `"/"`），要么是一个在范围 `[-200, 200]` 内的整数
+
+**逆波兰表达式：**
+
+逆波兰表达式是一种后缀表达式，所谓后缀就是指算符写在后面。
+
+- 平常使用的算式则是一种中缀表达式，如 `( 1 + 2 ) * ( 3 + 4 )` 。
+- 该算式的逆波兰表达式写法为 `( ( 1 2 + ) ( 3 4 + ) * )` 。
+
+逆波兰表达式主要有以下两个优点：
+
+- 去掉括号后表达式无歧义，上式即便写成 `1 2 + 3 4 + * `也可以依据次序计算出正确结果。
+- 适合用栈操作运算：遇到数字则入栈；遇到算符则取出栈顶两个数字进行计算，并将结果压入栈中。
+
+---
+
 逆波兰表达式求值。运算符放在两个数后面进行运算的表达式。
 
-
-Java 代码：
-
-```java
-public class Solution {
-
-    public int evalRPN(String[] tokens) {
-        Stack<Integer> stack = new Stack<>();
-        for (int i = 0; i < tokens.length; i++) {
-            String token = tokens[i];
-            String pattern = "-?[0-9]+|[\\+\\-\\*/]";
-            if (!token.matches(pattern)) {
-                throw new RuntimeException("非法的表达式");
-            }
-            if (token.matches("-?[0-9]+")) {
-                int num = Integer.valueOf(token);
-                System.out.println(num);
-                stack.push(num);
-            }
-            if (token.matches("[\\+\\-\\*/]")) {
-                System.out.println("加减乘除" + token);
-                if (stack.size() >= 2) {
-                    int num1 = stack.pop();
-                    int num2 = stack.pop();
-                    int result = 0;
-                    switch (token){
-                        case "+":
-                            result = num2 +num1;
-                            break;
-                        case "-":
-                            result = num2 -num1;
-                            break;
-                        case "*":
-                            result = num2 *num1;
-                            break;
-                        case "/":
-                            result = num2 /num1;
-                            break;
-                    }
-                    stack.push(result);
-                }
-            }
-        }
-
-        return stack.pop();
-    }
-
-
-    public static void main(String[] args) {
-        String[] tokens = new String[]{"3", "-4", "+"};
-
-        Solution solution = new Solution();
-        int result = solution.evalRPN(tokens);
-        System.out.println(result);
-    }
-}
-```
-
-是有问题的：Time Limit Exceeded 。然后我把上面的两个 System.out.println() 语句删除就 A 过了，好神奇，所以做题还是要规范啊。
-
-我的解答：
+**参考代码**：
 
 ```java
+import java.util.ArrayDeque;
+import java.util.Deque;
+
 public class Solution {
 
-    public int evalRPN(String[] tokens) {
-        Stack<Integer> stack = new Stack<>();
-        for (int i = 0; i < tokens.length; i++) {
-            String token = tokens[i];
-            String pattern = "-?[0-9]+|[\\+\\-\\*/]";
-            if (!token.matches(pattern)) {
-                throw new RuntimeException("非法的表达式");
-            }
-            if (token.matches("-?[0-9]+")) {
-                int num = Integer.valueOf(token);
-                System.out.println(num);
-                stack.push(num);
-            }
-            if (token.matches("[\\+\\-\\*/]")) {
-                System.out.println("加减乘除" + token);
-                if (stack.size() >= 2) {
-                    int num1 = stack.pop();
-                    int num2 = stack.pop();
-                    int result = 0;
-                    switch (token){
-                        case "+":
-                            result = num2 +num1;
-                            break;
-                        case "-":
-                            result = num2 -num1;
-                            break;
-                        case "*":
-                            result = num2 *num1;
-                            break;
-                        case "/":
-                            result = num2 /num1;
-                            break;
-                    }
-                    stack.push(result);
-                }
-            }
-        }
-
-        return stack.pop();
-    }
-
-
-    public static void main(String[] args) {
-        String[] tokens = new String[]{"3", "-4", "+"};
-
-        Solution solution = new Solution();
-        int result = solution.evalRPN(tokens);
-        System.out.println(result);
-    }
-}
-```
-
-是有问题的：Time Limit Exceeded 。然后我把上面的两个 System.out.println() 语句删除就 A 过了，好神奇，所以做题还是要规范啊。
-
-Java 代码：
-
-```java
-import java.util.Stack;
-
-/**
- * @author liweiwei1419
- * @date 2019/9/20 11:04 下午
- */
-public class Solution {
+    // 思路：数字就加入栈，运算符就计算
 
     public int evalRPN(String[] tokens) {
         int len = tokens.length;
         if (len == 0) {
             return 0;
         }
-        Stack<Integer> stack = new Stack<>();
+        Deque<Integer> stack = new ArrayDeque<>();
         // 第 2 个数
         int a;
         // 第 1 个数
@@ -196,12 +94,12 @@ public class Solution {
         int c = 0;
         String operators = "+-*/";
         for (int i = 0; i < len; i++) {
-            // 是运算符
+            // 是运算符，问题 contains 这个方法好不好？
             if (operators.contains(tokens[i])) {
                 // 第 2 个数
-                a = stack.pop();
+                a = stack.removeLast();
                 // 第 1 个数
-                b = stack.pop();
+                b = stack.removeLast();
                 if ("+".equals(tokens[i])) {
                     c = b + a;
                 }
@@ -214,25 +112,13 @@ public class Solution {
                 if ("/".equals(tokens[i])) {
                     c = b / a;
                 }
-                stack.push(c);
+                stack.addLast(c);
             } else {
                 // 是数字
-                stack.push(Integer.parseInt(tokens[i]));
+                stack.addLast(Integer.parseInt(tokens[i]));
             }
         }
-        return stack.pop();
-    }
-
-    public static void main(String[] args) {
-        String[] tokens = new String[]{"10", "6", "9", "3", "+", "-11", "*", "/", "*", "17", "+", "5", "+"};
-        int res = new Solution().evalRPN(tokens);
-        System.out.println(res);
+        return stack.removeLast();
     }
 }
 ```
-
-
-
-
-
-

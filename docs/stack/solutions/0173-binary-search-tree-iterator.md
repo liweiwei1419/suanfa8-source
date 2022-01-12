@@ -48,8 +48,8 @@ bSTIterator.hasNext(); // 返回 False
 **提示：**
 
 - 树中节点的数目在范围 `[1, 105]` 内
-- `0 <= Node.val <= 106`
-- 最多调用 `105` 次 `hasNext` 和 `next` 操作
+- `0 <= Node.val <= 10^6`
+- 最多调用 `10^5` 次 `hasNext` 和 `next` 操作
 
 **进阶：**
 

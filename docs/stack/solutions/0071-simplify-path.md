@@ -63,11 +63,9 @@ tags:
 - `path` 由英文字母，数字，`'.'`，`'/'` 或 `'_'` 组成。
 - `path` 是一个有效的 Unix 风格绝对路径。
 
-## 思路分析
+## 解释题意
 
-参考了如下的文章：http://blog.csdn.net/u012249528/article/details/46705867
-
-这道题给出一个“字符串”，这个字符串中是有一些斜杠的，这些斜杠的含义是目录或者操作的分隔符。
+这道题给出一个「字符串」，这个字符串中是有一些斜杠的，这些斜杠的含义是目录或者操作的分隔符。
 
 + 如果是英文字母，就表示一个目录。
 + 如果是一个点 `.` 表示停留在当前目录，如果是两个点 `..` 表示返回上一级目录。
@@ -78,7 +76,7 @@ tags:
 
 另外我们注意到示例 3 ，有两个斜杠连在一起的情况，我们认为此时这两个斜杠中间是一个空字符，它等价于一个点 `.` ，即什么都不做。
 
-解决这道问题的思路是：
+## 思路分析
 
 1、需要先对字符串根据斜杠 `/`进行分割，得到一个字符串数组，这个字符串数组的字符串可能有以下几种：`.`、`..`、`''`、和表示目录的字母； 
 
@@ -98,10 +96,11 @@ tags:
 
 在编码的时候，一定要注意：只有在栈顶元素非空的时候，我们才能进行弹栈的操作。
 
-Java 代码：
+**参考代码**：
 
 ```java
-import java.util.Stack;
+import java.util.ArrayDeque;
+import java.util.Deque;
 
 public class Solution {
 
@@ -111,29 +110,29 @@ public class Solution {
             return "/";
         }
 
-        Stack<String> stack = new Stack<>();
+        Deque<String> stack = new ArrayDeque<>();
         for (String dir : dirs) {
             if ("".equals(dir) || ".".equals(dir)) {
                 continue;
             }
 
             if ("..".equals(dir)) {
-                if (!stack.empty()) {
-                    stack.pop();
+                // 注意：只有栈非空的时候才能弹出，注意下面 continue; 的作用
+                if (!stack.isEmpty()) {
+                    stack.removeLast();
                 }
                 continue;
             }
-
-            stack.push(dir);
+            stack.addLast(dir);
         }
 
         StringBuilder stringBuilder = new StringBuilder();
-        if (stack.empty()) {
+        if (stack.isEmpty()) {
             stringBuilder.insert(0, "/");
         }
 
-        while (!stack.empty()) {
-            stringBuilder.insert(0, stack.pop());
+        while (!stack.isEmpty()) {
+            stringBuilder.insert(0, stack.removeLast());
             stringBuilder.insert(0, "/");
         }
         return stringBuilder.toString();
@@ -143,203 +142,11 @@ public class Solution {
 
 **复杂度分析**：
 
-+ 时间复杂度：$O(N)$，这里 $N$ 是数组的长度，最坏情况下，每个字符串进栈一次，出栈一次，表示操作的字符串还不用进栈出栈，因此时间复杂度是线性的。
++ 时间复杂度：$O(N)$，这里 $N$ 是数组的长度，最坏情况下，每个字符串进栈一次，出栈一次，表示操作的字符串还不用进栈出栈，因此时间复杂度是线性的；
 + 空间复杂度：$O(N)$ ，最坏情况下，这个路径字符串本身就是化简过的，栈中就要存字符串长度这么多的字符串（近似，不包括那些斜杠）。
 
----
+## 总结
 
-
-
->1、其实没有想象中那么难，完全可以独立完成，关键是很多情况要考虑到；
->
->2、但是代码写成这样，这么多 `if` 也是觉得看着很不舒服；
->
->3、出栈之前一定要判断一下当前的栈是不是空，否则会抛 `java.util.EmptyStackException`。
-
-Java 代码：
-
-```java
-import java.util.Stack;
-
-public class Solution {
-
-    public String simplifyPath(String path) {
-        String[] paths = path.split("/");
-        Stack<String> stack = new Stack<>();
-        for (String p : paths) {
-            if (!stack.isEmpty() && "..".equals(p)) {
-                stack.pop();
-            }
-            if (!"".equals(p) && !".".equals(p) && !"..".equals(p)) {
-                stack.push(p);
-            }
-        }
-        // 输出路径字符串
-        StringBuilder s = new StringBuilder();
-        if (stack.isEmpty()) {
-            return "/";
-        }
-        while (!stack.empty()) {
-            s.insert(0, "/" + stack.pop());
-        }
-        return s.toString();
-    }
-
-    public static void main(String[] args) {
-        // String s = "/a/.////b/../../c/";
-        String s = "/../";
-        String simplifyPath = new Solution().simplifyPath(s);
-        System.out.println(simplifyPath);
-    }
-}
-```
-
-
-
-
-
- 
-
-
-
-Java 代码实现：
-
-```java
-public class Solution {
-
-    public String simplifyPath(String path) {
-        String result = "";
-        String[] pathList = path.split("/");
-        if (pathList.length == 0) {
-            return "/";
-        }
-
-        Stack<String> stack = new Stack<>();
-        for (String p : pathList) {
-            if ("".equals(p) || ".".equals(p)) {
-                continue;
-            }
-            if ("..".equals(p)) {
-                if (!stack.isEmpty()) {
-                    stack.pop();
-                }
-            } else { // 是正常的路径字符串的时候，入栈
-                stack.push(p);
-            }
-        }
-
-
-        // 现在考虑输出字符串
-        while (!stack.isEmpty()) {
-            result = "/" + stack.pop() + result;
-        }
-        if ("".equals(result)) {
-            result = "/";
-        }
-        return result;
-    }
-
-    public static void main(String[] args) {
-        Solution solution = new Solution();
-
-        String path1 = "/home/";
-        String result1 = solution.simplifyPath(path1);
-        System.out.println(result1);
-
-
-        String path2 = "/a/./b/../../c/";
-        String result2 = solution.simplifyPath(path2);
-        System.out.println(result2);
-
-
-        String path3 = "/..";
-        String result3 = solution.simplifyPath(path3);
-        System.out.println(result3);
-
-        String path4 = "/..";
-        String result4 = solution.simplifyPath(path4);
-        System.out.println(result4);
-
-        String path5 = "/abc/def/.";
-        String result5 = solution.simplifyPath(path5);
-        System.out.println(result5);
-    }
-}
-```
-
----
-
-### LeetCode 第 71 题：Simplify Path
-
-传送门：https://leetcode.com/problems/simplify-path/description/。
-
-第 2 种情况下，要求我们的程序能够有一定的容错处理的能力。
-
-我的解答参考了如下的文章：
-http://blog.csdn.net/u012249528/article/details/46705867
-
-Java 代码实现：
-
-```java
-public class Solution {
-
-    public String simplifyPath(String path) {
-        String result = "";
-        String[] pathList = path.split("/");
-        if (pathList.length == 0) {
-            return "/";
-        }
-
-        Stack<String> stack = new Stack<>();
-        for (String p : pathList) {
-            if ("".equals(p) || ".".equals(p)) {
-                continue;
-            }
-            if ("..".equals(p)) {
-                if (!stack.isEmpty()) {
-                    stack.pop();
-                }
-            } else { // 是正常的路径字符串的时候，入栈
-                stack.push(p);
-            }
-        }
-
-
-        // 现在考虑输出字符串
-        while (!stack.isEmpty()) {
-            result = "/" + stack.pop() + result;
-        }
-        if ("".equals(result)) {
-            result = "/";
-        }
-        return result;
-    }
-
-    public static void main(String[] args) {
-        Solution solution = new Solution();
-
-        String path1 = "/home/";
-        String result1 = solution.simplifyPath(path1);
-        System.out.println(result1);
-
-
-        String path2 = "/a/./b/../../c/";
-        String result2 = solution.simplifyPath(path2);
-        System.out.println(result2);
-
-
-        String path3 = "/..";
-        String result3 = solution.simplifyPath(path3);
-        System.out.println(result3);
-
-        String path4 = "/..";
-        String result4 = solution.simplifyPath(path4);
-        System.out.println(result4);
-
-        String path5 = "/abc/def/.";
-        String result5 = solution.simplifyPath(path5);
-        System.out.println(result5);
-    }
-}
-```
-
++ 其实没有想象中那么难，完全可以独立完成，关键是很多情况要考虑到；
++ 但是代码写成这样，这么多 `if` 也是觉得看着很不舒服；
++ 出栈之前一定要判断一下当前的栈是不是空，否则会抛 `java.util.EmptyStackException`。
