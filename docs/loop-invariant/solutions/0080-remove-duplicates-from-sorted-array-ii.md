@@ -7,15 +7,24 @@ tags:
   - 循环不变量
 ---
 
-+ 题目链接：[80. 删除排序数组中的重复项 II](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array-ii/description/) <Badge text="中等" type="warn"/>。
+- 题目链接：[80. 删除排序数组中的重复项 II](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array-ii/description/) <Badge text="中等" type="warn"/>。
 
 ### :tv: **视频教程**
 
 建议使用 1.5 倍速观看。
 
-* [3-5 例 4：「力扣」第 80 题：删除数组中重复的元素 II（07:30）](https://www.bilibili.com/video/BV1Jg411M7Lp?p=5)。
+- [3-5 例 4：「力扣」第 80 题：删除数组中重复的元素 II（07:30）](https://www.bilibili.com/video/BV1Jg411M7Lp?p=5)。
 
-## 题目描述 
+::: danger 视频讲解
+:tv: 这道题在 [B 站](https://www.bilibili.com/video/BV1Jg411M7Lp?p=5) 可以收看视频讲解，可以点击下面的视频右上角「去 bilibili 观看」，选择快速播放，获得更好的观看体验。
+
+:::
+
+<div style="position: relative; padding: 30% 45%;">
+<iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="https://player.bilibili.com/player.html?aid=504293075&bvid=BV1Jg411M7Lp&cid=375383286&page=5" frameborder="no" scrolling="no"></iframe>
+</div>
+
+## 题目描述
 
 给定一个排序数组，你需要在 **原地** 删除重复出现的元素，使得每个元素最多出现两次，返回移除后数组的新长度。
 
@@ -86,8 +95,10 @@ public class Solution {
         }
         return j;
     }
+
 }
-```
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Java">
@@ -112,11 +123,12 @@ public class Solution2 {
         return j + 1;
     }
 }
-```
+````
+
 </CodeGroupItem>
 </CodeGroup>
 
 **复杂度分析**：
 
-+ 时间复杂度：$O(N)$，这里 $N$ 是输入数组的长度；
-+ 空间复杂度：$O(1)$，只使用了常数个变量。
+- 时间复杂度：$O(N)$，这里 $N$ 是输入数组的长度；
+- 空间复杂度：$O(1)$，只使用了常数个变量。

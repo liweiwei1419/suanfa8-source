@@ -7,13 +7,22 @@ tags:
   - 循环不变量
 ---
 
-+ 题目链接：[26. 删除排序数组中的重复项](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/description/) <Badge text="简单" type="info"/>。
+- 题目链接：[26. 删除排序数组中的重复项](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/description/) <Badge text="简单" type="info"/>。
 
 ### :tv: **视频教程**
 
 建议使用 1.5 倍速观看。
 
-* [3-2 例 1：「力扣」第 26 题：删除数组中重复的元素（06:20）](https://www.bilibili.com/video/BV1Jg411M7Lp?p=2)。
+- [3-2 例 1：「力扣」第 26 题：删除数组中重复的元素（06:20）](https://www.bilibili.com/video/BV1Jg411M7Lp?p=2)。
+
+::: danger 视频讲解
+:tv: 这道题在 [B 站](https://www.bilibili.com/video/BV1Jg411M7Lp?p=2) 可以收看视频讲解，可以点击下面的视频右上角「去 bilibili 观看」，选择快速播放，获得更好的观看体验。
+
+:::
+
+<div style="position: relative; padding: 30% 45%;">
+<iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="https://player.bilibili.com/player.html?aid=504293075&bvid=BV1Jg411M7Lp&cid=375380886&page=2" frameborder="no" scrolling="no"></iframe>
+</div>
 
 ## 题目描述
 
@@ -24,9 +33,9 @@ tags:
 **示例 1:**
 
 ```
-给定数组 nums = [1,1,2], 
+给定数组 nums = [1,1,2],
 
-函数应该返回新的长度 2, 并且原数组 nums 的前两个元素被修改为 1, 2。 
+函数应该返回新的长度 2, 并且原数组 nums 的前两个元素被修改为 1, 2。
 
 你不需要考虑数组中超出新长度后面的元素。
 ```
@@ -62,7 +71,6 @@ for (int i = 0; i < len; i++) {
 
 （思路分析在「视频教程」，在这里只给出「参考代码」。）
 
-
 **参考代码**：
 
 <CodeGroup>
@@ -86,8 +94,10 @@ public class Solution {
         }
         return j;
     }
+
 }
-```
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Java">
@@ -110,11 +120,12 @@ public class Solution {
         return j + 1;
     }
 }
-```
+````
+
 </CodeGroupItem>
 </CodeGroup>
 
 **复杂度分析**：
 
-+ 时间复杂度：$O(N)$，这里 $N$ 是输入数组的长度；
-+ 空间复杂度：$O(1)$，只使用了常数个变量。
+- 时间复杂度：$O(N)$，这里 $N$ 是输入数组的长度；
+- 空间复杂度：$O(1)$，只使用了常数个变量。

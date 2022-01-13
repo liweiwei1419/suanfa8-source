@@ -7,20 +7,26 @@ tags:
   - 循环不变量
 ---
 
-
-+ 题目链接：[27. 移除元素](https://leetcode-cn.com/problems/remove-element/description/) <Badge text="简单" type="info"/>。
-
+- 题目链接：[27. 移除元素](https://leetcode-cn.com/problems/remove-element/description/) <Badge text="简单" type="info"/>。
 
 ### :tv: **视频教程**
 
 建议使用 1.5 倍速观看。
 
+- [3-4 例 3：「力扣」第 27 题：移除元素（03:17）](https://www.bilibili.com/video/BV1Jg411M7Lp?p=4)。
 
-* [3-4 例 3：「力扣」第 27 题：移除元素（03:17）](https://www.bilibili.com/video/BV1Jg411M7Lp?p=4)。
+::: danger 视频讲解
+:tv: 这道题在 [B 站](https://www.bilibili.com/video/BV1Jg411M7Lp?p=4) 可以收看视频讲解，可以点击下面的视频右上角「去 bilibili 观看」，选择快速播放，获得更好的观看体验。
+
+:::
+
+<div style="position: relative; padding: 30% 45%;">
+<iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="https://player.bilibili.com/player.html?aid=504293075&bvid=BV1Jg411M7Lp&cid=375382765&page=4" frameborder="no" scrolling="no"></iframe>
+</div>
 
 ## 题目描述
 
-给定一个数组 *nums* 和一个值 *val*，你需要**原地**移除所有数值等于 *val* 的元素，返回移除后数组的新长度。
+给定一个数组 _nums_ 和一个值 _val_，你需要**原地**移除所有数值等于 _val_ 的元素，返回移除后数组的新长度。
 
 不要使用额外的数组空间，你必须在**原地修改输入数组**并在使用 O(1) 额外空间的条件下完成。
 
@@ -67,12 +73,9 @@ for (int i = 0; i < len; i++) {
 }
 ```
 
-
 （思路分析在「视频教程」，在这里只给出「参考代码」。）
 
-
 **参考代码**：
-
 
 <CodeGroup>
 <CodeGroupItem title="Java">
@@ -96,9 +99,10 @@ public class Solution {
         }
         return j;
     }
+
 }
 
-```
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Java">
@@ -124,11 +128,12 @@ public class Solution {
         return j + 1;
     }
 }
-```
+````
+
 </CodeGroupItem>
 </CodeGroup>
 
 **复杂度分析**：
 
-+ 时间复杂度：$O(N)$，这里 $N$ 是输入数组的长度；
-+ 空间复杂度：$O(1)$，只使用了常数个变量。
+- 时间复杂度：$O(N)$，这里 $N$ 是输入数组的长度；
+- 空间复杂度：$O(1)$，只使用了常数个变量。
