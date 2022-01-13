@@ -14,8 +14,19 @@ tags:
 
 建议使用 1.5 倍速观看。
 
-+ 在「力扣」的官方题解里可以观看视频：[数组中的逆序对](https://leetcode-cn.com/problems/shu-zu-zhong-de-ni-xu-dui-lcof/solution/shu-zu-zhong-de-ni-xu-dui-by-leetcode-solution/)；
-+ [B 站视频](https://www.bilibili.com/video/BV1Qk4y1r7u5?from=search&seid=16040119783228718204&spm_id_from=333.337.0.0)。
+- 在「力扣」的官方题解里可以观看视频：[数组中的逆序对](https://leetcode-cn.com/problems/shu-zu-zhong-de-ni-xu-dui-lcof/solution/shu-zu-zhong-de-ni-xu-dui-by-leetcode-solution/)；
+- [B 站视频](https://www.bilibili.com/video/BV1Qk4y1r7u5?from=search&seid=16040119783228718204&spm_id_from=333.337.0.0)。
+
+::: danger 视频讲解
+:tv: 这道题在 [官方题解](https://leetcode-cn.com/problems/shu-zu-zhong-de-ni-xu-dui-lcof/solution/shu-zu-zhong-de-ni-xu-dui-by-leetcode-solution/) 和 [B 站](https://www.bilibili.com/video/BV1Qk4y1r7u5?from=search&seid=16040119783228718204&spm_id_from=333.337.0.0) 可以收看视频讲解，可以点击下面的视频右上角「去 bilibili 观看」，选择快速播放，获得更好的观看体验。
+
+:::
+
+<div style="position: relative; padding: 30% 45%;">
+<iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="https://player.bilibili.com/player.html?aid=752945291&bvid=BV1Qk4y1r7u5&cid=184354912&page=1" frameborder="no" scrolling="no"></iframe>
+</div>
+
+<iframe src="" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
 ---
 
@@ -30,7 +41,7 @@ tags:
 输出: 5
 ```
 
- **限制：**
+**限制：**
 
 ```
 0 <= 数组长度 <= 50000
@@ -39,7 +50,6 @@ tags:
 ## 《剑指 Offer》（第 2 版）第 51 题：计算数组的逆序对
 
 以下内容来自文字题解：[暴力解法、分治思想、树状数组](https://leetcode-cn.com/problems/shu-zu-zhong-de-ni-xu-dui-lcof/solution/bao-li-jie-fa-fen-zhi-si-xiang-shu-zhuang-shu-zu-b/)。
-
 
 首先最容易想到的是暴力解法。
 
@@ -97,9 +107,8 @@ class Solution:
 
 **复杂度分析**：
 
-+ 时间复杂度：$O(N^2)$，这里 $N$ 是数组的长度；
-+ 空间复杂度：$O(1)$。
-
+- 时间复杂度：$O(N^2)$，这里 $N$ 是数组的长度；
+- 空间复杂度：$O(1)$。
 
 ### 方法二：分治思想（借助归并排序统计逆序数）
 
@@ -107,19 +116,17 @@ class Solution:
 
 而计算逆序数就发生在排序的过程中，利用了「排序」以后数组的有序性。
 
-
-+ 利用「归并排序」计算逆序对，是非常经典的做法；
-+ **关键在于「合并两个有序数组」的步骤，利用数组的部分有序性**，一下子计算出一个数之前或者之后元素的逆序的个数；
-+ **前面「分」的时候什么都不做，「合」的过程中计算「逆序对」的个数**；
-+ 「排序」的工作是必要的，正是因为「排序」才能在下一轮利用顺序关系加快逆序数的计算，也能避免重复计算；
-+ 在代码实现上，只需要在「归并排序」代码的基础上，加上「逆序对」个数的计算，计算公式需要自己在草稿纸上推导。
-
+- 利用「归并排序」计算逆序对，是非常经典的做法；
+- **关键在于「合并两个有序数组」的步骤，利用数组的部分有序性**，一下子计算出一个数之前或者之后元素的逆序的个数；
+- **前面「分」的时候什么都不做，「合」的过程中计算「逆序对」的个数**；
+- 「排序」的工作是必要的，正是因为「排序」才能在下一轮利用顺序关系加快逆序数的计算，也能避免重复计算；
+- 在代码实现上，只需要在「归并排序」代码的基础上，加上「逆序对」个数的计算，计算公式需要自己在草稿纸上推导。
 
 思想是「分治算法」，所有的「逆序对」来源于 3 个部分：
 
-+ 左边区间的逆序对；
-+ 右边区间的逆序对；
-+ 横跨两个区间的逆序对。
+- 左边区间的逆序对；
+- 右边区间的逆序对；
+- 横跨两个区间的逆序对。
 
 下面提供两种写法：
 
@@ -127,7 +134,6 @@ class Solution:
 2、在第 1 个子区间元素归并回去的时候，计算逆序对的个数（参考代码 3）。
 
 注意：两者不能同时计算，否则会计算重复。
-
 
 **参考代码 2**：在第 2 个子区间元素归并回去的时候，计算逆序对的个数。
 
@@ -137,9 +143,7 @@ class Solution:
 
 ![image.png](https://pic.leetcode-cn.com/a13af31b7f9e12f6d8588d95dd71c94aa0117bc8c819899e7806a5695e237f78-image.png)
 
-
 即在 `j` 指向的元素赋值回去的时候，给计数器加上 `mid - i + 1`。
-
 
 <CodeGroup>
 <CodeGroupItem title="Java">
@@ -224,7 +228,7 @@ public class Solution {
             } else {
                 nums[k] = temp[j];
                 j++;
-                
+
                 // 在 j 指向的元素归并回去的时候，计算逆序对的个数，只多了这一行代码
                 count += (mid - i + 1);
             }
@@ -312,9 +316,6 @@ class Solution:
 
 </CodeGroupItem>
 </CodeGroup>
-
-
-
 
 **参考代码 3**：在第 1 个子区间元素归并回去的时候，计算逆序对的个数。
 
@@ -495,13 +496,12 @@ class Solution:
 </CodeGroupItem>
 </CodeGroup>
 
-
 类似问题：[315. 计算右侧小于当前元素的个数](https://leetcode-cn.com/problems/count-of-smaller-numbers-after-self/)。
 
 **复杂度分析**：
 
-+ 时间复杂度：$O(N \log N)$，这里 $N$ 是数组的长度。复杂度是归并排序的时间复杂度，直接看递归树的结点个数或者使用主定理分析，归并的回收每一步计算逆序对的个数是 $O(1)$ 的；
-+ 空间复杂度：$O(N)$。
+- 时间复杂度：$O(N \log N)$，这里 $N$ 是数组的长度。复杂度是归并排序的时间复杂度，直接看递归树的结点个数或者使用主定理分析，归并的回收每一步计算逆序对的个数是 $O(1)$ 的；
+- 空间复杂度：$O(N)$。
 
 主定理分析：数据列均分为两部分，分别排序，之后以 $O(N)$ 的复杂度进行合并。根据主定理（递归函数的时间复杂度分析工具）：
 
@@ -517,14 +517,13 @@ $$
 
 这部分内容如果是准备普通公司的算法面试，不建议花时间掌握。写在这里是为了知识的完整性和知识点的科普。
 
-+ 用树状数组解决逆序数问题，也是一个经典的做法。
-+ 树状数组是一种实现了高效查询「前缀和」与「单点更新」操作的数据结构，在「力扣」第 315 题：[计算右侧小于当前元素的个数](https://leetcode-cn.com/problems/count-of-smaller-numbers-after-self/) 的 [题解](https://leetcode-cn.com/problems/count-of-smaller-numbers-after-self/solution/shu-zhuang-shu-zu-by-liweiwei1419/) 里有介绍，这两题的解法可以说是一模一样。
-
+- 用树状数组解决逆序数问题，也是一个经典的做法。
+- 树状数组是一种实现了高效查询「前缀和」与「单点更新」操作的数据结构，在「力扣」第 315 题：[计算右侧小于当前元素的个数](https://leetcode-cn.com/problems/count-of-smaller-numbers-after-self/) 的 [题解](https://leetcode-cn.com/problems/count-of-smaller-numbers-after-self/solution/shu-zhuang-shu-zu-by-liweiwei1419/) 里有介绍，这两题的解法可以说是一模一样。
 
 具体的做法是：
 
-+ 先离散化，将所有的数组元素映射到 `0、1、2、3...` ，这是为了节约树状数组的空间；
-+ 从后向前扫描，边统计边往树状数组里面添加元素，这个过程是「动态的」，需要动手计算才能明白思想。
+- 先离散化，将所有的数组元素映射到 `0、1、2、3...` ，这是为了节约树状数组的空间；
+- 从后向前扫描，边统计边往树状数组里面添加元素，这个过程是「动态的」，需要动手计算才能明白思想。
 
 **参考代码 4**：
 
@@ -688,17 +687,12 @@ class Solution:
 </CodeGroupItem>
 </CodeGroup>
 
-
-
 **复杂度分析**：
 
-+ 时间复杂度：$O(N \log N)$，这里 $N$ 是数组的长度，树的高度近似计算为 $O(\log N)$；
-+ 空间复杂度：$O(N)$。
-
+- 时间复杂度：$O(N \log N)$，这里 $N$ 是数组的长度，树的高度近似计算为 $O(\log N)$；
+- 空间复杂度：$O(N)$。
 
 ---
-
-
 
 首先最容易想到的是暴力解法。
 
@@ -725,6 +719,7 @@ public class Solution {
     }
 }
 ```
+
 ```Python []
 from typing import List
 
@@ -745,9 +740,8 @@ class Solution:
 
 **复杂度分析**：
 
-+ 时间复杂度：$O(N^2)$，这里 $N$ 是数组的长度；
-+ 空间复杂度：$O(1)$。
-
+- 时间复杂度：$O(N^2)$，这里 $N$ 是数组的长度；
+- 空间复杂度：$O(1)$。
 
 ### 方法二：分治思想（借助归并排序统计逆序数）
 
@@ -755,19 +749,17 @@ class Solution:
 
 而计算逆序数就发生在排序的过程中，利用了「排序」以后数组的有序性。
 
-
-+ 利用「归并排序」计算逆序对，是非常经典的做法；
-+ **关键在于「合并两个有序数组」的步骤，利用数组的部分有序性**，一下子计算出一个数之前或者之后元素的逆序的个数；
-+ **前面「分」的时候什么都不做，「合」的过程中计算「逆序对」的个数**；
-+ 「排序」的工作是必要的，正是因为「排序」才能在下一轮利用顺序关系加快逆序数的计算，也能避免重复计算；
-+ 在代码实现上，只需要在「归并排序」代码的基础上，加上「逆序对」个数的计算，计算公式需要自己在草稿纸上推导。
-
+- 利用「归并排序」计算逆序对，是非常经典的做法；
+- **关键在于「合并两个有序数组」的步骤，利用数组的部分有序性**，一下子计算出一个数之前或者之后元素的逆序的个数；
+- **前面「分」的时候什么都不做，「合」的过程中计算「逆序对」的个数**；
+- 「排序」的工作是必要的，正是因为「排序」才能在下一轮利用顺序关系加快逆序数的计算，也能避免重复计算；
+- 在代码实现上，只需要在「归并排序」代码的基础上，加上「逆序对」个数的计算，计算公式需要自己在草稿纸上推导。
 
 思想是「分治算法」，所有的「逆序对」来源于 3 个部分：
 
-+ 左边区间的逆序对；
-+ 右边区间的逆序对；
-+ 横跨两个区间的逆序对。
+- 左边区间的逆序对；
+- 右边区间的逆序对；
+- 横跨两个区间的逆序对。
 
 下面提供两种写法：
 
@@ -776,7 +768,6 @@ class Solution:
 
 注意：两者不能同时计算，否则会计算重复。
 
-
 **参考代码 2**：在第 2 个子区间元素归并回去的时候，计算逆序对的个数。
 
 ![image.png](https://pic.leetcode-cn.com/0adb9d76f0f2a8efccaa1c3d340003e91e2a9eb9dc490280460acae0c8850a24-image.png)
@@ -784,7 +775,6 @@ class Solution:
 ---
 
 ![image.png](https://pic.leetcode-cn.com/a13af31b7f9e12f6d8588d95dd71c94aa0117bc8c819899e7806a5695e237f78-image.png)
-
 
 即在 `j` 指向的元素赋值回去的时候，给计数器加上 `mid - i + 1`。
 
@@ -868,7 +858,7 @@ public class Solution {
             } else {
                 nums[k] = temp[j];
                 j++;
-                
+
                 // 在 j 指向的元素归并回去的时候，计算逆序对的个数，只多了这一行代码
                 count += (mid - i + 1);
             }
@@ -877,6 +867,7 @@ public class Solution {
     }
 }
 ```
+
 ```Python []
 # 后有序数组中元素出列的时候，计算逆序个数
 
@@ -948,8 +939,6 @@ class Solution:
                 res += (mid - i + 1)
         return res
 ```
-
-
 
 **参考代码 3**：
 
@@ -1041,6 +1030,7 @@ public class Solution {
     }
 }
 ```
+
 ```Python []
 # 前有序数组中元素出列的时候，计算逆序个数
 
@@ -1117,13 +1107,12 @@ class Solution:
         return res
 ```
 
-
 类似问题：[315. 计算右侧小于当前元素的个数](https://leetcode-cn.com/problems/count-of-smaller-numbers-after-self/)。
 
 **复杂度分析**：
 
-+ 时间复杂度：$O(N \log N)$，这里 $N$ 是数组的长度。复杂度是归并排序的时间复杂度，直接看递归树的结点个数或者使用主定理分析，归并的回收每一步计算逆序对的个数是 $O(1)$ 的；
-+ 空间复杂度：$O(N)$。
+- 时间复杂度：$O(N \log N)$，这里 $N$ 是数组的长度。复杂度是归并排序的时间复杂度，直接看递归树的结点个数或者使用主定理分析，归并的回收每一步计算逆序对的个数是 $O(1)$ 的；
+- 空间复杂度：$O(N)$。
 
 主定理分析：数据列均分为两部分，分别排序，之后以 $O(N)$ 的复杂度进行合并。根据主定理（递归函数的时间复杂度分析工具）：
 
@@ -1139,14 +1128,13 @@ $$
 
 这部分内容如果是准备普通公司的算法面试，不建议花时间掌握。写在这里是为了知识的完整性和知识点的科普。
 
-+ 用树状数组解决逆序数问题，也是一个经典的做法。
-+ 树状数组是一种实现了高效查询「前缀和」与「单点更新」操作的数据结构，在「力扣」第 315 题：[计算右侧小于当前元素的个数](https://leetcode-cn.com/problems/count-of-smaller-numbers-after-self/) 的 [题解](https://leetcode-cn.com/problems/count-of-smaller-numbers-after-self/solution/shu-zhuang-shu-zu-by-liweiwei1419/) 里有介绍，这两题的解法可以说是一模一样。
-
+- 用树状数组解决逆序数问题，也是一个经典的做法。
+- 树状数组是一种实现了高效查询「前缀和」与「单点更新」操作的数据结构，在「力扣」第 315 题：[计算右侧小于当前元素的个数](https://leetcode-cn.com/problems/count-of-smaller-numbers-after-self/) 的 [题解](https://leetcode-cn.com/problems/count-of-smaller-numbers-after-self/solution/shu-zhuang-shu-zu-by-liweiwei1419/) 里有介绍，这两题的解法可以说是一模一样。
 
 具体的做法是：
 
-+ 先离散化，将所有的数组元素映射到 `0、1、2、3...` ，这是为了节约树状数组的空间；
-+ 从后向前扫描，边统计边往树状数组里面添加元素，这个过程是「动态的」，需要动手计算才能明白思想。
+- 先离散化，将所有的数组元素映射到 `0、1、2、3...` ，这是为了节约树状数组的空间；
+- 从后向前扫描，边统计边往树状数组里面添加元素，这个过程是「动态的」，需要动手计算才能明白思想。
 
 **参考代码 4**：
 
@@ -1235,6 +1223,7 @@ public class Solution {
     }
 }
 ```
+
 ```Python []
 from typing import List
 
@@ -1301,5 +1290,5 @@ class Solution:
 
 **复杂度分析**：
 
-+ 时间复杂度：$O(N \log N)$，这里 $N$ 是数组的长度，树的高度近似计算为 $O(\log N)$；
-+ 空间复杂度：$O(N)$。
+- 时间复杂度：$O(N \log N)$，这里 $N$ 是数组的长度，树的高度近似计算为 $O(\log N)$；
+- 空间复杂度：$O(N)$。

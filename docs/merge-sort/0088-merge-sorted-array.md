@@ -6,8 +6,8 @@ tags:
   - 数组
 ---
 
-+ 题目链接：[88. 合并两个有序数组](https://leetcode-cn.com/problems/merge-sorted-array/)；
-+ 题解链接：[归并排序子步骤（Java）](https://leetcode-cn.com/problems/merge-sorted-array/solution/si-xiang-mei-you-chuang-xin-de-di-fang-zhu-yao-ti-/)。
+- 题目链接：[88. 合并两个有序数组](https://leetcode-cn.com/problems/merge-sorted-array/)；
+- 题解链接：[归并排序子步骤（Java）](https://leetcode-cn.com/problems/merge-sorted-array/solution/si-xiang-mei-you-chuang-xin-de-di-fang-zhu-yao-ti-/)。
 
 ## 题目描述
 
@@ -16,8 +16,6 @@ tags:
 请你 **合并** `nums2` 到 `nums1` 中，使合并后的数组同样按 **非递减顺序** 排列。
 
 **注意：**最终，合并后数组不应由函数返回，而是存储在数组 `nums1` 中。为了应对这种情况，`nums1` 的初始长度为 `m + n`，其中前 `m` 个元素表示应合并的元素，后 `n` 个元素为 `0` ，应忽略。`nums2` 的长度为 `n` 。
-
-
 
 **示例 1：**
 
@@ -47,8 +45,6 @@ tags:
 注意，因为 m = 0 ，所以 nums1 中没有元素。nums1 中仅存的 0 仅仅是为了确保合并结果可以顺利存放到 nums1 中。
 ```
 
-
-
 **提示：**
 
 - `nums1.length == m + n`
@@ -61,13 +57,11 @@ tags:
 
 ## 归并排序子步骤（Java）
 
-
 **思路分析**：
 
 合并两个有序数组是归并排序的子过程。学习过归并排序的朋友们，解决这个问题一定不在话下。
 
 ![0088-from-left-to-right.gif](https://pic.leetcode-cn.com/a5e5b52070e7fb4aaef2a7f4eff293590fca47a5728dff3ffa0fcaa9803cca0b-0088-from-left-to-right.gif)
-
 
 这道题的说明：
 
@@ -77,24 +71,21 @@ tags:
 
 ![0088-from-right-to-left.gif](https://pic.leetcode-cn.com/a31928e6a54cb8593e5a652a5abd96ca1f3f2d89358eaa146c4eb7a3aee4ef4e-0088-from-right-to-left.gif)
 
-
 思想并不难，主要在编码上要注意一些细节。
-
 
 **编码细节**：
 
-+ 下面的代码使用 `for` 循环表示我们一个一个确定归并以后的数；
-+ 在 `for` 循环内用 `if elseif else` 结构，保证一次只会执行一个分支；
-+ 为保证逻辑清晰，个人不建议写 `nums[i++]` 这样的代码，一行代码只执行一个逻辑，另外我看到 `i++` 或者 `++i` 脑子里还要先想一想，位于数组索引位置的时候到底是先加还是后加，我们不应该且没有必要给别人阅读代码造成理解上的一点点小麻烦，不过本人尊重任何个人的编码风格和习惯；
-+ 分支里面先写其中一个指针遍历完成的逻辑，否则会发生数组下标越界：**把 `i` 先用完，`j` 先用完的逻辑写在开头是为了防止数组下标越界，这一点不论是从前向后归并还是从后向前归并来说都是一致的**；
-+ **从后向前归并的时候，如果 nums2 数组用完了，可以直接结束算法，因为算法如果执行下去，也是数组 nums1 自己给自己赋值，还要执行相应的判断**，**没有必要**。  
+- 下面的代码使用 `for` 循环表示我们一个一个确定归并以后的数；
+- 在 `for` 循环内用 `if elseif else` 结构，保证一次只会执行一个分支；
+- 为保证逻辑清晰，个人不建议写 `nums[i++]` 这样的代码，一行代码只执行一个逻辑，另外我看到 `i++` 或者 `++i` 脑子里还要先想一想，位于数组索引位置的时候到底是先加还是后加，我们不应该且没有必要给别人阅读代码造成理解上的一点点小麻烦，不过本人尊重任何个人的编码风格和习惯；
+- 分支里面先写其中一个指针遍历完成的逻辑，否则会发生数组下标越界：**把 `i` 先用完，`j` 先用完的逻辑写在开头是为了防止数组下标越界，这一点不论是从前向后归并还是从后向前归并来说都是一致的**；
+- **从后向前归并的时候，如果 nums2 数组用完了，可以直接结束算法，因为算法如果执行下去，也是数组 nums1 自己给自己赋值，还要执行相应的判断**，**没有必要**。
 
 ### 方法一：从头到尾归并
 
 **参考代码 1**：
 
 Python 代码：
-
 
 ```Python []
 from typing import List
@@ -161,10 +152,11 @@ public class Solution {
     }
 }
 ```
+
 **复杂度分析**：
 
-+ 时间复杂度：$O(M + N)$，这里 $M$ 是数组 nums1 的长度，$N$ 是数组 nums2 的长度。
-+ 空间复杂度：$O(M)$，这里 $M$ 是 nums1 的长度。
+- 时间复杂度：$O(M + N)$，这里 $M$ 是数组 nums1 的长度，$N$ 是数组 nums2 的长度。
+- 空间复杂度：$O(M)$，这里 $M$ 是 nums1 的长度。
 
 ### 方法二：从尾到头归并（更省空间，并且可以提前终止归并）
 
@@ -172,9 +164,7 @@ public class Solution {
 
 注意 2：当 nums2 数组所有的数都看完的时候，算法终止。
 
-
 **参考代码 2**：
-
 
 Python 代码：
 
@@ -262,27 +252,28 @@ public class Solution {
     }
 }
 ```
+
 **复杂度分析**：
 
-+ 时间复杂度：$O(M + N)$，这里 $M$ 是数组 nums1 的长度，$N$ 是数组 nums2 的长度。
-+ 空间复杂度：$O(1)$，该算法没有使用额外的存储空间，仅使用了常数个临时变量用于比较。
+- 时间复杂度：$O(M + N)$，这里 $M$ 是数组 nums1 的长度，$N$ 是数组 nums2 的长度。
+- 空间复杂度：$O(1)$，该算法没有使用额外的存储空间，仅使用了常数个临时变量用于比较。
 
 ---
 
 ### 参考资料
 
-+ [从后向前归并（Java、Python）](https://leetcode-cn.com/problems/merge-sorted-array/solution/si-xiang-mei-you-chuang-xin-de-di-fang-zhu-yao-ti-/)
+- [从后向前归并（Java、Python）](https://leetcode-cn.com/problems/merge-sorted-array/solution/si-xiang-mei-you-chuang-xin-de-di-fang-zhu-yao-ti-/)
 
 ### 「力扣」第 88 题：合并两个有序数组
 
 传送门：英文网址：[88. Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/description/) ，中文网址：[88. 合并两个有序数组](https://leetcode-cn.com/problems/merge-sorted-array/description/) 。
 
-> 给定两个有序整数数组 *nums1* 和 *nums2*，将 *nums2* 合并到 *nums1* 中*，*使得 *num1* 成为一个有序数组。
+> 给定两个有序整数数组 _nums1_ 和 _nums2_，将 _nums2_ 合并到 _nums1_ 中*，*使得 _num1_ 成为一个有序数组。
 >
 > **说明:**
 >
-> - 初始化 *nums1* 和 *nums2* 的元素数量分别为 *m* 和 *n*。
-> - 你可以假设 *nums1* 有足够的空间（空间大小大于或等于 *m + n*）来保存 *nums2* 中的元素。
+> - 初始化 _nums1_ 和 _nums2_ 的元素数量分别为 _m_ 和 _n_。
+> - 你可以假设 _nums1_ 有足够的空间（空间大小大于或等于 _m + n_）来保存 _nums2_ 中的元素。
 >
 > **示例:**
 >
@@ -290,7 +281,7 @@ public class Solution {
 > 输入:
 > nums1 = [1,2,3,0,0,0], m = 3
 > nums2 = [2,5,6],       n = 3
-> 
+>
 > 输出: [1,2,2,3,5,6]
 > ```
 
@@ -353,7 +344,7 @@ class Solution:
         j = n - 1
 
         for k in range(m + n - 1, -1, -1):
-            if i == -1: 
+            if i == -1:
                 nums1[k] = nums2[j]
                 j -= 1
             elif j == -1:
@@ -369,20 +360,16 @@ class Solution:
 
 说明：`range(m + n - 1, -1, -1)` 表示索引的最大值是 `m + n - 1` ，最小值是 `0`。
 
-
-
-
-
 ## 「力扣」第 88 题：从后向前归并两个有序数组
 
 传送门：英文网址：[88. Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/description/) ，中文网址：[88. 合并两个有序数组](https://leetcode-cn.com/problems/merge-sorted-array/description/) 。
 
-> 给定两个有序整数数组 *nums1* 和 *nums2*，将 *nums2* 合并到 *nums1* 中*，*使得 *num1* 成为一个有序数组。
+> 给定两个有序整数数组 _nums1_ 和 _nums2_，将 _nums2_ 合并到 _nums1_ 中*，*使得 _num1_ 成为一个有序数组。
 >
 > **说明:**
 >
-> - 初始化 *nums1* 和 *nums2* 的元素数量分别为 *m* 和 *n*。
-> - 你可以假设 *nums1* 有足够的空间（空间大小大于或等于 *m + n*）来保存 *nums2* 中的元素。
+> - 初始化 _nums1_ 和 _nums2_ 的元素数量分别为 _m_ 和 _n_。
+> - 你可以假设 _nums1_ 有足够的空间（空间大小大于或等于 _m + n_）来保存 _nums2_ 中的元素。
 >
 > **示例:**
 >
@@ -390,13 +377,13 @@ class Solution:
 > 输入:
 > nums1 = [1,2,3,0,0,0], m = 3
 > nums2 = [2,5,6],       n = 3
-> 
+>
 > 输出: [1,2,2,3,5,6]
 > ```
 
 分析：其实就是归并排序，不过从后向前归并是这道题的考点。注意分 4 种情况，代码的写法其实是相对固定的。
 
-思路1：可以使用标准的归并排序来做。
+思路 1：可以使用标准的归并排序来做。
 
 Python 代码：从前向后写
 
@@ -430,7 +417,7 @@ class Solution:
                 j += 1
 ```
 
-思路2：考虑到这道题的特殊性，即 `nums1` 有足够的空间，因此，我们可以从后向前归并，每次从两个数组的末尾选出最大的元素放在 nums1 的末尾，而不使用额外的数组空间。
+思路 2：考虑到这道题的特殊性，即 `nums1` 有足够的空间，因此，我们可以从后向前归并，每次从两个数组的末尾选出最大的元素放在 nums1 的末尾，而不使用额外的数组空间。
 
 你可能会担心，nums1 之前有效的元素会不会被覆盖掉，但在这题中，这种情况是不可能出现的。在实现的时候，还是要特别注意一些边界条件。
 
@@ -451,7 +438,7 @@ class Solution:
         j = n - 1
 
         for k in range(m + n - 1, -1, -1):
-            if i == -1: 
+            if i == -1:
                 nums1[k] = nums2[j]
                 j -= 1
             elif j == -1:
@@ -469,9 +456,7 @@ class Solution:
 
 ---
 
-+ [题目链接](https://leetcode-cn.com/problems/merge-sorted-array)
-
-
+- [题目链接](https://leetcode-cn.com/problems/merge-sorted-array)
 
 **关键**：从后向前归并排序。
 
@@ -526,6 +511,5 @@ public class Solution {
             }
         }
     }
-} 
+}
 ```
-

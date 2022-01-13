@@ -12,12 +12,35 @@ tags:
 
 建议使用 1.5 倍速观看。
 
-+ [4-1 排序算法的稳定性（04:18）](https://www.bilibili.com/video/BV1D64y1B76c?p=1)
-+ [4-2 归并排序的基本思想（03:53）](https://www.bilibili.com/video/BV1D64y1B76c?p=2)
-+ [4-3 归并排序与深度优先遍历（03:59）](https://www.bilibili.com/video/BV1D64y1B76c?p=3)
-+ [4-4 归并排序与栈（04:15）](https://www.bilibili.com/video/BV1D64y1B76c?p=4)
-+ [4-5 归并排序的代码演示与复杂度分析（06:35）](https://www.bilibili.com/video/BV1D64y1B76c?p=5)
+- [4-1 排序算法的稳定性（04:18）](https://www.bilibili.com/video/BV1D64y1B76c?p=1)；
 
+<div style="position: relative; padding: 30% 45%;">
+<iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="https://player.bilibili.com/player.html?aid=759609736&bvid=BV1D64y1B76c&cid=379893598&page=1" frameborder="no" scrolling="no"></iframe>
+</div>
+
+- [4-2 归并排序的基本思想（03:53）](https://www.bilibili.com/video/BV1D64y1B76c?p=2)；
+
+<div style="position: relative; padding: 30% 45%;">
+<iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="https://player.bilibili.com/player.html?aid=759609736&bvid=BV1D64y1B76c&cid=379893598&page=2" frameborder="no" scrolling="no"></iframe>
+</div>
+
+- [4-3 归并排序与深度优先遍历（03:59）](https://www.bilibili.com/video/BV1D64y1B76c?p=3)；
+
+<div style="position: relative; padding: 30% 45%;">
+<iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="https://player.bilibili.com/player.html?aid=759609736&bvid=BV1D64y1B76c&cid=379893598&page=3" frameborder="no" scrolling="no"></iframe>
+</div>
+
+- [4-4 归并排序与栈（04:15）](https://www.bilibili.com/video/BV1D64y1B76c?p=4)；
+
+<div style="position: relative; padding: 30% 45%;">
+<iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="https://player.bilibili.com/player.html?aid=759609736&bvid=BV1D64y1B76c&cid=379893598&page=4" frameborder="no" scrolling="no"></iframe>
+</div>
+
+- [4-5 归并排序的代码演示与复杂度分析（06:35）](https://www.bilibili.com/video/BV1D64y1B76c?p=5)。
+
+<div style="position: relative; padding: 30% 45%;">
+<iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="https://player.bilibili.com/player.html?aid=759609736&bvid=BV1D64y1B76c&cid=379893598&page=5" frameborder="no" scrolling="no"></iframe>
+</div>
 
 ::: danger 提示
 
@@ -35,9 +58,8 @@ tags:
 
 ![](https://tva1.sinaimg.cn/large/008i3skNgy1gwzfnr7j9rg30g0054458.gif)
 
-
-
 这是我们首次接触 **递归算法**。下面我将一步一步展示如何编写递归函数实现归并排序。
+
 ## 第 1 步：先写出最顶层函数
 
 我们对下标在 `[0..len - 1]` ，左闭且右闭的这个区间里的元素使用递归的「归并排序」算法。
@@ -57,6 +79,7 @@ public void test05() {
     System.out.println(Arrays.toString(arr));
 }
 ```
+
 ## 第 2 步：写出递归函数
 
 注意应该先考虑递归终止的条件。
@@ -84,7 +107,7 @@ private void mergeSort(int[] arr, int left, int right) {
     // 使用一分为二的思路，一直递归下去
     // int mid = (left + right) / 2; 这种写法在 left 和 right 是大整数的时候，会发生溢出
     int mid = left + (right - left) / 2;
-    
+
     // 下面这几行代码关于边界值的处理要特别小心，要紧扣自己定义的变量的含义进行逻辑的编写
     mergeSort(arr, left, mid);
     mergeSort(arr, mid + 1, right);
@@ -161,7 +184,7 @@ private void mergeTwoSortedArray(int[] arr, int left, int mid, int right) {
     int l = 0;
     // 右边数组的起始位置
     int r = mid - left + 1;
-    
+
     // 循环遍历把 arr 在 [left..right] 这个区间重新赋值
     // temp 数组中的元素不动，只是拿来做比较，然后我们一直修改的是 arr 数组在 [left..right] 的值
     for (int i = 0; i < length; i++) {
@@ -268,13 +291,11 @@ if __name__ == '__main__':
 </CodeGroupItem>
 </CodeGroup>
 
-
 ::: danger 注意
 
 实现归并排序的时候，要特别注意，不要把这个算法实现成非稳定排序，区别就在 `<=` 和 `<` ，在上面的代码中已经加上了着重号。写 `<=` 表示值相同的时候，位于前面的有序数组里的数先归并回去，保证了稳定性。
 
 :::
-
 
 ## 总结
 

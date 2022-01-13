@@ -8,21 +8,30 @@ tags:
   - 归并排序
 ---
 
-+ 题目地址：[「力扣」第 315 题：计算右侧小于当前元素的个数](https://leetcode-cn.com/problems/count-of-smaller-numbers-after-self/)；
-+ 题解地址：[归并排序计算逆序对 + 索引数组（Java、Python）](https://leetcode-cn.com/problems/count-of-smaller-numbers-after-self/solution/gui-bing-pai-xu-suo-yin-shu-zu-python-dai-ma-java-/)。
+- 题目地址：[「力扣」第 315 题：计算右侧小于当前元素的个数](https://leetcode-cn.com/problems/count-of-smaller-numbers-after-self/)；
+- 题解地址：[归并排序计算逆序对 + 索引数组（Java、Python）](https://leetcode-cn.com/problems/count-of-smaller-numbers-after-self/solution/gui-bing-pai-xu-suo-yin-shu-zu-python-dai-ma-java-/)。
 
 ## :tv: **视频教程**
 
 建议使用 1.5 倍速观看。
 
-+ 在「力扣」的题解里可以观看视频：[归并排序 + 索引数组（Java、Python）](https://leetcode-cn.com/problems/count-of-smaller-numbers-after-self/solution/gui-bing-pai-xu-suo-yin-shu-zu-python-dai-ma-java-/);
-+ [B 站视频](https://www.bilibili.com/video/BV1Hz411v7XC?spm_id_from=333.999.0.0)。
+- 在「力扣」的题解里可以观看视频：[归并排序 + 索引数组（Java、Python）](https://leetcode-cn.com/problems/count-of-smaller-numbers-after-self/solution/gui-bing-pai-xu-suo-yin-shu-zu-python-dai-ma-java-/);
+- [B 站视频](https://www.bilibili.com/video/BV1Hz411v7XC?spm_id_from=333.999.0.0)。
+
+::: danger 视频讲解
+:tv: 这道题在 [题解](https://leetcode-cn.com/problems/count-of-smaller-numbers-after-self/solution/gui-bing-pai-xu-suo-yin-shu-zu-python-dai-ma-java-/) 和 [B 站](https://www.bilibili.com/video/BV1Hz411v7XC?spm_id_from=333.999.0.0) 可以收看视频讲解，可以点击下面的视频右上角「去 bilibili 观看」，选择快速播放，获得更好的观看体验。
+
+:::
+
+<div style="position: relative; padding: 30% 45%;">
+<iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="https://player.bilibili.com/player.html?aid=201289351&bvid=BV1Hz411v7XC&cid=211168296&page=1" frameborder="no" scrolling="no"></iframe>
+</div>
 
 **说明**：
 
-+ 由于时间精力有限，没有做剪辑和修饰，感谢大家的理解；
-+ 「归并排序」的代码是按照《算法 4》这本书第 2.2 节的写法，与写几个 `while` 循环是等价的，归并回去的时候都需要考虑数组下标越界的情况；
-+ 树状数组的知识讲解和写法可以参考：[树状数组（Java、Python）](https://leetcode-cn.com/problems/count-of-smaller-numbers-after-self/solution/shu-zhuang-shu-zu-by-liweiwei1419/)。
+- 由于时间精力有限，没有做剪辑和修饰，感谢大家的理解；
+- 「归并排序」的代码是按照《算法 4》这本书第 2.2 节的写法，与写几个 `while` 循环是等价的，归并回去的时候都需要考虑数组下标越界的情况；
+- 树状数组的知识讲解和写法可以参考：[树状数组（Java、Python）](https://leetcode-cn.com/problems/count-of-smaller-numbers-after-self/solution/shu-zhuang-shu-zu-by-liweiwei1419/)。
 
 ## 题目描述
 
@@ -32,7 +41,7 @@ tags:
 
 ```
 输入：nums = [5,2,6,1]
-输出：[2,1,1,0] 
+输出：[2,1,1,0]
 解释：
 5 的右侧有 2 个更小的元素 (2 和 1)
 2 的右侧仅有 1 个更小的元素 (1)
@@ -54,8 +63,6 @@ tags:
 输出：[0,0]
 ```
 
- 
-
 **提示：**
 
 - `1 <= nums.length <= 10^5`
@@ -65,11 +72,11 @@ tags:
 
 使用「归并排序」求解这道问题，需要有求解「逆序对」的经验。可以先做一下「力扣」剑指 Offer 51. [数组中的逆序对](https://leetcode-cn.com/problems/shu-zu-zhong-de-ni-xu-dui-lcof/)；
 
-+ 求解「逆序对」的思想：当其中一个数字放进最终归并以后的有序数组中的时候，这个数字与之前看过的数字个数（或者是未看过的数字个数）可以直接统计出来，而不必一个一个数。这样排序完成以后，原数组的逆序数也就计算出来了；
-+ 具体来说，本题让我们求「在一个数组的某个元素的右边，比自己小的元素的个数」，因此，需要在「前有序数组」的元素归并的时候，数一数「后有序数组」已经归并回去的元素的个数，因为这些已经出列的元素都比当前出列的元素要（严格）小；
-+ 但是在「归并」的过程中，元素的位置会发生变化，因此下一步需要思考如何定位元素；根据「索引堆」的学习经验，一个元素在算法的执行过程中位置发生变化，我们还想定位它，可以使用「索引数组」，技巧在于：**「原始数组」不变，用于比较两个元素的大小，真正位置变化的是「索引数组」的位置**；
-+ 「索引数组」技巧建立了一个一一对应的关系，**记录了当前操作的数对应的「原始数组」的下标**，「索引数组」技巧想法的来源是「索引堆」（《算法（第 4 版）》第 2.4 节 练习）；
-+ 「归并排序」还需要一个用于归并的辅助数组，这个时候拷贝的就是索引数组的值了。
+- 求解「逆序对」的思想：当其中一个数字放进最终归并以后的有序数组中的时候，这个数字与之前看过的数字个数（或者是未看过的数字个数）可以直接统计出来，而不必一个一个数。这样排序完成以后，原数组的逆序数也就计算出来了；
+- 具体来说，本题让我们求「在一个数组的某个元素的右边，比自己小的元素的个数」，因此，需要在「前有序数组」的元素归并的时候，数一数「后有序数组」已经归并回去的元素的个数，因为这些已经出列的元素都比当前出列的元素要（严格）小；
+- 但是在「归并」的过程中，元素的位置会发生变化，因此下一步需要思考如何定位元素；根据「索引堆」的学习经验，一个元素在算法的执行过程中位置发生变化，我们还想定位它，可以使用「索引数组」，技巧在于：**「原始数组」不变，用于比较两个元素的大小，真正位置变化的是「索引数组」的位置**；
+- 「索引数组」技巧建立了一个一一对应的关系，**记录了当前操作的数对应的「原始数组」的下标**，「索引数组」技巧想法的来源是「索引堆」（《算法（第 4 版）》第 2.4 节 练习）；
+- 「归并排序」还需要一个用于归并的辅助数组，这个时候拷贝的就是索引数组的值了。
 
 **参考代码**：
 
@@ -248,12 +255,10 @@ if __name__ == '__main__':
 </CodeGroupItem>
 </CodeGroup>
 
-
-
 **复杂度分析：**
 
-+ 时间复杂度：$O(N \log N)$，数组的元素个数是 $N$，递归执行分治法，时间复杂度是对数级别的，因此时间复杂度是 $O(N \log N)$。
-+ 空间复杂度：$O(N)$，需要 $3$ 个数组，一个索引数组，一个临时数组用于索引数组的归并，还有一个结果数组，它们的长度都是 $N$，故空间复杂度是 $O(N)$。
+- 时间复杂度：$O(N \log N)$，数组的元素个数是 $N$，递归执行分治法，时间复杂度是对数级别的，因此时间复杂度是 $O(N \log N)$。
+- 空间复杂度：$O(N)$，需要 $3$ 个数组，一个索引数组，一个临时数组用于索引数组的归并，还有一个结果数组，它们的长度都是 $N$，故空间复杂度是 $O(N)$。
 
 **补充**：视频中的图片。
 
@@ -262,4 +267,3 @@ if __name__ == '__main__':
 ![315-merge-sort-20.png](https://pic.leetcode-cn.com/1624981721-GlhaCs-315-merge-sort-20.png)
 
 ![315-merge-sort-21.png](https://pic.leetcode-cn.com/1624981721-xNSHFa-315-merge-sort-21.png)
-

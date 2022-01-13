@@ -8,14 +8,21 @@ tags:
   - 归并排序
 ---
 
-
 ## :tv: **视频教程**
 
 建议使用 1.5 倍速观看。
 
-+ [4-6 归并排序的优化（03:26）](https://www.bilibili.com/video/BV1D64y1B76c?p=6)
-+ [4-7 归并排序总结（08:53）](https://www.bilibili.com/video/BV1D64y1B76c?p=7)
+- [4-6 归并排序的优化（03:26）](https://www.bilibili.com/video/BV1D64y1B76c?p=6)；
 
+<div style="position: relative; padding: 30% 45%;">
+<iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="https://player.bilibili.com/player.html?aid=759609736&bvid=BV1D64y1B76c&cid=380748393&page=6" frameborder="no" scrolling="no"></iframe>
+</div>
+
+- [4-7 归并排序总结（08:53）](https://www.bilibili.com/video/BV1D64y1B76c?p=7)。
+
+<div style="position: relative; padding: 30% 45%;">
+<iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="https://player.bilibili.com/player.html?aid=759609736&bvid=BV1D64y1B76c&cid=380750826&page=7" frameborder="no" scrolling="no"></iframe>
+</div>
 
 ## 优化的方向
 
@@ -25,14 +32,13 @@ tags:
 
 ### 优化 2
 
- 在「两个数组」本身就是有序的情况下，无需合并。如下所示：
+在「两个数组」本身就是有序的情况下，无需合并。如下所示：
 
 ![image-20211223042459552](https://tva1.sinaimg.cn/large/008i3skNgy1gxn9mvlrldj30ye0bsjrv.jpg)
 
 ### 优化 3
 
 全程使用一份临时数组进行「合并两个有序数组」的操作，避免创建临时数组和销毁的消耗，避免计算下标偏移量。
-
 
 「归并排序」比「快速排序」好的一点是，它借助了额外空间，可以实现「稳定排序」，Java 里对于「对象数组」的排序任务，就是使用归并排序（的升级版 TimSort，在这里就不多做介绍）。
 
@@ -42,8 +48,7 @@ tags:
 
 递归、分治处理问题的思想在基础算法领域是非常常见的，建议多练习编写「归并排序」学习递归思想，了解递归的细节，熟悉分治的思想。
 
-::: 
-
+:::
 
 根据上一节的的 3 个优化，写出代码。
 
@@ -126,8 +131,10 @@ public class Solution {
             j++;
         }
     }
+
 }
-```
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Java">
@@ -228,7 +235,7 @@ public class Solution {
         }
     }
 }
-```
+````
 
 </CodeGroupItem>
 
@@ -300,10 +307,10 @@ class MergeSortOptimizer:
 
 **复杂度分析**：
 
-+ 时间复杂度：$O(N \log N)$，这里 $N$ 是数组的长度；
-+ 空间复杂度：$O(N)$，辅助数组与输入数组的长度相同。
+- 时间复杂度：$O(N \log N)$，这里 $N$ 是数组的长度；
+- 空间复杂度：$O(N)$，辅助数组与输入数组的长度相同。
 
 ## 经典问题
 
-+ 《剑指 Offer》第 51 题：[数组中的逆序对](https://leetcode-cn.com/problems/shu-zu-zhong-de-ni-xu-dui-lcof/)，照着归并排序的思路就能写出来；
-+ 「力扣」第 315 题：[计算右侧小于当前元素的个数](https://leetcode-cn.com/problems/count-of-smaller-numbers-after-self/)，它们是一个问题。
+- 《剑指 Offer》第 51 题：[数组中的逆序对](https://leetcode-cn.com/problems/shu-zu-zhong-de-ni-xu-dui-lcof/)，照着归并排序的思路就能写出来；
+- 「力扣」第 315 题：[计算右侧小于当前元素的个数](https://leetcode-cn.com/problems/count-of-smaller-numbers-after-self/)，它们是一个问题。

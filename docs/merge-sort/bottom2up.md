@@ -35,8 +35,6 @@ tags:
 
 ![image-20211223042218049](https://tva1.sinaimg.cn/large/008i3skNgy1gxn9k2tarej30rq02waa9.jpg)
 
-
-
 这个数组满足归并排序的条件，所以可以进行归并排序，得到：
 
 ![image-20211223042238698](https://tva1.sinaimg.cn/large/008i3skNgy1gxn9kfjmmzj30r603gt8y.jpg)
