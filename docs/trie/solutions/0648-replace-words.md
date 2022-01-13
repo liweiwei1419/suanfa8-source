@@ -6,7 +6,7 @@ tags:
   - 前缀树
 ---
 
-+ 题目链接：[648. 单词替换](https://leetcode-cn.com/problems/replace-words/)。
+- 题目链接：[648. 单词替换](https://leetcode-cn.com/problems/replace-words/)。
 
 ## 题目描述
 
@@ -15,8 +15,6 @@ tags:
 现在，给定一个由许多词根组成的词典和一个句子。你需要将句子中的所有`继承词`用`词根`替换掉。如果`继承词`有许多可以形成它的`词根`，则用最短的词根替换它。
 
 你需要输出替换之后的句子。
-
-
 
 **示例 1：**
 
@@ -53,8 +51,6 @@ tags:
 输出："it is ab that this solution is ac"
 ```
 
-
-
 **提示：**
 
 - `1 <= dictionary.length <= 1000`
@@ -69,21 +65,19 @@ tags:
 
 ## 题意分析
 
-+ 需要将句子中的所有继承词用词根替换掉；
-+ 需要输出替换之后的句子。
+- 需要将句子中的所有继承词用词根替换掉；
+- 需要输出替换之后的句子。
 
 参考资料：
 
-+ 官方题解：https://leetcode-cn.com/problems/replace-words/solution/dan-ci-ti-huan-by-leetcode/
-+ 作者：xuebuhui0729
+- 官方题解：https://leetcode-cn.com/problems/replace-words/solution/dan-ci-ti-huan-by-leetcode/
+- 作者：xuebuhui0729
   链接：https://leetcode-cn.com/problems/replace-words/solution/java-dan-ci-ti-huan-zao-shang-xue-xi-de-triefang-f/
 
 1. 首先将 dict 按照长度进行从小到大排序；
 2. 依次搜索 sentence 中的每个单词，结合上一点可以保证我们找到的结果是最短的词根。
 
-
 **参考代码**：
-
 
 ```java
 import java.util.Collections;
@@ -165,10 +159,3 @@ public class Solution {
     }
 }
 ```
-
-
-
-
-
-
-

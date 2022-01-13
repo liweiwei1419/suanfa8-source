@@ -6,10 +6,8 @@ tags:
   - 前缀树
 ---
 
-+ 题目链接：[720. 词典中最长的单词]()；
-+ 题解链接：[]()。
-
-
+- 题目链接：[720. 词典中最长的单词]()；
+- 题解链接：[]()。
 
 前缀树：https://leetcode-cn.com/problems/longest-word-in-dictionary/solution/qian-zhui-shu-dfsbao-li-sou-suo-by-boille/
 
@@ -21,20 +19,15 @@ tags:
 链接：https://leetcode-cn.com/problems/longest-word-in-dictionary
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 
-
-
 **提示：**
 
 - 所有输入的字符串都只包含小写字母。
 - `words`数组长度范围为`[1,1000]`。
 - `words[i]`的长度范围为`[1,30]`。
 
-
-
 说明：这道题 DFS 可以用栈实现。
 
 ## 方法二：字典树
-
 
 ```java
 public class Solution {
@@ -91,4 +84,3 @@ public class Solution {
     }
 }
 ```
-

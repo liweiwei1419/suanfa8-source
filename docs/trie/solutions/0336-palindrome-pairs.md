@@ -6,19 +6,17 @@ tags:
   - 前缀树
 ---
 
-+ 题目链接：[336. 回文对](https://leetcode-cn.com/problems/palindrome-pairs/)。
+- 题目链接：[336. 回文对](https://leetcode-cn.com/problems/palindrome-pairs/)。
 
 ## 题目描述
 
 给定一组 **互不相同** 的单词， 找出所有 **不同** 的索引对 `(i, j)`，使得列表中的两个单词， `words[i] + words[j]` ，可拼接成回文串。
 
-
-
 **示例 1：**
 
 ```
 输入：words = ["abcd","dcba","lls","s","sssll"]
-输出：[[0,1],[1,0],[3,2],[2,4]] 
+输出：[[0,1],[1,0],[3,2],[2,4]]
 解释：可拼接成的回文串为 ["dcbaabcd","abcddcba","slls","llssssll"]
 ```
 
@@ -26,7 +24,7 @@ tags:
 
 ```
 输入：words = ["bat","tab","cat"]
-输出：[[0,1],[1,0]] 
+输出：[[0,1],[1,0]]
 解释：可拼接成的回文串为 ["battab","tabbat"]
 ```
 
@@ -45,9 +43,4 @@ tags:
 
 ## 方法一：字典树
 
-
-
-
-
 ## 方法二：马拉车算法
-

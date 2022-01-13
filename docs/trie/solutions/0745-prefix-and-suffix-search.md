@@ -6,9 +6,7 @@ tags:
   - 前缀树
 ---
 
-
-+ 题目链接：[745. 前缀和后缀搜索](https://leetcode-cn.com/problems/prefix-and-suffix-search/description/)。
-
+- 题目链接：[745. 前缀和后缀搜索](https://leetcode-cn.com/problems/prefix-and-suffix-search/description/)。
 
 ### LeetCode 第 745 题：
 
@@ -35,4 +33,4 @@ tags:
 > 4. `prefix, suffix`的长度在`[0, 10]`之前。
 > 5. `words[i]`和`prefix, suffix`只包含小写字母。
 
-### 
+###

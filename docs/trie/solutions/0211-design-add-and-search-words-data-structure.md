@@ -6,8 +6,8 @@ tags:
   - 前缀树
 ---
 
-+ 题目链接：[211. 添加与搜索单词 - 数据结构设计](https://leetcode-cn.com/problems/design-add-and-search-words-data-structure/)；
-+ 题解链接：[遇到通配符时递归处理（Python 代码、Java 代码）](https://leetcode-cn.com/problems/add-and-search-word-data-structure-design/solution/yu-dao-tong-pei-fu-shi-di-gui-chu-li-python-dai-ma/) 。
+- 题目链接：[211. 添加与搜索单词 - 数据结构设计](https://leetcode-cn.com/problems/design-add-and-search-words-data-structure/)；
+- 题解链接：[遇到通配符时递归处理（Python 代码、Java 代码）](https://leetcode-cn.com/problems/add-and-search-word-data-structure-design/solution/yu-dao-tong-pei-fu-shi-di-gui-chu-li-python-dai-ma/) 。
 
 ## 题目描述
 
@@ -20,7 +20,6 @@ tags:
 - `bool search(word)` 如果数据结构中存在字符串与 `word` 匹配，则返回 `true` ；否则，返回 `false` 。`word` 中可能包含一些 `'.'` ，每个 `.` 都可以表示任何一个字母。
 
 **示例：**
-
 
 ```
 输入：
@@ -51,9 +50,7 @@ wordDictionary.search("b.."); // return True
 
 关于这道问题的难点是通配符 `"."` 的处理，其实也不难：**在遇到 `"."` 的时候，需要遍历，因此使用递归方法，将该结点的每一个分支都看过去，只要有一个分支返回 `true` 就可以了**，全部分支都走过去，都没有返回 `true` 的才返回 `false`。
 
-
 对于 Trie 树还不太熟悉的朋友可以先完成「力扣」 [第 208 题：实现 Trie (前缀树)](https://leetcode-cn.com/problems/implement-trie-prefix-tree/)，这里要注意的是，一个结点指向孩子结点的「指针」（一般情况下多于 1 个），可以使用数组表示，也可以使用哈希表表示，如果题目中限制了测试用例「所有的输入都是由小写字母 a-z 构成的」，则可以使用数组表示。
-
 
 ## 一个结点指向的所有孩子结点用「数组」表示
 
@@ -129,8 +126,10 @@ public class WordDictionary {
             return match(word, node.next[alpha - 'a'], start + 1);
         }
     }
+
 }
-```
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Python">
@@ -184,7 +183,8 @@ class WordDictionary:
             if not node.next[ord(alpha)-ord('a')]:
                 return False
             return self.__match(word, node.next[ord(alpha) - ord('a')], start + 1)
-```
+````
+
 </CodeGroupItem>
 </CodeGroup>
 
@@ -281,8 +281,10 @@ public class WordDictionary {
         boolean search4 = wordDictionary.search("b.."); //-> true
         System.out.println(search4);
     }
+
 }
-```
+
+````
 </CodeGroupItem>
 <CodeGroupItem title="Python">
 ```python
@@ -337,7 +339,8 @@ class WordDictionary(object):
                 return False
             # 注意：这里要使用 return 返回
             return self.match(node.next[alpha], word, index + 1)
-```
+````
+
 </CodeGroupItem>
 <CodeGroupItem title="Python">
 ```python
@@ -388,17 +391,18 @@ class WordDictionary(object):
             # 注意：这里要返回
             return False
         else:
-            # 注意：这里要使用 else 
+            # 注意：这里要使用 else
             if alpha not in node.dict:
                 return False
             # 注意：这里要使用 return 返回
             return self.match(node.dict[alpha], word, index + 1)
-```
+
+````
 </CodeGroupItem>
 </CodeGroup>
 
 
-+ 
++
 
 | 题目地址                                                     | 题解                                                         |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -471,7 +475,7 @@ class WordDictionary:
             if not node.next[ord(alpha)-ord('a')]:
                 return False
             return self.__match(word, node.next[ord(alpha) - ord('a')], start + 1)
-```
+````
 
 Java 代码：
 
@@ -546,7 +550,6 @@ public class WordDictionary {
 }
 ```
 
-
 2、一个结点指向孩子结点的“指针”们用哈希表表示。
 
 Python 代码：
@@ -606,7 +609,6 @@ class WordDictionary(object):
 ```
 
 Java 代码：
-
 
 ```Java
 import java.util.HashMap;

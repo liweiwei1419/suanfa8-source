@@ -6,7 +6,6 @@ tags:
   - 前缀树
 ---
 
-
 - 题目链接：[677. 键值映射](https://leetcode-cn.com/problems/map-sum-pairs/description/)。
 
 ## 题目描述
@@ -28,9 +27,9 @@ tags:
 
 解释：
 MapSum mapSum = new MapSum();
-mapSum.insert("apple", 3);  
+mapSum.insert("apple", 3);
 mapSum.sum("ap");           // return 3 (apple = 3)
-mapSum.insert("app", 2);    
+mapSum.insert("app", 2);
 mapSum.sum("ap");           // return 5 (apple + app = 3 + 2 = 5)
 ```
 
@@ -38,7 +37,6 @@ mapSum.sum("ap");           // return 5 (apple + app = 3 + 2 = 5)
 
 - `1 <= key.length, prefix.length <= 50`
 - `key` 和 `prefix` 仅由小写英文字母组成
-
 - `1 <= val <= 1000`
 - 最多调用 `50` 次 `insert` 和 `sum`
 
@@ -115,9 +113,10 @@ public class MapSum {
         }
         return res;
     }
+
 }
 
-```
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Python">
@@ -169,6 +168,7 @@ class MapSum(object):
         for next in node.dict:
             s += self.presum(node.dict[next])
         return s
-```
+````
+
 </CodeGroupItem>
 </CodeGroup>

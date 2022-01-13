@@ -50,7 +50,6 @@ trie.search("app");     // 返回 True
 
 **参考代码**：
 
-
 <CodeGroup>
 <CodeGroupItem title="Java">
 ```java
@@ -143,8 +142,10 @@ public class Trie {
         boolean search2 = trie.search("hello");
         System.out.println(search2);
     }
+
 }
-```
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Python">
@@ -204,12 +205,12 @@ class Trie(object):
             else:
                 cur_node = cur_node.dict[alpha]
         return True
-```
+````
+
 </CodeGroupItem>
 </CodeGroup>
 
 其实并不难，多写几遍也就熟悉了。
-
 
 实现一个 Trie (前缀树)，包含 `insert`, `search`, 和 `startsWith` 这三个操作。
 
@@ -217,14 +218,15 @@ class Trie(object):
 >
 > ```
 > Trie trie = new Trie();
-> 
+>
 > trie.insert("apple");
 > trie.search("apple");   // 返回 true
 > trie.search("app");     // 返回 false
 > trie.startsWith("app"); // 返回 true
-> trie.insert("app");   
+> trie.insert("app");
 > trie.search("app");     // 返回 true
 > ```
+>
 > **说明:**
 >
 > - 你可以假设所有的输入都是由小写字母 `a-z` 构成的。
