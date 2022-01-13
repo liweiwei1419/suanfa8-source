@@ -6,8 +6,8 @@ tags:
   - 二叉树
 ---
 
-+ 题目链接：[108. 将有序数组转换为二叉搜索树](https://leetcode-cn.com/problems/convert-sorted-array-to-binary-search-tree/)；
-+ 题解链接：[分而治之（递归）](https://leetcode-cn.com/problems/convert-sorted-array-to-binary-search-tree/solution/fen-er-zhi-zhi-di-gui-by-liweiwei1419/)。
+- 题目链接：[108. 将有序数组转换为二叉搜索树](https://leetcode-cn.com/problems/convert-sorted-array-to-binary-search-tree/)；
+- 题解链接：[分而治之（递归）](https://leetcode-cn.com/problems/convert-sorted-array-to-binary-search-tree/solution/fen-er-zhi-zhi-di-gui-by-liweiwei1419/)。
 
 ## 题目描述
 
@@ -18,8 +18,6 @@ tags:
 **示例 1：**
 
 ![img](https://assets.leetcode.com/uploads/2021/02/18/btree1.jpg)
-
-
 
 ```
 输入：nums = [-10,-3,0,5,9]
@@ -39,21 +37,11 @@ tags:
 解释：[1,3] 和 [3,1] 都是高度平衡二叉搜索树。
 ```
 
-
-
 **提示：**
 
 - `1 <= nums.length <= 10^4`
 - `-10^4 <= nums[i] <= 10^4`
 - `nums` 按 **严格递增** 顺序排列
-
-
-
-
-
-
-
-
 
 思路：题目要求**构建高度平衡二叉搜索树**，找到解决问题的突破口。
 
@@ -61,7 +49,6 @@ tags:
 2、递归构建左子树和右子树，应用到分治思想。
 
 **参考代码**：
-
 
 ```Java []
 class TreeNode {
@@ -102,6 +89,7 @@ public class Solution {
     }
 }
 ```
+
 ```Python []
 from typing import List
 
@@ -134,6 +122,7 @@ class Solution:
             return None
         return helper(nums, 0, size - 1)
 ```
+
 ```C++ []
 class TreeNode {
     int val;
@@ -174,8 +163,6 @@ public class Solution {
 }
 ```
 
-
-
 Python 代码：
 
 ```python
@@ -206,11 +193,7 @@ class Solution:
         return root
 ```
 
-
-
-
-
 **复杂度分析**：
 
-+ 时间复杂度：$O(N)$，根据主定理：$T(N) = 2 \times T(\frac{N}{2}) + O(1)$，这里 $N$ 是数组的长度。
-+ 空间复杂度：$O(\log N)$。
+- 时间复杂度：$O(N)$，根据主定理：$T(N) = 2 \times T(\frac{N}{2}) + O(1)$，这里 $N$ 是数组的长度。
+- 空间复杂度：$O(\log N)$。

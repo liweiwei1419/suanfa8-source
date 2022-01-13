@@ -7,14 +7,12 @@ tags:
   - 递归
 ---
 
-+ 题目链接：[230. 二叉搜索树中第K小的元素](https://leetcode-cn.com/problems/kth-smallest-element-in-a-bst/description/)；
-+ 题解链接：[递归与非递归写法（同理完成第 144、94、145 题，Python 代码、Java 代码）](https://leetcode-cn.com/problems/kth-smallest-element-in-a-bst/solution/di-gui-yu-fei-di-gui-xie-fa-tong-li-wan-cheng-di-1/)。
+- 题目链接：[230. 二叉搜索树中第 K 小的元素](https://leetcode-cn.com/problems/kth-smallest-element-in-a-bst/description/)；
+- 题解链接：[递归与非递归写法（同理完成第 144、94、145 题，Python 代码、Java 代码）](https://leetcode-cn.com/problems/kth-smallest-element-in-a-bst/solution/di-gui-yu-fei-di-gui-xie-fa-tong-li-wan-cheng-di-1/)。
 
 ## 题目描述
 
 给定一个二叉搜索树的根节点 `root` ，和一个整数 `k` ，请你设计一个算法查找其中第 `k` 个最小元素（从 1 开始计数）。
-
- 
 
 **示例 1：**
 
@@ -48,7 +46,6 @@ tags:
 
 > 我写下来发现递归的写法比较容易写错，要设置全局变量，而非递归的写法还相对比较“通用”且好理解。
 
-
 **参考代码 1**：使用递归“中序遍历”。
 
 ```Python []
@@ -59,7 +56,7 @@ class TreeNode:
         self.right = None
 
 # 使用递归的方法，中序遍历
-        
+
 class Solution:
 
     def __init__(self):
@@ -71,7 +68,7 @@ class Solution:
         if root.left:
             # 不是空，才继续遍历
             self.kthSmallest(root.left, k)
-        
+
         # 在这里执行操作，数到第 k 个即可
         self.counter += 1
         # print(root.val)
@@ -79,7 +76,7 @@ class Solution:
             # 注意：千万不能在这里返回，后序遍历还要继续进行下去
             self.res = root.val
             # 注意：这里不能加 return
-        
+
         # 递归执行右子树的逻辑
         if root.right:
             self.kthSmallest(root.right, k)
@@ -100,6 +97,7 @@ if __name__ == '__main__':
     result = solution.kthSmallest(node3, k=1)
     print(result)
 ```
+
 ```Java []
 class TreeNode {
     int val;
@@ -243,6 +241,7 @@ class Solution:
                 if node.left:
                     stack.append((1, node.left))
 ```
+
 ```Java []
 import java.util.Stack;
 
@@ -294,9 +293,6 @@ public class Solution4 {
 }
 ```
 
-
-
-
 ---
 
 ### 方法一：先得到中序遍历的结果，然后找到第 k 大元素
@@ -339,13 +335,13 @@ Java 代码：
 
 ```java
 public class Solution {
-    
+
     public int kthSmallest(TreeNode root, int k) {
         count = k;
         dfs(root);
         return res;
     }
-    
+
     private int count = 0;
     private int res = 0;
 
@@ -367,12 +363,6 @@ public class Solution {
     }
 }
 ```
-
-
-
-
-
-
 
 分析：因为二分搜索树具有顺序性，所以我们可以用类似快速排序的 partition 操作来完成
 
@@ -510,4 +500,3 @@ class Solution:
                 if node.left:
                     stack.append((1, node.left))
 ```
-

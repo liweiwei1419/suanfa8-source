@@ -7,8 +7,8 @@ tags:
   - 递归
 ---
 
-+ 题目链接：[450. 删除二叉搜索树中的节点](https://leetcode-cn.com/problems/delete-node-in-a-bst/)；
-+ 题解链接：[用前驱或者后继结点代替被删除结点（Python、Java 代码）](https://leetcode-cn.com/problems/delete-node-in-a-bst/solution/yong-qian-qu-huo-zhe-hou-ji-jie-dian-zi-shu-dai-ti/)。
+- 题目链接：[450. 删除二叉搜索树中的节点](https://leetcode-cn.com/problems/delete-node-in-a-bst/)；
+- 题解链接：[用前驱或者后继结点代替被删除结点（Python、Java 代码）](https://leetcode-cn.com/problems/delete-node-in-a-bst/solution/yong-qian-qu-huo-zhe-hou-ji-jie-dian-zi-shu-dai-ti/)。
 
 ## 题目描述
 
@@ -22,8 +22,6 @@ tags:
 **示例 1:**
 
 ![img](https://assets.leetcode.com/uploads/2020/09/04/del_node_1.jpg)
-
-
 
 ```
 输入：root = [5,3,6,2,4,null,7], key = 3
@@ -60,7 +58,7 @@ tags:
 
 ## 用前驱或者后继结点代替被删除结点（Python、Java 代码）
 
-“二分搜索树删除结点”这一操作在《数据结构与算法》这一类的教科书上均有介绍，虽然这个操作是计算机科学家 [Hibbard](https://zh.wikipedia.org/wiki/%E4%BA%8C%E5%85%83%E6%90%9C%E5%B0%8B%E6%A8%B9) 发明的，但其实这个操作非常简单且直观。  
+“二分搜索树删除结点”这一操作在《数据结构与算法》这一类的教科书上均有介绍，虽然这个操作是计算机科学家 [Hibbard](https://zh.wikipedia.org/wiki/%E4%BA%8C%E5%85%83%E6%90%9C%E5%B0%8B%E6%A8%B9) 发明的，但其实这个操作非常简单且直观。
 
 掌握递归删除二分搜索树结点的方法，注意递归函数的定义，有的时候需要返回一个新的二分搜索树的根。
 
@@ -70,10 +68,7 @@ tags:
 
 这个问题我以前专门写了题解，请点击[这里](https://liweiwei1419.github.io/leetcode-solution/leetcode-0450-delete-node-in-a-bst/)。
 
-
 理解这个算法的关键在于保持 BST 中序遍历的顺序性，当待删除结点的左右结点都不为空的时候，让待删除结点的前驱结点或者后继结点代替被删除结点，这样就能成为一棵树，并且还是 BST，否则就变成森林，或者不保持 BST 中序遍历的顺序性了。
-
-
 
 ![](https://pic.leetcode-cn.com/65820431b5bc15336391c8445bb22d8d6de3bd428a660413b9bd20fe5933ed72.png)
 
@@ -83,13 +78,11 @@ tags:
 
 ![](https://pic.leetcode-cn.com/2fc9bbc19b20dcf017f794824c36ac0bef8115b4d888454b0977a1a9fdc1308e.png)
 
-
 在草稿纸上很容易画出 BST 删除结点操作的这 3 种情况。
 
 ![](https://pic.leetcode-cn.com/60d185c859470a8118a6d5319300749a1b504c18935d2b0a28d45d58afd248aa.png)
 
 ![](https://pic.leetcode-cn.com/f8d57d74649c7f1737f64fdeaf92ad78f9e8a40794ac5409b60844ad28ff3ec2.png)
-
 
 ## 方法一：用前驱结点（左子树中最大结点）代替被删除结点
 
@@ -224,7 +217,6 @@ class Solution {
 ```
 
 ## 方法二：用后继结点（右子树中最小结点）代替被删除结点
-
 
 **参考代码 2**：
 
@@ -361,4 +353,3 @@ public class Solution {
     }
 }
 ```
-

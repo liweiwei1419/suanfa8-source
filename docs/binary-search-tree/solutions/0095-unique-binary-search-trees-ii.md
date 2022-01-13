@@ -6,9 +6,7 @@ tags:
   - 分治算法
 ---
 
-
-+ 题目链接：[95. 不同的二叉搜索树 II](https://leetcode-cn.com/problems/unique-binary-search-trees-ii)。
-
+- 题目链接：[95. 不同的二叉搜索树 II](https://leetcode-cn.com/problems/unique-binary-search-trees-ii)。
 
 ## 题目描述
 
@@ -29,8 +27,6 @@ tags:
 输入：n = 1
 输出：[[1]]
 ```
-
-
 
 **提示：**
 
@@ -184,4 +180,3 @@ public class Solution4 {
     }
 }
 ```
-

@@ -7,7 +7,7 @@ tags:
   - 递归
 ---
 
-+ 题目链接：[98. 验证二叉搜索树](https://leetcode-cn.com/problems/validate-binary-search-tree/description/)。
+- 题目链接：[98. 验证二叉搜索树](https://leetcode-cn.com/problems/validate-binary-search-tree/description/)。
 
 ## 题目描述
 
@@ -18,8 +18,6 @@ tags:
 - 节点的左子树只包含 **小于** 当前节点的数。
 - 节点的右子树只包含 **大于** 当前节点的数。
 - 所有左子树和右子树自身必须也是二叉搜索树。
-
-
 
 **示例 1：**
 
@@ -60,12 +58,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Solution {
-    
+
     public boolean isValidBST(TreeNode root) {
         if (root == null) {
             return true;
         }
-        
+
         List<Integer> res = new ArrayList<>();
         inOrder(root, res);
 
@@ -77,7 +75,7 @@ public class Solution {
         }
         return true;
     }
-    
+
     private void inOrder(TreeNode treeNode, List<Integer> res) {
         if (treeNode == null) {
             return;
@@ -171,7 +169,7 @@ public class Solution {
 }
 ```
 
-+ 另一种写法
+- 另一种写法
 
 **参考代码 4**：
 
@@ -200,4 +198,3 @@ public class Solution {
 }
 
 ```
-

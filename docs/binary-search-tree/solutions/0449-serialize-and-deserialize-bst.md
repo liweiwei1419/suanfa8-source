@@ -7,7 +7,7 @@ tags:
   - 递归
 ---
 
-+ 题目链接：[449. 序列化和反序列化二叉搜索树](https://leetcode-cn.com/problems/serialize-and-deserialize-bst/)。
+- 题目链接：[449. 序列化和反序列化二叉搜索树](https://leetcode-cn.com/problems/serialize-and-deserialize-bst/)。
 
 ## 题目描述
 
@@ -36,7 +36,6 @@ tags:
 - 树中节点数范围是 `[0, 10^4]`
 - `0 <= Node.val <= 10^4`
 - 题目数据 **保证** 输入的树是一棵二叉搜索树。
-
 
 ::: warning 说明
 因时间和精力关系，本题没有写详解，只给出了参考代码。读者可以在「力扣」这道题的评论区和题解区找到适合自己的思路分析和代码。如果确实需要我编写具体的解题思路，可以发邮件到 liweiwei1419@gmail.com。
@@ -99,4 +98,3 @@ public class Codec {
 // Codec codec = new Codec();
 // codec.deserialize(codec.serialize(root));
 ```
-

@@ -6,15 +6,14 @@ tags:
   - 二叉搜索树
 ---
 
-
-+ 题目链接：[1008. 前序遍历构造二叉搜索树](https://leetcode-cn.com/problems/construct-binary-search-tree-from-preorder-traversal/)；
-+ 题解链接：[分治思想（Java）](https://leetcode-cn.com/problems/construct-binary-search-tree-from-preorder-traversal/solution/fen-zhi-si-xiang-java-by-liweiwei1419/)。
+- 题目链接：[1008. 前序遍历构造二叉搜索树](https://leetcode-cn.com/problems/construct-binary-search-tree-from-preorder-traversal/)；
+- 题解链接：[分治思想（Java）](https://leetcode-cn.com/problems/construct-binary-search-tree-from-preorder-traversal/solution/fen-zhi-si-xiang-java-by-liweiwei1419/)。
 
 ## 题目描述
 
 返回与给定前序遍历 `preorder` 相匹配的二叉搜索树（binary **search** tree）的根结点。
 
-(回想一下，二叉搜索树是二叉树的一种，其每个节点都满足以下规则，对于 `node.left` 的任何后代，值总 `< node.val`，而 `node.right` 的任何后代，值总 `> node.val`。*此外，前序遍历首先显示节点 `node` 的值，然后遍历 `node.left`，接着遍历 `node.right`。）*
+(回想一下，二叉搜索树是二叉树的一种，其每个节点都满足以下规则，对于 `node.left` 的任何后代，值总 `< node.val`，而 `node.right` 的任何后代，值总 `> node.val`。_此外，前序遍历首先显示节点 `node` 的值，然后遍历 `node.left`，接着遍历 `node.right`。）_
 
 题目保证，对于给定的测试用例，总能找到满足要求的二叉搜索树。
 
@@ -39,20 +38,18 @@ tags:
 
 二叉树的很多问题都可以根据分治来做。
 
-
 **编码要点**：
 
-+ 前序遍历的第 1 个结点一定是二叉树的根结点；
-+ 由于构造出来的是 BST，第 1 个结点后面被分成了两个子区间：
-  + 第 1 个子区间里所有的元素都严格小于根结点 -> 递归构建成根结点的左子树；
-  + 第 2 个子区间里所有的元素都严格大于根结点 -> 递归构建成根结点的右子树。
+- 前序遍历的第 1 个结点一定是二叉树的根结点；
+- 由于构造出来的是 BST，第 1 个结点后面被分成了两个子区间：
+  - 第 1 个子区间里所有的元素都严格小于根结点 -> 递归构建成根结点的左子树；
+  - 第 2 个子区间里所有的元素都严格大于根结点 -> 递归构建成根结点的右子树。
 
 在这里递归函数里面一定会有一次遍历，不可以像 「力扣」第 105 题：[从前序与中序遍历序列构造二叉树](https://leetcode-cn.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/) 一样，先用哈希表记住一些关系，然后递归的时候一下子得到左右分界线。
 
-+ 但是可以发现，后面那一段其实是一个有「谷底」的数组，我们可以使用「二分查找」找到那个谷底，这里要注意边界条件。
+- 但是可以发现，后面那一段其实是一个有「谷底」的数组，我们可以使用「二分查找」找到那个谷底，这里要注意边界条件。
 
 （如果知道优化解法的朋友，欢迎指正。）
-
 
 **参考代码 1**：
 
@@ -116,9 +113,8 @@ public class Solution {
 
 **复杂度分析**：
 
-+ 时间复杂度：$O(N^2)$，最差情况就是顺序数组和倒序数组，这种情况相当于构建一个链表；
-+ 空间复杂度：$O(N)$，递归调用的方法栈的高度是 $O(\log N)$，被忽略。
-
+- 时间复杂度：$O(N^2)$，最差情况就是顺序数组和倒序数组，这种情况相当于构建一个链表；
+- 空间复杂度：$O(N)$，递归调用的方法栈的高度是 $O(\log N)$，被忽略。
 
 **参考代码 2**：
 
@@ -183,9 +179,7 @@ public class Solution {
 }
 ```
 
-
 **复杂度分析**：
 
-+ 时间复杂度：$O(N \log N)$，二分查找优化了线性查找的时间复杂度；
-+ 空间复杂度：$O(N)$，同上。
-
+- 时间复杂度：$O(N \log N)$，二分查找优化了线性查找的时间复杂度；
+- 空间复杂度：$O(N)$，同上。
