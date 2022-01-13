@@ -2,18 +2,18 @@
 title: 「力扣」第 560 题：和为 K 的子数组（中等）
 icon: yongyan
 category: 前缀和
-tags: 
+tags:
   - 前缀和
   - 哈希表
 ---
-
 
 ::: danger 说明
 分享一下，没有会员的朋友可以做类似 352 题的 560 题。
 :::
 
-+ 题目链接：[560. 和为 K 的子数组](https://leetcode-cn.com/problems/subarray-sum-equals-k/)；
+- 题目链接：[560. 和为 K 的子数组](https://leetcode-cn.com/problems/subarray-sum-equals-k/)；
 - 题解链接：[暴力解法、前缀和、前缀和优化（Java）](https://leetcode-cn.com/problems/subarray-sum-equals-k/solution/bao-li-jie-fa-qian-zhui-he-qian-zhui-he-you-hua-ja/)。
+
 ## 题目描述
 
 给你一个整数数组 `nums` 和一个整数 `k` ，请你统计并返回该数组中和为 `k` 的连续子数组的个数。
@@ -34,15 +34,16 @@ tags:
 
 **提示：**
 
-- `1 <= nums.length <= 2 * 104`
+- `1 <= nums.length <= 2 * 10^4`
 - `-1000 <= nums[i] <= 1000`
-- `-107 <= k <= 107`
+- `-10^7 <= k <= 10^7`
 
 ## 方法一：暴力解法（超时）
 
 - 枚举左右边界（超时）。
 
 Java 代码：
+
 ```java
 public class Solution {
 
@@ -65,13 +66,17 @@ public class Solution {
     }
 }
 ```
+
 **复杂度分析**：
 
-- 时间复杂度：![](https://cdn.nlark.com/yuque/__latex/9074405a1aeb2b91c003db60608401ef.svg#card=math&code=O%28N%5E3%29&height=23&width=49)，这里 ![](https://cdn.nlark.com/yuque/__latex/8d9c307cb7f3c4a32822a51922d1ceaa.svg#card=math&code=N&height=16&width=15) 是数组的长度；
+- 时间复杂度：![](https://cdn.nlark.com/yuque/__latex/9074405a1aeb2b91c003db60608401ef.svg#card=math&code=O%28N%5E3%29&height=23&width=49)，这里  ![](https://cdn.nlark.com/yuque/__latex/8d9c307cb7f3c4a32822a51922d1ceaa.svg#card=math&code=N&height=16&width=15)  是数组的长度；
 - 空间复杂度：![](https://cdn.nlark.com/yuque/__latex/5e079a28737d5dd019a3b8f6133ee55e.svg#card=math&code=O%281%29&height=20&width=34)。
+
 ## 方法二：暴力解法的优化
+
 固定了起点，即枚举左边界，时间复杂度降了一维。
 Java 代码：
+
 ```java
 public class Solution {
 
@@ -92,16 +97,19 @@ public class Solution {
     }
 }
 ```
+
 **复杂度分析**：
 
-- 时间复杂度：![](https://cdn.nlark.com/yuque/__latex/8e9c5fee65a4f32abccd0e83ff203e39.svg#card=math&code=O%28N%5E2%29&height=23&width=49)，这里 ![](https://cdn.nlark.com/yuque/__latex/8d9c307cb7f3c4a32822a51922d1ceaa.svg#card=math&code=N&height=16&width=15) 是数组的长度；
+- 时间复杂度：![](https://cdn.nlark.com/yuque/__latex/8e9c5fee65a4f32abccd0e83ff203e39.svg#card=math&code=O%28N%5E2%29&height=23&width=49)，这里 ![](https://cdn.nlark.com/yuque/__latex/8d9c307cb7f3c4a32822a51922d1ceaa.svg#card=math&code=N&height=16&width=15)  是数组的长度；
 - 空间复杂度：![](https://cdn.nlark.com/yuque/__latex/5e079a28737d5dd019a3b8f6133ee55e.svg#card=math&code=O%281%29&height=20&width=34)。
+
 ## 方法三：前缀和
 
 - 构建前缀和数组，以便快速计算区间和；
 - 注意在计算区间和的时候，下标有偏移。
 
 Java 代码：
+
 ```java
 public class Solution {
 
@@ -127,10 +135,12 @@ public class Solution {
     }
 }
 ```
+
 **复杂度分析**：
 
-- 时间复杂度：![](https://cdn.nlark.com/yuque/__latex/8e9c5fee65a4f32abccd0e83ff203e39.svg#card=math&code=O%28N%5E2%29&height=23&width=49)，这里 ![](https://cdn.nlark.com/yuque/__latex/8d9c307cb7f3c4a32822a51922d1ceaa.svg#card=math&code=N&height=16&width=15) 是数组的长度；
+- 时间复杂度：![](https://cdn.nlark.com/yuque/__latex/8e9c5fee65a4f32abccd0e83ff203e39.svg#card=math&code=O%28N%5E2%29&height=23&width=49)，这里 ![](https://cdn.nlark.com/yuque/__latex/8d9c307cb7f3c4a32822a51922d1ceaa.svg#card=math&code=N&height=16&width=15)  是数组的长度；
 - 空间复杂度：![](https://cdn.nlark.com/yuque/__latex/33697ce7dfa48ba80980d298c8089378.svg#card=math&code=O%28N%29&height=20&width=41)。
+
 ## 方法四：前缀和 + 哈希表优化
 
 - 使用哈希表加速运算；
@@ -138,11 +148,12 @@ public class Solution {
 这个思路不是很容易想到，需要多做一些类似的问题慢慢培养感觉。
 
 - 同类问题有：
-   - [「力扣」第 1 题：两数之和](https://leetcode-cn.com/problems/two-sum/)；
-   - [「力扣」第 1248 题： 统计「优美子数组」](https://leetcode-cn.com/problems/count-number-of-nice-subarrays/)；
-   - [「力扣」第 454 题：四数相加 II](https://leetcode-cn.com/problems/4sum-ii/)。
+  - [「力扣」第 1 题：两数之和](https://leetcode-cn.com/problems/two-sum/)；
+  - [「力扣」第 1248 题： 统计「优美子数组」](https://leetcode-cn.com/problems/count-number-of-nice-subarrays/)；
+  - [「力扣」第 454 题：四数相加 II](https://leetcode-cn.com/problems/4sum-ii/)。
 
 Java 代码：
+
 ```java
 import java.util.HashMap;
 import java.util.Map;
@@ -172,7 +183,8 @@ public class Solution {
     }
 }
 ```
+
 **复杂度分析**：
 
-- 时间复杂度：![](https://cdn.nlark.com/yuque/__latex/33697ce7dfa48ba80980d298c8089378.svg#card=math&code=O%28N%29&height=20&width=41)，这里 ![](https://cdn.nlark.com/yuque/__latex/8d9c307cb7f3c4a32822a51922d1ceaa.svg#card=math&code=N&height=16&width=15) 是数组的长度；
+- 时间复杂度：![](https://cdn.nlark.com/yuque/__latex/33697ce7dfa48ba80980d298c8089378.svg#card=math&code=O%28N%29&height=20&width=41)，这里 ![](https://cdn.nlark.com/yuque/__latex/8d9c307cb7f3c4a32822a51922d1ceaa.svg#card=math&code=N&height=16&width=15)  是数组的长度；
 - 空间复杂度：![](https://cdn.nlark.com/yuque/__latex/33697ce7dfa48ba80980d298c8089378.svg#card=math&code=O%28N%29&height=20&width=41)。

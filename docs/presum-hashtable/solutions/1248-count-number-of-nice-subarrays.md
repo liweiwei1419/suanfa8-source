@@ -2,13 +2,12 @@
 title: 「力扣」第 1248 题：统计「优美子数组」（中等）
 icon: yongyan
 category: 前缀和
-tags: 
+tags:
   - 前缀和
   - 哈希表
 ---
 
-
-+ 题目链接：[1248. 统计「优美子数组」](https://leetcode-cn.com/problems/count-number-of-nice-subarrays/)。
+- 题目链接：[1248. 统计「优美子数组」](https://leetcode-cn.com/problems/count-number-of-nice-subarrays/)。
 
 ## 题目描述
 
@@ -43,9 +42,9 @@ tags:
 
 **提示**：
 
-+ `1 <= nums.length <= 50000`
-+ `1 <= nums[i] <= 10^5`
-+ `1 <= k <= nums.length`
+- `1 <= nums.length <= 50000`
+- `1 <= nums[i] <= 10^5`
+- `1 <= k <= nums.length`
 
 ## 方法一：滑动窗口（数学）
 
@@ -97,7 +96,7 @@ class Solution {
             prefixCnt[sum]++;
             if (sum >= k) {
                 res += prefixCnt[sum - k];
-            }       
+            }
         }
         return res;
     }
@@ -106,12 +105,10 @@ class Solution {
 
 **复杂度分析**：
 
-+ 时间复杂度：
-+ 空间复杂度：。
-
+- 时间复杂度：
+- 空间复杂度：。
 
 **参考代码**：
-
 
 ```java
 import java.util.HashMap;
@@ -153,4 +150,3 @@ public class Solution {
     }
 }
 ```
-

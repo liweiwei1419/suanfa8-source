@@ -2,7 +2,7 @@
 title: 「力扣」第 974 题：和可被 K 整除的子数组（中等）
 icon: yongyan
 category: 前缀和
-tags: 
+tags:
   - 前缀和
   - 哈希表
 ---
@@ -11,8 +11,7 @@ tags:
 时间有限，未能详细编写，请大家理解，可以前往该题的题解区与评论区查看适合自己的题解。
 :::
 
-
-+ 题目链接：[974. 和可被 K 整除的子数组](https://leetcode-cn.com/problems/subarray-sums-divisible-by-k/)。
+- 题目链接：[974. 和可被 K 整除的子数组](https://leetcode-cn.com/problems/subarray-sums-divisible-by-k/)。
 
 ## 题目描述
 
@@ -33,7 +32,6 @@ tags:
 1. `1 <= A.length <= 30000`
 2. `-10000 <= A[i] <= 10000`
 3. `2 <= K <= 10000`
-
 
 **参考代码**：
 
@@ -66,6 +64,7 @@ public class Solution {
 ```
 
 Java 代码：
+
 ```java
 public class Solution3 {
 
