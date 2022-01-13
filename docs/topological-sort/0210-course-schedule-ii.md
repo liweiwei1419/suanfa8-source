@@ -3,19 +3,18 @@ title: 「力扣」第 210 题：课程表 II（中等）
 icon: yongyan
 category: 广度优先遍历
 tags:
-  - 广度优先遍历  
+  - 广度优先遍历
   - 拓扑排序
 ---
 
-
-+ 题目链接：[210. 课程表 II](https://leetcode-cn.com/problems/course-schedule-ii/)；
-+ 题解链接：[拓扑排序（广度优先遍历） + 深度优先遍历（Java、Python）](https://leetcode-cn.com/problems/course-schedule-ii/solution/tuo-bu-pai-xu-shen-du-you-xian-bian-li-python-dai-/)。
+- 题目链接：[210. 课程表 II](https://leetcode-cn.com/problems/course-schedule-ii/)；
+- 题解链接：[拓扑排序（广度优先遍历） + 深度优先遍历（Java、Python）](https://leetcode-cn.com/problems/course-schedule-ii/solution/tuo-bu-pai-xu-shen-du-you-xian-bian-li-python-dai-/)。
 
 ## 题目描述
 
 现在你总共有 `numCourses` 门课需要选，记为 `0` 到 `numCourses - 1`。给你一个数组 `prerequisites` ，其中 `prerequisites[i] = [ai, bi]` ，表示在选修课程 `ai` 前 **必须** 先选修 `bi` 。
 
- 例如，想要学习课程 `0` ，你需要先完成课程 `1` ，我们用一个匹配来表示：`[0,1]` 。
+例如，想要学习课程 `0` ，你需要先完成课程 `1` ，我们用一个匹配来表示：`[0,1]` 。
 
 返回你为了学完所有课程所安排的学习顺序。可能会有多个正确的顺序，你只要返回 **任意一种** 就可以了。如果不可能完成所有课程，返回 **一个空数组** 。
 
@@ -43,8 +42,6 @@ tags:
 输出：[0]
 ```
 
-
-
 **提示：**
 
 - `1 <= numCourses <= 2000`
@@ -54,24 +51,20 @@ tags:
 - `ai != bi`
 - 所有`[ai, bi]` **互不相同**
 
-
 ::: danger 提示
 这个问题相当于查找一个循环是否存在于有向图中。如果存在循环，则不存在拓扑排序，因此不可能选取所有课程进行学习。
 :::
 
-
 ::: info 先说最重要的部分
-+ 「拓扑排序」是专门应用于有向图的算法；
-+ 这道题用 BFS 和 DFS 都可以完成，只需要掌握 BFS 的写法就可以了，BFS 的写法很经典；
-+ BFS 的写法就叫「拓扑排序」，这里还用到了贪心算法的思想，贪的点是：当前让入度为 0 的那些结点入队；
-+ 「拓扑排序」的结果不唯一；
-+ 删除结点的操作，通过「入度数组」体现，这个技巧要掌握；
-+ 「拓扑排序」的一个附加效果是：**能够顺带检测有向图中是否存在环**，这个知识点非常重要，如果在面试的过程中遇到这个问题，要把这一点说出来。
-  + 具有类似附加功能的算法还有：Bellman-Ford 算法附加的作用是可以用于检测是否有负权环（在这里不展开了，我也不太熟）。
-  :::
 
-
-
+- 「拓扑排序」是专门应用于有向图的算法；
+- 这道题用 BFS 和 DFS 都可以完成，只需要掌握 BFS 的写法就可以了，BFS 的写法很经典；
+- BFS 的写法就叫「拓扑排序」，这里还用到了贪心算法的思想，贪的点是：当前让入度为 0 的那些结点入队；
+- 「拓扑排序」的结果不唯一；
+- 删除结点的操作，通过「入度数组」体现，这个技巧要掌握；
+- 「拓扑排序」的一个附加效果是：**能够顺带检测有向图中是否存在环**，这个知识点非常重要，如果在面试的过程中遇到这个问题，要把这一点说出来。
+  - 具有类似附加功能的算法还有：Bellman-Ford 算法附加的作用是可以用于检测是否有负权环（在这里不展开了，我也不太熟）。
+    :::
 
 ## 方法一：拓扑排序（Kahn 算法、类似广度优先遍历的思路）
 
@@ -85,7 +78,6 @@ tags:
 
 ![207-13.png](https://tva1.sinaimg.cn/large/008i3skNgy1gxrxf378nyj31hc0u0dip.jpg)
 
-
 拓扑排序实际上应用的是贪心算法，贪心算法简而言之：每一步最优，则全局最优。
 
 具体到拓扑排序，每一次都从图中删除没有前驱的顶点，这里并不需要真正的做删除操作，我们可以设置一个入度数组，每一轮都输出入度为 $0$ 的结点，并移除它、修改它指向的结点的入度（$-1$即可），依次得到的结点序列就是拓扑排序的结点序列。如果图中还有结点没有被移除，则说明“不能完成所有课程的学习”。
@@ -96,7 +88,7 @@ tags:
 
 1、在开始排序前，扫描对应的存储空间（使用邻接表），将入度为 $0$ 的结点放入队列。
 
-2、只要队列非空，就从队首取出入度为 $0$ 的结点，将这个结点输出到结果集中，并且将这个结点的所有邻接结点（它指向的结点）的入度减 $1$，在减 $1$ 以后，如果这个被减 $1$ 的结点的入度为  $0$ ，就继续入队。
+2、只要队列非空，就从队首取出入度为 $0$ 的结点，将这个结点输出到结果集中，并且将这个结点的所有邻接结点（它指向的结点）的入度减 $1$，在减 $1$ 以后，如果这个被减 $1$ 的结点的入度为 $0$ ，就继续入队。
 
 3、当队列为空的时候，检查结果集中的顶点个数是否和课程数相等即可。
 
@@ -111,7 +103,6 @@ tags:
 这个两个数据结构在遍历题目给出的邻边以后就可以很方便地得到。
 
 **参考代码 1**：
-
 
 <CodeGroup>
 <CodeGroupItem title="Java">
@@ -160,15 +151,17 @@ class Solution {
                 }
             }
         }
-        
+
         // 如果结果集中的数量不等于结点的数量，就不能完成课程任务，这一点是拓扑排序的结论
         if (count == numCourses) {
             return res;
         }
         return new int[0];
     }
+
 }
-```
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Python">
@@ -214,15 +207,15 @@ class Solution(object):
         if len(res) != numCourses:
             return []
         return res
-```
+````
+
 </CodeGroupItem>
 </CodeGroup>
 
-
 **复杂度分析：**
 
-+ 时间复杂度：$O(E + V)$。这里 $E$ 表示邻边的条数，$V$ 表示结点的个数。初始化入度为 $0$ 的集合需要遍历整张图，具体做法是检查每个结点和每条边，因此复杂度为 $O(E+V)$，然后对该集合进行操作，又需要遍历整张图中的每个结点和每条边，复杂度也为 $O(E+V)$；
-+ 空间复杂度：$O(V)$：入度数组、邻接表的长度都是结点的个数 $V$，即使使用队列，队列最长的时候也不会超过 $V$，因此空间复杂度是 $O(V)$。
+- 时间复杂度：$O(E + V)$。这里 $E$ 表示邻边的条数，$V$ 表示结点的个数。初始化入度为 $0$ 的集合需要遍历整张图，具体做法是检查每个结点和每条边，因此复杂度为 $O(E+V)$，然后对该集合进行操作，又需要遍历整张图中的每个结点和每条边，复杂度也为 $O(E+V)$；
+- 空间复杂度：$O(V)$：入度数组、邻接表的长度都是结点的个数 $V$，即使使用队列，队列最长的时候也不会超过 $V$，因此空间复杂度是 $O(V)$。
 
 ## 方法二：深度优先遍历（不用掌握，因为要检测环，代码中会做一些处理，代码没有参考价值）
 
@@ -238,113 +231,115 @@ class Solution(object):
 
 **参考代码 2**：
 
-
 <CodeGroup>
 <CodeGroupItem title="Java">
 ```java
 import java.util.HashSet;
 import java.util.Stack;
 
-/**
- * @author liwei
- * @date 18/6/24 下午4:10
- */
-public class Solution3 {
+/\*\*
 
-    /**
-     * @param numCourses
-     * @param prerequisites
-     * @return
-     */
-    public int[] findOrder(int numCourses, int[][] prerequisites) {
-        if (numCourses <= 0) {
-            // 连课程数目都没有，就根本没有办法完成练习了，根据题意应该返回空数组
-            return new int[0];
-        }
-        int plen = prerequisites.length;
-        if (plen == 0) {
-            // 没有有向边，则表示不存在课程依赖，任务一定可以完成
-            int[] ret = new int[numCourses];
-            for (int i = 0; i < numCourses; i++) {
-                ret[i] = i;
-            }
-            return ret;
-        }
-        int[] marked = new int[numCourses];
-        // 初始化有向图 begin
-        HashSet<Integer>[] graph = new HashSet[numCourses];
-        for (int i = 0; i < numCourses; i++) {
-            graph[i] = new HashSet<>();
-        }
-        // 初始化有向图 end
-        // 有向图的 key 是前驱结点，value 是后继结点的集合
-        for (int[] p : prerequisites) {
-            graph[p[1]].add(p[0]);
-        }
-        // 使用 Stack 或者 List 记录递归的顺序，这里使用 Stack
-        Stack<Integer> stack = new Stack<>();
-        for (int i = 0; i < numCourses; i++) {
-            if (dfs(i, graph, marked, stack)) {
-                // 注意方法的语义，如果图中存在环，表示课程任务不能完成，应该返回空数组
-                return new int[0];
-            }
-        }
-        // 在遍历的过程中，一直 dfs 都没有遇到已经重复访问的结点，就表示有向图中没有环
-        // 所有课程任务可以完成，应该返回 true
-        // 下面这个断言一定成立，这是拓扑排序告诉我们的结论
-        assert stack.size() == numCourses;
-        int[] ret = new int[numCourses];
-        // 想想要怎么得到结论，我们的 dfs 是一致将后继结点进行 dfs 的
-        // 所以压在栈底的元素，一定是那个没有后继课程的结点
-        // 那个没有前驱的课程，一定在栈顶，所以课程学习的顺序就应该是从栈顶到栈底
-        // 依次出栈就好了
-        for (int i = 0; i < numCourses; i++) {
-            ret[i] = stack.pop();
-        }
-        return ret;
-    }
+- @author liwei
+- @date 18/6/24 下午 4:10
+  \*/
+  public class Solution3 {
 
-    /**
-     * 注意这个 dfs 方法的语义
-     *
-     * @param i      当前访问的课程结点
-     * @param graph
-     * @param marked 如果 == 1 表示正在访问中，如果 == 2 表示已经访问完了
-     * @return true 表示图中存在环，false 表示访问过了，不用再访问了
-     */
-    private boolean dfs(int i,
-                        HashSet<Integer>[] graph,
-                        int[] marked,
-                        Stack<Integer> stack) {
-        // 如果访问过了，就不用再访问了
-        if (marked[i] == 1) {
-            // 从正在访问中，到正在访问中，表示遇到了环
-            return true;
-        }
-        if (marked[i] == 2) {
-            // 表示在访问的过程中没有遇到环，这个节点访问过了
-            return false;
-        }
-        // 走到这里，是因为初始化呢，此时 marked[i] == 0
-        // 表示正在访问中
-        marked[i] = 1;
-        // 后继结点的集合
-        HashSet<Integer> successorNodes = graph[i];
-        for (Integer successor : successorNodes) {
-            if (dfs(successor, graph, marked, stack)) {
-                // 层层递归返回 true ，表示图中存在环
-                return true;
-            }
-        }
-        // i 的所有后继结点都访问完了，都没有存在环，则这个结点就可以被标记为已经访问结束
-        // 状态设置为 2
-        marked[i] = 2;
-        stack.add(i);
-        // false 表示图中不存在环
-        return false;
-    }
-}
-```
+      /**
+       * @param numCourses
+       * @param prerequisites
+       * @return
+       */
+      public int[] findOrder(int numCourses, int[][] prerequisites) {
+          if (numCourses <= 0) {
+              // 连课程数目都没有，就根本没有办法完成练习了，根据题意应该返回空数组
+              return new int[0];
+          }
+          int plen = prerequisites.length;
+          if (plen == 0) {
+              // 没有有向边，则表示不存在课程依赖，任务一定可以完成
+              int[] ret = new int[numCourses];
+              for (int i = 0; i < numCourses; i++) {
+                  ret[i] = i;
+              }
+              return ret;
+          }
+          int[] marked = new int[numCourses];
+          // 初始化有向图 begin
+          HashSet<Integer>[] graph = new HashSet[numCourses];
+          for (int i = 0; i < numCourses; i++) {
+              graph[i] = new HashSet<>();
+          }
+          // 初始化有向图 end
+          // 有向图的 key 是前驱结点，value 是后继结点的集合
+          for (int[] p : prerequisites) {
+              graph[p[1]].add(p[0]);
+          }
+          // 使用 Stack 或者 List 记录递归的顺序，这里使用 Stack
+          Stack<Integer> stack = new Stack<>();
+          for (int i = 0; i < numCourses; i++) {
+              if (dfs(i, graph, marked, stack)) {
+                  // 注意方法的语义，如果图中存在环，表示课程任务不能完成，应该返回空数组
+                  return new int[0];
+              }
+          }
+          // 在遍历的过程中，一直 dfs 都没有遇到已经重复访问的结点，就表示有向图中没有环
+          // 所有课程任务可以完成，应该返回 true
+          // 下面这个断言一定成立，这是拓扑排序告诉我们的结论
+          assert stack.size() == numCourses;
+          int[] ret = new int[numCourses];
+          // 想想要怎么得到结论，我们的 dfs 是一致将后继结点进行 dfs 的
+          // 所以压在栈底的元素，一定是那个没有后继课程的结点
+          // 那个没有前驱的课程，一定在栈顶，所以课程学习的顺序就应该是从栈顶到栈底
+          // 依次出栈就好了
+          for (int i = 0; i < numCourses; i++) {
+              ret[i] = stack.pop();
+          }
+          return ret;
+      }
+
+      /**
+       * 注意这个 dfs 方法的语义
+       *
+       * @param i      当前访问的课程结点
+       * @param graph
+       * @param marked 如果 == 1 表示正在访问中，如果 == 2 表示已经访问完了
+       * @return true 表示图中存在环，false 表示访问过了，不用再访问了
+       */
+      private boolean dfs(int i,
+                          HashSet<Integer>[] graph,
+                          int[] marked,
+                          Stack<Integer> stack) {
+          // 如果访问过了，就不用再访问了
+          if (marked[i] == 1) {
+              // 从正在访问中，到正在访问中，表示遇到了环
+              return true;
+          }
+          if (marked[i] == 2) {
+              // 表示在访问的过程中没有遇到环，这个节点访问过了
+              return false;
+          }
+          // 走到这里，是因为初始化呢，此时 marked[i] == 0
+          // 表示正在访问中
+          marked[i] = 1;
+          // 后继结点的集合
+          HashSet<Integer> successorNodes = graph[i];
+          for (Integer successor : successorNodes) {
+              if (dfs(successor, graph, marked, stack)) {
+                  // 层层递归返回 true ，表示图中存在环
+                  return true;
+              }
+          }
+          // i 的所有后继结点都访问完了，都没有存在环，则这个结点就可以被标记为已经访问结束
+          // 状态设置为 2
+          marked[i] = 2;
+          stack.add(i);
+          // false 表示图中不存在环
+          return false;
+      }
+
+  }
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Python">
@@ -411,10 +406,10 @@ class Solution(object):
         res.append(vertex)
         # 最后不要忘记返回 False 表示无环
         return False
-```
+````
+
 </CodeGroupItem>
 </CodeGroup>
-
 
 **复杂度分析：**
 

@@ -6,8 +6,8 @@ tags:
   - 拓扑排序
 ---
 
-+ 题目链接：[310. 最小高度树](https://leetcode-cn.com/problems/minimum-height-trees/)；
-+ 题解链接：[拓扑排序（广度优先遍历，Java、Python）](https://leetcode-cn.com/problems/minimum-height-trees/solution/tan-xin-fa-gen-ju-tuo-bu-pai-xu-de-si-lu-python-da/)。
+- 题目链接：[310. 最小高度树](https://leetcode-cn.com/problems/minimum-height-trees/)；
+- 题解链接：[拓扑排序（广度优先遍历，Java、Python）](https://leetcode-cn.com/problems/minimum-height-trees/solution/tan-xin-fa-gen-ju-tuo-bu-pai-xu-de-si-lu-python-da/)。
 
 ## 题目描述
 
@@ -24,8 +24,6 @@ tags:
 **示例 1：**
 
 ![img](https://assets.leetcode.com/uploads/2020/09/01/e1.jpg)
-
-
 
 ```
 输入：n = 4, edges = [[1,0],[1,2],[1,3]]
@@ -56,14 +54,11 @@ tags:
 输出：[0,1]
 ```
 
- 
-
 **提示：**
 
 - $1 \le n \le 2 * 10^4$
 - `edges.length == n - 1`
 - $0 \le a_i, b_i < n$
-
 - $a_i != b_i$
 - 所有 $(a_i, b_i)$ 互不相同
 - 给定的输入 **保证** 是一棵树，并且 **不会有重复的边**
@@ -79,7 +74,6 @@ tags:
 > 有的时候分析问题，自己动手，比看别人的思路的理解要深刻。
 
 ![image.png](https://tva1.sinaimg.cn/large/008i3skNgy1gxrxgdh2r6j30su0zc42t.jpg)
-
 
 **画完这张图，我们能归纳出，结点最后只会剩下 1 个或者 2 个**。如果对这个结论还不确定的朋友，不妨多画几张图，把结点个数为 6 个 、7 个时候的情况也考虑一下。
 
@@ -100,7 +94,6 @@ import java.util.List;
 import java.util.Set;
 
 public class Solution {
-
 
     public List<Integer> findMinHeightTrees(int n, int[][] edges) {
         List<Integer> res = new ArrayList<>();
@@ -180,8 +173,10 @@ public class Solution {
         List<Integer> res = solution.findMinHeightTrees(n, edges);
         System.out.println(res);
     }
+
 }
-```
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Python">
@@ -238,6 +233,7 @@ class Solution:
                         deque.append(item)
 
         return [i for i in range(len(res)) if res[i]]
-```
+````
+
 </CodeGroupItem>
 </CodeGroup>
