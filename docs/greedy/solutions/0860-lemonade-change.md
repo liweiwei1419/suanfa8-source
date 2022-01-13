@@ -6,10 +6,9 @@ tags:
   - 贪心算法
 ---
 
-+ 题目链接：[860. 柠檬水找零](https://leetcode-cn.com/problems/lemonade-change/)。
+- 题目链接：[860. 柠檬水找零](https://leetcode-cn.com/problems/lemonade-change/)。
 
 ## 题目描述
-
 
 在柠檬水摊上，每一杯柠檬水的售价为 `5` 美元。
 
@@ -62,7 +61,7 @@ tags:
 **提示：**
 
 - `0 <= bills.length <= 10000`
-- `bills[i]` 不是 `5` 就是 `10` 或是 `20` 
+- `bills[i]` 不是 `5` 就是 `10` 或是 `20`
 
 **参考代码**：
 
@@ -102,4 +101,3 @@ public class Solution {
     }
 }
 ```
-

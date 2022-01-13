@@ -6,8 +6,7 @@ tags:
   - 贪心算法
 ---
 
-+ 题目链接：[452. 用最少数量的箭引爆气球](https://leetcode-cn.com/problems/minimum-number-of-arrows-to-burst-balloons/)；
-+ 题解链接：[贪心算法（Python 代码、Java 代码）](https://leetcode-cn.com/problems/minimum-number-of-arrows-to-burst-balloons/solution/tan-xin-suan-fa-python-dai-ma-by-liweiwei1419/)。
+- 题目链接：[452. 用最少数量的箭引爆气球](https://leetcode-cn.com/problems/minimum-number-of-arrows-to-burst-balloons/)。
 
 ## 题目描述
 
@@ -70,7 +69,6 @@ tags:
 
 ![image.png](https://pic.leetcode-cn.com/1616658776-oAJMcB-image.png)
 
-
 **「贪心算法」的直觉**：
 
 可以发现，如果两个气球（区间）有公共的部分（根据示例 2 和示例 3，有公共部分包括区间端点重合），我们可以使用一支箭将它们击穿。因此我们希望如果这些气球表示的区间的重合部分越多，那么我们需要使用的箭的数量就越少。因此贪心的地方是：**区间重合的部分越多越好**。在计算结果的时候，如果若干个区间有交集，它们只记录 $1$。
@@ -79,8 +77,8 @@ tags:
 
 ## 方法一：按照区间的左端点升序排序
 
-+ 此时左端点已经升序排序，为此我们需要关注的是新遍历到的区间的右端点和已经遍历到的区间的右端点的最小值（因为需要取交集）；
-+ 如果新遍历到的区间的左端点 **严格大于** 之前遍历到的区间的右端点，说明此时需要新使用一支箭，否则说明两个区间有交集，此时不需要新使用一支箭。
+- 此时左端点已经升序排序，为此我们需要关注的是新遍历到的区间的右端点和已经遍历到的区间的右端点的最小值（因为需要取交集）；
+- 如果新遍历到的区间的左端点 **严格大于** 之前遍历到的区间的右端点，说明此时需要新使用一支箭，否则说明两个区间有交集，此时不需要新使用一支箭。
 
 **参考代码**：
 
@@ -98,7 +96,7 @@ public class Solution {
 
         Arrays.sort(points, Comparator.comparingInt(o -> o[0]));
         int res = 1;
-        
+
         // 当前区间的结尾下标
         int end = points[0][1];
         for (int i = 1; i < len; i++) {
@@ -116,13 +114,13 @@ public class Solution {
 
 **复杂度分析**：
 
-+ 时间复杂度：$O(N \log N)$，时间复杂度主要集中在排序方法上，之后遍历数组的时间复杂度为 $O(N)$，此时 $O(N \log N + N) = O(N \log N)$；
-+ 空间复杂度：$O(\log N)$，假设排序方法为快速排序，排序方法需要使用的空间大小为 $\log N$。
+- 时间复杂度：$O(N \log N)$，时间复杂度主要集中在排序方法上，之后遍历数组的时间复杂度为 $O(N)$，此时 $O(N \log N + N) = O(N \log N)$；
+- 空间复杂度：$O(\log N)$，假设排序方法为快速排序，排序方法需要使用的空间大小为 $\log N$。
 
 ## 方法二：按照区间的右端点升序排序
 
-+ 此时右端点已经升序排序，为此我们需要关注的是新遍历到的区间的左端点；
-+ 如果当前新遍历到的新区间的左端点 **严格大于** 之前遍历到的区间的右端点（区间已经按照右端点升序排序），此时就需要新使用一支箭，否则说明两个区间有交集，此时不需要新使用一支箭。
+- 此时右端点已经升序排序，为此我们需要关注的是新遍历到的区间的左端点；
+- 如果当前新遍历到的新区间的左端点 **严格大于** 之前遍历到的区间的右端点（区间已经按照右端点升序排序），此时就需要新使用一支箭，否则说明两个区间有交集，此时不需要新使用一支箭。
 
 **参考代码**：
 
@@ -179,12 +177,12 @@ class Solution:
             return size
         # 按照区间的起始端点排序
         points.sort(key=lambda x:x[0])
-        
+
         # 只要有区间就至少需要一只箭
         res = 1
         # 最远距离：使用当前这只箭能引爆气球的最远距离
         end = points[0][1]
-        
+
         for i in range(1, size):
             if points[i][0] > end:
                 end = points[i][1]
@@ -251,13 +249,13 @@ class Solution:
         size = len(points)
         if size < 2:
             return size
-         
-        # 按照区间的末尾端点排序 
+
+        # 按照区间的末尾端点排序
         points.sort(key=lambda x:x[1])
         res = 1
         # 最远距离：使用当前这只箭能引爆气球的最远距离
         end = points[0][1]
-        
+
         for i in range(1, size):
             if points[i][0] > end:
                 end = points[i][1]
@@ -305,6 +303,5 @@ public class Solution {
 
 **复杂度分析**：
 
-+ 时间复杂度：$O(N \log N)$：$N$ 为气球的个数，时间复杂度为排序算法的时间复杂度，感谢用户 @powerboy6 提供的评论；
-+ 空间复杂度：$O(1)$。
-
+- 时间复杂度：$O(N \log N)$：$N$ 为气球的个数，时间复杂度为排序算法的时间复杂度，感谢用户 @powerboy6 提供的评论；
+- 空间复杂度：$O(1)$。

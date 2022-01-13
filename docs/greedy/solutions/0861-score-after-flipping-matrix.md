@@ -6,8 +6,7 @@ tags:
   - 贪心算法
 ---
 
-+ 题目链接：[861. 翻转矩阵后的得分](https://leetcode-cn.com/problems/score-after-flipping-matrix/)。
-
+- 题目链接：[861. 翻转矩阵后的得分](https://leetcode-cn.com/problems/score-after-flipping-matrix/)。
 
 ## 题目描述
 
@@ -44,7 +43,7 @@ public class Solution {
     public int matrixScore(int[][] A) {
         int rows = A.length;
         int cols = A[0].length;
-        
+
         int res = rows * (1 << (cols - 1));
 
         // 注意：从 1 开始
@@ -55,7 +54,7 @@ public class Solution {
                     nOnes += A[i][j];
                 } else {
                     // 如果这一行进行了行反转，则该元素的实际取值为 1 - A[i][j]
-                    nOnes += (1 - A[i][j]); 
+                    nOnes += (1 - A[i][j]);
                 }
             }
             int k = Math.max(nOnes, rows - nOnes);
@@ -65,7 +64,6 @@ public class Solution {
     }
 }
 ```
-
 
 **复杂度分析**
 

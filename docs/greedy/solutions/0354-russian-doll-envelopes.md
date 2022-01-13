@@ -7,9 +7,8 @@ tags:
   - 动态规划
 ---
 
-
-+ 题目链接：[354. 俄罗斯套娃信封问题](https://leetcode-cn.com/problems/russian-doll-envelopes/)；
-+ 题解链接：[贪心算法、二分查找（Python 代码、Java 代码）](https://leetcode-cn.com/problems/russian-doll-envelopes/solution/tan-xin-suan-fa-er-fen-cha-zhao-python-dai-ma-java/)。
+- 题目链接：[354. 俄罗斯套娃信封问题](https://leetcode-cn.com/problems/russian-doll-envelopes/)；
+- 题解链接：[贪心算法、二分查找（Python 代码、Java 代码）](https://leetcode-cn.com/problems/russian-doll-envelopes/solution/tan-xin-suan-fa-er-fen-cha-zhao-python-dai-ma-java/)。
 
 ## 题目描述
 
@@ -20,8 +19,6 @@ tags:
 请计算 **最多能有多少个** 信封能组成一组“俄罗斯套娃”信封（即可以把一个信封放到另一个信封里面）。
 
 **注意**：不允许旋转信封。
-
- 
 
 **示例 1：**
 
@@ -42,7 +39,7 @@ tags:
 
 - `1 <= envelopes.length <= 5000`
 - `envelopes[i].length == 2`
-- `1 <= wi, hi <= 104`
+- `1 <= wi, hi <= 10^4`
 
 ## 思路分析
 
@@ -95,7 +92,6 @@ class Solution:
 
 这是因为动态规划的复杂度太高（$O(N^2)$，这里 $N$ 是数组的长度），因此我们得考虑“贪心法 + 二分查找”的思路。
 
-
 ## 贪心算法 + 二分查找
 
 如果按照之前的分析，原问题等价于“将信封数组按照宽“升序”排序以后，信封数组的高的“最长上升子序列”的长度就是题目所求”，在提交的时候，就会发现出错了。查看错误的测试用例不难发现问题所在，这里我们举例说明问题出在哪里。
@@ -113,7 +109,6 @@ class Solution:
 **参考代码**：
 
 Python 代码：
-
 
 ```Python []
 from typing import List
@@ -222,10 +217,10 @@ public class Solution {
 
 }
 ```
+
 **复杂度分析**：
 
-+ 时间复杂度：$O(N \log N)$，遍历数组使用了 $O(N)$，二分查找法使用了 $O(\log N)$。
-+ 空间复杂度：$O(N)$，开辟有序数组 `tail` 的空间至多和原始数组一样。
-
+- 时间复杂度：$O(N \log N)$，遍历数组使用了 $O(N)$，二分查找法使用了 $O(\log N)$。
+- 空间复杂度：$O(N)$，开辟有序数组 `tail` 的空间至多和原始数组一样。
 
 <Vssue title="russian-doll-envelopes"/>

@@ -6,8 +6,8 @@ tags:
   - 贪心算法
 ---
 
-+ 题目链接：[455. 分发饼干](https://leetcode-cn.com/problems/assign-cookies/)；
-+ 题解链接：[贪心算法（两个方向） + 优先队列（Python 代码）](https://leetcode-cn.com/problems/assign-cookies/solution/tan-xin-suan-fa-you-xian-dui-lie-python-dai-ma-by-/)。
+- 题目链接：[455. 分发饼干](https://leetcode-cn.com/problems/assign-cookies/)；
+- 题解链接：[贪心算法（两个方向） + 优先队列（Python 代码）](https://leetcode-cn.com/problems/assign-cookies/solution/tan-xin-suan-fa-you-xian-dui-lie-python-dai-ma-by-/)。
 
 ## 题目描述
 
@@ -20,7 +20,7 @@ tags:
 ```
 输入: g = [1,2,3], s = [1,1]
 输出: 1
-解释: 
+解释:
 你有三个孩子和两块小饼干，3个孩子的胃口值分别是：1,2,3。
 虽然你有两块小饼干，由于他们的尺寸都是1，你只能让胃口值是1的孩子满足。
 所以你应该输出1。
@@ -31,7 +31,7 @@ tags:
 ```
 输入: g = [1,2], s = [1,2,3]
 输出: 2
-解释: 
+解释:
 你有两个孩子和三块小饼干，2个孩子的胃口值分别是1,2。
 你拥有的饼干数量和尺寸都足以让所有孩子满足。
 所以你应该输出2.
@@ -130,12 +130,9 @@ public class Solution {
 
 **复杂度分析**：（同参考代码 1）。
 
-
 ## 贪心算法（两个方向） + 优先队列（Python 代码）
 
-
 ![image.png](https://pic.leetcode-cn.com/a1b3c5a83448a19193a569bfbca1efc930d44140908ad9986dd40321d80e6827-image.png)
-
 
 ## 方法一：尽量用小的饼干满足贪心指数小的小朋友
 
@@ -239,6 +236,3 @@ class Solution:
                 heapq.heappop(g)
         return res
 ```
-
-
-

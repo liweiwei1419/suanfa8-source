@@ -50,25 +50,19 @@ tags:
 
 **提示：**
 
-- `0 <= intervals.length <= 104`
+- `0 <= intervals.length <= 10^4`
 - `intervals[i].length == 2`
-- `0 <= intervals[i][0] <= intervals[i][1] <= 105`
+- `0 <= intervals[i][0] <= intervals[i][1] <= 10^5`
 - `intervals` 根据 `intervals[i][0]` 按 **升序** 排列
 - `newInterval.length == 2`
-- `0 <= newInterval[0] <= newInterval[1] <= 105`
+- `0 <= newInterval[0] <= newInterval[1] <= 10^5`
 
-
-
-
-
-+ [参考资料](https://www.bilibili.com/video/BV1Qa4y1h7Zp?from=search&seid=12301546449614247781)；
-+ 说明：甜姨有资料汇总。
+* [参考资料](https://www.bilibili.com/video/BV1Qa4y1h7Zp?from=search&seid=12301546449614247781)；
+* 说明：甜姨有资料汇总。
 
 **最一般情况**：横跨几个区间。
 
 ![image.png](https://pic.leetcode-cn.com/1604474760-UIDbbp-image.png)
-
-
 
 ```Java []
 import java.util.ArrayList;
