@@ -2,24 +2,32 @@
 title: 「力扣」第 41 题：缺失的第一个正数（困难）
 icon: shipin
 category: 原地哈希
-tags: 
+tags:
   - 原地哈希
 ---
 
-+ 题目链接：[41. 缺失的第一个正数（困难）](https://leetcode-cn.com/problems/first-missing-positive/) ；
-+ 题解链接：[原地哈希（哈希函数为：f(nums[i]) = nums[i] - 1）](https://leetcode-cn.com/problems/first-missing-positive/solution/tong-pai-xu-python-dai-ma-by-liweiwei1419/)。
-
+- 题目链接：[41. 缺失的第一个正数（困难）](https://leetcode-cn.com/problems/first-missing-positive/) ；
+- 题解链接：[原地哈希（哈希函数为：f(nums[i]) = nums[i] - 1）](https://leetcode-cn.com/problems/first-missing-positive/solution/tong-pai-xu-python-dai-ma-by-liweiwei1419/)。
 
 ## :tv: 视频题解
 
 视频讲解：[B 站](https://www.bilibili.com/video/BV167411N7vd)。
 
 说明：
-+ **建议倍速观看**，核心思想不难，三分钟以后才进入正题，为了叙述完整所以讲得比较多；
-+ 方法一和方法二都很容易想到，可以直接跳到「方法三」。
+
+- **建议倍速观看**，核心思想不难，三分钟以后才进入正题，为了叙述完整所以讲得比较多；
+- 方法一和方法二都很容易想到，可以直接跳到「方法三」。
+
+::: danger 视频讲解
+:tv: 这道题在 [题解](https://leetcode-cn.com/problems/first-missing-positive/solution/tong-pai-xu-python-dai-ma-by-liweiwei1419/) 和 [B 站](https://www.bilibili.com/video/BV167411N7vd) 可以收看视频讲解，可以点击下面的视频右上角「去 bilibili 观看」，选择快速播放，获得更好的观看体验。
+
+:::
+
+<div style="position: relative; padding: 30% 45%;">
+<iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="https://player.bilibili.com/player.html?aid=92262117&bvid=BV167411N7vd&cid=157532455&page=1" frameborder="no" scrolling="no"></iframe>
+</div>
 
 ## 题目描述
-
 
 给你一个未排序的整数数组 `nums` ，请你找出其中没有出现的最小的正整数。
 
@@ -46,29 +54,21 @@ tags:
 输出：1
 ```
 
- **提示：**
+**提示：**
 
 - $1 \le nums.length \le 5 * 10^5$
 - $-2^{31} \le nums[i] \le 2^{31} - 1$
-
 
 ## 一句话题解
 
 本题的难点在：只能使用常数级别的额外空间，在这个限制下本题的思路有一个非正式的名称：原地哈希。
 
-
-
-
-
-
-
-
 ## 方法一：哈希表（空间复杂度不符合要求）
 
-+ 按照刚才我们读例子的思路，其实我们只需从最小的正整数 $1$ 开始，依次判断 $2$、 $3$ 、$4$ 直到数组的长度 $N$ 是否在数组中；
-+ 如果当前考虑的数不在这个数组中，我们就找到了这个缺失的最小正整数；
-+ 由于我们需要依次判断某一个正整数是否在这个数组里，我们可以先把这个数组中所有的元素放进哈希表。接下来再遍历的时候，就可以以 $O(1)$ 的时间复杂度判断某个正整数是否在这个数组；
-+ 由于题目要求我们**只能使用常数级别的空间**，而哈希表的大小与数组的长度是线性相关的，因此空间复杂度不符合题目要求。
+- 按照刚才我们读例子的思路，其实我们只需从最小的正整数 $1$ 开始，依次判断 $2$、 $3$ 、$4$ 直到数组的长度 $N$ 是否在数组中；
+- 如果当前考虑的数不在这个数组中，我们就找到了这个缺失的最小正整数；
+- 由于我们需要依次判断某一个正整数是否在这个数组里，我们可以先把这个数组中所有的元素放进哈希表。接下来再遍历的时候，就可以以 $O(1)$ 的时间复杂度判断某个正整数是否在这个数组；
+- 由于题目要求我们**只能使用常数级别的空间**，而哈希表的大小与数组的长度是线性相关的，因此空间复杂度不符合题目要求。
 
 **参考代码 1**：
 
@@ -99,18 +99,16 @@ public class Solution {
 
 **复杂度分析**：
 
-+ 时间复杂度：$O(N)$，这里 $N$ 表示数组的长度。第 1 次遍历了数组，第 2 次遍历了区间 `[1, len]` 里的元素。
-+ 空间复杂度：$O(N)$，把 $N$ 个数存在哈希表里面，使用了 $N$ 个空间。
-
+- 时间复杂度：$O(N)$，这里 $N$ 表示数组的长度。第 1 次遍历了数组，第 2 次遍历了区间 `[1, len]` 里的元素。
+- 空间复杂度：$O(N)$，把 $N$ 个数存在哈希表里面，使用了 $N$ 个空间。
 
 ## 方法二：二分查找（时间复杂度不符合要求）
 
-+ 根据刚才的分析，这个问题其实就是要我们查找一个元素，而查找一个元素，如果是在有序数组中查找，会快一些；
-+ 因此我们可以将数组先排序，再使用二分查找法从最小的正整数 $1$ 开始查找，找不到就返回这个正整数；
-+ 这个思路需要先对数组排序，而排序使用的时间复杂度是 $O(N \log N)$，是不符合这个问题的时间复杂度要求。
+- 根据刚才的分析，这个问题其实就是要我们查找一个元素，而查找一个元素，如果是在有序数组中查找，会快一些；
+- 因此我们可以将数组先排序，再使用二分查找法从最小的正整数 $1$ 开始查找，找不到就返回这个正整数；
+- 这个思路需要先对数组排序，而排序使用的时间复杂度是 $O(N \log N)$，是不符合这个问题的时间复杂度要求。
 
 **参考代码 2**：
-
 
 ```Java []
 import java.util.Arrays;
@@ -150,8 +148,8 @@ public class Solution {
 
 **复杂度分析**：
 
-+ 时间复杂度：$O(N \log N)$，这里 $N$ 表示数组的长度。时间复杂度主要消耗在排序上，排序使用 $O(N\log N)$。二分查找使用每一步使用的时间复杂度是 $O(\log N)$，整体上仍然是 $O(N \log N)$；
-+ 空间复杂度：$O(1)$。
+- 时间复杂度：$O(N \log N)$，这里 $N$ 表示数组的长度。时间复杂度主要消耗在排序上，排序使用 $O(N\log N)$。二分查找使用每一步使用的时间复杂度是 $O(\log N)$，整体上仍然是 $O(N \log N)$；
+- 空间复杂度：$O(1)$。
 
 说明：评论区 [@pingfan108](/u/pingfan108/) 朋友给出了排序以后不用二分的做法，可以点击 [这里](https://leetcode-cn.com/problems/first-missing-positive/solution/tong-pai-xu-python-dai-ma-by-liweiwei1419/463831/) 查看，特此表示感谢。
 
@@ -159,15 +157,14 @@ public class Solution {
 
 最早知道这个思路是在《剑指 Offe》这本书上看到的，感兴趣的朋友不妨做一下这道问题：[剑指 Offer 03. 数组中重复的数字](https://leetcode-cn.com/problems/shu-zu-zhong-zhong-fu-de-shu-zi-lcof/)。下面简要叙述：
 
-+ 由于题目要求我们「**只能使用常数级别的空间**」，而要找的数一定在 `[1, N + 1]` 左闭右闭（这里 `N` 是数组的长度）这个区间里。因此，我们可以就把原始的数组当做哈希表来使用。事实上，**哈希表其实本身也是一个数组**；
-+ 我们要找的数就在 `[1, N + 1]` 里，最后 `N + 1` 这个元素我们不用找。因为在前面的 `N` 个元素都找不到的情况下，我们才返回 `N + 1`；
-+ 那么，我们可以采取这样的思路：就把 $1$ 这个数放到下标为 $0$ 的位置， $2$ 这个数放到下标为 $1$ 的位置，按照这种思路整理一遍数组。然后我们再遍历一次数组，第 $1$ 个遇到的它的值不等于下标的那个数，就是我们要找的缺失的第一个正数。
-+ 这个思想就相当于**我们自己编写哈希函数**，这个哈希函数的规则特别简单，那就是数值为 `i` 的数映射到下标为 `i - 1` 的位置。
+- 由于题目要求我们「**只能使用常数级别的空间**」，而要找的数一定在 `[1, N + 1]` 左闭右闭（这里 `N` 是数组的长度）这个区间里。因此，我们可以就把原始的数组当做哈希表来使用。事实上，**哈希表其实本身也是一个数组**；
+- 我们要找的数就在 `[1, N + 1]` 里，最后 `N + 1` 这个元素我们不用找。因为在前面的 `N` 个元素都找不到的情况下，我们才返回 `N + 1`；
+- 那么，我们可以采取这样的思路：就把 $1$ 这个数放到下标为 $0$ 的位置， $2$ 这个数放到下标为 $1$ 的位置，按照这种思路整理一遍数组。然后我们再遍历一次数组，第 $1$ 个遇到的它的值不等于下标的那个数，就是我们要找的缺失的第一个正数。
+- 这个思想就相当于**我们自己编写哈希函数**，这个哈希函数的规则特别简单，那就是数值为 `i` 的数映射到下标为 `i - 1` 的位置。
 
 我们来看一下这个算法是如何应用在示例 2 上的。
 
 ![0041-14.png](https://pic.leetcode-cn.com/1e4f3f1c9a6fb37c2aa515069508f5f3ef9d72cc55b586790f9bec9705052d17-0041-14.png)
-
 
 动画演示：
 
@@ -205,13 +202,9 @@ public class Solution {
 
 @slideend
 
-
-
-
 **参考代码 3**：
 
 **注意**：理解下面代码 `nums[nums[i] - 1] != nums[i]` 的作用。
-
 
 这里感谢用户 [@rmokerone](/u/rmokerone/) 提供 C++ 版本的代码。
 
@@ -246,8 +239,10 @@ public class Solution {
         nums[index1] = nums[index2];
         nums[index2] = temp;
     }
+
 }
-```
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Python3">
@@ -275,16 +270,16 @@ class Solution:
 
     def __swap(self, nums, index1, index2):
         nums[index1], nums[index2] = nums[index2], nums[index1]
-```
+````
+
 </CodeGroupItem>
 </CodeGroup>
 
 说明：Python 里可以这样写 `nums[nums[i] - 1], nums[i] = nums[i], nums[nums[i] - 1]` ，但是这里赋值有先后顺序，写成 `nums[i], nums[nums[i] - 1] = nums[nums[i] - 1], nums[i],` 就会出错。建议封装成单独的函数，避免出错。
 
-
 **复杂度分析**：
 
-+ 时间复杂度：$O(N)$，这里 $N$ 是数组的长度。
+- 时间复杂度：$O(N)$，这里 $N$ 是数组的长度。
 
 说明：`while` 循环不会每一次都把数组里面的所有元素都看一遍。如果有一些元素在这一次的循环中被交换到了它们应该在的位置，那么在后续的遍历中，由于它们已经在正确的位置上了，代码再执行到它们的时候，就会被跳过。
 
@@ -294,17 +289,11 @@ class Solution:
 
 最后再遍历了一次数组，最坏情况下要把数组里的所有的数都看一遍，因此时间复杂度是 $O(N)$。
 
-+ 空间复杂度：$O(1)$。
-
+- 空间复杂度：$O(1)$。
 
 ## 同类问题
 
-| 问题                                                         | 题解                                                         |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [442. 数组中重复的数据](https://leetcode-cn.com/problems/find-all-duplicates-in-an-array/) | [题解](https://leetcode-cn.com/problems/find-all-duplicates-in-an-array/solution/chou-ti-yuan-li-ji-yu-yi-huo-yun-suan-jiao-huan-li/) |
+| 问题                                                                                                        | 题解                                                                                                                                           |
+| ----------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| [442. 数组中重复的数据](https://leetcode-cn.com/problems/find-all-duplicates-in-an-array/)                  | [题解](https://leetcode-cn.com/problems/find-all-duplicates-in-an-array/solution/chou-ti-yuan-li-ji-yu-yi-huo-yun-suan-jiao-huan-li/)          |
 | [448. 找到所有数组中消失的数字](https://leetcode-cn.com/problems/find-all-numbers-disappeared-in-an-array/) | [题解](https://leetcode-cn.com/problems/find-all-numbers-disappeared-in-an-array/solution/tong-pai-xu-ji-yu-yi-huo-yun-suan-jiao-huan-liang-/) |
-
-
-
-
-

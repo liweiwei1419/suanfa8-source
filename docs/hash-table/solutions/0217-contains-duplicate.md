@@ -6,9 +6,8 @@ tags:
   - 哈希表
 ---
 
-
-+ 题目链接：[217. 存在重复元素](https://leetcode-cn.com/problems/contains-duplicate/);
-+ 题解地址：[哈希表 + 排序（Python 代码、Java 代码）](https://leetcode-cn.com/problems/contains-duplicate/solution/ha-xi-biao-pai-xu-python-dai-ma-java-dai-ma-by-liw/)。
+- 题目链接：[217. 存在重复元素](https://leetcode-cn.com/problems/contains-duplicate/);
+- 题解地址：[哈希表 + 排序（Python 代码、Java 代码）](https://leetcode-cn.com/problems/contains-duplicate/solution/ha-xi-biao-pai-xu-python-dai-ma-java-dai-ma-by-liw/)。
 
 ## 题目描述
 
@@ -56,14 +55,12 @@ class Solution:
         return False
 ```
 
-
-
 ## 思路分析
 
 这是一道非常简单的算法题，可以让刚接触算法题的朋友们热热身。解题思路也很容易想到：
 
-+ 使用哈希表判重，以空间换时间；
-+ 先将数组排序，如果有重复元素，它们就会相邻放置，遍历一遍数组，就容易发现相邻的重复元素。
+- 使用哈希表判重，以空间换时间；
+- 先将数组排序，如果有重复元素，它们就会相邻放置，遍历一遍数组，就容易发现相邻的重复元素。
 
 两种方法各有优劣，体现在下面的「复杂度分析」中。
 
@@ -92,7 +89,8 @@ public class Solution {
     }
 
 }
-```
+
+````
 </CodeGroupItem>
 <CodeGroupItem title="Java">
 ```java
@@ -113,25 +111,25 @@ public class Solution {
         return false;
     }
 }
-```
+````
+
 </CodeGroupItem>
 
 <CodeGroupItem title="Python3">
 ```python
 from typing import List
 
-
 class Solution:
-    def containsDuplicate(self, nums: List[int]) -> bool:
-        s = set()
-        for num in nums:
-            if num in s:
-                return True
-            else:
-                s.add(num)
-        return False
+def containsDuplicate(self, nums: List[int]) -> bool:
+s = set()
+for num in nums:
+if num in s:
+return True
+else:
+s.add(num)
+return False
 
-```
+````
 </CodeGroupItem>
 </CodeGroup>
 
@@ -172,20 +170,19 @@ public class Solution {
         return false;
     }
 }
-```
+````
+
 </CodeGroupItem>
 
 <CodeGroupItem title="Python3">
 ```python
 from typing import List
 
-
 class Solution:
-    def containsDuplicate(self, nums: List[int]) -> bool:
-        size = len(nums)
-        # 特殊判断
-        if size < 2:
-            return False
+def containsDuplicate(self, nums: List[int]) -> bool:
+size = len(nums) # 特殊判断
+if size < 2:
+return False
 
         # 原地排序，这一步是关键
         nums.sort()
@@ -194,6 +191,7 @@ class Solution:
             if nums[i] == nums[i - 1]:
                 return True
         return False
+
 ```
 </CodeGroupItem>
 </CodeGroup>
@@ -208,3 +206,4 @@ class Solution:
 
 
 
+```

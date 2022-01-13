@@ -6,7 +6,7 @@ tags:
   - 哈希表
 ---
 
-+ 题目链接：[350. 两个数组的交集 II](https://leetcode-cn.com/problems/intersection-of-two-arrays-ii/)。
+- 题目链接：[350. 两个数组的交集 II](https://leetcode-cn.com/problems/intersection-of-two-arrays-ii/)。
 
 ## 题目描述
 
@@ -25,8 +25,6 @@ tags:
 输入：nums1 = [4,9,5], nums2 = [9,4,9,8,4]
 输出：[4,9]
 ```
-
-
 
 **Constraints:**
 
@@ -116,8 +114,10 @@ public class Solution {
         }
         return res;
     }
+
 }
-```
+
+````
 
 </CodeGroupItem>
 
@@ -142,10 +142,10 @@ class Solution:
             else:
                 j += 1
         return result
-```
+````
+
 </CodeGroupItem>
 </CodeGroup>
-
 
 补充：虽然是一个简单的问题，但还是有陷阱。
 
@@ -169,4 +169,3 @@ class Solution:
 [4,9,5]
 [9,4,9,8,4]
 ```
-

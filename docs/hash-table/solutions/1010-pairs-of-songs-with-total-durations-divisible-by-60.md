@@ -6,8 +6,8 @@ tags:
   - 哈希表
 ---
 
-+ 题目链接：[1010. 总持续时间可被 60 整除的歌曲](https://leetcode-cn.com/problems/pairs-of-songs-with-total-durations-divisible-by-60/)；
-+ 题解链接：[数组 + 哈希表（Python 代码、Java 代码）](https://leetcode-cn.com/problems/pairs-of-songs-with-total-durations-divisible-by-60/solution/shu-zu-ha-xi-biao-python-dai-ma-java-dai-ma-by-liw/)。
+- 题目链接：[1010. 总持续时间可被 60 整除的歌曲](https://leetcode-cn.com/problems/pairs-of-songs-with-total-durations-divisible-by-60/)；
+- 题解链接：[数组 + 哈希表（Python 代码、Java 代码）](https://leetcode-cn.com/problems/pairs-of-songs-with-total-durations-divisible-by-60/solution/shu-zu-ha-xi-biao-python-dai-ma-java-dai-ma-by-liw/)。
 
 ## 题目描述
 
@@ -34,11 +34,9 @@ tags:
 解释：所有三对的总持续时间都是 120，可以被 60 整除。
 ```
 
- 
-
 **提示：**
 
-- `1 <= time.length <= 6 * 104`
+- `1 <= time.length <= 6 * 10^4`
 - `1 <= time[i] <= 500`
 
 ## 思路分析
@@ -55,11 +53,9 @@ tags:
 
 3、针对整一分钟，例如 `[60, 60, 60]` 这样的测试用例，预处理完成以后就是 `[0, 0, 0]`，所以 “60 - 当前遍历的秒数” 也要模 60。
 
-
 说明：这是在提交测试用例的时候发现的。
 
 **参考代码**：
-
 
 <CodeGroup>
 <CodeGroupItem title="Java">
@@ -99,7 +95,8 @@ public class Solution {
     }
 
 }
-```
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Python3">
@@ -128,13 +125,12 @@ class Solution:
             d[t] += 1
 
         return res
-```
+````
+
 </CodeGroupItem>
 </CodeGroup>
 
-
 **复杂度分析：**
 
-+ 时间复杂度：$O(N)$，这里 $N$ 是数组的长度，算法把数组看了两次；
-+ 空间复杂度：$O(N)$，使用了长度为 $N$ 的哈希表。
-
+- 时间复杂度：$O(N)$，这里 $N$ 是数组的长度，算法把数组看了两次；
+- 空间复杂度：$O(N)$，使用了长度为 $N$ 的哈希表。

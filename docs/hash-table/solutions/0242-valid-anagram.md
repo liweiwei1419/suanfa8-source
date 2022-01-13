@@ -6,7 +6,7 @@ tags:
   - 哈希表
 ---
 
-+ 题目链接：[242. 有效的字母异位词](https://leetcode-cn.com/problems/valid-anagram/)。
+- 题目链接：[242. 有效的字母异位词](https://leetcode-cn.com/problems/valid-anagram/)。
 
 ## 题目描述
 
@@ -28,20 +28,19 @@ tags:
 输出: false
 ```
 
- **提示:**
+**提示:**
 
-- `1 <= s.length, t.length <= 5 * 104`
+- `1 <= s.length, t.length <= 5 * 10^4`
 - `s` 和 `t` 仅包含小写字母
 
 **Constraints:**
 
-- `1 <= s.length, t.length <= 5 * 104`
+- `1 <= s.length, t.length <= 5 * 10^4`
 - `s` and `t` consist of lowercase English letters.
 
 **Follow up:** What if the inputs contain Unicode characters? How would you adapt your solution to such a case?
 
 ## 方法一
-
 
 把两个字符串都转换成字符数组以后，进行排序，然后逐位进行比较。
 
@@ -92,7 +91,7 @@ public class Solution2 {
                     map1.put(c, 1);
                 }
             }
-    
+
             char[] tArray = t.toCharArray();
             for (char c : tArray) {
                 if (map1.containsKey(c) && map1.get(c) >= 1) {

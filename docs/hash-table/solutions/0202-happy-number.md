@@ -6,7 +6,7 @@ tags:
   - 哈希表
 ---
 
-+ 题目链接：[202. 快乐数](https://leetcode-cn.com/problems/happy-number/)。
+- 题目链接：[202. 快乐数](https://leetcode-cn.com/problems/happy-number/)。
 
 > todo：官方题解的代码比我快很多，记得改一下。
 
@@ -41,7 +41,7 @@ tags:
 输出：false
 ```
 
- **提示：**
+**提示：**
 
 - $1 \le n \le 2^{31} - 1$
 
@@ -104,12 +104,3 @@ class Solution:
 ```
 </CodeGroupItem>
 </CodeGroup>
-
-
-
-
-
-
-
-
-

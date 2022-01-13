@@ -6,7 +6,7 @@ tags:
   - 哈希表
 ---
 
-+ 题目链接：[290. 单词规律](https://leetcode-cn.com/problems/word-pattern/)。
+- 题目链接：[290. 单词规律](https://leetcode-cn.com/problems/word-pattern/)。
 
 ## 题目描述
 
@@ -14,7 +14,7 @@ tags:
 
 这里的 **遵循** 指完全匹配，例如， `pattern` 里的每个字母和字符串 `str` 中的每个非空单词之间存在着双向连接的对应规律。
 
-**示例1:**
+**示例 1:**
 
 ```
 输入: pattern = "abba", str = "dog cat cat dog"
@@ -43,7 +43,7 @@ tags:
 ```
 
 **说明:**
-你可以假设 `pattern` 只包含小写字母， `str` 包含了由单个空格分隔的小写字母。  
+你可以假设 `pattern` 只包含小写字母， `str` 包含了由单个空格分隔的小写字母。
 
 **Constraints:**
 
@@ -58,7 +58,6 @@ tags:
 
 这里有一个小小的坑，就是当测试用例是：`String pattern = "abba";String str = "dog dog dog dog";`的时候，我们须要判断出结果是 `false`。
 
-
 <CodeGroup>
 <CodeGroupItem title="Java">
 ```java
@@ -66,7 +65,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
-
 
 public class Solution {
 
@@ -95,8 +93,10 @@ public class Solution {
         }
         return true;
     }
+
 }
-```
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Python3">
@@ -113,19 +113,7 @@ class Solution:
         for i in range(len(s)):
             if s[i] in hash_map: s[i] = hash_map[s[i]]
         return s == p
-```
+````
+
 </CodeGroupItem>
 </CodeGroup>
-
-
-
-
-
-
-
-
-
-
-
-
-

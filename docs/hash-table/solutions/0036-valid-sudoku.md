@@ -6,8 +6,8 @@ tags:
   - 哈希表
 ---
 
-+ 题目链接：[36. 有效的数独](https://leetcode-cn.com/problems/valid-sudoku/)；
-+ 题解链接：[哈希表（布尔数组、位运算）](https://leetcode-cn.com/problems/valid-sudoku/solution/ha-xi-biao-bu-er-shu-zu-wei-yun-suan-by-liweiwei14/)。
+- 题目链接：[36. 有效的数独](https://leetcode-cn.com/problems/valid-sudoku/)；
+- 题解链接：[哈希表（布尔数组、位运算）](https://leetcode-cn.com/problems/valid-sudoku/solution/ha-xi-biao-bu-er-shu-zu-wei-yun-suan-by-liweiwei14/)。
 
 ## 题目描述
 
@@ -28,7 +28,7 @@ tags:
 ![img](https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2021/04/12/250px-sudoku-by-l2g-20050714svg.png)
 
 ```
-输入：board = 
+输入：board =
 [["5","3",".",".","7",".",".",".","."]
 ,["6",".",".","1","9","5",".",".","."]
 ,[".","9","8",".",".",".",".","6","."]
@@ -44,7 +44,7 @@ tags:
 **示例 2：**
 
 ```
-输入：board = 
+输入：board =
 [["8","3",".",".","7",".",".",".","."]
 ,["6",".",".","1","9","5",".",".","."]
 ,[".","9","8",".",".",".",".","6","."]
@@ -74,7 +74,7 @@ tags:
 
 ## 方法：布尔数组（哈希表）
 
-**参考代码 1**：box 二维表格，重点理解 `int boardIndex =  (i / 3) * 3 + j / 3;` 这行代码。
+**参考代码 1**：box 二维表格，重点理解 `int boardIndex = (i / 3) * 3 + j / 3;` 这行代码。
 
 ```java
 public class Solution {

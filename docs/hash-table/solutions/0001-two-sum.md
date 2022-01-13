@@ -6,12 +6,21 @@ tags:
   - 哈希表
 ---
 
-+ 题目链接：[1. 两数之和](https://leetcode-cn.com/problems/two-sum/)。
-+ 题解链接：[:tv: 官方题解（有视频讲解）](https://leetcode-cn.com/problems/two-sum/solution/liang-shu-zhi-he-by-leetcode-solution/)。
+- 题目链接：[1. 两数之和](https://leetcode-cn.com/problems/two-sum/)；
+- 题解链接：[:tv: 官方题解（有视频讲解）](https://leetcode-cn.com/problems/two-sum/solution/liang-shu-zhi-he-by-leetcode-solution/)。
+
+::: danger 视频讲解
+:tv: 这道题在 [官方题解](https://leetcode-cn.com/problems/two-sum/solution/liang-shu-zhi-he-by-leetcode-solution/) 和 [B 站](https://www.bilibili.com/video/BV1rv411k7VY) 可以收看视频讲解，可以点击下面的视频右上角「去 bilibili 观看」，选择快速播放，获得更好的观看体验。
+
+:::
+
+<div style="position: relative; padding: 30% 45%;">
+<iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="https://player.bilibili.com/player.html?aid=245005025&bvid=BV1rv411k7VY&cid=247884205&page=1" frameborder="no" scrolling="no"></iframe>
+</div>
 
 ## 题目描述
 
-给定一个整数数组 `nums` 和一个整数目标值 `target`，请你在该数组中找出 **和为目标值** *`target`* 的那 **两个** 整数，并返回它们的数组下标。
+给定一个整数数组 `nums` 和一个整数目标值 `target`，请你在该数组中找出 **和为目标值** _`target`_ 的那 **两个** 整数，并返回它们的数组下标。
 
 你可以假设每种输入只会对应一个答案。但是，数组中同一个元素在答案里不能重复出现。
 
@@ -39,7 +48,7 @@ tags:
 输出：[0,1]
 ```
 
- **提示：**
+**提示：**
 
 - $2 \le nums.length \le 10^4$
 - $-10^9 \le nums[i] \le 10^9$
@@ -47,7 +56,6 @@ tags:
 - **只会存在一个有效答案**
 
 **进阶：** 你可以想出一个时间复杂度小于 $O(n^2)$ 的算法吗？
-
 
 ## 方法一：暴力解法
 
@@ -72,9 +80,8 @@ public class Solution {
 
 **复杂度分析**：
 
-+ 时间复杂度：$O(N^2)$，其中 $N$ 是输入数组的长度；
-+ 空间复杂度：$O(1)$。
-
+- 时间复杂度：$O(N^2)$，其中 $N$ 是输入数组的长度；
+- 空间复杂度：$O(1)$。
 
 ## 方法二：哈希表
 
@@ -94,7 +101,7 @@ public class Solution {
 
     public int[] twoSum(int[] nums, int target) {
         int len = nums.length;
-        
+
         Map<Integer, Integer> hashMap = new HashMap<>(len - 1);
         hashMap.put(nums[0], 0);
         for (int i = 1; i < len; i++) {
@@ -106,8 +113,10 @@ public class Solution {
         }
         throw new IllegalArgumentException("No two sum solution");
     }
+
 }
-```
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Python3">
@@ -120,17 +129,17 @@ class Solution:
                 return [index, map[target - num]]
             else:
                 map[num] = index
-```
+````
+
 </CodeGroupItem>
 </CodeGroup>
 
 **复杂度分析**：
 
-+ 时间复杂度：$O(N)$，其中 $N$ 是输入数组的长度；
-+ 空间复杂度：$O(N)$。
+- 时间复杂度：$O(N)$，其中 $N$ 是输入数组的长度；
+- 空间复杂度：$O(N)$。
 
-
-<!-- 
+<!--
 
 思路：用集合 Set 做差补来完成（推荐）
 

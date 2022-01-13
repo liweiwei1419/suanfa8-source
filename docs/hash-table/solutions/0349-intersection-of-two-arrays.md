@@ -6,7 +6,7 @@ tags:
   - 哈希表
 ---
 
-+ 题目链接：[349. 两个数组的交集](https://leetcode-cn.com/problems/intersection-of-two-arrays/)。
+- 题目链接：[349. 两个数组的交集](https://leetcode-cn.com/problems/intersection-of-two-arrays/)。
 
 ## 题目描述
 
@@ -51,14 +51,14 @@ public class Solution {
         for (int value : nums1) {
             set1.add(value);
         }
-        
+
         Set<Integer> set2 = new HashSet<>();
         for (int value : nums2) {
             if (set1.contains(value)) {
                 set2.add(value);
             }
         }
-        
+
         int size = set2.size();
         int[] res = new int[size];
         int next = 0;
@@ -77,4 +77,3 @@ public class Solution {
     }
 }
 ```
-

@@ -6,7 +6,7 @@ tags:
   - 哈希表
 ---
 
-+ 题目链接：[477. 汉明距离总和](https://leetcode-cn.com/problems/total-hamming-distance/)。
+- 题目链接：[477. 汉明距离总和](https://leetcode-cn.com/problems/total-hamming-distance/)。
 
 ## 题目描述
 
@@ -140,8 +140,3 @@ class Solution:
             d.clear()
         return res
 ```
-
-
-
-
-

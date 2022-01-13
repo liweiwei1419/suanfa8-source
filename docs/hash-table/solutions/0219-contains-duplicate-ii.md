@@ -6,13 +6,12 @@ tags:
   - 哈希表
 ---
 
-+ 题目链接：[219. 存在重复元素 II](https://leetcode-cn.com/problems/contains-duplicate-ii/);
-+ 题解链接：[哈希表（Java、Python）](https://leetcode-cn.com/problems/contains-duplicate-ii/solution/ha-xi-biao-python-dai-ma-java-dai-ma-by-liweiwei14/)。
+- 题目链接：[219. 存在重复元素 II](https://leetcode-cn.com/problems/contains-duplicate-ii/);
+- 题解链接：[哈希表（Java、Python）](https://leetcode-cn.com/problems/contains-duplicate-ii/solution/ha-xi-biao-python-dai-ma-java-dai-ma-by-liweiwei14/)。
 
 ## 题目描述
 
-
-给定一个整数数组和一个整数 *k*，判断数组中是否存在两个不同的索引 *i* 和 *j*，使得 **nums [i] = nums [j]**，并且 *i* 和 *j* 的差的绝对值最大为 *k*。
+给定一个整数数组和一个整数 _k_，判断数组中是否存在两个不同的索引 _i_ 和 _j_，使得 **nums [i] = nums [j]**，并且 _i_ 和 _j_ 的差的绝对值最大为 _k_。
 
 **示例 1：**
 
@@ -37,14 +36,11 @@ tags:
 
 **Constraints:**
 
-- `1 <= nums.length <= 105`
-- `-109 <= nums[i] <= 109`
-- `0 <= k <= 105`
-
-
+- `1 <= nums.length <= 10^5`
+- `-10^9 <= nums[i] <= 10^9`
+- `0 <= k <= 10^5`
 
 ## 思路分析
-
 
 如果你做过 [「力扣」第 1 题： 两数之和](https://leetcode-cn.com/problems/two-sum/)，这道题就变得很容易了。
 
@@ -55,9 +51,6 @@ tags:
 3、“是否存在问题”的做法是：在遍历的过程中找到就直接返回，如果找不到，才返回 `false`。因此找到（或者说存在）的充分必要条件是：
 
 > 找到重复元素的索引与之前出现过的这个元素的索引的差小于等于 `k`，后出现的数的索引一定比前出现的数的索引大，因此绝对值不用考虑。
-
-
-
 
 **参考代码**：
 
@@ -88,8 +81,10 @@ public class Solution {
         }
         return false;
     }
+
 }
-```
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Python3">
@@ -115,11 +110,12 @@ class Solution:
             # 更新为最新的索引
             map[nums[index]] = index
         return False
-```
+````
+
 </CodeGroupItem>
 </CodeGroup>
 
 **复杂度分析：**
 
-+ 时间复杂度：$O(N)$，这里 $N$ 是数组的元素个数，算法遍历了一次数组；
-+ 空间复杂度：$O(N)$，这里使用了哈希表存储已经出现的数，可以说是以空间换时间了。
+- 时间复杂度：$O(N)$，这里 $N$ 是数组的元素个数，算法遍历了一次数组；
+- 空间复杂度：$O(N)$，这里使用了哈希表存储已经出现的数，可以说是以空间换时间了。
