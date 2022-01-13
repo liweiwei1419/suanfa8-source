@@ -6,14 +6,14 @@ tags:
   - 广度优先遍历
 ---
 
-+ 题目链接：[365. 水壶问题](https://leetcode-cn.com/problems/water-and-jug-problem/)；
-+ 题解链接：[图的广度优先遍历（Java）](https://leetcode-cn.com/problems/water-and-jug-problem/solution/tu-de-yan-du-you-xian-bian-li-by-liweiwei1419/)。
+- 题目链接：[365. 水壶问题](https://leetcode-cn.com/problems/water-and-jug-problem/)；
+- 题解链接：[图的广度优先遍历（Java）](https://leetcode-cn.com/problems/water-and-jug-problem/solution/tu-de-yan-du-you-xian-bian-li-by-liweiwei1419/)。
 
 ## 题目描述
 
 有两个容量分别为 *x*升 和 *y*升 的水壶以及无限多的水。请判断能否通过使用这两个水壶，从而可以得到恰好 *z*升 的水？
 
-如果可以，最后请用以上水壶中的一或两个来盛放取得的 *z升* 水。
+如果可以，最后请用以上水壶中的一或两个来盛放取得的 _z 升_ 水。
 
 你允许：
 
@@ -21,7 +21,7 @@ tags:
 - 清空任意一个水壶
 - 从一个水壶向另外一个水壶倒水，直到装满或者倒空
 
-**示例 1:** (From the famous [*"Die Hard"* example](https://www.youtube.com/watch?v=BVtQNK_ZUJg))
+**示例 1:** (From the famous [_"Die Hard"_ example](https://www.youtube.com/watch?v=BVtQNK_ZUJg))
 
 ```
 输入: x = 3, y = 5, z = 4
@@ -42,14 +42,11 @@ Input: jug1Capacity = 1, jug2Capacity = 2, targetCapacity = 3
 Output: true
 ```
 
-
-
 **Constraints:**
 
 - `1 <= jug1Capacity, jug2Capacity, targetCapacity <= 10^6`
 
 ## 思路分析
-
 
 对示例 1 的理解，感谢朋友 [@robotliu0327](/u/robotliu0327/) 提供的图例。
 
@@ -63,15 +60,13 @@ Output: true
 
 所谓「状态」，就是指当前的任务进行到哪个阶段了，可以用变量来表示，怎么定义状态有的时候需要一定技巧，这道题不难。这里分别定义两个水壶为 `A` 和 `B`，定义有序整数对 `(a, b)` 表示当前 `A` 和 `B` 两个水壶的水量，它就是一个状态。
 
-
 题目说：
 
-
 > 你允许：
-> 
-> + 装满任意一个水壶
-> + 清空任意一个水壶
-> + 从一个水壶向另外一个水壶倒水，直到装满或者倒空
+>
+> - 装满任意一个水壶
+> - 清空任意一个水壶
+> - 从一个水壶向另外一个水壶倒水，直到装满或者倒空
 
 为了方便说明，我们做如下定义：
 
@@ -96,12 +91,12 @@ Output: true
 
 然后请大家自己尝试写一下代码，广度优先遍历常见的写法有 2 种，由于这里不用求路径最短的长度，在出队的时候不用读取队列的长度。
 
-+ 从当前状态可以扩展出 8 种相邻的状态；
-+ 因为状态有重复，因此是一个「有向」且「有环」的图，在遍历的时候，需要判断该结点设置是否访问过；
-+ 有序整数对 `(a, b)` 可以自定义成一个私有的类；
-+ 图的遍历，可以使用「深度优先遍历」和「广度优先遍历」，因为状态空间很大，广搜是相对较快；
-+ 尽量「剪枝」，跳过不必要的搜索；
-+ 当然最快的是数学方法。
+- 从当前状态可以扩展出 8 种相邻的状态；
+- 因为状态有重复，因此是一个「有向」且「有环」的图，在遍历的时候，需要判断该结点设置是否访问过；
+- 有序整数对 `(a, b)` 可以自定义成一个私有的类；
+- 图的遍历，可以使用「深度优先遍历」和「广度优先遍历」，因为状态空间很大，广搜是相对较快；
+- 尽量「剪枝」，跳过不必要的搜索；
+- 当然最快的是数学方法。
 
 ![image.png](https://pic.leetcode-cn.com/daf59a74e2673090972df337a4bd42ae33fb0eab5be87df581f104c6548d2eb0-image.png)
 
@@ -153,10 +148,10 @@ public class Solution {
 
             // 从当前状态获得所有可能的下一步的状态
             List<State> nextStates = getNextStates(curX, curY, x, y);
-            
+
             // 打开以便于观察，调试代码
             // System.out.println(head + " => " + nextStates);
-            
+
             for (State nextState : nextStates) {
                 if (!visited.contains(nextState)) {
                     queue.offer(nextState);
@@ -295,4 +290,3 @@ public class Solution {
     }
 }
 ```
-

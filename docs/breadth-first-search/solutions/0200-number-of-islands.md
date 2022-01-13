@@ -8,8 +8,8 @@ tags:
   - 并查集
 ---
 
-+ 题目地址：[200. 岛屿数量](https://leetcode-cn.com/problems/number-of-islands/)；
-+ 题解地址：[DFS + BFS + 并查集（Python 代码、Java 代码）](https://leetcode-cn.com/problems/number-of-islands/solution/dfs-bfs-bing-cha-ji-python-dai-ma-java-dai-ma-by-l/)。
+- 题目地址：[200. 岛屿数量](https://leetcode-cn.com/problems/number-of-islands/)；
+- 题解地址：[DFS + BFS + 并查集（Python 代码、Java 代码）](https://leetcode-cn.com/problems/number-of-islands/solution/dfs-bfs-bing-cha-ji-python-dai-ma-java-dai-ma-by-l/)。
 
 ## 题目描述
 
@@ -18,8 +18,6 @@ tags:
 岛屿总是被水包围，并且每座岛屿只能由水平方向和/或竖直方向上相邻的陆地连接形成。
 
 此外，你可以假设该网格的四条边均被水包围。
-
-
 
 **示例 1：**
 
@@ -52,106 +50,107 @@ tags:
 - `1 <= m, n <= 300`
 - `grid[i][j]` 的值为 `'0'` 或 `'1'`
 
-
 ## 方法：广度优先遍历
 
 在写「广度优先遍历」的时候，要注意一点：
+
 > 所有加入队列的结点，都应该马上被标记为「已经访问」，否则有可能会被重复加入队列。
 
 我一开始在编写的时候，等到队列出队的时候才标记「已经访问」，事实上，这种做法是错误的。因为如果不在刚刚入队列的时候标记「已经访问」，相同的结点很可能会重复入队，如果你遇到「超时」的提示，你不妨把你的队列打印出来看一下，就很清楚看到我说的这一点。
 
 **参考代码：**
 
-
 <CodeGroup>
 <CodeGroupItem title="Java">
 ```java
 import java.util.LinkedList;
 
-/**
- * 方法二：广度优先遍历
- */
-public class Solution2 {
+/\*\*
 
+- 方法二：广度优先遍历
+  \*/
+  public class Solution2 {
 
-    private int rows;
-    private int cols;
+      private int rows;
+      private int cols;
 
-    public int numIslands(char[][] grid) {
-        //           x-1,y
-        //  x,y-1    x,y      x,y+1
-        //           x+1,y
-        int[][] directions = {{-1, 0}, {0, -1}, {1, 0}, {0, 1}};
+      public int numIslands(char[][] grid) {
+          //           x-1,y
+          //  x,y-1    x,y      x,y+1
+          //           x+1,y
+          int[][] directions = {{-1, 0}, {0, -1}, {1, 0}, {0, 1}};
 
-        rows = grid.length;
-        if (rows == 0) {
-            return 0;
-        }
-        cols = grid[0].length;
-        boolean[][] marked = new boolean[rows][cols];
-        int count = 0;
-        for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < cols; j++) {
-                // 如果是岛屿中的一个点，并且没有被访问过
-                // 从坐标为 (i,j) 的点开始进行广度优先遍历
-                if (!marked[i][j] && grid[i][j] == '1') {
-                    count++;
-                    LinkedList<Integer> queue = new LinkedList<>();
-                    // 小技巧：把坐标转换为一个数字
-                    // 否则，得用一个数组存，在 Python 中，可以使用 tuple 存
-                    queue.addLast(i * cols + j);
-                    // 注意：这里要标记上已经访问过
-                    marked[i][j] = true;
-                    while (!queue.isEmpty()) {
-                        int cur = queue.removeFirst();
-                        int curX = cur / cols;
-                        int curY = cur % cols;
-                        // 得到 4 个方向的坐标
-                        for (int k = 0; k < 4; k++) {
-                            int newX = curX + directions[k][0];
-                            int newY = curY + directions[k][1];
-                            // 如果不越界、没有被访问过、并且还要是陆地，我就继续放入队列，放入队列的同时，要记得标记已经访问过
-                            if (inArea(newX, newY) && grid[newX][newY] == '1' && !marked[newX][newY]) {
-                                queue.addLast(newX * cols + newY);
-                                // 【特别注意】在放入队列以后，要马上标记成已经访问过，语义也是十分清楚的：反正只要进入了队列，你迟早都会遍历到它
-                                // 而不是在出队列的时候再标记
-                                // 【特别注意】如果是出队列的时候再标记，会造成很多重复的结点进入队列，造成重复的操作，这句话如果你没有写对地方，代码会严重超时的
-                                marked[newX][newY] = true;
-                            }
-                        }
-                    }
-                }
-            }
+          rows = grid.length;
+          if (rows == 0) {
+              return 0;
+          }
+          cols = grid[0].length;
+          boolean[][] marked = new boolean[rows][cols];
+          int count = 0;
+          for (int i = 0; i < rows; i++) {
+              for (int j = 0; j < cols; j++) {
+                  // 如果是岛屿中的一个点，并且没有被访问过
+                  // 从坐标为 (i,j) 的点开始进行广度优先遍历
+                  if (!marked[i][j] && grid[i][j] == '1') {
+                      count++;
+                      LinkedList<Integer> queue = new LinkedList<>();
+                      // 小技巧：把坐标转换为一个数字
+                      // 否则，得用一个数组存，在 Python 中，可以使用 tuple 存
+                      queue.addLast(i * cols + j);
+                      // 注意：这里要标记上已经访问过
+                      marked[i][j] = true;
+                      while (!queue.isEmpty()) {
+                          int cur = queue.removeFirst();
+                          int curX = cur / cols;
+                          int curY = cur % cols;
+                          // 得到 4 个方向的坐标
+                          for (int k = 0; k < 4; k++) {
+                              int newX = curX + directions[k][0];
+                              int newY = curY + directions[k][1];
+                              // 如果不越界、没有被访问过、并且还要是陆地，我就继续放入队列，放入队列的同时，要记得标记已经访问过
+                              if (inArea(newX, newY) && grid[newX][newY] == '1' && !marked[newX][newY]) {
+                                  queue.addLast(newX * cols + newY);
+                                  // 【特别注意】在放入队列以后，要马上标记成已经访问过，语义也是十分清楚的：反正只要进入了队列，你迟早都会遍历到它
+                                  // 而不是在出队列的时候再标记
+                                  // 【特别注意】如果是出队列的时候再标记，会造成很多重复的结点进入队列，造成重复的操作，这句话如果你没有写对地方，代码会严重超时的
+                                  marked[newX][newY] = true;
+                              }
+                          }
+                      }
+                  }
+              }
 
-        }
-        return count;
-    }
+          }
+          return count;
+      }
 
-    private boolean inArea(int x, int y) {
-        // 等于号这些细节不要忘了
-        return x >= 0 && x < rows && y >= 0 && y < cols;
-    }
+      private boolean inArea(int x, int y) {
+          // 等于号这些细节不要忘了
+          return x >= 0 && x < rows && y >= 0 && y < cols;
+      }
 
-    public static void main(String[] args) {
-        Solution2 solution2 = new Solution2();
-        char[][] grid1 = {
-                {'1', '1', '1', '1', '0'},
-                {'1', '1', '0', '1', '0'},
-                {'1', '1', '0', '0', '0'},
-                {'0', '0', '0', '0', '0'}};
-        int numIslands1 = solution2.numIslands(grid1);
-        System.out.println(numIslands1);
+      public static void main(String[] args) {
+          Solution2 solution2 = new Solution2();
+          char[][] grid1 = {
+                  {'1', '1', '1', '1', '0'},
+                  {'1', '1', '0', '1', '0'},
+                  {'1', '1', '0', '0', '0'},
+                  {'0', '0', '0', '0', '0'}};
+          int numIslands1 = solution2.numIslands(grid1);
+          System.out.println(numIslands1);
 
-        char[][] grid2 = {
-                {'1', '1', '0', '0', '0'},
-                {'1', '1', '0', '0', '0'},
-                {'0', '0', '1', '0', '0'},
-                {'0', '0', '0', '1', '1'}};
-        int numIslands2 = solution2.numIslands(grid2);
-        System.out.println(numIslands2);
-    }
-}
-```
+          char[][] grid2 = {
+                  {'1', '1', '0', '0', '0'},
+                  {'1', '1', '0', '0', '0'},
+                  {'0', '0', '1', '0', '0'},
+                  {'0', '0', '0', '1', '1'}};
+          int numIslands2 = solution2.numIslands(grid2);
+          System.out.println(numIslands2);
+      }
+
+  }
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Python3">
@@ -232,13 +231,7 @@ if __name__ == '__main__':
     solution = Solution()
     result = solution.numIslands(grid)
     print(result)
-```
+````
+
 </CodeGroupItem>
 </CodeGroup>
-
-
-
-
-
-
-

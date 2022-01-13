@@ -6,7 +6,7 @@ tags:
   - 广度优先遍历
 ---
 
-+ 题目链接：[433. 最小基因变化](https://leetcode-cn.com/problems/minimum-genetic-mutation/)。
+- 题目链接：[433. 最小基因变化](https://leetcode-cn.com/problems/minimum-genetic-mutation/)。
 
 ## 题目描述
 
@@ -129,6 +129,3 @@ public class Solution {
 ## 方法二：双向广度优先遍历
 
 参考资料：https://leetcode-cn.com/problems/minimum-genetic-mutation/solution/shen-du-you-xian-yan-du-you-xian-shuang-xiang-yan-/
-
-
-

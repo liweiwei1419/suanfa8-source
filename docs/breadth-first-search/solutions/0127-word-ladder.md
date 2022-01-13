@@ -1,14 +1,22 @@
 ---
 title: 「力扣」第 127 题：单词接龙（困难）
-icon: yongyan
+icon: shipin
 category: 广度优先遍历
 tags:
   - 广度优先遍历
 ---
 
+- 题目链接：[127. 单词接龙](https://leetcode-cn.com/problems/word-ladder/)；
+- 题解链接：[广度优先遍历、双向广度优先遍历（Java、Python）](https://leetcode-cn.com/problems/word-ladder/solution/yan-du-you-xian-bian-li-shuang-xiang-yan-du-you-2/)。
 
-+ 题目链接：[127. 单词接龙](https://leetcode-cn.com/problems/word-ladder/)
-+ 题解链接：[广度优先遍历、双向广度优先遍历（Java、Python）](https://leetcode-cn.com/problems/word-ladder/solution/yan-du-you-xian-bian-li-shuang-xiang-yan-du-you-2/)
+::: danger 视频讲解
+:tv: 这道题在 [题解](https://leetcode-cn.com/problems/word-ladder/solution/yan-du-you-xian-bian-li-shuang-xiang-yan-du-you-2) 和 [B 站](https://www.bilibili.com/video/BV1og4y1i7DL) 可以收看视频讲解，可以点击下面的视频右上角「去 bilibili 观看」，选择快速播放，获得更好的观看体验。
+
+:::
+
+<div style="position: relative; padding: 30% 45%;">
+<iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="https://player.bilibili.com/player.html?aid=838466438&bvid=BV1og4y1i7DL&cid=199826994&page=1" frameborder="no" scrolling="no"></iframe>
+</div>
 
 ## 题目描述
 
@@ -51,7 +59,7 @@ tags:
 
 ### 一句话题解
 
->  无向图中两个顶点之间的最短路径的长度，可以通过广度优先遍历得到；
+> 无向图中两个顶点之间的最短路径的长度，可以通过广度优先遍历得到；
 >
 > 为什么 BFS 得到的路径最短？可以把起点和终点所在的路径拉直来看，两点之间线段最短；
 >
@@ -61,15 +69,15 @@ tags:
 
 分析题意：
 
-+ 「转换」意即：两个单词对应位置只有一个字符不同，例如 "hit" 与 "hot"，这种转换是可以逆向的，因此，根据题目给出的单词列表，可以构建出一个无向（无权）图；
+- 「转换」意即：两个单词对应位置只有一个字符不同，例如 "hit" 与 "hot"，这种转换是可以逆向的，因此，根据题目给出的单词列表，可以构建出一个无向（无权）图；
 
 ![image.png](https://pic.leetcode-cn.com/ec8f7e4f40134b932a9ff2e306d885e427bd8ee912801361849d92ddae6226f3-image.png)
 
-+ 如果一开始就构建图，每一个单词都需要和除它以外的另外的单词进行比较，复杂度是 $O(N \rm{wordLen})$，这里 $N$ 是单词列表的长度；
-+ 为此，我们在遍历一开始，把所有的单词列表放进一个哈希表中，然后在遍历的时候构建图，每一次得到在单词列表里可以转换的单词，复杂度是 $O(26 \times \rm{wordLen})$，借助哈希表，找到邻居与 $N$ 无关；
-+ 使用 BFS 进行遍历，需要的辅助数据结构是：
-  + 队列；
-  + `visited` 集合。说明：可以直接在 `wordSet` (由 `wordList` 放进集合中得到)里做删除。但更好的做法是新开一个哈希表，遍历过的字符串放进哈希表里。这种做法具有普遍意义。绝大多数在线测评系统和应用场景都不会在意空间开销。   
+- 如果一开始就构建图，每一个单词都需要和除它以外的另外的单词进行比较，复杂度是 $O(N \rm{wordLen})$，这里 $N$ 是单词列表的长度；
+- 为此，我们在遍历一开始，把所有的单词列表放进一个哈希表中，然后在遍历的时候构建图，每一次得到在单词列表里可以转换的单词，复杂度是 $O(26 \times \rm{wordLen})$，借助哈希表，找到邻居与 $N$ 无关；
+- 使用 BFS 进行遍历，需要的辅助数据结构是：
+  - 队列；
+  - `visited` 集合。说明：可以直接在 `wordSet` (由 `wordList` 放进集合中得到)里做删除。但更好的做法是新开一个哈希表，遍历过的字符串放进哈希表里。这种做法具有普遍意义。绝大多数在线测评系统和应用场景都不会在意空间开销。
 
 Java 代码：
 
@@ -217,18 +225,13 @@ if __name__ == '__main__':
 
 ## 方法二：双向 BFS
 
-
-+ 已知目标顶点的情况下，可以分别从起点和目标顶点（终点）执行广度优先遍历，直到遍历的部分有交集。这种方式搜索的单词数量会更小一些；
-+ 更合理的做法是，**每次从单词数量小的集合开始扩散**；
-+ 这里 `beginVisited` 和 `endVisited` 交替使用，等价于单向 BFS 里使用队列，每次扩散都要加到总的 `visited` 里。
+- 已知目标顶点的情况下，可以分别从起点和目标顶点（终点）执行广度优先遍历，直到遍历的部分有交集。这种方式搜索的单词数量会更小一些；
+- 更合理的做法是，**每次从单词数量小的集合开始扩散**；
+- 这里 `beginVisited` 和 `endVisited` 交替使用，等价于单向 BFS 里使用队列，每次扩散都要加到总的 `visited` 里。
 
 ![image.png](https://pic.leetcode-cn.com/38dc5897de2b554ea606a92c5eada14b0e0030195334e9fd65943ed6d0f77c1d-image.png)
 
-
-
-
 **参考代码 2**：
-
 
 Java 代码：
 
@@ -260,7 +263,7 @@ public class Solution {
 
         int len = beginWord.length();
         int step = 1;
-        // 简化成 while (!beginVisited.isEmpty()) 亦可 
+        // 简化成 while (!beginVisited.isEmpty()) 亦可
         while (!beginVisited.isEmpty() && !endVisited.isEmpty()) {
             // 打开以方便调试
             // System.out.println("beginVisited => " + beginVisited);
@@ -391,6 +394,3 @@ if __name__ == '__main__':
 ```
 
 ---
-
-
-

@@ -6,11 +6,11 @@ tags:
   - 广度优先遍历
 ---
 
-+ 题目链接：[279. 完全平方数](https://leetcode-cn.com/problems/perfect-squares/)。
+- 题目链接：[279. 完全平方数](https://leetcode-cn.com/problems/perfect-squares/)。
 
 ## 题目描述
 
-给定正整数 *n*，找到若干个完全平方数（比如 `1, 4, 9, 16, ...`）使得它们的和等于 *n*。你需要让组成和的完全平方数的个数最少。
+给定正整数 _n_，找到若干个完全平方数（比如 `1, 4, 9, 16, ...`）使得它们的和等于 _n_。你需要让组成和的完全平方数的个数最少。
 
 给你一个整数 `n` ，返回和为 `n` 的完全平方数的 **最少数量** 。
 
@@ -20,7 +20,7 @@ tags:
 
 ```
 输入：n = 12
-输出：3 
+输出：3
 解释：12 = 4 + 4 + 4
 ```
 
@@ -40,9 +40,6 @@ tags:
 因时间和精力关系，本题没有写详解，只给出了参考代码。读者可以在「力扣」这道题的评论区和题解区找到适合自己的思路分析和代码。如果确实需要我编写具体的解题思路，可以发邮件到 liweiwei1419@gmail.com。
 :::
 
-
-
-
 **参考代码 1**：
 
 <CodeGroup>
@@ -52,13 +49,12 @@ import java.util.ArrayDeque;
 import java.util.LinkedList;
 import java.util.Queue;
 
-
 public class Solution {
 
     public int numSquares(int n) {
         // 是否访问过
         boolean[] visited = new boolean[n + 1];
-        
+
         Queue<Integer> queue = new LinkedList<>();
         queue.add(n);
         int step = 1;
@@ -92,8 +88,10 @@ public class Solution {
         int numSquares = s.numSquares(n);
         System.out.println(numSquares);
     }
+
 }
-```
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Python3">
@@ -134,7 +132,8 @@ if __name__ == '__main__':
     res = s.numSquares(4)
     print('结果', res)
 
-```
+````
+
 </CodeGroupItem>
 <CodeGroupItem title="Python3">
 ```python
@@ -158,12 +157,12 @@ class Solution:
                         marked[residue] = True
                 start += 1
 
+if **name** == '**main**':
+s = Solution()
+res = s.numSquares(4)
+print('结果', res)
 
-if __name__ == '__main__':
-    s = Solution()
-    res = s.numSquares(4)
-    print('结果', res)
-```
+````
 </CodeGroupItem>
 <CodeGroupItem title="Python3">
 ```python
@@ -203,23 +202,10 @@ if __name__ == '__main__':
     solution = Solution()
     res = solution.numSquares(n)
     print(res)
-```
+````
+
 </CodeGroupItem>
 </CodeGroup>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ### 方法二：动态规划
 
@@ -259,4 +245,3 @@ class Solution {
     }
 }
 ```
-

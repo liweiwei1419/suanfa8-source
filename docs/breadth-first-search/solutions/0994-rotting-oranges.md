@@ -6,7 +6,7 @@ tags:
   - 广度优先遍历
 ---
 
-+ 题目链接：[994. 腐烂的橘子](https://leetcode-cn.com/problems/rotting-oranges/)。
+- 题目链接：[994. 腐烂的橘子](https://leetcode-cn.com/problems/rotting-oranges/)。
 
 ## 题目描述
 
@@ -46,8 +46,6 @@ tags:
 输出：0
 解释：因为 0 分钟时已经没有新鲜橘子了，所以答案就是 0 。
 ```
-
-
 
 **提示：**
 
@@ -121,4 +119,3 @@ public class Solution {
     }
 }
 ```
-
