@@ -6,7 +6,7 @@ tags:
   - 二叉树
 ---
 
-+ 题目链接：[103. 二叉树的锯齿形层次遍历](https://leetcode-cn.com/problems/binary-tree-zigzag-level-order-traversal/)。
+- 题目链接：[103. 二叉树的锯齿形层次遍历](https://leetcode-cn.com/problems/binary-tree-zigzag-level-order-traversal/)。
 
 ## 题目描述
 
@@ -51,8 +51,8 @@ Output: []
 
 **Constraints:**
 
-+ The number of nodes in the tree is in the range `[0, 2000]`.
-+ `-100 <= Node.val <= 100`
+- The number of nodes in the tree is in the range `[0, 2000]`.
+- `-100 <= Node.val <= 100`
 
 Java 代码：
 
@@ -79,7 +79,7 @@ public class Solution {
         if (root == null) {
             return res;
         }
-        
+
         Queue<TreeNode> queue = new LinkedList<>();
         queue.add(root);
         boolean direction = true;

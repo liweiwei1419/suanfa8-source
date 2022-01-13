@@ -7,15 +7,13 @@ tags:
   - 递归
 ---
 
-+ 题目描述：[236. 二叉树的最近公共祖先](https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/description/)。
+- 题目描述：[236. 二叉树的最近公共祖先](https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/description/)。
 
 ## 题目描述
 
 给定一个二叉树, 找到该树中两个指定节点的最近公共祖先。
 
 [百度百科](https://baike.baidu.com/item/最近公共祖先/8918834?fr=aladdin)中最近公共祖先的定义为：“对于有根树 T 的两个节点 p、q，最近公共祖先表示为一个节点 x，满足 x 是 p、q 的祖先且 x 的深度尽可能大（**一个节点也可以是它自己的祖先**）。”
-
- 
 
 **示例 1：**
 
@@ -44,8 +42,6 @@ tags:
 输出：1
 ```
 
-
-
 **提示：**
 
 - 树中节点数目在范围 `[2, 10^5]` 内。
@@ -57,8 +53,3 @@ tags:
 ## 思路分析
 
 给定一棵二叉树和两个结点，寻找这两个结点的最近公共祖先。该问题是经典的 LCA 问题。在[这里](https://www.liwei.party/2018/05/12/leetcode-solution/lowest-common-ancestor/)我写了比较完整的分析过程。
-
-
-
-
-

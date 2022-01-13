@@ -9,10 +9,19 @@ tags:
 
 > 抓住「前序遍历序列」与「中序遍历序列」的定义，递归构建二叉树。并且通过画图计算出需要使用的子区间的下标。最后看一眼复杂度，使用「空间换时间」的思路优化。
 
-+ 题目链接：[105. 从前序与中序遍历序列构造二叉树](https://leetcode-cn.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal)；
-+ 题解链接：
-  + [官方题解（含视频题解）](https://leetcode-cn.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)；
-  + [分治法（Python 代码、Java 代码）（含视频讲解）](https://leetcode-cn.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/solution/qian-xu-bian-li-python-dai-ma-java-dai-ma-by-liwei/)。
+- 题目链接：[105. 从前序与中序遍历序列构造二叉树](https://leetcode-cn.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal)；
+- 题解链接：
+  - [官方题解（含视频题解）](https://leetcode-cn.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)；
+  - [分治法（Python 代码、Java 代码）（含视频讲解）](https://leetcode-cn.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/solution/qian-xu-bian-li-python-dai-ma-java-dai-ma-by-liwei/)。
+
+::: danger 视频讲解
+:tv: 这道题在 [官方题解](https://leetcode-cn.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/) 和 [B 站](https://www.bilibili.com/video/BV14A411q7Nv) 可以收看视频讲解，可以点击下面的视频右上角「去 bilibili 观看」，选择快速播放，获得更好的观看体验。
+
+:::
+
+<div style="position: relative; padding: 30% 45%;">
+<iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="https://player.bilibili.com/player.html?aid=328329319&bvid=BV14A411q7Nv&cid=193804974&page=1" frameborder="no" scrolling="no"></iframe>
+</div>
 
 ## 题目描述
 
@@ -44,11 +53,9 @@ Output: [-1]
 - `preorder` 保证为二叉树的前序遍历序列
 - `inorder` 保证为二叉树的中序遍历序列
 
-
 ## 解题思路
 
 建议点击右下角倍速观看，录制视频的时候嗓子不舒服，声音有点奇怪，请大家谅解。或者直接观看 [官方题解](https://leetcode-cn.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/solution/cong-qian-xu-yu-zhong-xu-bian-li-xu-lie-gou-zao-9/)。
-
 
 **思路分析**：
 
@@ -63,7 +70,6 @@ Output: [-1]
 下面是一个具体的例子，演示了如何计算数组子区间的边界：
 
 ![image.png](https://pic.leetcode-cn.com/1c96c49acdd0e51b195dd5916526291f23897f77cea700ea89aa81a4a900a6d7-image.png)
-
 
 这道题完成了以后可以顺便把 [「力扣」 第 106 题：从中序与后序遍历序列构造二叉树](https://leetcode-cn.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/)也一起做了。
 
@@ -126,5 +132,5 @@ public class Solution {
 
 **复杂度分析：**
 
-+ 时间复杂度：$O(N)$，这里 $N$ 是二叉树的结点个数，每调用一次递归方法创建一个结点，一共创建 $N$ 个结点，这里不计算递归方法占用的时间；
-+ 空间复杂度：$O(N)$，这里忽略递归方法占用的空间，因为是对数级别的，比 $N$ 小。
+- 时间复杂度：$O(N)$，这里 $N$ 是二叉树的结点个数，每调用一次递归方法创建一个结点，一共创建 $N$ 个结点，这里不计算递归方法占用的时间；
+- 空间复杂度：$O(N)$，这里忽略递归方法占用的空间，因为是对数级别的，比 $N$ 小。

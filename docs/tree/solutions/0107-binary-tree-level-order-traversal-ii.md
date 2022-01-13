@@ -6,11 +6,11 @@ tags:
   - 二叉树
 ---
 
-+ 题目描述：[107. 二叉树的层次遍历 II](https://leetcode-cn.com/problems/binary-tree-level-order-traversal-ii/)。
+- 题目描述：[107. 二叉树的层次遍历 II](https://leetcode-cn.com/problems/binary-tree-level-order-traversal-ii/)。
 
 ## 题目描述
 
-Given the `root` of a binary tree, return *the bottom-up level order* *traversal of its nodes' values*. (i.e., from left  to right, level by level from leaf to root).
+Given the `root` of a binary tree, return _the bottom-up level order_ _traversal of its nodes' values_. (i.e., from left to right, level by level from leaf to root).
 
 **Example 1:**
 
@@ -35,14 +35,10 @@ Input: root = []
 Output: []
 ```
 
-
-
 **Constraints:**
 
 - The number of nodes in the tree is in the range `[0, 2000]`.
 - `-1000 <= Node.val <= 1000`
-
-
 
 **参考代码**：
 
@@ -55,23 +51,24 @@ import java.util.List;
 import java.util.Queue;
 
 class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
+int val;
+TreeNode left;
+TreeNode right;
 
     TreeNode(int x) {
         val = x;
     }
+
 }
 
 public class Solution {
-    
+
     public List<List<Integer>> levelOrderBottom(TreeNode root) {
         List<List<Integer>> res = new LinkedList<>();
         if (root == null) {
             return res;
         }
-        
+
         Queue<TreeNode> queue = new LinkedList<>();
         queue.add(root);
         while (!queue.isEmpty()) {
@@ -91,8 +88,10 @@ public class Solution {
         }
         return res;
     }
+
 }
-```
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Python3">
@@ -128,6 +127,7 @@ class Solution:
                     queue.append(top.right)
             res.insert(0, cur)
         return res
-```
+````
+
 </CodeGroupItem>
 </CodeGroup>

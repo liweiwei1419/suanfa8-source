@@ -7,8 +7,8 @@ tags:
   - 深度优先遍历
 ---
 
-+ 题目链接：[993. 二叉树的堂兄弟节点](https://leetcode-cn.com/problems/cousins-in-binary-tree/)；
-+ 题解链接：[深度优先遍历、广度优先遍历](https://leetcode-cn.com/problems/cousins-in-binary-tree/solution/yan-du-you-xian-bian-li-python-dai-ma-by-liweiwei1/)。
+- 题目链接：[993. 二叉树的堂兄弟节点](https://leetcode-cn.com/problems/cousins-in-binary-tree/)；
+- 题解链接：[深度优先遍历、广度优先遍历](https://leetcode-cn.com/problems/cousins-in-binary-tree/solution/yan-du-you-xian-bian-li-python-dai-ma-by-liweiwei1/)。
 
 ## 题目描述
 
@@ -42,14 +42,10 @@ tags:
 
 ![img](https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2019/02/16/q1248-03.png)
 
-
-
 ```
 输入：root = [1,2,3,null,4], x = 2, y = 3
 输出：false
 ```
-
- 
 
 **提示：**
 
@@ -58,12 +54,11 @@ tags:
 
 ## 思路分析
 
-+ 依据定义，只要两个结点的层数相同，并且父结点不一样，它们就是堂兄弟结点。为此我们可以通过遍历获得这棵树的所有结点的信息；
-+ 这里记住这棵树里结点的信息很重要，为此我们要利用好「哈希表」这个数据结构；
-+ 注意题目中说「每个结点的值唯一」。
+- 依据定义，只要两个结点的层数相同，并且父结点不一样，它们就是堂兄弟结点。为此我们可以通过遍历获得这棵树的所有结点的信息；
+- 这里记住这棵树里结点的信息很重要，为此我们要利用好「哈希表」这个数据结构；
+- 注意题目中说「每个结点的值唯一」。
 
 下面提供「深度优先遍历」和「广度优先遍历」的参考代码。
-
 
 ## 方法一：深度优先遍历
 
@@ -117,6 +112,7 @@ public class Solution {
     }
 }
 ```
+
 ```Java []
 /**
  * Definition for a binary tree node.
@@ -171,12 +167,10 @@ public class Solution {
 
 **复杂度分析**：
 
-+ 时间复杂度：$O(N)$，其中 $N$ 是给定树中结点的数量；
-+ 空间复杂度：$O(N)$。
-
+- 时间复杂度：$O(N)$，其中 $N$ 是给定树中结点的数量；
+- 空间复杂度：$O(N)$。
 
 ## 方法二：广度优先遍历
-
 
 1、紧抓堂兄弟结点的定义：如果二叉树的两个节点深度相同，但**父节点不同**，则它们是一对*堂兄弟节点*。很显然，可以使用层序优先遍历（广度优先遍历）。
 
@@ -186,12 +180,9 @@ public class Solution {
 
 下面看几个具体的例子：
 
-
 ![image.png](https://pic.leetcode-cn.com/955b34af638c12e9ea52fe03bfa9dcea7eac61da493e9c5cbba2f9d540114f3f-image.png)
 
-
 ![image.png](https://pic.leetcode-cn.com/f6c510b14b90bbe4a9fcd3019d417bdd8200b09a59c22a730cab4351dddfcf93-image.png)
-
 
 ```Java []
 import java.util.HashMap;
@@ -252,5 +243,5 @@ public class Solution {
 
 **复杂度分析：**
 
-+ 时间复杂度：$O(N)$；
-+ 空间复杂度：$O(N)$。
+- 时间复杂度：$O(N)$；
+- 空间复杂度：$O(N)$。

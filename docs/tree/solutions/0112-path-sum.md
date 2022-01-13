@@ -7,15 +7,13 @@ tags:
   - 递归
 ---
 
-+ 题目描述：[112. 路径总和](https://leetcode-cn.com/problems/path-sum/)。
+- 题目描述：[112. 路径总和](https://leetcode-cn.com/problems/path-sum/)。
 
 ## 题目描述
 
 给你二叉树的根节点 `root` 和一个表示目标和的整数 `targetSum` 。判断该树中是否存在 **根节点到叶子节点** 的路径，这条路径上所有节点值相加等于目标和 `targetSum` 。如果存在，返回 `true` ；否则，返回 `false` 。
 
 **叶子节点** 是指没有子节点的节点。
-
- 
 
 **示例 1：**
 
@@ -48,8 +46,6 @@ tags:
 解释：由于树是空的，所以不存在根节点到叶子节点的路径。
 ```
 
- 
-
 **提示：**
 
 - 树中节点的数目在范围 `[0, 5000]` 内
@@ -59,7 +55,6 @@ tags:
 ## 思路分析
 
 给出一棵二叉树以及一个数组 sum，判断在这棵二叉树上是否存在一条从根到**叶子结点**的路径，这条路径上所有的结点的和为 sum。
-
 
 下面给出一个很容易想到，但是是个错误的解答。
 
@@ -125,7 +120,6 @@ public class Solution {
 }
 ```
 
-
 Python 代码：
 
 ```python
@@ -161,7 +155,7 @@ class Solution:
 
 ```
 
-> 
+>
 
 Java 代码：
 
@@ -254,4 +248,3 @@ class Solution:
         right_has = self.hasPathSum(root.right, sum - root.val)
         return left_has or right_has
 ```
-

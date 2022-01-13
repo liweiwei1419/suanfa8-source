@@ -7,9 +7,8 @@ tags:
   - 递归
 ---
 
-
-+ 题目链接：[199. 二叉树的右视图](https://leetcode-cn.com/problems/binary-tree-right-side-view/)；
-+ 题解链接：[DFS 和 BFS（Python 代码）](https://leetcode-cn.com/problems/binary-tree-right-side-view/solution/dfs-he-bfspython-dai-ma-by-liweiwei1419/)。
+- 题目链接：[199. 二叉树的右视图](https://leetcode-cn.com/problems/binary-tree-right-side-view/)；
+- 题解链接：[DFS 和 BFS（Python 代码）](https://leetcode-cn.com/problems/binary-tree-right-side-view/solution/dfs-he-bfspython-dai-ma-by-liweiwei1419/)。
 
 ## 题目描述
 
@@ -38,12 +37,10 @@ tags:
 输出: []
 ```
 
-
-
 **提示:**
 
 - 二叉树的节点个数的范围是 `[0,100]`
-- `-100 <= Node.val <= 100` 
+- `-100 <= Node.val <= 100`
 
 ### 方法一：DFS
 

@@ -7,8 +7,8 @@ tags:
   - 递归
 ---
 
-+ 题目链接：[94. 二叉树的中序遍历](https://leetcode-cn.com/problems/binary-tree-inorder-traversal/)；
-+ 题解链接：[模拟系统栈完成非递归中序遍历，同理可以完成非递归的前序遍历和后序遍历](https://leetcode-cn.com/problems/binary-tree-inorder-traversal/solution/mo-ni-xi-tong-zhan-wan-cheng-fei-di-gui-zhong-xu-b/)。
+- 题目链接：[94. 二叉树的中序遍历](https://leetcode-cn.com/problems/binary-tree-inorder-traversal/)；
+- 题解链接：[模拟系统栈完成非递归中序遍历，同理可以完成非递归的前序遍历和后序遍历](https://leetcode-cn.com/problems/binary-tree-inorder-traversal/solution/mo-ni-xi-tong-zhan-wan-cheng-fei-di-gui-zhong-xu-b/)。
 
 ## 题目描述
 
@@ -17,9 +17,6 @@ tags:
 **示例 1：**
 
 ![img](https://assets.leetcode.com/uploads/2020/09/15/inorder_1.jpg)
-
-
-
 
 ```
 输入：root = [1,null,2,3]
@@ -87,7 +84,7 @@ public class Solution {
 }
 ```
 
-## 方法二：非递归写法 1 
+## 方法二：非递归写法 1
 
 Java 代码：
 
@@ -183,9 +180,7 @@ public class Solution {
 }
 ```
 
-
 ---
-
 
 ## 方法：模拟系统栈
 
@@ -232,6 +227,7 @@ class Solution:
                     stack.append((1, node.left))
         return res
 ```
+
 ```Java []
 import java.util.ArrayList;
 import java.util.List;
@@ -293,4 +289,3 @@ public class Solution {
     }
 }
 ```
-

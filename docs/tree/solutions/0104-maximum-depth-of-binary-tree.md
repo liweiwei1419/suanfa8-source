@@ -7,7 +7,7 @@ tags:
   - 递归
 ---
 
-+ 题目链接：[104. 二叉树的最大深度](https://leetcode-cn.com/problems/maximum-depth-of-binary-tree/description/)。
+- 题目链接：[104. 二叉树的最大深度](https://leetcode-cn.com/problems/maximum-depth-of-binary-tree/description/)。
 
 ## 题目描述
 
@@ -20,8 +20,6 @@ tags:
 **Example 1:**
 
 ![img](https://assets.leetcode.com/uploads/2020/11/26/tmp-tree.jpg)
-
-
 
 ```
 Input: root = [3,9,20,null,null,15,7]
@@ -44,9 +42,9 @@ Output: 2
 
 关键：要能看出这道题考查二叉树的后序遍历。
 
-提示：思路1：后序遍历：看完左右子树，才能计算自己；
+提示：思路 1：后序遍历：看完左右子树，才能计算自己；
 
-思路2：使用 BFS。
+思路 2：使用 BFS。
 
 Java 代码：
 
@@ -119,7 +117,7 @@ class Solution(object):
 
 感觉递归调用就像什么都没有做一样。通过这个例子，我们来理解一下（1）（2）这两个步骤的具体应用。这让我想起了八皇后问题。
 
-还可以使用 DFS  和 BFS 完成这个问题。首先  BFS  我觉得思路更直接一些，代码也是有套路的。
+还可以使用 DFS 和 BFS 完成这个问题。首先 BFS 我觉得思路更直接一些，代码也是有套路的。
 
 Python 代码：
 
@@ -189,7 +187,7 @@ class Solution(object):
             self.__dfs(node.right, depth)
 ```
 
-+ 复习和二叉树相关的所有操作。
+- 复习和二叉树相关的所有操作。
 
 ## 方法二：广度优先遍历
 
@@ -219,6 +217,3 @@ class Solution:
                     queue.append(first.right)
         return depth
 ```
-
-
-

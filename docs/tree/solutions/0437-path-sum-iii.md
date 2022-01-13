@@ -7,7 +7,7 @@ tags:
   - 递归
 ---
 
-+ 题目描述：[437. 路径总和 III](https://leetcode-cn.com/problems/path-sum-iii/description/)。
+- 题目描述：[437. 路径总和 III](https://leetcode-cn.com/problems/path-sum-iii/description/)。
 
 ## 题目描述
 
@@ -35,8 +35,5 @@ tags:
 **提示:**
 
 - 二叉树的节点个数的范围是 `[0,1000]`
-- `-10^9 <= Node.val <= 10^9` 
-- `-1000 <= targetSum <= 1000` 
-
-
-
+- `-10^9 <= Node.val <= 10^9`
+- `-1000 <= targetSum <= 1000`

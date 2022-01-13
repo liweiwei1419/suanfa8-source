@@ -8,13 +8,11 @@ tags:
 
 求解关键：非常标准的层序遍历的做法，使用队列作为辅助的数据结构。
 
-+ 题目描述：[102. 二叉树的层次遍历](https://leetcode-cn.com/problems/binary-tree-level-order-traversal/)。
+- 题目描述：[102. 二叉树的层次遍历](https://leetcode-cn.com/problems/binary-tree-level-order-traversal/)。
 
 ## 题目描述
 
 给你一个二叉树，请你返回其按 **层序遍历** 得到的节点值。 （即逐层地，从左到右访问所有节点）。
-
-
 
 **示例 1：**
 二叉树：`[3,9,20,null,null,15,7]`,
@@ -38,8 +36,6 @@ tags:
   [15,7]
 ]
 ```
-
-
 
 **Example 2:**
 
@@ -75,13 +71,14 @@ import java.util.List;
 import java.util.Queue;
 
 class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
+int val;
+TreeNode left;
+TreeNode right;
 
     TreeNode(int x) {
         val = x;
     }
+
 }
 
 public class Solution {
@@ -112,8 +109,10 @@ public class Solution {
         }
         return res;
     }
+
 }
-```
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Python3">
@@ -150,6 +149,7 @@ class Solution:
 
             res.append(cur)
         return res
-```
+````
+
 </CodeGroupItem>
 </CodeGroup>

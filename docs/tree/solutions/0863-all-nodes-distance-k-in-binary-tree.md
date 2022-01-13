@@ -6,9 +6,7 @@ tags:
   - 二叉树
 ---
 
-
-+ 题目链接：[863. 二叉树中所有距离为 K 的结点](https://leetcode-cn.com/problems/all-nodes-distance-k-in-binary-tree/)。
-
+- 题目链接：[863. 二叉树中所有距离为 K 的结点](https://leetcode-cn.com/problems/all-nodes-distance-k-in-binary-tree/)。
 
 ## 题目描述
 
@@ -40,8 +38,8 @@ tags:
 
 **思路分析**：
 
-+ 可以使用深度优先遍历、也可以使用广度优先遍历；
-+ 重点是建立父亲结点和孩子结点的相互访问关系。
+- 可以使用深度优先遍历、也可以使用广度优先遍历；
+- 重点是建立父亲结点和孩子结点的相互访问关系。
 
 **参考代码**：
 
@@ -110,5 +108,3 @@ public class Solution {
     }
 }
 ```
-
-

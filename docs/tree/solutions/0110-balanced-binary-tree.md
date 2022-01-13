@@ -8,7 +8,7 @@ tags:
 permalink: leetcode-algo/0110-balanced-binary-tree
 ---
 
-+ 题目描述：[110. 平衡二叉树](https://leetcode-cn.com/problems/balanced-binary-tree/description/)。
+- 题目描述：[110. 平衡二叉树](https://leetcode-cn.com/problems/balanced-binary-tree/description/)。
 
 ## 题目描述
 
@@ -30,8 +30,6 @@ permalink: leetcode-algo/0110-balanced-binary-tree
 **示例 2：**
 
 ![img](https://assets.leetcode.com/uploads/2020/10/06/balance_2.jpg)
-
-
 
 ```
 输入：root = [1,2,2,3,3,null,null,4,4]

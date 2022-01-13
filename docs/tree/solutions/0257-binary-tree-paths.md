@@ -10,9 +10,9 @@ tags:
   - 字符串
 ---
 
-+ 题目链接：[257. 二叉树的所有路径](https://leetcode-cn.com/problems/binary-tree-paths/)；
+- 题目链接：[257. 二叉树的所有路径](https://leetcode-cn.com/problems/binary-tree-paths/)；
 
-+ 题解链接：[回溯算法（Python 代码、Java 代码）](https://leetcode-cn.com/problems/binary-tree-paths/solution/shen-du-you-xian-bian-li-python-dai-ma-by-liweiwei/)。
+- 题解链接：[回溯算法（Python 代码、Java 代码）](https://leetcode-cn.com/problems/binary-tree-paths/solution/shen-du-you-xian-bian-li-python-dai-ma-by-liweiwei/)。
 
 ## 题目描述
 
@@ -23,8 +23,6 @@ tags:
 **示例 1：**
 
 ![img](https://assets.leetcode.com/uploads/2021/03/12/paths-tree.jpg)
-
-
 
 ```
 输入：root = [1,2,3,null,5]
@@ -38,21 +36,16 @@ tags:
 输出：["1"]
 ```
 
- 
-
 **提示：**
 
 - 树中节点的数目在范围 `[1, 100]` 内
 - `-100 <= Node.val <= 100`
 
-
-
-### 回溯算法（Python 代码、Java 代码）
+## 回溯算法（Python 代码、Java 代码）
 
 这是典型的使用回溯解决的问题，一般来说，都要使用一个栈或者列表（命名为 `path` 或者 `pre`）记录状态，在需要结算的时候，记录下当前的状态。
 
 编码注意事项：回溯的时候状态要重置。
-
 
 这道题的写法比较多，这里只介绍最基本的回溯、状态重置的写法，其它写法供大家参考。
 
@@ -198,7 +191,7 @@ public class Solution {
 
 **参考代码 2**：如果通过参数传递的方式，就没有显式的回溯和状态重置的过程了
 
-说明：下面第 1 个选项卡的 Python 代码是 [@何去何从gw](/u/he-qu-he-cong-gw) 用户在评论区中提供的，并且指出了“隐式回溯”的概念，在此表示感谢。
+说明：下面第 1 个选项卡的 Python 代码是 [@何去何从 gw](/u/he-qu-he-cong-gw) 用户在评论区中提供的，并且指出了“隐式回溯”的概念，在此表示感谢。
 
 Python 代码：
 
@@ -272,7 +265,7 @@ Java 代码：
 
 ```Java []
 public class Solution2 {
-    
+
     private void dfs(TreeNode node, String pre, List<String> res) {
         // 递归终止条件：走到根节点的时候，就可以把沿途积累的字符串添加到结果集中
         if (node.left == null && node.right == null) {
@@ -407,4 +400,3 @@ class Solution:
         helper(root, [], res)
         return res
 ```
-

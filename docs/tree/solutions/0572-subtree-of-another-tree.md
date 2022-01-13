@@ -7,7 +7,7 @@ tags:
   - 递归
 ---
 
-+ 题目链接：[572. 另一个树的子树](https://leetcode-cn.com/problems/subtree-of-another-tree)。
+- 题目链接：[572. 另一个树的子树](https://leetcode-cn.com/problems/subtree-of-another-tree)。
 
 ## 题目描述
 
@@ -32,8 +32,6 @@ tags:
 输入：root = [3,4,5,1,2,null,null,null,null,0], subRoot = [4,1,2]
 输出：false
 ```
-
- 
 
 **提示：**
 
@@ -85,4 +83,3 @@ public class Solution {
     }
 }
 ```
-

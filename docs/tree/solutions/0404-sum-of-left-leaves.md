@@ -7,19 +7,15 @@ tags:
   - 递归
 ---
 
-+ 题目链接：[404. 左叶子之和](https://leetcode-cn.com/problems/sum-of-left-leaves/description/)。
+- 题目链接：[404. 左叶子之和](https://leetcode-cn.com/problems/sum-of-left-leaves/description/)。
 
 ## 题目描述
 
 计算给定二叉树的所有左叶子之和。
 
-
-
 **Example 1:**
 
 ![img](https://assets.leetcode.com/uploads/2021/04/08/leftsum-tree.jpg)
-
-
 
 ```
 Input: root = [3,9,20,null,null,15,7]

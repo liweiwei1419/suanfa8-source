@@ -7,7 +7,7 @@ tags:
   - 深度优先遍历
 ---
 
-+ 题目链接：[951. 翻转等价二叉树](https://leetcode-cn.com/problems/flip-equivalent-binary-trees/)。
+- 题目链接：[951. 翻转等价二叉树](https://leetcode-cn.com/problems/flip-equivalent-binary-trees/)。
 
 ## 题目描述
 
@@ -34,7 +34,7 @@ tags:
 
 ## 方法：深度优先遍历
 
-+ 先写 **递归终止条件**；
+- 先写 **递归终止条件**；
 
 **参考代码**：
 
@@ -54,4 +54,3 @@ public class Solution {
     }
 }
 ```
-

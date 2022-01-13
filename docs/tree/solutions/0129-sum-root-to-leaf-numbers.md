@@ -7,7 +7,7 @@ tags:
   - 递归
 ---
 
-+ 题目链接：[129. 求根到叶子结点数字之和](https://leetcode-cn.com/problems/sum-root-to-leaf-numbers/description/)。
+- 题目链接：[129. 求根到叶子结点数字之和](https://leetcode-cn.com/problems/sum-root-to-leaf-numbers/description/)。
 
 ## 题目描述
 
@@ -56,9 +56,7 @@ tags:
 
 ## 思路分析
 
-
-
-Java 代码1：使用 path，递归回溯的常规解法。
+Java 代码 1：使用 path，递归回溯的常规解法。
 
 ```java
 import java.util.ArrayList;
@@ -126,7 +124,7 @@ public class Solution {
 
 ```
 
-Python 代码2（推荐）：（使用递归）使用 cumsum 这个概念，即开始遍历到这个根结点的之前，已经有了 cumsum ，代码写出来也是非常简洁。
+Python 代码 2（推荐）：（使用递归）使用 cumsum 这个概念，即开始遍历到这个根结点的之前，已经有了 cumsum ，代码写出来也是非常简洁。
 
 ```python
 # Definition for a binary tree node.
@@ -159,7 +157,7 @@ class Solution:
         self.__dfs(root.right, cum_sum * 10 + root.val, res)
 ```
 
-Java 代码3：
+Java 代码 3：
 
 ```java
 // https://leetcode-cn.com/problems/sum-root-to-leaf-numbers/description/
@@ -254,8 +252,6 @@ class Solution:
 
 （本节完）
 
-
-
 # LeetCode 第 129 题：求根到叶子结点数字之和
 
 Python 代码：使用递归，使用 cumsum 这个概念，即开始遍历到这个根结点的之前，已经有了 cumsum ，代码写出来也是非常简洁。
@@ -315,4 +311,3 @@ class Solution:
         self.__dfs(root.left, cum_sum * 10 + root.val, res)
         self.__dfs(root.right, cum_sum * 10 + root.val, res)
 ```
-

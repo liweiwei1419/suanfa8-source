@@ -6,9 +6,8 @@ tags:
   - 二叉树
 ---
 
-
-+ 题目链接：[226. 翻转二叉树](https://leetcode-cn.com/problems/invert-binary-tree/)；
-+ 题解链接：[前、中、后序遍历、层序遍历](https://leetcode-cn.com/problems/invert-binary-tree/solution/qian-zhong-hou-xu-bian-li-ceng-xu-bian-li-by-liwei/)。
+- 题目链接：[226. 翻转二叉树](https://leetcode-cn.com/problems/invert-binary-tree/)；
+- 题解链接：[前、中、后序遍历、层序遍历](https://leetcode-cn.com/problems/invert-binary-tree/solution/qian-zhong-hou-xu-bian-li-ceng-xu-bian-li-by-liwei/)。
 
 和二叉树相关的问题，在面试中是非常常见的。一旦我们熟悉了这些问题以后，会发现这些问题其实是非常简单的。
 
@@ -56,12 +55,10 @@ Input: root = []
 Output: []
 ```
 
- 
-
 **备注:**
 这个问题是受到 [Max Howell ](https://twitter.com/mxcl)的 [原问题](https://twitter.com/mxcl/status/608682016205344768) 启发的 ：
 
-> 谷歌：我们90％的工程师使用您编写的软件(Homebrew)，但是您却无法在面试时在白板上写出翻转二叉树这道题，这太糟糕了。
+> 谷歌：我们 90％的工程师使用您编写的软件(Homebrew)，但是您却无法在面试时在白板上写出翻转二叉树这道题，这太糟糕了。
 
 **Constraints:**
 
@@ -76,14 +73,13 @@ Output: []
 
 > 这个问题是受到 Max Howell 的 原问题 启发的 ：
 >
-> 谷歌：我们90％的工程师使用您编写的软件(Homebrew)，但是您却无法在面试时在白板上写出翻转二叉树这道题，这太糟糕了。
+> 谷歌：我们 90％的工程师使用您编写的软件(Homebrew)，但是您却无法在面试时在白板上写出翻转二叉树这道题，这太糟糕了。
 
-思路1：我们可以使用递归方法来完成，我们写好之后，会发现其实就是完成了一次深度优先遍历，并且是前序遍历，有的朋友可能写出来的后序遍历，那么我们不禁要问，中序遍历可不可以，答案是不可以，因为中序遍历很可能一个结点会被翻转两次，这与我们的要求是违背的。
+思路 1：我们可以使用递归方法来完成，我们写好之后，会发现其实就是完成了一次深度优先遍历，并且是前序遍历，有的朋友可能写出来的后序遍历，那么我们不禁要问，中序遍历可不可以，答案是不可以，因为中序遍历很可能一个结点会被翻转两次，这与我们的要求是违背的。
 
 Java 代码：
 
 ![LeetCode 第 226 题：反转一棵二叉树](https://liweiwei1419.github.io/images/leetcode-solution/226-1.jpg)
-
 
 Java 代码：后序遍历
 
@@ -260,7 +256,4 @@ public class Solution {
 }
 ```
 
-
-
 ![image-20181214103339221](http://upload-images.jianshu.io/upload_images/414598-3188d0a8a664c517.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-

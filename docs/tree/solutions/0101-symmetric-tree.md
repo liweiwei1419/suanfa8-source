@@ -7,41 +7,46 @@ tags:
   - 递归
 ---
 
-+ 题目链接：[101. 对称二叉树](https://leetcode-cn.com/problems/symmetric-tree/description/)。
+- 题目链接：[101. 对称二叉树](https://leetcode-cn.com/problems/symmetric-tree/description/)。
 
 ## 题目描述
 
-给定一个二叉树，检查它是否是镜像对称的。
+给你一个二叉树的根节点 `root` ， 检查它是否轴对称。
 
-例如，二叉树 `[1,2,2,3,4,4,3]` 是对称的。
+ 
 
-```
-    1
-   / \
-  2   2
- / \ / \
-3  4 4  3
-```
+**示例 1：**
 
-但是下面这个 `[1,2,2,null,3,null,3]` 则不是镜像对称的:
+![img](https://assets.leetcode.com/uploads/2021/02/19/symtree1.jpg)
 
 ```
-    1
-   / \
-  2   2
-   \   \
-   3    3
+输入：root = [1,2,2,3,4,4,3]
+输出：true
 ```
 
-**进阶：**
+**示例 2：**
 
-你可以运用递归和迭代两种方法解决这个问题吗？
+![img](https://assets.leetcode.com/uploads/2021/02/19/symtree2.jpg)
+
+```
+输入：root = [1,2,2,null,3,null,3]
+输出：false
+```
+
+
+
+**提示：**
+
+- 树中节点数目在范围 `[1, 1000]` 内
+- `-100 <= Node.val <= 100`
+
+**进阶：** 你可以运用递归和迭代两种方法解决这个问题吗？
 
 ## 方法一：递归
 
 需要引入辅助函数。
 
-Python 代码1：
+Python 代码 1：
 
 ```python
 # Definition for a binary tree node.
@@ -193,13 +198,13 @@ public class Solution {
 }
 ```
 
-提示：首先理解什么是镜面对称。**两个结点的根结点的值必须相等，并且1、左边的左结点=右边的右结点；2、左边的右结点=右边的左结点**。我觉得没有什么技巧，记住就可以了。使用下面这张图思考这个问题。
+提示：首先理解什么是镜面对称。**两个结点的根结点的值必须相等，并且 1、左边的左结点=右边的右结点；2、左边的右结点=右边的左结点**。我觉得没有什么技巧，记住就可以了。使用下面这张图思考这个问题。
 
-思路1：递归。
+思路 1：递归。
 
 ![image-20181214103655847](http://upload-images.jianshu.io/upload_images/414598-e1711449c7543447.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-思路2：双端队列。
+思路 2：双端队列。
 
 ![image-20181214104909130](http://upload-images.jianshu.io/upload_images/414598-9fe70de9914851db.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
@@ -230,7 +235,7 @@ class Solution(object):
 
             if l_node is None and r_node is None:
                 continue
-                
+
             if l_node is None or r_node is None:
                 return False
 

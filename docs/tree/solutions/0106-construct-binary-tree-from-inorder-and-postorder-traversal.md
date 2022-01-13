@@ -7,13 +7,12 @@ tags:
   - 递归
 ---
 
-
-+ 题目链接：[106. 从中序与后序遍历序列构造二叉树](https://leetcode-cn.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal)；
-+ 题解链接：[分治法（Python、Java）](https://leetcode-cn.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/solution/hou-xu-bian-li-python-dai-ma-java-dai-ma-by-liwe-2/)。
+- 题目链接：[106. 从中序与后序遍历序列构造二叉树](https://leetcode-cn.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal)；
+- 题解链接：[分治法（Python、Java）](https://leetcode-cn.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/solution/hou-xu-bian-li-python-dai-ma-java-dai-ma-by-liwe-2/)。
 
 ## 题目描述
 
-Given two integer arrays `inorder` and `postorder` where `inorder` is the inorder traversal of a binary tree and `postorder` is the postorder traversal of the same tree, construct and return *the binary tree*.
+Given two integer arrays `inorder` and `postorder` where `inorder` is the inorder traversal of a binary tree and `postorder` is the postorder traversal of the same tree, construct and return _the binary tree_.
 
 **Example 1:**
 
@@ -31,8 +30,6 @@ Input: inorder = [-1], postorder = [-1]
 Output: [-1]
 ```
 
-
-
 **Constraints:**
 
 - `1 <= inorder.length <= 3000`
@@ -45,10 +42,10 @@ Output: [-1]
 
 ## 一句话题解
 
-+ 二叉树后序遍历的最后一个元素一定是根结点；
-+ 二叉树的根结点把中序遍历序列分成两个区间：
-  + 左边区间的 **所有** 结点构成根结点的左子树；
-  + 右边区间的 **所有** 结点构成根结点的右子树。
+- 二叉树后序遍历的最后一个元素一定是根结点；
+- 二叉树的根结点把中序遍历序列分成两个区间：
+  - 左边区间的 **所有** 结点构成根结点的左子树；
+  - 右边区间的 **所有** 结点构成根结点的右子树。
 
 递归构建二叉树即可。
 
@@ -60,17 +57,17 @@ Output: [-1]
 
 解决二叉树的问题通常会用到分治思想，分治思想一般通过递归方法实现。
 
-
 复习分治法的思想：把原问题分解（Divide）成若干个与原问题结构相同但规模更小的子问题，待子问题解决（Conquer）以后，再合并（Combine）它们，原问题就得以解决。
 
 归并排序和快速排序是典型的分治法思想的应用，其中：
-+ 归并排序先无脑地「分」，在「合」的时候就麻烦一些；
-+ 快速排序在 partition 上花了很多时间，即在「分」上花了很多时间，然后就递归处理下去就好了，没有在「合」的过程。
+
+- 归并排序先无脑地「分」，在「合」的时候就麻烦一些；
+- 快速排序在 partition 上花了很多时间，即在「分」上花了很多时间，然后就递归处理下去就好了，没有在「合」的过程。
 
 以题目中给出的例子为例，讲解如何构建二叉树。
 
 > 中序遍历 `inorder = [9,3,15,20,7] `  
-后序遍历 `postorder = [9,15,7,20,3]`
+> 后序遍历 `postorder = [9,15,7,20,3]`
 
 ![106-1.png](https://pic.leetcode-cn.com/40c56ab66dc7288be11bc93fe9e31fd05daf6d6377fae8d1aa11054a67b4d62f-106-1.png)
 
@@ -131,6 +128,7 @@ public class Solution {
     }
 }
 ```
+
 ```Python []
 from typing import List
 
@@ -156,8 +154,8 @@ class Solution:
 
 **复杂度分析：**
 
-+ 时间复杂度：$O(N^2)$，这里 $N$ 是二叉树的结点个数，算法中每个结点都会被看到一次，而查找根结点在中序遍历序列中的位置，又需要遍历一次，递归的深度是对数级别的，因此时间复杂度是 $O(N^2)$。
-+ 空间复杂度：$O(N)$，构造一棵树需要 $N$ 个结点。
+- 时间复杂度：$O(N^2)$，这里 $N$ 是二叉树的结点个数，算法中每个结点都会被看到一次，而查找根结点在中序遍历序列中的位置，又需要遍历一次，递归的深度是对数级别的，因此时间复杂度是 $O(N^2)$。
+- 空间复杂度：$O(N)$，构造一棵树需要 $N$ 个结点。
 
 ## 方法二：在递归方法中，传入子数组的边界下标
 
@@ -219,6 +217,7 @@ public class Solution {
     }
 }
 ```
+
 ```Python []
 from typing import List
 
@@ -259,7 +258,6 @@ class Solution:
 可以在递归构造前，把中序遍历的值和下标放在哈希表中，就不需要通过遍历得到当前根结点在中序遍历中的位置了。
 
 **参考代码 3**：
-
 
 ```Java []
 import java.util.HashMap;
@@ -316,8 +314,7 @@ public class Solution {
 }
 ```
 
-
 **复杂度分析：**
 
-+ 时间复杂度：$O(N)$，这里 $N$ 是二叉树的结点个数，二叉树的每个结点都遍历了 $2$ 次，第 1 次是扫描构建哈希表，第 2 次是递归构建二叉树；
-+ 空间复杂度：$O(N)$。
+- 时间复杂度：$O(N)$，这里 $N$ 是二叉树的结点个数，二叉树的每个结点都遍历了 $2$ 次，第 1 次是扫描构建哈希表，第 2 次是递归构建二叉树；
+- 空间复杂度：$O(N)$。

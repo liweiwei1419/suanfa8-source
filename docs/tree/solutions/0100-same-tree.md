@@ -7,7 +7,7 @@ tags:
   - 递归
 ---
 
-+ 题目链接：[100. 相同的树](https://leetcode-cn.com/problems/same-tree/description/) 。
+- 题目链接：[100. 相同的树](https://leetcode-cn.com/problems/same-tree/description/) 。
 
 ## 题目描述
 
@@ -41,8 +41,6 @@ tags:
 输入：p = [1,2,1], q = [1,1,2]
 输出：false
 ```
-
-
 
 **提示：**
 
