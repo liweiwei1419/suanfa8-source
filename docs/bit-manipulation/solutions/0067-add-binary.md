@@ -6,8 +6,8 @@ tags:
   - 位运算
 ---
 
-+ 题目链接：[67. 二进制求和](https://leetcode-cn.com/problems/add-binary/)；
-+ 题解链接：[模拟「二进制」竖式加法](https://leetcode-cn.com/problems/add-binary/solution/mo-shi-er-jin-zhi-shu-shi-jia-fa-by-liweiwei1419/)。
+- 题目链接：[67. 二进制求和](https://leetcode-cn.com/problems/add-binary/)；
+- 题解链接：[模拟「二进制」竖式加法](https://leetcode-cn.com/problems/add-binary/solution/mo-shi-er-jin-zhi-shu-shi-jia-fa-by-liweiwei1419/)。
 
 ## 题目描述
 
@@ -42,17 +42,13 @@ tags:
 ![image.png](https://pic.leetcode-cn.com/88f7d604ccd835f27b37fe5672a8c022ce2545f1bd5923f7ca066ef1e5f7e191-image.png){:width=400}
 {:align=center}
 
-
-
 我个人觉得这道题单纯是为了考察了我们对于所使用语言的字符串 API 的熟悉程度。写法不唯一，下面以 Java 为例编写参考代码。
 
 在 Java 语言中，如果需要频繁地针对字符串进行操作，应该使用可变的字符序列对象 `StringBuilder`（这里有一个常见的面试问题：`StringBuilder` 与 `StringBuffer` 的区别），并且 `StringBuilder` 对象也为我们提供了一些好用的操作字符序列的方法（反转，删除、在某一个位置插入一个字符）。
 
 编码中要注意的一点是：如果两个字符的长度不等，需要在短的那个字符串的**左边**补“0”。
 
-
 **参考代码 1**：
-
 
 ```Java []
 public class Solution {
@@ -111,13 +107,13 @@ public class Solution {
     }
 }
 ```
-**复杂度分析**：
-+ 时间复杂度：$O(\max(M,N))$，这里 $M$ 是字符串 `a` 的长度，$N$ 是字符串 `b` 的长度。
-+ 空间复杂度：$O(\max(M,N))$，保存结果需要 $\max(M,N)$ 长度的可变字符序列对象，如果最高位需要进位，还需要加 $1$，不过在复杂度计算中忽略这个 $1$。
 
+**复杂度分析**：
+
+- 时间复杂度：$O(\max(M,N))$，这里 $M$ 是字符串 `a` 的长度，$N$ 是字符串 `b` 的长度。
+- 空间复杂度：$O(\max(M,N))$，保存结果需要 $\max(M,N)$ 长度的可变字符序列对象，如果最高位需要进位，还需要加 $1$，不过在复杂度计算中忽略这个 $1$。
 
 上面的代码“翻转”了两次，显得有点啰嗦，我们可以使用两个指针，分别从字符串的末尾开始向前遍历，同时在借用 `StringBuilder` 对象的 `insert` 方法，从右向左依次得出计算结果，就真的非常接近我们手写“竖式加法”的过程了。下面是参考代码。
-
 
 **参考代码 2**：
 
@@ -175,5 +171,6 @@ public class Solution {
 ```
 
 **复杂度分析**：
-+ 时间复杂度：$O(\max(M,N))$，这里 $M$ 是字符串 `a` 的长度，$N$ 是字符串 `b` 的长度。
-+ 空间复杂度：$O(\max(M,N))$，保存结果需要 $\max(M,N)$ 长度的可变字符序列对象，如果最高位需要进位，还需要加 $1$，不过在复杂度计算中忽略这个 $1$。
+
+- 时间复杂度：$O(\max(M,N))$，这里 $M$ 是字符串 `a` 的长度，$N$ 是字符串 `b` 的长度。
+- 空间复杂度：$O(\max(M,N))$，保存结果需要 $\max(M,N)$ 长度的可变字符序列对象，如果最高位需要进位，还需要加 $1$，不过在复杂度计算中忽略这个 $1$。

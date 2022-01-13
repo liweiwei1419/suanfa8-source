@@ -6,8 +6,7 @@ tags:
   - 位运算
 ---
 
-
-+ 题目链接：[868. 二进制间距](https://leetcode-cn.com/problems/binary-gap/)。
+- 题目链接：[868. 二进制间距](https://leetcode-cn.com/problems/binary-gap/)。
 
 ## 题目描述
 
@@ -63,11 +62,9 @@ tags:
 输出：0
 ```
 
- **提示：**
+**提示：**
 
 - `1 <= N <= 10^9`
-
-
 
 **注意**：这里设置 `pre` 初值为 -1 的小技巧，即 `pre` 一定要被赋值以后，才能参与计算。
 
@@ -96,4 +93,3 @@ public class Solution {
     }
 }
 ```
-

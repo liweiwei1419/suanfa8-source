@@ -6,10 +6,8 @@ tags:
   - 位运算
 ---
 
-+ 题目链接：[421. 数组中两个数的最大异或值](https://leetcode-cn.com/problems/maximum-xor-of-two-numbers-in-an-array/)；
-+ 题解链接：[利用异或运算的性质 + 贪心算法（Python 代码、Java 代码）](https://leetcode-cn.com/problems/maximum-xor-of-two-numbers-in-an-array/solution/li-yong-yi-huo-yun-suan-de-xing-zhi-tan-xin-suan-f/) 。
-
-
+- 题目链接：[421. 数组中两个数的最大异或值](https://leetcode-cn.com/problems/maximum-xor-of-two-numbers-in-an-array/)；
+- 题解链接：[利用异或运算的性质 + 贪心算法（Python 代码、Java 代码）](https://leetcode-cn.com/problems/maximum-xor-of-two-numbers-in-an-array/solution/li-yong-yi-huo-yun-suan-de-xing-zhi-tan-xin-suan-f/) 。
 
 ## 题目描述
 
@@ -60,7 +58,7 @@ tags:
 
 ---
 
-+ 提示：点击上面的题解链接，可以看到我制作的幻灯片轮播图。
+- 提示：点击上面的题解链接，可以看到我制作的幻灯片轮播图。
 
 ## 异或运算的性质
 
@@ -70,7 +68,7 @@ tags:
 
 即**如果有三个数，满足其中两个数的异或值等于另一个值，那么这三个数的顺序可以任意调换**。
 
-+ 那么如何理解这个性质呢？因为异或运算其实就是**二进制下不进位的加法**，你不妨自己举几个例子，在草稿纸上验证一下。
+- 那么如何理解这个性质呢？因为异或运算其实就是**二进制下不进位的加法**，你不妨自己举几个例子，在草稿纸上验证一下。
 
 ## 如何应用到本题？
 
@@ -79,7 +77,6 @@ tags:
 > **我们只用关心这个最大的异或值需要满足什么性质，进而推出这个最大值是什么，而不必关心这个异或值是由哪两个数得来的。**
 
 （上面这句话很重要，如果读者一开始看不明白下面的思考，不妨多看几遍我上面写的这句话。）
-
 
 于是有如下思考：
 
@@ -128,7 +125,7 @@ tags:
 11111111111111111111111111111111
 ```
 
-以题目中的数组  `[3, 10, 5, 25, 2, 8]` 为例，下面讲解这个最大的两两异或值是如何得到的，这里为了方便演示，只展示一个数二进制的低 8 位。
+以题目中的数组 `[3, 10, 5, 25, 2, 8]` 为例，下面讲解这个最大的两两异或值是如何得到的，这里为了方便演示，只展示一个数二进制的低 8 位。
 
 ![LeetCode 第 421 题：数组中两个数的最大异或值-1](https://liweiwei1419.github.io/images/leetcode-solution/421-1.png)
 
@@ -142,9 +139,7 @@ tags:
 
 ![LeetCode 第 421 题：数组中两个数的最大异或值-6](https://liweiwei1419.github.io/images/leetcode-solution/421-6.png)
 
-
 Python 代码：
-
 
 ```Python
 class Solution:
@@ -159,7 +154,7 @@ class Solution:
             for num in nums:
                 s.add(mask & num)
 
-            # 先“贪心地”假设这个数位上是 “1” ，如果全部前缀都看完，都不符合条件，这个数位上就是 “0” 
+            # 先“贪心地”假设这个数位上是 “1” ，如果全部前缀都看完，都不符合条件，这个数位上就是 “0”
             temp = res | (1 << i)
 
             for prefix in s:
@@ -219,5 +214,5 @@ public class Solution {
 
 **复杂度分析：**
 
-+ 时间复杂度：$O(N)$，把整个数组看了 $32$ 次，即 $O(32N) = O(N)$。
-+ 空间复杂度：$O(1)$，使用了一个哈希表，这个哈希表最多存 $32$ 个前缀，$O(32)=O(1)$。
+- 时间复杂度：$O(N)$，把整个数组看了 $32$ 次，即 $O(32N) = O(N)$。
+- 空间复杂度：$O(1)$，使用了一个哈希表，这个哈希表最多存 $32$ 个前缀，$O(32)=O(1)$。

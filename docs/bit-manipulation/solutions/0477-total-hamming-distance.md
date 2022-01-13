@@ -6,16 +6,13 @@ tags:
   - 位运算
 ---
 
-
-+ 题目链接：[477. 汉明距离总和](https://leetcode-cn.com/problems/total-hamming-distance/)。
+- 题目链接：[477. 汉明距离总和](https://leetcode-cn.com/problems/total-hamming-distance/)。
 
 ## 题目描述
 
 两个整数的 [汉明距离](https://baike.baidu.com/item/汉明距离/475174?fr=aladdin) 指的是这两个数字的二进制数对应位不同的数量。
 
 给你一个整数数组 `nums`，请你计算并返回 `nums` 中任意两个数之间 **汉明距离的总和** 。
-
- 
 
 **示例 1：**
 

@@ -6,8 +6,7 @@ tags:
   - 位运算
 ---
 
-
-+ 题目链接：[剑指 Offer 56 - I. 数组中数字出现的次数](https://leetcode-cn.com/problems/shu-zu-zhong-shu-zi-chu-xian-de-ci-shu-lcof/)。
+- 题目链接：[剑指 Offer 56 - I. 数组中数字出现的次数](https://leetcode-cn.com/problems/shu-zu-zhong-shu-zi-chu-xian-de-ci-shu-lcof/)。
 
 ## 题目描述
 
@@ -20,7 +19,6 @@ tags:
 输出：[1,6] 或 [6,1]
 ```
 
-
 示例 2：
 
 ```
@@ -28,13 +26,11 @@ tags:
 输出：[2,10] 或 [10,2]
 ```
 
-
 限制：
 
-+ `2 <= nums <= 10000`
+- `2 <= nums <= 10000`
 
 **参考代码**：
-
 
 <CodeGroup>
 <CodeGroupItem title="Java">
@@ -44,7 +40,7 @@ import java.util.Arrays;
 public class Solution {
 
     public int[] singleNumbers(int[] nums) {
-        
+
         // 考察位运算：或、与、异或、非，以及无符号左移 >>>
         int len = nums.length;
         int[] res = new int[2];
@@ -93,8 +89,10 @@ public class Solution {
         // 走到这里满足 (num & 1) == 1
         return index;
     }
+
 }
-```    
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Python3">
@@ -128,6 +126,7 @@ class Solution:
             else:
                 res[0] ^= num
         return res
-```
+````
+
 </CodeGroupItem>
 </CodeGroup>

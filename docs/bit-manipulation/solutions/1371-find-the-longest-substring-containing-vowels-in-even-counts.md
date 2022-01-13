@@ -6,9 +6,7 @@ tags:
   - 位运算
 ---
 
-
-+ 题目链接：[1371. 每个元音包含偶数次的最长子字符串](https://leetcode-cn.com/problems/find-the-longest-substring-containing-vowels-in-even-counts)。
-
+- 题目链接：[1371. 每个元音包含偶数次的最长子字符串](https://leetcode-cn.com/problems/find-the-longest-substring-containing-vowels-in-even-counts)。
 
 今天要和大家分享的是「状态压缩」的两道问题。我再准备一段时间，再和大家分享「动态规划」里「状压 dp」相关的问题，这两道问题是一个热身。
 
@@ -16,7 +14,7 @@ tags:
 
 给你一个字符串 `s` ，请你返回满足以下条件的最长子字符串的长度：每个元音字母，即 'a'，'e'，'i'，'o'，'u' ，在子字符串中都恰好出现了偶数次。
 
- 示例 1：
+示例 1：
 
 ```
 输入：s = "eleetminicoworoep"
@@ -40,11 +38,10 @@ tags:
 解释：这个示例中，字符串 "bcbcbc" 本身就是最长的，因为所有的元音 a，e，i，o，u 都出现了 0 次。
 ```
 
-
 提示：
 
-+ `1 <= s.length <= 5 x 10^5`；
-+ `s 只包含小写英文字母`。
+- `1 <= s.length <= 5 x 10^5`；
+- `s 只包含小写英文字母`。
 
 ### 算法思想
 
@@ -179,8 +176,7 @@ public class Solution2 {
 
 **复杂度分析**：
 
-+ 时间复杂度：$O(N)$，这里 $N$ 是输入数组的长度，遍历一次得到结果；
-+ 空间复杂度：$O(N)$，状态数组的长度是 $N$。
+- 时间复杂度：$O(N)$，这里 $N$ 是输入数组的长度，遍历一次得到结果；
+- 空间复杂度：$O(N)$，状态数组的长度是 $N$。
 
 参考资料：https://leetcode-cn.com/problems/find-the-longest-substring-containing-vowels-in-even-counts/solution/jian-dan-de-si-lu-by-mnizy/
-

@@ -6,14 +6,11 @@ tags:
   - 位运算
 ---
 
-
-+ 题目链接：[201. 数字范围按位与](https://leetcode-cn.com/problems/bitwise-and-of-numbers-range/)。
+- 题目链接：[201. 数字范围按位与](https://leetcode-cn.com/problems/bitwise-and-of-numbers-range/)。
 
 ## 题目描述
 
 给你两个整数 `left` 和 `right` ，表示区间 `[left, right]` ，返回此区间内所有数字 **按位与** 的结果（包含 `left` 、`right` 端点）。
-
-
 
 **示例 1：**
 
@@ -38,7 +35,7 @@ tags:
 
 **提示：**
 
-- $0 \le left \le right le 2^{31} - 1$
+- $0 \le left \le right \le 2^{31} - 1$
 
 分析：位运算的问题，干脆就把它记住。
 
@@ -95,6 +92,3 @@ public class Solution3 {
     }
 }
 ```
-
-
-

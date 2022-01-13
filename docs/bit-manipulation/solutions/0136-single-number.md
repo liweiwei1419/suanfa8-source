@@ -6,8 +6,7 @@ tags:
   - 位运算
 ---
 
-
-+ 题目链接：[136. 只出现一次的数字](https://leetcode-cn.com/problems/single-number/)。
+- 题目链接：[136. 只出现一次的数字](https://leetcode-cn.com/problems/single-number/)。
 
 ## 题目描述
 
@@ -38,15 +37,11 @@ Input: nums = [1]
 Output: 1
 ```
 
-
-
 **Constraints:**
 
 - `1 <= nums.length <= 3 * 10^4`
 - `-3 * 10^4 <= nums[i] <= 3 * 10^4`
 - Each element in the array appears twice except for one element which appears only once.
-
-
 
 **参考代码**：
 
@@ -70,11 +65,11 @@ public class Solution {
         }
         // 那两个只出现一次的数的异或运算的结果
         int xor = xor(nums);
-        
+
         // 关键在这里
         // 找到这个 xor 的二进制表示第 1 个是 1 的数位是第几位
         int binaryFirstNotZero = binaryFirstNotZero(xor);
-        
+
         // 接下来分别对两组进行异或
         for (int i = 0; i < len; i++) {
             // 如果这个数右移这么多位是 1 的分在一组，是 0 的分在另外一组，遍历的时候，就进行异或运算
@@ -108,8 +103,10 @@ public class Solution {
         // 走到这里满足 (num & 1) == 1
         return index;
     }
+
 }
-```
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Python3">
@@ -130,7 +127,7 @@ class Solution(object):
         xor = 0
         for num in nums:
             xor ^= num
-            
+
         # 最末尾的 1 从右向左边数在第几位
         counter = 0
         while xor & 1 == 0:
@@ -144,12 +141,7 @@ class Solution(object):
             else:
                 res[0] ^= num
         return res
-```
+````
+
 </CodeGroupItem>
 </CodeGroup>
-
-
-
-
-
-

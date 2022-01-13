@@ -7,48 +7,43 @@ tags:
   - 位运算
 ---
 
-
-+ 题目链接：[52. N皇后 II](https://leetcode-cn.com/problems/n-queens-ii/description/)；
-+ 题解链接：[根据第 46 题“全排列”的“回溯算法”思路使用位图作为状态](https://leetcode-cn.com/problems/n-queens-ii/solution/gen-ju-di-46-ti-quan-pai-lie-de-hui-su-suan-fa-s-2/)。
+- 题目链接：[52. N 皇后 II](https://leetcode-cn.com/problems/n-queens-ii/description/)；
+- 题解链接：[根据第 46 题“全排列”的“回溯算法”思路使用位图作为状态](https://leetcode-cn.com/problems/n-queens-ii/solution/gen-ju-di-46-ti-quan-pai-lie-de-hui-su-suan-fa-s-2/)。
 
 ## 题目描述
 
-*n* 皇后问题研究的是如何将 *n* 个皇后放置在 *n*×*n* 的棋盘上，并且使皇后彼此之间不能相互攻击。
+**n 皇后问题** 研究的是如何将 `n` 个皇后放置在 `n × n` 的棋盘上，并且使皇后彼此之间不能相互攻击。
 
-![LeetCode 第 52 题：N-Queens II](https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/10/12/8-queens.png)
+给你一个整数 `n` ，返回 **n 皇后问题** 不同的解决方案的数量。
 
+ 
 
+**示例 1：**
 
-上图为 8 皇后问题的一种解法。
-
-给定一个整数 *n*，返回 *n* 皇后不同的解决方案的数量。
-
-**示例:**
+![img](https://assets.leetcode.com/uploads/2020/11/13/queens.jpg)
 
 ```
-输入: 4
-输出: 2
-解释: 4 皇后问题存在如下两个不同的解法。
-[
-[".Q..",  // 解法 1
-"...Q",
-"Q...",
-"..Q."],
-
-["..Q.",  // 解法 2
-"Q...",
-"...Q",
-".Q.."]
-]
+输入：n = 4
+输出：2
+解释：如上图所示，4 皇后问题存在两个不同的解法。
 ```
 
----
+**示例 2：**
+
+```
+输入：n = 1
+输出：1
+```
+
+**提示：**
+
+- `1 <= n <= 9`
 
 ## 方法一：根据第 46 题“全排列”的“回溯算法”思路使用位图作为状态
 
 **思路分析**：
 
-本思路是基于根据我为 [「力扣」第 51 题：“N皇后”](https://leetcode-cn.com/problems/n-queens/) 编写的题解 [《根据第 46 题“全排列”的“回溯算法”思路编写“N 皇后”问题（Java）》](https://leetcode-cn.com/problems/n-queens/solution/gen-ju-di-46-ti-quan-pai-lie-de-hui-su-suan-fa-si-/) ，该题解详细介绍了本思路的由来。如果没有看过的朋友建议看一下。
+本思路是基于根据我为 [「力扣」第 51 题：“N 皇后”](https://leetcode-cn.com/problems/n-queens/) 编写的题解 [《根据第 46 题“全排列”的“回溯算法”思路编写“N 皇后”问题（Java）》](https://leetcode-cn.com/problems/n-queens/solution/gen-ju-di-46-ti-quan-pai-lie-de-hui-su-suan-fa-si-/) ，该题解详细介绍了本思路的由来。如果没有看过的朋友建议看一下。
 
 因为不需要生成棋盘，即不需要得到具体的 `[1, 2, ..., n]` 的一个全排列，因此我们可以舍去数组 `nums` 的生成，只使用行、主对角线、副对角线三个辅助变量完成 N 皇后问题所有可能性的计算。
 
@@ -103,6 +98,7 @@ public class Solution {
 
 }
 ```
+
 ```Python []
 class Solution:
     count = 0
@@ -139,16 +135,14 @@ class Solution:
 
 ## 方法二：“不回溯”并且充分利用二进制位图的思想和二进制技巧
 
-
 我们想一下，方法一还有哪些地方可以快一点？
 
-+ 回溯：因为我们并不关心具体棋盘的生成，所以其实“回溯”是没有必要的，只要递归能走到第 n 层，就表示搜索到一个棋盘；
-+ 在 `for` 循环中一个位置一个位置遍历探测可以放置的位置太慢了，既然我们用到二进制位图，有 [「力扣」第 191 题：“位 1 的个数”](https://leetcode-cn.com/problems/number-of-1-bits) 的经验，即使用 `n & (n - 1)` 可以很快消去一个数的二进制表示的最低位的那个 1，类似的技巧就可以应用在这一题；具体请看我在参考代码 2 中的注释。
-
+- 回溯：因为我们并不关心具体棋盘的生成，所以其实“回溯”是没有必要的，只要递归能走到第 n 层，就表示搜索到一个棋盘；
+- 在 `for` 循环中一个位置一个位置遍历探测可以放置的位置太慢了，既然我们用到二进制位图，有 [「力扣」第 191 题：“位 1 的个数”](https://leetcode-cn.com/problems/number-of-1-bits) 的经验，即使用 `n & (n - 1)` 可以很快消去一个数的二进制表示的最低位的那个 1，类似的技巧就可以应用在这一题；具体请看我在参考代码 2 中的注释。
 
 **参考代码 2**：
 
-注意 1：下面的写法中国 `master`、`slave` 的二进制表示中为 `1` 的数位表示“从左向右”的数的这个位置已经有“皇后”占位了。因此我们 只需要它们的低 n 位即可，不要和方法 1 的 `2 * n -1` 混淆，它们的意义不一样。 
+注意 1：下面的写法中国 `master`、`slave` 的二进制表示中为 `1` 的数位表示“从左向右”的数的这个位置已经有“皇后”占位了。因此我们 只需要它们的低 n 位即可，不要和方法 1 的 `2 * n -1` 混淆，它们的意义不一样。
 
 注意 2：二进制数数位是“从右向左”，而我们数组的数位是“从左向右”，明确这一点，就能比较好地理解 `(master | p) << 1` 这个操作；
 
@@ -160,7 +154,6 @@ class Solution:
 
 ![image.png](https://pic.leetcode-cn.com/f1fde7f97a71b14dfba7dad44e07d3612f715427da86c792ef9a6e90da1360c9-image.png){:width=300}
 {:align=center}
-
 
 ```Java []
 public class Solution {
@@ -210,7 +203,7 @@ public class Solution {
 
             // 注意：该方法是隐式回溯，基本数值类型在方法传递的时候是值传递，相当于完成了状态重置
             backtrack(row + 1, n, col | p, (master | p) << 1, (slave | p) >> 1);
-            
+
             // 把低位的第 1 个 1 变成 0 ，让下一层循环探测下一个 1
             mask &= (mask - 1);
         }
@@ -303,4 +296,3 @@ public class Solution {
     }
 }
 ```
-

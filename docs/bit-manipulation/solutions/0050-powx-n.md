@@ -6,9 +6,8 @@ tags:
   - 位运算
 ---
 
-+ 题目链接：[50. Pow(x, n)](https://leetcode-cn.com/problems/powx-n/)；
-+ 题解链接：[自顶向下（递归）与自顶向上（递推）](https://leetcode-cn.com/problems/powx-n/solution/ba-zhi-shu-bu-fen-kan-zuo-er-jin-zhi-shu-python-da/)。
-
+- 题目链接：[50. Pow(x, n)](https://leetcode-cn.com/problems/powx-n/)；
+- 题解链接：[自顶向下（递归）与自顶向上（递推）](https://leetcode-cn.com/problems/powx-n/solution/ba-zhi-shu-bu-fen-kan-zuo-er-jin-zhi-shu-python-da/)。
 
 今天要和大家分享的是「力扣」第 50 题：Pow(x, n)。这题有一个名称叫「快速幂」，我们这里只分享「递归」和「非递归」的写法，其中 **「递归」对应「当指数为奇数时，把指数分解成偶数 + 1，当指数为偶数时，把指数除以 2」，「非递归」对应把指数转化成二进制**。「快速幂」还有矩阵的求法，感兴趣的朋友可以在网络上自行搜索（我也不会）。
 
@@ -44,7 +43,6 @@ tags:
 - $-2^{31} \le n \le 2^{31}-1$
 - $-10^4 \le x^n \le 10^4$​
 
-
 ## 把指数部分看做二进制数（Python 代码）
 
 当指数为负数的时候，可以转化为底数取导数，指数取相反数的情况，这一点并不难理解。
@@ -65,20 +63,18 @@ $$
 
 于是，我们可以把指数 $n$ 做“二进制分解”，**在底数不断自身乘以自身的过程中，将最终结果需要的部分保存下来**。
 
-
 ![image.png](https://pic.leetcode-cn.com/ab780b00a05f762c87ae4c68e74ef8d3a8b961a98762c02b61585d8f8c61747c-image.png)
-
 
 写得比较晦涩，相信聪明的你看我写的代码一定能看懂。
 
 ```python []
 class Solution:
     def myPow(self, x: float, n: int) -> float:
-        
+
         if n < 0:
             x = 1 / x
             n = -n
-            
+
         res = 1
         while n:
             if n & 1:
@@ -87,6 +83,3 @@ class Solution:
             n >>= 1
         return res
 ```
-
-
-
