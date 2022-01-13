@@ -8,23 +8,23 @@ tags:
   - 快速排序
 ---
 
-+ 题目链接：[75. 颜色分类](https://leetcode-cn.com/problems/sort-colors/)；
-+ 题解链接：[快速排序的子过程 partition（重点在设计循环不变量）](https://leetcode-cn.com/problems/sort-colors/solution/kuai-su-pai-xu-partition-guo-cheng-she-ji-xun-huan/)。
+- 题目链接：[75. 颜色分类](https://leetcode-cn.com/problems/sort-colors/)；
+- 题解链接：[快速排序的子过程 partition（重点在设计循环不变量）](https://leetcode-cn.com/problems/sort-colors/solution/kuai-su-pai-xu-partition-guo-cheng-she-ji-xun-huan/)。
 
 ::: danger 视频讲解
-
-:tv: 这道题在 [官方题解](https://leetcode-cn.com/problems/sort-colors/solution/yan-se-fen-lei-by-leetcode-solution/) 和 [B 站](https://www.bilibili.com/video/BV1tz4y1o7n5) 可以收看视频讲解。
+:tv: 这道题在 [官方题解](https://leetcode-cn.com/problems/sort-colors/solution/yan-se-fen-lei-by-leetcode-solution/) 和 [B 站](https://www.bilibili.com/video/BV1tz4y1o7n5) 可以收看视频讲解，可以点击下面的视频右上角「去 bilibili 观看」，选择快速播放，获得更好的观看体验。
 
 :::
 
+<div style="position: relative; padding: 30% 45%;">
+<iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="https://player.bilibili.com/player.html?aid=585037153&bvid=BV1tz4y1o7n5&cid=247889920&page=1" frameborder="no" scrolling="no"></iframe>
+</div>
 
 ## 题目描述
 
 给定一个包含红色、白色和蓝色，一共 `n` 个元素的数组，**[原地](https://baike.baidu.com/item/原地算法)**对它们进行排序，使得相同颜色的元素相邻，并按照红色、白色、蓝色顺序排列。
 
 此题中，我们使用整数 `0`、 `1` 和 `2` 分别表示红色、白色和蓝色。
-
-
 
 **示例 1：**
 
@@ -54,15 +54,11 @@ tags:
 输出：[1]
 ```
 
-
-
 **提示：**
 
 - `n == nums.length`
 - `1 <= n <= 300`
 - `nums[i]` 为 `0`、`1` 或 `2`
-
-
 
 **进阶：**
 
@@ -87,23 +83,20 @@ tags:
 
 对 **循环不变量** 的简单认识：
 
-+ 变量的值是变化的，但是保持不变的性质，就是循环不变量；
-+ 这里的「量」是一些人为定义的、可以判断真假的语句，在循环开始前、循环的过程中、循环结束以后，都为真；
-+ 这里的「循环」是广义上的，并不一定指「循环」，也有可能是在「递归」的过程中。
+- 变量的值是变化的，但是保持不变的性质，就是循环不变量；
+- 这里的「量」是一些人为定义的、可以判断真假的语句，在循环开始前、循环的过程中、循环结束以后，都为真；
+- 这里的「循环」是广义上的，并不一定指「循环」，也有可能是在「递归」的过程中。
 
 下面给出两版代码，循环不变量我们作为注释写在代码中。不同的定义决定了：初始化时变量的取值、循环的过程中操作的先后顺序、循环结束的条件。
 
 在本题视频题解：[75. 颜色分类（官方题解）](https://leetcode-cn.com/problems/sort-colors/solution/yan-se-fen-lei-by-leetcode-solution/) 里，我有详细讲解每一行代码的意思。
 
-
 **参考代码 1**：
-
 
 <CodeGroup>
 <CodeGroupItem title="Java">
 ```java
 import java.util.Arrays;
-
 
 public class Solution {
 
@@ -116,7 +109,7 @@ public class Solution {
         // all in [0..zero) = 0
         // all in [zero..i) = 1
         // all in [two..len - 1] = 2
-        
+
         // 循环终止条件是 i == two，那么循环可以继续的条件是 i < two
         // 为了保证初始化的时候 [0..zero) 为空，设置 zero = 0，
         // 所以下面遍历到 0 的时候，先交换，再加
@@ -147,8 +140,10 @@ public class Solution {
         nums[index1] = nums[index2];
         nums[index2] = temp;
     }
+
 }
-```
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Python">
@@ -188,21 +183,17 @@ class Solution:
             else:
                 two -= 1
                 swap(nums, i, two)
-```
+````
+
 </CodeGroupItem>
 </CodeGroup>
 
-
-
-
 **复杂度分析**：
 
-+ 时间复杂度：$O(N)$，这里 $N$ 是输入数组的长度；
-+ 空间复杂度：$O(1)$。
-
+- 时间复杂度：$O(N)$，这里 $N$ 是输入数组的长度；
+- 空间复杂度：$O(1)$。
 
 **参考代码 2**：
-
 
 <CodeGroup>
 <CodeGroupItem title="Java">
@@ -247,8 +238,10 @@ public class Solution {
         nums[index1] = nums[index2];
         nums[index2] = temp;
     }
+
 }
-```
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Python">
@@ -288,7 +281,8 @@ class Solution:
             else:
                 swap(nums, i, two)
                 two -= 1
-```
+````
+
 </CodeGroupItem>
 </CodeGroup>
 
@@ -298,10 +292,10 @@ class Solution:
 
 「循环不变量」主要用于证明算法的正确性，在《算法导论》里大量使用了「循环不变量」这个工具。
 
-+ 第 2.1 节 插入排序
-+ 第 2.3.1 节 分治法
-+ 第 6.3 节 建堆
-+ 第 7.1 节 快速排序的描述
+- 第 2.1 节 插入排序
+- 第 2.3.1 节 分治法
+- 第 6.3 节 建堆
+- 第 7.1 节 快速排序的描述
 
 其实「循环不变量」并不是一个很高深的概念，其实我们很多时候，在编写代码的过程中都在不自觉地维护了变量的定义。「循环不变量」只是一个学术化的名字而已，设计清楚「循环不变量」，可以帮助我们写出正确的代码。
 

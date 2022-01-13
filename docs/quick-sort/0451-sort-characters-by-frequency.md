@@ -8,8 +8,7 @@ tags:
   - 快速排序
 ---
 
-
-+ 题目链接：[451. 根据字符出现频率排序](https://leetcode-cn.com/problems/sort-characters-by-frequency/)。
+- 题目链接：[451. 根据字符出现频率排序](https://leetcode-cn.com/problems/sort-characters-by-frequency/)。
 
 ## 题目描述
 

@@ -8,11 +8,9 @@ tags:
   - 快速排序
 ---
 
-
 快速排序对于有序的数组并没有那么友好，下面我们具体来分析是一下是怎么回事。
 
 ![image-20211207115837429](https://tva1.sinaimg.cn/large/008i3skNgy1gx54ty1hrqj312m0lcmzi.jpg)
-
 
 避免这种最坏的情况出现，我们在切分 partition 之前，只需要在待排序的区间里，随机选择一个元素交换到数组的第 1 个位置就可以了，这样，最坏的情况出现的概率就极其低了。
 
@@ -39,10 +37,10 @@ int v = arr[left];
 
 说明：
 
-+ `lt` 是 `less than` 的缩写，表示（严格）小于；
-+ `gt` 是 `greater than` 的缩写，表示（严格）大于；
-+ `le` 是 `less than or equal` 的缩写，表示小于等于（本代码没有用到）；
-+ `ge` 是 `greater than or equal` 的缩写，表示大于等于（本代码没有用到）。
+- `lt` 是 `less than` 的缩写，表示（严格）小于；
+- `gt` 是 `greater than` 的缩写，表示（严格）大于；
+- `le` 是 `less than or equal` 的缩写，表示小于等于（本代码没有用到）；
+- `ge` 是 `greater than or equal` 的缩写，表示大于等于（本代码没有用到）。
 
 <CodeGroup>
 <CodeGroupItem title="Java">

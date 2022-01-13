@@ -72,6 +72,7 @@ public class Solution {
     }
 }
 ```
+
 ```java
 import java.util.Arrays;
 import java.util.Random;
@@ -177,7 +178,7 @@ public class Solution {
         // 在区间随机选择一个元素作为标定点
         int randomIndex = left + random.nextInt(right - left + 1 );
         swap(nums, left, randomIndex);
-        
+
 
         int pivot = nums[left];
 
@@ -306,8 +307,8 @@ public class Solution {
 
 思路：看 `k` 是在前面还是后面。
 
-+ 前面，就用最小堆；
-+ 后面，就用最大堆。
+- 前面，就用最小堆；
+- 后面，就用最大堆。
 
 ```java
 import java.util.PriorityQueue;
