@@ -6,16 +6,15 @@ tags:
   - 队列
 ---
 
-
-+ 题目链接：[641. 设计循环双端队列](https://leetcode-cn.com/problems/design-circular-deque/)；
-+ 题解链接：[数组实现的循环双端队列](https://leetcode-cn.com/problems/design-circular-deque/solution/shu-zu-shi-xian-de-xun-huan-shuang-duan-dui-lie-by/)。
+- 题目链接：[641. 设计循环双端队列](https://leetcode-cn.com/problems/design-circular-deque/)；
+- 题解链接：[数组实现的循环双端队列](https://leetcode-cn.com/problems/design-circular-deque/solution/shu-zu-shi-xian-de-xun-huan-shuang-duan-dui-lie-by/)。
 
 ## 题目描述
 
 设计实现双端队列。
 你的实现需要支持以下操作：
 
-- MyCircularDeque(k)：构造函数,双端队列的大小为k。
+- MyCircularDeque(k)：构造函数,双端队列的大小为 k。
 - insertFront()：将一个元素添加到双端队列头部。 如果操作成功返回 true。
 - insertLast()：将一个元素添加到双端队列尾部。如果操作成功返回 true。
 - deleteFront()：从双端队列头部删除一个元素。 如果操作成功返回 true。
@@ -54,8 +53,8 @@ circularDeque.getFront();				// 返回 4
 
 1. 定义循环变量 `front` 和 `rear` 。一直保持这个定义，到底是先赋值还是先移动指针就很容易想清楚了。
 
-+ `front`：指向队列头部第 $1$ 个有效数据的位置；
-+ `rear`：指向队列尾部（即最后 $1$ 个有效数据）的 **下一个位置**，即下一个从队尾入队元素的位置。
+- `front`：指向队列头部第 $1$ 个有效数据的位置；
+- `rear`：指向队列尾部（即最后 $1$ 个有效数据）的 **下一个位置**，即下一个从队尾入队元素的位置。
 
 **说明**：这个定义是依据「动态数组」的定义模仿而来。
 
@@ -63,18 +62,15 @@ circularDeque.getFront();				// 返回 4
 
 浪费一个位置是指：循环数组中任何时刻一定至少有一个位置不存放有效元素。
 
-+ 判别队列为空的条件是：`front == rear;`；
-+ 判别队列为满的条件是：`(rear + 1) % capacity == front;`。可以这样理解，当 `rear` 循环到数组的前面，要从后面追上 `front`，还差一格的时候，判定队列为满。
+- 判别队列为空的条件是：`front == rear;`；
+- 判别队列为满的条件是：`(rear + 1) % capacity == front;`。可以这样理解，当 `rear` 循环到数组的前面，要从后面追上 `front`，还差一格的时候，判定队列为满。
 
 3. 因为有循环的出现，要特别注意处理数组下标可能越界的情况。
 
-+ 指针后移的时候，下标 $+ 1$，要取模；
-+ 指针前移的时候，为了循环到数组的末尾，需要先加上数组的长度，然后再对数组长度取模。
-
+- 指针后移的时候，下标 $+ 1$，要取模；
+- 指针前移的时候，为了循环到数组的末尾，需要先加上数组的长度，然后再对数组长度取模。
 
 @slidestart
-
-
 
 ![幻灯片1.png](https://pic.leetcode-cn.com/1608007455-ARtfWP-%E5%B9%BB%E7%81%AF%E7%89%871.png)
 
@@ -144,10 +140,7 @@ circularDeque.getFront();				// 返回 4
 
 @slideend
 
-
-
 **参考代码**：
-
 
 <CodeGroup>
 <CodeGroupItem title="Java">
@@ -264,8 +257,10 @@ public class MyCircularDeque {
         // 注意：这个设计是非常经典的做法
         return (rear + 1) % capacity == front;
     }
+
 }
-```
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Python3">
@@ -346,7 +341,8 @@ class MyCircularDeque:
         Checks whether the circular deque is full or not.
         """
         return (self.rear + 1) % self.capacity == self.front
-```
+````
+
 </CodeGroupItem>
 <CodeGroupItem title="C++">
 ```C++
@@ -358,16 +354,16 @@ using namespace std;
 class MyCircularDeque {
 
 private:
-    vector<int> arr;
-    int front;
-    int rear;
-    int capacity;
+vector<int> arr;
+int front;
+int rear;
+int capacity;
 
 public:
-    /** Initialize your data structure here. Set the size of the deque to be k. */
-    MyCircularDeque(int k) {
-        capacity = k + 1;
-        arr.assign(capacity, 0);
+/\*_ Initialize your data structure here. Set the size of the deque to be k. _/
+MyCircularDeque(int k) {
+capacity = k + 1;
+arr.assign(capacity, 0);
 
         front = 0;
         rear = 0;
@@ -440,22 +436,26 @@ public:
         // 注意：这个设计是非常经典的做法
         return (rear + 1) % capacity == front;
     }
+
 };
 
-/**
- * Your MyCircularDeque object will be instantiated and called as such:
- * MyCircularDeque* obj = new MyCircularDeque(k);
- * bool param_1 = obj->insertFront(value);
- * bool param_2 = obj->insertLast(value);
- * bool param_3 = obj->deleteFront();
- * bool param_4 = obj->deleteLast();
- * int param_5 = obj->getFront();
- * int param_6 = obj->getRear();
- * bool param_7 = obj->isEmpty();
- * bool param_8 = obj->isFull();
- */
+/\*\*
+
+- Your MyCircularDeque object will be instantiated and called as such:
+- MyCircularDeque\* obj = new MyCircularDeque(k);
+- bool param_1 = obj->insertFront(value);
+- bool param_2 = obj->insertLast(value);
+- bool param_3 = obj->deleteFront();
+- bool param_4 = obj->deleteLast();
+- int param_5 = obj->getFront();
+- int param_6 = obj->getRear();
+- bool param_7 = obj->isEmpty();
+- bool param_8 = obj->isFull();
+  \*/
+
 ```
 </CodeGroupItem>
 </CodeGroup>
 
 
+```

@@ -6,8 +6,8 @@ tags:
   - 队列
 ---
 
-+ 题目链接：[622. 设计循环队列](https://leetcode-cn.com/problems/design-circular-queue/)；
-+ 题解链接：[数组实现的循环队列](https://leetcode-cn.com/problems/design-circular-queue/solution/shu-zu-shi-xian-de-xun-huan-dui-lie-by-liweiwei141/)。
+- 题目链接：[622. 设计循环队列](https://leetcode-cn.com/problems/design-circular-queue/)；
+- 题解链接：[数组实现的循环队列](https://leetcode-cn.com/problems/design-circular-queue/solution/shu-zu-shi-xian-de-xun-huan-dui-lie-by-liweiwei141/)。
 
 ## 题目描述
 
@@ -24,8 +24,6 @@ tags:
 - `deQueue()`: 从循环队列中删除一个元素。如果成功删除则返回真。
 - `isEmpty()`: 检查循环队列是否为空。
 - `isFull()`: 检查循环队列是否已满。
-
-
 
 **示例：**
 
@@ -58,7 +56,6 @@ circularQueue.Rear();  // 返回 4
 
 ---
 
-
 **需要注意的地方**：
 
 1. 定义循环变量 `front` 和 `rear` 。一直保持这个定义，到底是先赋值还是先移动指针就很容易想清楚了。
@@ -72,11 +69,10 @@ circularQueue.Rear();  // 返回 4
 
 浪费一个位置是指：循环数组中任何时刻一定至少有一个位置不存放有效元素。
 
-+ 判别队列为空的条件是：`front == rear;`
-+ 判别队列为满的条件是：`(rear + 1) % capacity == front;`。可以这样理解，当 `rear` 循环到数组的前面，要从后面追上 `front`，还差一格的时候，判定队列为满。
+- 判别队列为空的条件是：`front == rear;`
+- 判别队列为满的条件是：`(rear + 1) % capacity == front;`。可以这样理解，当 `rear` 循环到数组的前面，要从后面追上 `front`，还差一格的时候，判定队列为满。
 
 3. 因为有循环的出现，要特别注意处理数组下标可能越界的情况。指针后移的时候，下标 $+ 1$，并且为了防止数组下标越界要取模。
-
 
 @slidestart
 
@@ -136,11 +132,9 @@ circularQueue.Rear();  // 返回 4
 
 @slideend
 
-
 同类问题「力扣」第 641 题：[设计循环双端队列](https://leetcode-cn.com/problems/design-circular-deque/) 可以顺便做一下。
 
 **参考代码**：
-
 
 <CodeGroup>
 <CodeGroupItem title="Java">
@@ -226,8 +220,10 @@ public class MyCircularQueue {
         // 注意：这是这个经典设计的原因
         return (rear + 1) % capacity == front;
     }
+
 }
-```
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Python3">
@@ -290,7 +286,8 @@ class MyCircularQueue:
         Checks whether the circular queue is full or not.
         """
         return (self.rear + 1) % self.capacity == self.front
-```
+````
+
 </CodeGroupItem>
 
 <CodeGroupItem title="C++">
@@ -302,17 +299,16 @@ using namespace std;
 class MyCircularQueue {
 
 private:
-    vector<int> arr;
-    int front;
-    int rear;
-    int capacity;
-
+vector<int> arr;
+int front;
+int rear;
+int capacity;
 
 public:
-    /** Initialize your data structure here. Set the size of the queue to be k. */
-    MyCircularQueue(int k) {
-        capacity = k + 1;
-        arr.assign(capacity, 0);
+/\*_ Initialize your data structure here. Set the size of the queue to be k. _/
+MyCircularQueue(int k) {
+capacity = k + 1;
+arr.assign(capacity, 0);
 
         front = 0;
         rear = 0;
@@ -363,7 +359,10 @@ public:
         // 注意：这是这个经典设计的原因
         return (rear + 1) % capacity == front;
     }
+
 };
+
 ```
 </CodeGroupItem>
 </CodeGroup>
+```

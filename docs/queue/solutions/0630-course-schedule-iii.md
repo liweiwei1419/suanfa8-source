@@ -6,7 +6,7 @@ tags:
   - 队列
 ---
 
-+ 题目链接：[630. 课程表 III](https://leetcode-cn.com/problems/course-schedule-iii/)。
+- 题目链接：[630. 课程表 III](https://leetcode-cn.com/problems/course-schedule-iii/)。
 
 ## 题目描述
 
@@ -43,19 +43,11 @@ tags:
 输出：0
 ```
 
- **提示:**
+**提示:**
 
 - `1 <= courses.length <= 104`
 - `1 <= durationi, lastDayi <= 104`
 
 ---
 
-参考资料1：https://blog.csdn.net/sinat_14826343/article/details/73739638 
-
- 
-
-
-
- 
-
- 
+参考资料 1：https://blog.csdn.net/sinat_14826343/article/details/73739638
