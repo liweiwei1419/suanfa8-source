@@ -7,7 +7,7 @@ tags:
   - 树形 DP
 ---
 
-+ 题目链接：[1372. 二叉树中的最长交错路径](https://leetcode-cn.com/problems/longest-zigzag-path-in-a-binary-tree/)。
+- 题目链接：[1372. 二叉树中的最长交错路径](https://leetcode-cn.com/problems/longest-zigzag-path-in-a-binary-tree/)。
 
 ## 题目描述
 
@@ -28,8 +28,6 @@ tags:
 **示例 1：**
 
 ![img](https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2020/03/07/sample_1_1702.png)
-
-
 
 ```
 输入：root = [1,null,1,1,1,null,null,1,1,null,1,null,null,null,1,null,1]
@@ -54,7 +52,7 @@ tags:
 输出：0
 ```
 
- **提示：**
+**提示：**
 
 - 每棵树最多有 `50000` 个节点。
 - 每个节点的值在 `[1, 100]` 之间。
@@ -67,13 +65,13 @@ tags:
 public class Solution {
 
     private int res;
-    
+
     public int longestZigZag(TreeNode root) {
         res = 0;
         dfs(root);
         return res;
     }
-    
+
     private int[] dfs(TreeNode node) {
         if (node == null) {
             return new int[2];
@@ -81,7 +79,7 @@ public class Solution {
         // dp[0]：从孩子到父亲的方向为左
         // dp[1]：从孩子到父亲的方向为右
         int[] dp = new int[2];
-    
+
         int[] leftPath = dfs(node.left);
         int[] rightPath = dfs(node.right);
         if (node.left != null) {
@@ -90,10 +88,9 @@ public class Solution {
         if (node.right != null) {
             dp[1] = rightPath[0] + 1;
         }
-    
+
         res = Math.max(res, Math.max(dp[0], dp[1]));
         return dp;
     }
 }
 ```
-

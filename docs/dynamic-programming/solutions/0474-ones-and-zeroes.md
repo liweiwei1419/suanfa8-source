@@ -8,7 +8,7 @@ tags:
 
 二维背包问题，数组有三维，可以降到一维。
 
-+ 题目链接：[474. 一和零](https://leetcode-cn.com/problems/ones-and-zeroes/)。
+- 题目链接：[474. 一和零](https://leetcode-cn.com/problems/ones-and-zeroes/)。
 
 ## 题目描述
 
@@ -17,8 +17,6 @@ tags:
 请你找出并返回 `strs` 的最大子集的长度，该子集中 **最多** 有 `m` 个 `0` 和 `n` 个 `1` 。
 
 如果 `x` 的所有元素也是 `y` 的元素，集合 `x` 是集合 `y` 的 **子集** 。
-
-
 
 **示例 1：**
 
@@ -43,8 +41,6 @@ tags:
 - `1 <= strs[i].length <= 100`
 - `strs[i]` 仅由 `'0'` 和 `'1'` 组成
 - `1 <= m, n <= 100`
-
-
 
 注意：什么叫组成？必须用完？还是有剩余就可以？
 
@@ -85,4 +81,3 @@ public class Solution {
     }
 }
 ```
-

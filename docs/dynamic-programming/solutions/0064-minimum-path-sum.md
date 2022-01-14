@@ -8,7 +8,7 @@ tags:
 
 很简单的「动态规划」问题，熟悉「自底向上」求解问题的思路。
 
-+ 题目链接：[64. 最小路径和](https://leetcode-cn.com/problems/minimum-path-sum/description/)。
+- 题目链接：[64. 最小路径和](https://leetcode-cn.com/problems/minimum-path-sum/description/)。
 
 ## 题目描述
 
@@ -19,8 +19,6 @@ tags:
 **示例 1：**
 
 ![img](https://assets.leetcode.com/uploads/2020/11/05/minpath.jpg)
-
-
 
 ```
 输入：grid = [[1,3,1],[1,5,1],[4,2,1]]
@@ -48,9 +46,7 @@ tags:
 
 状态很好定义，题目中问什么，状态就定义成什么：`dp[i][j]`。
 
-
 **参考代码 1**：
-
 
 <CodeGroup>
 <CodeGroupItem title="Java">
@@ -63,7 +59,7 @@ public class Solution {
         if (grid == null) {
             return 0;
         }
-        
+
         int m = grid.length;
         int n = grid[0].length;
         for (int i = 1; i < n; i++) {
@@ -72,7 +68,7 @@ public class Solution {
         for (int i = 1; i < m; i++) {
             grid[i][0] = grid[i][0] + grid[i - 1][0];
         }
-        
+
         for (int i = 1; i < m; i++) {
             for (int j = 1; j < n; j++) {
                 grid[i][j] = Math.min(grid[i - 1][j], grid[i][j - 1]) + grid[i][j];
@@ -87,8 +83,10 @@ public class Solution {
         int minPathSum = solution.minPathSum(grid);
         System.out.println(minPathSum);
     }
+
 }
-```
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Python">
@@ -122,7 +120,8 @@ if __name__ == '__main__':
     s = Solution()
     res = s.minPathSum(grid)
     print(res)
-```
+````
+
 </CodeGroupItem>
 </CodeGroup>
 
@@ -161,6 +160,5 @@ public class Solution {
 
 **复杂度分析**：
 
-+ 时间复杂度：$O(MN)$，这里 $M$ 和 $N$ 分别是矩阵的长和宽；
-+ 空间复杂度：$O(N)$。
-
+- 时间复杂度：$O(MN)$，这里 $M$ 和 $N$ 分别是矩阵的长和宽；
+- 空间复杂度：$O(N)$。

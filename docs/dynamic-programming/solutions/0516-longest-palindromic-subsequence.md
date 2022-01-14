@@ -6,8 +6,8 @@ tags:
   - 动态规划
 ---
 
-+ 题目链接：[516. 最长回文子序列](https://leetcode-cn.com/problems/longest-palindromic-subsequence/)；
-+ 题解链接：[动态规划（Java）](https://leetcode-cn.com/problems/longest-palindromic-subsequence/solution/dong-tai-gui-hua-java-by-liweiwei1419-yz55/)。
+- 题目链接：[516. 最长回文子序列](https://leetcode-cn.com/problems/longest-palindromic-subsequence/)；
+- 题解链接：[动态规划（Java）](https://leetcode-cn.com/problems/longest-palindromic-subsequence/solution/dong-tai-gui-hua-java-by-liweiwei1419-yz55/)。
 
 ## 题目描述
 
@@ -31,15 +31,15 @@ tags:
 解释：一个可能的最长回文子序列为 "bb" 。
 ```
 
- **提示：**
+**提示：**
 
 - `1 <= s.length <= 1000`
 - `s` 仅由小写英文字母组成
 
 ## 理解题意
 
-+ 「子序列」不要求连续，但要求 **保持原始字符的相对顺序**；
-+ 只返回最长的长度，不要求具体回文子序列是谁，一般而言使用「动态规划」。
+- 「子序列」不要求连续，但要求 **保持原始字符的相对顺序**；
+- 只返回最长的长度，不要求具体回文子序列是谁，一般而言使用「动态规划」。
 
 ## 思路分析
 
@@ -49,7 +49,7 @@ tags:
 
 **分类讨论**：
 
-+ 情况 1：当 `s[left] == s[right]` ，字符区间 `s[i..j]` 里最长回文子序列的长度，看去掉头和尾以后的区间的最长子序列的长度。
+- 情况 1：当 `s[left] == s[right]` ，字符区间 `s[i..j]` 里最长回文子序列的长度，看去掉头和尾以后的区间的最长子序列的长度。
 
 $$
 dp[left][right] = dp[left + 1][right - 1] + 2
@@ -57,7 +57,7 @@ $$
 
 <img src="https://tva1.sinaimg.cn/large/008i3skNgy1gxh4pcubl1j30r606uwei.jpg" alt="image.png" style="zoom:50%;" />
 
-+ 情况 2：当 `s[left] != s[right]` ，字符区间 `s[i..j]` 里最长回文子序列的长度，看「去掉头以后的区间的最长子序列的长度」和「去掉尾以后的区间的最长子序列的长度」，二者取最大值。
+- 情况 2：当 `s[left] != s[right]` ，字符区间 `s[i..j]` 里最长回文子序列的长度，看「去掉头以后的区间的最长子序列的长度」和「去掉尾以后的区间的最长子序列的长度」，二者取最大值。
 
 $$
 dp[left][right] = \max(dp[left + 1][right], dp[left][right - 1])
@@ -69,9 +69,9 @@ $$
 
 「动态规划」的计算过程像是在填写一张「二维表格」的上半部分，`dp[left][right]` 取决于：
 
-+ `dp[left + 1][right - 1]`，左下角单元格；
-+ `dp[left][right - 1]`，左边一格单元格；
-+ `dp[left + 1][right]`，下边一格单元格。
+- `dp[left + 1][right - 1]`，左下角单元格；
+- `dp[left][right - 1]`，左边一格单元格；
+- `dp[left + 1][right]`，下边一格单元格。
 
 下图中用 `l` 表示 `left`，用 `r` 表示 `right`，蓝色部分需要先计算出来，才可以保证红色部分计算出的结果是正确的（这一点由状态转移方程决定）。
 
@@ -88,7 +88,6 @@ $$
 **说明**：
 
 `int[][] dp = new int[len][len];` 这一行代码初始化的值都为 $0$，使用其它语言的朋友应该显式初始化，理由可见本题解下方第一条评论。这里感谢 [@yi-xiao-guo](/u/yi-xiao-guo/) 朋友的提醒。
-
 
 ```java
 public class Solution {
@@ -122,8 +121,8 @@ public class Solution {
 
 **复杂度分析**：
 
-+ 时间复杂度：$O(N^2)$，这里 $N$ 是字符串 `s` 的长度；
-+ 空间复杂度：$O(N^2)$。
+- 时间复杂度：$O(N^2)$，这里 $N$ 是字符串 `s` 的长度；
+- 空间复杂度：$O(N^2)$。
 
 **参考代码 2**：
 

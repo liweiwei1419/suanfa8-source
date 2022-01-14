@@ -6,9 +6,8 @@ tags:
   - 动态规划
 ---
 
-
-+ 题目链接：[746. 使用最小花费爬楼梯](https://leetcode-cn.com/problems/min-cost-climbing-stairs/)；
-+ 题解链接：[动态规划](https://leetcode-cn.com/problems/min-cost-climbing-stairs/solution/dong-tai-gui-hua-by-liweiwei1419-3/)。
+- 题目链接：[746. 使用最小花费爬楼梯](https://leetcode-cn.com/problems/min-cost-climbing-stairs/)；
+- 题解链接：[动态规划](https://leetcode-cn.com/problems/min-cost-climbing-stairs/solution/dong-tai-gui-hua-by-liweiwei1419-3/)。
 
 ## 题目描述
 
@@ -17,8 +16,6 @@ tags:
 你可以选择从下标为 `0` 或下标为 `1` 的台阶开始爬楼梯。
 
 请你计算并返回达到楼梯顶部的最低花费。
-
-
 
 **示例 1：**
 
@@ -45,8 +42,6 @@ tags:
 总花费为 6 。
 ```
 
-
-
 **提示：**
 
 - `2 <= cost.length <= 1000`
@@ -56,10 +51,9 @@ tags:
 
 这道题不太好懂的是题意。
 
-+ 每一个位置都有 2 个阶梯，1 个阶梯上一层楼，另 1 个阶梯上两层楼；
-+ 上两个阶梯的体力值耗费是一样的，但是在不同位置消耗的体力值是不一样的；
-+ 楼层顶部在数组之外。如果数组长度为 `len`，那么楼顶就在下标为 `len`，注意 `dp` 数组开 `len + 1` 个空间。 
-
+- 每一个位置都有 2 个阶梯，1 个阶梯上一层楼，另 1 个阶梯上两层楼；
+- 上两个阶梯的体力值耗费是一样的，但是在不同位置消耗的体力值是不一样的；
+- 楼层顶部在数组之外。如果数组长度为 `len`，那么楼顶就在下标为 `len`，注意 `dp` 数组开 `len + 1` 个空间。
 
 **状态**：`dp[i]` 表示到索引为 `i` 位置再选择向上爬一共需要的体力开销。
 
@@ -71,10 +65,7 @@ dp[i] = min(dp[i - 1], dp[i - 2]) + cost[i]
 
 **输出**： `dp[len]`。
 
-
-
 **参考代码 1**：
-
 
 ```Java []
 public class Solution {
@@ -91,6 +82,7 @@ public class Solution {
     }
 }
 ```
+
 ```Python []
 from typing import List
 
@@ -108,6 +100,7 @@ class Solution:
 
         return min(dp[size - 1], dp[size - 2])
 ```
+
 ```C++ []
 #include <iostream>
 #include <vector>
@@ -140,7 +133,6 @@ public:
 
 **参考代码 2**：
 
-
 ```Java []
 public class Solution {
 
@@ -159,6 +151,7 @@ public class Solution {
 
 }
 ```
+
 ```Python []
 from typing import List
 
@@ -176,6 +169,7 @@ class Solution:
 
         return min(dp[(size - 1) % 3], dp[(size - 2) % 3])
 ```
+
 ```C++ []
 #include <iostream>
 #include <vector>

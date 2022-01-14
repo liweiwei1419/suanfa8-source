@@ -7,7 +7,7 @@ tags:
   - 树形 DP
 ---
 
-+ 题目链接：[865. 具有所有最深节点的最小子树](https://leetcode-cn.com/problems/smallest-subtree-with-all-the-deepest-nodes/)。
+- 题目链接：[865. 具有所有最深节点的最小子树](https://leetcode-cn.com/problems/smallest-subtree-with-all-the-deepest-nodes/)。
 
 ## 题目描述
 
@@ -106,4 +106,3 @@ public class Solution {
     }
 }
 ```
-

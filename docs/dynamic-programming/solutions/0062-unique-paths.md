@@ -9,11 +9,12 @@ tags:
 二维动态规划的基础问题，可以当做例题来学习。
 
 ::: danger 重点理解「无后效性」的两层含义：
+
 1. 即后面的状态参考了前面的结果，而不管前面的状态是怎么来的；
 2. 后面阶段的选择不会影响到前面阶段的选择。
-:::
+   :::
 
-+ 题目链接：[62. 不同路径](https://leetcode-cn.com/problems/unique-paths/)。
+- 题目链接：[62. 不同路径](https://leetcode-cn.com/problems/unique-paths/)。
 
 ## 题目描述
 
@@ -23,11 +24,9 @@ tags:
 
 问总共有多少条不同的路径？
 
-
-
 ![](https://liweiwei1419.gitee.io/images/leetcode-notes/dp/dynamic-programming-3-11.jpg)
 
-例如，上图是一个7 x 3 的网格。有多少可能的路径？
+例如，上图是一个 7 x 3 的网格。有多少可能的路径？
 
 示例 1：
 
@@ -49,20 +48,18 @@ tags:
 输出: 28
 ```
 
-
 提示：
 
-+ `1 <= m, n <= 100`
-+ 题目数据保证答案小于等于 `2 * 10 ^ 9`
+- `1 <= m, n <= 100`
+- 题目数据保证答案小于等于 `2 * 10 ^ 9`
 
 ## 方法一：动态规划
 
 其实就是填写二维表格。
 
-+ 状态：`dp[i][j]` 表示走到坐标 `(i, j)` 的路径总数；
+- 状态：`dp[i][j]` 表示走到坐标 `(i, j)` 的路径总数；
 
-
-+ 状态转移方程：思路依然是分类讨论，走到坐标 `(i, j)`  可以从上方下来，也可以从左边过来，路径总数是二者之和；
+- 状态转移方程：思路依然是分类讨论，走到坐标 `(i, j)` 可以从上方下来，也可以从左边过来，路径总数是二者之和；
 
 ```java
 dp[i][j] = dp[i - 1][j] + dp[i][j - 1]
@@ -70,9 +67,9 @@ dp[i][j] = dp[i - 1][j] + dp[i][j - 1]
 
 当前 `dp[i][j]` 值的来源：上面和前面的值之和。
 
-+ 初始化：数组 `dp` 的第 1 行和第 1 列都得显示赋值为 1；
-+ 输出：`dp[m - 1][n - 1]`。
-+ 表格复用：可以滚动数组，也可以只压缩到一维。
+- 初始化：数组 `dp` 的第 1 行和第 1 列都得显示赋值为 1；
+- 输出：`dp[m - 1][n - 1]`。
+- 表格复用：可以滚动数组，也可以只压缩到一维。
 
 **参考代码**：
 
@@ -113,8 +110,10 @@ public class Solution {
         int uniquePaths = solution.uniquePaths(m, n);
         System.out.println(uniquePaths);
     }
+
 }
-```
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Python">
@@ -142,14 +141,14 @@ if __name__ == '__main__':
     s = Solution()
     res = s.uniquePaths(7, 3)
     print(res)
-```
+````
+
 </CodeGroupItem>
 </CodeGroup>
 
 动态规划得到的 `dp` 数组：`[[1, 1, 1, 1], [1, 2, 3, 4], [1, 3, 6, 10], [1, 4, 10, 20], [1, 5, 15, 35]]`。
 
-
-* 增加「哨兵」的写法，少写一些特殊判断，这个技巧比较常见。
+- 增加「哨兵」的写法，少写一些特殊判断，这个技巧比较常见。
 
 如何想到的：把状态表格抄一遍，或者自己把矩阵画出来，就能知道这个数组怎么来的。每一行，只依赖上一行的结果，我们完全可以用一行来逐步更新。第 1 个元素肯定是 `1`，并且第 1 行元素肯定全是 `1`。
 
@@ -204,7 +203,7 @@ if __name__ == '__main__':
     print(res)
 ```
 
-+ 一维动态规划表格
+- 一维动态规划表格
 
 注意到其实在左边第一行和上边第一行，肯定都为 $1$，还有就是新一行的值只与上一行有关，所以我们完全可以只设置一维数组，将这道题完成。其实使用 $2$ 个变量也可以完成，但是这样的代码可读性比较差，在这里就不写了。
 
@@ -236,8 +235,10 @@ public class Solution {
         int uniquePaths = solution.uniquePaths(m, n);
         System.out.println(uniquePaths);
     }
+
 }
-```
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Python">
@@ -258,7 +259,8 @@ if __name__ == '__main__':
     solution = Solution()
     result = solution.uniquePaths(m, n)
     print(result)
-```
+````
+
 </CodeGroupItem>
 </CodeGroup>
 
@@ -272,7 +274,7 @@ if __name__ == '__main__':
 
 ```python
 class Solution:
-    
+
 
     def __factorial(self, n):
         res = 1
@@ -340,8 +342,3 @@ class Solution:
 ```
 
 用测试用例得到的缓存数组：`[[0, 1, 1, 1], [1, 2, 3, 4], [1, 3, 6, 10], [1, 4, 10, 20], [1, 5, 15, 35]]`。
-
-
-
-
-

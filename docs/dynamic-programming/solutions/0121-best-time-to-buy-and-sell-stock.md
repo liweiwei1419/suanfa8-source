@@ -6,8 +6,8 @@ tags:
   - 动态规划
 ---
 
-+ 题目链接：[121. 买卖股票的最佳时机](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/)；
-+ 题解链接：[暴力解法、动态规划（Java）](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/solution/bao-li-mei-ju-dong-tai-gui-hua-chai-fen-si-xiang-b/)。
+- 题目链接：[121. 买卖股票的最佳时机](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/)；
+- 题解链接：[暴力解法、动态规划（Java）](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/solution/bao-li-mei-ju-dong-tai-gui-hua-chai-fen-si-xiang-b/)。
 
 ## 题目描述
 
@@ -43,23 +43,23 @@ tags:
 
 **说明**：
 
-+ 本题解于 2020 年 10 月 21 日重写；
-+ 推荐阅读 [@stormsunshine](/u/stormsunshine/) 编写的文章《[股票问题系列通解（转载翻译）](https://leetcode-cn.com/circle/article/qiAgHn/)》；
-+ 这一题的知识点：
-  + 动态规划用于求解 **多阶段决策问题** ；
-  + 动态规划问题的问法：**只问最优解，不问具体的解**；
-  + 掌握 **无后效性** 解决动态规划问题：把约束条件设置成为状态。
+- 本题解于 2020 年 10 月 21 日重写；
+- 推荐阅读 [@stormsunshine](/u/stormsunshine/) 编写的文章《[股票问题系列通解（转载翻译）](https://leetcode-cn.com/circle/article/qiAgHn/)》；
+- 这一题的知识点：
+  - 动态规划用于求解 **多阶段决策问题** ；
+  - 动态规划问题的问法：**只问最优解，不问具体的解**；
+  - 掌握 **无后效性** 解决动态规划问题：把约束条件设置成为状态。
 
 这一系列问题的目录：
 
-| 题号                                                         | 题解                                                         |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [121. 买卖股票的最佳时机](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock) | [暴力解法、动态规划（Java）](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/solution/bao-li-mei-ju-dong-tai-gui-hua-chai-fen-si-xiang-b/) |
-| [122. 买卖股票的最佳时机 II](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii) | [暴力搜索、贪心算法、动态规划（Java）](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/solution/tan-xin-suan-fa-by-liweiwei1419-2/) |
-| [123. 买卖股票的最佳时机 III](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iii) | [动态规划（Java）](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iii/solution/dong-tai-gui-hua-by-liweiwei1419-7/) |
-| [188. 买卖股票的最佳时机 IV](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iv) | [动态规划（「力扣」更新过用例，只有优化空间的版本可以 AC）](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iv/solution/dong-tai-gui-hua-by-liweiwei1419-4/) |
-| [309. 最佳买卖股票时机含冷冻期](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-cooldown) | [动态规划（Java）](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/solution/dong-tai-gui-hua-by-liweiwei1419-5/) |
-| [714. 买卖股票的最佳时机含手续费](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee) | [动态规划（Java）](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/solution/dong-tai-gui-hua-by-liweiwei1419-6/) |
+| 题号                                                                                                                     | 题解                                                                                                                                                                          |
+| ------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [121. 买卖股票的最佳时机](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock)                              | [暴力解法、动态规划（Java）](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/solution/bao-li-mei-ju-dong-tai-gui-hua-chai-fen-si-xiang-b/)                   |
+| [122. 买卖股票的最佳时机 II](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii)                        | [暴力搜索、贪心算法、动态规划（Java）](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/solution/tan-xin-suan-fa-by-liweiwei1419-2/)                       |
+| [123. 买卖股票的最佳时机 III](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iii)                      | [动态规划（Java）](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iii/solution/dong-tai-gui-hua-by-liweiwei1419-7/)                                         |
+| [188. 买卖股票的最佳时机 IV](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iv)                        | [动态规划（「力扣」更新过用例，只有优化空间的版本可以 AC）](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iv/solution/dong-tai-gui-hua-by-liweiwei1419-4/) |
+| [309. 最佳买卖股票时机含冷冻期](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-cooldown)          | [动态规划（Java）](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/solution/dong-tai-gui-hua-by-liweiwei1419-5/)                               |
+| [714. 买卖股票的最佳时机含手续费](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee) | [动态规划（Java）](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/solution/dong-tai-gui-hua-by-liweiwei1419-6/)                        |
 
 ### 方法一：暴力解法
 
@@ -92,8 +92,8 @@ public class Solution {
 
 **复杂度分析**：
 
-+ 时间复杂度：$O(N^2)$，这里 $N$ 是股价数组的长度；
-+ 空间复杂度：$O(1)$。
+- 时间复杂度：$O(N^2)$，这里 $N$ 是股价数组的长度；
+- 空间复杂度：$O(1)$。
 
 ### 方法二：动态规划
 
@@ -101,8 +101,8 @@ public class Solution {
 
 买卖股票有约束，根据题目意思，有以下两个约束条件：
 
-+ 条件 1：你不能在买入股票前卖出股票；
-+ 条件 2：最多只允许完成一笔交易。
+- 条件 1：你不能在买入股票前卖出股票；
+- 条件 2：最多只允许完成一笔交易。
 
 因此 **当天是否持股** 是一个很重要的因素，而当前是否持股和昨天是否持股有关系，为此我们需要把 **是否持股** 设计到状态数组中。
 
@@ -110,35 +110,35 @@ public class Solution {
 
 `dp[i][j]`：下标为 `i` 这一天结束的时候，手上持股状态为 `j` 时，我们持有的现金数。换种说法：`dp[i][j]` 表示天数 `[0, i]` 区间里，下标 `i` 这一天状态为 `j` 的时候能够获得的最大利润。其中：
 
-+ `j = 0`，表示当前不持股；
-+ `j = 1`，表示当前持股。
+- `j = 0`，表示当前不持股；
+- `j = 1`，表示当前持股。
 
 **注意**：下标为 `i` 的这一天的计算结果包含了区间 `[0, i]` 所有的信息，因此最后输出 `dp[len - 1][0]`。
 
 **说明**：
 
-+ 使用「现金数」这个说法主要是为了体现 **买入股票手上的现金数减少，卖出股票手上的现金数增加** 这个事实；
-+ 「现金数」等价于题目中说的「利润」，即先买入这只股票，后买入这只股票的差价；
-+ 因此在刚开始的时候，我们的手上肯定是有一定现金数能够买入这只股票，即刚开始的时候现金数肯定不为 $0$，但是写代码的时候可以设置为 `0`。极端情况下（股价数组为 `[5, 4, 3, 2, 1]`），此时不发生交易是最好的（这一点是补充说明，限于我的表达，希望不要给大家造成迷惑）。
+- 使用「现金数」这个说法主要是为了体现 **买入股票手上的现金数减少，卖出股票手上的现金数增加** 这个事实；
+- 「现金数」等价于题目中说的「利润」，即先买入这只股票，后买入这只股票的差价；
+- 因此在刚开始的时候，我们的手上肯定是有一定现金数能够买入这只股票，即刚开始的时候现金数肯定不为 $0$，但是写代码的时候可以设置为 `0`。极端情况下（股价数组为 `[5, 4, 3, 2, 1]`），此时不发生交易是最好的（这一点是补充说明，限于我的表达，希望不要给大家造成迷惑）。
 
 **推导状态转移方程**：
 
 `dp[i][0]`：规定了今天不持股，有以下两种情况：
 
-+ 昨天不持股，今天什么都不做；
-+ 昨天持股，今天卖出股票（现金数增加），
+- 昨天不持股，今天什么都不做；
+- 昨天持股，今天卖出股票（现金数增加），
 
 `dp[i][1]`：规定了今天持股，有以下两种情况：
 
-+ 昨天持股，今天什么都不做（现金数与昨天一样）；
-+ 昨天不持股，今天买入股票（**注意**：只允许交易一次，因此手上的现金数就是当天的股价的相反数）。
+- 昨天持股，今天什么都不做（现金数与昨天一样）；
+- 昨天不持股，今天买入股票（**注意**：只允许交易一次，因此手上的现金数就是当天的股价的相反数）。
 
 状态转移方程请见 **参考代码 2**。
 
 **知识点**：
 
-+ 多阶段决策问题：动态规划常常用于求解多阶段决策问题；
-+ **无后效性**：每一天是否持股设计成状态变量的一维。状态设置具体，推导状态转移方程方便。
+- 多阶段决策问题：动态规划常常用于求解多阶段决策问题；
+- **无后效性**：每一天是否持股设计成状态变量的一维。状态设置具体，推导状态转移方程方便。
 
 **参考代码 2**：
 
@@ -172,13 +172,12 @@ public class Solution {
 
 **复杂度分析**：
 
-+ 时间复杂度：$O(N)$，遍历股价数组可以得到最优解；
-+ 空间复杂度：$O(N)$，状态数组的长度为 $N$。
+- 时间复杂度：$O(N)$，遍历股价数组可以得到最优解；
+- 空间复杂度：$O(N)$，状态数组的长度为 $N$。
 
 ---
 
 说明：**参考代码 3** 与 **参考代码 4** 是空间优化，思路来自「0-1」背包问题。
-
 
 **参考代码 3**：（滚动数组）
 
@@ -205,12 +204,10 @@ public class Solution {
 
 **说明**：`% 2` 还可以写成 `& 1`，这里为了保证可读性，选用 `% 2`。
 
-
 **复杂度分析**：
 
-+ 时间复杂度：$O(N)$，遍历股价数组可以得到最优解；
-+ 空间复杂度：$O(1)$，状态数组的长度为 $4$。
-
+- 时间复杂度：$O(N)$，遍历股价数组可以得到最优解；
+- 空间复杂度：$O(1)$，状态数组的长度为 $4$。
 
 **参考代码 4**：（空间优化）
 
@@ -218,9 +215,8 @@ public class Solution {
 
 状态转移方程里下标为 `i` 的行只参考下标为 `i - 1` 的行（即只参考上一行），并且：
 
-+ 下标为 `i` 的行并且状态为 `0` 的行参考了上一行状态为 `0` 和 `1` 的行；
-+ 下标为 `i` 的行并且状态为 `1` 的行只参考了上一行状态为 `1` 的行。
-
+- 下标为 `i` 的行并且状态为 `0` 的行参考了上一行状态为 `0` 和 `1` 的行；
+- 下标为 `i` 的行并且状态为 `1` 的行只参考了上一行状态为 `1` 的行。
 
 ```Java []
 public class Solution {
@@ -245,8 +241,8 @@ public class Solution {
 
 **复杂度分析**：
 
-+ 时间复杂度：$O(N)$，遍历股价数组可以得到最优解；
-+ 空间复杂度：$O(1)$，状态数组的长度为 $2$。
+- 时间复杂度：$O(N)$，遍历股价数组可以得到最优解；
+- 空间复杂度：$O(1)$，状态数组的长度为 $2$。
 
 ---
 
@@ -266,11 +262,9 @@ public class Solution {
 
 箭头指向的地方表示当前求解的过程中参考了以前求解过的问题的结果，这个过程不能形成回路，**形成回路就无法求解**。
 
-
 **总结**：动态规划有两种求解形式：
 
-+ 自顶向下：也就是记忆化递归，求解过程会遇到重复子问题，所以需要记录每一个子问题的结果；
-+ 自底向上：通过发现一个问题最开始的样子，通过「递推」一步一步求得原始问题的解。
+- 自顶向下：也就是记忆化递归，求解过程会遇到重复子问题，所以需要记录每一个子问题的结果；
+- 自底向上：通过发现一个问题最开始的样子，通过「递推」一步一步求得原始问题的解。
 
 在「力扣」上的绝大多数问题都可以通过「自底向上」递推的方式去做。
-

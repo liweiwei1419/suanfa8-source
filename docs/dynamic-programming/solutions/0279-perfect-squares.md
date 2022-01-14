@@ -6,11 +6,11 @@ tags:
   - 动态规划
 ---
 
-+ 题目链接：[完全平方数](https://leetcode-cn.com/problems/perfect-squares/)。
+- 题目链接：[完全平方数](https://leetcode-cn.com/problems/perfect-squares/)。
 
 ## 题目描述
 
-给定正整数 *n*，找到若干个完全平方数（比如 `1, 4, 9, 16, ...`）使得它们的和等于 *n*。你需要让组成和的完全平方数的个数最少。
+给定正整数 _n_，找到若干个完全平方数（比如 `1, 4, 9, 16, ...`）使得它们的和等于 _n_。你需要让组成和的完全平方数的个数最少。
 
 给你一个整数 `n` ，返回和为 `n` 的完全平方数的 **最少数量** 。
 
@@ -20,7 +20,7 @@ tags:
 
 ```
 输入: n = 12
-输出: 3 
+输出: 3
 解释: 12 = 4 + 4 + 4.
 ```
 
@@ -81,12 +81,12 @@ class Solution {
     public int numSquares(int n) {
         // 0 要占用一个位置
         int[] dp = new int[n + 1];
-        
+
         // 赋初值，设置成为 4 是数学定理保证
         Arrays.fill(dp, 4);
         // 该值被参考，设置成 0
         dp[0] = 0;
-        
+
         // 一个一个求，自底向上
         for (int i = 1; i <= n; i++) {
             for (int k = 0; k * k <= i; k++) {
@@ -102,7 +102,7 @@ Python 代码：（超时）
 
 ```python
 class Solution:
-  
+
     def numSquares(self, n: int) -> int:
         dp = [n] * (n + 1)
         for i in range(n):
@@ -120,13 +120,7 @@ class Solution:
 
 还可以使用广度优先遍历完成：建模成一个图论问题，转换成图论上的最短路径屋内。
 
-
-
 <img src="https://tva1.sinaimg.cn/large/00831rSTly1gczk8b3qbej30n80gsmz9.jpg" alt="image-20200319213108554" style="zoom:67%;" />
-
-
-
-
 
 注意：BFS 的写法。
 
@@ -181,6 +175,3 @@ public class Solution {
     }
 }
 ```
-
-
-

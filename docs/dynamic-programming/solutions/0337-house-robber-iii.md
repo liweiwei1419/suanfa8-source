@@ -7,8 +7,8 @@ tags:
   - 树形 DP
 ---
 
-+ 题目链接：[337. 打家劫舍 III](https://leetcode-cn.com/problems/house-robber-iii/)
-+ 题解链接：[树形 dp 入门问题（理解「无后效性」和「后序遍历」）](https://leetcode-cn.com/problems/house-robber-iii/solution/shu-xing-dp-ru-men-wen-ti-by-liweiwei1419/)
+- 题目链接：[337. 打家劫舍 III](https://leetcode-cn.com/problems/house-robber-iii/)
+- 题解链接：[树形 dp 入门问题（理解「无后效性」和「后序遍历」）](https://leetcode-cn.com/problems/house-robber-iii/solution/shu-xing-dp-ru-men-wen-ti-by-liweiwei1419/)
 
 ## 题目描述
 
@@ -22,7 +22,7 @@ tags:
 
 ```
 输入: [3,2,3,null,3,null,1]
-输出: 7 
+输出: 7
 解释: 小偷一晚能够盗取的最高金额 = 3 + 3 + 1 = 7.
 ```
 
@@ -38,15 +38,15 @@ tags:
 
 **Constraints:**
 
-+ The number of nodes in the tree is in the range $[1, 10^4]$.
-+ $0 \le Node.val \le 10^4$
+- The number of nodes in the tree is in the range $[1, 10^4]$.
+- $0 \le Node.val \le 10^4$
 
 ---
 
 ## 先说重点
 
-+ 这里最关键的是理解：在设计状态的时候，**在后面加一维，消除后效性**，打家劫舍第 1 题，股票系列问题 6 个问题，都是这样的思路；
-+ 树的问题，很多时候采用 **后序遍历（先处理左右孩子结点，再处理当前结点，整个过程看起来就像一层一层向上汇报信息）**。
+- 这里最关键的是理解：在设计状态的时候，**在后面加一维，消除后效性**，打家劫舍第 1 题，股票系列问题 6 个问题，都是这样的思路；
+- 树的问题，很多时候采用 **后序遍历（先处理左右孩子结点，再处理当前结点，整个过程看起来就像一层一层向上汇报信息）**。
 
 ---
 
@@ -60,15 +60,15 @@ tags:
 
 我在下面这两篇题解里有详细叙述，解题过程中如何利用「无后效性」：
 
-+ [152. 乘积最大子数组](https://leetcode-cn.com/problems/maximum-product-subarray/) 题解：[动态规划（理解无后效性）](https://leetcode-cn.com/problems/maximum-product-subarray/solution/dong-tai-gui-hua-li-jie-wu-hou-xiao-xing-by-liweiw/)
-+ [面试题 17.16. 按摩师](https://leetcode-cn.com/problems/the-masseuse-lcci/) 题解：[动态规划（经典问题，掌握如何消除后效性）](https://leetcode-cn.com/problems/the-masseuse-lcci/solution/dong-tai-gui-hua-by-liweiwei1419-8/)。
+- [152. 乘积最大子数组](https://leetcode-cn.com/problems/maximum-product-subarray/) 题解：[动态规划（理解无后效性）](https://leetcode-cn.com/problems/maximum-product-subarray/solution/dong-tai-gui-hua-li-jie-wu-hou-xiao-xing-by-liweiw/)
+- [面试题 17.16. 按摩师](https://leetcode-cn.com/problems/the-masseuse-lcci/) 题解：[动态规划（经典问题，掌握如何消除后效性）](https://leetcode-cn.com/problems/the-masseuse-lcci/solution/dong-tai-gui-hua-by-liweiwei1419-8/)。
 
 ---
 
 分析：（这里略过暴力解法和记忆化递归。）
 
-+ 根据打家劫舍 I 和 II，我们有了经验，这是一个动态规划问题；
-+ 问题场景在「树」上，就要用到「树的遍历」，这里用「后序遍历」，这是因为：**我们的逻辑是子结点陆续汇报信息给父结点，一层一层向上汇报，最后在根结点汇总值**。
+- 根据打家劫舍 I 和 II，我们有了经验，这是一个动态规划问题；
+- 问题场景在「树」上，就要用到「树的遍历」，这里用「后序遍历」，这是因为：**我们的逻辑是子结点陆续汇报信息给父结点，一层一层向上汇报，最后在根结点汇总值**。
 
 关键：当前结点「偷」或者「不偷」决定了孩子结点偷或者不偷，把这一点设计成状态，放在第 2 维，这一步叫「消除后效性」，这一点技巧非常常见。
 
@@ -76,15 +76,15 @@ tags:
 
 `dp[node][j]` ：这里 `node` 表示一个结点，以 `node` 为根结点的树，并且规定了 `node` 是否偷取能够获得的最大价值。
 
-+ `j = 0` 表示 `node` 结点不偷取；
-+ `j = 1` 表示 `node` 结点偷取。
+- `j = 0` 表示 `node` 结点不偷取；
+- `j = 1` 表示 `node` 结点偷取。
 
 ### 第 2 步： 推导状态转移方程
 
 根据当前结点偷或者不偷，就决定了需要从哪些**子结点**里的对应的状态转移过来。
 
-+ 如果当前结点不偷，左右子结点偷或者不偷都行，选最大者；
-+ 如果当前结点偷，左右子结点均不能偷。
+- 如果当前结点不偷，左右子结点偷或者不偷都行，选最大者；
+- 如果当前结点偷，左右子结点均不能偷。
 
 （状态转移方程的表述有点复杂，请大家直接看代码。）
 
@@ -142,12 +142,3 @@ public class Solution {
 [687. 最长同值路径](/problems/longest-univalue-path/)
 [1372. 二叉树中的最长交错路径](/problems/longest-zigzag-path-in-a-binary-tree/)
 [865. 具有所有最深节点的最小子树](/problems/smallest-subtree-with-all-the-deepest-nodes/)
-
-
-
-
-
-
-
-
-

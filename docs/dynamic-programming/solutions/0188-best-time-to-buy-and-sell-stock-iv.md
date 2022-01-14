@@ -6,8 +6,8 @@ tags:
   - 动态规划
 ---
 
-+ 题目链接：[188. 买卖股票的最佳时机 IV](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iv//)；
-+ 题解链接：[动态规划（「力扣」更新过用例，只有优化空间的版本可以 AC）](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iv/solution/dong-tai-gui-hua-by-liweiwei1419-4/)。
+- 题目链接：[188. 买卖股票的最佳时机 IV](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iv//)；
+- 题解链接：[动态规划（「力扣」更新过用例，只有优化空间的版本可以 AC）](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iv/solution/dong-tai-gui-hua-by-liweiwei1419-4/)。
 
 ## 题目描述
 
@@ -42,27 +42,24 @@ tags:
 
 ---
 
-+ 本题解于 2020 年 10 月 22 日重写；
-+ 「力扣」后台增加了测试用例，只有 空间优化 以后的版本可以通过；
-+ 推荐阅读 [@stormsunshine](/u/stormsunshine/) 编写的文章《[股票问题系列通解（转载翻译）](https://leetcode-cn.com/circle/article/qiAgHn/)》。
-
+- 本题解于 2020 年 10 月 22 日重写；
+- 「力扣」后台增加了测试用例，只有 空间优化 以后的版本可以通过；
+- 推荐阅读 [@stormsunshine](/u/stormsunshine/) 编写的文章《[股票问题系列通解（转载翻译）](https://leetcode-cn.com/circle/article/qiAgHn/)》。
 
 这一系列问题的目录：
 
-| 题号                                                         | 题解                                                         |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [121. 买卖股票的最佳时机](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock) | [暴力解法、动态规划（Java）](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/solution/bao-li-mei-ju-dong-tai-gui-hua-chai-fen-si-xiang-b/) |
-| [122. 买卖股票的最佳时机 II](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii) | [暴力搜索、贪心算法、动态规划（Java）](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/solution/tan-xin-suan-fa-by-liweiwei1419-2/) |
-| [123. 买卖股票的最佳时机 III](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iii) | [动态规划（Java）](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iii/solution/dong-tai-gui-hua-by-liweiwei1419-7/) |
-| [188. 买卖股票的最佳时机 IV](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iv) | [动态规划（「力扣」更新过用例，只有优化空间的版本可以 AC）](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iv/solution/dong-tai-gui-hua-by-liweiwei1419-4/) |
-| [309. 最佳买卖股票时机含冷冻期](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-cooldown) | [动态规划（Java）](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/solution/dong-tai-gui-hua-by-liweiwei1419-5/) |
-| [714. 买卖股票的最佳时机含手续费](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee) | [动态规划（Java）](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/solution/dong-tai-gui-hua-by-liweiwei1419-6/) |
-
+| 题号                                                                                                                     | 题解                                                                                                                                                                          |
+| ------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [121. 买卖股票的最佳时机](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock)                              | [暴力解法、动态规划（Java）](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/solution/bao-li-mei-ju-dong-tai-gui-hua-chai-fen-si-xiang-b/)                   |
+| [122. 买卖股票的最佳时机 II](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii)                        | [暴力搜索、贪心算法、动态规划（Java）](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/solution/tan-xin-suan-fa-by-liweiwei1419-2/)                       |
+| [123. 买卖股票的最佳时机 III](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iii)                      | [动态规划（Java）](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iii/solution/dong-tai-gui-hua-by-liweiwei1419-7/)                                         |
+| [188. 买卖股票的最佳时机 IV](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iv)                        | [动态规划（「力扣」更新过用例，只有优化空间的版本可以 AC）](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iv/solution/dong-tai-gui-hua-by-liweiwei1419-4/) |
+| [309. 最佳买卖股票时机含冷冻期](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-cooldown)          | [动态规划（Java）](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/solution/dong-tai-gui-hua-by-liweiwei1419-5/)                               |
+| [714. 买卖股票的最佳时机含手续费](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee) | [动态规划（Java）](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/solution/dong-tai-gui-hua-by-liweiwei1419-6/)                        |
 
 ---
 
 思路：最多可以完成 $k$ 笔交易，是一个限制条件，因此需要把这个限制条件作为状态的一维设计到状态数组中。
-
 
 ## 方法一：动态规划（最原始版本，超出内存限制）
 
@@ -87,8 +84,8 @@ public class Solution {
             return greedy(prices, len);
         }
 
-        // 状态转移方程里下标有 -1 的时候，为了防止数组下标越界，多开一行，因此第一维的长度是 len + 1 
-        // 第二维表示交易次数，从 0 开始，因此第二维的长度是 k + 1 
+        // 状态转移方程里下标有 -1 的时候，为了防止数组下标越界，多开一行，因此第一维的长度是 len + 1
+        // 第二维表示交易次数，从 0 开始，因此第二维的长度是 k + 1
         // 第三维表示是否持股，0：不持股，1：持股
         int[][][] dp = new int[len + 1][k + 1][2];
 
@@ -126,16 +123,14 @@ public class Solution {
 
 **复杂度分析**：
 
-+ 时间复杂度：$O(NK)$，这里 $N$ 表示股价数组的长度，$K$ 是最多可以完成交易的次数；
-+ 空间复杂度：$O(NK)$，三维 `dp` 数组的大小，第 $3$ 维是常数，故忽略。
-
+- 时间复杂度：$O(NK)$，这里 $N$ 表示股价数组的长度，$K$ 是最多可以完成交易的次数；
+- 空间复杂度：$O(NK)$，三维 `dp` 数组的大小，第 $3$ 维是常数，故忽略。
 
 **理解状态转移方程**：
 
-+ **人为规定**：如果当天买入股票的时候记录「交易发生一次」，如果当天卖出股票，不增加交易次数；
-+ 买入股票，手上持有的现金数减少（减去当天股价），相应地，卖出股票，手上持有的现金数增加（加上当天股价）；
-+ **难点**：还没发生的交易，并且还规定了当天必须持股的状态值应该设置为负无穷。
-
+- **人为规定**：如果当天买入股票的时候记录「交易发生一次」，如果当天卖出股票，不增加交易次数；
+- 买入股票，手上持有的现金数减少（减去当天股价），相应地，卖出股票，手上持有的现金数增加（加上当天股价）；
+- **难点**：还没发生的交易，并且还规定了当天必须持股的状态值应该设置为负无穷。
 
 ![image.png](https://pic.leetcode-cn.com/1603381708-lQNMqp-image.png)
 
@@ -144,7 +139,6 @@ public class Solution {
 ![image.png](https://pic.leetcode-cn.com/1603381749-WjwOwE-image.png)
 
 会看到 $N = 1000$ 的时候，不能通过测试。为此尝试优化空间。
-
 
 ## 方法二：动态规划（优化空间，可以通过）
 
@@ -189,10 +183,5 @@ public class Solution {
 
 **复杂度分析**：
 
-+ 时间复杂度：$O(NK)$，这里 $N$ 表示股价数组的长度，$K$ 是最多可以完成交易的次数；
-+ 空间复杂度：$O(NK)$，二维 `dp` 数组的大小，第 $2$ 维是常数，故忽略。
-
-
-
-
-
+- 时间复杂度：$O(NK)$，这里 $N$ 表示股价数组的长度，$K$ 是最多可以完成交易的次数；
+- 空间复杂度：$O(NK)$，二维 `dp` 数组的大小，第 $2$ 维是常数，故忽略。

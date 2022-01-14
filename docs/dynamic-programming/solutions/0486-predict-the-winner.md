@@ -6,9 +6,8 @@ tags:
   - 动态规划
 ---
 
-
-+ 题目链接：[486. 预测赢家](https://leetcode-cn.com/problems/predict-the-winner/)；
-+ 题解链接：[记忆化递归、动态规划（Java）](https://leetcode-cn.com/problems/predict-the-winner/solution/ji-yi-hua-di-gui-dong-tai-gui-hua-java-by-liweiwei/)。
+- 题目链接：[486. 预测赢家](https://leetcode-cn.com/problems/predict-the-winner/)；
+- 题解链接：[记忆化递归、动态规划（Java）](https://leetcode-cn.com/problems/predict-the-winner/solution/ji-yi-hua-di-gui-dong-tai-gui-hua-java-by-liweiwei/)。
 
 ## 题目描述
 
@@ -22,7 +21,7 @@ tags:
 输入：nums = [1,5,2]
 输出：false
 解释：一开始，玩家 1 可以从 1 和 2 中进行选择。
-如果他选择 2（或者 1 ），那么玩家 2 可以从 1（或者 2 ）和 5 中进行选择。如果玩家 2 选择了 5 ，那么玩家 1 则只剩下 1（或者 2 ）可选。 
+如果他选择 2（或者 1 ），那么玩家 2 可以从 1（或者 2 ）和 5 中进行选择。如果玩家 2 选择了 5 ，那么玩家 1 则只剩下 1（或者 2 ）可选。
 所以，玩家 1 的最终分数为 1 + 2 = 3，而玩家 2 为 5 。
 因此，玩家 1 永远不会成为赢家，返回 false 。
 ```
@@ -35,8 +34,6 @@ tags:
 解释：玩家 1 一开始选择 1 。然后玩家 2 必须从 5 和 7 中进行选择。无论玩家 2 选择了哪个，玩家 1 都可以选择 233 。
 最终，玩家 1（234 分）比玩家 2（12 分）获得更多的分数，所以返回 true，表示玩家 1 可以成为赢家。
 ```
-
-
 
 **提示：**
 
@@ -57,15 +54,13 @@ tags:
 
 ---
 
-
 这一题和「力扣」第 877 题：[石子游戏](https://leetcode-cn.com/problems/stone-game/) 很像。不同的地方在于：
 
-+ 这一题的分数为非负整数，也就是说可以为 $0$；
-+ 这一题可能会出现平局；
-+ 这一题没有限制数组的长度一定为偶数，并且分数总和为奇数，在这两个条件下，先手必胜。
+- 这一题的分数为非负整数，也就是说可以为 $0$；
+- 这一题可能会出现平局；
+- 这一题没有限制数组的长度一定为偶数，并且分数总和为奇数，在这两个条件下，先手必胜。
 
 因此只能使用「动态规划」（包括「记忆化递归」）去做。画图的过程和解释请参考 [题解](https://leetcode-cn.com/problems/stone-game/solution/ji-yi-hua-di-gui-dong-tai-gui-hua-shu-xue-jie-java/) ，由于我是先做了石子问题，所以在那道问题的里的题解会写得比较详细一点。
-
 
 ## 方法一：记忆化递归
 
@@ -106,13 +101,9 @@ public class Solution {
 
 ![image.png](https://pic.leetcode-cn.com/2c83432526cd010aa5014ee6b900d1dcd1dc1e01085f4d26f85cd500543c9239-image.png)
 
-
 **填表方式 1**：
 
-
 ![image.png](https://pic.leetcode-cn.com/e755b22fed079f160524fb0cc8433cde7afc5af2841fbdd58159c63a952f6118-image.png)
-
-
 
 ```Java []
 public class Solution {
@@ -127,7 +118,7 @@ public class Solution {
         for (int i = 0; i < len; i++) {
             dp[i][i] = nums[i];
         }
-        
+
         for (int i = len - 2; i >= 0; i--) {
             for (int j = i + 1; j < len; j++) {
                 dp[i][j] = Math.max(nums[i] - dp[i + 1][j], nums[j] - dp[i][j - 1]);
@@ -150,7 +141,7 @@ public class Solution {
     public boolean PredictTheWinner(int[] nums) {
         int len = nums.length;
         int[][] dp = new int[len][len];
-        
+
         // dp[i][j]：作为先手，在区间 nums[i..j] 里进行选择可以获得的相对分数
         for (int i = 0; i < len; i++) {
             dp[i][i] = nums[i];
@@ -165,4 +156,3 @@ public class Solution {
     }
 }
 ```
-

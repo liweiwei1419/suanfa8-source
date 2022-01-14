@@ -7,25 +7,24 @@ tags:
 ---
 
 ::: danger 这题是动态规划的经典问题：理解「无后效性」：
+
 1. 表格复用：具体讲解一下，奇数行和偶数行交替使用；
 2. 哨兵技巧，回避边界条件的讨论；
 3. 数学方法；
 4. 只能向下和只能向右，说明符合动态规划的无后效性。
-:::
+   :::
 
-+ 题目链接：[63. 不同路径 II](https://leetcode-cn.com/problems/unique-paths-ii)。
+- 题目链接：[63. 不同路径 II](https://leetcode-cn.com/problems/unique-paths-ii)。
 
 ## 题目描述
 
-一个机器人位于一个 *m x n* 网格的左上角 （起始点在下图中标记为“Start” ）。
+一个机器人位于一个 _m x n_ 网格的左上角 （起始点在下图中标记为“Start” ）。
 
 机器人每次只能向下或者向右移动一步。机器人试图达到网格的右下角（在下图中标记为“Finish”）。
 
 现在考虑网格中有障碍物。那么从左上角到右下角将会有多少条不同的路径？
 
 网格中的障碍物和空位置分别用 `1` 和 `0` 来表示。
-
- 
 
 **示例 1：**
 
@@ -50,8 +49,6 @@ tags:
 输出：1
 ```
 
-
-
 **提示：**
 
 - `m == obstacleGrid.length`
@@ -60,7 +57,6 @@ tags:
 - `obstacleGrid[i][j]` 为 `0` 或 `1`
 
 ## 方法一：动态规划
-
 
 **参考代码**：
 
@@ -106,8 +102,8 @@ if __name__ == '__main__':
 
 **总结**：
 
-+ 表格复用技巧：使用一维数组记录状态值；
-+ 一维数组 + 哨兵。
+- 表格复用技巧：使用一维数组记录状态值；
+- 一维数组 + 哨兵。
 
 **参考代码**：
 
@@ -139,8 +135,10 @@ public class Solution {
         }
         return dp[n];
     }
+
 }
-```
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Python">
@@ -176,7 +174,8 @@ class Solution:
                     # 什么都不做
                     pass
         return dp[-1]
-```
+````
+
 </CodeGroupItem>
 </CodeGroup>
 
@@ -220,4 +219,3 @@ class Solution:
         self.obstacleGrid = obstacleGrid
         return self._path_ways(m - 1, n - 1)
 ```
-

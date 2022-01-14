@@ -8,8 +8,8 @@ tags:
 
 熟悉定义状态和状态转移，掌握「动态规划」的「自底向上」，递推去求解问题的方法。不是直接针对问题求解，而是把小规模的问题都解决了，再解决大问题。
 
-+ 题目链接：[198. 打家劫舍](https://leetcode-cn.com/problems/house-robber)；
-+ 题解链接：[回溯算法 + 剪枝（回溯经典例题详解）](https://leetcode-cn.com/problems/combination-sum/solution/hui-su-suan-fa-jian-zhi-python-dai-ma-java-dai-m-2/)。
+- 题目链接：[198. 打家劫舍](https://leetcode-cn.com/problems/house-robber)；
+- 题解链接：[回溯算法 + 剪枝（回溯经典例题详解）](https://leetcode-cn.com/problems/combination-sum/solution/hui-su-suan-fa-jian-zhi-python-dai-ma-java-dai-m-2/)。
 
 ## 题目描述
 
@@ -35,14 +35,12 @@ tags:
   偷窃到的最高金额 = 2 + 9 + 1 = 12 。
 ```
 
-
 这一节我们讲解求线性规划问题的一般步骤：状态的定义和状态的转移。这里所说的一般步骤不是套路，而是求解这类问题必须要经历的两个步骤，动态规划的问题在算法问题中是比较具有艺术性的，一般而言没有固定的规律。
-
 
 ## 方法：动态规划（掌握「自底向上」思考问题的过程）
 
-+ 定义成二维表格的动态规划
-+ 技巧：增加哨兵，避免分类讨论
+- 定义成二维表格的动态规划
+- 技巧：增加哨兵，避免分类讨论
 
 **参考代码**：
 
@@ -71,22 +69,19 @@ public class Solution {
             // 注意这里有个偏移
             dp[i][1] =  dp[i - 1][0] + nums[i - 1];
         }
-        
+
         return Math.max(dp[len][0],dp[len][1]);
     }
 }
 ```
 
-
-
-+ 定义成一维表格的动态规划
+- 定义成一维表格的动态规划
 
 状态定义：`dp[i]` 表示子区间 `[0, i]` 在不触动警报装置的情况下，能够偷窃到的最高金额；
 
 状态转移方程：分类讨论：（1）偷 `nums[i]`； （2）不偷 `nums[i]`。
 
 **参考代码**：
-
 
 <CodeGroup>
 <CodeGroupItem title="Java">
@@ -101,7 +96,7 @@ public class Solution {
         if (len == 1) {
             return nums[0];
         }
-        
+
         int[] dp = new int[len];
         dp[0] = nums[0];
         dp[1] = Math.max(nums[0], nums[1]);
@@ -111,8 +106,10 @@ public class Solution {
         }
         return dp[len - 1];
     }
+
 }
-```
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Python">
@@ -136,11 +133,12 @@ class Solution:
             # num[i] 偷和不偷，在这两种情况中选择一种
             dp[i] = max(nums[i] + dp[i - 2], dp[i - 1])
         return dp[-1]
-```
+````
+
 </CodeGroupItem>
 </CodeGroup>
 
-+ 不同的状态定义（这个状态定义不太自然，仅供参考）
+- 不同的状态定义（这个状态定义不太自然，仅供参考）
 
 **参考代码**：
 
@@ -170,8 +168,10 @@ public class Solution {
         }
         return dp[0];
     }
+
 }
-```
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Python">
@@ -179,40 +179,26 @@ public class Solution {
 class Solution:
     def rob(self, nums: List[int]) -> int:
         size = len(nums)
-        
+
         if size == 0:
             return 0
 
         if size <= 2:
             return max(nums)
-        
+
         pre = nums[0]
         cur = max(nums[0], nums[1])
-        
+
         for i in range(2, size):
             temp = cur # 因为 cur 会被覆盖，所以先把 cur 存一下，最后再赋值给 pre
             cur = max(cur, pre + nums[i])
             pre = temp
         return cur
-```
+````
+
 </CodeGroupItem>
 </CodeGroup>
 
-
-
-+ 技巧：状态压缩（不用掌握，仅供参考，个人觉得这样的写法理解起来很费劲，不容易维护）
+- 技巧：状态压缩（不用掌握，仅供参考，个人觉得这样的写法理解起来很费劲，不容易维护）
 
 提示：状态转移，如果使用滚动变量的写法，可以把空间复杂度降到 $O(1)$。
-
-
-
-
-
-
-
-
-
-
-
-
-

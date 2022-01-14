@@ -6,7 +6,7 @@ tags:
   - 动态规划
 ---
 
-+ 题目链接： [1143. 最长公共子序列](https://leetcode-cn.com/problems/longest-common-subsequence/)。
+- 题目链接： [1143. 最长公共子序列](https://leetcode-cn.com/problems/longest-common-subsequence/)。
 
 ## 题目描述
 
@@ -21,8 +21,8 @@ tags:
 **示例 1：**
 
 ```
-输入：text1 = "abcde", text2 = "ace" 
-输出：3  
+输入：text1 = "abcde", text2 = "ace"
+输出：3
 解释：最长公共子序列是 "ace" ，它的长度为 3 。
 ```
 
@@ -51,14 +51,14 @@ tags:
 
 这里要为了考虑清楚边界问题，需要设置一个特殊的状态 `0`，这是基于特殊用例一个非空字符串与空字符串而来的。
 
-+ 状态定义：`dp[i][j]` 表示长度为 `i` 的 `text1` 的**前缀**子串与长度为 `j` 的 `text2` 的前缀子串的“最长公共子串”的长度。
+- 状态定义：`dp[i][j]` 表示长度为 `i` 的 `text1` 的**前缀**子串与长度为 `j` 的 `text2` 的前缀子串的“最长公共子串”的长度。
 
 （类似的定义方式还有「力扣」第 10 题：正则表达式。）
 
-+ 状态转移方程：
+- 状态转移方程：
 
 $$
-\text{dp}[i][j] = 
+\text{dp}[i][j] =
 \begin{cases}
 \text{dp}[i - 1][j - 1]  &\text{if} \ \text{text1}[i] = \text{text2}[j] \\
 \text{dp}[i][j - 1] \\
@@ -66,9 +66,8 @@ $$
 \end{cases}
 $$
 
-+ 初始化：表格 `dp` 的第 1 行和第 1 列均为 0。
-+ 输出：`dp[len1][len2]`。
-
+- 初始化：表格 `dp` 的第 1 行和第 1 列均为 0。
+- 输出：`dp[len1][len2]`。
 
 Java 代码：
 
@@ -99,7 +98,6 @@ public class Solution {
     }
 }
 ```
-
 
 说明：如果不考虑边界，写出来的代码是这样的。可以对比一下，代码量会多一些，而且比较容易出错。
 
@@ -147,4 +145,3 @@ public class Solution {
     }
 }
 ```
-

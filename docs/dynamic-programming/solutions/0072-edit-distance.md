@@ -6,8 +6,8 @@ tags:
   - 动态规划
 ---
 
-+ 题目链接：[72. 编辑距离](https://leetcode-cn.com/problems/edit-distance)；
-+ 题解链接：[动态规划（Java，最后有同类问题列表）](https://leetcode-cn.com/problems/edit-distance/solution/dong-tai-gui-hua-java-by-liweiwei1419/)。
+- 题目链接：[72. 编辑距离](https://leetcode-cn.com/problems/edit-distance)；
+- 题解链接：[动态规划（Java，最后有同类问题列表）](https://leetcode-cn.com/problems/edit-distance/solution/dong-tai-gui-hua-java-by-liweiwei1419/)。
 
 ## 题目描述
 
@@ -50,15 +50,12 @@ exection -> execution (插入 'u')
 
 **写在前面**：
 
-+ 「编辑距离」是经典的两个字符串的动态规划问题，**最基本的问题以及状态设计的想法来自「力扣」第 1143 题**：[最长公共子序列](https://leetcode-cn.com/problems/longest-common-subsequence/)；
-+ 思路：先分析递归结构，然后「**自底向上**」递推计算。
+- 「编辑距离」是经典的两个字符串的动态规划问题，**最基本的问题以及状态设计的想法来自「力扣」第 1143 题**：[最长公共子序列](https://leetcode-cn.com/problems/longest-common-subsequence/)；
+- 思路：先分析递归结构，然后「**自底向上**」递推计算。
 
 ---
 
-
-
 **分析递归结构**：根据最长公共子序列问题的学习经验，比较两个字符串的差异可以 **根据它们最后一个字符串的差异进行穷举**，因此状态定义如下：
-
 
 ### 第 1 步：定义状态
 
@@ -83,11 +80,13 @@ exection -> execution (插入 'u')
 ![image.png](https://pic.leetcode-cn.com/1605176968-bZYGKX-image.png)
 
 ---
+
 **情况 2.2** ：去掉当前 `word1` 后面最后一个字符（操作次数 + 1），此时编辑距离 `dp[i][j] = dp[i - 1][j] + 1`；
 
 ![image.png](https://pic.leetcode-cn.com/1605177200-tABKeo-image.png)
 
 ---
+
 **情况 2.3**：将当前 `word1` 后面最后一个字符替换成当前 `word2`最后一个字符（操作次数 + 1），此时编辑距离 `dp[i][j] = dp[i - 1][j - 1] + 1`。
 
 ![image.png](https://pic.leetcode-cn.com/1605177227-VoqJSl-image.png)
@@ -202,10 +201,9 @@ for (int j = 0; j <= len2; j++) {
 
 @slideend
 
-
 **参考代码**：
 
-```Java [] 
+```Java []
 public class Solution {
 
     // 只讨论 word1 → word2
@@ -254,33 +252,21 @@ public class Solution {
 
 **复杂度分析**：
 
-+ 时间复杂度 ：$O(MN)$，其中 $M$ 为 `word1` 的长度，$N$ 为 `word2` 的长度；
-+ 空间复杂度 ：$O(MN)$，状态表格的大小。
+- 时间复杂度 ：$O(MN)$，其中 $M$ 为 `word1` 的长度，$N$ 为 `word2` 的长度；
+- 空间复杂度 ：$O(MN)$，状态表格的大小。
 
 ---
 
 ## 同类问题
 
-+ 「力扣」第 1143 题：[最长公共子串](https://leetcode-cn.com/problems/longest-common-subsequence/)（中等）；
-+ 「力扣」第 10 题：[正则表达式匹配](https://leetcode-cn.com/problems/regular-expression-matching/)（困难）；
-+ 「力扣」第 44 题：[通配符匹配](https://leetcode-cn.com/problems/wildcard-matching/)（困难）；
-+ 「力扣」第 97 题：[交错字符串](https://leetcode-cn.com/problems/interleaving-string/)（困难）；
-+ 「力扣」第 115 题：[ 不同的子序列](https://leetcode-cn.com/problems/distinct-subsequences/)（困难）；
-+ 「力扣」第 583 题：[两个字符串的删除操作](https://leetcode-cn.com/problems/delete-operation-for-two-strings/)（中等）；
-+ 「力扣」第 718 题：[最长重复子数组](https://leetcode-cn.com/problems/maximum-length-of-repeated-subarray/)（中等）；
-+ 「力扣」第 1035 题：[不相交的线](https://leetcode-cn.com/problems/uncrossed-lines/)（中等）；
-+ 「力扣」第 1092 题：[ 最短公共超序列](https://leetcode-cn.com/problems/shortest-common-supersequence/)（困难）。
-
+- 「力扣」第 1143 题：[最长公共子串](https://leetcode-cn.com/problems/longest-common-subsequence/)（中等）；
+- 「力扣」第 10 题：[正则表达式匹配](https://leetcode-cn.com/problems/regular-expression-matching/)（困难）；
+- 「力扣」第 44 题：[通配符匹配](https://leetcode-cn.com/problems/wildcard-matching/)（困难）；
+- 「力扣」第 97 题：[交错字符串](https://leetcode-cn.com/problems/interleaving-string/)（困难）；
+- 「力扣」第 115 题：[ 不同的子序列](https://leetcode-cn.com/problems/distinct-subsequences/)（困难）；
+- 「力扣」第 583 题：[两个字符串的删除操作](https://leetcode-cn.com/problems/delete-operation-for-two-strings/)（中等）；
+- 「力扣」第 718 题：[最长重复子数组](https://leetcode-cn.com/problems/maximum-length-of-repeated-subarray/)（中等）；
+- 「力扣」第 1035 题：[不相交的线](https://leetcode-cn.com/problems/uncrossed-lines/)（中等）；
+- 「力扣」第 1092 题：[ 最短公共超序列](https://leetcode-cn.com/problems/shortest-common-supersequence/)（困难）。
 
 本题解于 2020 年 11 月 12 日重写，并增加了同类问题。
-
-
-
-
-
-
-
-
-
-
-

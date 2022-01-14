@@ -8,13 +8,13 @@ tags:
 
 掌握如何定义「状态」和写出「状态转移方程」。
 
-+ 题目链接：[120. 三角形最小路径和](https://leetcode-cn.com/problems/triangle/)。
+- 题目链接：[120. 三角形最小路径和](https://leetcode-cn.com/problems/triangle/)。
 
 ## 题目描述
 
 给定一个三角形 `triangle` ，找出自顶向下的最小路径和。
 
-每一步只能移动到下一行中相邻的结点上。**相邻的结点** 在这里指的是 **下标** 与 **上一层结点下标**  相同或者等于 **上一层结点下标 + 1** 的两个结点。也就是说，如果正位于当前行的下标 `i` ，那么下一步可以移动到下一行的下标 `i` 或 `i + 1` 。
+每一步只能移动到下一行中相邻的结点上。**相邻的结点** 在这里指的是 **下标** 与 **上一层结点下标** 相同或者等于 **上一层结点下标 + 1** 的两个结点。也就是说，如果正位于当前行的下标 `i` ，那么下一步可以移动到下一行的下标 `i` 或 `i + 1` 。
 
 **示例 1：**
 
@@ -35,8 +35,6 @@ tags:
 输入：triangle = [[-10]]
 输出：-10
 ```
-
-
 
 **提示：**
 
@@ -111,8 +109,10 @@ public class Solution {
         }
         return arr;
     }
+
 }
-```
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Python">
@@ -133,14 +133,10 @@ class Solution:
                 dp[j] = min(dp[j], dp[j + 1]) + triangle[i][j]
         return dp[0]
 
-```
+````
+
 </CodeGroupItem>
 </CodeGroup>
-
-
-
-
-
 
 **参考代码**：（原地修改，不建议这么做）
 
@@ -157,24 +153,22 @@ class Solution:
         for i in range(size - 2, -1, -1):
             for j in range(len(triangle[i])):
                 dp[j] = min(dp[j], dp[j + 1]) + triangle[i][j]
-        return dp[0]  
+        return dp[0]
 ```
 
 2、从上到下：
 
 ![image-20200714101445905](https://tva1.sinaimg.cn/large/007S8ZIlgy1ggqa6f1notj317c0o8jti.jpg)
 
-
 ---
 
 CSDN 版本
-
 
 ## 「力扣」第 120 题： 三角形最小路径和（中等）
 
 > 掌握如何定义「状态」和写出「状态转移方程」。
 
-+ [链接](https://leetcode-cn.com/problems/triangle)
+- [链接](https://leetcode-cn.com/problems/triangle)
 
 > 给定一个三角形，找出自顶向下的最小路径和。每一步只能移动到下一行中相邻的结点上。
 >
@@ -193,8 +187,7 @@ CSDN 版本
 >
 > **说明：**
 >
-> 如果你可以只使用 *O*(*n*) 的额外空间（*n* 为三角形的总行数）来解决这个问题，那么你的算法会很加分。
->
+> 如果你可以只使用 _O_(_n_) 的额外空间（_n_ 为三角形的总行数）来解决这个问题，那么你的算法会很加分。
 
 **思路分析**：
 
@@ -295,12 +288,9 @@ class Solution:
         for i in range(size - 2, -1, -1):
             for j in range(len(triangle[i])):
                 dp[j] = min(dp[j], dp[j + 1]) + triangle[i][j]
-        return dp[0]  
+        return dp[0]
 ```
 
 2、从上到下：
 
 ![image-20200714101445905](https://imgconvert.csdnimg.cn/aHR0cHM6Ly90dmExLnNpbmFpbWcuY24vbGFyZ2UvMDA3UzhaSWxneTFnZ3FhNmYxbm90ajMxN2MwbzhqdGkuanBn?x-oss-process=image/format,png)
-
-
-

@@ -7,7 +7,7 @@ tags:
   - 树形 DP
 ---
 
-+ 题目链接：[687. 最长同值路径](https://leetcode-cn.com/problems/longest-univalue-path/)。
+- 题目链接：[687. 最长同值路径](https://leetcode-cn.com/problems/longest-univalue-path/)。
 
 ## 题目描述
 
@@ -55,13 +55,13 @@ tags:
 2
 ```
 
-**注意:** 给定的二叉树不超过 10000 个结点。 树的高度不超过1000。
+**注意:** 给定的二叉树不超过 10000 个结点。 树的高度不超过 1000。
 
 **Constraints:**
 
-+ The number of nodes in the tree is in the range `[0, 10^4]`.
-+ `-1000 <= Node.val <= 1000`
-+ The depth of the tree will not exceed `1000`.
+- The number of nodes in the tree is in the range `[0, 10^4]`.
+- `-1000 <= Node.val <= 1000`
+- The depth of the tree will not exceed `1000`.
 
 ---
 
@@ -73,13 +73,13 @@ tags:
 public class Solution {
 
     private int res;
-    
+
     public int longestUnivaluePath(TreeNode root) {
         res = 0;
         dfs(root);
         return res;
     }
-    
+
     /**
      * 与 node 的值相等的单边路径的长度
      *
@@ -90,22 +90,22 @@ public class Solution {
         if (node == null) {
             return 0;
         }
-    
+
         int left = dfs(node.left);
         int right = dfs(node.right);
-    
+
         int leftPath = 0;
         if (node.left != null && node.left.val == node.val) {
             // 这里加上的 1 是边数
             leftPath = left + 1;
         }
-    
+
         int rightPath = 0;
         if (node.right != null && node.right.val == node.val) {
             // 这里加上的 1 是边数
             rightPath += right + 1;
         }
-    
+
         // 注意：两个节点之间的路径长度由它们之间的边数表示
         res = Math.max(res, leftPath + rightPath);
         return Math.max(leftPath, rightPath);

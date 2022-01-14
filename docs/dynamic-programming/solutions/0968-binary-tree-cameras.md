@@ -7,7 +7,7 @@ tags:
   - 树形 DP
 ---
 
-+ 题目链接：[968. 监控二叉树](https://leetcode-cn.com/problems/binary-tree-cameras/)。
+- 题目链接：[968. 监控二叉树](https://leetcode-cn.com/problems/binary-tree-cameras/)。
 
 ## 题目描述
 
@@ -50,12 +50,12 @@ tags:
 ---
 
 说明：这题很难，返回的状态有 3 个数值。设置 3 个状态：
+
 1. 自己有灯
 2. 自己无灯，孩子也无灯
 3. 自己无灯，孩子有灯
 
 **参考代码**：
-
 
 ```java
 public class Solution {

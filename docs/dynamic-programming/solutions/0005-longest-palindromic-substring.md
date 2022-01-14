@@ -9,8 +9,17 @@ tags:
 
 通过这道题体会「动态规划」问题「自底向上」「填表」的思路和一些细节。
 
-+ 题目链接：[5. 最长回文子串](https://leetcode-cn.com/problems/longest-palindromic-substring/)；
-+ 题解链接：[动态规划、中心扩散、Manacher 算法](https://leetcode-cn.com/problems/longest-palindromic-substring/solution/zhong-xin-kuo-san-dong-tai-gui-hua-by-liweiwei1419/)。
+- 题目链接：[5. 最长回文子串](https://leetcode-cn.com/problems/longest-palindromic-substring/)；
+- 题解链接：[动态规划、中心扩散、Manacher 算法](https://leetcode-cn.com/problems/longest-palindromic-substring/solution/zhong-xin-kuo-san-dong-tai-gui-hua-by-liweiwei1419/)。
+
+::: danger 视频讲解
+:tv: 这道题在 [官方题解](https://leetcode-cn.com/problems/longest-palindromic-substring/solution/zui-chang-hui-wen-zi-chuan-by-leetcode-solution/) 和 [B 站](https://www.bilibili.com/video/BV1L54y1D7pa) 可以收看视频讲解，可以点击下面的视频右上角「去 bilibili 观看」，选择快速播放，获得更好的观看体验。
+
+:::
+
+<div style="position: relative; padding: 30% 45%;">
+<iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="https://player.bilibili.com/player.html?aid=840714948&bvid=BV1L54y1D7pa&cid=193442819&page=1" frameborder="no" scrolling="no"></iframe>
+</div>
 
 ## 题目描述
 
@@ -52,7 +61,6 @@ tags:
 
 ## 思路分析
 
-
 回文天然具有「状态转移」性质：一个长度严格大于 $2$ 的回文去掉头尾字符以后，剩下的部分依然是回文。反之，如果一个字符串头尾两个字符都不相等，那么这个字符串一定不是回文。「动态规划」的方法根据这样的性质得到。
 
 #### 第 1 步：定义状态
@@ -69,8 +77,8 @@ dp[i][j] = (s[i] == s[j]) and dp[i + 1][j - 1]
 
 **说明**：
 
-+ 「动态规划」的「自底向上」求解问题的思路，很多时候是在填写一张二维表格。由于 `s[i..j]` 表示 `s` 的一个子串，因此 `i` 和 `j` 的关系是 `i <= j`，只需要填这张表格对角线以上的部分；
-+ 看到 `dp[i + 1][j - 1]` 就需要考虑特殊情况：如果去掉 `s[i..j]` 头尾两个字符子串 `s[i + 1..j - 1]` 的长度严格小于 $2$（不构成区间），即 $j - 1 - (i + 1) + 1 < 2$ 时，整理得 $j - i < 3$，此时 `s[i..j]` 是否是回文只取决于 `s[i]` 与 `s[j]` 是否相等。结论也比较直观：$j - i < 3$ 等价于 $j - i + 1 < 4$，即当子串 $s[i..j]$ 的长度等于 $2$ 或者等于 $3$ 的时候，`s[i..j]` 是否是回文由 `s[i]` 与 `s[j]` 是否相等决定。
+- 「动态规划」的「自底向上」求解问题的思路，很多时候是在填写一张二维表格。由于 `s[i..j]` 表示 `s` 的一个子串，因此 `i` 和 `j` 的关系是 `i <= j`，只需要填这张表格对角线以上的部分；
+- 看到 `dp[i + 1][j - 1]` 就需要考虑特殊情况：如果去掉 `s[i..j]` 头尾两个字符子串 `s[i + 1..j - 1]` 的长度严格小于 $2$（不构成区间），即 $j - 1 - (i + 1) + 1 < 2$ 时，整理得 $j - i < 3$，此时 `s[i..j]` 是否是回文只取决于 `s[i]` 与 `s[j]` 是否相等。结论也比较直观：$j - i < 3$ 等价于 $j - i + 1 < 4$，即当子串 $s[i..j]$ 的长度等于 $2$ 或者等于 $3$ 的时候，`s[i..j]` 是否是回文由 `s[i]` 与 `s[j]` 是否相等决定。
 
 #### 第 3 步：考虑初始化
 
@@ -82,9 +90,9 @@ dp[i][j] = (s[i] == s[j]) and dp[i + 1][j - 1]
 
 #### 第 5 步：考虑优化空间
 
-+ 下面给出的「参考代码」，在填表的过程中，只参考了左下方的数值。事实上可以优化，但是增加了代码编写和理解的难度，丢失了可读性和可解释性。在这里不做优化空间；
-+ 填表应该遵守这样的原则：总是先得到小子串是否是回文的结果，然后大子串才能参考小子串的判断结果，所以填表顺序很重要；
-+ 建议自己动手，画一下表格，相信会对「动态规划」作为一种「表格法」有更好的理解。
+- 下面给出的「参考代码」，在填表的过程中，只参考了左下方的数值。事实上可以优化，但是增加了代码编写和理解的难度，丢失了可读性和可解释性。在这里不做优化空间；
+- 填表应该遵守这样的原则：总是先得到小子串是否是回文的结果，然后大子串才能参考小子串的判断结果，所以填表顺序很重要；
+- 建议自己动手，画一下表格，相信会对「动态规划」作为一种「表格法」有更好的理解。
 
 **参考代码 2**：
 

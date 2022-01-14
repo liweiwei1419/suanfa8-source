@@ -110,7 +110,6 @@ public class Solution {
 }
 ```
 
-
 ### 方法二：动态规划
 
 **参考代码 2**：
@@ -177,9 +176,10 @@ public class Solution {
 
 以下的写法是备份，可以不看。
 
-+ 递归写法 1
+- 递归写法 1
 
 Java 代码：
+
 ```java
 public class Solution {
 
@@ -205,9 +205,10 @@ public class Solution {
 }
 ```
 
-+ 递归写法 2
+- 递归写法 2
 
 Java 代码：
+
 ```java
 public class Solution {
     public boolean isMatch(String s, String p) {

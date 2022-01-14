@@ -7,12 +7,12 @@ tags:
   - 贪心算法
 ---
 
-+ 题目链接：[343. 整数拆分](https://leetcode-cn.com/problems/integer-break/)；
-+ 题解链接：[记忆化递归、动态规划 、贪心算法（Java、Python）](https://leetcode-cn.com/problems/integer-break/solution/tan-xin-xuan-ze-xing-zhi-de-jian-dan-zheng-ming-py/)。
+- 题目链接：[343. 整数拆分](https://leetcode-cn.com/problems/integer-break/)；
+- 题解链接：[记忆化递归、动态规划 、贪心算法（Java、Python）](https://leetcode-cn.com/problems/integer-break/solution/tan-xin-xuan-ze-xing-zhi-de-jian-dan-zheng-ming-py/)。
 
 ## 题目描述
 
-给定一个正整数 *n*，将其拆分为**至少**两个正整数的和，并使这些整数的乘积最大化。 返回你可以获得的最大乘积。
+给定一个正整数 _n_，将其拆分为**至少**两个正整数的和，并使这些整数的乘积最大化。 返回你可以获得的最大乘积。
 
 **示例 1:**
 
@@ -30,7 +30,7 @@ tags:
 解释: 10 = 3 + 3 + 4, 3 × 3 × 4 = 36。
 ```
 
-**说明:** 你可以假设 *n* 不小于 2 且不大于 58。
+**说明:** 你可以假设 _n_ 不小于 2 且不大于 58。
 
 **Constraints:**
 
@@ -117,7 +117,6 @@ public class Solution {
 
 Java 代码：加入了记忆化搜索的递归
 
-
 ```java
 /**
  * 加入了记忆化搜索的递归解法
@@ -174,7 +173,6 @@ public class Solution2 {
 总结：先研究递归结构，再记忆化搜索，最后实现使用「动态规划」。即先「自顶向下」思考，再「自底向上」实现。
 
 Java 代码：
-
 
 ```java
 public class Solution3 {
@@ -294,4 +292,3 @@ if __name__ == '__main__':
 Python 代码：贪心算法：1、能拆出 3 ，就尽量拆出 3；2、最多拆出 2 个 2。
 
 ![LeetCode 第 343 号问题：Integer Break-3](https://liweiwei1419.gitee.io/images/leetcode-notes/dp/dynamic-programming-3-3.jpg)
-
