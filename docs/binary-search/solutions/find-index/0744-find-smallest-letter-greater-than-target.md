@@ -6,9 +6,8 @@ tags:
   - 二分查找
 ---
 
-
-+ 题目链接：[744. 寻找比目标字母大的最小字母](https://leetcode-cn.com/problems/find-smallest-letter-greater-than-target/)；
-+ 题解链接：[转换为第 35 题，找第 1 个严格大于 target 元素的位置（模板写法）](https://leetcode-cn.com/problems/find-smallest-letter-greater-than-target/solution/zhuan-huan-wei-di-35-ti-zhao-di-1-ge-yan-ge-da-yu-/)。
+- 题目链接：[744. 寻找比目标字母大的最小字母](https://leetcode-cn.com/problems/find-smallest-letter-greater-than-target/)；
+- 题解链接：[转换为第 35 题，找第 1 个严格大于 target 元素的位置（模板写法）](https://leetcode-cn.com/problems/find-smallest-letter-greater-than-target/solution/zhuan-huan-wei-di-35-ti-zhao-di-1-ge-yan-ge-da-yu-/)。
 
 ## 题目描述
 
@@ -79,7 +78,6 @@ target = "j"
 
 **参考代码 1**：特殊判断放在最后面，**此时要注意二分搜索初始化的右边界**。
 
-
 ```java
 public class Solution {
 
@@ -116,7 +114,6 @@ public class Solution {
 
 **参考代码 2**：一开始就做特殊判断，接下来就可以确定在 `[0, len - 1]` 范围里一定有解，无需后处理。
 
-
 ```java
 public class Solution {
     public char nextGreatestLetter(char[] letters, char target) {
@@ -142,4 +139,3 @@ public class Solution {
     }
 }
 ```
-

@@ -6,7 +6,7 @@ tags:
   - 二分查找
 ---
 
-+ 题目链接：[1482. 制作 m 束花所需的最少天数](https://leetcode-cn.com/problems/minimum-number-of-days-to-make-m-bouquets/)。
+- 题目链接：[1482. 制作 m 束花所需的最少天数](https://leetcode-cn.com/problems/minimum-number-of-days-to-make-m-bouquets/)。
 
 ## 题目描述
 
@@ -127,4 +127,3 @@ public class Solution {
     }
 }
 ```
-

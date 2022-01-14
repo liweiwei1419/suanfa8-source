@@ -6,8 +6,8 @@ tags:
   - 二分查找
 ---
 
-+ 题目链接：[81. 搜索旋转排序数组 II](https://leetcode-cn.com/problems/search-in-rotated-sorted-array-ii/)；
-+ 题解地址：[二分查找（Python 代码、Java 代码）](https://leetcode-cn.com/problems/search-in-rotated-sorted-array-ii/solution/er-fen-cha-zhao-by-liweiwei1419/)。
+- 题目链接：[81. 搜索旋转排序数组 II](https://leetcode-cn.com/problems/search-in-rotated-sorted-array-ii/)；
+- 题解地址：[二分查找（Python 代码、Java 代码）](https://leetcode-cn.com/problems/search-in-rotated-sorted-array-ii/solution/er-fen-cha-zhao-by-liweiwei1419/)。
 
 ## 题目描述
 
@@ -17,7 +17,7 @@ tags:
 
 给你 **旋转后** 的数组 `nums` 和一个整数 `target` ，请你编写一个函数来判断给定的目标值是否存在于数组中。如果 `nums` 中存在这个目标值 `target` ，则返回 `true` ，否则返回 `false` 。
 
- **示例 1：**
+**示例 1：**
 
 ```
 输入：nums = [2,5,6,0,0,1,2], target = 0
@@ -50,15 +50,14 @@ tags:
 
 明确了思路以后，我们就需要确定「有序数组」存在于「原始数组」的哪个子区间里，下面提供了两个比较标准：
 
-+ 二分查找算法看到的中间元素 `nums[mid]` 的值和左边界 `nums[left]` 的值比较；
-+ 二分查找算法看到的中间元素 `nums[mid]` 的值和右边界 `nums[right]` 的值比较。
+- 二分查找算法看到的中间元素 `nums[mid]` 的值和左边界 `nums[left]` 的值比较；
+- 二分查找算法看到的中间元素 `nums[mid]` 的值和右边界 `nums[right]` 的值比较。
 
 由这两个比较标准就能写出两版不同的代码。
 
 **情况 1**：二分查找算法看到的中间元素 `nums[mid]` 的值和左边界 `nums[left]` 的值比较
 
 **参考代码 1**：
-
 
 ```java
 public class Solution {
@@ -109,7 +108,6 @@ public class Solution {
 
 **参考代码 2**：
 
-
 ```java
 public class Solution {
 
@@ -150,6 +148,6 @@ public class Solution {
 
 **复杂度分析**：
 
-+ 时间复杂度：$O(N)$，其中 $N$ 是输入数组的长度。最坏情况下，数组元素均相等且不为 `target`；
+- 时间复杂度：$O(N)$，其中 $N$ 是输入数组的长度。最坏情况下，数组元素均相等且不为 `target`；
 
-+ 空间复杂度：$O(1)$，只使用了常数个变量。
+- 空间复杂度：$O(1)$，只使用了常数个变量。

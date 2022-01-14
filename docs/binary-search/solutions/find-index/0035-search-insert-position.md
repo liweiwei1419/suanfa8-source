@@ -2,14 +2,14 @@
 title: 「力扣」第 35 题：搜索插入位置（简单）
 icon: shipin
 category: 二分查找
-tags: 
+tags:
   - 二分查找
 ---
 
 ![0035](https://tva1.sinaimg.cn/large/008i3skNgy1gx8jfpbcuxj30p00ant9b.jpg)
 
-+ 题目链接：[35. 搜索插入位置](https://leetcode-cn.com/problems/search-insert-position/)；
-+ 题解链接：[写对二分查找不是套模板并往里面填空，需要仔细分析题意](https://leetcode-cn.com/problems/search-insert-position/solution/te-bie-hao-yong-de-er-fen-cha-fa-fa-mo-ban-python-/)。
+- 题目链接：[35. 搜索插入位置](https://leetcode-cn.com/problems/search-insert-position/)；
+- 题解链接：[写对二分查找不是套模板并往里面填空，需要仔细分析题意](https://leetcode-cn.com/problems/search-insert-position/solution/te-bie-hao-yong-de-er-fen-cha-fa-fa-mo-ban-python-/)。
 
 ## 题目描述
 
@@ -62,9 +62,10 @@ tags:
 :::
 
 > 这一部分一定要分析清楚：
-> + 题目要找的元素是：第一个大于等于 `target` 的元素的下标；
-> + 数组的长度 `len` 也有可能是问题的答案，「参考代码 2」设置 `right = len` 不是因为设置区间是「左闭右开」，而是因为 `len` 本来就有可能是问题的答案。
-> 
+>
+> - 题目要找的元素是：第一个大于等于 `target` 的元素的下标；
+> - 数组的长度 `len` 也有可能是问题的答案，「参考代码 2」设置 `right = len` 不是因为设置区间是「左闭右开」，而是因为 `len` 本来就有可能是问题的答案。
+>
 > 上面 2 个小点，都需要仔细分析题意和几个示例得到，任何模板都不能回答这样的问题。
 
 ## 题意分析
@@ -89,15 +90,14 @@ tags:
 
 我们知道：**题目要我们返回第 $1$ 个 大于等于 目标元素 `2` 的下标（分析出这一点非常重要）**，因此返回 `1`。等于的情况可以看「示例 1」。
 
-
 ## 思路分析
 
 在有序数组中查找，可以使用「二分查找」。
 
 根据「题意分析」中对示例的描述：
 
-+ 情况 1：**如果当前 `mid` 看到的数值严格小于 `target`，那么 `mid` 以及 `mid` 左边的所有元素就一定不是「插入元素的位置」**，因此下一轮搜索区间是 `[mid + 1..right]`，下一轮把 `left` 移动到 `mid + 1` 位置，因此设置 `left = mid + 1`；
-+ 情况 2：否则，如果 `mid` 看到的数值大于等于 `target`，那么 `mid` **可能是「插入元素的位置」**，`mid` 的右边一定不存在「插入元素的位置」。如果 `mid` 的左边不存在「插入元素的位置」，我们才可以说 `mid` 是「插入元素的位置」。因此下一轮搜索区间是 `[left..mid]`，下一轮把 `right` 移动到 `mid` 位置，因此设置 `right = mid`。
+- 情况 1：**如果当前 `mid` 看到的数值严格小于 `target`，那么 `mid` 以及 `mid` 左边的所有元素就一定不是「插入元素的位置」**，因此下一轮搜索区间是 `[mid + 1..right]`，下一轮把 `left` 移动到 `mid + 1` 位置，因此设置 `left = mid + 1`；
+- 情况 2：否则，如果 `mid` 看到的数值大于等于 `target`，那么 `mid` **可能是「插入元素的位置」**，`mid` 的右边一定不存在「插入元素的位置」。如果 `mid` 的左边不存在「插入元素的位置」，我们才可以说 `mid` 是「插入元素的位置」。因此下一轮搜索区间是 `[left..mid]`，下一轮把 `right` 移动到 `mid` 位置，因此设置 `right = mid`。
 
 **说明**：上面的两点中，「情况 2」其实不用分析得那么细致， 因为只要「情况 1」的区间分析是正确的，「情况 2」一定是「情况 1」得到的区间的反面区间。
 
@@ -136,8 +136,8 @@ public class Solution {
 
 **复杂度分析**：
 
-+ 时间复杂度：$O(\log N)$，这里 $N$ 是输入数组的长度；
-+ 空间复杂度：$O(1)$。
+- 时间复杂度：$O(\log N)$，这里 $N$ 是输入数组的长度；
+- 空间复杂度：$O(1)$。
 
 既然 `len` 也有可能是答案，可以在初始化的时候，把 `right` 设置成 `len`，在一开始的时候就不需要特殊判断了。
 
@@ -167,4 +167,3 @@ public class Solution {
 ```
 
 **复杂度分析**：（同参考代码 1）。
-

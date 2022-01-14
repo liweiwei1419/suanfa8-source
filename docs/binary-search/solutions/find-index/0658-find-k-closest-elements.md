@@ -6,9 +6,8 @@ tags:
   - 二分查找
 ---
 
-
-+ 题目链接：[658. 找到 K 个最接近的元素](https://leetcode-cn.com/problems/find-k-closest-elements/)；
-+ 题解链接：[排除法（双指针） + 二分法（Python 代码、Java 代码）](https://leetcode-cn.com/problems/find-k-closest-elements/solution/pai-chu-fa-shuang-zhi-zhen-er-fen-fa-python-dai-ma/)。
+- 题目链接：[658. 找到 K 个最接近的元素](https://leetcode-cn.com/problems/find-k-closest-elements/)；
+- 题解链接：[排除法（双指针） + 二分法（Python 代码、Java 代码）](https://leetcode-cn.com/problems/find-k-closest-elements/solution/pai-chu-fa-shuang-zhi-zhen-er-fen-fa-python-dai-ma/)。
 
 ## 题目描述
 
@@ -33,8 +32,6 @@ tags:
 输出：[1,2,3,4]
 ```
 
-
-
 **提示：**
 
 - `1 <= k <= arr.length`
@@ -49,8 +46,7 @@ tags:
 
 ## 方法一：排除法（双指针）
 
-
-以 `arr = [1, 2, 3, 4, 5, 6, 7]` , `x = 5`, `k = 3` 为例。 
+以 `arr = [1, 2, 3, 4, 5, 6, 7]` , `x = 5`, `k = 3` 为例。
 
 **思路分析**：
 
@@ -81,7 +77,6 @@ tags:
 ---
 
 ![658-5.png](https://pic.leetcode-cn.com/9b971313fa81e97893a9321769478375dac74fa92d8cdc75563386949f18731d-658-5.png)
-
 
 @slideend
 
@@ -126,8 +121,10 @@ public class Solution {
         List<Integer> res = solution.findClosestElements(arr, k, x);
         System.out.println(res);
     }
+
 }
-```
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Python3">
@@ -155,22 +152,23 @@ class Solution:
                 left += 1
             remove_nums -= 1
         return arr[left:left + k]
-```
+````
+
 </CodeGroupItem>
 </CodeGroup>
 
 **复杂度分析**：
 
-+ 时间复杂度：$O(N)$，这里 $N$ 是数组的长度；
-+ 空间复杂度：$O(1)$，只使用了常数个额外的辅助空间。
+- 时间复杂度：$O(N)$，这里 $N$ 是数组的长度；
+- 空间复杂度：$O(1)$，只使用了常数个额外的辅助空间。
 
 ---
 
-题目中说有序数组，又易知：  
+题目中说有序数组，又易知：
 
-1、题目要求返回的是区间，并且是连续区间；  
+1、题目要求返回的是区间，并且是连续区间；
 
-2、区间长度是固定的，并且 `k` 的值为正数，且总是小于给定排序数组的长度，即 `k` 的值“不违规”；  
+2、区间长度是固定的，并且 `k` 的值为正数，且总是小于给定排序数组的长度，即 `k` 的值“不违规”；
 
 因此，只要我们找到了左边界的索引，从左边界开始数 `k` 个数，返回就好了。我们把这件事情定义为“寻找最优区间”，“寻找最优区间”等价于“寻找最优区间的左边界”。因此本题使用二分查找法在有序数组中**定位含有 `k` 个元素的连续子区间的左边界**，即使用二分法找“最优区间的左边界”。
 
@@ -181,16 +179,16 @@ class Solution:
 **“排除法”的结论**：（这个结论对于这道问题来说非常重要，可以说是解题的关键）
 
 > 如果 `x` 的值就在长度为 size 区间内（不一定相等），要得到 size - 1 个符合题意的最接近的元素，此时看左右边界：
-> 
+>
 > 1、如果左边界距离 `x` 较近，删除右边界；  
 > 2、如果右边界距离 `x` 较近，删除左边界；  
 > 3、如果左、右边界距离 `x` 的长度相等，删除右边界。
 
 **讨论“最优区间的左边界”的取值范围**：
 
-首先我们讨论左区间的取值范围，使用具体的例子，就很很清楚地找到规律：  
+首先我们讨论左区间的取值范围，使用具体的例子，就很很清楚地找到规律：
 
-1、假设一共有 5 个数，`[0,1,2,3,4]`，找 3 个数，左边界最多到 2；  
+1、假设一共有 5 个数，`[0,1,2,3,4]`，找 3 个数，左边界最多到 2；
 
 2、假设一共有 8 个数，`[0,1,2,3,4,5,6,7]`，找 5 个数，左边界最多到 3。
 
@@ -200,7 +198,6 @@ class Solution:
 
 1、如果区间包含 `x`，我们尝试删除 1 个元素，好让区间发生移动，便于定位“最优区间的左边界”的索引；  
 2、如果区间不包含 `x`，就更简单了，我们尝试把区间进行移动，以试图包含 `x`，但也有可能区间移动不了（极端情况下）。
-
 
 以下的讨论，对于记号 `left`、`right` 和 `mid` 说明如下：
 
@@ -221,7 +218,6 @@ mid = left + (right - left + 1) // 2
 
 > 后面的文字可能会非常绕，在这里建议读者通读，前后来回看，不太清楚的地方先跳过，且不一定全看我的叙述，看明白一小段，在草稿纸上写写画画一点，卡壳了再看我的叙述，这样就不会太晕。
 
-
 我们先从最简单的情况开始讨论：
 
 1、如果区间不包含 `x`：
@@ -231,7 +227,6 @@ mid = left + (right - left + 1) // 2
 ![image.png](https://pic.leetcode-cn.com/002e341fa376ece19580704839a5a8bad78b50c6c93a148a928b840ea8cd0272-image.png)
 
 说明：极端情况是此时中位数位于索引 `size - k`，区间不能右移。
-
 
 （2）区间的左端点在 `x` 的左边，即 `x` 比 `arr` 中最小的元素还要小，当前的区间左端点的索引至多是 `mid`，此时 `right = mid`，**因为区间不可能再往右偏了**，如图；
 
@@ -253,11 +248,11 @@ mid = left + (right - left + 1) // 2
 
 ![image.png](https://pic.leetcode-cn.com/6dfea16f88fd03e10c95c2e2d216711ed1489a58a173ac4cd1d2e1a9de583de0-image.png)
 
-说明1：这一点比较难想，但实际上也可以不想，根据 2、（1）的结论，左区间收缩的反面即是右区间不收缩，因此，这一分支的逻辑一定是 `right = mid`。
+说明 1：这一点比较难想，但实际上也可以不想，根据 2、（1）的结论，左区间收缩的反面即是右区间不收缩，因此，这一分支的逻辑一定是 `right = mid`。
 
 > “实际上也可以不想”的具体原因，同样参考我在「力扣」第 35 题：搜索插入位置的题解[《特别好用的二分查找法模板（Python 代码、Java 代码）》](https://leetcode-cn.com/problems/search-insert-position/solution/te-bie-hao-yong-de-er-fen-cha-fa-fa-mo-ban-python-/)中的叙述，我专门把如何写好二分法，使用二分法模板好用的地方、使用它的技巧和注意事项整理在这篇题解中，希望能对大家有所帮助。
 
-说明2：“左边界距离 `x` 较近”同样适用于 1、（2）情况，因此它们二者可以合并。
+说明 2：“左边界距离 `x` 较近”同样适用于 1、（2）情况，因此它们二者可以合并。
 
 （3）如果左、右边界距离 `x` 的长度相等，删除右边界，结论同 2、（2），也有 `right = mid`，可以合并到 2、（2）。
 
@@ -271,7 +266,6 @@ else:
 ```
 
 写个草稿就清楚多了，原来是并不困难，只是稍显复杂。
-
 
 ![image.png](https://pic.leetcode-cn.com/1505e8c19730133b6bc9c2b6088fd9f0ff376f9539dcf0932214b77415e542b6-image.png)
 
@@ -320,8 +314,10 @@ public class Solution {
         List<Integer> res = solution.findClosestElements(arr, k, x);
         System.out.println(res);
     }
+
 }
-```
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Python3">
@@ -345,17 +341,12 @@ class Solution:
             else:
                 right = mid
         return arr[left:left + k]
-```
+````
+
 </CodeGroupItem>
 </CodeGroup>
 
-
-
-
-
-
 **复杂度分析**：
 
-+ 时间复杂度：$O(\log N)$，这里 $N$ 是数组的长度，使用二分法的时间复杂度是对数级别的；
-+ 空间复杂度：$O(1)$，只使用了常数个额外的辅助空间。
-
+- 时间复杂度：$O(\log N)$，这里 $N$ 是数组的长度，使用二分法的时间复杂度是对数级别的；
+- 空间复杂度：$O(1)$，只使用了常数个额外的辅助空间。

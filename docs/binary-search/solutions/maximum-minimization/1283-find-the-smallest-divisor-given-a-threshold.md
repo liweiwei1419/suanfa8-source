@@ -6,9 +6,8 @@ tags:
   - 二分查找
 ---
 
-
-+ 题目链接：[1283. 使结果不超过阈值的最小除数](https://leetcode-cn.com/problems/find-the-smallest-divisor-given-a-threshold/)；
-+ 题解链接：[二分查找定位除数](https://leetcode-cn.com/problems/find-the-smallest-divisor-given-a-threshold/solution/er-fen-cha-zhao-ding-wei-chu-shu-by-liweiwei1419/)。
+- 题目链接：[1283. 使结果不超过阈值的最小除数](https://leetcode-cn.com/problems/find-the-smallest-divisor-given-a-threshold/)；
+- 题解链接：[二分查找定位除数](https://leetcode-cn.com/problems/find-the-smallest-divisor-given-a-threshold/solution/er-fen-cha-zhao-ding-wei-chu-shu-by-liweiwei1419/)。
 
 ## 题目描述
 
@@ -19,8 +18,6 @@ tags:
 每个数除以除数后都向上取整，比方说 7/3 = 3 ， 10/2 = 5 。
 
 题目保证一定有解。
-
- 
 
 **示例 1：**
 
@@ -44,8 +41,6 @@ tags:
 输入：nums = [19], threshold = 5
 输出：4
 ```
-
-
 
 **提示：**
 
@@ -71,8 +66,8 @@ tags:
 
 2、于是思考除数最大是多少，最小是多少。
 
-+ 最大是数组中最大的那个数，因为除数如果再大，整除以后每个数都得 1（上取整的缘故）；
-+ 最小可以是 1。
+- 最大是数组中最大的那个数，因为除数如果再大，整除以后每个数都得 1（上取整的缘故）；
+- 最小可以是 1。
 
 我一开始以为最小就是数组中最小的那个数字，后来提交以后，发现测试用例：
 
@@ -95,9 +90,7 @@ int threshold = 114;
 
 因此：和**严格**大于阈值 `threshold` 的除数，一定不是解。根据“减而治之”的策略，定位这个除数。
 
-
 **参考代码 1**：
-
 
 <CodeGroup>
 <CodeGroupItem title="Java">
@@ -149,8 +142,10 @@ public class Solution {
         }
         return sum;
     }
+
 }
-```
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Python3">
@@ -170,7 +165,8 @@ class Solution:
             else:
                 right = mid
         return left
-```
+````
+
 </CodeGroupItem>
 
 <CodeGroupItem title="C++">
@@ -183,20 +179,20 @@ using namespace std;
 class Solution {
 
 private:
-    int calculateSum(vector<int> &nums, int divisor) {
-        int sum = 0;
-        for (int num : nums) {
-            sum += (num + divisor - 1) / divisor;
-        }
-        return sum;
-    }
+int calculateSum(vector<int> &nums, int divisor) {
+int sum = 0;
+for (int num : nums) {
+sum += (num + divisor - 1) / divisor;
+}
+return sum;
+}
 
 public:
-    int smallestDivisor(vector<int> &nums, int threshold) {
-        int maxVal = 1;
-        for (int num : nums) {
-            maxVal = max(maxVal, num);
-        }
+int smallestDivisor(vector<int> &nums, int threshold) {
+int maxVal = 1;
+for (int num : nums) {
+maxVal = max(maxVal, num);
+}
 
         int left = 1;
         int right = maxVal;
@@ -212,8 +208,10 @@ public:
         }
         return left;
     }
+
 };
-```
+
+````
 </CodeGroupItem>
 </CodeGroup>
 
@@ -222,17 +220,16 @@ public:
 
 
 
-**说明**：上取整还可以这样写，这是个小技巧，记住就可以了。 
+**说明**：上取整还可以这样写，这是个小技巧，记住就可以了。
 
 ```java
 sum += (num + divisor - 1) / divisor;
-```
-
+````
 
 **复杂度分析**：
 
-+ 时间复杂度：$O(N \log \max(nums))$，这里 $N$ 是数组的长度，每一次二分都执行了边界判断函数，都得遍历一遍数组；
+- 时间复杂度：$O(N \log \max(nums))$，这里 $N$ 是数组的长度，每一次二分都执行了边界判断函数，都得遍历一遍数组；
 
 这里感谢 [@copyreadmachine](/u/copyreadmachine/) 朋友帮我纠正了时间复杂度。
 
-+ 空间复杂度：$O(1)$。
+- 空间复杂度：$O(1)$。

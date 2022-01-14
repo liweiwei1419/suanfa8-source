@@ -2,18 +2,18 @@
 title: 「力扣」第 374 题：猜数字大小（简单）
 icon: jingxuan
 category: 二分查找
-tags: 
+tags:
   - 二分查找
 ---
 
-+ 题目地址：[374. 猜数字大小](https://leetcode-cn.com/problems/guess-number-higher-or-lower/)；
-+ 题解地址：[借本题说一说取中位数的写法（Python 代码、Java 代码）](https://leetcode-cn.com/problems/guess-number-higher-or-lower/solution/shi-fen-hao-yong-de-er-fen-cha-zhao-fa-mo-ban-pyth/)。
+- 题目地址：[374. 猜数字大小](https://leetcode-cn.com/problems/guess-number-higher-or-lower/)；
+- 题解地址：[借本题说一说取中位数的写法（Python 代码、Java 代码）](https://leetcode-cn.com/problems/guess-number-higher-or-lower/solution/shi-fen-hao-yong-de-er-fen-cha-zhao-fa-mo-ban-pyth/)。
 
 ## 题目描述
 
 猜数字游戏的规则如下：
 
-- 每轮游戏，我都会从 **1** 到 ***n*** 随机选择一个数字。 请你猜选出的是哪个数字。
+- 每轮游戏，我都会从 **1** 到 **_n_** 随机选择一个数字。 请你猜选出的是哪个数字。
 - 如果你猜错了，我会告诉你，你猜测的数字比我选出的数字是大了还是小了。
 
 你可以通过调用一个预先定义好的接口 `int guess(int num)` 来获取猜测结果，返回值一共有 3 种可能的情况（`-1`，`1` 或 `0`）：
@@ -52,7 +52,7 @@ tags:
 输出：2
 ```
 
- **提示：**
+**提示：**
 
 - `1 <= n <= 231 - 1`
 - `1 <= pick <= n`
@@ -138,11 +138,9 @@ class Solution(object):
 </CodeGroupItem>
 </CodeGroup>
 
-
 以上是本题题解，以下才是本文真正想说的，你应该已经注意到了，上面的示例代码中，`mid = left + (right - left) // 2` 和 `int mid = left + (right - left + 1) / 2;` 都被我注释掉了，不是因为它们不正确，而是因为它们不够好，下面就来具体说说。
 
 1、最早学习二分法的时候，写中间数的下标是这样的：
-
 
 <CodeGroup>
 <CodeGroupItem title="Java">
@@ -162,7 +160,7 @@ mid = (left + right) // 2
 </CodeGroupItem>
 </CodeGroup>
 
-2、后来被告知在 `left` 和  `right` 很大的时候，`left + right` 会发生整型溢出，变成负数，这是一个 bug 得改！
+2、后来被告知在 `left` 和 `right` 很大的时候，`left + right` 会发生整型溢出，变成负数，这是一个 bug 得改！
 
 于是我们写成：
 
@@ -198,9 +196,9 @@ int mid = (low + high) >>> 1;
 
 首先解释“无符号右移”，在 Java 中，无符号右移运算符 `>>>` 和右移运算符 `>>` 有区别：
 
-+ 右移运算符 `>>` 在右移时，丢弃右边指定位数，左边补上符号位；
+- 右移运算符 `>>` 在右移时，丢弃右边指定位数，左边补上符号位；
 
-+ 无符号右移运算符 `>>>` 在右移时，丢弃右边指定位数，左边补上 $0$，也就是说，对于正数来说，二者一样，而负数通过 `>>>` 后能变成正数。
+- 无符号右移运算符 `>>>` 在右移时，丢弃右边指定位数，左边补上 $0$，也就是说，对于正数来说，二者一样，而负数通过 `>>>` 后能变成正数。
 
 了解了这一点，就能够理解 Java 中用 `int mid = (low + high) >>> 1;` 的原因了，关键不在 “+” ，而是“无符号右移”，在 Java 的 `Collections` 和 `Arrays` 提供的 `binarySearch` 方法里，`low` 和 `high` 都表示索引值，它们都是非负数，即使相加以后整型溢出，结果还是正确的，“位运算”本身就比其它运算符快，因此使用“+”和“无符号右移”是既快又好的做法。
 
@@ -210,14 +208,14 @@ int mid = (low + high) >>> 1;
 
 ![image.png](https://pic.leetcode-cn.com/049e64ded6739e8bd6955a1d5e3ef76acc0aac0ad12909bdd58772dd6d465240-image.png)
 
-如果你用 Python 的话，就可以过，这是因为：当 `left + right` 很大的时候，Python 就自动帮你转成 long 类型了，因此结果也不会错。 
+如果你用 Python 的话，就可以过，这是因为：当 `left + right` 很大的时候，Python 就自动帮你转成 long 类型了，因此结果也不会错。
 
 ![image.png](https://pic.leetcode-cn.com/46e50c5802c6b28bafe78c7b3ca88872139844177e929259ab5d0117ba61d52d-image.png)
 
 ## 总结
 
-+ `int mid = (left + right) / 2;` 是初级写法，是有 bug 的；
+- `int mid = (left + right) / 2;` 是初级写法，是有 bug 的；
 
-+ `int mid = left + (right - left) / 2;` 是正确的写法，说明你考虑到了整型溢出的风险；
+- `int mid = left + (right - left) / 2;` 是正确的写法，说明你考虑到了整型溢出的风险；
 
-+ `int mid = (low + high) >>> 1;` 首先肯定是正确的写法，其实也是一个装 ❌ 的写法，理由上面已经叙述过了。
+- `int mid = (low + high) >>> 1;` 首先肯定是正确的写法，其实也是一个装 ❌ 的写法，理由上面已经叙述过了。

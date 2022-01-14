@@ -6,8 +6,8 @@ tags:
   - 二分查找
 ---
 
-+ 题目链接：[1276. 不浪费原料的汉堡制作方案](https://leetcode-cn.com/problems/number-of-burgers-with-no-waste-of-ingredients/)；
-+ 题解链接：[消元法解二元一次方程、二分查找（Java）](https://leetcode-cn.com/problems/number-of-burgers-with-no-waste-of-ingredients/solution/jie-er-yuan-yi-ci-fang-cheng-java-by-liweiwei1419/)。
+- 题目链接：[1276. 不浪费原料的汉堡制作方案](https://leetcode-cn.com/problems/number-of-burgers-with-no-waste-of-ingredients/)；
+- 题解链接：[消元法解二元一次方程、二分查找（Java）](https://leetcode-cn.com/problems/number-of-burgers-with-no-waste-of-ingredients/solution/jie-er-yuan-yi-ci-fang-cheng-java-by-liweiwei1419/)。
 
 ## 题目描述
 
@@ -92,7 +92,7 @@ public class Solution {
         if ((tomatoSlices & 1) != 0) {
             return res;
         }
-      
+
         int x = tomatoSlices / 2 - cheeseSlices;
         int y = cheeseSlices - x;
         if (x >= 0 && y >= 0) {
@@ -109,7 +109,7 @@ public class Solution {
 
 ## 方法二：二分查找
 
-因为 `x` 和 `y` 都是非负整数，可以使用二分查找定位 `x` ， `x` 知道以后 `y` 就确定了。 
+因为 `x` 和 `y` 都是非负整数，可以使用二分查找定位 `x` ， `x` 知道以后 `y` 就确定了。
 
 **参考代码 2**：
 

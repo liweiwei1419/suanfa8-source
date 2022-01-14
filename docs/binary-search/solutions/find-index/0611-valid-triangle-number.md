@@ -8,9 +8,8 @@ tags:
 
 ![0611-新](https://tva1.sinaimg.cn/large/008i3skNgy1gx8wdkqf89j30p00anwf0.jpg)
 
-+ 题目链接：[611. 有效三角形的个数](https://leetcode-cn.com/problems/valid-triangle-number/)；
-+ 题解链接：[排序以后找第 1 个大于等于两边之和的下标（Java）](https://leetcode-cn.com/problems/valid-triangle-number/solution/er-fen-cha-zhao-python-dai-ma-java-dai-ma-by-liwei/)。
-
+- 题目链接：[611. 有效三角形的个数](https://leetcode-cn.com/problems/valid-triangle-number/)；
+- 题解链接：[排序以后找第 1 个大于等于两边之和的下标（Java）](https://leetcode-cn.com/problems/valid-triangle-number/solution/er-fen-cha-zhao-python-dai-ma-java-dai-ma-by-liwei/)。
 
 ## 题目描述
 
@@ -22,7 +21,7 @@ tags:
 输入: [2, 2, 3, 4]
 输出: 3
 解释:
-有效的组合是: 
+有效的组合是:
 2, 3, 4 (使用第一个 2)
 2, 3, 4 (使用第二个 2)
 2, 2, 3
@@ -40,7 +39,6 @@ tags:
 
 ## 思路分析
 
-
 这是一个计数问题。计数问题最朴素的做法是一个一个数。加快计数的办法是一下子数出一大片。因此需要对输入数组排序。
 
 我们分析示例：输入数组是 `[2, 2, 3, 4]` ，依次枚举第 1 条边 `num[i]` 和第 2 条边 `nums[j]`，找第 3 条边的范围。
@@ -51,18 +49,17 @@ tags:
 
 即：区间 `[j + 1..len - 1]` 可以划分成两个部分：
 
-+ 第 1 部分（图中黄色部分）：可以与 `nums[i]`、`nums[j]` 构成三角形；
-+ 第 2 部分（图中红色部分）：不可以与 `nums[i]`、`nums[j]` 构成三角形。
+- 第 1 部分（图中黄色部分）：可以与 `nums[i]`、`nums[j]` 构成三角形；
+- 第 2 部分（图中红色部分）：不可以与 `nums[i]`、`nums[j]` 构成三角形。
 
 我们可以找第 1 个大于等于两边之和的下标 `k`，此时区间 `[j + 1..k)` 的长度 `k - j - 1` 就是此时可以构成三角形的个数。
 
 **编码细节**：
 
-+ 初始化的时候 `left = j + 1`，`right = len` ，这是因为如果最后找到了第 1 个大于等于两边之和的下标是 `len` ，说明区间  `[j  + 1..len - 1]` 里所有的元素都可以与  `nums[i]`、`nums[j]` 构成三角形；
-+ 因为找「第 1 个大于等于两边之和的下标」，所以 `if` 语句就写成「如果 `nums[mid]` 小于两边之和」，此时 `mid` 以及 `mid` 的左边都不是我们要找的，接下来应该在 `[mid + 1..right]` 里继续查找，此时设置 `left = mid + 1`。它的反面区间就是 `[left..mid]` 此时设置 `right = mid`。
+- 初始化的时候 `left = j + 1`，`right = len` ，这是因为如果最后找到了第 1 个大于等于两边之和的下标是 `len` ，说明区间  `[j + 1..len - 1]` 里所有的元素都可以与  `nums[i]`、`nums[j]` 构成三角形；
+- 因为找「第 1 个大于等于两边之和的下标」，所以 `if` 语句就写成「如果 `nums[mid]` 小于两边之和」，此时 `mid` 以及 `mid` 的左边都不是我们要找的，接下来应该在 `[mid + 1..right]` 里继续查找，此时设置 `left = mid + 1`。它的反面区间就是 `[left..mid]` 此时设置 `right = mid`。
 
 **参考代码**：
-
 
 ```java
 import java.util.Arrays;

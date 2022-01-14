@@ -6,7 +6,7 @@ tags:
   - 二分查找
 ---
 
-+ 题目链接：[852. 山脉数组的峰顶索引](https://leetcode-cn.com/problems/peak-index-in-a-mountain-array/)。
+- 题目链接：[852. 山脉数组的峰顶索引](https://leetcode-cn.com/problems/peak-index-in-a-mountain-array/)。
 
 ## 题目描述
 
@@ -64,9 +64,9 @@ tags:
 
 ## 思路分析
 
-+ **根据题目中的描述**，题目中的描述虽然是「任何」，英文描述为 `any`，实施上「峰顶」是唯一的；
-+ 在 `arr[mid] < arr[mid + 1]`  的时候，`mid` 以及 `mid` 的左边一定不存在山脉数组的「峰顶」，封顶只可能存在于下标区间 `[mid + 1..right]` ，此时设置 `left = mid + 1`；
-+ 否则，就在下标区间 `[left..mid]` 里查找答案，此时设置 `right = mid`。
+- **根据题目中的描述**，题目中的描述虽然是「任何」，英文描述为 `any`，实施上「峰顶」是唯一的；
+- 在 `arr[mid] < arr[mid + 1]` 的时候，`mid` 以及 `mid` 的左边一定不存在山脉数组的「峰顶」，封顶只可能存在于下标区间 `[mid + 1..right]` ，此时设置 `left = mid + 1`；
+- 否则，就在下标区间 `[left..mid]` 里查找答案，此时设置 `right = mid`。
 
 **参考代码**：
 
@@ -93,5 +93,5 @@ public class Solution {
 
 **复杂度分析**：
 
-+ 时间复杂度：$O(\log N)$，这里 $N$ 是输入数组的长度；
-+ 空间复杂度：$O(1)$。
+- 时间复杂度：$O(\log N)$，这里 $N$ 是输入数组的长度；
+- 空间复杂度：$O(1)$。

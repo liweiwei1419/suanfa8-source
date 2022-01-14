@@ -6,7 +6,7 @@ tags:
   - 二分查找
 ---
 
-+ 题目链接：[1552. 两球之间的磁力](https://leetcode-cn.com/problems/magnetic-force-between-two-balls/)。
+- 题目链接：[1552. 两球之间的磁力](https://leetcode-cn.com/problems/magnetic-force-between-two-balls/)。
 
 ## 题目描述
 
@@ -19,8 +19,6 @@ tags:
 **示例 1：**
 
 ![img](https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2020/08/16/q3v1.jpg)
-
-
 
 ```
 输入：position = [1,2,3,4,7], m = 3
@@ -90,4 +88,3 @@ public class Solution {
     }
 }
 ```
-

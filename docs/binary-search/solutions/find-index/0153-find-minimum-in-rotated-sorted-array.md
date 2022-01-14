@@ -6,8 +6,8 @@ tags:
   - 二分查找
 ---
 
-+ 题目地址：[153. 寻找旋转排序数组中的最小值](https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array/)；
-+ 题解地址：[二分法 + 分治法（Python 代码、Java 代码）](https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array/solution/er-fen-fa-fen-zhi-fa-python-dai-ma-java-dai-ma-by-/)。
+- 题目地址：[153. 寻找旋转排序数组中的最小值](https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array/)；
+- 题解地址：[二分法 + 分治法（Python 代码、Java 代码）](https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array/solution/er-fen-fa-fen-zhi-fa-python-dai-ma-java-dai-ma-by-/)。
 
 ## 题目描述
 
@@ -44,7 +44,7 @@ tags:
 解释：原数组为 [11,13,15,17] ，旋转 4 次得到输入数组。
 ```
 
- **提示：**
+**提示：**
 
 - `n == nums.length`
 - `1 <= n <= 5000`
@@ -54,7 +54,6 @@ tags:
 - `nums` 原来是一个升序排序的数组，并进行了 `1` 至 `n` 次旋转
 
 先说重点：如何写对二分查找，我总结在了「力扣」第 35 题：「搜索插入位置」的题解： [用减治思想写二分查找问题、几种模板写法的介绍与比较](https://leetcode-cn.com/problems/search-insert-position/solution/te-bie-hao-yong-de-er-fen-cha-fa-fa-mo-ban-python-/) ，希望能对大家有所帮助。
-
 
 ---
 
@@ -70,19 +69,19 @@ tags:
 
 另外，待搜索区间头和尾的元素是位置特殊的元素。有两个比较自然的思路是：
 
-+ 思路 1：看看当前搜索区间的 **左边界** 和「中间数」（注意这里不是中位数），是不是可以缩小搜索区间的范围；
-+ 思路 2：看看当前搜索区间的 **右边界** 和「中间数」（注意这里不是中位数），是不是可以缩小搜索区间的范围；
+- 思路 1：看看当前搜索区间的 **左边界** 和「中间数」（注意这里不是中位数），是不是可以缩小搜索区间的范围；
+- 思路 2：看看当前搜索区间的 **右边界** 和「中间数」（注意这里不是中位数），是不是可以缩小搜索区间的范围；
 
 要想清楚这个问题，我们不妨举几个例子。
 
-+ 针对思路 1：
+- 针对思路 1：
 
 例 1：`[1, 2, 3, 4, 5]`
 例 2：`[2, 3, 4, 5, 1]`
 
 这两个例子的「中间数」都比左边界大，但是「旋转排序数组」的最小值一个在「中间数」的左边，一个在「中间数」的右边，因此思路 1 不可行。
 
-+ 针对思路 2，依然写两个例子，这两个例子分别是「中间数比右边界大」和「中间数比右边界小」，看看能不能推导出一般化的结论。
+- 针对思路 2，依然写两个例子，这两个例子分别是「中间数比右边界大」和「中间数比右边界小」，看看能不能推导出一般化的结论。
 
 例 3：`[7, 8, 9, 10, 11, 12, 1, 2, 3]`
 
@@ -94,9 +93,7 @@ tags:
 
 从例 3 和例 4 可以看出，不论中间数比右边界大，还是中间数比右边界小，我们都可以排除掉将近一半的元素，把原始问题转换成一个规模更小的子问题，这正是「减而治之」思想的体现，因此思路 2 可行。
 
-
 **参考代码 1**：
-
 
 <CodeGroup>
 <CodeGroupItem title="Java">
@@ -124,8 +121,10 @@ public class Solution {
         // 一定存在最小元素，因此无需再做判断
         return nums[left];
     }
+
 }
-```
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Python3">
@@ -156,17 +155,15 @@ class Solution:
                 right = mid
         # 一定存在最小元素，因此无需再做判断
         return nums[left]
-```
+````
+
 </CodeGroupItem>
 </CodeGroup>
 
-
-
 **复杂度分析**：
 
-+ 时间复杂度：$O(\log N)$，这里 $N$ 是输入数组的长度；
-+ 空间复杂度：$O(1)$，只使用了常数个临时变量。
-
+- 时间复杂度：$O(\log N)$，这里 $N$ 是输入数组的长度；
+- 空间复杂度：$O(1)$，只使用了常数个临时变量。
 
 ## 方法三：分治法
 
@@ -210,8 +207,10 @@ public class Solution {
             return findMin(nums, mid + 1, right);
         }
     }
+
 }
-```
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Python3">
@@ -241,12 +240,12 @@ class Solution:
             # nums[mid] > nums[right]
             # [4,5,6,7,8,1,2]
             return min(nums[left], self.__find_min(nums, mid + 1, right))
-```
+````
+
 </CodeGroupItem>
 </CodeGroup>
 
-
 **复杂度分析**：
 
-+ 时间复杂度：$O(\log N)$，这里 $N$ 是输入数组的长度；
-+ 空间复杂度：$O(\log N)$，递归函数的栈空间消耗为 $\log N$。
+- 时间复杂度：$O(\log N)$，这里 $N$ 是输入数组的长度；
+- 空间复杂度：$O(\log N)$，递归函数的栈空间消耗为 $\log N$。

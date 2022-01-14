@@ -2,31 +2,36 @@
 title: 「力扣」第 34 题：在排序数组中查找元素的第一个和最后一个位置（中等）
 icon: shipin
 category: 二分查找
-tags: 
+tags:
   - 二分查找
 ---
 
 ![0034](https://tva1.sinaimg.cn/large/008i3skNgy1gx928a7ukhj30p00anq3g.jpg)
 
-
 ::: warning 温馨提示
 查找第一个元素和最后一个元素的代码不是背出来的，仔细分析就不难写出代码，关键是要认真。二分查找不是难点，也不是重点。
 :::
 
-
-+ 题目链接：[34. 在排序数组中查找元素的第一个和最后一个位置](https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/)。
-
+- 题目链接：[34. 在排序数组中查找元素的第一个和最后一个位置](https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/)。
 
 ## :tv: **「力扣」第 34 题视频题解**
 
 建议使用 1.5 倍速观看。
 
-+ [B 站](https://www.bilibili.com/video/BV147411i7zu?p=3)。
+- [B 站](https://www.bilibili.com/video/BV147411i7zu?p=3)。
 
+::: danger 视频讲解
+:tv: 这道题在 [官方题解](https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/solution/zai-pai-xu-shu-zu-zhong-cha-zhao-yuan-su-de-di-3-4/) 和 [B 站](https://www.bilibili.com/video/BV147411i7zu?p=3) 可以收看视频讲解，可以点击下面的视频右上角「去 bilibili 观看」，选择快速播放，获得更好的观看体验。
 
-## :notebook_with_decorative_cover:  「力扣」第 34 题文字题解
+:::
 
-+ 题解链接：[两次二分查找（Java）](https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/solution/si-lu-hen-jian-dan-xi-jie-fei-mo-gui-de-er-fen-cha/)。
+<div style="position: relative; padding: 30% 45%;">
+<iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="https://player.bilibili.com/player.html?aid=83911694&bvid=BV147411i7zu&cid=143800242&page=3" frameborder="no" scrolling="no"></iframe>
+</div>
+
+## :notebook_with_decorative_cover: 「力扣」第 34 题文字题解
+
+- 题解链接：[两次二分查找（Java）](https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/solution/si-lu-hen-jian-dan-xi-jie-fei-mo-gui-de-er-fen-cha/)。
 
 ## 题目描述
 
@@ -66,11 +71,10 @@ tags:
 - `nums` 是一个非递减数组
 - $-10^9 \le target \le 10^9$
 
-
 ## 思路分析
 
-+ 不可以找到 `target` 以后，然后向两边扩散（线性查找），这样的话时间复杂度为 $O(N)$，这里 $N$ 是输入数组的长度；
-+ 找 `target` 第一次出现的位置和最后一次出现的位置的时候，都只能用「二分查找」才符合题目的意思，注意分类讨论，并且把分类讨论的结果合并。
+- 不可以找到 `target` 以后，然后向两边扩散（线性查找），这样的话时间复杂度为 $O(N)$，这里 $N$ 是输入数组的长度；
+- 找 `target` 第一次出现的位置和最后一次出现的位置的时候，都只能用「二分查找」才符合题目的意思，注意分类讨论，并且把分类讨论的结果合并。
 
 **参考代码**：
 
@@ -121,10 +125,10 @@ public class Solution {
             if (nums[mid] > target) {
                 // 下一轮搜索区间是 [left..mid - 1]
                 right = mid - 1;
-            } else 
+            } else
                 // 下一轮搜索区间是 [mid..right]
                 left = mid;
-            } 
+            }
         }
         // 主程序先执行 findFirstPosition，能执行到 findLastPosition 说明数组中一定存在等于 target 的元素，因此这里不用判断 nums[left] 是否等于 target
         return left;
@@ -140,28 +144,27 @@ public class Solution {
 下面的描述有一点啰嗦，只是为了说清楚，读者了解思路就可以了，不必全部看完。
 :::
 
-
 **情况 1** ：当 `nums[mid] < target` 时
 
-+ `mid` 一定不是 `target` 第一次出现的位置；
-+ 由于数组有序，`mid` 的左边一定比 `nums[mid]` 还小，因此 `mid` 的左边一定不是 `target` 第一次出现的位置；
-+ `mid` 的右边比 `nums[mid]` 还大，因此 `mid` 的右边 **有可能** 存在 `target` 第一次出现的位置。
+- `mid` 一定不是 `target` 第一次出现的位置；
+- 由于数组有序，`mid` 的左边一定比 `nums[mid]` 还小，因此 `mid` 的左边一定不是 `target` 第一次出现的位置；
+- `mid` 的右边比 `nums[mid]` 还大，因此 `mid` 的右边 **有可能** 存在 `target` 第一次出现的位置。
 
 因此下一轮搜索区间是 `[mid + 1..right]`，此时设置 `left = mid + 1`；
 
 **情况 2** ：当 `nums[mid] == target` 时
 
-+ `mid` 有可能是 `target` 第一次出现的位置；
-+ `mid` 的左边也有可能是 `target` 第一次出现的位置；
-+ `mid` 的右边一定不是 `target` 第一次出现的位置。
+- `mid` 有可能是 `target` 第一次出现的位置；
+- `mid` 的左边也有可能是 `target` 第一次出现的位置；
+- `mid` 的右边一定不是 `target` 第一次出现的位置。
 
 因此下一轮搜索区间在 `[left..mid]`，此时设置 `right = mid`。
 
 **情况 3** ：当 `nums[mid] > target` 时
 
-+ `mid` 一定不是 `target` 第一次出现的位置；
-+ `mid` 的右边也一定不是 `target` 第一次出现的位置；
-+ `mid` 的左边有可能是 `target` 第一次出现的位置，因此下一轮搜索区间在 `[left..mid - 1]`，此时设置 `right = mid - 1`。
+- `mid` 一定不是 `target` 第一次出现的位置；
+- `mid` 的右边也一定不是 `target` 第一次出现的位置；
+- `mid` 的左边有可能是 `target` 第一次出现的位置，因此下一轮搜索区间在 `[left..mid - 1]`，此时设置 `right = mid - 1`。
 
 ::: info 重点
 把情况 ② 和情况 ③ 合并，即当 `nums[mid] >= target` 的时候，下一轮搜索区间是 `[left..mid]`，此时设置 `right = mid`。这样做是因为：**只有当区间分割是 `[left..mid]` 和 `[mid + 1..right]` 的时候，`while(left < right)` 退出循环以后才有 `left == right` 成立**。
@@ -175,10 +178,5 @@ public class Solution {
 
 **复杂度分析**：
 
-+ 时间复杂度：$O(\log N)$，这里 $N$ 是数组的长度，两个子问题都是二分查找，因此时间复杂度为对数级别；
-+ 空间复杂度：$O(1)$，只使用了常数个数的辅助变量。
-
-
-
-
-
+- 时间复杂度：$O(\log N)$，这里 $N$ 是数组的长度，两个子问题都是二分查找，因此时间复杂度为对数级别；
+- 空间复杂度：$O(1)$，只使用了常数个数的辅助变量。

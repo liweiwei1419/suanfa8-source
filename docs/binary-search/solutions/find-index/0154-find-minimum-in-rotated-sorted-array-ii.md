@@ -6,8 +6,8 @@ tags:
   - 二分查找
 ---
 
-+ 题目地址：[154. 寻找旋转排序数组中的最小值 II](https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array-ii/)；
-+ 题解地址：[二分法 + 分治法（Python 代码、Java 代码）](https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array-ii/solution/er-fen-fa-fen-zhi-fa-python-dai-ma-by-liweiwei1419/)。
+- 题目地址：[154. 寻找旋转排序数组中的最小值 II](https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array-ii/)；
+- 题解地址：[二分法 + 分治法（Python 代码、Java 代码）](https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array-ii/solution/er-fen-fa-fen-zhi-fa-python-dai-ma-by-liweiwei1419/)。
 
 ## 题目描述
 
@@ -49,15 +49,14 @@ tags:
 
 ## 理解题意
 
-+ 其实重点和关键字题目已经标注出来了，有序数组「旋转一次」得到的数组是「旋转有序数组」；
-+ 有序数组有可能存在 **重复** 值。
+- 其实重点和关键字题目已经标注出来了，有序数组「旋转一次」得到的数组是「旋转有序数组」；
+- 有序数组有可能存在 **重复** 值。
 
 ## 思路分析
 
 虽然不是严格意义上的有序数组，但依然可以使用「二分查找」，可以认为「旋转有序数组」是 **部分有序**。只要是一次可以排除一半，都可以用「二分查找」。那么如何使用二分法呢？我们很自然会想到 **使用边界的值和中间位置的值进行比较**。
 
 > 关键：解本题的关键在于举例，在尝试举例的过程中，考虑到不同的情况，得到解题思路。
-
 
 ## 方法一：二分法
 
@@ -67,14 +66,12 @@ tags:
 
 **情况 1**：中间数与左边界比较
 
-
 尝试在纸上写出几个例子：
 
-+ 例 1：`[1, 2, 3, 4, 5]`；
-+ 例 2：`[2, 3, 4, 5, 1]`。
+- 例 1：`[1, 2, 3, 4, 5]`；
+- 例 2：`[2, 3, 4, 5, 1]`。
 
 以上这两个例子，中间数都比左边界大，但是旋转排序数组的最小值可能在中间数的左边（例 1），也可能在中间数的右边（例 2），因此 **不能使用「中间数」与「左边界」比较**。
-
 
 **情况 2**：中间数与右边界比较
 
@@ -106,9 +103,7 @@ tags:
 
 **关键**：
 
-
 **参考代码 1**：
-
 
 ```java
 public class Solution {
@@ -137,13 +132,11 @@ public class Solution {
 }
 ```
 
-
 ## 方法二：分治法
 
 分治法将原问题划分成若干与原问题同结构且规模更小的子问题，等到这些子问题解决了以后，原问题也得到了解决。
 
 **参考代码 2**：
-
 
 ```java
 public class Solution {
@@ -172,7 +165,6 @@ public class Solution {
 ```
 
 如果你愿意写得再细致一点，还可以这样写。
-
 
 **参考代码 3**：
 
@@ -210,4 +202,3 @@ public class Solution {
     }
 }
 ```
-

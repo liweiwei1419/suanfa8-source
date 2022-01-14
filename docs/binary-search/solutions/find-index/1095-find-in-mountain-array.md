@@ -6,17 +6,19 @@ tags:
   - 二分查找
 ---
 
-
 ![1095](https://tva1.sinaimg.cn/large/008i3skNgy1gx8zka1oo4j30p00ant9c.jpg)
 
-+ 题目地址：[1095. 山脉数组中查找目标值](https://leetcode-cn.com/problems/find-in-mountain-array/)；
-+ 题解地址：[二分查找（Java）](https://leetcode-cn.com/problems/find-in-mountain-array/solution/shi-yong-chao-hao-yong-de-er-fen-fa-mo-ban-python-/)。
+- 题目地址：[1095. 山脉数组中查找目标值](https://leetcode-cn.com/problems/find-in-mountain-array/)；
+- 题解地址：[二分查找（Java）](https://leetcode-cn.com/problems/find-in-mountain-array/solution/shi-yong-chao-hao-yong-de-er-fen-fa-mo-ban-python-/)。
 
 ::: danger 视频讲解
-
-:tv: 这道题在 [官方题解](https://leetcode-cn.com/problems/find-in-mountain-array/solution/shan-mai-shu-zu-zhong-cha-zhao-mu-biao-zhi-by-leet/) 和 [B 站](https://www.bilibili.com/video/BV1GK4115778) 可以收看视频讲解。
+:tv: 这道题在 [官方题解](https://leetcode-cn.com/problems/find-in-mountain-array/solution/shan-mai-shu-zu-zhong-cha-zhao-mu-biao-zhi-by-leet/) 和 [B 站](https://www.bilibili.com/video/BV1GK4115778) 可以收看视频讲解，可以点击下面的视频右上角「去 bilibili 观看」，选择快速播放，获得更好的观看体验。
 
 :::
+
+<div style="position: relative; padding: 30% 45%;">
+<iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="https://player.bilibili.com/player.html?aid=497892332&bvid=BV1GK4115778&cid=184618003&page=1" frameborder="no" scrolling="no"></iframe>
+</div>
 
 ## 题目描述
 
@@ -26,21 +28,19 @@ tags:
 
 如果不存在这样的下标 `index`，就请返回 `-1`。
 
-
-
 所谓山脉数组，即数组 `A` 假如是一个山脉数组的话，需要满足如下条件：
 
 首先，`A.length >= 3`
 
 其次，在 `0 < i < A.length - 1` 条件下，存在 i 使得：
 
-+ `A[0] < A[1] < ... A[i-1] < A[i]`
-+ `A[i] > A[i+1] > ... > A[A.length - 1]`
+- `A[0] < A[1] < ... A[i-1] < A[i]`
+- `A[i] > A[i+1] > ... > A[A.length - 1]`
 
 你将 不能直接访问该山脉数组，必须通过 MountainArray 接口来获取数据：
 
-+ `MountainArray.get(k)` - 会返回数组中索引为k 的元素（下标从 0 开始）
-+ `MountainArray.length()` - 会返回该数组的长度
+- `MountainArray.get(k)` - 会返回数组中索引为 k 的元素（下标从 0 开始）
+- `MountainArray.length()` - 会返回该数组的长度
 
 **注意**：
 
@@ -66,9 +66,9 @@ tags:
 
 提示：
 
-+ `3 <= mountain_arr.length() <= 10000`
-+ `0 <= target <= 10^9`
-+ `0 <= mountain_arr.get(index) <= 10^9`
+- `3 <= mountain_arr.length() <= 10000`
+- `0 <= target <= 10^9`
+- `0 <= mountain_arr.get(index) <= 10^9`
 
 ## 题解题意
 
@@ -82,9 +82,9 @@ tags:
 
 求解这道题可以分为 3 步：
 
-+ 第 1 步：先找到山顶元素 mountaintop 所在的下标；
-+ 第 2 步：在前有序且升序数组中找 `target` 所在的下标，如果找到了，就返回，如果没有找到，才执行第 3 步；
-+ 第 3 步：如果步骤 2 找不到，就在后有序且降序数组中找 `target` 所在的下标。
+- 第 1 步：先找到山顶元素 mountaintop 所在的下标；
+- 第 2 步：在前有序且升序数组中找 `target` 所在的下标，如果找到了，就返回，如果没有找到，才执行第 3 步；
+- 第 3 步：如果步骤 2 找不到，就在后有序且降序数组中找 `target` 所在的下标。
 
 具体编码实现的时候，每一步写一个辅助方法就可以了。这 3 个辅助方法都是二分查找法。
 
@@ -186,8 +186,7 @@ public class Solution {
 }
 ```
 
-
 **复杂度分析：**
 
-+ 时间复杂度：$O(\log N)$，二分查找法的时间复杂度是对数级别的，这里使用了 3 次二分查找法，是常数倍数，因此可以忽略这个常数系数；
-+ 空间复杂度：$O(1)$，这里使用的额外的辅助空间是常数，因此空间复杂度为 $O(1)$。
+- 时间复杂度：$O(\log N)$，二分查找法的时间复杂度是对数级别的，这里使用了 3 次二分查找法，是常数倍数，因此可以忽略这个常数系数；
+- 空间复杂度：$O(1)$，这里使用的额外的辅助空间是常数，因此空间复杂度为 $O(1)$。

@@ -6,7 +6,7 @@ tags:
   - 二分查找
 ---
 
-+ 题目链接：[367. 有效的完全平方数](https://leetcode-cn.com/problems/valid-perfect-square/)。
+- 题目链接：[367. 有效的完全平方数](https://leetcode-cn.com/problems/valid-perfect-square/)。
 
 ## 题目描述
 
@@ -38,7 +38,6 @@ tags:
 
 **参考代码**：
 
-
 <CodeGroup>
 <CodeGroupItem title="Java">
 ```java
@@ -63,8 +62,10 @@ public class Solution {
         }
         return false;
     }
+
 }
-```
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Python">
@@ -85,6 +86,7 @@ class Solution:
             else:
                 right = mid - 1
         return False
-```
+````
+
 </CodeGroupItem>
 </CodeGroup>

@@ -6,10 +6,8 @@ tags:
   - 二分查找
 ---
 
-
-+ 题目链接：[162. 寻找峰值](https://leetcode-cn.com/problems/find-peak-element/)；
-+ 题解链接：[减而治之，二分查找](https://leetcode-cn.com/problems/find-peak-element/solution/jian-er-zhi-zhi-er-fen-cha-zhao-by-liweiwei1419/)。
-
+- 题目链接：[162. 寻找峰值](https://leetcode-cn.com/problems/find-peak-element/)；
+- 题解链接：[减而治之，二分查找](https://leetcode-cn.com/problems/find-peak-element/solution/jian-er-zhi-zhi-er-fen-cha-zhao-by-liweiwei1419/)。
 
 ## 题目描述
 
@@ -33,7 +31,7 @@ tags:
 
 ```
 输入：nums = [1,2,1,3,5,6,4]
-输出：1 或 5 
+输出：1 或 5
 解释：你的函数可以返回索引 1，其峰值元素为 2；
      或者返回索引 5， 其峰值元素为 6。
 ```
@@ -59,14 +57,13 @@ tags:
 
 题目最后的提示：
 
-> + 对于所有有效的 `i` 都有 `nums[i] != nums[i + 1]`
+> - 对于所有有效的 `i` 都有 `nums[i] != nums[i + 1]`
 
 可以写出如下 **参考代码**：
 
 **说明**：
 
 下面两版代码都对，区别在于一个看左边元素，一个看右边元素。
-
 
 <CodeGroup>
 <CodeGroupItem title="Java">
@@ -91,8 +88,10 @@ public class Solution {
         // left 与 right 重合
         return left;
     }
+
 }
-```
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Java">
@@ -118,16 +117,12 @@ public class Solution {
         return left;
     }
 }
-```
+````
+
 </CodeGroupItem>
 </CodeGroup>
 
 **复杂度分析**:
 
-+ 时间复杂度：$O(\log N)$，其中 $N$ 是输入数组 `nums` 的长度；
-+ 空间复杂度：$O(1)$。
-
-
-
-
-
+- 时间复杂度：$O(\log N)$，其中 $N$ 是输入数组 `nums` 的长度；
+- 空间复杂度：$O(1)$。

@@ -6,9 +6,8 @@ tags:
   - 二分查找
 ---
 
-
-+ 题目链接：[33. 搜索旋转排序数组](https://leetcode-cn.com/problems/search-in-rotated-sorted-array/)；
-+ 题解链接：[二分查找（Java）](https://leetcode-cn.com/problems/search-in-rotated-sorted-array/solution/er-fen-fa-python-dai-ma-java-dai-ma-by-liweiwei141/)。
+- 题目链接：[33. 搜索旋转排序数组](https://leetcode-cn.com/problems/search-in-rotated-sorted-array/)；
+- 题解链接：[二分查找（Java）](https://leetcode-cn.com/problems/search-in-rotated-sorted-array/solution/er-fen-fa-python-dai-ma-java-dai-ma-by-liweiwei141/)。
 
 ## 题目描述
 
@@ -51,7 +50,6 @@ tags:
 
 ![image.png](https://pic.leetcode-cn.com/1614327694-ZemZgK-image.png)
 
-
 「二分查找」详解可以参考 [二分查找的两种思路和三种题型](https://leetcode-cn.com/leetbook/read/learning-algorithms-with-leetcode/xsq0b7/)、[写对二分查找不能靠模板，需要理解加练习 （附练习题，持续更新）](https://leetcode-cn.com/problems/search-insert-position/solution/te-bie-hao-yong-de-er-fen-cha-fa-fa-mo-ban-python-/)。
 
 ---
@@ -62,14 +60,14 @@ tags:
 
 **存在的问题**：
 
-+ 没有利用到数组「旋转有序」的特点；
-+ 不符合题目「你的算法时间复杂度必须是 $O(\log n)$ 级别」这项要求。
+- 没有利用到数组「旋转有序」的特点；
+- 不符合题目「你的算法时间复杂度必须是 $O(\log n)$ 级别」这项要求。
 
 **参考代码 1**：
 
 ```java
 public class Solution {
-    
+
     public int search(int[] nums, int target) {
         int len = nums.length;
         for (int i = 0; i < len; i++) {
@@ -84,8 +82,8 @@ public class Solution {
 
 **复杂度分析**：
 
-+ 时间复杂度：$O(N)$，这里 $N$ 是数组的长度；
-+ 空间复杂度：$O(1)$，使用到的临时变量的个数是常数。
+- 时间复杂度：$O(N)$，这里 $N$ 是数组的长度；
+- 空间复杂度：$O(1)$，使用到的临时变量的个数是常数。
 
 ## 方法二：二分查找
 
@@ -105,22 +103,22 @@ public class Solution {
 
 **情况 1**：当中间元素的数值严格小于右边界的数值时，即 `nums[mid] < nums[right]` 时
 
-+ 此时区间 `[mid..right]` （表示左闭右闭区间，下同）一定是有序的；
-+ 如果 `target` 在区间 `[left..right]` 里，它或者在有序区间 `[mid..right]` 里，或者在另一个区间 `[left..mid - 1]` 里。
-  + **在有序区间 `[mid..right]` 里的条件好写**，即：`nums[mid] <= target <= nums[right]`。因为 `target` 落在其中，所以能且只能等于其中的一个元素，当然包括头尾，此时设置 `left = mid`；
-  + 落在另一个区间 `[left..mid - 1]` 里的时候，就是上一个情况的反面，这种情况用 `else` 表示即可，此时设置 `right = mid - 1`。
+- 此时区间 `[mid..right]` （表示左闭右闭区间，下同）一定是有序的；
+- 如果 `target` 在区间 `[left..right]` 里，它或者在有序区间 `[mid..right]` 里，或者在另一个区间 `[left..mid - 1]` 里。
+  - **在有序区间 `[mid..right]` 里的条件好写**，即：`nums[mid] <= target <= nums[right]`。因为 `target` 落在其中，所以能且只能等于其中的一个元素，当然包括头尾，此时设置 `left = mid`；
+  - 落在另一个区间 `[left..mid - 1]` 里的时候，就是上一个情况的反面，这种情况用 `else` 表示即可，此时设置 `right = mid - 1`。
 
 **关键**：把比较好些的判断（`target` 落在有序的那部分）放在 `if` 的开头考虑，把剩下的情况放在 `else` 里面。
 
 同理，讨论 `nums[mid] < nums[right]` 的反面（下面的描述基本上是反过来讲的，大家可以跳过）。
 
-**情况 2**：当中间元素的数值严格小于右边界的数值时，由于没有重复元素，所以是严格大于，即 `nums[mid] > nums[right]` 
+**情况 2**：当中间元素的数值严格小于右边界的数值时，由于没有重复元素，所以是严格大于，即 `nums[mid] > nums[right]`
 
-+ 此时区间 `[left..mid]` 内的元素一定是有序的；
-+ 如果 `target` 在区间 `[left..right]` 里，它或者在有序区间 `[left..mid]` 里，或者在另一个区间 `[mid + 1..right]` 里。
-  + **在有序区间 `[left..mid]` 里的条件好写**，即：`nums[left] <= target <= nums[mid]`。因为 `target` 落在其中，所以能且只能等于其中的一个元素，当然包括头尾，此时设置 `right = mid`；
-  + 但是，为了与上一个分支的边界设置行为一致，我们这里认为 `[left..mid - 1]` 内的元素一定是有序的，把 `if` 条件改成 `nums[left] <= target <= nums[mid - 1]`，此时设置 `right = mid - 1`；
-  + 落在另一个区间 `[mid..right]` 里的时候，就是上一个情况的反面，这种情况用 `else` 表示即可，此时设置 `left = mid`。
+- 此时区间 `[left..mid]` 内的元素一定是有序的；
+- 如果 `target` 在区间 `[left..right]` 里，它或者在有序区间 `[left..mid]` 里，或者在另一个区间 `[mid + 1..right]` 里。
+  - **在有序区间 `[left..mid]` 里的条件好写**，即：`nums[left] <= target <= nums[mid]`。因为 `target` 落在其中，所以能且只能等于其中的一个元素，当然包括头尾，此时设置 `right = mid`；
+  - 但是，为了与上一个分支的边界设置行为一致，我们这里认为 `[left..mid - 1]` 内的元素一定是有序的，把 `if` 条件改成 `nums[left] <= target <= nums[mid - 1]`，此时设置 `right = mid - 1`；
+  - 落在另一个区间 `[mid..right]` 里的时候，就是上一个情况的反面，这种情况用 `else` 表示即可，此时设置 `left = mid`。
 
 ---
 
@@ -133,7 +131,6 @@ public class Solution {
 这样一来，上面的「情况 2」是 `nums[mid] < nums[right]` 的 **反面**，当区间里只有 2 个元素的时候。`mid` 与 `right` 重合，因此 **当区间里只有 2 个元素的时候，会进入这个逻辑**。
 
 我们再看看此时 `if` 的逻辑，`nums[left] <= target && target <= nums[mid - 1]` 等价于「看看 `nums[left] == target` 是否成立」，逻辑上是完整的。感谢 [@oneday-a](/u/oneday-a/) 注意到这一点。
-
 
 **参考代码 2**：
 
@@ -187,5 +184,5 @@ public class Solution {
 
 **复杂度分析**：
 
-+ 时间复杂度：$O(\log N)$，这里 $N$ 是数组的长度，在循环中一次排除一半，因此时间复杂度是对数级别的；
-+ 空间复杂度：$O(1)$，使用到的临时变量的个数是常数。
+- 时间复杂度：$O(\log N)$，这里 $N$ 是数组的长度，在循环中一次排除一半，因此时间复杂度是对数级别的；
+- 空间复杂度：$O(1)$，使用到的临时变量的个数是常数。
