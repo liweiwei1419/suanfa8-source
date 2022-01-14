@@ -1,6 +1,4 @@
-
-
-+ [题解链接](https://leetcode-cn.com/problems/word-ladder/solution/yan-du-you-xian-bian-li-shuang-xiang-yan-du-you-2/)
+- [题解链接](https://leetcode-cn.com/problems/word-ladder/solution/yan-du-you-xian-bian-li-shuang-xiang-yan-du-you-2/)
 
 ## 方法一：单向 BFS
 
@@ -78,8 +76,6 @@ public class Solution {
     }
 }
 ```
-
-
 
 ## 方法二：双向 BFS
 
@@ -161,4 +157,3 @@ public class Solution {
     }
 }
 ```
-
