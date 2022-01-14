@@ -6,7 +6,7 @@ tags:
   - 数学
 ---
 
-+ 题目链接：[507. 完美数](https://leetcode-cn.com/problems/perfect-number/)
+- 题目链接：[507. 完美数](https://leetcode-cn.com/problems/perfect-number/)
 
 ## 题目描述
 
@@ -55,7 +55,6 @@ tags:
 
 - `1 <= num <= 10^8`
 
-
 **参考代码**：
 
 <CodeGroup>
@@ -84,8 +83,10 @@ public class Solution {
         }
         return res == num;
     }
+
 }
-```
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Python3">
@@ -109,13 +110,7 @@ class Solution:
         if factor * factor == num:
             res += factor
         return res == num
-```
+````
+
 </CodeGroupItem>
 </CodeGroup>
-
-
-
-
-
-
-
