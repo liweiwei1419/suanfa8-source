@@ -35,11 +35,8 @@ tags:
 
 ![](https://tva1.sinaimg.cn/large/008i3skNgy1gxa97402odj316u0hm0u1.jpg)
 
-
 现在我们再来看一下 Dijkstra 最初的想法，就很容易理解了。松弛操作没有选择的边，就是这个图例弯曲的边，它们一定不会是组成单源最短路径的边。
-
 
 <img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b5579e54bce14d2697685ec34d686e25~tplv-k3u1fbpfcp-zoom-1.image" style="zoom:50%;" />
 
-
-## 
+##
