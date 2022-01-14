@@ -1,7 +1,7 @@
 ## 「力扣」第 993 题：二叉树的堂兄弟节点
 
-+ 链接：[993. 二叉树的堂兄弟节点](https://leetcode-cn.com/problems/cousins-in-binary-tree/)；
-+ 题解链接：[深度优先遍历、广度优先遍历](https://leetcode-cn.com/problems/cousins-in-binary-tree/solution/yan-du-you-xian-bian-li-python-dai-ma-by-liweiwei1/)。
+- 链接：[993. 二叉树的堂兄弟节点](https://leetcode-cn.com/problems/cousins-in-binary-tree/)；
+- 题解链接：[深度优先遍历、广度优先遍历](https://leetcode-cn.com/problems/cousins-in-binary-tree/solution/yan-du-you-xian-bian-li-python-dai-ma-by-liweiwei1/)。
 
 > 在二叉树中，根节点位于深度 `0` 处，每个深度为 `k` 的节点的子节点位于深度 `k + 1` 处。
 >
@@ -49,9 +49,9 @@
 
 思路：
 
-+ 依据定义，只要两个结点的层数相同，并且父结点不一样，它们就是堂兄弟结点。为此我们可以通过遍历获得这棵树的所有结点的信息；
-+ 这里记住这棵树里结点的信息很重要，为此我们要利用好「哈希表」这个数据结构；
-+ 注意题目中说「每个结点的值唯一」。
+- 依据定义，只要两个结点的层数相同，并且父结点不一样，它们就是堂兄弟结点。为此我们可以通过遍历获得这棵树的所有结点的信息；
+- 这里记住这棵树里结点的信息很重要，为此我们要利用好「哈希表」这个数据结构；
+- 注意题目中说「每个结点的值唯一」。
 
 下面提供「深度优先遍历」和「广度优先遍历」的参考代码。
 
@@ -164,8 +164,8 @@ public class Solution {
 
 **复杂度分析**：
 
-+ 时间复杂度：$O(N)$，其中 $N$ 是给定树中结点的数量；
-+ 空间复杂度：$O(N)$。
+- 时间复杂度：$O(N)$，其中 $N$ 是给定树中结点的数量；
+- 空间复杂度：$O(N)$。
 
 ### 方法二：广度优先遍历
 
@@ -177,12 +177,9 @@ public class Solution {
 
 下面看几个具体的例子：
 
-
 ![01.png](https://liweiwei1419.gitee.io/visualgo/12-tree/0993/01.png)
 
-
 ![02.png](https://liweiwei1419.gitee.io/visualgo/12-tree/0993/02.png)
-
 
 ```java
 import java.util.HashMap;
@@ -243,7 +240,7 @@ public class Solution {
 
 **复杂度分析：**
 
-+ 时间复杂度：$O(N)$；
-+ 空间复杂度：$O(N)$。
+- 时间复杂度：$O(N)$；
+- 空间复杂度：$O(N)$。
 
 （本节完）
