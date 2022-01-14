@@ -11,7 +11,16 @@ tags:
 ---
 
 - 题目链接：[78. 子集](https://leetcode-cn.com/problems/subsets/)；
-- 题解链接：[（含视频讲解）](https://leetcode-cn.com/problems/subsets/solution/hui-su-python-dai-ma-by-liweiwei1419/)。
+- 题解链接：[回溯 + 位运算技巧（Java、Python）（含视频讲解）](https://leetcode-cn.com/problems/subsets/solution/hui-su-python-dai-ma-by-liweiwei1419/)。
+
+::: danger 视频讲解
+:tv: 这道题在 [题解](https://leetcode-cn.com/problems/subsets/solution/hui-su-python-dai-ma-by-liweiwei1419/) 和 [B 站](https://www.bilibili.com/video/BV147411A7Yq?p=2) 可以收看视频讲解，可以点击下面的视频右上角「去 bilibili 观看」，选择快速播放，获得更好的观看体验。
+
+:::
+
+<div style="position: relative; padding: 30% 45%;">
+<iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="https://player.bilibili.com/player.html?aid=90222159&bvid=BV147411A7Yq&cid=157217562&page=2" frameborder="no" scrolling="no"></iframe>
+</div>
 
 ## 题目描述
 

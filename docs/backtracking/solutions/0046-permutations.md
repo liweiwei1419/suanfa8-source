@@ -10,7 +10,16 @@ tags:
 ---
 
 - 题目链接：[46. 全排列](https://leetcode-cn.com/problems/permutations/)；
-- 题解链接：[]()。
+- 题解链接：[回溯算法入门级详解 + 练习（持续更新）](https://leetcode-cn.com/problems/permutations/solution/hui-su-suan-fa-python-dai-ma-java-dai-ma-by-liweiw/)。
+
+::: danger 视频讲解
+:tv: 这道题在 [官方题解](https://leetcode-cn.com/problems/permutations/solution/quan-pai-lie-by-leetcode-solution-2/) 和 [B 站](https://www.bilibili.com/video/BV1oa4y1v7Kz?from=search&seid=14615048896751357901) 可以收看视频讲解，可以点击下面的视频右上角「去 bilibili 观看」，选择快速播放，获得更好的观看体验。
+
+:::
+
+<div style="position: relative; padding: 30% 45%;">
+<iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="https://player.bilibili.com/player.html?aid=667986181&bvid=BV1oa4y1v7Kz&cid=184261308&page=1" frameborder="no" scrolling="no"></iframe>
+</div>
 
 ## 题目描述
 

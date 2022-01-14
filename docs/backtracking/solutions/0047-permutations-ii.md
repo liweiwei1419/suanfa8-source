@@ -10,7 +10,16 @@ tags:
 ---
 
 - 题目链接：[47. 全排列 II](https://leetcode-cn.com/problems/permutations-ii/)；
-- 题解链接：[（含视频讲解）](https://leetcode-cn.com/problems/permutations-ii/solution/hui-su-suan-fa-python-dai-ma-java-dai-ma-by-liwe-2/)。
+- 题解链接：[回溯搜索 + 剪枝（Java、Python）（含视频讲解）](https://leetcode-cn.com/problems/permutations-ii/solution/hui-su-suan-fa-python-dai-ma-java-dai-ma-by-liwe-2/)。
+
+::: danger 视频讲解
+:tv: 这道题在 [题解](https://leetcode-cn.com/problems/permutations-ii/solution/hui-su-suan-fa-python-dai-ma-java-dai-ma-by-liwe-2) 和 [B 站](https://www.bilibili.com/video/BV147411A7Yq?p=1) 可以收看视频讲解，可以点击下面的视频右上角「去 bilibili 观看」，选择快速播放，获得更好的观看体验。
+
+:::
+
+<div style="position: relative; padding: 30% 45%;">
+<iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="https://player.bilibili.com/player.html?aid=90222159&bvid=BV147411A7Yq&cid=154085652&page=1" frameborder="no" scrolling="no"></iframe>
+</div>
 
 ## 题目描述
 

@@ -13,6 +13,15 @@ tags:
 - 题目链接：[90. 子集 II](https://leetcode-cn.com/problems/subsets-ii/)；
 - 视频讲解：[B 站](https://www.bilibili.com/video/BV147411A7Yq?p=3)。
 
+::: danger 视频讲解
+:tv: 这道题在 [B 站](https://www.bilibili.com/video/BV147411A7Yq?p=3) 可以收看视频讲解，可以点击下面的视频右上角「去 bilibili 观看」，选择快速播放，获得更好的观看体验。
+
+:::
+
+<div style="position: relative; padding: 30% 45%;">
+<iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="https://player.bilibili.com/player.html?aid=90222159&bvid=BV147411A7Yq&cid=157229545&page=3" frameborder="no" scrolling="no"></iframe>
+</div>
+
 ## 题目描述
 
 给你一个整数数组 `nums` ，其中可能包含重复元素，请你返回该数组所有可能的子集（幂集）。
