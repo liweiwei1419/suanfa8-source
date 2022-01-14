@@ -9,8 +9,8 @@ tags:
   - 深度优先遍历
 ---
 
-+ 题目链接：[47. 全排列 II](https://leetcode-cn.com/problems/permutations-ii/)；
-+ 题解链接：[（含视频讲解）](https://leetcode-cn.com/problems/permutations-ii/solution/hui-su-suan-fa-python-dai-ma-java-dai-ma-by-liwe-2/)。
+- 题目链接：[47. 全排列 II](https://leetcode-cn.com/problems/permutations-ii/)；
+- 题解链接：[（含视频讲解）](https://leetcode-cn.com/problems/permutations-ii/solution/hui-su-suan-fa-python-dai-ma-java-dai-ma-by-liwe-2/)。
 
 ## 题目描述
 
@@ -33,13 +33,12 @@ tags:
 输出：[[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]
 ```
 
- **提示：**
+**提示：**
 
 - `1 <= nums.length <= 8`
 - `-10 <= nums[i] <= 10`
 
 ## 解题思路
-
 
 这一题在「力扣」第 46 题： [全排列](https://leetcode-cn.com/problems/permutations/) 的基础上增加了 **序列中的元素可重复** 这一条件，但要求：返回的结果又不能有重复元素。
 
@@ -53,8 +52,9 @@ tags:
 
 画出树形结构如下：重点想象深度优先遍历在这棵树上执行的过程，哪些地方遍历下去一定会产生重复，这些地方的状态的特点是什么？
 对比图中标注 ① 和 ② 的地方。相同点是：这一次搜索的起点和上一次搜索的起点一样。不同点是：
-+ 标注 ① 的地方上一次搜索的相同的数刚刚被撤销；
-+ 标注 ② 的地方上一次搜索的相同的数刚刚被使用。
+
+- 标注 ① 的地方上一次搜索的相同的数刚刚被撤销；
+- 标注 ② 的地方上一次搜索的相同的数刚刚被使用。
 
 ![image.png](https://pic.leetcode-cn.com/1600386643-uhkGmW-image.png)
 
@@ -62,8 +62,8 @@ tags:
 
 大家也可以把第 2 个 `1` 加上 `'` ，即 `[1, 1', 2]` 去想象这个搜索的过程。只要遇到起点一样，就有可能产生重复。这里还有一个很细节的地方：
 
-+ 在图中 ② 处，搜索的数也和上一次一样，但是上一次的 `1` 还在使用中；
-+ **在图中 ① 处，搜索的数也和上一次一样，但是上一次的 `1` 刚刚被撤销，正是因为刚被撤销，下面的搜索中还会使用到，因此会产生重复，剪掉的就应该是这样的分支**。
+- 在图中 ② 处，搜索的数也和上一次一样，但是上一次的 `1` 还在使用中；
+- **在图中 ① 处，搜索的数也和上一次一样，但是上一次的 `1` 刚刚被撤销，正是因为刚被撤销，下面的搜索中还会使用到，因此会产生重复，剪掉的就应该是这样的分支**。
 
 代码实现方面，在第 46 题的基础上，要加上这样一段代码：
 
@@ -75,8 +75,8 @@ if (i > 0 && nums[i] == nums[i - 1] && !used[i - 1]) {
 
 这段代码就能检测到标注为 ① 的两个结点，跳过它们。注意：这里 `used[i - 1]` 不加 `!`，测评也能通过。有兴趣的朋友可以想一想这是为什么。建议大家做这样几个对比实验：
 
-+ 干脆就不写 `!used[i - 1]` 结果是什么样？
-+ 写 `used[i - 1]` 结果是什么，代码又是怎样执行的。这里给出的结论是：`!used[i - 1]` 这样的剪枝更彻底。附录会分析原因。
+- 干脆就不写 `!used[i - 1]` 结果是什么样？
+- 写 `used[i - 1]` 结果是什么，代码又是怎样执行的。这里给出的结论是：`!used[i - 1]` 这样的剪枝更彻底。附录会分析原因。
 
 **参考代码 1**：
 
@@ -134,8 +134,10 @@ public class Solution {
             path.removeLast();
         }
     }
+
 }
-```
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Python">
@@ -173,15 +175,16 @@ class Solution:
         res = []
         dfs(nums, size, 0, [], used, res)
         return res
-```
+````
+
 </CodeGroupItem>
 </CodeGroup>
 
-
 **复杂度分析**：（理由同第 46 题，重复元素越多，剪枝越多。但是计算复杂度的时候需要考虑最差情况。）
 
-+ 时间复杂度：$O(N \times N!)$，这里 $N$ 为数组的长度；
-+ 空间复杂度：$O(N \times N!)$。
+- 时间复杂度：$O(N \times N!)$，这里 $N$ 为数组的长度；
+- 空间复杂度：$O(N \times N!)$。
+
 ## 补充说明
 
 ::: danger 提示
@@ -191,7 +194,6 @@ class Solution:
 :::
 
 **写 `used[i - 1]` 代码正确，但是不推荐的原因。**
-
 
 思路是根据深度优先遍历的执行流程，看一看那些状态变量（布尔数组 `used`）的值。
 
@@ -223,16 +225,13 @@ if (i > 0 && nums[i] == nums[i - 1] && used[i - 1]) {
 
 ![image.png](https://pic.leetcode-cn.com/06bf98f9da46f538554aa17d5cc1063761557fb358e1e12dc10c55858cc2f5fe-image.png)
 
-
 （2）对第 1 步的第 1 个分支，可以继续搜索，但是发现，没有搜索到合适的叶子结点。
 
 ![image.png](https://pic.leetcode-cn.com/41fff3d76a09688798f2cc37c638d799aca0d234fb6df1ac60ee99654934c745-image.png)
 
-
 （3）对第 1 步的第 2 个分支，可以继续搜索，但是同样发现，没有搜索到合适的叶子结点。
 
 ![image.png](https://pic.leetcode-cn.com/b9163201e31e038df7cafef3fbe56f6d7c393c28b57679da7dc0511a19fc5115-image.png)
-
 
 （4）对第 1 步的第 3 个分支，继续搜索发现搜索到合适的叶子结点。
 
@@ -243,6 +242,3 @@ if (i > 0 && nums[i] == nums[i - 1] && used[i - 1]) {
 ![image.png](https://pic.leetcode-cn.com/299ba9a47a9ae93c2331f6ce9f93c614a647397665f57bf072a11fe0a387b35f-image.png)
 
 因此，`used[i - 1]` 前面加不加感叹号的区别仅在于保留的是相同元素的顺序索引，还是倒序索引。**很明显，顺序索引（即使用 `!used[i - 1]` 作为剪枝判定条件得到）的递归树剪枝更彻底，思路也相对较自然**。
-
-
-

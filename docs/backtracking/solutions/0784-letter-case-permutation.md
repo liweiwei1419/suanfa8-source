@@ -10,8 +10,8 @@ tags:
   - 字符串
 ---
 
-+ 题目链接：[784. 字母大小写全排列](https://leetcode-cn.com/problems/letter-case-permutation/)；
-+ 题解链接：[回溯算法（深度优先遍历，Java）](https://leetcode-cn.com/problems/letter-case-permutation/solution/shen-du-you-xian-bian-li-hui-su-suan-fa-python-dai/)。
+- 题目链接：[784. 字母大小写全排列](https://leetcode-cn.com/problems/letter-case-permutation/)；
+- 题解链接：[回溯算法（深度优先遍历，Java）](https://leetcode-cn.com/problems/letter-case-permutation/solution/shen-du-you-xian-bian-li-hui-su-suan-fa-python-dai/)。
 
 ## 题目描述
 
@@ -32,19 +32,18 @@ tags:
 
 **提示：**
 
-+ `S`  的长度不超过 `12`。
-+ `S`  仅由数字和字母组成。
+- `S` 的长度不超过 `12`。
+- `S` 仅由数字和字母组成。
 
 ---
 
 思路分析：
 
-+ 这一类搜索问题是在一个隐式的树上进行的搜索问题，即「树形问题」。解决这一类问题， **先画出递归树是十分重要的，可以帮助打开思路** ，然后看着图形把代码写出来；
-+ 这个问题所求的解，是这棵树的叶子结点上的值。因此，可以使用深度优先遍历，收集 **所有** 叶子结点的值，**深度优先遍历用于搜索也叫回溯算法**；
-+ 回溯算法因为有回头的过程，因此其显著特征是 **状态重置**。回溯算法的入门问题是「力扣」第 46 题：[全排列](https://leetcode-cn.com/problems/permutations/)）。
+- 这一类搜索问题是在一个隐式的树上进行的搜索问题，即「树形问题」。解决这一类问题， **先画出递归树是十分重要的，可以帮助打开思路** ，然后看着图形把代码写出来；
+- 这个问题所求的解，是这棵树的叶子结点上的值。因此，可以使用深度优先遍历，收集 **所有** 叶子结点的值，**深度优先遍历用于搜索也叫回溯算法**；
+- 回溯算法因为有回头的过程，因此其显著特征是 **状态重置**。回溯算法的入门问题是「力扣」第 46 题：[全排列](https://leetcode-cn.com/problems/permutations/)）。
 
 （温馨提示：下面的幻灯片中，有几页上有较多的文字，可能需要您停留一下，可以点击右下角的后退 “|◀” 或者前进 “▶|” 按钮控制幻灯片的播放。）
-
 
 @slidestart
 
@@ -70,10 +69,7 @@ tags:
 
 ![784-6.png](https://pic.leetcode-cn.com/f8c544dd2255f360ec055e01c03347ded5fb1f8c06a785eb6d45b8dde243331e-784-6.png)
 
-
 @slideend
-
-
 
 思路介绍完了，下面要介绍一个技巧，即解决字母大小写转换的问题。
 
@@ -93,8 +89,8 @@ tags:
 
 变换大小写这件事等价于：
 
-+ 如果字符是小写字符，减去 32 得到大写字符；  
-+ 如果字符是大写字符，加上 32 得到小写字符。
+- 如果字符是小写字符，减去 32 得到大写字符；
+- 如果字符是大写字符，加上 32 得到小写字符。
 
 而这两者合并起来，就是给这个字符做一次不进位的加法，即异或上 `1 << 5`。
 
@@ -127,4 +123,3 @@ public class Solution {
     }
 }
 ```
-

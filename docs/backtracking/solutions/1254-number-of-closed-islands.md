@@ -10,7 +10,7 @@ tags:
   - 广度优先遍历
 ---
 
-+ 题目链接：[1254. 统计封闭岛屿的数目](https://leetcode-cn.com/problems/number-of-closed-islands/)。
+- 题目链接：[1254. 统计封闭岛屿的数目](https://leetcode-cn.com/problems/number-of-closed-islands/)。
 
 ## 题目描述
 
@@ -21,8 +21,6 @@ tags:
 如果一座岛屿 **完全** 由水域包围，即陆地边缘上下左右所有相邻区域都是水域，那么我们将其称为 「**封闭岛屿**」。
 
 请返回封闭岛屿的数目。
-
- 
 
 **示例 1：**
 
@@ -62,8 +60,6 @@ tags:
 - `1 <= grid.length, grid[0].length <= 100`
 - `0 <= grid[i][j] <=1`
 
-
-
 ## 方法一：深度优先遍历
 
 **参考代码 1**：
@@ -72,7 +68,7 @@ tags:
 public class Solution {
 
     // 0 表示陆地，1 表示海洋
-    
+
     private int rows;
     private int cols;
     private final static int[][] DIRECTIONS = {{1, 0}, {0, 1}, {-1, 0}, {0, -1}};
@@ -218,4 +214,3 @@ public class Solution {
     }
 }
 ```
-

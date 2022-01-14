@@ -10,7 +10,7 @@ tags:
   - 广度优先遍历
 ---
 
-+ 题目链接：[1020. 飞地的数量](https://leetcode-cn.com/problems/number-of-enclaves/)。
+- 题目链接：[1020. 飞地的数量](https://leetcode-cn.com/problems/number-of-enclaves/)。
 
 ## 题目描述
 
@@ -27,7 +27,7 @@ tags:
 ```
 输入：[[0,0,0,0],[1,0,1,0],[0,1,1,0],[0,0,0,0]]
 输出：3
-解释： 
+解释：
 有三个 1 被 0 包围。一个 1 没有被包围，因为它在边界上。
 ```
 
@@ -205,6 +205,3 @@ public class Solution {
     }
 }
 ```
-
-
-

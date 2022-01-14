@@ -10,8 +10,8 @@ tags:
   - 字符串
 ---
 
-+ 题目链接：[79. 单词搜索](https://leetcode-cn.com/problems/word-search/)；
-+ 题解链接：[回溯算法（Java）](https://leetcode-cn.com/problems//solution/zai-er-wei-ping-mian-shang-shi-yong-hui-su-fa-pyth/)。
+- 题目链接：[79. 单词搜索](https://leetcode-cn.com/problems/word-search/)；
+- 题解链接：[回溯算法（Java）](https://leetcode-cn.com/problems//solution/zai-er-wei-ping-mian-shang-shi-yong-hui-su-fa-pyth/)。
 
 ## 题目描述
 

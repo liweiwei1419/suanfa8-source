@@ -9,11 +9,11 @@ tags:
   - 深度优先遍历
 ---
 
-+ 题目链接：[1391. 检查网格中是否存在有效路径](https://leetcode-cn.com/problems/check-if-there-is-a-valid-path-in-a-grid/)。
+- 题目链接：[1391. 检查网格中是否存在有效路径](https://leetcode-cn.com/problems/check-if-there-is-a-valid-path-in-a-grid/)。
 
 ## 题目描述
 
-给你一个 *m* x *n* 的网格 `grid`。网格里的每个单元都代表一条街道。`grid[i][j]` 的街道可以是：
+给你一个 _m_ x _n_ 的网格 `grid`。网格里的每个单元都代表一条街道。`grid[i][j]` 的街道可以是：
 
 - **1** 表示连接左单元格和右单元格的街道。
 - **2** 表示连接上单元格和下单元格的街道。
@@ -33,8 +33,6 @@ tags:
 **示例 1：**
 
 ![img](https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2020/03/21/e1.png)
-
-
 
 ```
 输入：grid = [[2,4,3],[6,5,2]]
@@ -83,7 +81,7 @@ tags:
 
 ## 方法：深度优先遍历
 
-+ 参考题解：[C++DFS解法，容易理解](https://leetcode-cn.com/problems/check-if-there-is-a-valid-path-in-a-grid/solution/cdfsjie-fa-rong-yi-li-jie-dai-ma-duan-zhu-shi-duo-/)
+- 参考题解：[C++DFS 解法，容易理解](https://leetcode-cn.com/problems/check-if-there-is-a-valid-path-in-a-grid/solution/cdfsjie-fa-rong-yi-li-jie-dai-ma-duan-zhu-shi-duo-/)
 
 ```java
 public class Solution {

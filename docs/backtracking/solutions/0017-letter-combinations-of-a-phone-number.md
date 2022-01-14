@@ -12,8 +12,8 @@ tags:
 
 > 以前我不知道算法和数据结构如此重要，只是为了准备面试才会去看「面试宝典」里的算法。「面试宝典」里讲的就只有选择排序和插入排序，学完一次忘记一次。其实在算法的世界，有很多知识要我们去学习。
 
-+ 题目链接：[17. 电话号码的字母组合](https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number/)；
-+ 题解链接：[回溯搜索（无显式回溯）、广度优先遍历（Java）](https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number/solution/hui-su-sou-suo-wu-xian-shi-hui-su-yan-du-you-xian-/)。
+- 题目链接：[17. 电话号码的字母组合](https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number/)；
+- 题解链接：[回溯搜索（无显式回溯）、广度优先遍历（Java）](https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number/solution/hui-su-sou-suo-wu-xian-shi-hui-su-yan-du-you-xian-/)。
 
 ## 题目描述
 
@@ -44,17 +44,12 @@ tags:
 输出：["a","b","c"]
 ```
 
- 
-
 **提示：**
 
 - `0 <= digits.length <= 4`
 - `digits[i]` 是范围 `['2', '9']` 的一个数字。
 
-
-
 ![image.png](https://pic.leetcode-cn.com/1603521238-wPCUhU-image.png)
-
 
 先画出递归树，然后思考如何编写代码在这棵递归树上搜索所有可行解。
 
@@ -64,9 +59,8 @@ tags:
 
 **注意**：
 
-+ 由于字符追加到后面，是新创建一个对象，因此 **没有显式回溯（状态重置）的过程 **；
-+ 在叶子结点结算。
-
+- 由于字符追加到后面，是新创建一个对象，因此 **没有显式回溯（状态重置）的过程 **；
+- 在叶子结点结算。
 
 ### 方法一：回溯（特指使用深度优先遍历搜索所有的解）
 
@@ -112,13 +106,14 @@ public class Solution {
     }
 }
 ```
+
 ### 方法二：广度优先遍历
 
 说明：这个广度优先遍历的代码不是很套路，但是也不难琢磨出来。
 
-+ 新一层在上一层的末尾添加字符得到；
-+ 新一层得到了以后，上一层就不用了；
-+ 最开始的时候，是一个空字符串。
+- 新一层在上一层的末尾添加字符得到；
+- 新一层得到了以后，上一层就不用了；
+- 最开始的时候，是一个空字符串。
 
 **参考代码 2**：
 

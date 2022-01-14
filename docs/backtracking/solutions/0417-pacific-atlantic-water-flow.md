@@ -9,7 +9,7 @@ tags:
   - 深度优先遍历
 ---
 
-+ 题目链接：[417. 太平洋大西洋水流问题](https://leetcode-cn.com/problems/pacific-atlantic-water-flow/)。
+- 题目链接：[417. 太平洋大西洋水流问题](https://leetcode-cn.com/problems/pacific-atlantic-water-flow/)。
 
 ## 题目描述
 
@@ -22,9 +22,9 @@ tags:
 **提示：**
 
 1. 输出坐标的顺序不重要
-2. *m* 和 *n* 都小于150
+2. _m_ 和 _n_ 都小于 150
 
-**示例 1：** 
+**示例 1：**
 
 ![img](https://assets.leetcode.com/uploads/2021/06/08/waterflow-grid.jpg)
 
@@ -40,7 +40,7 @@ Input: heights = [[2,1],[1,2]]
 Output: [[0,0],[0,1],[1,0],[1,1]]
 ```
 
- **Constraints:**
+**Constraints:**
 
 - `m == heights.length`
 - `n == heights[r].length`
@@ -117,4 +117,3 @@ public class Solution {
     }
 }
 ```
-

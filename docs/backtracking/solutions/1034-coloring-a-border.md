@@ -10,7 +10,7 @@ tags:
   - 广度优先遍历
 ---
 
-+ 题目链接：[1034. 边界着色](https://leetcode-cn.com/problems/coloring-a-border/)。
+- 题目链接：[1034. 边界着色](https://leetcode-cn.com/problems/coloring-a-border/)。
 
 ## 题目描述
 
@@ -49,8 +49,6 @@ tags:
 输出：[[2,2,2],[2,1,2],[2,2,2]]
 ```
 
-
-
 **提示：**
 
 - `m == grid.length`
@@ -59,8 +57,6 @@ tags:
 - `1 <= grid[i][j], color <= 1000`
 - `0 <= row < m`
 - `0 <= col < n`
-
-
 
 ## 方法一：深度优先遍历
 
@@ -118,8 +114,6 @@ public class Solution {
     }
 }
 ```
-
-
 
 ## 方法二：广度优先遍历
 
@@ -186,4 +180,3 @@ public class Solution {
     }
 }
 ```
-

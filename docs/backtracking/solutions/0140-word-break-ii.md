@@ -7,28 +7,26 @@ tags:
   - 回溯算法
 ---
 
-+ 题目链接：[140. 单词拆分 II](https://leetcode-cn.com/problems/word-break-ii/)
-+ 题解链接：[动态规划求是否有解、回溯算法求所有具体解（Java）](https://leetcode-cn.com/problems/word-break-ii/solution/dong-tai-gui-hua-hui-su-qiu-jie-ju-ti-zhi-python-d/)
-
+- 题目链接：[140. 单词拆分 II](https://leetcode-cn.com/problems/word-break-ii/)
+- 题解链接：[动态规划求是否有解、回溯算法求所有具体解（Java）](https://leetcode-cn.com/problems/word-break-ii/solution/dong-tai-gui-hua-hui-su-qiu-jie-ju-ti-zhi-python-d/)
 
 ## 题目描述
 
 **概述**：
 
-+ 本题是「力扣」第 139 题 [单词拆分](https://leetcode-cn.com/problems/word-break/) 的追问，本题解基于该问题的题解 [动态规划（Java）](https://leetcode-cn.com/problems/word-break/solution/dong-tai-gui-hua-python-dai-ma-by-liweiwei1419-2/) 编写而成；
-+ 题目如果问「一个问题的所有的具体解」，一般而言使用回溯算法完成。
+- 本题是「力扣」第 139 题 [单词拆分](https://leetcode-cn.com/problems/word-break/) 的追问，本题解基于该问题的题解 [动态规划（Java）](https://leetcode-cn.com/problems/word-break/solution/dong-tai-gui-hua-python-dai-ma-by-liweiwei1419-2/) 编写而成；
+- 题目如果问「一个问题的所有的具体解」，一般而言使用回溯算法完成。
 
 ---
 
 **思路**：
 
-+ 动态规划得到了原始输入字符串的任意长度的 **前缀子串** 是否可以拆分为单词集合中的单词；
-+ 我们以示例 2：`s = "pineapplepenapple"`、`wordDict = ["apple", "pen", "applepen", "pine", "pineapple"]` 为例，分析如何得到所有具体解。
+- 动态规划得到了原始输入字符串的任意长度的 **前缀子串** 是否可以拆分为单词集合中的单词；
+- 我们以示例 2：`s = "pineapplepenapple"`、`wordDict = ["apple", "pen", "applepen", "pine", "pineapple"]` 为例，分析如何得到所有具体解。
 
 所有任意长度的前缀是否可拆分是知道的，那么如果 **后缀子串在单词集合中**，这个后缀子串就是解的一部分，例如：
 
 ![image.png](https://pic.leetcode-cn.com/1604156019-RPUqqc-image.png)
-
 
 根据这个思路，可以画出树形结构如下。
 
@@ -43,6 +41,7 @@ tags:
   "pine applepen apple"
 ]
 ```
+
 可以发现，树形结构中，**从叶子结点到根结点的路径是符合要求的一个解**，与以前做过的回溯算法的问题不一样，这个时候路径变量我们需要在依次在列表的开始位置插入元素，可以使用队列（`LinkedList`）实现，或者是双端队列（`ArrayDeque`）。
 
 **参考代码**：
@@ -119,4 +118,3 @@ public class Solution {
     }
 }
 ```
-

@@ -6,8 +6,7 @@ tags:
   - 回溯算法
 ---
 
-
-+ 题目链接：[491. 递增子序列](https://leetcode-cn.com/problems/increasing-subsequences/)。
+- 题目链接：[491. 递增子序列](https://leetcode-cn.com/problems/increasing-subsequences/)。
 
 ## 题目描述
 
@@ -89,4 +88,3 @@ class Solution:
         dfs(nums, 0, [], res)
         return list(set(res))
 ```
-

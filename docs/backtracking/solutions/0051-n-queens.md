@@ -10,9 +10,8 @@ tags:
   - 剪枝
 ---
 
-+ 题目链接：[51. N 皇后](https://leetcode-cn.com/problems/n-queens/)；
-+ 题解链接：[回溯算法（转换成全排列问题 + 剪枝）- 题解后有相关问题](https://leetcode-cn.com/problems/n-queens/solution/gen-ju-di-46-ti-quan-pai-lie-de-hui-su-suan-fa-si-/)。
-
+- 题目链接：[51. N 皇后](https://leetcode-cn.com/problems/n-queens/)；
+- 题解链接：[回溯算法（转换成全排列问题 + 剪枝）- 题解后有相关问题](https://leetcode-cn.com/problems/n-queens/solution/gen-ju-di-46-ti-quan-pai-lie-de-hui-su-suan-fa-si-/)。
 
 ## 题目描述
 
@@ -39,18 +38,20 @@ tags:
 输出：[["Q"]]
 ```
 
- **提示：**
+**提示：**
 
 - `1 <= n <= 9`
 
 ## 解题思路
+
 一句话题解：回溯算法是一种遍历算法，以 **深度优先遍历** 的方式尝试所有的可能性。有些教程上也叫「暴力搜索」。回溯算法是 **有方向地** 搜索，区别于多层循环实现的暴力法。
 
 > 许多复杂的、规模较大的问题都可以使用回溯法，有「通用解题方法」的美称。（来自 [百度百科](https://baike.baidu.com/item/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95/9258495?fr=aladdin)）
 
 说明：
-+ N 皇后问题很多时候作为例题出现在教科书中，可以当做理解回溯算法的例题进行学习；
-+ 对于回溯算法还比较陌生的朋友，可以参考我的题解 《[回溯算法入门级详解 + 练习（持续更新）](https://leetcode-cn.com/problems/permutations/solution/hui-su-suan-fa-python-dai-ma-java-dai-ma-by-liweiw/)》。
+
+- N 皇后问题很多时候作为例题出现在教科书中，可以当做理解回溯算法的例题进行学习；
+- 对于回溯算法还比较陌生的朋友，可以参考我的题解 《[回溯算法入门级详解 + 练习（持续更新）](https://leetcode-cn.com/problems/permutations/solution/hui-su-suan-fa-python-dai-ma-java-dai-ma-by-liweiw/)》。
 
 <br>
 
@@ -64,153 +65,123 @@ tags:
 
 ---
 
-
 ![幻灯片2.png](https://pic.leetcode-cn.com/1597914538-ZjQXmZ-%E5%B9%BB%E7%81%AF%E7%89%872.png)
 
 ---
-
 
 ![幻灯片3.png](https://pic.leetcode-cn.com/1597914538-tmYgmS-%E5%B9%BB%E7%81%AF%E7%89%873.png)
 
 ---
 
-
 ![幻灯片4.png](https://pic.leetcode-cn.com/1597914538-wBTCML-%E5%B9%BB%E7%81%AF%E7%89%874.png)
 
 ---
-
 
 ![幻灯片5.png](https://pic.leetcode-cn.com/1597914538-EREunU-%E5%B9%BB%E7%81%AF%E7%89%875.png)
 
 ---
 
-
 ![幻灯片6.png](https://pic.leetcode-cn.com/1597914538-OtaRLU-%E5%B9%BB%E7%81%AF%E7%89%876.png)
 
 ---
-
 
 ![幻灯片7.png](https://pic.leetcode-cn.com/1597914538-rucjiO-%E5%B9%BB%E7%81%AF%E7%89%877.png)
 
 ---
 
-
 ![幻灯片8.png](https://pic.leetcode-cn.com/1597914538-fgPyCK-%E5%B9%BB%E7%81%AF%E7%89%878.png)
 
 ---
-
 
 ![幻灯片9.png](https://pic.leetcode-cn.com/1597914538-DMbNDR-%E5%B9%BB%E7%81%AF%E7%89%879.png)
 
 ---
 
-
 ![幻灯片10.png](https://pic.leetcode-cn.com/1597914538-frDGXq-%E5%B9%BB%E7%81%AF%E7%89%8710.png)
 
 ---
-
 
 ![幻灯片11.png](https://pic.leetcode-cn.com/1597914538-yfroRO-%E5%B9%BB%E7%81%AF%E7%89%8711.png)
 
 ---
 
-
 ![幻灯片12.png](https://pic.leetcode-cn.com/1597914538-wpzwVG-%E5%B9%BB%E7%81%AF%E7%89%8712.png)
 
 ---
-
 
 ![幻灯片13.png](https://pic.leetcode-cn.com/1597914538-eTNDtj-%E5%B9%BB%E7%81%AF%E7%89%8713.png)
 
 ---
 
-
 ![幻灯片14.png](https://pic.leetcode-cn.com/1597914538-AyRRDe-%E5%B9%BB%E7%81%AF%E7%89%8714.png)
 
 ---
-
 
 ![幻灯片15.png](https://pic.leetcode-cn.com/1597914538-CTojIY-%E5%B9%BB%E7%81%AF%E7%89%8715.png)
 
 ---
 
-
 ![幻灯片16.png](https://pic.leetcode-cn.com/1597914538-mxIubY-%E5%B9%BB%E7%81%AF%E7%89%8716.png)
 
 ---
-
 
 ![幻灯片17.png](https://pic.leetcode-cn.com/1597914538-ZnPNRW-%E5%B9%BB%E7%81%AF%E7%89%8717.png)
 
 ---
 
-
 ![幻灯片18.png](https://pic.leetcode-cn.com/1597914538-voxIfs-%E5%B9%BB%E7%81%AF%E7%89%8718.png)
 
 ---
-
 
 ![幻灯片19.png](https://pic.leetcode-cn.com/1597914538-xyeSxZ-%E5%B9%BB%E7%81%AF%E7%89%8719.png)
 
 ---
 
-
 ![幻灯片20.png](https://pic.leetcode-cn.com/1597914538-Gcnqba-%E5%B9%BB%E7%81%AF%E7%89%8720.png)
 
 ---
-
 
 ![幻灯片21.png](https://pic.leetcode-cn.com/1597914538-VYBADD-%E5%B9%BB%E7%81%AF%E7%89%8721.png)
 
 ---
 
-
 ![幻灯片22.png](https://pic.leetcode-cn.com/1597914538-wfFbbG-%E5%B9%BB%E7%81%AF%E7%89%8722.png)
 
 ---
-
 
 ![幻灯片23.png](https://pic.leetcode-cn.com/1597914538-gjhYeV-%E5%B9%BB%E7%81%AF%E7%89%8723.png)
 
 ---
 
-
 ![幻灯片24.png](https://pic.leetcode-cn.com/1597914538-dMiyLp-%E5%B9%BB%E7%81%AF%E7%89%8724.png)
 
 ---
-
 
 ![幻灯片25.png](https://pic.leetcode-cn.com/1597914538-tJmHAY-%E5%B9%BB%E7%81%AF%E7%89%8725.png)
 
 ---
 
-
 ![幻灯片26.png](https://pic.leetcode-cn.com/1597914538-CJPMHD-%E5%B9%BB%E7%81%AF%E7%89%8726.png)
 
 ---
-
 
 ![幻灯片27.png](https://pic.leetcode-cn.com/1597914538-zHblmY-%E5%B9%BB%E7%81%AF%E7%89%8727.png)
 
 ---
 
-
 ![幻灯片28.png](https://pic.leetcode-cn.com/1597914538-MApsVg-%E5%B9%BB%E7%81%AF%E7%89%8728.png)
 
 ---
 
-
 ![幻灯片29.png](https://pic.leetcode-cn.com/1597914538-YtEjVg-%E5%B9%BB%E7%81%AF%E7%89%8729.png)
 
 ---
-
 
 ![幻灯片30.png](https://pic.leetcode-cn.com/1597914538-ORsUfU-%E5%B9%BB%E7%81%AF%E7%89%8730.png)
 
 @slideend
 
 （早期写的题解配色较差，请大家谅解。）
-
 
 #### 理解树形结构
 
@@ -232,7 +203,6 @@ tags:
 
 ![image.png](https://pic.leetcode-cn.com/1599142979-VEuEDb-image.png)
 
-
 为了保证至少两个皇后不同时出现在 **同一主对角线方向** 或者 **同一副对角线方向**。检查策略是，只要「检测」到新摆放的「皇后」与已经摆放好的「皇后」冲突，就尝试摆放同一行的下一个位置，到行尾还不能放置皇后，**就退回到上一行**。
 
 可以像全排列 `used` 数组那样，再为 「主对角线（Main diagonal）」 和 「副对角线（Sub diagonal）」 设置相应的 **布尔数组变量**，只要排定一个 「皇后」 的位置，就需要占住对应的位置。
@@ -247,8 +217,8 @@ tags:
 
 **说明**：
 
-+ 将「行状态」、「主对角线状态」、「副对角线状态」 设置为成员变量，以避免递归方法参数冗长（参考代码 2、参考代码 3 类似看待）。至于是否有必要这样做，以后在项目开发中需要遵守项目文档的规定；
-+ Java 中 `Stack` 已经废弃，推荐使用 `ArrayDeque`，可以查阅文档。
+- 将「行状态」、「主对角线状态」、「副对角线状态」 设置为成员变量，以避免递归方法参数冗长（参考代码 2、参考代码 3 类似看待）。至于是否有必要这样做，以后在项目开发中需要遵守项目文档的规定；
+- Java 中 `Stack` 已经废弃，推荐使用 `ArrayDeque`，可以查阅文档。
 
 #### 方法：回溯搜索算法（深度优先遍历）
 
@@ -416,8 +386,7 @@ public class Solution {
 
 「力扣」第 1371 题：[每个元音包含偶数次的最长子字符串](https://leetcode-cn.com/problems/find-the-longest-substring-containing-vowels-in-even-counts/)，是每日一题出现过的状态压缩的经典问题，综合使用了很多算法思想和技巧，感兴趣的朋友可以复习一下。
 
-
-说明：使用 **状态压缩** 技巧，可以完成 「力扣」第 52 题：[「N皇后 II」](https://leetcode-cn.com/problems/n-queens-ii/)。
+说明：使用 **状态压缩** 技巧，可以完成 「力扣」第 52 题：[「N 皇后 II」](https://leetcode-cn.com/problems/n-queens-ii/)。
 
 ```java
 import java.util.ArrayDeque;
@@ -455,8 +424,8 @@ public class Solution {
 
         // 针对每一列，尝试是否可以放置
         for (int i = 0; i < n; i++) {
-            if (((col >> i) & 1) == 0 
-                    && ((main >> (row - i + n - 1)) & 1) == 0 
+            if (((col >> i) & 1) == 0
+                    && ((main >> (row - i + n - 1)) & 1) == 0
                     && ((sub >> (row + i)) & 1) == 0) {
                 path.addLast(i);
                 col ^= (1 << i);
@@ -488,30 +457,23 @@ public class Solution {
 
 #### 同类问题
 
-+ [37. 解数独](https://leetcode-cn.com/problems/sudoku-solver/)
-+ [679. 24 点游戏](https://leetcode-cn.com/problems/24-game/)
-+ [529. 扫雷游戏](https://leetcode-cn.com/problems/minesweeper/)
-+ [488. 祖玛游戏](https://leetcode-cn.com/problems/zuma-game/)
-
+- [37. 解数独](https://leetcode-cn.com/problems/sudoku-solver/)
+- [679. 24 点游戏](https://leetcode-cn.com/problems/24-game/)
+- [529. 扫雷游戏](https://leetcode-cn.com/problems/minesweeper/)
+- [488. 祖玛游戏](https://leetcode-cn.com/problems/zuma-game/)
 
 #### 参考资料
 
-+ liuyubobobo 老师在慕课网上开设的课程《玩转算法面试》[代码仓库](https://github.com/liuyubobobo/Play-with-Algorithm-Interview/blob/master/08-Recurion-and-Backstracking/Course%20Code%20(Java)/08-N-Queens/src/Solution.java)；
-+ 《剑指 Offer（第 2 版）》面试题 38 ：字符串的排列，相关题目 2。
-
+- liuyubobobo 老师在慕课网上开设的课程《玩转算法面试》[代码仓库](<https://github.com/liuyubobobo/Play-with-Algorithm-Interview/blob/master/08-Recurion-and-Backstracking/Course%20Code%20(Java)/08-N-Queens/src/Solution.java>)；
+- 《剑指 Offer（第 2 版）》面试题 38 ：字符串的排列，相关题目 2。
 
 #### 一个回溯算法可视化的小项目
 
 通过可视化帮助理解回溯算法的思想。写 Java 的朋友可以看看，这是我写的一个练习的项目，学习的价值不大，不用点赞。
 
-+ GitHub 地址：[Backtracking-Visualization](https://github.com/liweiwei1419/Backtracking-Visualization)
-
-
-
-
+- GitHub 地址：[Backtracking-Visualization](https://github.com/liweiwei1419/Backtracking-Visualization)
 
 ---
-
 
 分析：虽然看起来，这是一个人工智能的问题，但是我们的代码实现方式完全可以理解为暴力解法，只不过我们使用“递归回溯”方式的暴力解法，可以很快地判断暴力的过程中产生的结果是否符合条件，而不是把所有的暴力解都的出来以后再去掉不符合条件的；
 例如：我们在第 1 行第 1 列已经放置了元素，那么很显然，在第 2 行第 1 列和第 2 列放置元素的情况就已经被排除掉了，第 2 行的第 3 列我们发现可以放置元素，于是继续遍历下去；

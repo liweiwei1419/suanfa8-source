@@ -6,9 +6,8 @@ tags:
   - 回溯算法
 ---
 
-
-+ 题目链接：[1329. 将矩阵按对角线排序](https://leetcode-cn.com/problems/sort-the-matrix-diagonally/)；
-+ 题解链接：[暴力解法](https://leetcode-cn.com/problems/sort-the-matrix-diagonally/solution/bao-li-jie-fa-by-liweiwei1419/)。
+- 题目链接：[1329. 将矩阵按对角线排序](https://leetcode-cn.com/problems/sort-the-matrix-diagonally/)；
+- 题解链接：[暴力解法](https://leetcode-cn.com/problems/sort-the-matrix-diagonally/solution/bao-li-jie-fa-by-liweiwei1419/)。
 
 ## 题目描述
 
@@ -32,8 +31,6 @@ tags:
 输出：[[5,17,4,1,52,7],[11,11,25,45,8,69],[14,23,25,44,58,15],[22,27,31,36,50,66],[84,28,75,33,55,68]]
 ```
 
-
-
 **提示：**
 
 - `m == mat.length`
@@ -43,9 +40,9 @@ tags:
 
 ## 思路分析
 
-+ 使用的是 [N皇后](https://leetcode-cn.com/problems/n-queens) 问题的编码技巧：主对角线上元素的特点是：纵坐标 - 横坐标 = 定值
-+ 为了能够放进数组中，加上偏移 `m - 1` 。
-+ 两次遍历：第一次遍历把数据拷贝到对角线数组中，然后排序；第二次遍历把对角线数组写回原始数组（或者新开一个数组）均可。
+- 使用的是 [N 皇后](https://leetcode-cn.com/problems/n-queens) 问题的编码技巧：主对角线上元素的特点是：纵坐标 - 横坐标 = 定值
+- 为了能够放进数组中，加上偏移 `m - 1` 。
+- 两次遍历：第一次遍历把数据拷贝到对角线数组中，然后排序；第二次遍历把对角线数组写回原始数组（或者新开一个数组）均可。
 
 **参考代码**：
 
@@ -103,11 +100,7 @@ public class Solution {
 }
 ```
 
-
 **复杂度分析**：
 
-+ 时间复杂度：$O((M + N ) M \log (M))$，有 $M + N - 1$ 条对角线，每条对角线上的元素最多为行数 $M$。
-+ 空间复杂度：$O((M + N) * M)$，保存记录的结果集需要空间 $MN$，如果是原地修改，对角线数组占用空间是 $(M + N - 1) * M$。
-
-
-
+- 时间复杂度：$O((M + N ) M \log (M))$，有 $M + N - 1$ 条对角线，每条对角线上的元素最多为行数 $M$。
+- 空间复杂度：$O((M + N) * M)$，保存记录的结果集需要空间 $MN$，如果是原地修改，对角线数组占用空间是 $(M + N - 1) * M$。

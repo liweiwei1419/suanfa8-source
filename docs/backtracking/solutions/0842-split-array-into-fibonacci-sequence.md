@@ -9,7 +9,7 @@ tags:
   - 深度优先遍历
 ---
 
-+ 题目链接：[842. 将数组拆分成斐波那契序列](https://leetcode-cn.com/problems/split-array-into-fibonacci-sequence/)。
+- 题目链接：[842. 将数组拆分成斐波那契序列](https://leetcode-cn.com/problems/split-array-into-fibonacci-sequence/)。
 
 ## 题目描述
 
@@ -62,8 +62,6 @@ tags:
 输出: [110, 1, 111]
 解释: 输出 [11,0,11,11] 也同样被接受。
 ```
-
-
 
 **提示：**
 
@@ -133,4 +131,3 @@ public class Solution {
     }
 }
 ```
-

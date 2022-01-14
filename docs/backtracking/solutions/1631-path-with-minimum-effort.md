@@ -12,7 +12,7 @@ tags:
   - flood fill
 ---
 
-+ 题目链接：[1631. 最小体力消耗路径](https://leetcode-cn.com/problems/path-with-minimum-effort/)
+- 题目链接：[1631. 最小体力消耗路径](https://leetcode-cn.com/problems/path-with-minimum-effort/)
 
 ## 题目描述
 
@@ -32,8 +32,6 @@ tags:
 解释：路径 [1,3,5,3,5] 连续格子的差值绝对值最大为 2 。
 这条路径比路径 [1,2,2,2,5] 更优，因为另一条路径差值最大值为 3 。
 ```
-
-
 
 **示例 2：**
 
@@ -215,4 +213,3 @@ public class Solution {
     }
 }
 ```
-

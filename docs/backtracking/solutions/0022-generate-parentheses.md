@@ -10,10 +10,8 @@ tags:
   - 字符串
 ---
 
-
-+ 题目链接：[22. 括号生成](https://leetcode-cn.com/problems/generate-parentheses/)；
-+ 题解链接：[回溯算法（深度优先遍历）+ 广度优先遍历（Java）](https://leetcode-cn.com/problems/generate-parentheses/solution/hui-su-suan-fa-by-liweiwei1419/)。
-
+- 题目链接：[22. 括号生成](https://leetcode-cn.com/problems/generate-parentheses/)；
+- 题解链接：[回溯算法（深度优先遍历）+ 广度优先遍历（Java）](https://leetcode-cn.com/problems/generate-parentheses/solution/hui-su-suan-fa-by-liweiwei1419/)。
 
 ## 题目描述
 
@@ -33,8 +31,6 @@ tags:
 输出：["()"]
 ```
 
- 
-
 **提示：**
 
 - `1 <= n <= 8`
@@ -43,14 +39,13 @@ tags:
 
 这一类问题是在一棵隐式的树上求解，可以用深度优先遍历，也可以用广度优先遍历。
 一般用深度优先遍历。原因是：
-+ 代码好写，使用递归的方法，直接借助系统栈完成状态的转移；
-+ 广度优先遍历得自己编写结点类和借助队列。
+
+- 代码好写，使用递归的方法，直接借助系统栈完成状态的转移；
+- 广度优先遍历得自己编写结点类和借助队列。
 
 这里的「状态」是指程序执行到 **隐式树** 的某个结点的语言描述，在程序中用不同的 **变量** 加以区分。
 
-
 ![image.png](https://pic.leetcode-cn.com/1601344758-vWFaqx-image.png)
-
 
 ### 方法一：深度优先遍历
 
@@ -61,10 +56,10 @@ tags:
 
 画图以后，可以分析出的结论：
 
-+ 当前左右括号都有大于 $0$ 个可以使用的时候，才产生分支；
-+ 产生左分支的时候，只看当前是否还有左括号可以使用；
-+ 产生右分支的时候，还受到左分支的限制，右边剩余可以使用的括号数量一定得在严格大于左边剩余的数量的时候，才可以产生分支；
-+ 在左边和右边剩余的括号数都等于 $0$ 的时候结算。
+- 当前左右括号都有大于 $0$ 个可以使用的时候，才产生分支；
+- 产生左分支的时候，只看当前是否还有左括号可以使用；
+- 产生右分支的时候，还受到左分支的限制，右边剩余可以使用的括号数量一定得在严格大于左边剩余的数量的时候，才可以产生分支；
+- 在左边和右边剩余的括号数都等于 $0$ 的时候结算。
 
 **参考代码 1**：
 
@@ -117,6 +112,7 @@ public class Solution {
     }
 }
 ```
+
 ```Python []
 from typing import List
 
@@ -155,9 +151,7 @@ class Solution:
 ![image.png](https://pic.leetcode-cn.com/efbe574e5e6addcd1c9dc5c13a50c6f162a2b14a95d6aed2c394e18287a067fa-image.png){:width=500}
 {:align=center}
 
-
 下面是参考代码。
-
 
 **参考代码 2**：
 
@@ -207,6 +201,7 @@ public class Solution {
     }
 }
 ```
+
 ```Python []
 from typing import List
 
@@ -251,9 +246,10 @@ class Solution:
 下面的代码，读者可以把 `Queue` 换成 `Stack`，提交以后，也可以得到 Accept。
 
 读者可以通过比较：
-+ 广度优先遍历；
-+ 自己使用栈编写深度优先遍历；
-+ 使用系统栈的深度优先遍历（回溯算法）。
+
+- 广度优先遍历；
+- 自己使用栈编写深度优先遍历；
+- 使用系统栈的深度优先遍历（回溯算法）。
 
 来理解「回溯算法」作为一种「搜索算法」的合理性。
 
@@ -319,6 +315,7 @@ public class Solution {
     }
 }
 ```
+
 ```Java []
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -386,8 +383,9 @@ public class Solution {
         }
         return res;
     }
-} 
+}
 ```
+
 ```Java []
 import java.util.ArrayDeque;
 import java.util.ArrayList;
@@ -419,7 +417,7 @@ public class Solution {
             this.right = right;
         }
     }
-    
+
     // 注意：这是深度优先遍历
 
     public List<String> generateParenthesis(int n) {
@@ -450,4 +448,3 @@ public class Solution {
     }
 }
 ```
-

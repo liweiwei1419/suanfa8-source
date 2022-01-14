@@ -12,7 +12,7 @@ tags:
   - flood fill
 ---
 
-+ 题目链接：[733. 图像渲染](https://leetcode-cn.com/problems/flood-fill/)。
+- 题目链接：[733. 图像渲染](https://leetcode-cn.com/problems/flood-fill/)。
 
 ## 题目描述
 
@@ -29,11 +29,11 @@ tags:
 ![img](https://assets.leetcode.com/uploads/2021/06/01/flood1-grid.jpg)
 
 ```
-输入: 
+输入:
 image = [[1,1,1],[1,1,0],[1,0,1]]
 sr = 1, sc = 1, newColor = 2
 输出: [[2,2,2],[2,2,0],[2,0,1]]
-解析: 
+解析:
 在图像的正中间，(坐标(sr,sc)=(1,1)),
 在路径上所有符合条件的像素点的颜色都被更改成2。
 注意，右下角的像素没有更改为2，
@@ -242,4 +242,3 @@ public class Solution {
     }
 }
 ```
-

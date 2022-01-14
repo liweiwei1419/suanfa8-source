@@ -9,8 +9,8 @@ tags:
   - 深度优先遍历
 ---
 
-+ 题目链接：[113. 路径总和 II](https://leetcode-cn.com/problems/path-sum-ii/description/)；
-+ 题解链接：[回溯算法（Java）](https://leetcode-cn.com/problems/path-sum-ii/solution/hui-su-suan-fa-shen-du-you-xian-bian-li-zhuang-tai/)。
+- 题目链接：[113. 路径总和 II](https://leetcode-cn.com/problems/path-sum-ii/description/)；
+- 题解链接：[回溯算法（Java）](https://leetcode-cn.com/problems/path-sum-ii/solution/hui-su-suan-fa-shen-du-you-xian-bian-li-zhuang-tai/)。
 
 ## 题目描述
 
@@ -22,8 +22,6 @@ tags:
 
 ![img](https://assets.leetcode.com/uploads/2021/01/18/pathsumii1.jpg)
 
-
-
 ```
 输入：root = [5,4,8,11,null,13,4,7,2,null,null,5,1], targetSum = 22
 输出：[[5,4,11,2],[5,8,4,5]]
@@ -32,8 +30,6 @@ tags:
 **示例 2：**
 
 ![img](https://assets.leetcode.com/uploads/2021/01/18/pathsum2.jpg)
-
-
 
 ```
 输入：root = [1,2,3], targetSum = 5
@@ -46,8 +42,6 @@ tags:
 输入：root = [1,2], targetSum = 0
 输出：[]
 ```
-
-
 
 **提示：**
 
@@ -63,13 +57,13 @@ tags:
 
 归纳一下递归终止条件：
 
-+ 如果遍历到的结点为空结点，返回；
-+ 如果遍历到的叶子结点，且 `sum` 恰好等于叶子结点的值。
+- 如果遍历到的结点为空结点，返回；
+- 如果遍历到的叶子结点，且 `sum` 恰好等于叶子结点的值。
 
 下面是和 [@ohenry](/u/ohenry/) 讨论出来的 3 种写法，实际上都是一样的，区别仅仅在于一些细节上的处理，它们是：在当前结点非空的前提下，是否先减去当前结点的值，是否先把当前结点的值加入 `path` ，再判断递归终止条件，再递归调用。
 
-
 **参考代码 1**：
+
 ```Java []
 import java.util.ArrayDeque;
 import java.util.ArrayList;
@@ -95,7 +89,7 @@ public class Solution {
         if (node == null) {
             return;
         }
-        
+
         // 递归终止条件 2
         if (node.val == sum && node.left == null && node.right == null) {
             // 当前结点的值还没添加到列表中，所以要先添加，然后再移除
@@ -118,8 +112,8 @@ public class Solution {
 
 **复杂度分析**：
 
-+ 时间复杂度：$O(N)$ ，这里 $N$ 为二叉树的结点个数；
-+ 空间复杂度：取决于结果列表的长度。
+- 时间复杂度：$O(N)$ ，这里 $N$ 为二叉树的结点个数；
+- 空间复杂度：取决于结果列表的长度。
 
 还可以这样写：
 
@@ -180,9 +174,9 @@ public class Solution {
 **参考代码 3**：
 
 说明：
-+ 在对左右结点递归调用之前，先判断结点是否为空，左右结点非空才继续调用；
-+ 对比参考代码 1 和参考代码 2：**由于有可能一个结点只有左结点或者只有右结点**，因此递归调用完成以后，一定要 `path.removeLast();`。
 
+- 在对左右结点递归调用之前，先判断结点是否为空，左右结点非空才继续调用；
+- 对比参考代码 1 和参考代码 2：**由于有可能一个结点只有左结点或者只有右结点**，因此递归调用完成以后，一定要 `path.removeLast();`。
 
 ```Java []
 import java.util.ArrayDeque;
@@ -234,8 +228,8 @@ public class Solution {
 
 我们这里简单复习一下 Java 的参数传递机制：
 
-+ 如果参数是原始类型参数（Primitive Data Type Arguments）：在调用函数时，将实际参数通过复制的方式传递到函数中。如果在函数中对参数修改，将不会影响到实际参数；
-+ 如果参数是引用类型参数（Reference Data Type Arguments）：在调用函数时，将实际参数的 **内存地址** 复制到函数中。如果在函数中对参数修改，将会影响到实际参数。
+- 如果参数是原始类型参数（Primitive Data Type Arguments）：在调用函数时，将实际参数通过复制的方式传递到函数中。如果在函数中对参数修改，将不会影响到实际参数；
+- 如果参数是引用类型参数（Reference Data Type Arguments）：在调用函数时，将实际参数的 **内存地址** 复制到函数中。如果在函数中对参数修改，将会影响到实际参数。
 
 在当前这个问题中，原始类型参数是 `sum`，它在递归方法嵌套调用的过程中的行为是 **复制**，而 `path` 变量是引用类型参数，它在递归方法嵌套调用的过程中的行为是 **复制内存地址（而不是真正的列表变量）**。
 
@@ -243,11 +237,9 @@ public class Solution {
 
 ![image.png](https://pic.leetcode-cn.com/1601069091-JGRPAF-image.png)
 
-
 **参考代码 4**：（供对比，不建议这么写）
 
 注意：参考代码 4 的写法只能叫「深度优先遍历」，每一次向下传递，都会复制，复杂度很高，不能叫做「回溯算法」。
-
 
 ```Java []
 import java.util.ArrayList;
@@ -293,13 +285,12 @@ public class Solution {
 }
 ```
 
-
 ## 总结
 
-+ 回溯算法在 `res.add(new ArrayList<>(path));` 要套一层 `new ArrayList<>(path)`；
-+ 在深度优先遍历的过程中，不同的状态之间差别很小，因此状态重置很方便。**广度优先遍历在不同层次之间的状态会发生「跳跃」**，因此深度优先遍历可以成为强大的回溯搜索算法；
-+ 这里的状态是指完成一件事情进行到哪一个阶段，在上面的代码中：`path` 、`sum` 都是状态变量，`sum` 发生的行为是复制，所以无需重置，`path` 全程只有一份，因此在深度优先遍历从深层回到浅层以后，需要重置。
-
+- 回溯算法在 `res.add(new ArrayList<>(path));` 要套一层 `new ArrayList<>(path)`；
+- 在深度优先遍历的过程中，不同的状态之间差别很小，因此状态重置很方便。**广度优先遍历在不同层次之间的状态会发生「跳跃」**，因此深度优先遍历可以成为强大的回溯搜索算法；
+- 这里的状态是指完成一件事情进行到哪一个阶段，在上面的代码中：`path` 、`sum` 都是状态变量，`sum` 发生的行为是复制，所以无需重置，`path` 全程只有一份，因此在深度优先遍历从深层回到浅层以后，需要重置。
 
 ## 参考资料
-+ Java 的参数传递机制：[Oracle 官方 JavaSE 主页的入门教程](https://docs.oracle.com/javase/tutorial/java/javaOO/arguments.html)
+
+- Java 的参数传递机制：[Oracle 官方 JavaSE 主页的入门教程](https://docs.oracle.com/javase/tutorial/java/javaOO/arguments.html)

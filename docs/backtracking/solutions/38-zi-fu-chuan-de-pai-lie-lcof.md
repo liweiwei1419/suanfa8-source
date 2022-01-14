@@ -6,18 +6,14 @@ tags:
   - 回溯算法
 ---
 
-+ 题目链接：[剑指 Offer 38. 字符串的排列](https://leetcode-cn.com/problems/zi-fu-chuan-de-pai-lie-lcof/)；
-+ 题解链接：[回溯算法（Java）](https://leetcode-cn.com/problems/zi-fu-chuan-de-pai-lie-lcof/solution/hui-su-suan-fa-java-by-liweiwei1419/)。
+- 题目链接：[剑指 Offer 38. 字符串的排列](https://leetcode-cn.com/problems/zi-fu-chuan-de-pai-lie-lcof/)；
+- 题解链接：[回溯算法（Java）](https://leetcode-cn.com/problems/zi-fu-chuan-de-pai-lie-lcof/solution/hui-su-suan-fa-java-by-liweiwei1419/)。
 
 ## 题目描述
 
 输入一个字符串，打印出该字符串中字符的所有排列。
 
- 
-
 你可以以任意顺序返回这个字符串数组，但里面不能有重复元素。
-
-
 
 **示例:**
 
@@ -25,8 +21,6 @@ tags:
 输入：s = "abc"
 输出：["abc","acb","bac","bca","cab","cba"]
 ```
-
-
 
 **限制：**
 
@@ -36,17 +30,15 @@ tags:
 
 ---
 
-
-
 这道题其实就是字符上的全排列问题，使用回溯算法就可以完成。
 
 参考题解：
 
-+ 「力扣」第 46 题题解：[从全排列问题开始理解「回溯搜索」算法（深度优先遍历 + 状态重置 + 剪枝）](https://leetcode-cn.com/problems/permutations/solution/hui-su-suan-fa-python-dai-ma-java-dai-ma-by-liweiw/)；
+- 「力扣」第 46 题题解：[从全排列问题开始理解「回溯搜索」算法（深度优先遍历 + 状态重置 + 剪枝）](https://leetcode-cn.com/problems/permutations/solution/hui-su-suan-fa-python-dai-ma-java-dai-ma-by-liweiw/)；
 
 介绍了全排列问题的复杂度计算，但是本题有剪枝（和输入数据相关），所以讨论复杂度计算是复杂的，可以忽略。
 
-+ 「力扣」第 47 题题解：[回溯搜索 + 剪枝](https://leetcode-cn.com/problems/permutations-ii/solution/hui-su-suan-fa-python-dai-ma-java-dai-ma-by-liwe-2/)。
+- 「力扣」第 47 题题解：[回溯搜索 + 剪枝](https://leetcode-cn.com/problems/permutations-ii/solution/hui-su-suan-fa-python-dai-ma-java-dai-ma-by-liwe-2/)。
 
 **参考代码**：
 

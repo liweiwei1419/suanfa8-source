@@ -10,8 +10,8 @@ tags:
   - 字符串
 ---
 
-+ 题目链接：[1079. 活字印刷](https://leetcode-cn.com/problems/letter-tile-possibilities/)；
-+ 题解链接：[回溯算法（设计递归函数的返回值）](https://leetcode-cn.com/problems/letter-tile-possibilities/solution/hui-su-suan-fa-python-dai-ma-by-liweiwei1419/)
+- 题目链接：[1079. 活字印刷](https://leetcode-cn.com/problems/letter-tile-possibilities/)；
+- 题解链接：[回溯算法（设计递归函数的返回值）](https://leetcode-cn.com/problems/letter-tile-possibilities/solution/hui-su-suan-fa-python-dai-ma-by-liweiwei1419/)
 
 ## 题目描述
 
@@ -34,25 +34,19 @@ tags:
 输出：188
 ```
 
-
-
- **提示：**
+**提示：**
 
 1. `1 <= tiles.length <= 7`
 2. `tiles` 由大写英文字母组成
 
-
-
 **思路分析**：
 
-+ 这道题与「力扣」第 90 题 （[子集 II](https://leetcode-cn.com/problems/subsets-ii/)）很像，区别在于第 90 题的每一个解不强调顺序，而当前问题每一个解强调顺序，不同顺序构成了一个解。即：第 90 题是一个组合问题，当前问题是一个排列问题；
-+ 输入字符串还有多少字符可用是我们关注的，因此需要得到输入字符串的字符 **频数** 数组。题目最后说：「`tiles` 由大写英文字母组成」，因此可以使用长度为 `26` 的整型数组表示字符频数数组。
-
+- 这道题与「力扣」第 90 题 （[子集 II](https://leetcode-cn.com/problems/subsets-ii/)）很像，区别在于第 90 题的每一个解不强调顺序，而当前问题每一个解强调顺序，不同顺序构成了一个解。即：第 90 题是一个组合问题，当前问题是一个排列问题；
+- 输入字符串还有多少字符可用是我们关注的，因此需要得到输入字符串的字符 **频数** 数组。题目最后说：「`tiles` 由大写英文字母组成」，因此可以使用长度为 `26` 的整型数组表示字符频数数组。
 
 ## 方法：回溯算法
 
 由于是排列，我们不难想到，解决这个问题的思路应该是一个树形结构。不妨先从规模小的问题入手，以题目示例 1 的输入：`"AAB"` 为例，可以画出树形图如下。
-
 
 @slidestart
 
@@ -110,11 +104,10 @@ tags:
 
 我们只要一开始做一个字母频次统计，如果当前这个字母的频次为 $0$，就不再往下执行，然后回溯。在回溯的过程中一定要记得状态重置。
 
-
 **编码细节**：
 
-+ 递归终止条件是：所有的字符都使用完毕。递归终止条件隐含在递归方法中；
-+ 递归函数的返回值的含义：以当前字符频数数组 `count` 能够产生的排列的总数。
+- 递归终止条件是：所有的字符都使用完毕。递归终止条件隐含在递归方法中；
+- 递归函数的返回值的含义：以当前字符频数数组 `count` 能够产生的排列的总数。
 
 **参考代码**：
 
@@ -154,8 +147,10 @@ public class Solution {
         }
         return res;
     }
+
 }
-```
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Python">
@@ -179,10 +174,7 @@ class Solution:
             res += self.__dfs(counter)
             counter[i] += 1
         return res
-```
+````
+
 </CodeGroupItem>
 </CodeGroup>
-
-
-
-

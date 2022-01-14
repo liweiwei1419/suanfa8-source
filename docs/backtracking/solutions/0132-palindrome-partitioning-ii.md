@@ -6,9 +6,8 @@ tags:
   - 动态规划
 ---
 
-
-+ 题目链接：[132. 分割回文串 II](https://leetcode-cn.com/problems/palindrome-partitioning-ii)；
-+ 题解链接：[动态规划（Java、Python）](https://leetcode-cn.com/problems/palindrome-partitioning-ii/solution/dong-tai-gui-hua-by-liweiwei1419-2/)。
+- 题目链接：[132. 分割回文串 II](https://leetcode-cn.com/problems/palindrome-partitioning-ii)；
+- 题解链接：[动态规划（Java、Python）](https://leetcode-cn.com/problems/palindrome-partitioning-ii/solution/dong-tai-gui-hua-by-liweiwei1419-2/)。
 
 ## 题目描述
 
@@ -23,8 +22,6 @@ tags:
 输出：1
 解释：只需一次分割就可将 s 分割成 ["aa","b"] 这样两个回文子串。
 ```
-
-
 
 **示例 2：**
 
@@ -44,10 +41,6 @@ tags:
 
 - `1 <= s.length <= 2000`
 - `s` 仅由小写英文字母组成
-
-
-
-
 
 ### 方法一：动态规划
 
@@ -88,7 +81,6 @@ dp[i] = min([dp[j] + 1 for j in range(i) if s[j + 1, i] 是回文])
 #### 步骤 4：思考输出
 
 状态转移方程可以得到，并且状态就是题目问的，因此返回最后一个状态即可，即 `dp[len - 1]`。
-
 
 #### 步骤 5：思考是否可以优化空间
 
@@ -138,6 +130,7 @@ public class Solution {
     }
 }
 ```
+
 ```Python []
 class Solution:
     def minCut(self, s: str) -> int:
@@ -177,7 +170,7 @@ Python 代码在面对输入：
 
 上面判断回文串的时候方法 `checkPalindrome()` 是线性的，时间复杂度为 $O(N)$。我们可以借助「力扣」第 5 题：[最长回文子串](https://leetcode-cn.com/problems/longest-palindromic-substring) 的做法，依然是使用动态规划的做法，得到一个预处理的动态规划数组，这样就可以通过 $O(1)$ 的时间复杂度，得到一个子串是否是回文的结果了。
 
-**参考代码 2**： 
+**参考代码 2**：
 
 ```Java []
 public class Solution {
@@ -231,6 +224,7 @@ public class Solution {
     }
 }
 ```
+
 ```Python []
 class Solution:
     def minCut(self, s: str) -> int:
@@ -255,4 +249,3 @@ class Solution:
 
         return dp[size - 1]
 ```
-

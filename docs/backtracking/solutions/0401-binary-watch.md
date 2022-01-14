@@ -10,7 +10,7 @@ tags:
   - 字符串
 ---
 
-+ 题目链接：[401. 二进制手表](https://leetcode-cn.com/problems/binary-watch/)。
+- 题目链接：[401. 二进制手表](https://leetcode-cn.com/problems/binary-watch/)。
 
 ## 题目描述
 
@@ -22,7 +22,7 @@ tags:
 
 例如，上面的二进制手表读取 “3:25”。
 
-给定一个非负整数 *n* 代表当前 LED 亮着的数量，返回所有可能的时间。
+给定一个非负整数 _n_ 代表当前 LED 亮着的数量，返回所有可能的时间。
 
 **案例:**
 
@@ -106,4 +106,3 @@ public class Solution {
     }
 }
 ```
-

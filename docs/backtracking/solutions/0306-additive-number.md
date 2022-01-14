@@ -9,7 +9,7 @@ tags:
   - 深度优先遍历
 ---
 
-+ 题目链接：[「力扣」第 306 题：累加数（中等）](https://leetcode-cn.com/problems/additive-number/)。
+- 题目链接：[「力扣」第 306 题：累加数（中等）](https://leetcode-cn.com/problems/additive-number/)。
 
 ## 题目描述
 
@@ -25,7 +25,7 @@ tags:
 
 ```
 输入: "112358"
-输出: true 
+输出: true
 解释: 累加序列为: 1, 1, 2, 3, 5, 8 。1 + 1 = 2, 1 + 2 = 3, 2 + 3 = 5, 3 + 5 = 8
 ```
 
@@ -33,7 +33,7 @@ tags:
 
 ```
 输入: "199100199"
-输出: true 
+输出: true
 解释: 累加序列为: 1, 99, 100, 199。1 + 99 = 100, 99 + 100 = 199
 ```
 
@@ -78,4 +78,3 @@ public class Solution {
     }
 }
 ```
-

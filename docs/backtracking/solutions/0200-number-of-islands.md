@@ -9,8 +9,8 @@ tags:
   - 深度优先遍历
 ---
 
-+ 题目链接：[200. 岛屿数量](https://leetcode-cn.com/problems/number-of-islands)；
-+ 题解链接：[深度优先遍历、广度优先遍历、并查集（Java 代码）](https://leetcode-cn.com/problems/number-of-islands/solution/dfs-bfs-bing-cha-ji-python-dai-ma-java-dai-ma-by-l/)。
+- 题目链接：[200. 岛屿数量](https://leetcode-cn.com/problems/number-of-islands)；
+- 题解链接：[深度优先遍历、广度优先遍历、并查集（Java 代码）](https://leetcode-cn.com/problems/number-of-islands/solution/dfs-bfs-bing-cha-ji-python-dai-ma-java-dai-ma-by-l/)。
 
 ## 题目描述
 
@@ -24,7 +24,7 @@ tags:
 > 11010
 > 11000
 > 00000
-> 
+>
 > 输出: 1
 > ```
 >
@@ -36,14 +36,11 @@ tags:
 > 11000
 > 00100
 > 00011
-> 
+>
 > 输出: 3
 > ```
->
-
 
 ---
-
 
 ![image.png](https://pic.leetcode-cn.com/1603871471-CMwlLd-image.png){:width=600}{:align=center}
 
@@ -51,12 +48,11 @@ tags:
 
 这道题是可以使用一个经典的算法来解决的，那就是 Flood fill，以下的定义来自 [维基百科：Flood fill 词条](https://zh.wikipedia.org/wiki/Flood_fill)。
 
-> **Flood fill 算法**是从一个区域中提取若干个连通的点与其他相邻区域区分开（或分别染成不同颜色）的经典 [算法](https://zh.wikipedia.org/wiki/算法)。因为其思路类似洪水从一个区域扩散到所有能到达的区域而得名。在 [GNU Go](https://zh.wikipedia.org/wiki/GNU_Go) 和 [扫雷](https://zh.wikipedia.org/wiki/扫雷) 中，Flood Fill算法被用来计算需要被清除的区域。
+> **Flood fill 算法**是从一个区域中提取若干个连通的点与其他相邻区域区分开（或分别染成不同颜色）的经典 [算法](https://zh.wikipedia.org/wiki/算法)。因为其思路类似洪水从一个区域扩散到所有能到达的区域而得名。在 [GNU Go](https://zh.wikipedia.org/wiki/GNU_Go) 和 [扫雷](https://zh.wikipedia.org/wiki/扫雷) 中，Flood Fill 算法被用来计算需要被清除的区域。
 
 以下示意图来自维基百科（上面有地址）。
 
 <![Flood Fill-DFS.001.jpeg](https://pic.leetcode-cn.com/1603870451-ecjMtw-Flood%20Fill-DFS.001.jpeg),![Flood Fill-DFS.002.jpeg](https://pic.leetcode-cn.com/1603870451-nnploB-Flood%20Fill-DFS.002.jpeg),![Flood Fill-DFS.003.jpeg](https://pic.leetcode-cn.com/1603870451-QkYgWK-Flood%20Fill-DFS.003.jpeg),![Flood Fill-DFS.004.jpeg](https://pic.leetcode-cn.com/1603870451-NdOzJk-Flood%20Fill-DFS.004.jpeg),![Flood Fill-DFS.005.jpeg](https://pic.leetcode-cn.com/1603870451-pEgqPm-Flood%20Fill-DFS.005.jpeg),![Flood Fill-DFS.006.jpeg](https://pic.leetcode-cn.com/1603870451-rhAROy-Flood%20Fill-DFS.006.jpeg),![Flood Fill-DFS.007.jpeg](https://pic.leetcode-cn.com/1603870451-avOkCS-Flood%20Fill-DFS.007.jpeg),![Flood Fill-DFS.008.jpeg](https://pic.leetcode-cn.com/1603870451-DodpJp-Flood%20Fill-DFS.008.jpeg),![Flood Fill-DFS.009.jpeg](https://pic.leetcode-cn.com/1603870451-gRGSxW-Flood%20Fill-DFS.009.jpeg),![Flood Fill-DFS.010.jpeg](https://pic.leetcode-cn.com/1603870451-RRtwjk-Flood%20Fill-DFS.010.jpeg),![Flood Fill-DFS.011.jpeg](https://pic.leetcode-cn.com/1603870451-RxBfrt-Flood%20Fill-DFS.011.jpeg),![Flood Fill-DFS.012.jpeg](https://pic.leetcode-cn.com/1603870451-HvDwBU-Flood%20Fill-DFS.012.jpeg),![Flood Fill-DFS.013.jpeg](https://pic.leetcode-cn.com/1603870451-QfsQZz-Flood%20Fill-DFS.013.jpeg),![Flood Fill-DFS.014.jpeg](https://pic.leetcode-cn.com/1603870451-PduUEx-Flood%20Fill-DFS.014.jpeg),![Flood Fill-DFS.015.jpeg](https://pic.leetcode-cn.com/1603870451-vmfAHg-Flood%20Fill-DFS.015.jpeg),![Flood Fill-DFS.016.jpeg](https://pic.leetcode-cn.com/1603870451-LnPSkF-Flood%20Fill-DFS.016.jpeg),![Flood Fill-DFS.017.jpeg](https://pic.leetcode-cn.com/1603870451-LDJmiV-Flood%20Fill-DFS.017.jpeg),![Flood Fill-DFS.018.jpeg](https://pic.leetcode-cn.com/1603870451-rqUWMN-Flood%20Fill-DFS.018.jpeg),![Flood Fill-DFS.019.jpeg](https://pic.leetcode-cn.com/1603870451-CrkqqD-Flood%20Fill-DFS.019.jpeg),![Flood Fill-DFS.020.jpeg](https://pic.leetcode-cn.com/1603870451-QGHLVE-Flood%20Fill-DFS.020.jpeg),![Flood Fill-DFS.021.jpeg](https://pic.leetcode-cn.com/1603870451-dGTuor-Flood%20Fill-DFS.021.jpeg),![Flood Fill-DFS.022.jpeg](https://pic.leetcode-cn.com/1603870451-AIJmUd-Flood%20Fill-DFS.022.jpeg),![Flood Fill-DFS.023.jpeg](https://pic.leetcode-cn.com/1603870451-jShLzX-Flood%20Fill-DFS.023.jpeg),![Flood Fill-DFS.024.jpeg](https://pic.leetcode-cn.com/1603870451-nSogYJ-Flood%20Fill-DFS.024.jpeg)>
-
 
 <![Flood Fill-BFS.001.jpeg](https://pic.leetcode-cn.com/1603870602-EVHiDf-Flood%20Fill-BFS.001.jpeg),![Flood Fill-BFS.002.jpeg](https://pic.leetcode-cn.com/1603870602-tqcydM-Flood%20Fill-BFS.002.jpeg),![Flood Fill-BFS.003.jpeg](https://pic.leetcode-cn.com/1603870602-hjCGzO-Flood%20Fill-BFS.003.jpeg),![Flood Fill-BFS.004.jpeg](https://pic.leetcode-cn.com/1603870602-TVbBNf-Flood%20Fill-BFS.004.jpeg),![Flood Fill-BFS.005.jpeg](https://pic.leetcode-cn.com/1603870602-lMxwtN-Flood%20Fill-BFS.005.jpeg),![Flood Fill-BFS.006.jpeg](https://pic.leetcode-cn.com/1603870602-rxPGSE-Flood%20Fill-BFS.006.jpeg),![Flood Fill-BFS.007.jpeg](https://pic.leetcode-cn.com/1603870602-lhuDqz-Flood%20Fill-BFS.007.jpeg),![Flood Fill-BFS.008.jpeg](https://pic.leetcode-cn.com/1603870602-quWvAt-Flood%20Fill-BFS.008.jpeg)>
 
@@ -69,9 +65,8 @@ Flood，作为动词是「淹没；充满」 的意思，作为名词是「洪�
 
 那么每一次进行「深度优先遍历」 或者「广度优先遍历」 的条件就是：
 
-+ 这个格子是陆地 `1`；
-+ 这个格子不能是之前发现「岛屿」 的过程中执行了「深度优先遍历」 或者「广度优先遍历」 操作，而被标记的格子。
-
+- 这个格子是陆地 `1`；
+- 这个格子不能是之前发现「岛屿」 的过程中执行了「深度优先遍历」 或者「广度优先遍历」 操作，而被标记的格子。
 
 ### 方法一：深度优先遍历
 
@@ -142,7 +137,6 @@ public class Solution {
 ```
 
 **复杂度分析**：（未添加）
-
 
 ### 方法二：广度优先遍历
 
@@ -221,9 +215,9 @@ public class Solution {
 
 并查集中维护连通分量的个数，在遍历的过程中：
 
-+ 相邻的陆地（只需要向右看和向下看）合并，只要发生过合并，岛屿的数量就减少 $1$；
-+ 在遍历的过程中，同时记录空地的数量；
-+ 并查集中连通分量的个数 - 空地的个数，就是岛屿数量。
+- 相邻的陆地（只需要向右看和向下看）合并，只要发生过合并，岛屿的数量就减少 $1$；
+- 在遍历的过程中，同时记录空地的数量；
+- 并查集中连通分量的个数 - 空地的个数，就是岛屿数量。
 
 **参考代码 3**：
 
@@ -311,10 +305,7 @@ public class Solution {
 
 **复杂度分析**：（未添加）
 
-
-
 ---
-
 
 ### 方法一：深度优先遍历（回溯算法）
 
@@ -335,7 +326,7 @@ public class Solution {
             return 0;
         }
         cols = grid[0].length;
-        
+
         this.grid = grid;
         visited = new boolean[rows][cols];
         int count = 0;
@@ -532,6 +523,3 @@ public class Solution {
     }
 }
 ```
-
-
-

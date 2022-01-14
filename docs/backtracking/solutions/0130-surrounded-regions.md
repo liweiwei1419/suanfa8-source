@@ -12,8 +12,8 @@ tags:
   - flood fill
 ---
 
-+ 题目链接：[130. 被围绕的区域](https://leetcode-cn.com/problems/surrounded-regions/)；
-+ 题解链接：[深度优先遍历、广度优先遍历、并查集（Java）](https://leetcode-cn.com/problems/surrounded-regions/solution/dfs-bing-cha-ji-java-by-liweiwei1419/)。
+- 题目链接：[130. 被围绕的区域](https://leetcode-cn.com/problems/surrounded-regions/)；
+- 题解链接：[深度优先遍历、广度优先遍历、并查集（Java）](https://leetcode-cn.com/problems/surrounded-regions/solution/dfs-bing-cha-ji-java-by-liweiwei1419/)。
 
 ## 题目描述
 
@@ -36,9 +36,7 @@ tags:
 输出：[["X"]]
 ```
 
-
-
- **提示：**
+**提示：**
 
 - `m == board.length`
 - `n == board[i].length`
@@ -60,12 +58,13 @@ tags:
 
 具体步骤：
 
-+ 第 1 步：把四周有 `O`的地方都替换成为 `-`，在四周进行 `floodfill` 算法（染色）；
-+ 第 2 步：再从头到尾遍历一遍，把 `O` 换成 `X`，把 `-` 换成 `O`。
+- 第 1 步：把四周有 `O`的地方都替换成为 `-`，在四周进行 `floodfill` 算法（染色）；
+- 第 2 步：再从头到尾遍历一遍，把 `O` 换成 `X`，把 `-` 换成 `O`。
 
 具体请见 **参考代码 1** 和 **参考代码 2**：
 
 **参考代码 1**：
+
 ```Java []
 public class Solution {
 
@@ -136,8 +135,8 @@ public class Solution {
 
 **复杂度分析**：
 
-+ 时间复杂度：$O(rows * cols)$，其中 `rows` 和 `cols` 分别为矩阵的行数和列数，深度优先遍历过程中，每一个单元格至多只会被标记一次；
-+ 空间复杂度：$O(rows * cols)$，深度优先遍历最多使用的栈的开销为整个棋盘的大小。
+- 时间复杂度：$O(rows * cols)$，其中 `rows` 和 `cols` 分别为矩阵的行数和列数，深度优先遍历过程中，每一个单元格至多只会被标记一次；
+- 空间复杂度：$O(rows * cols)$，深度优先遍历最多使用的栈的开销为整个棋盘的大小。
 
 ### 方法二：广度优先遍历
 
@@ -213,12 +212,11 @@ public class Solution {
 
 ### 方法三：并查集
 
-+ 把四周的 `O` 都和一个虚拟结点合并起来；
-+ 在内部，只看两个方向，把 `O` 都合并起来；
-+ 最后再扫一次数组，不和「虚拟结点」连接的 `O` 都标记成 `X`。
+- 把四周的 `O` 都和一个虚拟结点合并起来；
+- 在内部，只看两个方向，把 `O` 都合并起来；
+- 最后再扫一次数组，不和「虚拟结点」连接的 `O` 都标记成 `X`。
 
 并查集的写法容易受 `floorfill` 的影响，用并查集的时候，其实 **只用每一行的右边和下面都看一下**，只针对 `O`，能合并就合并一下。
-
 
 **参考代码 3**：
 

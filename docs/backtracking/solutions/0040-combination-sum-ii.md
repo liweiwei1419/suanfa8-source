@@ -10,8 +10,8 @@ tags:
   - 剪枝
 ---
 
-+ 题目链接：[40. 组合总和 II](https://leetcode-cn.com/problems/combination-sum-ii/)；
-+ 题解链接：[回溯算法 + 剪枝（Java、Python）](https://leetcode-cn.com/problems/combination-sum-ii/solution/hui-su-suan-fa-jian-zhi-python-dai-ma-java-dai-m-3/)。
+- 题目链接：[40. 组合总和 II](https://leetcode-cn.com/problems/combination-sum-ii/)；
+- 题解链接：[回溯算法 + 剪枝（Java、Python）](https://leetcode-cn.com/problems/combination-sum-ii/solution/hui-su-suan-fa-jian-zhi-python-dai-ma-java-dai-m-3/)。
 
 ## 题目描述
 
@@ -19,7 +19,7 @@ tags:
 
 `candidates` 中的每个数字在每个组合中只能使用一次。
 
-**注意**：解集不能包含重复的组合。 
+**注意**：解集不能包含重复的组合。
 
 **示例 1:**
 
@@ -45,22 +45,22 @@ tags:
 ]
 ```
 
- **提示:**
+**提示:**
 
 - `1 <= candidates.length <= 100`
 - `1 <= candidates[i] <= 50`
 - `1 <= target <= 30`
 
 ::: danger 解题思路
-按顺序搜索，设置合理的变量，在搜索的过程中判断是否会出现重复集结果。重点理解对输入数组排序的作用和 **参考代码** 中大剪枝和小剪枝 的意思。 
+按顺序搜索，设置合理的变量，在搜索的过程中判断是否会出现重复集结果。重点理解对输入数组排序的作用和 **参考代码** 中大剪枝和小剪枝 的意思。
 :::
 
 ## 与第 39 题（组合之和）的差别
 
 这道题与上一问的区别在于：
 
-+ [第 39 题](https://leetcode-cn.com/problems/combination-sum/)：`candidates` 中的数字可以无限制重复被选取；
-+ 第 40 题：`candidates` 中的每个数字在每个组合中只能使用一次。
+- [第 39 题](https://leetcode-cn.com/problems/combination-sum/)：`candidates` 中的数字可以无限制重复被选取；
+- 第 40 题：`candidates` 中的每个数字在每个组合中只能使用一次。
 
 相同点是：相同数字列表的不同排列视为一个结果。
 
@@ -68,20 +68,20 @@ tags:
 
 为了使得解集不包含重复的组合。有以下 $2$ 种方案：
 
-+ 使用 **哈希表** 天然的去重功能，但是编码相对复杂；
-+ 这里我们使用和第 39 题和第 15 题（三数之和）类似的思路：不重复就需要按 **顺序** 搜索， **在搜索的过程中检测分支是否会出现重复结果** 。注意：这里的顺序不仅仅指数组 `candidates`  有序，还指按照一定顺序搜索结果。
+- 使用 **哈希表** 天然的去重功能，但是编码相对复杂；
+- 这里我们使用和第 39 题和第 15 题（三数之和）类似的思路：不重复就需要按 **顺序** 搜索， **在搜索的过程中检测分支是否会出现重复结果** 。注意：这里的顺序不仅仅指数组 `candidates` 有序，还指按照一定顺序搜索结果。
 
 ![image.png](https://pic.leetcode-cn.com/1599718525-iXEiiy-image.png)
 
 ![image.png](https://pic.leetcode-cn.com/1599716342-gGiISM-image.png)
 
-由第 39 题我们知道，数组 `candidates`  有序，也是 **深度优先遍历** 过程中实现「剪枝」的前提。
+由第 39 题我们知道，数组 `candidates` 有序，也是 **深度优先遍历** 过程中实现「剪枝」的前提。
 将数组先排序的思路来自于这个问题：去掉一个数组中重复的元素。很容易想到的方案是：先对数组 **升序** 排序，重复的元素一定不是排好序以后相同的连续数组区域的第 $1$ 个元素。也就是说，剪枝发生在：**同一层数值相同的结点第 $2$、$3$ ... 个结点，因为数值相同的第 $1$ 个结点已经搜索出了包含了这个数值的全部结果**，同一层的其它结点，候选数的个数更少，搜索出的结果一定不会比第 $1$ 个结点更多，并且是第 $1$ 个结点的子集。（说明：这段文字很拗口，大家可以结合具体例子，在纸上写写画画进行理解。）
 
-
 **说明**：
-+ 解决这个问题可能需要解决 **第 15 题**（[三数之和](https://leetcode-cn.com/problems/3sum/)）、 **第 47 题**（[全排列 II](https://leetcode-cn.com/problems/permutations-ii/solution/hui-su-suan-fa-python-dai-ma-java-dai-ma-by-liwe-2/)）、 **第 39 题**（[组合之和](https://leetcode-cn.com/problems/combination-sum/)）的经验；
-+ 对于如何去重还不太清楚的朋友，可以参考当前题解的 [高赞置顶评论](https://leetcode-cn.com/problems/combination-sum-ii/solution/hui-su-suan-fa-jian-zhi-python-dai-ma-java-dai-m-3/225211) 。
+
+- 解决这个问题可能需要解决 **第 15 题**（[三数之和](https://leetcode-cn.com/problems/3sum/)）、 **第 47 题**（[全排列 II](https://leetcode-cn.com/problems/permutations-ii/solution/hui-su-suan-fa-python-dai-ma-java-dai-ma-by-liwe-2/)）、 **第 39 题**（[组合之和](https://leetcode-cn.com/problems/combination-sum/)）的经验；
+- 对于如何去重还不太清楚的朋友，可以参考当前题解的 [高赞置顶评论](https://leetcode-cn.com/problems/combination-sum-ii/solution/hui-su-suan-fa-jian-zhi-python-dai-ma-java-dai-m-3/225211) 。
 
 感谢用户 [@rmokerone](/u/rmokerone/) 提供的 C++ 版本的参考代码。
 
@@ -157,8 +157,10 @@ public class Solution {
         List<List<Integer>> res = solution.combinationSum2(candidates, target);
         System.out.println("输出 => " + res);
     }
+
 }
-```
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Python">
@@ -193,10 +195,10 @@ class Solution:
         res = []
         dfs(0, [], target)
         return res
-```
+````
+
 </CodeGroupItem>
 </CodeGroup>
-
 
 打开上面的调试语句（Java 版代码），针对输入 `int[] candidates = new int[]{10, 1, 2, 7, 6, 1, 5};` 和 `int target = 8;` 控制台输出如下：
 
