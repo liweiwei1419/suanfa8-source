@@ -9,10 +9,8 @@ tags:
 
 ![0084](https://tva1.sinaimg.cn/large/008i3skNgy1gx91bijwzvj30p00anwf9.jpg)
 
-
-+ 题目链接：[84. 柱状图中最大的矩形](https://leetcode-cn.com/problems/largest-rectangle-in-histogram/)；
-+ 题解链接：[暴力解法、栈（单调栈、哨兵技巧）](https://leetcode-cn.com/problems/largest-rectangle-in-histogram/solution/bao-li-jie-fa-zhan-by-liweiwei1419/)。
-
+- 题目链接：[84. 柱状图中最大的矩形](https://leetcode-cn.com/problems/largest-rectangle-in-histogram/)；
+- 题解链接：[暴力解法、栈（单调栈、哨兵技巧）](https://leetcode-cn.com/problems/largest-rectangle-in-histogram/solution/bao-li-jie-fa-zhan-by-liweiwei1419/)。
 
 ::: info 阅读提示
 本题刚刚接触的时候会觉得有一点复杂，所以我在「视频讲解」和「文字题解」的部分用了一些例子来讲解为什么 **可以使用「栈」（因为解决这个问题恰好符合了「后进先出」的顺序）**。内容有一些多，但是讲解是层层递进的，稍微有点耐心就可以看完。
@@ -26,7 +24,7 @@ tags:
 
 ## 题目描述
 
-给定 *n* 个非负整数，用来表示柱状图中各个柱子的高度。每个柱子彼此相邻，且宽度为 1 。
+给定 _n_ 个非负整数，用来表示柱状图中各个柱子的高度。每个柱子彼此相邻，且宽度为 1 。
 
 求在该柱状图中，能够勾勒出来的矩形的最大面积。
 
@@ -49,7 +47,7 @@ tags:
 输出： 4
 ```
 
- **提示：**
+**提示：**
 
 - `1 <= heights.length <=105`
 - `0 <= heights[i] <= 104`
@@ -62,11 +60,10 @@ tags:
 
 ![image.png](https://pic.leetcode-cn.com/b4125f95419bc2306c7f16d1679c32e538b0b087bd9d0f70658c1a8528afca6b-image.png)
 
-
 为此，我们需要：
 
-+ 左边看一下，看最多能向左延伸多长，找到大于等于当前柱形高度的最左边元素的下标；
-+ 右边看一下，看最多能向右延伸多长；找到大于等于当前柱形高度的最右边元素的下标。
+- 左边看一下，看最多能向左延伸多长，找到大于等于当前柱形高度的最左边元素的下标；
+- 右边看一下，看最多能向右延伸多长；找到大于等于当前柱形高度的最右边元素的下标。
 
 对于每一个位置，我们都这样操作，得到一个矩形面积，求出它们的最大值。
 
@@ -105,8 +102,10 @@ public class Solution {
         }
         return res;
     }
+
 }
-```
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Python">
@@ -132,16 +131,15 @@ class Solution:
             max_width = right - left + 1
             res = max(res, max_width * cur_height)
         return res
-```
+````
+
 </CodeGroupItem>
 </CodeGroup>
 
-
 **复杂度分析**：
 
-+ 时间复杂度：$O(N^2)$，这里 $N$ 是输入数组的长度。
-+ 空间复杂度：$O(1)$。
-
+- 时间复杂度：$O(N^2)$，这里 $N$ 是输入数组的长度。
+- 空间复杂度：$O(1)$。
 
 看到时间复杂度为 $O(N^2)$ 和空间复杂度为 $O(1)$ 的组合，那么我们是不是可以一次遍历，不需要中心扩散就能够计算出每一个高度所对应的那个最大面积矩形的面积呢？
 
@@ -150,7 +148,6 @@ class Solution:
 ## 方法二：以空间换时间，可以使用的数据结构是栈
 
 说明：下面文字有点长，大家可以直接收看 [官方题解](https://leetcode-cn.com/problems/largest-rectangle-in-histogram/solution/zhu-zhuang-tu-zhong-zui-da-de-ju-xing-by-leetcode-/)。
-
 
 要搞清楚这个过程，请大家**一定要在纸上画图**，搞清楚一些细节，这样在编码的时候就不容易出错了。
 
@@ -169,7 +166,6 @@ class Solution:
 我们计算一下以 `2` 为高度的最大矩形的面积是 `2`。其实这个时候，求解这个问题的思路其实已经慢慢打开了。如果已经确定了一个柱形的高度，我们可以无视它，将它以虚框表示，如下图。
 
 ![image.png](https://pic.leetcode-cn.com/da72cf520eb05a42725a8982bb27e507f9213b257b6f32bd6ef4a49e1d416a1f-image.png)
-
 
 3、遍历到高度为 `5` 的柱形，同样的以当前看到柱形为高度的矩形的最大面积也是不知道的，因为我们还要看右边高度的情况。那么它的左右有没有可以确定的柱形呢？没有，这是因为 `5` 比 `1` 大，我们看后面马上就出现了 `6`，不管是 `1` 这个柱形还是 `5` 这个柱形，都还可以向右边扩展；
 
@@ -199,8 +195,6 @@ class Solution:
 
 ![image.png](https://pic.leetcode-cn.com/973788fa2d6407c9db41c100e9fa9b9ef00e4891343089773b716316c6f3e7f2-image.png)
 
-
-
 > 我们发现了，只要是遇到了当前柱形的高度比它上一个柱形的高度严格小的时候，一定可以确定它之前的某些柱形的最大宽度，并且确定的柱形宽度的顺序是从右边向左边。
 > 这个现象告诉我们，在遍历的时候需要记录的信息就是遍历到的柱形的下标，它一左一右的两个柱形的下标的差就是这个面积最大的矩形对应的最大宽度。
 
@@ -228,7 +222,6 @@ class Solution:
 
 （一次遍历完成以后。接下来考虑栈里的元素全部出栈。）
 
-
 接下来我们就要依次考虑还在栈里的柱形的高度。和刚才的方法一样，只不过这个时候右边没有比它高度还小的柱形了，这个时候计算宽度应该假设最右边还有一个下标为 `len` （这里等于 6） 的高度为 0 （或者 0.5，只要比 1 小）的柱形。
 
 ![image.png](https://pic.leetcode-cn.com/724e5cacfd2bd0aa2a748604678fab4027b4c519ecf802b6f766de7774ea6e48-image.png)
@@ -250,7 +243,6 @@ class Solution:
 ![image.png](https://pic.leetcode-cn.com/d8ec198e242fdf7edf23a1aa04a21dbde2d9e09b0c8d771d7e5c621c3321945d-image.png)
 
 这个算法经过一次遍历，在每一次计算最大宽度的时候，没有去遍历，而是使用了栈里存放的下标信息，以 $O(1)$ 的时间复杂度计算最大宽度。
-
 
 大家可以直接看到参考代码 3。
 
@@ -313,8 +305,10 @@ public class Solution {
         }
         return res;
     }
+
 }
-```
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Python">
@@ -356,15 +350,15 @@ class Solution:
             res = max(res, cur_height * cur_width)
 
         return res
-```
+````
+
 </CodeGroupItem>
 </CodeGroup>
 
-
 **复杂度分析**：
 
-+ 时间复杂度：$O(N)$，输入数组里的每一个元素入栈一次，出栈一次。
-+ 空间复杂度：$O(N)$，栈的空间最多为 $N$。
+- 时间复杂度：$O(N)$，输入数组里的每一个元素入栈一次，出栈一次。
+- 空间复杂度：$O(N)$，栈的空间最多为 $N$。
 
 以上参考代码 2 需要考虑两种特殊的情况：
 
@@ -382,8 +376,6 @@ class Solution:
 2. 右边的柱形（第 2 个柱形）也正是因为它一定比输入数组里任何一个元素小，它会让所有输入数组里的元素出栈（第 1 个哨兵元素除外）。
 
 这里栈对应到高度，呈单调增加不减的形态，因此称为**单调栈（Monotone Stack）**。它是暴力解法的优化，计算每个柱形的高度对应的最大矩形的顺序由出栈顺序决定。
-
-
 
 **参考代码 3**：加了哨兵的写法。
 
@@ -419,7 +411,7 @@ public class Solution {
         Deque<Integer> stack = new ArrayDeque<>(len);
         // 先放入哨兵，在循环里就不用做非空判断
         stack.addLast(0);
-        
+
         for (int i = 1; i < len; i++) {
             while (heights[i] < heights[stack.peekLast()]) {
                 int curHeight = heights[stack.pollLast()];
@@ -438,8 +430,10 @@ public class Solution {
         int res = solution.largestRectangleArea(heights);
         System.out.println(res);
     }
+
 }
-```
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Python">
@@ -471,25 +465,23 @@ if __name__ == '__main__':
     solution = Solution()
     res = solution.largestRectangleArea(heights)
     print(res)
-```
+````
+
 </CodeGroupItem>
 </CodeGroup>
 
 **复杂度分析**：（同上）
 
-
 以下列出了单调栈的问题，供大家参考。
 
-
-| 序号 | 题目                                                         | 题解                                                         |
-| ---- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 1    | [42. 接雨水（困难）](https://leetcode-cn.com/problems/trapping-rain-water/) | [暴力解法、优化、双指针、单调栈](https://leetcode-cn.com/problems/trapping-rain-water/solution/bao-li-jie-fa-yi-kong-jian-huan-shi-jian-zhi-zhen-/) |
-| 2    | [739. 每日温度（中等）](https://leetcode-cn.com/problems/daily-temperatures/) | [暴力解法 + 单调栈](https://leetcode-cn.com/problems/daily-temperatures/solution/bao-li-jie-fa-dan-diao-zhan-by-liweiwei1419/) |
-| 3    | [496. 下一个更大元素 I（简单）](https://leetcode-cn.com/problems/next-greater-element-i/) | [暴力解法、单调栈](https://leetcode-cn.com/problems/next-greater-element-i/solution/bao-li-jie-fa-dan-diao-zhan-by-liweiwei1419-2/) |
-| 4    | [316. 去除重复字母（困难）](https://leetcode-cn.com/problems/remove-duplicate-letters/) | [栈 + 哨兵技巧（Java、C++、Python）](https://leetcode-cn.com/problems/remove-duplicate-letters/solution/zhan-by-liweiwei1419/) |
-| 5    | [901. 股票价格跨度（中等）](https://leetcode-cn.com/problems/online-stock-span/) | [「力扣」第 901 题：股票价格跨度（单调栈）](https://blog.csdn.net/lw_power/article/details/103957702) |
-| 6    | [402. 移掉K位数字](https://leetcode-cn.com/problems/remove-k-digits/) |                                                              |
-| 7    | [581. 最短无序连续子数组](https://leetcode-cn.com/problems/shortest-unsorted-continuous-subarray/) |                                                              |
-
+| 序号 | 题目                                                                                               | 题解                                                                                                                                                |
+| ---- | -------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1    | [42. 接雨水（困难）](https://leetcode-cn.com/problems/trapping-rain-water/)                        | [暴力解法、优化、双指针、单调栈](https://leetcode-cn.com/problems/trapping-rain-water/solution/bao-li-jie-fa-yi-kong-jian-huan-shi-jian-zhi-zhen-/) |
+| 2    | [739. 每日温度（中等）](https://leetcode-cn.com/problems/daily-temperatures/)                      | [暴力解法 + 单调栈](https://leetcode-cn.com/problems/daily-temperatures/solution/bao-li-jie-fa-dan-diao-zhan-by-liweiwei1419/)                      |
+| 3    | [496. 下一个更大元素 I（简单）](https://leetcode-cn.com/problems/next-greater-element-i/)          | [暴力解法、单调栈](https://leetcode-cn.com/problems/next-greater-element-i/solution/bao-li-jie-fa-dan-diao-zhan-by-liweiwei1419-2/)                 |
+| 4    | [316. 去除重复字母（困难）](https://leetcode-cn.com/problems/remove-duplicate-letters/)            | [栈 + 哨兵技巧（Java、C++、Python）](https://leetcode-cn.com/problems/remove-duplicate-letters/solution/zhan-by-liweiwei1419/)                      |
+| 5    | [901. 股票价格跨度（中等）](https://leetcode-cn.com/problems/online-stock-span/)                   | [「力扣」第 901 题：股票价格跨度（单调栈）](https://blog.csdn.net/lw_power/article/details/103957702)                                               |
+| 6    | [402. 移掉 K 位数字](https://leetcode-cn.com/problems/remove-k-digits/)                            |                                                                                                                                                     |
+| 7    | [581. 最短无序连续子数组](https://leetcode-cn.com/problems/shortest-unsorted-continuous-subarray/) |                                                                                                                                                     |
 
 这里感谢 [@chwma](/u/chwma/) 朋友提供资料。

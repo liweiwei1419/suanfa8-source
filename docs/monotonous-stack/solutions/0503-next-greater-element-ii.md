@@ -7,9 +7,8 @@ tags:
   - 单调栈
 ---
 
-+ 题目链接：[503. 下一个更大元素 II](https://leetcode-cn.com/problems/next-greater-element-ii/)；
-+ 题解链接：[单调栈](https://leetcode-cn.com/problems/next-greater-element-ii/solution/dan-diao-zhan-by-liweiwei1419/)。
-
+- 题目链接：[503. 下一个更大元素 II](https://leetcode-cn.com/problems/next-greater-element-ii/)；
+- 题解链接：[单调栈](https://leetcode-cn.com/problems/next-greater-element-ii/solution/dan-diao-zhan-by-liweiwei1419/)。
 
 ## 题目描述
 
@@ -21,7 +20,7 @@ tags:
 输入: [1,2,1]
 输出: [2,-1,2]
 解释: 第一个 1 的下一个更大的数是 2；
-数字 2 找不到下一个更大的数； 
+数字 2 找不到下一个更大的数；
 第二个 1 的下一个最大的数需要循环搜索，结果也是 2。
 ```
 
@@ -63,7 +62,7 @@ class Solution {
             if (i < len) {
                 stack.push(i);
             }
-            
+
             // 栈中元素为空的时候，后面的元素就没有必要看了
             if (stack.isEmpty()) {
                 break;
@@ -173,6 +172,3 @@ public class Solution {
     }
 }
 ```
-
-
-

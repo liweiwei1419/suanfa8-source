@@ -7,9 +7,8 @@ tags:
   - 单调栈
 ---
 
-+ 题目链接：[496. 下一个更大元素 I](https://leetcode-cn.com/problems/next-greater-element-i/)；
-+ 题解链接：[暴力解法、单调栈](https://leetcode-cn.com/problems/next-greater-element-i/solution/bao-li-jie-fa-dan-diao-zhan-by-liweiwei1419-2/)。
-
+- 题目链接：[496. 下一个更大元素 I](https://leetcode-cn.com/problems/next-greater-element-i/)；
+- 题解链接：[暴力解法、单调栈](https://leetcode-cn.com/problems/next-greater-element-i/solution/bao-li-jie-fa-dan-diao-zhan-by-liweiwei1419-2/)。
 
 ## 题目描述
 
@@ -95,8 +94,8 @@ public class Solution {
 
 **复杂度分析**：
 
-+ 时间复杂度：$O(NM)$，这里 $N$ 是数组 `nums1` 的长度， $M$ 是数组 `nums2` 的长度；
-+ 空间复杂度：$O(N)$。
+- 时间复杂度：$O(NM)$，这里 $N$ 是数组 `nums1` 的长度， $M$ 是数组 `nums2` 的长度；
+- 空间复杂度：$O(N)$。
 
 ## 方法二：单调栈
 
@@ -106,8 +105,8 @@ public class Solution {
 
 原因：
 
-+ 我们只关心那个最近的问题，后进先出，符合栈的使用场景；
-+ 又有大小关系，因此栈中每时每刻的形态就是「单调」的。
+- 我们只关心那个最近的问题，后进先出，符合栈的使用场景；
+- 又有大小关系，因此栈中每时每刻的形态就是「单调」的。
 
 2、编码技巧：画图模拟栈是如何工作的，帮助编码和思考细节。
 
@@ -122,7 +121,6 @@ key：弹出元素，value：入栈元素。
 （2）最后遍历一次数组 `nums1` 从哈希表中获得结果。
 
 ![image.png](https://pic.leetcode-cn.com/04f5011ec49c9791cb92165feefaa75bc0c9de03dad3cc76df465b4039da9c25-image.png)
-
 
 **参考代码 2**：
 
@@ -160,8 +158,5 @@ public class Solution {
 }
 ```
 
-+ 时间复杂度：$O(N + M)$，分别遍历数组 `nums1` 和数组 `nums2` 各一次即可；
-+ 空间复杂度：$O(N)$。
-
-
-
+- 时间复杂度：$O(N + M)$，分别遍历数组 `nums1` 和数组 `nums2` 各一次即可；
+- 空间复杂度：$O(N)$。
