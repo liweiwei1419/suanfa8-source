@@ -7,8 +7,8 @@ tags:
   - 字符串
 ---
 
-+ 题目链接：[13. 罗马数字转整数](https://leetcode-cn.com/problems/roman-to-integer/)；
-+ 题解链接：[通过哈希表查对应关系 + 特殊值处理（Python 代码、Java 代码）](https://leetcode-cn.com/problems/roman-to-integer/solution/tong-guo-ha-xi-biao-cha-dui-ying-guan-xi-te-shu-zh/)。
+- 题目链接：[13. 罗马数字转整数](https://leetcode-cn.com/problems/roman-to-integer/)；
+- 题解链接：[通过哈希表查对应关系 + 特殊值处理（Python 代码、Java 代码）](https://leetcode-cn.com/problems/roman-to-integer/solution/tong-guo-ha-xi-biao-cha-dui-ying-guan-xi-te-shu-zh/)。
 
 ## 题目描述
 
@@ -30,12 +30,10 @@ M             1000
 通常情况下，罗马数字中小的数字在大的数字的右边。但也存在特例，例如 4 不写做 `IIII`，而是 `IV`。数字 1 在数字 5 的左边，所表示的数等于大数 5 减小数 1 得到的数值 4 。同样地，数字 9 表示为 `IX`。这个特殊的规则只适用于以下六种情况：
 
 - `I` 可以放在 `V` (5) 和 `X` (10) 的左边，来表示 4 和 9。
-- `X` 可以放在 `L` (50) 和 `C` (100) 的左边，来表示 40 和 90。 
+- `X` 可以放在 `L` (50) 和 `C` (100) 的左边，来表示 40 和 90。
 - `C` 可以放在 `D` (500) 和 `M` (1000) 的左边，来表示 400 和 900。
 
 给定一个罗马数字，将其转换成整数。
-
- 
 
 **示例 1:**
 
@@ -93,7 +91,6 @@ M             1000
 
 **参考代码**：
 
-
 <CodeGroup>
 <CodeGroupItem title="Java">
 ```java
@@ -132,8 +129,10 @@ public class Solution {
         }
         return res;
     }
+
 }
-```
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Python3">
@@ -166,15 +165,12 @@ class Solution:
             else:
                 res += cur
         return res
-```
+````
+
 </CodeGroupItem>
 </CodeGroup>
 
-
-
-
 **复杂度分析**：
 
-+ 时间复杂度：$O(N)$，这里 $N$ 是罗马数字的字符个数，全部看过一遍以后，就得得到数字，故是线性时间复杂度；
-+ 空间复杂度：$O(1)$，这里哈希表的长度是固定的，且算法使用到的临时变量的个数也是常数，故空间复杂度是 $O(1)$。
-
+- 时间复杂度：$O(N)$，这里 $N$ 是罗马数字的字符个数，全部看过一遍以后，就得得到数字，故是线性时间复杂度；
+- 空间复杂度：$O(1)$，这里哈希表的长度是固定的，且算法使用到的临时变量的个数也是常数，故空间复杂度是 $O(1)$。

@@ -6,7 +6,7 @@ tags:
   - 数组
 ---
 
-+ 题目链接：[461. 汉明距离](https://leetcode-cn.com/problems/hamming-distance)。
+- 题目链接：[461. 汉明距离](https://leetcode-cn.com/problems/hamming-distance)。
 
 ## 题目描述
 
@@ -33,12 +33,9 @@ tags:
 输出：1
 ```
 
-
-
 **提示：**
 
 - `0 <= x, y <= 2^31 - 1`
-
 
 **参考代码**：
 
@@ -98,7 +95,10 @@ class Solution {
         }
         return sum;
     }
+
 }
+
 ```
 </CodeGroupItem>
 </CodeGroup>
+```

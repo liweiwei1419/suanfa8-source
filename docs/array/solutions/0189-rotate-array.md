@@ -6,7 +6,7 @@ tags:
   - 字符串
 ---
 
-+ 题目链接：[189. 旋转数组](https://leetcode-cn.com/problems/rotate-array/description/) 。
+- 题目链接：[189. 旋转数组](https://leetcode-cn.com/problems/rotate-array/description/) 。
 
 ## 题目描述
 
@@ -28,7 +28,7 @@ tags:
 ```
 输入: [-1,-100,3,99] 和 k = 2
 输出: [3,99,-1,-100]
-解释: 
+解释:
 向右旋转 1 步: [99,-1,-100,3]
 向右旋转 2 步: [3,99,-1,-100]
 ```
@@ -45,7 +45,6 @@ tags:
 - 你可以使用空间复杂度为 `O(1)` 的 **原地** 算法解决这个问题吗？
 
 **参考代码**：
-
 
 <CodeGroup>
 <CodeGroupItem title="Java">
@@ -84,8 +83,10 @@ public class Solution {
         nums[index1] = nums[index2];
         nums[index2] = temp;
     }
+
 }
-```
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Python3">
@@ -117,6 +118,7 @@ class Solution:
             nums[index1], nums[index2] = nums[index2], nums[index1]
             index1 += 1
             index2 -= 1
-```
+````
+
 </CodeGroupItem>
 </CodeGroup>

@@ -6,8 +6,7 @@ tags:
   - 数组
 ---
 
-+ 题目链接：[836. 矩形重叠](https://leetcode-cn.com/problems/rectangle-overlap/)。
-
+- 题目链接：[836. 矩形重叠](https://leetcode-cn.com/problems/rectangle-overlap/)。
 
 ## 题目描述
 
@@ -16,8 +15,6 @@ tags:
 如果相交的面积为 **正** ，则称两矩形重叠。需要明确的是，只在角或边接触的两个矩形不构成重叠。
 
 给出两个矩形 `rec1` 和 `rec2` 。如果它们重叠，返回 `true`；否则，返回 `false` 。
-
-
 
 **示例 1：**
 
@@ -39,8 +36,6 @@ tags:
 输入：rec1 = [0,0,1,1], rec2 = [2,2,3,3]
 输出：false
 ```
-
-
 
 **提示：**
 
@@ -77,10 +72,7 @@ tags:
 
 思路：从判断两条线段是否有交点推广开来。
 
-
 **参考代码**：
-
-
 
 ```java
 public class Solution {
@@ -92,10 +84,3 @@ public class Solution {
     }
 }
 ```
-
-
-
-
-
-
-

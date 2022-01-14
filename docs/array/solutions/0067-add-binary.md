@@ -6,9 +6,8 @@ tags:
   - 数组
 ---
 
-
-+ 题目链接：[67. 二进制求和](https://leetcode-cn.com/problems/add-binary)；
-+ 题解链接：[模拟「二进制」竖式加法](https://leetcode-cn.com/problems/add-binary/solution/mo-shi-er-jin-zhi-shu-shi-jia-fa-by-liweiwei1419/)。
+- 题目链接：[67. 二进制求和](https://leetcode-cn.com/problems/add-binary)；
+- 题解链接：[模拟「二进制」竖式加法](https://leetcode-cn.com/problems/add-binary/solution/mo-shi-er-jin-zhi-shu-shi-jia-fa-by-liweiwei1419/)。
 
 ## 题目描述
 
@@ -91,8 +90,10 @@ public class Solution {
         // 最后不要忘记再反转一次
         return res.reverse().toString();
     }
+
 }
-```
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Python3">
@@ -124,6 +125,7 @@ class Solution(object):
         if carry == 1:
             return '1' + res
         return res
-```
+````
+
 </CodeGroupItem>
 </CodeGroup>

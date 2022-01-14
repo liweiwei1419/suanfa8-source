@@ -6,7 +6,7 @@ tags:
   - 数组
 ---
 
-+ 题目链接：[66. 加一](https://leetcode-cn.com/problems/plus-one)。
+- 题目链接：[66. 加一](https://leetcode-cn.com/problems/plus-one)。
 
 ## 题目描述
 
@@ -103,6 +103,8 @@ class Solution(object):
             else:
                 digits[index] = 0
         return [1] + digits
+
 ```
 </CodeGroupItem>
 </CodeGroup>
+```

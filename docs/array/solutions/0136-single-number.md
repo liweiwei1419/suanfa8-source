@@ -6,7 +6,7 @@ tags:
   - 数组
 ---
 
-+ 题目链接：[136. 只出现一次的数字](https://leetcode-cn.com/problems/single-number/)。
+- 题目链接：[136. 只出现一次的数字](https://leetcode-cn.com/problems/single-number/)。
 
 ## 题目描述
 
@@ -57,8 +57,10 @@ public class Solution {
         }
         return res;
     }
+
 }
-```
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Java">
@@ -74,6 +76,7 @@ public class Solution {
         return res;
     }
 }
-```
+````
+
 </CodeGroupItem>
 </CodeGroup>

@@ -7,9 +7,8 @@ tags:
   - 数组
 ---
 
-
-+ 题目链接：[8. 字符串转换整数 (atoi)](https://leetcode-cn.com/problems/string-to-integer-atoi/)；
-+ 题解链接：[尽量不使用库函数、一次遍历（Java）](https://leetcode-cn.com/problems/string-to-integer-atoi/solution/jin-liang-bu-shi-yong-ku-han-shu-nai-xin-diao-shi-/)。
+- 题目链接：[8. 字符串转换整数 (atoi)](https://leetcode-cn.com/problems/string-to-integer-atoi/)；
+- 题解链接：[尽量不使用库函数、一次遍历（Java）](https://leetcode-cn.com/problems/string-to-integer-atoi/solution/jin-liang-bu-shi-yong-ku-han-shu-nai-xin-diao-shi-/)。
 
 ## 题目描述
 
@@ -109,8 +108,6 @@ tags:
 由于 -91283472332 小于范围 [-2^31, 2^31 - 1] 的下界，最终结果被截断为 -2^31 = -2147483648 。
 ```
 
-
-
 **提示：**
 
 - `0 <= s.length <= 200`
@@ -128,12 +125,12 @@ tags:
 
 在这里我罗列几个要点：
 
-+ 根据示例 1，需要去掉前导空格；
-+ 根据示例 2，需要判断第 1 个字符为 `+` 和 `-` 的情况，因此，可以设计一个变量 `sign`，初始化的时候为 `1`，如果遇到 `-` ，将 `sign` 修正为 `-1`；
-+ 判断是否是数字，可以使用字符的 ASCII 码数值进行比较，即 `0 <= c <= '9'`；
-+ 根据示例 3 和示例 4 ，在遇到第 1 个不是数字的字符的情况下，转换停止，退出循环；
-+ 根据示例 5，如果转换以后的数字超过了 `int` 类型的范围，需要截取。这里不能将结果 `res` 变量设计为 `long` 类型，**注意**：由于输入的字符串转换以后也有可能超过 `long` 类型，因此需要在循环内部就判断是否越界，只要越界就退出循环，这样也可以减少不必要的计算；
-+ 由于涉及下标访问，因此全程需要考虑数组下标是否越界的情况。
+- 根据示例 1，需要去掉前导空格；
+- 根据示例 2，需要判断第 1 个字符为 `+` 和 `-` 的情况，因此，可以设计一个变量 `sign`，初始化的时候为 `1`，如果遇到 `-` ，将 `sign` 修正为 `-1`；
+- 判断是否是数字，可以使用字符的 ASCII 码数值进行比较，即 `0 <= c <= '9'`；
+- 根据示例 3 和示例 4 ，在遇到第 1 个不是数字的字符的情况下，转换停止，退出循环；
+- 根据示例 5，如果转换以后的数字超过了 `int` 类型的范围，需要截取。这里不能将结果 `res` 变量设计为 `long` 类型，**注意**：由于输入的字符串转换以后也有可能超过 `long` 类型，因此需要在循环内部就判断是否越界，只要越界就退出循环，这样也可以减少不必要的计算；
+- 由于涉及下标访问，因此全程需要考虑数组下标是否越界的情况。
 
 **特别注意**：
 
@@ -142,7 +139,6 @@ tags:
 2、Java 、Python 和 C++ 字符串的设计都是不可变的，即使用 `trim()` 会产生新的变量，因此我们**尽量不使用库函数，使用一个变量 `index` 去做遍历，这样遍历完成以后就得到转换以后的数值**。
 
 **参考代码 1**：
-
 
 <CodeGroup>
 <CodeGroupItem title="Java">
@@ -209,8 +205,10 @@ public class Solution {
         System.out.println(Integer.MAX_VALUE);
         System.out.println(Integer.MIN_VALUE);
     }
+
 }
-```
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="C++">
@@ -268,13 +266,12 @@ public:
         return res;
     }
 };
-```
+````
+
 </CodeGroupItem>
 </CodeGroup>
 
-
 **复杂度分析**：
 
-+ 时间复杂度：$O(N)$，这里 $N$ 为字符串的长度；
-+ 空间复杂度：$O(1)$。
-
+- 时间复杂度：$O(N)$，这里 $N$ 为字符串的长度；
+- 空间复杂度：$O(1)$。

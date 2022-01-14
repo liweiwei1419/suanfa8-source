@@ -7,8 +7,8 @@ tags:
   - 原地哈希
 ---
 
-+ 题目链接：[448. 找到所有数组中消失的数字](https://leetcode-cn.com/problems/find-all-numbers-disappeared-in-an-array/)；
-+ 题解链接：[桶排序 + 基于“异或运算”交换两个变量的值（Python 代码、Java 代码）](https://leetcode-cn.com/problems/find-all-numbers-disappeared-in-an-array/solution/tong-pai-xu-ji-yu-yi-huo-yun-suan-jiao-huan-liang-/)。
+- 题目链接：[448. 找到所有数组中消失的数字](https://leetcode-cn.com/problems/find-all-numbers-disappeared-in-an-array/)；
+- 题解链接：[桶排序 + 基于“异或运算”交换两个变量的值（Python 代码、Java 代码）](https://leetcode-cn.com/problems/find-all-numbers-disappeared-in-an-array/solution/tong-pai-xu-ji-yu-yi-huo-yun-suan-jiao-huan-liang-/)。
 
 ## 题目描述
 
@@ -28,7 +28,7 @@ tags:
 输出：[2]
 ```
 
- **提示：**
+**提示：**
 
 - `n == nums.length`
 - `1 <= n <= 10^5`
@@ -40,14 +40,13 @@ tags:
 
 **思路分析**：
 
-+ 比较容易想到的思路是“桶排序”，“桶排序”的思想很简单，“一个萝卜一个坑”，但这道题比较让人头疼的是“不使用额外空间”。
+- 比较容易想到的思路是“桶排序”，“桶排序”的思想很简单，“一个萝卜一个坑”，但这道题比较让人头疼的是“不使用额外空间”。
 
 “桶排序”的思想，有些地方也把它叫做“抽屉原理”，以下介绍来自“百度百科”之[“抽屉原理”](https://baike.baidu.com/item/%E6%8A%BD%E5%B1%89%E5%8E%9F%E7%90%86/233776?fr=aladdin)词条：
 
-
 > 抽屉原理的一般含义为：“如果每个抽屉代表一个集合，每一个苹果就可以代表一个元素，假如有 n + 1 个元素放到 n 个集合中去，其中必定有一个集合里至少有两个元素。” 抽屉原理有时也被称为鸽巢原理。它是组合数学中一个重要的原理。
 
-+ “桶排序”的子步骤是“交换数组中两个位置的元素”，**如果不使用额外的空间，可以使用“异或运算”代替**。
+- “桶排序”的子步骤是“交换数组中两个位置的元素”，**如果不使用额外的空间，可以使用“异或运算”代替**。
 
 ### 方法一：桶排序 + 基于“异或运算”交换两个变量的值
 
@@ -59,8 +58,8 @@ tags:
 
 于是，交换两个变量的值，例如 `a` 和 `b`，不使用第三个变量，有两种不同的方法：
 
-| 基于异或运算                        | 基于加减法                            |
-| ----------------------------------- | ------------------------------------- |
+| 基于异或运算                              | 基于加减法                                  |
+| ----------------------------------------- | ------------------------------------------- |
 | `a = a ^ b`<br>`b = a ^ b`<br>`a = a ^ b` | `a = a + b`<br/>`b = a - b`<br/>`a = a - b` |
 
 我理解的方式就是自己在纸上写几个例子，并且记住这个结论。个人觉得“基于异或运算”交换两个变量的值好记一些，因为右边都一样，左边依次是 `a`、`b`、`a`。
@@ -102,7 +101,8 @@ public class Solution {
     }
 
 }
-```    
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Python3">
@@ -128,18 +128,17 @@ class Solution:
         nums[index1] = nums[index1] ^ nums[index2]
         nums[index2] = nums[index1] ^ nums[index2]
         nums[index1] = nums[index1] ^ nums[index2]
-```
+````
+
 </CodeGroupItem>
 </CodeGroup>
 
 **复杂度分析**：
 
-+ 时间复杂度：$O(N)$，这里 $N$ 是数组的长度；
-+ 空间复杂度：$O(1)$，这里没有使用额外的空间。
-
+- 时间复杂度：$O(N)$，这里 $N$ 是数组的长度；
+- 空间复杂度：$O(1)$，这里没有使用额外的空间。
 
 说明：同样的思路和技巧，可以解决[「力扣」第 41 题：缺失的第一个正数](https://leetcode-cn.com/problems/first-missing-positive)。
-
 
 ### 方法二：位图（使用了 1 个额外空间，不符合题意，该方法仅作了解）
 
@@ -152,7 +151,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Solution {
-    
+
     public List<Integer> findDisappearedNumbers(int[] nums) {
         int len = nums.length;
         int map = 1 << len;
@@ -173,8 +172,10 @@ public class Solution {
         }
         return res;
     }
+
 }
-```
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Python3">
@@ -188,7 +189,7 @@ class Solution:
 
         # 位图
         map = 1 << (size)
-        
+
         # 调试代码
         # print(bin(map))
 
@@ -203,12 +204,12 @@ class Solution:
             if (map >> index) & 1 == 0:
                 res.append(index + 1)
         return res
-```
+````
+
 </CodeGroupItem>
 </CodeGroup>
 
 **复杂度分析**：
 
-+ 时间复杂度：$O(N)$，这里 $N$ 是数组的长度；
-+ 空间复杂度：$O(1)$，这里使用了 1 个额外的空间。
-
+- 时间复杂度：$O(N)$，这里 $N$ 是数组的长度；
+- 空间复杂度：$O(1)$，这里使用了 1 个额外的空间。

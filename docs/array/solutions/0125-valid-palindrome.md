@@ -6,7 +6,7 @@ tags:
   - 数组
 ---
 
-+ 题目链接：[125. 验证回文串](https://leetcode-cn.com/problems/valid-palindrome)。
+- 题目链接：[125. 验证回文串](https://leetcode-cn.com/problems/valid-palindrome)。
 
 ## 题目描述
 
@@ -40,7 +40,6 @@ tags:
 使用指针对撞的思想。
 
 **参考代码 1**：
-
 
 ```java
 public class Solution {
@@ -101,4 +100,3 @@ public class Solution {
     }
 }
 ```
-
