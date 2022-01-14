@@ -6,15 +6,13 @@ tags:
   - 并查集
 ---
 
-+ 题目链接：[399. 除法求值](https://leetcode-cn.com/problems/longest-consecutive-sequence/)。
+- 题目链接：[399. 除法求值](https://leetcode-cn.com/problems/longest-consecutive-sequence/)。
 
 这一节的视频讲解有很多知识点，不熟悉的朋友强烈建议观看。
 
-
 :tv: 视频讲解
 
-+ [视频题解](https://leetcode-cn.com/problems/evaluate-division/solution/399-chu-fa-qiu-zhi-nan-du-zhong-deng-286-w45d/)
-
+- [视频题解](https://leetcode-cn.com/problems/evaluate-division/solution/399-chu-fa-qiu-zhi-nan-du-zhong-deng-286-w45d/)
 
 > 带权值的「并查集」，搞清楚方向。
 
@@ -34,12 +32,7 @@ tags:
 ```
 equations(方程式) = [ ["a", "b"], ["b", "c"] ],
 values(方程式结果) = [2.0, 3.0],
-queries(问题方程式) = [ ["a", "c"], ["b", "a"], ["a", "e"], ["a", "a"], ["x", "x"] ]. 
+queries(问题方程式) = [ ["a", "c"], ["b", "a"], ["a", "e"], ["a", "a"], ["x", "x"] ].
 ```
 
-输入总是有效的。你可以假设除法运算中不会出现除数为0的情况，且不存在任何矛盾的结果。
-
-
-
-
-
+输入总是有效的。你可以假设除法运算中不会出现除数为 0 的情况，且不存在任何矛盾的结果。

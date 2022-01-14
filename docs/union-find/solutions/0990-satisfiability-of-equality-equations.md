@@ -6,25 +6,22 @@ tags:
   - 并查集
 ---
 
-
 这一节的视频讲解有很多知识点，不熟悉的朋友强烈建议观看。
-
 
 :tv: 视频讲解
 
-
-+ [视频题解](https://leetcode-cn.com/problems/satisfiability-of-equality-equations/solution/deng-shi-fang-cheng-de-ke-man-zu-xing-by-leetcode-/)
+- [视频题解](https://leetcode-cn.com/problems/satisfiability-of-equality-equations/solution/deng-shi-fang-cheng-de-ke-man-zu-xing-by-leetcode-/)
 
 有些问题不以并查集为背景，但的确可以使用并查集的知识帮助我们解决问题。由于等式相等具有传递性，比较容易想到使用并查集。
 
-+ 题目链接：[990. 等式方程的可满足性](https://leetcode-cn.com/problems/satisfiability-of-equality-equations/)；
-+ 题解链接：[使用并查集处理不相交集合问题（Java、Python）](https://leetcode-cn.com/problems/satisfiability-of-equality-equations/solution/shi-yong-bing-cha-ji-chu-li-bu-xiang-jiao-ji-he-we/)。
+- 题目链接：[990. 等式方程的可满足性](https://leetcode-cn.com/problems/satisfiability-of-equality-equations/)；
+- 题解链接：[使用并查集处理不相交集合问题（Java、Python）](https://leetcode-cn.com/problems/satisfiability-of-equality-equations/solution/shi-yong-bing-cha-ji-chu-li-bu-xiang-jiao-ji-he-we/)。
 
 ## 题目描述
 
 给定一个由表示变量之间关系的字符串方程组成的数组，每个字符串方程 `equations[i]` 的长度为 `4`，并采用两种不同的形式之一：`"a==b"` 或 `"a!=b"`。在这里，a 和 b 是小写字母（不一定不同），表示单字母变量名。
 
-只有当可以将整数分配给变量名，以便满足所有给定的方程时才返回 `true`，否则返回 `false`。 
+只有当可以将整数分配给变量名，以便满足所有给定的方程时才返回 `true`，否则返回 `false`。
 
 **示例 1：**
 

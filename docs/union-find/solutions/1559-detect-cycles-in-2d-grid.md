@@ -6,7 +6,7 @@ tags:
   - 并查集
 ---
 
-+ 题目链接： [1559. 二维网格图中探测环](https://leetcode-cn.com/problems/detect-cycles-in-2d-grid/)。
+- 题目链接： [1559. 二维网格图中探测环](https://leetcode-cn.com/problems/detect-cycles-in-2d-grid/)。
 
 ## 题目描述
 
@@ -29,8 +29,6 @@ tags:
 ```
 
 ![img](https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2020/08/22/5482e11.png)
-
-
 
 **示例 2：**
 
@@ -161,7 +159,7 @@ public class Solution {
     private int[][] directions = new int[][]{{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
 
     // DFS 的写法
-    
+
     public boolean containsCycle(char[][] grid) {
         if (grid.length == 0) {
             return false;
@@ -215,4 +213,3 @@ public class Solution {
     }
 }
 ```
-

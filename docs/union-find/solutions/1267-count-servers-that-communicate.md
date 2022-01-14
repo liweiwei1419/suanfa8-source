@@ -6,11 +6,11 @@ tags:
   - 并查集
 ---
 
-+ 题目链接：[1267. 统计参与通信的服务器](https://leetcode-cn.com/problems/count-servers-that-communicate/)。
+- 题目链接：[1267. 统计参与通信的服务器](https://leetcode-cn.com/problems/count-servers-that-communicate/)。
 
 ## 题目链接
 
-这里有一幅服务器分布图，服务器的位置标识在 m * n 的整数矩阵网格 grid 中，1 表示单元格上有服务器，0 表示没有。
+这里有一幅服务器分布图，服务器的位置标识在 m \* n 的整数矩阵网格 grid 中，1 表示单元格上有服务器，0 表示没有。
 
 如果两台服务器位于同一行或者同一列，我们就认为它们之间可以进行通信。
 
@@ -46,13 +46,10 @@ tags:
 解释：第一行的两台服务器互相通信，第三列的两台服务器互相通信，但右下角的服务器无法与其他服务器通信。
 ```
 
-
-
 **提示：**
 
-+ `m == grid.length`
-+ `n == grid[i].length`
-+ `1 <= m <= 250`
-+ `1 <= n <= 250`
-+ `grid[i][j] == 0 or 1`
-
+- `m == grid.length`
+- `n == grid[i].length`
+- `1 <= m <= 250`
+- `1 <= n <= 250`
+- `grid[i][j] == 0 or 1`

@@ -6,8 +6,8 @@ tags:
   - 并查集
 ---
 
-+ 题目链接：[952. 按公因数计算最大组件大小](https://leetcode-cn.com/problems/largest-component-size-by-common-factor/)；
-+ 题解链接：[并查集（Java、Python）](https://leetcode-cn.com/problems/largest-component-size-by-common-factor/solution/bing-cha-ji-java-python-by-liweiwei1419/)。
+- 题目链接：[952. 按公因数计算最大组件大小](https://leetcode-cn.com/problems/largest-component-size-by-common-factor/)；
+- 题解链接：[并查集（Java、Python）](https://leetcode-cn.com/problems/largest-component-size-by-common-factor/solution/bing-cha-ji-java-python-by-liweiwei1419/)。
 
 ## 题目描述
 
@@ -43,7 +43,7 @@ tags:
 输出：8
 ```
 
-![img](https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/12/01/ex3.png) 
+![img](https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/12/01/ex3.png)
 
 **提示：**
 
@@ -61,10 +61,7 @@ tags:
 ![952-1.png](https://pic.leetcode-cn.com/ca07130ef4f7e002de91efa0b9962cbf18d8277ffa7f744023c4f64c16d78cb4-952-1.png)
 ![952-2.png](https://pic.leetcode-cn.com/6b5d0fafdc0764918e57c8bc378ae96c0a0ac445612b70f249481e7402df31d0-952-2.png)
 
-
-
 **参考代码**：
-
 
 <CodeGroup>
 <CodeGroupItem title="Java">
@@ -129,8 +126,10 @@ public class Solution {
             }
         }
     }
+
 }
-```
+
+````
 </CodeGroupItem>
 
 <CodeGroupItem title="Python">
@@ -176,7 +175,8 @@ class Solution:
             cnt[root] += 1
             res = max(res, cnt[root])
         return res
-```
+````
+
 </CodeGroupItem>
 <CodeGroupItem title="C++">
 ```cpp
@@ -189,13 +189,13 @@ using namespace std;
 
 class UnionFind {
 private:
-    vector<int> parent;
+vector<int> parent;
 public:
-    UnionFind(int n) : parent(n) {
-        for (int i = 0; i < n; ++i) {
-            parent[i] = i;
-        }
-    }
+UnionFind(int n) : parent(n) {
+for (int i = 0; i < n; ++i) {
+parent[i] = i;
+}
+}
 
     void merge(int x, int y) {
         parent[find(x)] = parent[find(y)];
@@ -207,13 +207,14 @@ public:
         }
         return parent[x];
     }
+
 };
 
 class Solution {
 public:
-    int largestComponentSize(vector<int> &A) {
-        int n = *max_element(begin(A), end(A));
-        UnionFind unionFind(n + 1);
+int largestComponentSize(vector<int> &A) {
+int n = \*max_element(begin(A), end(A));
+UnionFind unionFind(n + 1);
 
         for (int a: A) {
             for (int k = 2; k <= sqrt(a); k++) {
@@ -230,7 +231,9 @@ public:
         }
         return res;
     }
+
 };
+
 ```
 </CodeGroupItem>
 </CodeGroup>
@@ -243,3 +246,4 @@ public:
 
 
 
+```
