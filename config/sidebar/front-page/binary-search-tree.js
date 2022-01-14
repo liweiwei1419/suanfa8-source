@@ -1,3 +1,1 @@
-module.exports = [
-	"/data-structure-basic/binary-search-tree/intro.md"
-]
+module.exports = ['/data-structure-basic/binary-search-tree/intro.md'];
