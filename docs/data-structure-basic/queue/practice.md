@@ -10,12 +10,12 @@ tags:
 
 所有的使用广度优先遍历解决的问题，都使用了队列。
 
-| 题号 | 题目序号                                                     | 题解                                                         |
-| ---- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 622  | [设计循环队列](https://leetcode-cn.com/problems/design-circular-queue)（中等） | [数组实现的循环队列](https://leetcode-cn.com/problems/design-circular-queue/solution/shu-zu-shi-xian-de-xun-huan-dui-lie-by-liweiwei141/) |
+| 题号 | 题目序号                                                                           | 题解                                                                                                                                          |
+| ---- | ---------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| 622  | [设计循环队列](https://leetcode-cn.com/problems/design-circular-queue)（中等）     | [数组实现的循环队列](https://leetcode-cn.com/problems/design-circular-queue/solution/shu-zu-shi-xian-de-xun-huan-dui-lie-by-liweiwei141/)     |
 | 641  | [设计循环双端队列](https://leetcode-cn.com/problems/design-circular-deque)（中等） | [数组实现的循环双端队列](https://leetcode-cn.com/problems/design-circular-deque/solution/shu-zu-shi-xian-de-xun-huan-shuang-duan-dui-lie-by/) |
-| 621  | [任务调度器](https://leetcode-cn.com/problems/task-scheduler)（中等） |                                                              |
-| 1306 | [跳跃游戏 III（中等）](https://leetcode-cn.com/problems/jump-game-iii)（中等） |                                                              |
+| 621  | [任务调度器](https://leetcode-cn.com/problems/task-scheduler)（中等）              |                                                                                                                                               |
+| 1306 | [跳跃游戏 III（中等）](https://leetcode-cn.com/problems/jump-game-iii)（中等）     |                                                                                                                                               |
 
 ## 题型二：单调队列
 
@@ -23,6 +23,6 @@ tags:
 
 经验：单调队列中一般存下标。
 
-| 题号 | 链接                                                         | 题解                                                         |
-| ---- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| 题号 | 链接                                                                              | 题解                                                                                                                             |
+| ---- | --------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
 | 239  | [滑动窗口最大值](https://leetcode-cn.com/problems/sliding-window-maximum)（中等） | [文字题解](https://leetcode-cn.com/problems/sliding-window-maximum/solution/zui-da-suo-yin-dui-shuang-duan-dui-lie-cun-suo-yin/) |
