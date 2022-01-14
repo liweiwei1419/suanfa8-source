@@ -17,10 +17,13 @@ tags:
 :::
 
 ::: danger 视频讲解
-
-:tv: 这道题在 [官方题解](https://leetcode-cn.com/problems/largest-rectangle-in-histogram/solution/zhu-zhuang-tu-zhong-zui-da-de-ju-xing-by-leetcode-/) 和 [B 站](https://www.bilibili.com/video/BV16D4y1D7ed?from=search&seid=10193465856501349147&spm_id_from=333.337.0.0) 可以收看视频讲解。
+:tv: 这道题在 [官方题解](https://leetcode-cn.com/problems/largest-rectangle-in-histogram/solution/zhu-zhuang-tu-zhong-zui-da-de-ju-xing-by-leetcode-/) 和 [B 站](https://www.bilibili.com/video/BV16D4y1D7ed?from=search&seid=10193465856501349147&spm_id_from=333.337.0.0) 可以收看视频讲解，可以点击下面的视频右上角「去 bilibili 观看」，选择快速播放，获得更好的观看体验。
 
 :::
+
+<div style="position: relative; padding: 30% 45%;">
+<iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="https://player.bilibili.com/player.html?aid=710975903&bvid=BV16D4y1D7ed&cid=199875131&page=1" frameborder="no" scrolling="no"></iframe>
+</div>
 
 ## 题目描述
 

@@ -20,6 +20,15 @@ tags:
 - 题目链接：[316. 去除重复字母](https://leetcode-cn.com/problems/remove-duplicate-letters/)；
 - 题解链接：[栈 + 哨兵技巧（Java）](https://leetcode-cn.com/problems/remove-duplicate-letters/solution/zhan-by-liweiwei1419/)。
 
+::: danger 视频讲解
+:tv: 这道题在 [官方题解](https://leetcode-cn.com/problems/remove-duplicate-letters/solution/) 和 [B 站](https://www.bilibili.com/video/BV1Tz4y167pC) 可以收看视频讲解，可以点击下面的视频右上角「去 bilibili 观看」，选择快速播放，获得更好的观看体验。
+
+:::
+
+<div style="position: relative; padding: 30% 45%;">
+<iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="https://player.bilibili.com/player.html?aid=586046497&bvid=BV1Tz4y167pC&cid=278353216&page=1" frameborder="no" scrolling="no"></iframe>
+</div>
+
 ::: danger 说明
 这一题在录制视频题解的时候，和官方题解的作者有过讨论。我们在选择这个问题的标签的时候，没有把「单调栈」选择进去。
 
@@ -32,7 +41,7 @@ tags:
 
 给你一个字符串 `s` ，请你去除字符串中重复的字母，使得每个字母只出现一次。需保证 **返回结果的字典序最小**（要求不能打乱其他字符的相对位置）。
 
-**注意：**该题与 1081 https://leetcode-cn.com/problems/smallest-subsequence-of-distinct-characters 相同
+**注意：** 该题与 1081 https://leetcode-cn.com/problems/smallest-subsequence-of-distinct-characters 相同
 
 **示例 1：**
 
