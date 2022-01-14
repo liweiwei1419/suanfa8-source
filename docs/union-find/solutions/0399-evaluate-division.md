@@ -1,6 +1,6 @@
 ---
 title: 「力扣」第 399 题：除法求值（中等）
-icon: yongyan
+icon: shipin
 category: 并查集
 tags:
   - 并查集
@@ -15,6 +15,15 @@ tags:
 - [视频题解](https://leetcode-cn.com/problems/evaluate-division/solution/399-chu-fa-qiu-zhi-nan-du-zhong-deng-286-w45d/)
 
 > 带权值的「并查集」，搞清楚方向。
+
+::: danger 视频讲解
+:tv: 这道题在 [官方题解](https://leetcode-cn.com/problems/evaluate-division/solution/399-chu-fa-qiu-zhi-nan-du-zhong-deng-286-w45d/) 和 [B 站](https://www.bilibili.com/video/BV1Ko4y1f7eK) 可以收看视频讲解，可以点击下面的视频右上角「去 bilibili 观看」，选择快速播放，获得更好的观看体验。
+
+:::
+
+<div style="position: relative; padding: 30% 45%;">
+<iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="https://player.bilibili.com/player.html?aid=373512139&bvid=BV1Ko4y1f7eK&cid=281108030&page=1" frameborder="no" scrolling="no"></iframe>
+</div>
 
 ## 题目描述
 

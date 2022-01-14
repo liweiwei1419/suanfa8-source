@@ -1,6 +1,6 @@
 ---
 title: 「力扣」第 990 题：等式方程的可满足性（中等）
-icon: yongyan
+icon: shipin
 category: 并查集
 tags:
   - 并查集
@@ -16,6 +16,15 @@ tags:
 
 - 题目链接：[990. 等式方程的可满足性](https://leetcode-cn.com/problems/satisfiability-of-equality-equations/)；
 - 题解链接：[使用并查集处理不相交集合问题（Java、Python）](https://leetcode-cn.com/problems/satisfiability-of-equality-equations/solution/shi-yong-bing-cha-ji-chu-li-bu-xiang-jiao-ji-he-we/)。
+
+::: danger 视频讲解
+:tv: 这道题在 [官方题解](https://leetcode-cn.com/problems/satisfiability-of-equality-equations/solution/deng-shi-fang-cheng-de-ke-man-zu-xing-by-leetcode-/) 和 [B 站](https://www.bilibili.com/video/BV1gz411i7kD) 可以收看视频讲解，可以点击下面的视频右上角「去 bilibili 观看」，选择快速播放，获得更好的观看体验。
+
+:::
+
+<div style="position: relative; padding: 30% 45%;">
+<iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="https://player.bilibili.com/player.html?aid=200918368&bvid=BV1gz411i7kD&cid=199873193&page=1" frameborder="no" scrolling="no"></iframe>
+</div>
 
 ## 题目描述
 
