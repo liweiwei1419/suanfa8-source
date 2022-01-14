@@ -8,9 +8,14 @@ tags:
 
 - 题目链接：[76. 最小覆盖子串](https://leetcode-cn.com/problems/minimum-window-substring/)。
 
-::: danger 温馨提示
-本题在 [B 站](https://www.bilibili.com/video/BV1aK4y1t7Qd) 和 [官方题解](https://leetcode-cn.com/problems/minimum-window-substring/solution/zui-xiao-fu-gai-zi-chuan-by-leetcode-solution/) 可以收看视频题解，示例代码在本文最后。
+::: danger 视频讲解
+:tv: 这道题在 [官方题解](https://leetcode-cn.com/problems/minimum-window-substring/solution/zui-xiao-fu-gai-zi-chuan-by-leetcode-solution/) 和 [B 站](https://www.bilibili.com/video/BV1aK4y1t7Qd) 可以收看视频讲解，可以点击下面的视频右上角「去 bilibili 观看」，选择快速播放，获得更好的观看体验。
+
 :::
+
+<div style="position: relative; padding: 30% 45%;">
+<iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="https://player.bilibili.com/player.html?aid=883276293&bvid=BV1aK4y1t7Qd&cid=194982907&page=1" frameborder="no" scrolling="no"></iframe>
+</div>
 
 ## 题目描述
 

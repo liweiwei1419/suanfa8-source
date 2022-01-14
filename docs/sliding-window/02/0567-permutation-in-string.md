@@ -9,9 +9,14 @@ tags:
 - 题目链接：[567. 字符串的排列](https://leetcode-cn.com/problems/permutation-in-string/)；
 - 题解链接：[🎦 字符串的排列](https://leetcode-cn.com/problems/permutation-in-string/solution/zi-fu-chuan-de-pai-lie-by-leetcode-q6tp/)。
 
-::: danger 温馨提示
-本题在 [B 站](https://www.bilibili.com/video/BV175411E761) 和 [官方题解](https://leetcode-cn.com/problems/permutation-in-string/solution/zi-fu-chuan-de-pai-lie-by-leetcode-q6tp/) 可以收看视频题解，示例代码在本文最后。
+::: danger 视频讲解
+:tv: 这道题在 [官方题解](https://leetcode-cn.com/problems/permutation-in-string/solution/zi-fu-chuan-de-pai-lie-by-leetcode-q6tp/) 和 [B 站](https://www.bilibili.com/video/BV175411E761) 可以收看视频讲解，可以点击下面的视频右上角「去 bilibili 观看」，选择快速播放，获得更好的观看体验。
+
 :::
+
+<div style="position: relative; padding: 30% 45%;">
+<iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="https://player.bilibili.com/player.html?aid=459228109&bvid=BV175411E761&cid=299177331&page=1" frameborder="no" scrolling="no"></iframe>
+</div>
 
 ## 题目描述
 
