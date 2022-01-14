@@ -7,5 +7,4 @@ tags:
   - 归并排序
 ---
 
-
 请见《[归并排序精讲](https://suanfa8.com/merge-sort/)》专栏。

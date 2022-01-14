@@ -3,11 +3,10 @@ title: 1.4 如何提问
 icon: tiwen
 ---
 
-+ [提问的智慧](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/main/README-zh_CN.md)；
-+ [How do I ask a good question? - Help Center - Stack Overflow](https://stackoverflow.com/help/how-to-ask)
+- [提问的智慧](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/main/README-zh_CN.md)；
+- [How do I ask a good question? - Help Center - Stack Overflow](https://stackoverflow.com/help/how-to-ask)
 
 如果大家没有时间仔细看完，我这里帮各位总结几点注意事项：
-
 
 ## 几点建议
 
@@ -25,8 +24,6 @@ icon: tiwen
 
 ![image.png](https://tva1.sinaimg.cn/large/008i3skNgy1gwnfvddnvbj30pd0qojtg.jpg)
 
-
-
 ### 贴代码的工具
 
-+ [https://paste.ubuntu.com/](https://paste.ubuntu.com/)
+- [https://paste.ubuntu.com/](https://paste.ubuntu.com/)

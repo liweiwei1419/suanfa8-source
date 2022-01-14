@@ -3,29 +3,37 @@ title: 2.8 希尔排序
 icon: shipin
 category: 排序算法
 tags:
-  - 排序算法  
+  - 排序算法
 ---
 
 ::: danger 提示
 
-+ 希尔排序的理论有一定难度，不感兴趣的朋友不需要深入研究；
+- 希尔排序的理论有一定难度，不感兴趣的朋友不需要深入研究；
 
 :::
-
 
 ::: danger 本节内容高度概括
-+ 希尔排序是插入排序的优化，利用的是插入排序的重要意义：在小数组（几乎有序的数组）上表现良好；
-+ 通过「分组插入排序」使得数组变得逐步有序；
-+ 最后一轮执行标准的插入排序。
-:::
+
+- 希尔排序是插入排序的优化，利用的是插入排序的重要意义：在小数组（几乎有序的数组）上表现良好；
+- 通过「分组插入排序」使得数组变得逐步有序；
+- 最后一轮执行标准的插入排序。
+  :::
 
 ## :tv: **视频教程**
 
 建议使用 1.5 倍速观看。
 
-* [2-10 希尔排序的基本思想（04:46）](https://www.bilibili.com/video/BV1y44y1q7MJ?p=10)
-* [2-11 希尔排序的增量序列（07:20）](https://www.bilibili.com/video/BV1y44y1q7MJ?p=11)
+- [2-10 希尔排序的基本思想（04:46）](https://www.bilibili.com/video/BV1y44y1q7MJ?p=10)；
 
+<div style="position: relative; padding: 30% 45%;">
+<iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="https://player.bilibili.com/player.html?aid=974034772&bvid=BV1y44y1q7MJ&cid=365418477&page=10" frameborder="no" scrolling="no"></iframe>
+</div>
+
+- [2-11 希尔排序的增量序列（07:20）](https://www.bilibili.com/video/BV1y44y1q7MJ?p=11)。
+
+<div style="position: relative; padding: 30% 45%;">
+<iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="https://player.bilibili.com/player.html?aid=974034772&bvid=BV1y44y1q7MJ&cid=365418477&page=11" frameborder="no" scrolling="no"></iframe>
+</div>
 
 首先复习一下「插入排序」在什么情况下效率高呢？
 
@@ -47,23 +55,21 @@ tags:
 
 每一轮完成一次分组插入排序以后，数组就朝着接近有序的方向前进了一步。最后一轮一定是一次标准的插入排序。
 
-
 ## 通过实例理解「希尔排序」的基本思想
 
-+ 第 1 轮：把下标间隔为 5 的元素分成一组，一共 5 组，分别执行插入排序
+- 第 1 轮：把下标间隔为 5 的元素分成一组，一共 5 组，分别执行插入排序
 
 ![](https://tva1.sinaimg.cn/large/008i3skNgy1gwyusfbmq0g30i8093k3y.gif)
 
 此时数组比未排序的时候更接近有序了一点。
 
-+ 第 2 轮：把下标间隔为 2 的元素分成一组，一共 2 组，分别执行插入排序
+- 第 2 轮：把下标间隔为 2 的元素分成一组，一共 2 组，分别执行插入排序
 
 ![](https://tva1.sinaimg.cn/large/008i3skNgy1gwyusit51eg30hw063wj7.gif)
 
-
 此时数组比第 2 轮排序开始之前更接近有序了一点。
 
-+ 第 3 轮：把下标间隔为 1 的元素分成一组，其实就是标准的插入排序。
+- 第 3 轮：把下标间隔为 1 的元素分成一组，其实就是标准的插入排序。
 
 ![](https://tva1.sinaimg.cn/large/008i3skNgy1gwyush556qg30hy03lwfy.gif)
 

@@ -7,18 +7,14 @@ icon: tushu
 **本站推荐的书籍与网站与本站均无商业合作关系**，它们都是本人学习算法与数据结构的过程中使用过的学习材料。
 :::
 
-
 ## :tv: 视频
 
 [视频：算法新手如何刷力扣（LeetCode）？【干货分享】](https://www.bilibili.com/video/BV17K411J7yR)
 
-
-
-
 ## 想深入学习算法与数据结构
 
-+ 《算法（第 4 版）》
-+ 《算法导论》
+- 《算法（第 4 版）》
+- 《算法导论》
 
 ## 只想应付笔试和面试
 
@@ -26,13 +22,11 @@ icon: tushu
 
 ## 算法可视化学习网站
 
-+ [数据结构和算法动态可视化 (Chinese)](https://visualgo.net/zh)
-+ [https://www.cs.usfca.edu/~galles/visualization/Algorithms.html](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html)
-+ [https://algorithm-visualizer.org/](https://algorithm-visualizer.org/)
-
-
+- [数据结构和算法动态可视化 (Chinese)](https://visualgo.net/zh)
+- [https://www.cs.usfca.edu/~galles/visualization/Algorithms.html](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html)
+- [https://algorithm-visualizer.org/](https://algorithm-visualizer.org/)
 
 ## 竞赛
 
-+ [https://oi-wiki.org/](https://oi-wiki.org/)
-+ 李煜东著：《算法竞赛进阶指南》
+- [https://oi-wiki.org/](https://oi-wiki.org/)
+- 李煜东著：《算法竞赛进阶指南》

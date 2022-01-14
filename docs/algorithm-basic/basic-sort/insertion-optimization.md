@@ -3,17 +3,19 @@ title: 2.7 插入排序的优化
 icon: shipin
 category: 排序算法
 tags:
-  - 排序算法  
+  - 排序算法
   - 减治思想
 ---
-
 
 ## :tv: **视频教程** <Badge text="视频" type="warning"/>
 
 建议使用 1.5 倍速观看。
 
-* [2-9 插入排序的优化（06:25）](https://www.bilibili.com/video/BV1y44y1q7MJ?p=9)
+- [2-9 插入排序的优化（06:25）](https://www.bilibili.com/video/BV1y44y1q7MJ?p=9)。
 
+<div style="position: relative; padding: 30% 45%;">
+<iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="https://player.bilibili.com/player.html?aid=974034772&bvid=BV1y44y1q7MJ&cid=365418477&page=9" frameborder="no" scrolling="no"></iframe>
+</div>
 
 **说明**：
 
@@ -21,21 +23,15 @@ tags:
 
 ![image-20211202105353656](https://tva1.sinaimg.cn/large/008i3skNgy1gwzav2evuej317m02g3yz.jpg)
 
-
 ## 插入排序写法二：先暂存再后移
-
 
 「将一个数字插入一个有序的数组」这一步，可以不使用逐步交换，使用先赋值给「临时变量」，然后「适当的元素」后移，空出一个位置，最后把「临时变量」赋值给这个空位。
 
-
 ![](https://tva1.sinaimg.cn/large/008i3skNgy1gwyurgwqeng30af04odkr.gif)
-
 
 其实这种插入方式更像插入排序本来的样子。《算法导论》上的图更形象。
 
 <img src="https://tva1.sinaimg.cn/large/008i3skNgy1gwyuyr6mtqj30hc0gg0tr.jpg" alt="《算法导论》第 2.1 节 插入排序" style="zoom:50%;" />
-
-
 
 **参考代码**：
 
@@ -60,8 +56,10 @@ public class Solution {
         }
         return nums;
     }
+
 }
-```
+
+````
 </CodeGroupItem>
 <CodeGroupItem title="Java">
 ```java
@@ -86,12 +84,13 @@ public class Solution {
         return nums;
     }
 }
-```
+````
+
 </CodeGroupItem>
 
 <CodeGroupItem title="Python">
 
-``` python
+```python
 from sorting.sorting_util import SortingUtil
 from sorting.examples import GenerateRandomArrayStrategy
 from sorting.examples import GenerateNearlySortedArrayStrategy
@@ -175,6 +174,6 @@ if __name__ == '__main__':
 
 ## 参考资料
 
-+ [《算法 4》英文网站](https://algs4.cs.princeton.edu/21elementary/)
+- [《算法 4》英文网站](https://algs4.cs.princeton.edu/21elementary/)
 
 <Utterances />

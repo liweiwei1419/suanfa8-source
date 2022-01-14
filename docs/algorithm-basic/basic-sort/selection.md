@@ -3,7 +3,7 @@ title: 2.2 选择排序
 icon: shipin
 category: 排序算法
 tags:
-  - 排序算法  
+  - 排序算法
   - 减治思想
 ---
 
@@ -13,11 +13,35 @@ tags:
 
 建议使用 1.5 倍速观看。
 
-+ [2-1 选择排序（03:53）](https://www.bilibili.com/video/BV1y44y1q7MJ?p=1)
-+ [2-2 选择排序代码演示（03:27）](https://www.bilibili.com/video/BV1y44y1q7MJ?p=2)
-+ [2-3 选择排序的时间复杂度（03:03）](https://www.bilibili.com/video/BV1y44y1q7MJ?p=3)
-+ [2-4 数组具有随机访问的特性（05:08）](https://www.bilibili.com/video/BV1y44y1q7MJ?p=4)
-+ [2-5 选择排序的特点和优化的方向（01:13）](https://www.bilibili.com/video/BV1y44y1q7MJ?p=5)
+- [2-1 选择排序（03:53）](https://www.bilibili.com/video/BV1y44y1q7MJ?p=1)
+
+<div style="position: relative; padding: 30% 45%;">
+<iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="https://player.bilibili.com/player.html?aid=974034772&bvid=BV1y44y1q7MJ&cid=365418477&page=1" frameborder="no" scrolling="no"></iframe>
+</div>
+
+- [2-2 选择排序代码演示（03:27）](https://www.bilibili.com/video/BV1y44y1q7MJ?p=2)
+
+<div style="position: relative; padding: 30% 45%;">
+<iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="https://player.bilibili.com/player.html?aid=974034772&bvid=BV1y44y1q7MJ&cid=365418477&page=2" frameborder="no" scrolling="no"></iframe>
+</div>
+
+- [2-3 选择排序的时间复杂度（03:03）](https://www.bilibili.com/video/BV1y44y1q7MJ?p=3)
+
+<div style="position: relative; padding: 30% 45%;">
+<iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="https://player.bilibili.com/player.html?aid=974034772&bvid=BV1y44y1q7MJ&cid=365418477&page=3" frameborder="no" scrolling="no"></iframe>
+</div>
+
+- [2-4 数组具有随机访问的特性（05:08）](https://www.bilibili.com/video/BV1y44y1q7MJ?p=4)
+
+<div style="position: relative; padding: 30% 45%;">
+<iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="https://player.bilibili.com/player.html?aid=974034772&bvid=BV1y44y1q7MJ&cid=365418477&page=4" frameborder="no" scrolling="no"></iframe>
+</div>
+
+- [2-5 选择排序的特点和优化的方向（01:13）](https://www.bilibili.com/video/BV1y44y1q7MJ?p=5)
+
+<div style="position: relative; padding: 30% 45%;">
+<iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="https://player.bilibili.com/player.html?aid=974034772&bvid=BV1y44y1q7MJ&cid=365418477&page=5" frameborder="no" scrolling="no"></iframe>
+</div>
 
 ## 选择排序的基本思想
 
@@ -70,6 +94,7 @@ public class Solution {
     }
 }
 ```
+
 **复杂度分析**：
 
 - 时间复杂度：$O(N^2)$，这里 $N$ 是数组的长度；
@@ -85,7 +110,6 @@ public class Solution {
 
 「选择排序」看起来好像最没有用，但是如果在交换成本较高的排序任务中，就可以使用「选择排序」（《算法 4》相关章节课后练习题）。
 
-
 人都是想「偷懒」的，所以让人去做排序，一般不会去做那么多次交换。
 
 ### 交换次数与输入数组是否有序无关
@@ -100,15 +124,14 @@ public class Solution {
 
 外层循环每一次都能排定一个元素，问题的规模逐渐减少，直到全部解决，即「大而化小，小而化了」。运用「减治思想」很典型的算法就是大名鼎鼎的「二分查找」。
 
-
 ## 练习
 
-+ 使用「选择排序」完成「力扣」第 912 题：[排序数组](https://leetcode-cn.com/problems/sort-an-array/)。
+- 使用「选择排序」完成「力扣」第 912 题：[排序数组](https://leetcode-cn.com/problems/sort-an-array/)。
 
 ## 参考资料
 
-+ [《算法 4》英文网站](https://algs4.cs.princeton.edu/21elementary/)
+- [《算法 4》英文网站](https://algs4.cs.princeton.edu/21elementary/)
 
-+ [准备「选择排序」的时候制作的 PPT 和 keynote](https://www.yuque.com/liweiwei1419/algo/sfqelg) 
+- [准备「选择排序」的时候制作的 PPT 和 keynote](https://www.yuque.com/liweiwei1419/algo/sfqelg)
 
 <Utterances />
