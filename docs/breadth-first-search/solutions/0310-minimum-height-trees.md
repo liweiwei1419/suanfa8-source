@@ -1,7 +1,7 @@
 ---
 title: 「力扣」第 310 题：最小高度树（中等）
 icon: yongyan
-category: 拓扑排序
+category: 广度优先遍历
 tags:
   - 拓扑排序
 ---
