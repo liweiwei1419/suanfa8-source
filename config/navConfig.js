@@ -200,6 +200,11 @@ module.exports = [
     icon: 'xianliaoshequ',
     link: '/chat/',
   },
+  {
+    text: '音乐',
+    icon: 'gequxinshang',
+    link: '/music/',
+  },
 
   {
     text: '留言反馈',

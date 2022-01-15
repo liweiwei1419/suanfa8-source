@@ -27,12 +27,14 @@ const bitManipulation = require('./sidebar/bit-manipulation/bit-manipulation.js'
 const difference = require('./sidebar/difference/difference.js');
 const array = require('./sidebar/array/array.js');
 const trie = require('./sidebar/trie/trie.js');
+const music = require('./sidebar/music/music.js');
 
 module.exports = {
   '/choice/': choice,
   '/binary-search/': binarySearch,
   '/sliding-window/': slidingWindow,
   '/two-pointers/': twoPointers,
+  '/music/': music,
 
   '/merge-sort/': mergeSort,
   '/quick-sort/': quickSort,
