@@ -1,9 +1,9 @@
 ---
 title: 「力扣」第 230 题：二叉搜索树中第 K 小的元素（中等）
 icon: yongyan
-category: 二叉树
+category: 二叉搜索树
 tags:
-  - 二叉树
+  - 二叉搜索树
   - 递归
 ---
 

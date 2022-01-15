@@ -1,8 +1,9 @@
 ---
 title: 「力扣」第 98 题：验证二叉搜索树（中等）
 icon: yongyan
-category: 二叉树
+category: 二叉搜索树
 tags:
+  - 二叉搜索树
   - 二叉树
   - 递归
 ---

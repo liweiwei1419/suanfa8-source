@@ -3,6 +3,7 @@ title: 「力扣」第 109 题：有序链表转换二叉搜索树（中等）
 icon: yongyan
 category: 二叉树
 tags:
+  - 二叉搜索树
   - 二叉树
 ---
 

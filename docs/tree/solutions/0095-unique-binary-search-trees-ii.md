@@ -3,6 +3,7 @@ title: 「力扣」第 95 题：不同的二叉搜索树 II（中等）
 icon: yongyan
 category: 二叉搜索树
 tags:
+  - 二叉搜索树
   - 分治算法
 ---
 

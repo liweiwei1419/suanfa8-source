@@ -3,7 +3,7 @@ title: 「力扣」第 235 题：二叉搜索树的最近公共祖先（中等�
 icon: yongyan
 category: 二叉搜索树
 tags:
-  - 二叉树
+  - 二叉搜索树
   - 递归
 ---
 
