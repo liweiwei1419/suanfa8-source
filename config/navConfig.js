@@ -61,16 +61,16 @@ module.exports = [
           },
 
           {
-            text: '广度优先遍历',
+            text: '广度优先遍历与拓扑排序',
             icon: 'jingjiang',
             link: '/breadth-first-search/',
           },
 
-          {
-            text: '拓扑排序',
-            icon: 'jingjiang',
-            link: '/topological-sort/',
-          },
+          // {
+          //   text: '拓扑排序',
+          //   icon: 'jingjiang',
+          //   link: '/topological-sort/',
+          // },
 
           {
             text: '动态规划',
@@ -143,9 +143,9 @@ module.exports = [
             link: '/heap/',
           },
           {
-            text: '二分搜索树',
+            text: '二叉树与二叉搜索树',
             icon: 'jingjiang',
-            link: '/binary-search-tree/',
+            link: '/tree/',
           },
           {
             text: '哈希表',

@@ -1,6 +1,6 @@
 module.exports = [
   {
-    title: '树的习题（还未分类）',
+    title: '第 1 部分 树的基本问题',
     icon: 'book',
     children: [
       '/tree/solutions/0094-binary-tree-inorder-traversal.md',
@@ -31,6 +31,24 @@ module.exports = [
       '/tree/solutions/0993-cousins-in-binary-tree.md',
       '/tree/solutions/1079-letter-tile-possibilities.md',
       '/tree/solutions/1080-insufficient-nodes-in-root-to-leaf-paths.md',
+    ],
+  },
+  {
+    title: '第 2 部分 二分搜索树',
+    icon: 'book',
+    children: [
+      '/tree/solutions/intro.md',
+      '/tree/solutions/1008-construct-binary-search-tree-from-preorder-traversal.md',
+      '/tree/solutions/0095-unique-binary-search-trees-ii.md',
+      '/tree/solutions/0098-validate-binary-search-tree.md',
+      '/tree/solutions/0108-convert-sorted-array-to-binary-search-tree.md',
+      '/tree/solutions/0109-convert-sorted-list-to-binary-search-tree.md',
+      '/tree/solutions/0220-contains-duplicate-iii.md',
+      '/tree/solutions/0230-kth-smallest-element-in-a-bst.md',
+      '/tree/solutions/0235-lowest-common-ancestor-of-a-binary-search-tree.md',
+      '/tree/solutions/0449-serialize-and-deserialize-bst.md',
+      '/tree/solutions/0450-delete-node-in-a-bst.md',
+      '/tree/solutions/0897-increasing-order-search-tree.md',
     ],
   },
 ];

@@ -30,4 +30,17 @@ module.exports = [
       '/breadth-first-search/solutions/0773-sliding-puzzle.md',
     ],
   },
+
+  {
+    title: '第 4 部分 拓扑排序',
+    icon: 'shu',
+    children: [
+      '/breadth-first-search/solutions/intro.md',
+      '/breadth-first-search/solutions/0207-course-schedule.md',
+      '/breadth-first-search/solutions/0210-course-schedule-ii.md',
+      '/breadth-first-search/solutions/0802-find-eventual-safe-states.md',
+      '/breadth-first-search/solutions/0310-minimum-height-trees.md',
+      '/breadth-first-search/solutions/1203-sort-items-by-groups-respecting-dependencies.md',
+    ],
+  },
 ];
