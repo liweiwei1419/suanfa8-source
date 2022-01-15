@@ -6,6 +6,10 @@ tags:
   - 滑动窗口
 ---
 
+::: danger 温馨提示
+[滑动窗口精讲](https://suanfa8.com/sliding-window/) 专栏里有更多习题讲解。
+:::
+
 ![](https://tva1.sinaimg.cn/large/008i3skNgy1gwyeqkv8npj31120gmwfz.jpg)
 
 这一部分我们要和大家分享的内容是「滑动窗口」。翻开《算法（第 4 版）》《算法导论》，都没有看到「滑动窗口」的定义。唯一有点儿沾边的是《算法导论》讲到「滚动哈希」，其实就是固定长度的滑动窗口。

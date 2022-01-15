@@ -24,9 +24,23 @@ icon: shipin
 
 建议使用 1.5 倍速观看。
 
-- [1-1 初识递归](https://www.bilibili.com/video/BV11h411h7nT?p=1)
-- [1-2 栈与深度优先遍历](https://www.bilibili.com/video/BV11h411h7nT?p=2)
-- [1-3 分治算法](https://www.bilibili.com/video/BV11h411h7nT?p=3)
+- [1-1 初识递归](https://www.bilibili.com/video/BV11h411h7nT?p=1)；
+
+<div style="position: relative; padding: 30% 45%;">
+<iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="https://player.bilibili.com/player.html?aid=206484628&bvid=BV11h411h7nT&cid=362102911&page=1" frameborder="no" scrolling="no"></iframe>
+</div>
+
+- [1-2 栈与深度优先遍历](https://www.bilibili.com/video/BV11h411h7nT?p=2)；
+
+<div style="position: relative; padding: 30% 45%;">
+<iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="https://player.bilibili.com/player.html?aid=206484628&bvid=BV11h411h7nT&cid=362102911&page=2" frameborder="no" scrolling="no"></iframe>
+</div>
+
+- [1-3 分治算法](https://www.bilibili.com/video/BV11h411h7nT?p=3)。
+
+<div style="position: relative; padding: 30% 45%;">
+<iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="https://player.bilibili.com/player.html?aid=206484628&bvid=BV11h411h7nT&cid=362102911&page=3" frameborder="no" scrolling="no"></iframe>
+</div>
 
 ## :notebook_with_decorative_cover: 文字教程
 

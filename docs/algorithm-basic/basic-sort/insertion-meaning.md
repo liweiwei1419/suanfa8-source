@@ -11,7 +11,7 @@ tags:
 
 建议使用 1.5 倍速观看。
 
-- [2-8 插入排序的重要意义（05:37）](https://www.bilibili.com/video/BV1y44y1q7MJ?p=8)
+- [2-8 插入排序的重要意义（05:37）](https://www.bilibili.com/video/BV1y44y1q7MJ?p=8)。
 
 <div style="position: relative; padding: 30% 45%;">
 <iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="https://player.bilibili.com/player.html?aid=974034772&bvid=BV1y44y1q7MJ&cid=365418477&page=8" frameborder="no" scrolling="no"></iframe>

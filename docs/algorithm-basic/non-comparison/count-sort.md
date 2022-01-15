@@ -1,5 +1,5 @@
 ---
-title: 2.26 计数排序
+title: 2.26 计数排序（不重要，不用仔细看）
 icon: yongyan
 category: 排序算法
 tags:

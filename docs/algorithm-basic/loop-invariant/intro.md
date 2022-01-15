@@ -7,4 +7,4 @@ tags:
   - 循环不变量
 ---
 
-请见《[循环不变量精讲]()》专栏。
+内容请见《[循环不变量精讲](https://suanfa8.com/loop-invariant/)》专栏。

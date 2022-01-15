@@ -37,7 +37,8 @@ tags:
 
 <CodeGroup>
 <CodeGroupItem title="Java">
-``` java {7,8}
+
+```java {7,8}
 public class Solution {
 
     public int[] sortArray(int[] nums) {
@@ -56,12 +57,13 @@ public class Solution {
         }
         return nums;
     }
-
 }
 
-````
+```
+
 </CodeGroupItem>
 <CodeGroupItem title="Java">
+
 ```java
 public class Solution {
 
@@ -84,7 +86,7 @@ public class Solution {
         return nums;
     }
 }
-````
+```
 
 </CodeGroupItem>
 
@@ -167,13 +169,9 @@ if __name__ == '__main__':
 </CodeGroup>
 
 ::: danger 注意
-
 编码的时候如果不小心，可能会把数组的值修改，建议多调试。
-
 :::
 
 ## 参考资料
 
 - [《算法 4》英文网站](https://algs4.cs.princeton.edu/21elementary/)
-
-<Utterances />

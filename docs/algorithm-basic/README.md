@@ -1,5 +1,6 @@
-# 第 1 部分 算法基础
+# 第 2 章 二分查找、滑动窗口、双指针
 
+<!--
 - [第 0 章 参考资料](/algorithm-basic/reference/reference.md)
 - [第 1 章 递归与时间复杂度](/algorithm-basic/recursion-time-complexity/intro.md)
 - [第 2 章 循环不变量](/algorithm-basic/loop-invariant/intro.md)
@@ -9,4 +10,4 @@
 - [第 6 章 非比较排序算法](/algorithm-basic/non-comparison/intro.md)
 - [第 7 章 二分查找](/algorithm-basic/binary-search/1-decrease-and-conquer.md)
 - [第 8 章 滑动窗口](/algorithm-basic/sliding-window/intro.md)
-- [第 9 章 双指针](/algorithm-basic/two-pointers/intro.md)
+- [第 9 章 双指针](/algorithm-basic/two-pointers/intro.md) -->

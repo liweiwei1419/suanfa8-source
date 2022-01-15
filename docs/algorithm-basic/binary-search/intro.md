@@ -6,7 +6,7 @@ tags:
   - 减治思想
 ---
 
-这部分内容请见我在「导航栏」编写的「二分查找精讲」：
+这部分内容请见我在「导航栏」编写的「[二分查找精讲](https://suanfa8.com/binary-search/)」专栏：
 
 ![image-20211212150658906](https://tva1.sinaimg.cn/large/008i3skNgy1gxb2dhagh1j31mc050wff.jpg)
 

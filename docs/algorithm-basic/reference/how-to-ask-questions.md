@@ -3,8 +3,15 @@ title: 1.4 如何提问
 icon: tiwen
 ---
 
-- [提问的智慧](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/main/README-zh_CN.md)；
-- [How do I ask a good question? - Help Center - Stack Overflow](https://stackoverflow.com/help/how-to-ask)
+::: danger 向他人提问的要点
+
+- 节约被提问者的时间；
+- 要让被提问者感受到 **被尊重**，没有人有义务帮助我们；
+- 不管问题是不是得到解决，都应该表示感谢。
+  :::
+
+* [提问的智慧](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/main/README-zh_CN.md)；
+* [How do I ask a good question? - Help Center - Stack Overflow](https://stackoverflow.com/help/how-to-ask)
 
 如果大家没有时间仔细看完，我这里帮各位总结几点注意事项：
 
