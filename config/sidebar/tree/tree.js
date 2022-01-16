@@ -37,7 +37,7 @@ module.exports = [
     title: '第 2 部分 二分搜索树',
     icon: 'book',
     children: [
-      '/tree/solutions/intro.md',
+      '/tree/intro.md',
       '/tree/solutions/1008-construct-binary-search-tree-from-preorder-traversal.md',
       '/tree/solutions/0095-unique-binary-search-trees-ii.md',
       '/tree/solutions/0098-validate-binary-search-tree.md',
