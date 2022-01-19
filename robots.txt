@@ -1,0 +1,5 @@
+
+User-agent:*
+Disallow:
+
+Sitemap: http://suanfa8.com/sitemap.xml

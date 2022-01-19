@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[606],{1114:function(t,e,n){"use strict";n.r(e);var s=n(1),l=Object(s.a)({},(function(){var t=this.$createElement,e=this._self._c||t;return e("ContentSlotsDistributor",{attrs:{"slot-key":this.$parent.slotKey}},[e("p",[this._v("这些问题比较常考和重要，学习的时候重点依然是：想清楚为什么解决问题的算法可以这样设计。")])])}),[],!1,null,null,null);e.default=l.exports}}]);
