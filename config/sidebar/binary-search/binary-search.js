@@ -1,6 +1,20 @@
 module.exports = [
   {
-    title: '第 1 章 知识点讲解',
+    title: '第 1 章 知识点讲解（视频）',
+    icon: 'shu',
+    children: [
+      '/binary-search/videos/intro.md',
+      '/binary-search/videos/01.md',
+      '/binary-search/videos/02.md',
+      '/binary-search/videos/03.md',
+      '/binary-search/videos/04.md',
+      '/binary-search/videos/05.md',
+      '/binary-search/videos/06.md',
+      '/binary-search/videos/07.md',
+    ],
+  },
+  {
+    title: '第 2 章 知识点讲解（文字版本）',
     icon: 'shu',
     children: [
       '/binary-search/01.md',
@@ -16,7 +30,7 @@ module.exports = [
     ],
   },
   {
-    title: '第 2 章 二分查找基本问题',
+    title: '第 3 章 二分查找基本问题',
     icon: 'shu',
     children: [
       '/binary-search/practice.md',
@@ -34,7 +48,7 @@ module.exports = [
   },
 
   {
-    title: '第 3 章 在非有序数组中使用二分查找',
+    title: '第 4 章 在非有序数组中使用二分查找',
     icon: 'shu',
     children: [
       '/binary-search/solutions/find-index/0033-search-in-rotated-sorted-array.md',
@@ -49,7 +63,7 @@ module.exports = [
   },
 
   {
-    title: '第 4 章 二分答案（查找一个有范围的整数）',
+    title: '第 5 章 二分答案（查找一个有范围的整数）',
     icon: 'shu',
     children: [
       '/binary-search/solutions/find-integer/0069-sqrtx.md',
@@ -63,7 +77,7 @@ module.exports = [
     ],
   },
   {
-    title: '第 5 章 每一轮都要把输入数组看一遍的二分查找',
+    title: '第 6 章 每一轮都要把输入数组看一遍的二分查找',
     icon: 'shu',
     children: [
       '/binary-search/solutions/maximum-minimization/intro.md',
