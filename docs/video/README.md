@@ -8,6 +8,14 @@ tags:
 
 我从 2019 年 9 月开始录制视频题解。最开始的时候，我会对着要讲的材料录好几遍。现在讲解知识点的时候写逐字稿。已经沉淀了很多视频，其实也算是一个小小的体系课程，现在罗列在这里，希望能够对大家有所帮助。
 
+## 自我介绍
+
+<video src="https://suanfa8.com/files/self-introduction.mp4" controls="controls" width="800" height="450">
+Your browser does not support the video tag.
+</video>
+
+**说明**：上传日期：2022 年 3 月 23 日（星期三）。
+
 ## 0. 算法新手如何刷力扣（LeetCode）？【干货分享】
 
 - [视频：算法新手如何刷力扣（LeetCode）？【干货分享】](https://www.bilibili.com/video/BV17K411J7yR)
