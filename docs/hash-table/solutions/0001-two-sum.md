@@ -18,6 +18,12 @@ tags:
 <iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="https://player.bilibili.com/player.html?aid=245005025&bvid=BV1rv411k7VY&cid=247884205&page=1" frameborder="no" scrolling="no"></iframe>
 </div>
 
+发布在「算法吧」的视频（带字幕和进度条）：
+
+<video src="https://suanfa8.com/files/hash-table/lc-0001.mp4" controls="controls" width="800" height="500">
+Your browser does not support the video tag.
+</video>
+
 ## 题目描述
 
 给定一个整数数组 `nums` 和一个整数目标值 `target`，请你在该数组中找出 **和为目标值** _`target`_ 的那 **两个** 整数，并返回它们的数组下标。

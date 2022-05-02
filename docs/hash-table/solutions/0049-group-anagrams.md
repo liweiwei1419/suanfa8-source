@@ -19,6 +19,12 @@ tags:
 <iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="https://player.bilibili.com/player.html?aid=674603390&bvid=BV1eU4y1J7Ti&cid=382924220&page=1" frameborder="no" scrolling="no"></iframe>
 </div>
 
+发布在「算法吧」的视频（带字幕和进度条）：
+
+<video src="https://suanfa8.com/files/hash-table/lc-0049.mp4" controls="controls" width="800" height="450">
+Your browser does not support the video tag.
+</video>
+
 ## 题目描述
 
 给定一个字符串数组，将字母异位词组合在一起。字母异位词指字母相同，但排列不同的字符串。
