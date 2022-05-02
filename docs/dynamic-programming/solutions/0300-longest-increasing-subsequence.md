@@ -8,7 +8,7 @@ tags:
 
 > 经典的「动态规划」问题，不同的定义状态的方式，可以得到不同复杂度的求解方法。
 
-- 题目链接：[300. 最长递增子序列](https://leetcode-cn.com/problems/combination-sum/)；
+- 题目链接：[300. 最长递增子序列](https://leetcode-cn.com/problems/longest-increasing-subsequence/)；
 - 题解链接：[动态规划 （包含 O (N log N) 解法的状态定义以及解释）](https://leetcode-cn.com/problems/longest-increasing-subsequence/solution/dong-tai-gui-hua-er-fen-cha-zhao-tan-xin-suan-fa-p/)。
 
 ## 题目描述
