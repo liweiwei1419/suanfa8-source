@@ -112,7 +112,7 @@ public class Solution {
 
 同理，讨论 `nums[mid] < nums[right]` 的反面（下面的描述基本上是反过来讲的，大家可以跳过）。
 
-**情况 2**：当中间元素的数值严格小于右边界的数值时，由于没有重复元素，所以是严格大于，即 `nums[mid] > nums[right]`
+**情况 2**：当中间元素的数值严格大于右边界的数值时，由于没有重复元素，所以是严格大于，即 `nums[mid] > nums[right]`
 
 - 此时区间 `[left..mid]` 内的元素一定是有序的；
 - 如果 `target` 在区间 `[left..right]` 里，它或者在有序区间 `[left..mid]` 里，或者在另一个区间 `[mid + 1..right]` 里。

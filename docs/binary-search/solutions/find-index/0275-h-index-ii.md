@@ -75,7 +75,7 @@ h 指数想说的是这样一件事情，一个人的论文根据被引用的次
 
 这个例子有点儿特殊，论文被引用了 $3$ 次，篇数有 $3$ 篇。再来看一个更一般的例子：
 
-<img src="https://tva1.sinaimg.cn/large/008i3skNgy1gxdr86c4cqj30ru0didgn.jpg" alt="image.png" style="zoom:50%;" />
+<img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h1a9l9ethhj20wg0by756.jpg" alt="image.png" style="zoom:50%;" />
 
 **结论**：这条分割线越靠左边，说明被引用的次数很多，文章还很多，h 指数越高。
 
@@ -131,7 +131,7 @@ public class Solution {
 
 - `while (left < right)` 与 ` left = mid + 1`、`right = mid;` 配合使用表示退出循环以后有 `left == right` 成立；
 - `citations[mid]` 表示分割线右边的最少的被引用文章的引用次数；
-- `left - mid` 表示分割线右边的文章数量；
+- `len - mid` 表示分割线右边的文章数量；
 - 退出循环以后，`mid` 就来到了合适的位置，题目要返回的是论文篇数，所以需要返回 `len - left`；
 - 特殊判断 `citations[len - 1] == 0` 表示如果全部文章的引用次数都为 $0$，则 h 指数为 $0$；
 - 初始化 `int right = len - 1;` 这是因为分割线最右也只能在 `len - 1` 的左边，如下图所示：
