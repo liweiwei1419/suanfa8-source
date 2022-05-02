@@ -298,3 +298,230 @@ public class Solution {
 
 - 时间复杂度：$O(N \log K)$，遍历数据 $O(N)$，堆内元素调整 $O(K)$；
 - 空间复杂度：$O(K)$。
+
+
+---
+
+视频讲解会使用到的代码：
+
+**参考代码 1**：
+
+> 把等于切分元素的所有元素分到了数组的同一侧。
+
+```java
+import java.util.Random;
+
+
+class Solution {
+    
+    private final static Random random = new Random(System.currentTimeMillis());
+    
+    public int findKthLargest(int[] nums, int k) {
+        // 第 1 大的数，下标是 len - 1;
+        // 第 2 大的数，下标是 len - 2;
+        // ...
+        // 第 k 大的数，下标是 len - k;
+        int len = nums.length;
+        int target = len - k;
+        
+        int left = 0;
+        int right = len - 1;
+        
+        while (true) {
+            int pivotIndex = partition(nums, left, right);
+            if (pivotIndex == target) {
+                return nums[pivotIndex]; 
+            } else if (pivotIndex < target) {
+                left = pivotIndex + 1; 
+            } else {
+                // pivotIndex > target
+                right = pivotIndex - 1; 
+            }
+        }
+    }
+    
+    private int partition(int[] nums, int left, int right) {
+        int randomIndex = left + random.nextInt(right - left + 1);
+        swap(nums, left, randomIndex);
+        
+        
+        // all in nums[left + 1..j) < pivot;
+        // all in nums[j..i) >= pivot;
+        int pivot = nums[left];
+        int j = left + 1;
+        for (int i = left + 1; i <= right; i++) {
+            if (nums[i] < pivot) {
+                swap(nums, j, i);
+                j++;
+            }
+        }
+        swap(nums, left, j - 1);
+        return j - 1;
+    }
+    
+    private void swap(int[] nums, int index1, int index2) {
+        int temp = nums[index1];
+        nums[index1] = nums[index2];
+        nums[index2] = temp;
+    }
+    
+}
+```
+
+**参考代码 2**：
+
+> 把等于切分元素的所有元素等概率地分到了数组的两侧。避免了递归树倾斜，使得递归树相对平衡。
+
+```java
+import java.util.Random;
+
+
+class Solution {
+    
+    private final static Random random = new Random(System.currentTimeMillis());
+    
+    public int findKthLargest(int[] nums, int k) {
+        // 第 1 大的数，下标是 len - 1;
+        // 第 2 大的数，下标是 len - 2;
+        // ...
+        // 第 k 大的数，下标是 len - k;
+        int len = nums.length;
+        int target = len - k;
+        
+        int left = 0;
+        int right = len - 1;
+        
+        while (true) {
+            int pivotIndex = partition(nums, left, right);
+            if (pivotIndex == target) {
+                return nums[pivotIndex]; 
+            } else if (pivotIndex < target) {
+                left = pivotIndex + 1; 
+            } else {
+                // pivotIndex > target
+                right = pivotIndex - 1; 
+            }
+        }
+    }
+    
+    private int partition(int[] nums, int left, int right) {
+        int randomIndex = left + random.nextInt(right - left + 1);
+        swap(nums, left, randomIndex);
+        
+        
+        // all in nums[left + 1..le) <= pivot;
+        // all in nums(ge..right] >= pivot;
+        int pivot = nums[left];
+        int le = left + 1;
+        int ge = right;
+        
+        while (true) {
+            while (le <= ge && nums[le] < pivot) {
+                le++;
+            }
+            
+            while (le <= ge && nums[ge] > pivot) {
+                ge--;
+            }
+            
+            if (le >= ge) {
+                break;
+            }
+            swap (nums, le, ge);
+            le++;
+            ge--;
+        }
+        
+        swap(nums, left, ge);
+        return ge;
+    }
+    
+    private void swap(int[] nums, int index1, int index2) {
+        int temp = nums[index1];
+        nums[index1] = nums[index2];
+        nums[index2] = temp;
+    }
+    
+}
+```
+
+**参考代码 3**：
+
+> 把等于切分元素的所有元素挤到了数组的中间。在有很多元素和切分元素相等的情况下，递归区间大大减少。
+
+```java
+import java.util.Random;
+
+public class Solution {
+
+    private static Random RANDOM = new Random(System.currentTimeMillis());
+
+    public int findKthLargest(int[] nums, int k) {
+        int len = nums.length;
+        int target = len - k;
+
+        int left = 0;
+        int right = len - 1;
+        while (true) {
+            int[] pIndex = partition(nums, left, right);
+
+            int index1 = pIndex[0];
+            int index2 = pIndex[1];
+
+            if (target < index1) {
+                // 下一轮搜索区间 [left, index1 - 1]
+                right = index1 - 1;
+            } else if (target == index1) {
+                return nums[index1];
+            } else if (target < index2) {
+                left = index1 + 1;
+                right = index2 - 1;
+            } else if (target == index2) {
+                return nums[index2];
+            } else {
+                // pIndex > target
+                // 下一轮搜索区间 [index2 + 1, right]
+                left = index2 + 1;
+            }
+        }
+    }
+
+    private int[] partition(int[] nums, int left, int right) {
+        int randomIndex = left + RANDOM.nextInt(right - left + 1);
+        swap(nums, randomIndex, left);
+
+        // 循环不变量：
+        // all in [left + 1, lt] < pivot
+        // all in [lt + 1, i) = pivot
+        // all in [gt, right] > pivot
+        int pivot = nums[left];
+        int lt = left;
+        int gt = right + 1;
+
+        int i = left + 1;
+        while (i < gt) {
+            if (nums[i] < pivot) {
+                lt++;
+                swap(nums, i, lt);
+                i++;
+            } else if (nums[i] == pivot) {
+                i++;
+            } else {
+                gt--;
+                swap(nums, i, gt);
+            }
+        }
+        swap(nums, left, lt);
+        // 这里要特别小心
+        return new int[]{lt, gt - 1};
+    }
+
+    private void swap(int[] nums, int index1, int index2) {
+        int temp = nums[index1];
+        nums[index1] = nums[index2];
+        nums[index2] = temp;
+    }
+}
+```
+
+![image.png](https://tva1.sinaimg.cn/large/008i3skNgy1gx1n3d4cf2j30ra06ymxk.jpg)

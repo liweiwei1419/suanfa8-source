@@ -1,6 +1,6 @@
 ---
-title: partition 几种写法比较
-icon: yongyan
+title: 第 2 节 partition
+icon: shipin
 category: 排序算法
 tags:
   - 排序算法
@@ -8,362 +8,72 @@ tags:
   - 快速排序
 ---
 
-# partition 几种写法比较
-
-## partition 1：把等于切分元素的所有元素分到了数组的同一侧
-
-可能会造成递归树倾斜。
-
-**参考代码**：
-
-```java
-import java.util.Arrays;
-import java.util.Random;
-
-public class Solution {
-
-    public int findKthLargest(int[] nums, int k) {
-        int len = nums.length;
-
-        int target = len - k;
-
-        int left = 0;
-        int right = len - 1;
-        while (true) {
-            int pIndex = partition(nums, left, right);
-
-            if (pIndex == target) {
-                return nums[pIndex];
-            } else if (pIndex < target) {
-                // 下一轮搜索区间 [pIndex + 1, right]
-                left = pIndex + 1;
-            } else {
-                // pIndex > target
-                // 下一轮搜索区间 [left, pIndex - 1]
-                right = pIndex - 1;
-            }
-        }
-
-    }
-
-    private int partition(int[] nums, int left, int right) {
-        int pivot = nums[left];
-
-        // [left + 1 .. le] <= pivot
-        // (le, i] > pivot
-        // 注意点 1：一定要设置成 left ，否则交换会出错
-        int le = left;
-        for (int i = left + 1; i <= right; i++) {
-            // 这里写 < 或者 <= 都可以
-            if (nums[i] <= pivot) {
-                le++;
-                swap(nums, le, i);
-            }
-        }
-
-        swap(nums, left, le);
-        return le;
-    }
-
-    private void swap(int[] nums, int index1, int index2) {
-        int temp = nums[index1];
-        nums[index1] = nums[index2];
-        nums[index2] = temp;
-    }
-}
-```
-
-```java
-import java.util.Arrays;
-import java.util.Random;
-
-public class Solution {
-
-    private static Random random = new Random(System.currentTimeMillis());
-
-    public int findKthLargest(int[] nums, int k) {
-        int len = nums.length;
-
-        int target = len - k;
-
-        int left = 0;
-        int right = len - 1;
-        while (true) {
-            int pIndex = partition(nums, left, right);
-
-            if (pIndex == target) {
-                return nums[pIndex];
-            } else if (pIndex < target) {
-                // 下一轮搜索区间 [pIndex + 1, right]
-                left = pIndex + 1;
-            } else {
-                // pIndex > target
-                // 下一轮搜索区间 [left, pIndex - 1]
-                right = pIndex - 1;
-            }
-        }
-
-    }
-
-    private int partition(int[] nums, int left, int right) {
-        // 注意点 2：必须随机化
-        int randomIndex = left + random.nextInt(right - left + 1);
-        swap(nums, left, randomIndex);
-
-        int pivot = nums[left];
-        // [left + 1 .. le] <= pivot
-        // (le, i] > pivot
-        // 注意点 1：一定要设置成 left ，否则交换会出错
-        int le = left;
-        for (int i = left + 1; i <= right; i++) {
-            // 这里写 < 或者 <= 都可以
-            if (nums[i] <= pivot) {
-                le++;
-                swap(nums, le, i);
-            }
-        }
-
-        swap(nums, left, le);
-        return le;
-    }
-
-    private void swap(int[] nums, int index1, int index2) {
-        int temp = nums[index1];
-        nums[index1] = nums[index2];
-        nums[index2] = temp;
-    }
-}
-```
-
-**注意**：必须随机化 pivot 元素。
-
-![image.png](https://tva1.sinaimg.cn/large/008i3skNgy1gx1n2h60pwj30qa06o3yx.jpg)
-
-![image.png](https://tva1.sinaimg.cn/large/008i3skNgy1gx1n2xdlplj30q206umxl.jpg)
-
-## partition 2：把等于切分元素的所有元素等概率地分到了数组的两侧
-
-避免了递归树倾斜，递归树相对平衡。
-
-**参考代码**：
-
-```java
-import java.util.Random;
-
-public class Solution {
-
-    private static Random random = new Random(System.currentTimeMillis());
-
-    public int findKthLargest(int[] nums, int k) {
-        int len = nums.length;
-        int left = 0;
-        int right = len - 1;
-
-        // 转换一下，第 k 大元素的索引是 len - k
-        int target = len - k;
-
-        while (true) {
-            int index = partition(nums, left, right);
-            if (index == target) {
-                return nums[index];
-            } else if (index < target) {
-                left = index + 1;
-            } else {
-                right = index - 1;
-            }
-        }
-    }
-
-    public int partition(int[] nums, int left, int right) {
-        // 在区间随机选择一个元素作为标定点
-        int randomIndex = left + random.nextInt(right - left + 1 );
-        swap(nums, left, randomIndex);
-
-
-        int pivot = nums[left];
-
-        // 将等于 pivot 的元素分散到两边
-        // [left, le) <= pivot
-        // (ge, right] >= pivot
-
-        int le = left + 1;
-        int ge = right;
-
-        while (true) {
-            // 遇到 nums[le] >= pivot 的时候停下来
-            // 遇到与 pivot 相等的元素，是通过交换被等概率分到两边的
-            while (le <= ge && nums[le] < pivot) {
-                le++;
-            }
-            while (le <= ge && nums[ge] > pivot) {
-                ge--;
-            }
-
-            if (le > ge) {
-                break;
-            }
-            swap(nums, le, ge);
-            le++;
-            ge--;
-        }
-
-        // 这里还要交换，注意是 ge
-        swap(nums, left, ge);
-        return ge;
-    }
-
-    private void swap(int[] nums, int index1, int index2) {
-        int temp = nums[index1];
-        nums[index1] = nums[index2];
-        nums[index2] = temp;
-    }
-}
-```
-
-![image.png](https://tva1.sinaimg.cn/large/008i3skNgy1gx1n35tvwdj30qw06sgm0.jpg)
-
-## partition 3：把等于切分元素的所有元素挤到了数组的中间
-
-在有很多元素和切分元素相等的情况下，递归区间大大减少
-
-```java
-import java.util.Random;
-
-public class Solution {
-
-    private static Random RANDOM = new Random(System.currentTimeMillis());
-
-    public int findKthLargest(int[] nums, int k) {
-        int len = nums.length;
-        int target = len - k;
-
-        int left = 0;
-        int right = len - 1;
-        while (true) {
-            int[] pIndex = partition(nums, left, right);
-
-            int index1 = pIndex[0];
-            int index2 = pIndex[1];
-
-            if (target < index1) {
-                // 下一轮搜索区间 [left, index1 - 1]
-                right = index1 - 1;
-            } else if (target == index1) {
-                return nums[index1];
-            } else if (target < index2) {
-                left = index1 + 1;
-                right = index2 - 1;
-            } else if (target == index2) {
-                return nums[index2];
-            } else {
-                // pIndex > target
-                // 下一轮搜索区间 [index2 + 1, right]
-                left = index2 + 1;
-            }
-        }
-    }
-
-    private int[] partition(int[] nums, int left, int right) {
-        int randomIndex = left + RANDOM.nextInt(right - left + 1);
-        swap(nums, randomIndex, left);
-
-        // 循环不变量：
-        // all in [left + 1, lt] < pivot
-        // all in [lt + 1, i) = pivot
-        // all in [gt, right] > pivot
-        int pivot = nums[left];
-        int lt = left;
-        int gt = right + 1;
-
-        int i = left + 1;
-        while (i < gt) {
-            if (nums[i] < pivot) {
-                lt++;
-                swap(nums, i, lt);
-                i++;
-            } else if (nums[i] == pivot) {
-                i++;
-            } else {
-                gt--;
-                swap(nums, i, gt);
-            }
-        }
-        swap(nums, left, lt);
-        // 这里要特别小心
-        return new int[]{lt, gt - 1};
-    }
-
-    private void swap(int[] nums, int index1, int index2) {
-        int temp = nums[index1];
-        nums[index1] = nums[index2];
-        nums[index2] = temp;
-    }
-}
-```
-
-![image.png](https://tva1.sinaimg.cn/large/008i3skNgy1gx1n3d4cf2j30ra06ymxk.jpg)
-
-## 补：优先队列写法
-
-思路：看 `k` 是在前面还是后面。
-
-- 前面，就用最小堆；
-- 后面，就用最大堆。
-
-```java
-import java.util.PriorityQueue;
-
-public class Solution {
-
-    // 根据 k 的不同，选最大堆和最小堆，目的是让堆中的元素更小
-    // 思路 1：k 要是更靠近 0 的话，此时 k 是一个较大的数，用最大堆
-    // 例如在一个有 6 个元素的数组里找第 5 大的元素
-    // 思路 2：k 要是更靠近 len 的话，用最小堆
-
-    // 所以分界点就是 k = len - k
-
-    public int findKthLargest(int[] nums, int k) {
-        int len = nums.length;
-        if (k <= len - k) {
-            // System.out.println("使用最小堆");
-            // 特例：k = 1，用容量为 k 的最小堆
-            // 使用一个含有 k 个元素的最小堆
-            PriorityQueue<Integer> minHeap = new PriorityQueue<>(k, (a, b) -> a - b);
-            for (int i = 0; i < k; i++) {
-                minHeap.add(nums[i]);
-            }
-            for (int i = k; i < len; i++) {
-                // 看一眼，不拿出，因为有可能没有必要替换
-                Integer topEle = minHeap.peek();
-                // 只要当前遍历的元素比堆顶元素大，堆顶弹出，遍历的元素进去
-                if (nums[i] > topEle) {
-                    minHeap.poll();
-                    minHeap.add(nums[i]);
-                }
-            }
-            return minHeap.peek();
-
-        } else {
-            // System.out.println("使用最大堆");
-            assert k > len - k;
-            // 特例：k = 100，用容量为 len - k + 1 的最大堆
-            int capacity = len - k + 1;
-            PriorityQueue<Integer> maxHeap = new PriorityQueue<>(capacity, (a, b) -> b - a);
-            for (int i = 0; i < capacity; i++) {
-                maxHeap.add(nums[i]);
-            }
-            for (int i = capacity; i < len; i++) {
-                // 看一眼，不拿出，因为有可能没有必要替换
-                Integer topEle = maxHeap.peek();
-                // 只要当前遍历的元素比堆顶元素严格小，堆顶弹出，遍历的元素进去
-                if (nums[i] < topEle) {
-                    maxHeap.poll();
-                    maxHeap.add(nums[i]);
-                }
-            }
-            return maxHeap.peek();
-        }
-
-    }
-}
-```
+<video src="https://suanfa8.com/files/quick-sort/6-2.mp4" controls="controls" width="800" height="450">
+Your browser does not support the video tag.
+</video>
+
+这一节我们要介绍在算法领域大名鼎鼎的一个算法：快速排序。正如它的名字一样，「快速排序」因它优秀的排序性能而闻名。但事实上，实现一个性能良好的快速排序并不是一件容易的事情。
+
+快速排序也是使用「分治思想」实现的一种排序算法。但「归并排序」不同的是：快速排序首先想方设法通过排定一个元素，并且在排定这个元素的同时，对整个数组也做了一次划分，这个过程叫做 **切分**。
+
+我们先向大家介绍什么是「切分」。
+
+## 切分
+
+通过切分，我们要达到这样的效果：把「切分元素」放在排序以后最终应该在的位置。
+
+![image-20211223045418448](https://tva1.sinaimg.cn/large/008i3skNgy1gxnahdv558j31hc0u00v1.jpg)
+
+如下图所示，基准值为 $4$。
+
+> 一次切分要实现的效果是：【小于等于基准值的所有元素】基准值【大于等于基准值的所有元素】
+
+![image-20211207115650929](https://tva1.sinaimg.cn/large/008i3skNgy1gx54s40vc4j30zy0diq3m.jpg)
+
+- 先选出一个元素，通常是这个数组最开始的那个元素，作为「切分元素」；
+- 然后经过一次扫描，使得扫描以后，数组的元素分为两个部分：
+  - 第 1 部分，都小于切分元素；
+  - 第 2 部分，都大于等于切分元素；
+- 最后我们只要交换一下第 1 个元素和第 1 部分（小于切分元素的部分）的最后 1 个位置的元素，这个 **切分元素就呆在了最终它应该呆的位置**。
+
+说明：示意图为了表意清晰没有讨论 `=` 的情况。
+
+切分的思路是这样的：从标定点后面一个一个地比较到底，遇到比标定元素大的，就放过，遇到比标定元素小的，就依次放在标定元素的后面。大放过，小交换。
+
+![image-20211207115746853](https://tva1.sinaimg.cn/large/008i3skNgy1gx54t2ovu7j30xk0u0gog.jpg)
+
+再看一个例子：
+
+![partition-2](https://tva1.sinaimg.cn/large/008i3skNgy1gxnaqevqq3g30u00gw7q0.gif)
+
+切分过程展示：
+
+![image-20211223050010972](https://tva1.sinaimg.cn/large/008i3skNgy1gxnanihvuoj31hc0u00wn.jpg)
+
+最后交换 `6` 和 `5`，完成切分。
+
+![image-20211223115559667](https://tva1.sinaimg.cn/large/008i3skNgy1gxnmo5bluxj30v8058aa9.jpg)
+
+::: danger 说明
+本节无代码，参考代码会放在「快速排序」的优化一节中。
+:::
+
+## 总结
+
+### 快速排序的基本想法
+
+快速排序每一次都排定一个元素（这个元素呆在了它最终应该呆的位置），然后递归地去排它左边的部分和右边的部分，依次进行下去，直到数组有序。
+
+### 快速排序的算法思想
+
+分而治之（分治思想），与「归并排序」不同，「快速排序」在「分」这件事情上不想「归并排序」无脑地一分为二，而是采用了 `partition` 的方法，因此就没有「合」的过程。
+
+### 与归并排序比较
+
+归并排序不管数组的内容是什么，归并排序总是一分为二地去做排序运算，然后再归并起来。
+
+---
+
+**说明**：《算法 4》这本书里面的代码风格是极其不推荐的。代码是写给人看的，应该尽量避免代码个人风格化，采用统一规范的写法，保证易读性，可扩展性。
+
+![img](https://tva1.sinaimg.cn/large/008i3skNgy1gwzk0zt130j315o0hwq7m.jpg)

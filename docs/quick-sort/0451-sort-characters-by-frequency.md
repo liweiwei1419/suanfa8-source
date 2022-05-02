@@ -64,9 +64,85 @@ tags:
 
 解释题意：给定一个字符串，请将字符串里的字符按照出现的频率降序排列。
 
-## 方法：使用三路快排来做
+### 方法一：排序
 
-**参考代码**：
+### 方法二：三路快排
+
+注意到有大量重复键值。
+
+**参考代码 1**：
+
+```java
+import java.util.Random;
+
+
+class Solution {
+    
+    private final static Random random = new Random(System.currentTimeMillis());
+    
+    private int[] freq;
+    
+    public String frequencySort(String s) {
+        freq = new int[128];
+        char[] charArray = s.toCharArray();
+        for (char c : charArray) {
+            freq[c]++;
+        }
+        
+        quickSort(charArray, 0, s.length() - 1);
+        return new String(charArray);
+    }
+    
+    private void quickSort(char[] charArray, int left, int right) {
+        if (left >= right) {
+            return;
+        }
+
+        // [left..right]
+        int randomIndex = left + random.nextInt(right - left + 1); 
+        swap(charArray, left, randomIndex);
+        
+        int pivot = charArray[left];
+
+        int lt = left + 1; // lt: less than
+        int gt = right; // ge: greater than
+        // all in nums[left + 1..lt) < pivot
+        // all in nums[lt..i) = pivot
+        // all in nums(gt..right] > pivot
+        int i = left + 1;
+
+        while (i <= gt) {
+            if (freq[charArray[i]] > freq[pivot]) {
+                swap(charArray, i, lt);
+                lt++;
+                i++;
+            } else if (charArray[i] == pivot) {
+                i++;
+            } else {
+                // nums[i] > pivot
+                swap(charArray, i, gt);
+                gt--;
+            }
+        } 
+        
+        swap(charArray, left, lt - 1);
+
+        quickSort(charArray, left, lt - 2);
+        quickSort(charArray, gt + 1, right);
+    }
+
+    
+
+    private void swap(char[] charArray, int index1, int index2) {
+        char temp = charArray[index1];
+        charArray[index1] = charArray[index2];
+        charArray[index2] = temp;
+    }
+
+}
+```
+
+**参考代码 2**：
 
 ```java
 import java.util.Random;
@@ -75,7 +151,7 @@ public class Solution {
 
     private int[] freq;
 
-    private static final Random RANDOM = new Random();
+    private static final Random RANDOM = new Random(System.currentTimeMillis());
 
     public String frequencySort(String s) {
         // 先转换为字符数组，以避免 charAt() 方法每次都检查下标有效性

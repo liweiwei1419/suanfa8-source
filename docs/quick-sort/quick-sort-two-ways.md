@@ -1,6 +1,6 @@
 ---
-title: 4 快速排序的优化（避免递归树倾斜）
-icon: yongyan
+title: 第 5 节 双路快排
+icon: shipin
 category: 排序算法
 tags:
   - 排序算法
@@ -8,10 +8,90 @@ tags:
   - 快速排序
 ---
 
-以下是针对特殊测试用例（有很多重复元素的输入数组）有 3 种版本的快排：
+
+
+
+<video src="https://suanfa8.com/files/quick-sort/6-5.mp4" controls="controls" width="800" height="450">
+Your browser does not support the video tag.
+</video>
+
+
+**参考代码**：
+
+```java
+import java.util.Random;
+
+
+class Solution {
+
+    private final static Random random = new Random(System.currentTimeMillis());
+    
+    public int[] sortArray(int[] nums) {
+        quickSort(nums, 0, nums.length - 1);
+        return nums;
+    }
+
+    private void quickSort(int[] nums, int left, int right) {
+        if (left >= right) {
+            return;
+        }
+
+        int pivotIndex = partition(nums, left, right);
+        quickSort(nums, left, pivotIndex - 1);
+        quickSort(nums, pivotIndex + 1, right);
+    }
+
+    private int partition(int[] nums, int left, int right) {
+        // [left..right]
+        int randomIndex = left + random.nextInt(right - left + 1); 
+        swap(nums, left, randomIndex);
+        
+        int pivot = nums[left];
+
+        int le = left + 1; // le: less equals
+        int ge = right; // ge: greater equals
+        // all in nums[left + 1..le) <= pivot
+        // all in nums(ge..right] >= pivot
+        while (true) {
+            while (le <= ge && nums[le] < pivot) {
+                le++;
+            }
+
+            while (le <= ge && nums[ge] > pivot) {
+                ge--;
+            }
+
+            // le 来到了第一个大于等于 pivot 的位置
+            // ge 来到了第一个小于等于 pivot 的位置
+
+            if (le >= ge) {
+                break;
+            }
+            swap(nums, le, ge);
+            le++;
+            ge--;
+        }
+        
+        swap(nums, left, ge);
+        return ge;
+    }
+
+    private void swap(int[] nums, int index1, int index2) {
+        int temp = nums[index1];
+        nums[index1] = nums[index2];
+        nums[index2] = temp;
+    }
+
+}
+```
+
+
+---
+
+针对特殊测试用例（有很多重复元素的输入数组）有 3 种版本的快排：
 
 - 版本 1：基本快排：把等于切分元素的所有元素分到了数组的同一侧，可能会造成递归树倾斜；
-- 版本 2：双指针快排：把等于切分元素的所有元素**等概率**地分到了数组的两侧，避免了递归树倾斜，递归树相对平衡；
+- 版本 2：双指针快排：把等于切分元素的所有元素 **等概率** 地分到了数组的两侧，避免了递归树倾斜，递归树相对平衡；
 - 版本 3：三指针快排：把等于切分元素的所有元素挤到了数组的中间，在有很多元素和切分元素相等的情况下，递归区间大大减少。
 
 > 这里有一个经验的总结：之所以快排有这些优化，起因都是来自「递归树」的高度。**关于「树」的算法的优化，绝大部分都是在和树的「高度」较劲**。类似的通过减少树高度、使得树更平衡的数据结构还有「二叉搜索树」优化成「AVL 树」或者「红黑树」、「并查集」的「按秩合并」与「路径压缩」。
@@ -182,3 +262,7 @@ class QuickSortTwoWays:
 
 </CodeGroupItem>
 </CodeGroup>
+
+## 解释最后为什么交换 `left` 与 `ge`
+
+![image-20220207185004865](https://tva1.sinaimg.cn/large/008i3skNgy1gz5557xfyrj31hc0u0jwf.jpg)
