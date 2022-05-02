@@ -221,11 +221,11 @@ public class Solution {
 
 暴力解法我们需要考虑所有可能的子串，我们把它们列出表格如下。我们用数对 $(i,j)$ 表示子串 `s[i..j]` 。
 
-![image.png](https://pic.leetcode-cn.com/1630673981-lUwPHd-image.png)
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h1baviepjnj21hc0u0go1.jpg)
 
 而使用「滑动窗口」算法我们需要考虑的子串如下图所示。
 
-![image.png](https://pic.leetcode-cn.com/1630673994-PiHZuU-image.png)
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h1bavisvz1j21hc0u0dhx.jpg)
 
 
 
