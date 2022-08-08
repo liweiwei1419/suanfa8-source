@@ -77,7 +77,7 @@ tags:
 
 2、不同于我们在纸上解方程，`x` 和 `y` 都要写成 `a` 和 `b` 的表达式，消去 `y` 以后，`x` 计算出来以后，可以通过 `x` 的值计算得到 `y` 。
 
-![image.png](https://pic.leetcode-cn.com/e4cd3683589c41fcca649124a33923b5ddc0af280d02457f02f904d2aeda86ce-image.png)
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2tp7w2wehj20yq0u0ae0.jpg)
 
 **参考代码 1**：
 

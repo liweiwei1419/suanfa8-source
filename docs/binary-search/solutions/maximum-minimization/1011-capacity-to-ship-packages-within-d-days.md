@@ -128,14 +128,8 @@ public class Solution {
         }
         return days;
     }
-
-    public static void main(String[] args) {
-        int[] weights = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-        int D = 5;
-
-        Solution solution = new Solution();
-        int res = solution.shipWithinDays(weights, D);
-        System.out.println(res);
-    }
 }
 ```
+
+
+（时间复杂度与空间复杂度省略。）

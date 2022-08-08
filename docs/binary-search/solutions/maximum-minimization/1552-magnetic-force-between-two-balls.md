@@ -18,7 +18,7 @@ tags:
 
 **示例 1：**
 
-![img](https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2020/08/16/q3v1.jpg)
+![img](https://tva1.sinaimg.cn/large/e6c9d24egy1h2tp8pkuouj20fm05fq34.jpg)
 
 ```
 输入：position = [1,2,3,4,7], m = 3

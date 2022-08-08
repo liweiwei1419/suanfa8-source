@@ -195,6 +195,6 @@ left = 3, right = 4, mid = 3
 
 **在区间只有 $2$ 个数的时候**，本题 `if`、`else` 的逻辑区间的划分方式是：`[left..mid - 1]` 与 `[mid..right]`。如果 `mid` 下取整，在区间只有 $2$ 个数的时候有 `mid` 的值等于 `left`，一旦进入分支 `[mid..right]` 区间不会再缩小，出现死循环。
 
-![image.png](https://pic.leetcode-cn.com/1639366986-BFgeWx-image.png)
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2towzutmnj21hc0u041o.jpg)
 
 **解决办法**：把取中间数的方式改成上取整。

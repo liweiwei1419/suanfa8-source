@@ -206,11 +206,11 @@ int mid = (low + high) >>> 1;
 
 用“+”和除法，不能通过，提示也很清楚了。
 
-![image.png](https://pic.leetcode-cn.com/049e64ded6739e8bd6955a1d5e3ef76acc0aac0ad12909bdd58772dd6d465240-image.png)
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2toxd2ftej21v40u0ted.jpg)
 
 如果你用 Python 的话，就可以过，这是因为：当 `left + right` 很大的时候，Python 就自动帮你转成 long 类型了，因此结果也不会错。
 
-![image.png](https://pic.leetcode-cn.com/46e50c5802c6b28bafe78c7b3ca88872139844177e929259ab5d0117ba61d52d-image.png)
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2toxb8gu4j22960to7ah.jpg)
 
 ## 总结
 

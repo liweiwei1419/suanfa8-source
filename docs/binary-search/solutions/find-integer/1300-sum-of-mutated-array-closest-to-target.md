@@ -57,12 +57,12 @@ tags:
 
 - 这道题比较麻烦的是求和以后可能不等于 `target` ，所以让我们求「最接近的方案」。而这个烦人的根源是 `value` 的取值一定得是整数。正是因为题目说 `value` 是整数，并且「答案不一定是 `arr` 中的数字」，因此依然可以使用二分查找法确定这个整数值。
 
-![image.png](https://pic.leetcode-cn.com/b57718deab11dc3f391a3a8e0ea484328626c8f559dc4704544bbe945773d1cf-image.png){:width="550px"}
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2tp7zyrruj20ze0mk400.jpg){:width="550px"}
 
 - 做题的时候，会发现判别条件很不好写，因为「怎么衡量接近」，度量这个「最接近」的量不好选。因此需要考虑别的方案；
 - 最接近的情况是：选定了一个 `value` 求和以后，恰恰好等于 `target`。不过更有可能出现的情况是：`value` 选得小了，「接近程度」变大，而 `value` 选得大了，「接近程度」变小，反过来也是有可能的。
 
-![image.png](https://pic.leetcode-cn.com/7bc8f98a3cab80d097bb16238e5118cfaa609d50203a767b2b01fe4f2a264bb2-image.png){:width="550px"}
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2tp82eyd8j21g40saac3.jpg){:width="550px"}
 
 - 解决方案是：**把边界的上下方的可能的 `value` 值（一共就两个）都拿出来进行一次比较即可**。
 

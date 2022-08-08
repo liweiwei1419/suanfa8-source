@@ -48,7 +48,7 @@ tags:
 
 **进阶：**你可以设计一个时间复杂度为 `O(log n)` 的解决方案吗？
 
-![image.png](https://pic.leetcode-cn.com/1614327694-ZemZgK-image.png)
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2tovm25roj21o00geacs.jpg)
 
 「二分查找」详解可以参考 [二分查找的两种思路和三种题型](https://leetcode-cn.com/leetbook/read/learning-algorithms-with-leetcode/xsq0b7/)、[写对二分查找不能靠模板，需要理解加练习 （附练习题，持续更新）](https://leetcode-cn.com/problems/search-insert-position/solution/te-bie-hao-yong-de-er-fen-cha-fa-fa-mo-ban-python-/)。
 
@@ -93,11 +93,11 @@ public class Solution {
 
 **情况 1**：`mid` 位于后面的有序区间里
 
-<img src="https://pic.leetcode-cn.com/1614329409-AQTEOx-image.png" alt="image.png" style="zoom: 50%;" />
+<img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tovowl5dj20s60a0dg2.jpg" alt="image.png" style="zoom: 50%;" />
 
 **情况 2**：`mid` 位于前面的有序区间里
 
-<img src="https://pic.leetcode-cn.com/1614329458-MLbuVu-image.png" alt="image.png" style="zoom: 50%;" />
+<img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tovs63plj20sq09yq35.jpg" alt="image.png" style="zoom: 50%;" />
 
 我们以讨论 **中间元素和右边界的关系** 为例，其它情况类似。由于不存在重复元素，**所以它们的关系不是大于就是小于**。
 
