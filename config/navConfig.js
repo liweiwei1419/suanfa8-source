@@ -194,6 +194,22 @@ module.exports = [
       },
     ],
   },
+  {
+    text: '友情链接',
+    icon: 'youqinglianjie',
+    items: [
+      {
+        text: '负雪明烛',
+        icon: 'youqinglianjie',
+        link: 'https://fuxuemingzhu.cn/',
+      },
+      {
+        text: 'LeetCode（中国）',
+        icon: 'youqinglianjie',
+        link: 'https://leetcode.cn/'
+      }
+    ]
+  },
 
   {
     text: '闲聊',

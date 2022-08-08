@@ -12,6 +12,7 @@ module.exports = [
       '/quick-sort/summary-partition.md',
       '/quick-sort/review-loop-invariant.md',
       '/quick-sort/review-recursion.md',
+      '/quick-sort/summary.md',
     ],
   },
   {

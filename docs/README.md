@@ -3,6 +3,28 @@ title: 快来算法吧
 icon: huanyingye
 ---
 
+说明：这个网站的通知功能并不好，很多大家的留言我都不能及时看到，所以大家如果有什么问题急需我反馈的话，可以加我的微信 13671597056，平常聊聊天也是可以的。就是不要找我做新题（有好的问题推荐给我，我还是很欢迎的，就是不要给我推荐偏竞赛的，面试笔试都不会考的问题，我做这些问题、讲解这些问题意义不大），很多题目我都不会做。我只是更多时候站在初学者的角度讲解问题，讲得更细致一点，感谢大家理解和支持！
+
+图片裂掉了，大家就直接点击「题解链接」，到「力扣」网上看图就可以了，实在不行就再联系我。
+
+## :pencil: 变更日志
+
+### 2022 年 6 月 16 日（星期四）
+
+- 临时添加了「力扣」第 3 题（无重复字符的最长子串）的视频题解，[地址](https://suanfa8.com/sliding-window/01/0003-longest-substring-without-repeating-characters/)。
+
+### 2022 年 5 月 5 日（星期四）
+
+- 补充了「快速排序」总结：[B 站地址](https://www.bilibili.com/video/BV1MR4y1N7De?spm_id_from=333.999.0.0)；
+- 添加了 [负雪明烛的网站](https://fuxuemingzhu.cn/) 为友情链接。
+
+
+### 2022 年 5 月 1 日（星期日）
+
+- 在 B 站上传了《[快速排序](https://www.bilibili.com/video/BV1fS4y1a7zF/?spm_id_from=333.788)》，一共 9 个视频，并且更新了 [快速排序](https://suanfa8.com/quick-sort/) 专题的内容。
+
+---
+
 好消息：「算法吧」于 2022 年 1 月 25 日（星期二）通过了通信管理局域名备案，并申请了 SSL 证书，「算法吧」部署在了国内的服务器上，可以通过 [https://suanfa8.com](https://suanfa8.com) 和 [https://www.suanfa8.com](https://www.suanfa8.com) 访问了。
 
 祝各位朋友们五一假期愉快！劳动者光荣。
@@ -46,12 +68,7 @@ icon: huanyingye
 
 :::
 
-## :pencil: 变更日志
-
-
-### 2022 年 5 月 1 日（星期日）
-
-- 在 B 站上传了《[快速排序](https://www.bilibili.com/video/BV1fS4y1a7zF/?spm_id_from=333.788)》，一共 9 个视频，并且更新了 [快速排序](https://suanfa8.com/quick-sort/) 专题的内容。
+---
 
 ### 2022 年 3 月 23 日（星期三）
 
