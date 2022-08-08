@@ -55,7 +55,7 @@ tags:
 
 **输入数组**：$a_0,a_1,\cdots,a_{n-1}$
 
-定义「差分数组」：$b_0 = a_0,b_1 = a_1 - a_0,\cdots,b_{n-1} = a_{n-1}$，数组 $b$ 的前缀和就是数组 $a$。
+定义「差分数组」：$b_0 = a_0,b_1 = a_1 - a_0,b_2 = a_2 - a_1,\cdots,b_{n-1} = a_{n-1}$，数组 $b$ 的前缀和就是数组 $a$。
 
 给数组 $a$ 的区间 `[left..right]` 每个数都加上 $x$ ，数组 $b$ 的数值发生变化的只有：$b_{left}$ 和 $b_{right}$。这是因为：
 
@@ -74,7 +74,7 @@ $b_{i} = a_{i} + x - (a_{i - 1} + x)$，都没有变化。
 
 输入数组和输出数组可以通过下面的图来理解题意。
 
-![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c06183cc85ce4f77aefd3ddbcf1eff59~tplv-k3u1fbpfcp-watermark.image)
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2u3dza9h4j217o0k4gmo.jpg)
 
 **解题思路**：
 
@@ -101,7 +101,7 @@ public class Solution {
 }
 ```
 
-这里要注意两个细节：
+因为题目中的航班从 `1` 开始编号，所以这里要注意两个细节：
 
 - **细节 1**：处理左边界的时候，下标有一个偏移，所以是 `nums[booking[0] - 1] += booking[2];`
 - **细节 2**：处理右边界的时候，由于处理的是 `right + 1`，所以不用减 $1$（这里没有说得很清楚，相信大家可以明白意思）。

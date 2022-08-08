@@ -18,7 +18,7 @@ tags:
 基数排序的子过程：计数排序（因为要保证稳定性）。
 :::
 
-![image-20200722143255898](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/fd7e4ed9ad77439381e99299fee0224b~tplv-k3u1fbpfcp-zoom-1.image)
+![image-20200722143255898](https://tva1.sinaimg.cn/large/e6c9d24egy1h2to9apit0j21f80nstat.jpg)
 
 ---
 
@@ -38,7 +38,7 @@ tags:
 
 **高位优先比较直观**：先按照高位升序排序，然后按照次高位排序，依次这样进行下去排到最低位。
 
-![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/eac7119a7aee4ff19ea0a509ec293486~tplv-k3u1fbpfcp-watermark.image)
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2to9djn8hj21hc0u0q5v.jpg)
 
 该方法的实现使用了「分而治之」的思想递归执行下去，需要借助递归方法实现，且空间复杂度较大。事实上，完全可以先按照低位排序，一直排到最高位。这种做法不仅仅是正确的，实现起来还更简单。
 
@@ -48,7 +48,7 @@ tags:
 
 我们通过一个具体的例子，看一下低位优先是如何排序的。例如：`[329, 457, 657, 839, 436, 720, 355]`，使用基数排序的「低位优先」算法执行流程。
 
-![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1b06965e1b684eb2bb0f3116a27323b7~tplv-k3u1fbpfcp-watermark.image)
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2to9gs19yj21hc0u0whz.jpg)
 
 - 首先按照个位数字进行一次 **稳定排序**（相同数字顺序不变），得到 `[720, 355, 436, 457, 657, 329, 839]`；
 - 然后按照十位数字进行一次 **稳定排序**（相同数字顺序不变），得到 `[720, 329, 436, 839, 355, 457, 657]`；

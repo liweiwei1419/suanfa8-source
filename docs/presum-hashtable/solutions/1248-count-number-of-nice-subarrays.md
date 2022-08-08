@@ -46,56 +46,27 @@ tags:
 - `1 <= nums[i] <= 10^5`
 - `1 <= k <= nums.length`
 
-## 方法一：滑动窗口（数学）
+## 方法：前缀和
 
-## 方法二：前缀和、哈希表、差分
++ `count` 是哈希表，它记录了：`key` ：前缀里包含的奇数个数，`value` ：出现了多少次。
 
-注意：这里比较难讲清楚。
+**参考代码**：
 
 ```java
 public class Solution {
 
-    // 前缀和
-
     public int numberOfSubarrays(int[] nums, int k) {
         int len = nums.length;
-        // preSum[i] 表示区间 [0..i) 的所有元素的和
-        int[] preSum = new int[len + 1];
-        // 表示前缀和为 0 的个数为 1，1 是乘法单位元
-        preSum[0] = 1;
-
-        // 目前为止看到的奇数的个数
-        int odd = 0;
+        int[] count = new int[len + 1];
+        count[0] = 1;
         int res = 0;
+        int preSum = 0;
         for (int num : nums) {
-            odd += num & 1;
-            if (odd >= k) {
-                // 注意：有一个单位的偏移
-                res += preSum[odd - k];
-            }
-            preSum[odd] += 1;
-        }
-        return res;
-    }
-}
-```
-
-甜姨的题解：
-
-```java
-class Solution {
-    public int numberOfSubarrays(int[] nums, int k) {
-        // 数组 prefixCnt 的下标是前缀和（即当前奇数的个数），值是前缀和的个数。
-        int[] prefixCnt = new int[nums.length + 1];
-        prefixCnt[0] = 1;
-        // 遍历原数组，计算当前的前缀和，统计到 prefixCnt 数组中，
-        // 并且在 res 中累加上与当前前缀和差值为 k 的前缀和的个数。
-        int res = 0, sum = 0;
-        for (int num: nums) {
-            sum += num & 1;
-            prefixCnt[sum]++;
-            if (sum >= k) {
-                res += prefixCnt[sum - k];
+            // preSum += (num % 2 == 1 ? 1 : 0);
+            preSum += (num & 1);
+            count[preSum]++;
+            if (preSum >= k) {
+                res += count[preSum - k];
             }
         }
         return res;
@@ -108,45 +79,3 @@ class Solution {
 - 时间复杂度：
 - 空间复杂度：。
 
-**参考代码**：
-
-```java
-import java.util.HashMap;
-import java.util.Map;
-
-public class Solution {
-
-    public int numberOfSubarrays(int[] nums, int k) {
-        int len = nums.length;
-        if (k <= 0 || len == 0 || len < k) {
-            return 0;
-        }
-
-        int[] preSum = new int[len + 1];
-        for (int i = 0; i < len; i++) {
-            preSum[i + 1] = preSum[i] + (nums[i] & 1);
-        }
-        // 最多只需要 len 个，因此最后一个位置不用记录
-        // 创建哈希表的时候，不用指定哈希表的大小，但编码规范建议在知道的情况下指定
-        Map<Integer, Integer> map = new HashMap<>(len);
-        map.put(0, 1);
-        int res = 0;
-        for (int i = 1; i < len + 1; i++) {
-            // 如果 preSum[i] - k 是负值，也不会包含在 map 中
-            if (map.containsKey(preSum[i] - k)) {
-                res += map.get(preSum[i] - k);
-            }
-            map.put(preSum[i], map.getOrDefault(preSum[i], 0) + 1);
-        }
-        return res;
-    }
-
-    public static void main(String[] args) {
-        int[] nums = {2, 2, 2, 1, 2, 2, 1, 2, 2, 2};
-        Solution solution = new Solution();
-        int k = 2;
-        int res = solution.numberOfSubarrays(nums, k);
-        System.out.println(res);
-    }
-}
-```

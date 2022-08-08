@@ -18,7 +18,7 @@ tags:
 
 **示例 1：**
 
-![img](https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2020/11/25/searchgrid2.jpg)
+![img](https://tva1.sinaimg.cn/large/e6c9d24egy1h2toatyu0bj20b60b63yu.jpg)
 
 ```
 输入：matrix = [[1,4,7,11,15],[2,5,8,12,19],[3,6,9,16,22],[10,13,14,17,24],[18,21,23,26,30]], target = 5
@@ -27,7 +27,7 @@ tags:
 
 **示例 2：**
 
-![img](https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2020/11/25/searchgrid.jpg)
+![img](https://tva1.sinaimg.cn/large/e6c9d24egy1h2toaw5ilij20b60b6wet.jpg)
 
 ```
 输入：matrix = [[1,4,7,11,15],[2,5,8,12,19],[3,6,9,16,22],[10,13,14,17,24],[18,21,23,26,30]], target = 20
@@ -56,7 +56,7 @@ tags:
 
 1、如果选择左下角为起点，以下展示了「减治」的过程。
 
-![0240-lower-left-corner.gif](https://pic.leetcode-cn.com/4510e2eb3e1c68f28040bc920f5ec3959a5ee89d012d7df5c21aa8a4f039e3e2-0240-lower-left-corner.gif)
+![0240-lower-left-corner.gif](https://tva1.sinaimg.cn/large/e6c9d24egy1h2toazbe5pg21hc0u0jvw.gif)
 
 总结出搜索的规律是：
 
@@ -144,7 +144,7 @@ class Solution:
 
 2、如果选择右上角为起点，以下展示了「减治」的过程。
 
-![0240-top-right-corner.gif](https://pic.leetcode-cn.com/939fa5d769027cfd688b84423dbf93ec5696774dc576bf286c2267ea3c17a230-0240-top-right-corner.gif)
+![0240-top-right-corner.gif](https://tva1.sinaimg.cn/large/e6c9d24egy1h2tob25z2hg21hc0u0aei.gif)
 
 总结出「搜索」的规律是：
 
@@ -236,7 +236,7 @@ class Solution:
 
 二分查找的思想是沿着对角线，行查找一下，列查找一下，如下图。
 
-![image.png](https://pic.leetcode-cn.com/c89a23592c9aa744ceed3cacb1b3aa55f47bb6bd0975a75220d88e507bf118a1-image.png)
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2tob5lii0j20we0lcmzk.jpg)
 
 事实上，因为对角线元素的右下方（包括对角线所在的那一行和那一列）的元素都大于等于对角线元素，因此对角线元素也存在一个最大索引，也可以用二分查找定位。
 

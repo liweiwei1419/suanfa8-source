@@ -52,6 +52,17 @@ tags:
 - $0 \le s.length \le 5 * 10^4$
 - `s` 由英文字母、数字、符号和空格组成
 
+::: info 说明
+
+这题视频题解是临时录制的，没有剪辑和后期制作，大家可以右下角点击 2 倍速播放。
+
+:::
+
+<video src="https://suanfa8.com/files/sliding-window/LC0003-temp.mp4" controls="controls" width="800" height="450">
+Your browser does not support the video tag.
+</video>
+
+
 ## 思路描述
 
 

@@ -16,7 +16,7 @@ tags:
 
 **示例 1**：
 
-![img](https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2020/05/23/palindromic_paths_1.png)
+![img](https://tva1.sinaimg.cn/large/e6c9d24egy1h2tpap79owj2063043t8m.jpg)
 
 ```
 输入：root = [2,3,1,3,1,null,1]
@@ -27,7 +27,7 @@ tags:
 
 **示例 2：**
 
-![img](https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2020/05/23/palindromic_paths_2.png)
+![img](https://tva1.sinaimg.cn/large/e6c9d24egy1h2tpark83lj205705g746.jpg)
 
 ```
 输入：root = [2,1,1,1,3,null,null,null,null,null,1]

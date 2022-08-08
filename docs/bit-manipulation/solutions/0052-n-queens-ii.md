@@ -20,7 +20,7 @@ tags:
 
 **示例 1：**
 
-![img](https://assets.leetcode.com/uploads/2020/11/13/queens.jpg)
+![img](https://tva1.sinaimg.cn/large/e6c9d24egy1h2tp9xllpkj20k208ydga.jpg)
 
 ```
 输入：n = 4
@@ -152,7 +152,7 @@ class Solution:
 
 注意 5：如果参考代码 2 当中还有没有解释清楚的地方，可以看下面这张图理解。
 
-![image.png](https://pic.leetcode-cn.com/f1fde7f97a71b14dfba7dad44e07d3612f715427da86c792ef9a6e90da1360c9-image.png){:width=300}
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2tpa0unjmj20gs0c2jry.jpg){:width=300}
 {:align=center}
 
 ```Java []

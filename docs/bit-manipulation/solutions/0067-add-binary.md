@@ -39,7 +39,7 @@ tags:
 
 思路很简单，就是模拟一个「二进制」的竖式加法。
 
-![image.png](https://pic.leetcode-cn.com/88f7d604ccd835f27b37fe5672a8c022ce2545f1bd5923f7ca066ef1e5f7e191-image.png){:width=400}
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2tpa8b3a7j20km0awwep.jpg){:width=400}
 {:align=center}
 
 我个人觉得这道题单纯是为了考察了我们对于所使用语言的字符串 API 的熟悉程度。写法不唯一，下面以 Java 为例编写参考代码。
