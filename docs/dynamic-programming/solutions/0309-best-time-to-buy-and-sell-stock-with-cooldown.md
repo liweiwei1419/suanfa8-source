@@ -114,7 +114,7 @@ Output: 0
 
 可以画出状态转移的图如下：
 
-![image.png](https://pic.leetcode-cn.com/1603508579-ibLNVi-image.png)
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2u7peqqatj211e0n6jt3.jpg)
 
 #### 第三步：思考初始化
 

@@ -74,7 +74,7 @@ tags:
 
 首先画出树形图，然后编码。
 
-![image.png](https://pic.leetcode-cn.com/3ede46d543e0fcd2ec1b4f9031637fd404b4bdf73505bb1233d870ac92ea8283-image.png){:width=500}
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2u7je2ezpj21aq0oowgs.jpg){:width=500}
 
 
 **参考代码 1**：
@@ -124,7 +124,7 @@ public class Solution {
 
 很显然，超时在意料之中。注意看这个超时是在数据规模很大的时候，因此，可以说明**搜索算法是正确的**。
 
-![image.png](https://pic.leetcode-cn.com/09398f841303b9068f1bd3852e6b381c8407d66067a526fecd1bbcca9c90d507-image.png)
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2u7jh8dp4j20u008sdgb.jpg)
 
 ![image.png](https://pic.leetcode-cn.com/c09995ebd543a96851314b0272914e4f6dd1e0f074f21648ef1b1318a8845892-image.png)
 
@@ -151,7 +151,7 @@ public class Solution {
 + 状态从持有现金（cash）开始，到最后一天我们关心的状态依然是持有现金（cash）；
 + 每一天状态可以转移，也可以不动。状态转移用下图表示：
 
-![image.png](https://pic.leetcode-cn.com/041a4d01398359409ecc69dacc13a44d179dd1a2a9f43b1def80e9a6acceee55-image.png){:width=500}
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2u7jkhjclj21bu08aab1.jpg){:width=500}
 
 
 （状态转移方程写在代码中）
@@ -307,7 +307,7 @@ res =  (prices[3] - prices[2]) + (prices[2] - prices[1]) + (prices[1] - prices[0
 
 回到贪心算法的定义：（下面是来自《算法导论（第三版）》第 16 章的叙述）
 
-![](https://pic.leetcode-cn.com/5de2bc50e56f42566522df6fe4dcf0eca7396db765f7a2ca2fe9f1fd9a647270.png){:width=560}
+![](https://tva1.sinaimg.cn/large/e6c9d24egy1h2u7jqgv01j21ge0k4q6t.jpg){:width=560}
 
 
 > 贪心算法 在每一步总是做出在当前看来最好的选择。

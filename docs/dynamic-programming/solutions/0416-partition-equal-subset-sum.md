@@ -284,11 +284,11 @@ public class Solution {
 
 ## 总结
 
-![image.png](https://pic.leetcode-cn.com/1598148197-CnWYMq-image.png)
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2u7rrjtnqj21he0l00wd.jpg)
 
 「0-1 背包」问题是一类非常重要的动态规划问题，一开始学习的时候，可能会觉得比较陌生。建议动笔计算，手动模拟填表的过程，其实就是画表格。这个过程非常重要，自己动手填过表，更能加深体会程序是如何执行的，也能更好地理解「空间优化」技巧的思路和好处。
 
-![image.png](https://pic.leetcode-cn.com/1602418903-UcdsWL-image.png)
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2u7rvg3gyj21de0pa44q.jpg)
 
 在编写代码完成以后，把数组 `dp` 打印出来，看看是不是与自己手算的一样。以加深体会动态规划的设计思想：「**不是直接面对问题求解**，而是从一个最小规模的问题开始，新问的最优解均是由比它规模还小的子问题的最优解转换得到，在求解的过程中记录每一步的结果，直至所要求的问题得到解」。
 

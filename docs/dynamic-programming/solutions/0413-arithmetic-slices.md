@@ -61,7 +61,7 @@ tags:
 
 已经知道 `[2, 4, 6, 8]` 是首项为 $2$ 公差为 $2$ 的等差数列时，加入 `12` ，发现`[2, 4, 6, 8, 12]` 不是等差数列，因此左端点是 `2`，**右端点更靠右的所有连续子数组都不会是（以 `2` 开头）的等差数列**，并且以 `4`、`6` 为起点连续子区间也不用看了，从 `8` 开始继续找（`8` 有可能是下一段等差数列的开头，本例就特别地选择了这种特殊情况）。这是「滑动窗口」可以使用的原因：它是暴力解法的优化，少考虑了很多不用考虑的情况。
 
-![413. 等差数列划分-裁剪.gif](https://pic.leetcode-cn.com/1628592765-vUETXy-413.%20%E7%AD%89%E5%B7%AE%E6%95%B0%E5%88%97%E5%88%92%E5%88%86-%E8%A3%81%E5%89%AA.gif)
+![413. 等差数列划分-裁剪.gif](https://tva1.sinaimg.cn/large/e6c9d24egy1h2u7razf6bg20o006g1kz.gif)
 
 长度为 $L$ 的等差数列对结果的贡献，可以举几个例子找规律，例如长度为 $6$ 的等差数列对结果的贡献：
 
@@ -70,7 +70,7 @@ tags:
 - 长度为 $5$ 的连续的等差数列，有 $2$ 个，如下图红色线段；
 - 长度为 $6$ 的连续的等差数列，有 $1$ 个，如下图蓝色线段。
 
-![image.png](https://pic.leetcode-cn.com/1628582535-izgiJk-image.png)
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2u7rcy3dfg20o006g1kz.gif)
 
 因此，长度为 $L$ 的等差数列对结果的贡献为：
 
@@ -80,7 +80,7 @@ $$
 
 **补充**：长度为 $L$ 的连续子序列中，长度为 $3$ 的连续等差数列（下图中绿色线段）的个数为 $L - 2$ ，可以从下面这张图中看出来。
 
-![image.png](https://pic.leetcode-cn.com/1628602740-GEjkXJ-image.png)
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2u7rgp678j20ye0dcq3l.jpg)
 
 虽然上式需要在 $L \ge 3$ 的情况下才成立，但上式在 $L = 1$ 以及 $L = 2$ 的时候等于 $0$，因此 $L \ge 3$ 的判断可以省去。
 
@@ -142,7 +142,7 @@ public class Solution {
 
 **状态转移方程**：如果 `nums[i]` 能够接在 `nums[i - 1]` 之后形成一个长度更长的（在原数组上连续的）等差数列，那么 `dp[i] = dp[i - 1] + 1` 。这一点可以画个图找规律。
 
-![image.png](https://pic.leetcode-cn.com/1628582064-PctBWQ-image.png)
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2u7rjqc3lj20x80bit9v.jpg)
 
 **参考代码 2**：
 

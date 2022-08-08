@@ -69,7 +69,7 @@ exection -> execution (插入 'u')
 
 **情况 1**：如果 `word1[i - 1] == word2[j - 1]`，即当前考虑的两个字符串的最后一个字符相等，此时它们的编辑距离就等于它们去掉了最后一个字符以后的编辑距离，`dp[i][j] = dp[i - 1][j - 1]`；
 
-![image.png](https://pic.leetcode-cn.com/1605176793-iBlYLs-image.png)
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2u3ir1fwuj218m0cqdhc.jpg)
 
 **情况 2**：如果 `word1[i - 1] != word2[j - 1]`，此时编辑距离是以下三种情况的最小者（根据题目的定义，编辑距离的定义取最小者）。
 
@@ -77,19 +77,19 @@ exection -> execution (插入 'u')
 
 **情况 2.1**：在当前 `word1` 后面加上与当前 `word2` 最后一个字符相等的字符（操作次数 + 1），此时编辑距离 `dp[i][j] = dp[i][j - 1] + 1`；
 
-![image.png](https://pic.leetcode-cn.com/1605176968-bZYGKX-image.png)
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2u3itmw19j21ci0aemyy.jpg)
 
 ---
 
 **情况 2.2** ：去掉当前 `word1` 后面最后一个字符（操作次数 + 1），此时编辑距离 `dp[i][j] = dp[i - 1][j] + 1`；
 
-![image.png](https://pic.leetcode-cn.com/1605177200-tABKeo-image.png)
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2u3iviuuuj21ak0eg77d.jpg)
 
 ---
 
 **情况 2.3**：将当前 `word1` 后面最后一个字符替换成当前 `word2`最后一个字符（操作次数 + 1），此时编辑距离 `dp[i][j] = dp[i - 1][j - 1] + 1`。
 
-![image.png](https://pic.leetcode-cn.com/1605177227-VoqJSl-image.png)
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2u3iyy1juj21cm0b2gnc.jpg)
 
 ---
 
@@ -125,7 +125,7 @@ for (int j = 0; j <= len2; j++) {
 
 根据状态转移方程，当前要填写的单元格的数值，完全取决于它的左边一格、上边一格，左上边主对角线上一个的数值。如下图：
 
-![image.png](https://pic.leetcode-cn.com/1605022296-HVNvpX-image.png){:width="200px"}
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2u3j1ob8uj20640640st.jpg){:width="200px"}
 
 因此，有两种经典的空间优化方案：① 滚动数组；② 把主对角线上要参考的数值使用一个新变量记录下来，然后在一维表格上循环赋值。由于空间问题不是这道题的瓶颈，可以不做这样的空间优化。
 

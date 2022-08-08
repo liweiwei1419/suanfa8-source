@@ -195,7 +195,7 @@ CSDN 版本
 
 1、**从下到上**（推荐）：
 
-![image-20200714101322790](https://imgconvert.csdnimg.cn/aHR0cHM6Ly90dmExLnNpbmFpbWcuY24vbGFyZ2UvMDA3UzhaSWxneTFnZ3FhNTFkc2JkajMxOXcwcTg0MHEuanBn?x-oss-process=image/format,png)
+![image-20200714101322790](https://tva1.sinaimg.cn/large/e6c9d24egy1h2u7hzi2r3j219w0q8jst.jpg)
 
 **状态定义**：`dp[i][j]` 表示「自底向上」的最小路径和。
 
@@ -293,4 +293,4 @@ class Solution:
 
 2、从上到下：
 
-![image-20200714101445905](https://imgconvert.csdnimg.cn/aHR0cHM6Ly90dmExLnNpbmFpbWcuY24vbGFyZ2UvMDA3UzhaSWxneTFnZ3FhNmYxbm90ajMxN2MwbzhqdGkuanBn?x-oss-process=image/format,png)
+![image-20200714101445905](https://tva1.sinaimg.cn/large/e6c9d24egy1h2u7iz0rilj217c0o8abe.jpg)

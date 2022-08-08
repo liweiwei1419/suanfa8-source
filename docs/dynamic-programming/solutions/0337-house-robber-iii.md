@@ -18,7 +18,7 @@ tags:
 
 **示例 1:**
 
-![img](https://assets.leetcode.com/uploads/2021/03/10/rob1-tree.jpg)
+![img](https://tva1.sinaimg.cn/large/e6c9d24egy1h2u7pzqteqj207p0850sp.jpg)
 
 ```
 输入: [3,2,3,null,3,null,1]
@@ -28,7 +28,7 @@ tags:
 
 **示例 2:**
 
-![img](https://assets.leetcode.com/uploads/2021/03/10/rob2-tree.jpg)
+![img](https://tva1.sinaimg.cn/large/e6c9d24egy1h2u7q32bqbj209x085mx6.jpg)
 
 ```
 输入: [3,4,5,1,3,null,1]

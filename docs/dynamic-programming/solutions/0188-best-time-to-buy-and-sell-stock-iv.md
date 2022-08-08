@@ -136,7 +136,7 @@ public class Solution {
 
 「超出内存限制」是「力扣」少见的错误，点击「显示详情」。
 
-![image.png](https://pic.leetcode-cn.com/1603381749-WjwOwE-image.png)
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2u7mxv9p6j21z00gqafn.jpg)
 
 会看到 $N = 1000$ 的时候，不能通过测试。为此尝试优化空间。
 

@@ -64,13 +64,13 @@ tags:
 
 我们先画树形图分析。
 
-![377-1.png](https://pic.leetcode-cn.com/fa278029267fedeb06686b784bd322f16b2abf6b61987dc3b5257630570cd38f-377-1.png)
+![377-1.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2u7qwyk2bj21hc0u043d.jpg)
 
 很容易发现「重复问题」，因此，我们可以使用「动态规划」来做，如果题目问具体的解，那么用「回溯搜索」做（「力扣」第 39 题：组合之和）。
 
 对上图的解释：
 
-![image.png](https://pic.leetcode-cn.com/0794281ad38dd4fc9a47b890b27ca14d61d4be41820f36fc7f8fcf09086293ea-image.png)
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2u7r171nbj21580t4tey.jpg)
 
 怎么写代码呢？
 

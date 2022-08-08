@@ -14,7 +14,7 @@ tags:
 
 **示例 1：**
 
-![img](https://assets.leetcode.com/uploads/2021/01/18/uniquebstn3.jpg)
+![img](https://tva1.sinaimg.cn/large/e6c9d24egy1h2u3j88jitj20p1066dg6.jpg)
 
 ```
 输入：n = 3

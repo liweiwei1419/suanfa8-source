@@ -18,7 +18,7 @@ tags:
 
 **示例 1：**
 
-![img](https://assets.leetcode.com/uploads/2020/11/05/minpath.jpg)
+![img](https://tva1.sinaimg.cn/large/e6c9d24egy1h2u3hv75zxj206q06qwee.jpg)
 
 ```
 输入：grid = [[1,3,1],[1,5,1],[4,2,1]]

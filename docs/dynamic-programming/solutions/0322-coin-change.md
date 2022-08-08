@@ -73,7 +73,7 @@ tags:
 
 看题目的问法，只问最优值是多少，没有要我们求最优解，一般情况下可以用「动态规划」解决。
 
-![image.png](https://pic.leetcode-cn.com/1603723743-vFAFXG-image.png)
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2u7plsposj21go0jgjtr.jpg)
 
 
 ---
@@ -244,7 +244,7 @@ class Solution:
 
 具体在纸上画一下，就知道这其实是一个在「图」上的最短路径问题，「广度优先遍历」是求解这一类问题的算法。广度优先遍历借助「队列」实现。
 
-![image.png](https://pic.leetcode-cn.com/144770504b1560d414b9cbcb69ad4203e40b868f51b8c95de1106d1eac7d1e0a-image.png)
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2u7pqkggnj212j0u0gor.jpg)
 
 **注意**：
 + 由于是「图」，有回路，所以需要一个 `visited` 数组，记录哪一些结点已经访问过。

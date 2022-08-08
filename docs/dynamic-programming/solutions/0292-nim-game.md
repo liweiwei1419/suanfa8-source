@@ -56,7 +56,7 @@ tags:
 
 这两个问题是我最初做这道问题的时候产生的疑惑，在题解的最后我写了我的答案，供大家参考，欢迎讨论。
 
-![image.png](https://pic.leetcode-cn.com/390f34dab8160e1f689da057d3a5666396be6dcbfb9a08a3c0e3e96c44423246-image.png)
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2u7oduw7aj218n0u0goj.jpg)
 
 用具体的例子 8 进行分析可以得出结论：
 
@@ -97,7 +97,7 @@ public class Solution {
 }
 ```
 
-![image.png](https://pic.leetcode-cn.com/f7397e22104799f63701e0b95db08ed6cef33f6cdda6a488abac859da1eca5e7-image.png)
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2u7oh041mj20yg08sjrl.jpg)
 
 ## 方法二：动态规划（超出内存限制）
 
@@ -123,7 +123,7 @@ public class Solution {
 }
 ```
 
-![image.png](https://pic.leetcode-cn.com/b1dd96863027d2ecfeec03b44029ed26ac8e69e4110378ea8b5cace72465db00-image.png)
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2u7ojtqr7j20ys08mglt.jpg)
 
 采用「滚动数组」优化，这回是「超时」。
 
@@ -148,7 +148,7 @@ public class Solution {
 }
 ```
 
-![image.png](https://pic.leetcode-cn.com/81d841f043ce0ee0e72e9d51e5c2254afd9b176f8027c0c942337a9e8a75af1c-image.png)
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2u7omx0rij20ym08874h.jpg)
 
 ## 方法三：数学方法（观察规律得到，可以通过）
 

@@ -19,7 +19,7 @@ tags:
 
 **示例 1：**
 
-![img](https://assets.leetcode.com/uploads/2020/10/13/exx1.jpg)
+![img](https://tva1.sinaimg.cn/large/e6c9d24egy1h2u7ld1xo5j208y052q2t.jpg)
 
 ```
 输入：root = [1,2,3]
@@ -29,7 +29,7 @@ tags:
 
 **示例 2：**
 
-![img](https://assets.leetcode.com/uploads/2020/10/13/exx2.jpg)
+![img](https://tva1.sinaimg.cn/large/e6c9d24egy1h2u7lfhdu3j20bz08et8q.jpg)
 
 ```
 输入：root = [-10,9,20,null,null,15,7]
@@ -58,7 +58,7 @@ tags:
 
 下图展示的是同一棵树，不同的结点 A 和结点 B 定义的直径（图中绿色标注的部分）。其中左图展示的路径经过了根结点，右图展示的路径不经过根结点。
 
-![image.png](https://tva1.sinaimg.cn/large/008i3skNgy1gxizoat3ckj31hc0u0ack.jpg)
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2u7lirjwlj21hc0u076s.jpg)
 
 下面的树种绿色结点构成的部分不符合题目中路径的定义。
 

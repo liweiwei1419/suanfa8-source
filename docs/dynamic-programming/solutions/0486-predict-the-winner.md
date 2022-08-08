@@ -99,11 +99,11 @@ public class Solution {
 
 状态定义：`dp[i][j]` 表示作为先手，在区间 `nums[i..j]` 里进行选择可以获得的 **相对分数**。相对分数的意思是：**当前自己的选择得分为正，对手的选择得分为负**。
 
-![image.png](https://pic.leetcode-cn.com/2c83432526cd010aa5014ee6b900d1dcd1dc1e01085f4d26f85cd500543c9239-image.png)
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2u7s1uyapj21fm0tajur.jpg)
 
 **填表方式 1**：
 
-![image.png](https://pic.leetcode-cn.com/e755b22fed079f160524fb0cc8433cde7afc5af2841fbdd58159c63a952f6118-image.png)
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2u7s4dczqj21da0s677m.jpg)
 
 ```Java []
 public class Solution {
@@ -131,7 +131,7 @@ public class Solution {
 
 **填表方式 2**：
 
-![image.png](https://pic.leetcode-cn.com/774b88e4332e5f93ebba7b1dd66aad35dcd2f7cd6c5680c2225f479be0947cfa-image.png)
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2u7s7o3fwj21dz0u0n0w.jpg)
 
 ```Java []
 public class Solution {

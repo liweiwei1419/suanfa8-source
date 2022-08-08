@@ -100,7 +100,7 @@ public class Solution {
 
 事实上，我们将示例 2 在草稿纸上画出示意图。
 
-![image.png](https://pic.leetcode-cn.com/1616000292-JpMJDG-image.png){:align=center}
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2u7qpjxhwj21hc0u0taq.jpg){:align=center}
 
 发现：**只需要关注上面「折线图」中上升和下降的转折点**，把它们单独拿出来，就构成了原始输入数组的一个长度最长的「摆动序列」。
 
@@ -110,7 +110,7 @@ public class Solution {
 
 只关注「拐点」。这是因为我假设当前遍历到的元素在一个上升的区间当中，如果这个值越大，那么它的下一个元素数值的变化减少的概率你越大，如果「下一个元素数值的变化减少」真的发生了，摆动序列的长度就增加了 $1$。
 
-![image.png](https://pic.leetcode-cn.com/1616000310-XLXKTD-image.png){:align=center}
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2u7qsji32j21hc0u0jtg.jpg){:align=center}
 
 
 在编写代码的过程中，需要注意「等于」的情况，我们将其它的细节放在「参考代码 2」中。

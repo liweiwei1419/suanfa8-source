@@ -94,7 +94,7 @@ tags:
 
 「状态转移方程」可以用下面的图表示，它的特点是：状态要么什么都不做，要么向后面走，即：状态不能回退。
 
-![image.png](https://pic.leetcode-cn.com/1603352180-PivnHK-image.png)
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2u7kdmr0nj20uw08qglw.jpg)
 
 具体表示式请见代码注释。
 

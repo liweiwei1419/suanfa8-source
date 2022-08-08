@@ -252,13 +252,13 @@ public class Solution {
 
 一个问题的递归结构如下图所示（这里忽略问题场景）。
 
-![image.png](https://pic.leetcode-cn.com/1607676766-FklNQI-image.png)
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2u7j5nr4fj21n40koq6c.jpg)
 
 可以发现有重复求解的部分，需要添加缓存，这是「记忆化递归」。
 
 另外还可以从通过发现一个问题最开始的样子，通过「递推」一步一步求得原始问题的解，此时求解的过程如下图所示：
 
-![image.png](https://pic.leetcode-cn.com/1607676874-RuAsRc-image.png)
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2u7j7t2gzj21ao0u0tga.jpg)
 
 箭头指向的地方表示当前求解的过程中参考了以前求解过的问题的结果，这个过程不能形成回路，**形成回路就无法求解**。
 

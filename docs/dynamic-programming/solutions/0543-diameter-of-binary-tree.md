@@ -67,7 +67,7 @@ tags:
 
 根结点必须被选择，且根结点是路径上端点，也就是说，我们定义的子问题，这条路径只来自左右子树的其中一个，返回长度最长的值。
 
-![](https://files.mdnice.com/user/5576/d3c3c161-302d-4c44-8601-01969a712590.png)
+![](https://tva1.sinaimg.cn/large/e6c9d24egy1h2u7ug1t0oj216a0k6q4r.jpg)
 
 > 状态定义即子问题的定义，这是人为规定的，不一定要和题目问的定义一样，状态定义得简单、具体，可以为求解题目要求的问题服务。大家可以想一想「力扣」第 53 题（最大子段和），最后需要遍历一遍所有的状态值，求出最大者，和当前这道问题是一模一样的。
 
@@ -138,7 +138,7 @@ public class Solution {
 
 **代码解释**：`return 1 + Math.max(left, right);` 可以这样理解。除了根结点以外，每一个结点都有一条边指向它的直接父亲结点。因此向上传递的时候，要把指向父亲结点的这条边加上。而全局的 `res` 只需要连接左子树和右子树，不需要向上传，因此不加 $1$。
 
-![](https://tva1.sinaimg.cn/large/008i3skNgy1gxizi71wqpj31hc0u0whn.jpg)
+![](https://tva1.sinaimg.cn/large/e6c9d24egy1h2u7ujrblbj21hc0u0tbv.jpg)
 
 **时间复杂度**：遍历了树一次，因此时间复杂度为 $O(N)$，这里 $N$ 为二叉树的结点总数。
 
@@ -146,7 +146,7 @@ public class Solution {
 
 @slidestart [theme]
 
-![](https://tva1.sinaimg.cn/large/008i3skNgy1gxizkghx0kj31hc0u0abm.jpg)
+![](https://tva1.sinaimg.cn/large/e6c9d24egy1h2u7ulkhdnj21hc0u075u.jpg)
 
 ---
 

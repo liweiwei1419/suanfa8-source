@@ -36,7 +36,7 @@ public class Solution {
     public int[] productExceptSelf(int[] nums) {
         int len = nums.length;
 
-        // 前缀乘积：prefixPro[i] 表示区间 [0, i - 1] 所有元素的乘积
+        // 前缀乘积：prefixPro[i] 表示区间 [0..i - 1] 所有元素的乘积
         // 转移方程：prefixPro[i] = nums[i - 1] * prefixPro[i - 1]
         int[] prefixPro = new int[len];
         prefixPro[0] = 1;
@@ -45,7 +45,7 @@ public class Solution {
         }
         // System.out.println(Arrays.toString(prefixPro));
 
-        // 后缀乘积：suffixPro[i] 表示区间 [i + 1, len - 1] 所有元素的乘积
+        // 后缀乘积：suffixPro[i] 表示区间 [i + 1..len - 1] 所有元素的乘积
         // 转移方程：suffixPro[i] = nums[i + 1] * suffixPro[i + 1]
         int[] suffixPro = new int[len];
         suffixPro[len - 1] = 1;

@@ -14,7 +14,7 @@ tags:
 
 **示例 1：**
 
-![img](https://assets.leetcode.com/uploads/2020/11/26/max1grid.jpg)
+![img](https://tva1.sinaimg.cn/large/e6c9d24egy1h2u7n49ri9j20b808yaa7.jpg)
 
 ```
 输入：matrix = [["1","0","1","0","0"],["1","0","1","1","1"],["1","1","1","1","1"],["1","0","0","1","0"]]
@@ -23,7 +23,7 @@ tags:
 
 **示例 2：**
 
-![img](https://assets.leetcode.com/uploads/2020/11/26/max2grid.jpg)
+![img](https://tva1.sinaimg.cn/large/e6c9d24egy1h2u7n7k1i9j204l04lq2r.jpg)
 
 
 

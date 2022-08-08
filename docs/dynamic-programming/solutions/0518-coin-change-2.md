@@ -215,15 +215,15 @@ class Solution {
 
 根据状态转移方程其实可以得到递推公式。状态转移方程的表达形式「看起来」像是一个「无穷级数」，可以通过如下方式得到如下递推公式：
 
-![image.png](https://pic.leetcode-cn.com/1598151957-ooYhcq-image.png)
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2u7t712o2j213e0a8wf5.jpg)
 
 这里 `j - k * coins[i] >= 0`。将 `j` 用 `coins[i]` 替换，得：
 
-![image.png](https://pic.leetcode-cn.com/1598160930-RANsco-image.png)
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2u7t8jnttj21820e6dhq.jpg)
 
 这里 `j - coins[i] - k * coins[i] >= 0`。整理得：
 
-![image.png](https://pic.leetcode-cn.com/1598160975-kTjsyg-image.png)
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2u7tarfjmj21660dajs6.jpg)
 
 这里 `j - k * coins[i] >= 0`。
 

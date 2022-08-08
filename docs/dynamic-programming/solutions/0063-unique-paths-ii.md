@@ -28,7 +28,7 @@ tags:
 
 **示例 1：**
 
-![img](https://assets.leetcode.com/uploads/2020/11/04/robot1.jpg)
+![img](https://tva1.sinaimg.cn/large/e6c9d24egy1h2u3hm8klvj206q06q0sp.jpg)
 
 ```
 输入：obstacleGrid = [[0,0,0],[0,1,0],[0,0,0]]
@@ -42,7 +42,7 @@ tags:
 
 **示例 2：**
 
-![img](https://assets.leetcode.com/uploads/2020/11/04/robot2.jpg)
+![img](https://tva1.sinaimg.cn/large/e6c9d24egy1h2u3hpe1k2j204i04iq2u.jpg)
 
 ```
 输入：obstacleGrid = [[0,1],[0,0]]
