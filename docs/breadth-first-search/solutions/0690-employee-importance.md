@@ -20,7 +20,7 @@ tags:
 
 **示例：**
 
-![img](https://assets.leetcode.com/uploads/2021/05/31/emp1-tree.jpg)
+![img](https://tva1.sinaimg.cn/large/e6c9d24egy1h2tpcko0b7j20fm0a2mxe.jpg)
 
 ```
 输入：[[1, 5, [2, 3]], [2, 3, []], [3, 3, []]], 1
@@ -31,7 +31,7 @@ tags:
 
 **Example 2:**
 
-![img](https://assets.leetcode.com/uploads/2021/05/31/emp2-tree.jpg)
+![img](https://tva1.sinaimg.cn/large/e6c9d24egy1h2tpcmzsgfj20a20a1aa4.jpg)
 
 ```
 Input: employees = [[1,2,[5]],[5,-3,[]]], id = 5
@@ -54,7 +54,7 @@ Thus, the total importance value of employee 5 is -3.
 - 一个员工最多有一个 **直系** 领导，但是可以有多个 **直系** 下属
 - 员工数量不超过 2000 。
 
-![image.png](https://pic.leetcode-cn.com/b713f4b56ccb1ca9659e5575afd03d7a973a74e23b40463f1eea8af027e79c1a-image.png)
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2tpcpu8i9j21hg0cawfx.jpg)
 
 ## 方法一：深度优先遍历
 

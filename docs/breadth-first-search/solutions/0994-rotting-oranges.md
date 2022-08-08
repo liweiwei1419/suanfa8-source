@@ -24,7 +24,7 @@ tags:
 
 **示例 1：**
 
-**![img](https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2019/02/16/oranges.png)**
+![img](https://tva1.sinaimg.cn/large/e6c9d24egy1h2tpd6n8f5j210a07n76k.jpg)
 
 ```
 输入：[[2,1,1],[1,1,0],[0,1,1]]

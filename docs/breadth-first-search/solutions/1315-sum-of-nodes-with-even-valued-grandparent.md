@@ -19,7 +19,7 @@ tags:
 
 **示例 1：**
 
-![img](https://assets.leetcode.com/uploads/2021/08/10/even1-tree.jpg)
+![img](https://tva1.sinaimg.cn/large/e6c9d24egy1h2tpf9uoo8j20e008et8z.jpg)
 
 ```
 输入：root = [6,7,8,2,7,1,3,9,null,1,4,null,null,null,5]
@@ -29,7 +29,7 @@ tags:
 
 **Example 2:**
 
-![img](https://assets.leetcode.com/uploads/2021/08/10/even2-tree.jpg)
+![img](https://tva1.sinaimg.cn/large/e6c9d24egy1h2tpfc2v0kj201s01tgld.jpg)
 
 ```
 Input: root = [1]

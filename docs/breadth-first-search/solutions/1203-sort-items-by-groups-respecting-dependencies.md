@@ -39,7 +39,7 @@ tags:
 
 **示例 1**：
 
-![img](https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2019/09/22/1359_ex1.png)
+![img](https://tva1.sinaimg.cn/large/e6c9d24egy1h2tpf40064j205b051mx4.jpg)
 
 ```
 输入：n = 8, m = 2, group = [-1,-1,1,0,0,1,0,-1], beforeItems = [[],[6],[5],[6],[3,6],[],[],[]]

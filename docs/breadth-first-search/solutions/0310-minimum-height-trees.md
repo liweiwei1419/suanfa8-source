@@ -23,7 +23,7 @@ tags:
 
 **示例 1：**
 
-![img](https://assets.leetcode.com/uploads/2020/09/01/e1.jpg)
+![img](https://tva1.sinaimg.cn/large/e6c9d24egy1h2tpbl2kjej211u0a274y.jpg)
 
 ```
 输入：n = 4, edges = [[1,0],[1,2],[1,3]]
@@ -33,7 +33,7 @@ tags:
 
 **示例 2：**
 
-![img](https://assets.leetcode.com/uploads/2020/09/01/e2.jpg)
+![img](https://tva1.sinaimg.cn/large/e6c9d24egy1h2tpbnubzkj20ru0b6t98.jpg)
 
 ```
 输入：n = 6, edges = [[3,0],[3,1],[3,2],[3,4],[5,4]]
@@ -67,7 +67,7 @@ tags:
 
 直觉上，**一棵树越靠「外面」的结点，我们越不可能把它作为根结点**，这一点是解决这道问题的关键。我们可以画几张图感受一下：
 
-![image.png](https://pic.leetcode-cn.com/63f5a0f0118b4314b03c2e97264fd12af14c9f104fe96583239e486c324450bd-image.png)
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2tpbq9hpij21400a0my2.jpg)
 
 因此，我们使用「剔除边缘结点」的策略，类似于「拓扑排序」的方式，把外面的结点一点一点拿掉，剩下的结点就是产生「最小高度树」的结点。
 
@@ -75,7 +75,7 @@ tags:
 
 > 有的时候分析问题，自己动手，比看别人的思路的理解要深刻。
 
-![image.png](https://pic.leetcode-cn.com/53e7c6f6854eda2dadf4b37ddcb3161b5e141fe7dbb4268fd213cf7d97561a56-image.png)
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2tpbsc3lej20su0zc42t.jpg)
 
 
 **画完这张图，我们能归纳出，结点最后只会剩下 1 个或者 2 个**。如果对这个结论还不确定的朋友，不妨多画几张图，把结点个数为 6 个 、7 个时候的情况也考虑一下。

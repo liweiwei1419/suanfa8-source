@@ -50,7 +50,7 @@ Output: true
 
 对示例 1 的理解，感谢朋友 [@robotliu0327](/u/robotliu0327/) 提供的图例。
 
-![](https://pic.leetcode-cn.com/2b1c1adb1a171741ee9a1358f07c0fe83a5afb5ac07a56af1709af143ecf4407-file_1584789499373)
+![](https://tva1.sinaimg.cn/large/e6c9d24egy1h2tpc1hh7qj20k00b7aaf.jpg)
 
 这一类游戏相关的问题，用人脑去想，是很难穷尽所有的可能的情况的。因此很多时候需要用到「搜索算法」。
 
@@ -98,7 +98,7 @@ Output: true
 - 尽量「剪枝」，跳过不必要的搜索；
 - 当然最快的是数学方法。
 
-![image.png](https://pic.leetcode-cn.com/daf59a74e2673090972df337a4bd42ae33fb0eab5be87df581f104c6548d2eb0-image.png)
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2tpc4ck4fj20u014kq8f.jpg)
 
 我写的代码，由于把状态设置成有序数对，在哈希表里要判重，所以代码写出来特别不好看。
 

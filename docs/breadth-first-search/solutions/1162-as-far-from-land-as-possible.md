@@ -21,7 +21,7 @@ tags:
 
 **示例 1：**
 
-**![img](https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2019/08/17/1336_ex1.jpeg)**
+**![img](https://tva1.sinaimg.cn/large/e6c9d24egy1h2tpev35w6j205502fwea.jpg)**
 
 ```
 输入：[[1,0,1],[0,0,0],[1,0,1]]
@@ -32,7 +32,7 @@ tags:
 
 **示例 2：**
 
-**![img](https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2019/08/17/1336_ex2.jpeg)**
+**![img](https://tva1.sinaimg.cn/large/e6c9d24egy1h2tpey3m28j205402fwea.jpg)**
 
 ```
 输入：[[1,0,0],[0,0,0],[0,0,0]]
