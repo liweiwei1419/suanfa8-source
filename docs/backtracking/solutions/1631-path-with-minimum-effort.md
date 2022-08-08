@@ -24,7 +24,7 @@ tags:
 
 **示例 1：**
 
-![img](https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2020/10/25/ex1.png)
+![img](https://tva1.sinaimg.cn/large/e6c9d24egy1h2topo4kpej208z08zglj.jpg)
 
 ```
 输入：heights = [[1,2,2],[3,8,2],[5,3,5]]
@@ -35,7 +35,7 @@ tags:
 
 **示例 2：**
 
-![img](https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2020/10/25/ex2.png)
+![img](https://tva1.sinaimg.cn/large/e6c9d24egy1h2toptqscuj208z08zglj.jpg)
 
 ```
 输入：heights = [[1,2,3],[3,8,4],[5,3,5]]
@@ -45,7 +45,7 @@ tags:
 
 **示例 3：**
 
-![img](https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2020/10/25/ex3.png)
+![img](https://tva1.sinaimg.cn/large/e6c9d24egy1h2topwzunmj20ej0egmxe.jpg)
 
 ```
 输入：heights = [[1,2,1,1,1],[1,2,1,2,1],[1,2,1,2,1],[1,2,1,2,1],[1,1,1,2,1]]

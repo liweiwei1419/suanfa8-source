@@ -80,7 +80,7 @@ wordList = ["hot","dot","dog","lot","log"]
 
 - 每一层使用一个新的 `nextLevelVisited` 哈希表，记录当前层的下一层可以访问到哪些结点。**直到上一层队列里的值都出队以后， `nextLevelVisited` 哈希表才添加到总的 `visited` 哈希表，这样记录当前结点和广度优先遍历到的子结点列表才不会遗漏**。
 
-![image.png](https://pic.leetcode-cn.com/da957ec0ab9fe9eda166acab86ba9fca8b6b0f6b04bda3e35677a46fb53d7d17-image.png)
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2tol12jmlj213a0u0tce.jpg)
 
 为此，设计算法流程如下：
 
@@ -345,7 +345,7 @@ if (successors.containsKey(currentWord)) {
 - 由于我们这个问题知道目标值，因此可以让起点和终点「同时」做 BFS，直到它们又交集，两边一起扩散形成的路径也是最短路径；
 - 双向 BFS 有点像山洞挖隧道，两边一起挖，直到打通为止。双向 BFS 搜索到的集合更小，相当于做了一些剪枝操作，因此会更快一些。
 
-![image.png](https://pic.leetcode-cn.com/cd190a4a61445ac9affc344f941da381d64a163b81c7594f342d45793c5bfd06-image.png)
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2tol63ymcj212s0f4ab1.jpg)
 
 编码说明：
 

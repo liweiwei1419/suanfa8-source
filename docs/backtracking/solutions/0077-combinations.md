@@ -67,7 +67,7 @@ tags:
 
 依次类推（后面部分省略），以上描述体现的 **递归** 结构是：在以 $n$ 结尾的候选数组里，选出若干个元素。画出递归结构如下图：
 
-![image.png](https://pic.leetcode-cn.com/1599488203-TzmCXb-image.png)
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2toiqzpdsj21gm0qk77m.jpg)
 
 **说明**：
 
@@ -120,7 +120,7 @@ public class Solution {
 
 提交结果：
 
-![image.png](https://pic.leetcode-cn.com/1599521293-vIfJMM-image.png){:width="500px"}
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2toivbcxij20pk06qmxk.jpg){:width="500px"}
 
 如果对于回溯算法还理解不太透彻的朋友，可以在递归方法的前后，把 `path` 变量打印出来看一下，并结合上面画出的树形图进行理解。
 
@@ -251,7 +251,7 @@ for (int i = begin; i <= n; i++) {
 
 （温馨提示：右键，在弹出的下拉列表框中选择「在新标签页中打开图片」，可以查看大图。）
 
-![image.png](https://pic.leetcode-cn.com/3ddd55697423b5831cbbd42f4b901ebbade0daa456c651a70c758fe359d8a0d1-image.png)
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2toiylkjxj21p00nagpo.jpg)
 
 容易知道：搜索起点和当前还需要选几个数有关，而当前还需要选几个数与已经选了几个数有关，即与 `path` 的长度相关。我们举几个例子分析：
 
@@ -318,7 +318,7 @@ public class Solution {
 
 提交结果：
 
-![image.png](https://pic.leetcode-cn.com/1599521361-EnIUyy-image.png){:width="500px"}
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2toj1bppmj20p0062mxi.jpg){:width="500px"}
 
 **说明**：
 
@@ -375,11 +375,11 @@ public class Solution {
 
 可以按照每一个数选与不选画出二叉树，二叉树最多 `n` 层。同样可以剪枝。剪枝的思路请见下图「剪枝条件 ② 的加强」。
 
-![image.png](https://pic.leetcode-cn.com/1599529810-ZFNnoz-image.png){:width="600px"}
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2toj4obaqj21ae0u0juf.jpg){:width="600px"}
 
 画一个表格更容易看出边界条件。
 
-![image.png](https://pic.leetcode-cn.com/1599608961-nfzexs-image.png){:width="500px"}
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2toj7hh11j219e0kw0uh.jpg){:width="500px"}
 
 **参考代码 4**：
 

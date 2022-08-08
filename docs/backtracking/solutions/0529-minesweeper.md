@@ -35,7 +35,7 @@ tags:
 
 **示例 1：**
 
-![img](https://assets.leetcode.com/uploads/2018/10/12/minesweeper_example_1.png)
+![img](https://tva1.sinaimg.cn/large/e6c9d24egy1h2too2zjx1j20uu0glgn1.jpg)
 
 ```
 输入：board = [["E","E","E","E","E"],["E","E","M","E","E"],["E","E","E","E","E"],["E","E","E","E","E"]], click = [3,0]
@@ -44,7 +44,7 @@ tags:
 
 **示例 2：**
 
-![img](https://assets.leetcode.com/uploads/2018/10/12/minesweeper_example_2.png)
+![img](https://tva1.sinaimg.cn/large/e6c9d24egy1h2too4uwpgj20tm0gbtaa.jpg)
 
 ```
 输入：board = [["B","1","E","1","B"],["B","1","M","1","B"],["B","1","1","1","B"],["B","B","B","B","B"]], click = [1,2]

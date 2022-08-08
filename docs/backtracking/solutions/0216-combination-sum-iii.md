@@ -82,7 +82,7 @@ Using 4 different numbers in the range [1,9], the smallest sum we can get is 1+2
 
 以示例为例：
 
-![image.png](https://pic.leetcode-cn.com/133c024217fc0a415d92eb397787e791654dac7f225f57e0358dab95112c06f3-image.png)
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2tonh355ij21e80sgad2.jpg)
 
 我只画了一部分，全部画出来会占用很多版面。不过大致能够帮助我们分析出代码需要怎样写。
 
@@ -108,7 +108,7 @@ Using 4 different numbers in the range [1,9], the smallest sum we can get is 1+2
 
 - 栈使用：`addLast()`，不建议使用 `add()`，因为 `add()` 依然是调用 `addLast()`，使用 `addLast()` 语义更清晰；
 
-![image.png](https://pic.leetcode-cn.com/59cd5132af5e44b3514db3d7fcf9d62b6bd06ca987827f9dea95de312dbfd57d-image.png)
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2tonju8utj21ic0hqjvy.jpg)
 
 - 出栈使用：`removeLast()` 或者 `pollLast()`，`removeLast()` 里面依然是调用 `pollLast()`，注意：不要使用 `poll()`，因为 `poll()` 调用 `pollFirst()`，不符合栈的语义。
 
@@ -189,7 +189,7 @@ if (k <= 0 || n <= 0 || k > n) {
 
 因此一般规律是：`起点上界 + k = 10`，故 `起点上界 = 10 - k`。事实上，还可以计算得到一个更小的上界，但是在这题里没有必要了，每次去计算也要消耗时间。
 
-![image.png](https://pic.leetcode-cn.com/0cb73f7ab4bb90614d8bec774ab8bb2fe859be53fd3cdb8dba1aa6602ef1815d-image.png)
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2tonokfm1j213v0u0ad0.jpg)
 
 **参考代码 2**：
 

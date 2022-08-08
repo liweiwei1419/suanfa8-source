@@ -21,7 +21,7 @@ tags:
 
 **示例 1：**
 
-![img](https://assets.leetcode.com/uploads/2020/11/04/word2.jpg)
+![img](https://tva1.sinaimg.cn/large/e6c9d24egy1h2tojp8xr2j208y06qq2y.jpg)
 
 ```
 输入：board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], word = "ABCCED"
@@ -30,7 +30,7 @@ tags:
 
 **示例 2：**
 
-![img](https://assets.leetcode.com/uploads/2020/11/04/word-1.jpg)
+![img](https://tva1.sinaimg.cn/large/e6c9d24egy1h2tojs3t3mj208y06qaa2.jpg)
 
 ```
 输入：board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], word = "SEE"
@@ -39,7 +39,7 @@ tags:
 
 **示例 3：**
 
-![img](https://assets.leetcode.com/uploads/2020/10/15/word3.jpg)
+![img](https://tva1.sinaimg.cn/large/e6c9d24egy1h2tojudlldj208y06qgll.jpg)
 
 ```
 输入：board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], word = "ABCB"

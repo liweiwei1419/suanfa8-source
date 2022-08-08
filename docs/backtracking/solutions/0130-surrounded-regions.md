@@ -21,7 +21,7 @@ tags:
 
 **示例 1：**
 
-![img](https://assets.leetcode.com/uploads/2021/02/19/xogrid.jpg)
+![img](https://tva1.sinaimg.cn/large/e6c9d24egy1h2tolbpquuj20lh099mxs.jpg)
 
 ```
 输入：board = [["X","X","X","X"],["X","O","O","X"],["X","X","O","X"],["X","O","X","X"]]

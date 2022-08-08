@@ -72,7 +72,7 @@ tags:
 dp[i] = min([dp[j] + 1 for j in range(i) if s[j + 1, i] 是回文])
 ```
 
-![image.png](https://pic.leetcode-cn.com/6e18ac84b634263ec0ebb30b223f767a09c6f4c6afa940c56ff36975c3ee8b67-image.png)
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2tolm2va9j219s0g60tx.jpg)
 
 #### 步骤 3：思考初始状态
 

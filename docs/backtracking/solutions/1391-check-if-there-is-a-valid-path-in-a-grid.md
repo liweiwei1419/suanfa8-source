@@ -22,7 +22,7 @@ tags:
 - **5** 表示连接左单元格和上单元格的街道。
 - **6** 表示连接右单元格和上单元格的街道。
 
-![img](https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2020/03/21/main.png)
+![img](https://tva1.sinaimg.cn/large/e6c9d24egy1h2topdtne3j20du0lrmy1.jpg)
 
 你最开始从左上角的单元格 `(0,0)` 开始出发，网格中的「有效路径」是指从左上方的单元格 `(0,0)` 开始、一直到右下方的 `(m-1,n-1)` 结束的路径。**该路径必须只沿着街道走**。
 
@@ -32,7 +32,7 @@ tags:
 
 **示例 1：**
 
-![img](https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2020/03/21/e1.png)
+![img](https://tva1.sinaimg.cn/large/e6c9d24egy1h2topg12qsj20f80afjrr.jpg)
 
 ```
 输入：grid = [[2,4,3],[6,5,2]]
@@ -42,7 +42,7 @@ tags:
 
 **示例 2：**
 
-![img](https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2020/03/21/e2.png)
+![img](https://tva1.sinaimg.cn/large/e6c9d24egy1h2topi19bkj20ft0a6q3a.jpg)
 
 ```
 输入：grid = [[1,2,1],[1,2,1]]

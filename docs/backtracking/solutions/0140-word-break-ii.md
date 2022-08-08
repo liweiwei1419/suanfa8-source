@@ -26,11 +26,11 @@ tags:
 
 所有任意长度的前缀是否可拆分是知道的，那么如果 **后缀子串在单词集合中**，这个后缀子串就是解的一部分，例如：
 
-![image.png](https://pic.leetcode-cn.com/1604156019-RPUqqc-image.png)
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2tolrbn9vj21iq0rqjuh.jpg)
 
 根据这个思路，可以画出树形结构如下。
 
-![image.png](https://pic.leetcode-cn.com/1604155779-zGMFLS-image.png)
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2tolshzk1j21p20mmtam.jpg)
 
 再对比这个问题的输出：
 

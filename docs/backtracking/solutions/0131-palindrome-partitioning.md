@@ -48,7 +48,7 @@ tags:
 
 > 友情提示：强烈建议大家根据一个具体例子画出树形图。
 
-![image.png](https://pic.leetcode-cn.com/298a80282ac3505fec3710abdc1e656c591cf7acaa3ba976151480729244b649-image.png){:width=500}
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2tolghw6jj21ay0u0764.jpg){:width=500}
 
 2. 编码。
 

@@ -20,7 +20,7 @@ tags:
 
 **示例 1：**
 
-![img](https://assets.leetcode.com/uploads/2021/01/18/pathsumii1.jpg)
+![img](https://tva1.sinaimg.cn/large/e6c9d24egy1h2tokbmf8lj20gg0bpaac.jpg)
 
 ```
 输入：root = [5,4,8,11,null,13,4,7,2,null,null,5,1], targetSum = 22
@@ -29,7 +29,7 @@ tags:
 
 **示例 2：**
 
-![img](https://assets.leetcode.com/uploads/2021/01/18/pathsum2.jpg)
+![img](https://tva1.sinaimg.cn/large/e6c9d24egy1h2tokeie32j205w0513yd.jpg)
 
 ```
 输入：root = [1,2,3], targetSum = 5
@@ -235,7 +235,7 @@ public class Solution {
 
 因此递归调用后，`sum` 不用重置，而 `path` 需要。
 
-![image.png](https://pic.leetcode-cn.com/1601069091-JGRPAF-image.png)
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2tokwf5igj21hc0u0wjn.jpg)
 
 **参考代码 4**：（供对比，不建议这么写）
 

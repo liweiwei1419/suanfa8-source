@@ -52,7 +52,7 @@ tags:
 
 - 画出树形图：按照“一个数可以选，也可以不选”的思路，画出如下树形图；
 
-![「力扣」第 78 题：子集（回溯算法）题解-1](https://img-blog.csdnimg.cn/20200219183543818.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2x3X3Bvd2Vy,size_16,color_FFFFFF,t_70)
+![「力扣」第 78 题：子集（回溯算法）题解-1](https://tva1.sinaimg.cn/large/e6c9d24egy1h2toje4hzfj21hc0u0q8l.jpg)
 
 - 结果出现在哪里？所有符合条件的结果出现在叶子结点中。
 - 使用**深度优先遍历**需要的状态变量：1、当前考虑的是第几个数 `index`；2、从根结点到叶子结点的路径 `path` ，不难分析出它是一个栈。
@@ -112,7 +112,7 @@ public class Solution {
 
 - 画出树形图：按照“按照每一层选出一个数产生分支”的思路，可以画出如下树形图；
 
-![「力扣」第 78 题：子集（回溯算法）题解-2](https://img-blog.csdnimg.cn/20200219183616697.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2x3X3Bvd2Vy,size_16,color_FFFFFF,t_70)
+![「力扣」第 78 题：子集（回溯算法）题解-2](https://tva1.sinaimg.cn/large/e6c9d24egy1h2tojhvey4j21hc0u0n11.jpg)
 
 - 结果出现在哪里？所有的结点都是符合条件的结果。
 - 使用**深度优先遍历**需要的状态变量：1、从候选数组的哪一个下标开始搜索 `start`；2、从根结点到叶子结点的路径 `path` ，这个变量我们多次遇到了。
@@ -161,7 +161,7 @@ public class Solution {
 - 每一个候选数选与不选，这恰恰好是计算机世界里二进制数能够表示的含义，1 表示选择，0 表示不选；
 - 因此，我们可以枚举数组长度的二进制数的所有可能十进制值，按照每一个数位的值枚举所有的可能性（这句话没有说得很准确，大家领会意思即可）。
 
-![「力扣」第 78 题：子集（回溯算法）题解-3](https://img-blog.csdnimg.cn/20200227131606317.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2x3X3Bvd2Vy,size_16,color_FFFFFF,t_70)
+![「力扣」第 78 题：子集（回溯算法）题解-3](https://tva1.sinaimg.cn/large/e6c9d24egy1h2tojkkqzvj21hc0u0afs.jpg)
 
 Java 代码：
 

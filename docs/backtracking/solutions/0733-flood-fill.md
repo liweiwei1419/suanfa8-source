@@ -26,7 +26,7 @@ tags:
 
 **示例 1:**
 
-![img](https://assets.leetcode.com/uploads/2021/06/01/flood1-grid.jpg)
+![img](https://tva1.sinaimg.cn/large/e6c9d24egy1h2tooa0re3j20h1071q32.jpg)
 
 ```
 输入:

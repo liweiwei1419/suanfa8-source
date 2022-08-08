@@ -69,7 +69,7 @@ tags:
 
 在画树形图的过程中，你一定会发现有些枝叶是没有必要的，把没有必要的枝叶剪去的操作就是剪枝，在代码中一般通过 `break` 或者 `contine` 和 `return` （表示递归终止）实现。
 
-![「力扣」第 93 题：复原 IP 地址-1.png](https://pic.leetcode-cn.com/b581bdde1cef982f0af3182af17fc3c41960c76a7445af0dcfd445c89b4c2eaa-%E3%80%8C%E5%8A%9B%E6%89%A3%E3%80%8D%E7%AC%AC%2093%20%E9%A2%98%EF%BC%9A%E5%A4%8D%E5%8E%9F%20IP%20%E5%9C%B0%E5%9D%80-1.png)
+![「力扣」第 93 题：复原 IP 地址-1.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2tok8kd7zj21hc0u0wjr.jpg)
 
 分析剪枝条件（下面只写出一些我想到的要点，有些点能想到，但是编码很复杂，我就没有写了）：
 

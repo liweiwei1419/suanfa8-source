@@ -22,7 +22,7 @@ tags:
 
 **示例 1：**
 
-![img](https://assets.leetcode.com/uploads/2021/02/18/enclaves1.jpg)
+![img](https://tva1.sinaimg.cn/large/e6c9d24egy1h2tooqwnixj2099099glo.jpg)
 
 ```
 输入：[[0,0,0,0],[1,0,1,0],[0,1,1,0],[0,0,0,0]]
@@ -33,7 +33,7 @@ tags:
 
 **示例 2：**
 
-![img](https://assets.leetcode.com/uploads/2021/02/18/enclaves2.jpg)
+![img](https://tva1.sinaimg.cn/large/e6c9d24egy1h2toosb1wrj2099099glo.jpg)
 
 ```
 输入：[[0,1,1,0],[0,0,1,0],[0,0,1,0],[0,0,0,0]]

@@ -17,7 +17,7 @@ tags:
 
 **示例 1：**
 
-![img](https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2020/01/25/1482_example_1_2.png)
+![img](https://tva1.sinaimg.cn/large/e6c9d24egy1h2topa4ms0j20ag045aa5.jpg)
 
 ```
 输入：mat = [[3,3,1,1],[2,2,1,2],[1,1,1,2]]

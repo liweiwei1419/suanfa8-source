@@ -51,7 +51,7 @@ tags:
 
 借用「力扣」第 47 题的剪枝思想，先对数组排序，只要搜索起点一样，必然发生重复，此时剪枝即可。
 
-![「力扣」第 90 题：子集 II（回溯算法）题解-1](https://img-blog.csdnimg.cn/20200227131432547.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2x3X3Bvd2Vy,size_16,color_FFFFFF,t_70)
+![「力扣」第 90 题：子集 II（回溯算法）题解-1](https://tva1.sinaimg.cn/large/e6c9d24egy1h2tok22cgdj21hc0u0mzm.jpg)
 
 ::: info 为什么要先排序
 

@@ -47,11 +47,11 @@ tags:
 
 @slidestart
 
-![784-1.png](https://pic.leetcode-cn.com/a8944d75c527c6184f142ab303309c6613064d5b533886966a41a9c4211ae218-784-1.png)
+![784-1.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2toog6g2rj21hc0u0mzg.jpg)
 
 ---
 
-![784-2.png](https://pic.leetcode-cn.com/0441ae7f48648d4249d63d798d2fed65c41bfd9fa5e3f63ea1903d8ed6e0ea8d-784-2.png)
+![784-2.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2toohkcpej21hc0u076y.jpg)
 
 ---
 
@@ -59,11 +59,11 @@ tags:
 
 ---
 
-![784-4.png](https://pic.leetcode-cn.com/e263a2a27f4f49ae979b5a6833d288eed22a001f24a6e08157de5835c9f739c0-784-4.png)
+![784-4.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2toojfx2mj21hc0u0jv7.jpg)
 
 ---
 
-![784-5.png](https://pic.leetcode-cn.com/928e97c14e6ba0f61ad71db11c8e5df24f9af693f456883e2cef4a1760a8f94f-784-5.png)
+![784-5.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2tookw890j21hc0u0aef.jpg)
 
 ---
 

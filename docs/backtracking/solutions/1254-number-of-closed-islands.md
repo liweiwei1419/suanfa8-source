@@ -24,7 +24,7 @@ tags:
 
 **示例 1：**
 
-![img](https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2019/11/07/sample_3_1610.png)
+![img](https://tva1.sinaimg.cn/large/e6c9d24egy1h2top353ynj20bc0753ys.jpg)
 
 ```
 输入：grid = [[1,1,1,1,1,1,1,0],[1,0,0,0,0,1,1,0],[1,0,1,0,1,1,1,0],[1,0,0,0,0,1,0,1],[1,1,1,1,1,1,1,0]]
@@ -35,7 +35,7 @@ tags:
 
 **示例 2：**
 
-![img](https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2019/11/07/sample_4_1610.png)
+![img](https://tva1.sinaimg.cn/large/e6c9d24egy1h2top5dl0jj207504ejrb.jpg)
 
 ```
 输入：grid = [[0,0,1,0,0],[0,1,0,1,0],[0,1,1,1,0]]
