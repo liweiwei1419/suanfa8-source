@@ -58,12 +58,12 @@ tags:
 
 首先画出这个问题的树形结构。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200219095002354.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2x3X3Bvd2Vy,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://tva1.sinaimg.cn/large/e6c9d24egy1h2tof5x7fbj21hc0u0whv.jpg)
 
 - 所有符合条件的结点在这棵递归树的叶子结点；
 - 使用深度优先遍历（DFS）或者广度优先遍历（BFS）遍历这棵递归树，在叶子结点处添加符合题意的一个结果，发现使用 BFS 编码较难。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200219095026148.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2x3X3Bvd2Vy,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://tva1.sinaimg.cn/large/e6c9d24egy1h2tof89ebij21hc0u0n2d.jpg)
 
 - 使用 DFS 可以使用递归方法，借助方法栈完成，即**传递的参数通过递归方法的方法栈进行传递，而不用手动编写栈和结点类，把结点类需要的变量通过递归方法的参数进行传递即可**；
 - **树的每一个结点表示解决这个问题处在了哪一个阶段，我们使用不同的变量进行区分**，这些变量叫做“状态变量”；

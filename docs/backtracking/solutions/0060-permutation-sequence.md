@@ -70,7 +70,7 @@ tags:
   - 如果 $k$ 大于这一个分支将要产生的叶子结点数，直接跳过这个分支，这个操作叫「剪枝」；
   - 如果 $k$ 小于**等于**这一个分支将要产生的叶子结点数，那说明所求的全排列一定在这一个分支将要产生的叶子结点里，需要递归求解。
 
-![image.png](https://pic.leetcode-cn.com/1599273370-WyOYCO-image.png)
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2toikhlo7j21ky0kin0b.jpg)
 
 ---
 

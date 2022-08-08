@@ -65,7 +65,7 @@ tags:
 - 标注 ① 的地方上一次搜索的相同的数刚刚被撤销；
 - 标注 ② 的地方上一次搜索的相同的数刚刚被使用。
 
-![image.png](https://pic.leetcode-cn.com/1600386643-uhkGmW-image.png)
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2toflruy3j219w0ogdkc.jpg)
 
 产生重复结点的地方，正是图中标注了「剪刀」，且被绿色框框住的地方。
 
@@ -216,7 +216,7 @@ if (i > 0 && nums[i] == nums[i - 1] && !used[i - 1]) {
 
 那么，对于数组 `[1, 1’, 1’’, 2]`，回溯的过程如下：
 
-![image.png](https://pic.leetcode-cn.com/9b0bf81d73d18e890491e1c6d6c3b40d85ebe37ca38934759e86e84d1d421e22-image.png)
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2tofp117ej20xw0hudin.jpg)
 
 得到的全排列是：`[[1, 1', 1'', 2], [1, 1', 2, 1''], [1, 2, 1', 1''], [2, 1, 1', 1'']]`。特点是：`1`、`1'`、`1''` 出现的顺序只能是 `1`、`1'`、`1''`。
 
@@ -232,22 +232,22 @@ if (i > 0 && nums[i] == nums[i - 1] && used[i - 1]) {
 
 （1）先选第 1 个数字，有 4 种取法。
 
-![image.png](https://pic.leetcode-cn.com/06bf98f9da46f538554aa17d5cc1063761557fb358e1e12dc10c55858cc2f5fe-image.png)
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2tofs73i0j21ey0d4gnt.jpg)
 
 （2）对第 1 步的第 1 个分支，可以继续搜索，但是发现，没有搜索到合适的叶子结点。
 
-![image.png](https://pic.leetcode-cn.com/41fff3d76a09688798f2cc37c638d799aca0d234fb6df1ac60ee99654934c745-image.png)
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2tofvvvhzj21h00u0ae9.jpg)
 
 （3）对第 1 步的第 2 个分支，可以继续搜索，但是同样发现，没有搜索到合适的叶子结点。
 
-![image.png](https://pic.leetcode-cn.com/b9163201e31e038df7cafef3fbe56f6d7c393c28b57679da7dc0511a19fc5115-image.png)
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2tog0qke6j21mm0scq71.jpg)
 
 （4）对第 1 步的第 3 个分支，继续搜索发现搜索到合适的叶子结点。
 
-![image.png](https://pic.leetcode-cn.com/70098e931f78388622eb6705c25ddfa3bd8a912c3934546d5f244c2d1825cc95-image.png)
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2tog5g76tj218l0u0n16.jpg)
 
 （5）对第 1 步的第 4 个分支，继续搜索发现搜索到合适的叶子结点。
 
-![image.png](https://pic.leetcode-cn.com/299ba9a47a9ae93c2331f6ce9f93c614a647397665f57bf072a11fe0a387b35f-image.png)
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2tog8nevpj21m00rktd8.jpg)
 
 因此，`used[i - 1]` 前面加不加感叹号的区别仅在于保留的是相同元素的顺序索引，还是倒序索引。**很明显，顺序索引（即使用 `!used[i - 1]` 作为剪枝判定条件得到）的递归树剪枝更彻底，思路也相对较自然**。

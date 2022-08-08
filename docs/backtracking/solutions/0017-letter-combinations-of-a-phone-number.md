@@ -21,7 +21,7 @@ tags:
 
 给出数字到字母的映射如下（与电话按键相同）。注意 1 不对应任何字母。
 
-![img](https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2021/11/09/200px-telephone-keypad2svg.png)
+![img](https://tva1.sinaimg.cn/large/e6c9d24egy1h2toc5n6p1j205k04i3yh.jpg)
 
 **示例 1：**
 
@@ -49,11 +49,11 @@ tags:
 - `0 <= digits.length <= 4`
 - `digits[i]` 是范围 `['2', '9']` 的一个数字。
 
-![image.png](https://pic.leetcode-cn.com/1603521238-wPCUhU-image.png)
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2toc8xm42j215s0d23zh.jpg)
 
 先画出递归树，然后思考如何编写代码在这棵递归树上搜索所有可行解。
 
-![image.png](https://pic.leetcode-cn.com/6220273b46ef1b045af3cedba43216b1e4d4a9172a7d477e8553a0a7f3dea5c5-image.png)
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2tocbt0p0j21l00kstb7.jpg)
 
 可以深度优先遍历，也可以广度优先遍历。
 

@@ -23,7 +23,7 @@ tags:
 
 **示例 1：**
 
-![img](https://assets.leetcode.com/uploads/2020/11/13/queens.jpg)
+![img](https://tva1.sinaimg.cn/large/e6c9d24egy1h2toggntpkj20k208ydga.jpg)
 
 ```
 输入：n = 4
@@ -61,99 +61,99 @@ tags:
 
 @slidestart
 
-![幻灯片1.png](https://pic.leetcode-cn.com/1597914538-JMqrTI-%E5%B9%BB%E7%81%AF%E7%89%871.png)
+![幻灯片1.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2togmr7vsj21hc0u0n0j.jpg)
 
 ---
 
-![幻灯片2.png](https://pic.leetcode-cn.com/1597914538-ZjQXmZ-%E5%B9%BB%E7%81%AF%E7%89%872.png)
+![幻灯片2.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2togp5hnyj21hc0u0abm.jpg)
 
 ---
 
-![幻灯片3.png](https://pic.leetcode-cn.com/1597914538-tmYgmS-%E5%B9%BB%E7%81%AF%E7%89%873.png)
+![幻灯片3.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2togqff8hj21hc0u0dhe.jpg)
 
 ---
 
-![幻灯片4.png](https://pic.leetcode-cn.com/1597914538-wBTCML-%E5%B9%BB%E7%81%AF%E7%89%874.png)
+![幻灯片4.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2togsbuq1j21hc0u0jsy.jpg)
 
 ---
 
-![幻灯片5.png](https://pic.leetcode-cn.com/1597914538-EREunU-%E5%B9%BB%E7%81%AF%E7%89%875.png)
+![幻灯片5.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2togtsta6j21hc0u0myr.jpg)
 
 ---
 
-![幻灯片6.png](https://pic.leetcode-cn.com/1597914538-OtaRLU-%E5%B9%BB%E7%81%AF%E7%89%876.png)
+![幻灯片6.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2togvp9apj21hc0u0gn7.jpg)
 
 ---
 
-![幻灯片7.png](https://pic.leetcode-cn.com/1597914538-rucjiO-%E5%B9%BB%E7%81%AF%E7%89%877.png)
+![幻灯片7.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2togx67csj21hc0u0abn.jpg)
 
 ---
 
-![幻灯片8.png](https://pic.leetcode-cn.com/1597914538-fgPyCK-%E5%B9%BB%E7%81%AF%E7%89%878.png)
+![幻灯片8.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2togzc5plj21hc0u0go1.jpg)
 
 ---
 
-![幻灯片9.png](https://pic.leetcode-cn.com/1597914538-DMbNDR-%E5%B9%BB%E7%81%AF%E7%89%879.png)
+![幻灯片9.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2togzuapgj21hc0u0mz6.jpg)
 
 ---
 
-![幻灯片10.png](https://pic.leetcode-cn.com/1597914538-frDGXq-%E5%B9%BB%E7%81%AF%E7%89%8710.png)
+![幻灯片10.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2toh243nmj21hc0u0wg2.jpg)
 
 ---
 
-![幻灯片11.png](https://pic.leetcode-cn.com/1597914538-yfroRO-%E5%B9%BB%E7%81%AF%E7%89%8711.png)
+![幻灯片11.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2toh3n92mj21hc0u075w.jpg)
 
 ---
 
-![幻灯片12.png](https://pic.leetcode-cn.com/1597914538-wpzwVG-%E5%B9%BB%E7%81%AF%E7%89%8712.png)
+![幻灯片12.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2toh5ggwzj21hc0u0ac2.jpg)
 
 ---
 
-![幻灯片13.png](https://pic.leetcode-cn.com/1597914538-eTNDtj-%E5%B9%BB%E7%81%AF%E7%89%8713.png)
+![幻灯片13.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2toh7tq4nj21hc0u00ue.jpg)
 
 ---
 
-![幻灯片14.png](https://pic.leetcode-cn.com/1597914538-AyRRDe-%E5%B9%BB%E7%81%AF%E7%89%8714.png)
+![幻灯片14.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2tohbnry3j21hc0u0q4l.jpg)
 
 ---
 
-![幻灯片15.png](https://pic.leetcode-cn.com/1597914538-CTojIY-%E5%B9%BB%E7%81%AF%E7%89%8715.png)
+![幻灯片15.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2tohcifutj21hc0u0dhh.jpg)
 
 ---
 
-![幻灯片16.png](https://pic.leetcode-cn.com/1597914538-mxIubY-%E5%B9%BB%E7%81%AF%E7%89%8716.png)
+![幻灯片16.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2tohecn11j21hc0u0acj.jpg)
 
 ---
 
-![幻灯片17.png](https://pic.leetcode-cn.com/1597914538-ZnPNRW-%E5%B9%BB%E7%81%AF%E7%89%8717.png)
+![幻灯片17.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2tohh3omuj21hc0u0q50.jpg)
 
 ---
 
-![幻灯片18.png](https://pic.leetcode-cn.com/1597914538-voxIfs-%E5%B9%BB%E7%81%AF%E7%89%8718.png)
+![幻灯片18.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2tohk0p0gj21hc0u0gn8.jpg)
 
 ---
 
-![幻灯片19.png](https://pic.leetcode-cn.com/1597914538-xyeSxZ-%E5%B9%BB%E7%81%AF%E7%89%8719.png)
+![幻灯片19.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2toho6tczj21hc0u0aci.jpg)
 
 ---
 
-![幻灯片20.png](https://pic.leetcode-cn.com/1597914538-Gcnqba-%E5%B9%BB%E7%81%AF%E7%89%8720.png)
+![幻灯片20.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2tohp4jdij21hc0u0wgv.jpg)
 
 ---
 
-![幻灯片21.png](https://pic.leetcode-cn.com/1597914538-VYBADD-%E5%B9%BB%E7%81%AF%E7%89%8721.png)
+![幻灯片21.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2tohqqp67j21hc0u0tap.jpg)
 
 ---
 
-![幻灯片22.png](https://pic.leetcode-cn.com/1597914538-wfFbbG-%E5%B9%BB%E7%81%AF%E7%89%8722.png)
+![幻灯片22.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2tohxkdg2j21hc0u0jtb.jpg)
 
 ---
 
-![幻灯片23.png](https://pic.leetcode-cn.com/1597914538-gjhYeV-%E5%B9%BB%E7%81%AF%E7%89%8723.png)
+![幻灯片23.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2tohsg60uj21hc0u0403.jpg)
 
 ---
 
-![幻灯片24.png](https://pic.leetcode-cn.com/1597914538-dMiyLp-%E5%B9%BB%E7%81%AF%E7%89%8724.png)
+![幻灯片24.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2toi2pemdj21hc0u0taa.jpg)
 
 ---
 
@@ -187,7 +187,7 @@ tags:
 
 先尝试画出递归树，以 $4$ 皇后问题为例，画出的递归树如下：
 
-![image.png](https://pic.leetcode-cn.com/1598117469-RXhjxi-image.png)
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2toi7e2a4j20vl0u0god.jpg)
 
 搜索的过程蕴含了 **剪枝** 的思想。「剪枝」的依据是：题目中给出的 「N 皇后」 的摆放规则：1、不在同一行；2、不在同一列；3、不在同一主对角线方向上；4、不在同一副对角线方向上。
 
@@ -201,7 +201,7 @@ tags:
 
 下面我们研究一下主对角线或者副对角线上的元素有什么特性。在每一个单元格里写下行和列的 **下标**。
 
-![image.png](https://pic.leetcode-cn.com/1599142979-VEuEDb-image.png)
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2toia84gwj21m20r6ahf.jpg)
 
 为了保证至少两个皇后不同时出现在 **同一主对角线方向** 或者 **同一副对角线方向**。检查策略是，只要「检测」到新摆放的「皇后」与已经摆放好的「皇后」冲突，就尝试摆放同一行的下一个位置，到行尾还不能放置皇后，**就退回到上一行**。
 
@@ -211,7 +211,7 @@ tags:
 
 我们使用一个 $1$ 到 $4$ 的排列表示一个 $4 \times 4$ 的棋盘，例如：
 
-![image.png](https://pic.leetcode-cn.com/1599142434-RjIWEI-image.png){:width="500px"}
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2toickee7j21fm0rs0vl.jpg){:width="500px"}
 
 得到一个符合要求的全排列以后，生成棋盘的代码就很简单了。
 

@@ -45,13 +45,13 @@ tags:
 
 这里的「状态」是指程序执行到 **隐式树** 的某个结点的语言描述，在程序中用不同的 **变量** 加以区分。
 
-![image.png](https://pic.leetcode-cn.com/1601344758-vWFaqx-image.png)
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2tocoe0kfj21by0b6ta7.jpg)
 
 ### 方法一：深度优先遍历
 
 我们以 `n = 2` 为例，画树形结构图。方法是 「做减法」。
 
-![LeetCode 第 22 题：“括号生出”题解配图.png](https://pic.leetcode-cn.com/7ec04f84e936e95782aba26c4663c5fe7aaf94a2a80986a97d81574467b0c513-LeetCode%20%E7%AC%AC%2022%20%E9%A2%98%EF%BC%9A%E2%80%9C%E6%8B%AC%E5%8F%B7%E7%94%9F%E5%87%BA%E2%80%9D%E9%A2%98%E8%A7%A3%E9%85%8D%E5%9B%BE.png){:width=500}
+![LeetCode 第 22 题：“括号生出”题解配图.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2tocqv150j21hc0u0tfp.jpg){:width=500}
 {:align=center}
 
 画图以后，可以分析出的结论：
@@ -148,7 +148,7 @@ class Solution:
 
 如果我们不用减法，使用加法，即 `left` 表示「左括号使用了几个」，`right` 表示「右括号使用了几个」，可以画出另一棵递归树。
 
-![image.png](https://pic.leetcode-cn.com/efbe574e5e6addcd1c9dc5c13a50c6f162a2b14a95d6aed2c394e18287a067fa-image.png){:width=500}
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2todigne1j217s0u0gp6.jpg){:width=500}
 {:align=center}
 
 下面是参考代码。

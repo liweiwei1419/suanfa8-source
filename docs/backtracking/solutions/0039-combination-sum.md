@@ -86,7 +86,7 @@ tags:
 
 以输入：`candidates = [2, 3, 6, 7]`, `target = 7` 为例：
 
-![](https://pic.leetcode-cn.com/1598091943-hZjibJ-file_1598091940241){:width=500}
+![](https://tva1.sinaimg.cn/large/e6c9d24egy1h2toe1lvu4j21ez0u0taw.jpg){:width=500}
 {:align=center}
 
 **说明**：
@@ -108,7 +108,7 @@ tags:
 
 可不可以在搜索的时候就去重呢？答案是可以的。遇到这一类相同元素不计算顺序的问题，我们在搜索的时候就需要 **按某种顺序搜索**。具体的做法是：每一次搜索的时候设置 **下一轮搜索的起点** `begin`，请看下图。
 
-![](https://pic.leetcode-cn.com/1598091943-GPoHAJ-file_1598091940246)
+![](https://tva1.sinaimg.cn/large/e6c9d24egy1h2toe3hc1ej21ah0u0mzu.jpg)
 
 即：从每一层的第 $2$ 个结点开始，都不能再搜索产生同一层结点已经使用过的 `candidate` 里的元素。
 
@@ -310,7 +310,7 @@ class Solution:
 
 ## 总结
 
-![image.png](https://pic.leetcode-cn.com/1598110600-YEeVKF-image.png)
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2toeku2m4j221m0pw0x2.jpg)
 
 ### 什么时候使用 `used` 数组，什么时候使用 `begin` 变量
 
@@ -439,7 +439,7 @@ public class Solution {
 输出 => [[2, 2, 3], [7]]
 ```
 
-![image.png](https://pic.leetcode-cn.com/1598162219-BpwhKL-image.png){:width="500px"}
+![image.png](https://tva1.sinaimg.cn/large/e6c9d24egy1h2toep14y3j20u0105q78.jpg){:width="500px"}
 
 针对参考代码 2 添加打印输出：
 
